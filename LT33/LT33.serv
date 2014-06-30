@@ -1,0 +1,52 @@
+rulesetdir LT33
+
+set mapsize="PLAYER"
+set generator="ISLAND"
+set startpos="SINGLE"
+set tilesperplayer=900
+set topology="WRAPX|WRAPY"
+set separatepoles=disabled
+set alltemperate=enabled
+set steepness=40
+set landmass=30
+set huts=0
+set barbarians=disabled
+set specials=150
+set rapturedelay=3
+
+set maxplayers=126
+set saveturns=1
+set scorelog=1
+set citymindist=5
+set dispersion=4
+set startunits=ccccwwxx
+set unitwaittime=36000
+set newcomerunits=wxkd
+set aifill=0
+set techlevel=0
+set diplchance=50
+set allowtake=""
+set spacerace=disabled
+set timeout=82800
+set revolen=2
+set trading_city=disabled
+set foggedborders=enabled
+set contactturns=0
+set ec_turns=9
+set ec_max_size=5000
+set ec_chat=enabled
+set ec_info=enabled 
+set stats_script=/home/mmazurek/stats/insert.pl
+set compresstype plain
+metamessage "LT33 | More info: http://longturn.org/game/LT33/"
+metapatches longturn
+
+set techlost_recv=70
+set techlost_donor=20
+set diplcost=100
+set trademindist=999
+set diplchance=70
+
+
+syncturn
+start
