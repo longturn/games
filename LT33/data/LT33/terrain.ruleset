@@ -934,6 +934,7 @@ reqs           =
       "Tech", "Construction", "Player"
       "TerrainClass", "Land", "Local"
       "UnitFlag", "Settlers", "Local"
+      "Base", "Pre-Fortress", "Tile"
     }
 gui_type       = "Fortress"
 build_time     = 3
