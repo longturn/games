@@ -390,7 +390,7 @@ sound		= "b_factory"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the shield production in a city by 25%.  This increase may\
+Increases the shield production in a city by 50%.  This increase may\
  contribute significantly to pollution caused by shield production. \
  The Factory also increases the pollution caused by the population\
  of the city (+25%).\
@@ -555,7 +555,7 @@ sound		= "b_mfg_plant"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the shield production in a city by an additional 25%. \
+Increases the shield production in a city by an additional 50%. \
  The bonus is 50% if there is any Power Plant in the same city.\
 "),
 ; /* xgettext:no-c-format */
