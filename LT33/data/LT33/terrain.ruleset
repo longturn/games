@@ -32,10 +32,10 @@ land_channel_requirement = 10
 
 ; Bodies of water up to this size are considered freshwater lakes, if there is
 ; also terrain type(s) with flag "FreshWater" in the ruleset.
-lake_max_size = 25
+lake_max_size = 14
 
 ; There is no resources in the middle of the oceans, only near coast
-ocean_resources = 1
+ocean_resources = 0
 
 ; special movement costs for rivers:
 ;   0 - normal movement cost for rivers (matches Civ1)
@@ -934,19 +934,18 @@ reqs           =
       "Tech", "Construction", "Player"
       "TerrainClass", "Land", "Local"
       "UnitFlag", "Settlers", "Local"
-      "Base", "Pre-Fortress", "Tile"
+ 	 "Base", "Pre-Fortress", "Tile"
     }
 gui_type       = "Fortress"
 build_time     = 3
 defense_bonus  = 100
 border_sq      = 5
-native_to      = "Land"
+native_to      = "Land", "Small Land", "Big Land"
 flags          = "NoAggressive", "NoStackDeath", "DiplomatDefense"
 helptext       = _("\
 Fortresses improve defense for land units. Among other effects, a land \
 unit remaining in a fortress for a whole turn without moving recovers \
-a quarter of its hit points. With Invention, fortresses gain watchtowers \
-from which units can see further afield.\
+a quarter of its hit points.\
 ")
 
 [base_airbase]

@@ -25,7 +25,7 @@ names = "Airbase"
 
 [veteran_system]
 ; What are the names of the levels?
-veteran_names = _("green"), _("veteran 1"), _("veteran 2"), _("veteran 3"), _("hardened 1"), _("hardened 2"), _("hardened 3"), _("elite 1"), _("elite 2"), _("elite 3")
+veteran_names = _("green (100%)"), _("veteran 1 (150%)"), _("veteran 2 (175%)"), _("veteran 3 (200%)"), _("hardened 1 (225%)"), _("hardened 2 (250%)"), _("hardened 3 (275%)"), _("elite 1 (300%)"), _("elite 2 (325%)"), _("elite 3 (350%)")
 
 ; The percentage chance of increasing level through combat
 veteran_raise_chance = 50, 45, 40, 35, 30, 25, 20, 15, 10, 0
@@ -126,8 +126,8 @@ name          = _("?unitclass:Big Land")
 move_type     = "Land"
 min_speed     = 1
 hp_loss_pct   = 0
-flags         = "TerrainSpeed", "DamageSlows", "BuildAnywhere", "CollectRansom",
-                "ZOC", "CanFortify", "TerrainDefense", "RoadNative"
+flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
+                "CollectRansom", "ZOC", "CanFortify", "TerrainDefense", "RoadNative"
 
 [unitclass_merchant]
 ; /* TRANS: Unit class: used adjectivally */
@@ -357,7 +357,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "AddToCity", "Cities"
+flags         = "Settlers", "NonMil", "AddToCity", "Cities", "NoVeteran"
 roles         = "Cities"
 helptext      = _("\
 Settlers are one of the key units in the game. As well as building new\
@@ -392,7 +392,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "AddToCity","Capturable"
+flags         = "Settlers", "NonMil", "AddToCity", "NoVeteran", "Capturable"
 roles         = "Settlers"
 helptext      = _("\
 Migrants are like Workers in that they can improve terrain.\
@@ -502,7 +502,7 @@ Geoengineers are Engineers that can perform major terrain\
 name          = _("Warriors")
 class         = "Land"
 tech_req      = "None"
-obsolete_by   = "Pikemen"
+obsolete_by   = "Musketeers"
 graphic       = "u.warriors"
 graphic_alt   = "-"
 sound_move    = "m_warriors"
@@ -639,7 +639,7 @@ sound_fight   = "f_pikemen"
 sound_fight_alt = "f_generic"
 build_cost    = 30
 pop_cost      = 0
-attack        = 1
+attack        = 2
 defense       = 3
 hitpoints     = 10
 firepower     = 1
@@ -917,18 +917,18 @@ hitpoints     = 30
 firepower     = 1
 move_rate     = 9
 vision_radius_sq = 18
-transport_cap = 0
+transport_cap = 1
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = ""
+cargo         = "Land"
 roles         = "DefendGood", "FirstBuild"
 helptext      = _("\
-The Mechanized Infantry has the strongest defensive strength\
- of any land unit, but is only available near the end of the\
- technology tree.\
+The Mechanized Infantry can transport one unit of infantry,\
+ and has the strongest defensive strength of any land unit,\
+ but is only available near the end of the technology tree.\
 ")
 
 [unit_horsemen]
@@ -956,7 +956,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Horse", "Capturer"
+flags         = "Capturer"
 roles         = "AttackFast", "Hut", "Barbarian", "Hunter"
 helptext      = _("\
 Horsemen are mounted warriors and an early\
@@ -989,7 +989,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Horse", "Capturer"
+flags         = "Capturer"
 roles         = "AttackFast", "Hut", "Hunter"
 helptext      = _("\
 Chariots are horse-pulled war wagons, stronger\
@@ -1021,7 +1021,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Horse", "Capturer"
+flags         = "Capturer"
 roles         = "AttackFast"
 helptext      = _("\
 Elephants are towering animals trained for war that are often used as\
@@ -1053,7 +1053,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Horse", "Capturer"
+flags         = "Capturer"
 roles         = "AttackFast"
 helptext      = _("\
 Crusaders are highly disciplined mounted\
@@ -1085,7 +1085,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Horse", "Capturer"
+flags         = "Capturer"
 roles         = "AttackFast", "HutTech", "BarbarianTech",
                 "BarbarianBuildTech", "BarbarianSeaTech", "Hunter"
 helptext      = _("\
@@ -1117,7 +1117,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Horse", "Capturer"
+flags         = "Capturer"
 roles         = "AttackFast", "BarbarianBuildTech", "BarbarianSeaTech",
                 "Hunter"
 helptext      = _("\

@@ -111,6 +111,7 @@ upkeep		= 2
 sabotage	= 100
 sound		= "b_aqueduct"
 sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
 helptext	= _("\
 Allows a city to grow larger than size 8 and reduces the chance of plague\
  within the city (-30%).  A Sewer System is required for a city to grow larger\
@@ -132,6 +133,7 @@ upkeep		= 0
 sabotage	= 100
 sound		= "b_aqueduct"
 sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
 helptext	= _("\
 Allows a city to grow larger than size 8 and reduces the chance of plague\
  within the city (-30%).  A Sewer System is required for a city to grow larger\
@@ -154,6 +156,7 @@ upkeep		= 0
 sabotage	= 100
 sound		= "b_aqueduct"
 sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
 helptext	= _("\
 Allows a city to grow larger than size 8 and reduces the chance of plague\
  within the city (-30%).  A Sewer System is required for a city to grow larger\
@@ -301,8 +304,6 @@ helptext	= _("\
 City Walls make it easier to defend a city.  They double the defense\
  strength of units within the city against land units.  They are\
  ineffective against aircraft, helicopter, missile and sea units.\
- City Walls also prevent the loss of population which occurs when\
- a defending unit is destroyed by a land unit.\
 ")
 
 [building_coastal_defense]
@@ -383,14 +384,16 @@ graphic	= "b.factory"
 graphic_alt	= "-"
 obsolete_by	= "None"
 build_cost	= 140
-upkeep		= 4
+upkeep		= 3
 sabotage	= 100
 sound		= "b_factory"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the shield production in a city by 50%.  This increase may\
- also contribute significantly to pollution.\
+Increases the shield production in a city by 25%.  This increase may\
+ contribute significantly to pollution caused by shield production. \
+ The Factory also increases the pollution caused by the population\
+ of the city (+25%).\
 ")
 
 [building_granary]
@@ -461,7 +464,9 @@ helptext	= _("\
 Increases by 25% the effect of a Factory and another 25% the effect\
  of a Mfg. Plant, and also reduces the amount of pollution generated\
  by shield production to 50%.\
-"), _("\
+"),
+; /* xgettext:no-c-format */
+_("\
 A Hydro Plant, in combination with a Factory and Mfg. Plant together\
  give a 100% production bonus, with pollution only 50% of the equivalent\
  combination with a Power Plant. The pollution is reduced to 25% if\
@@ -550,9 +555,11 @@ sound		= "b_mfg_plant"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the shield production in a city by an additional 50%. \
+Increases the shield production in a city by an additional 25%. \
  The bonus is 50% if there is any Power Plant in the same city.\
-"), _("\
+"),
+; /* xgettext:no-c-format */
+_("\
 Manufacturing Plants also increase the pollution caused by the population\
  of the city (+25%).\
 ")
@@ -578,7 +585,9 @@ helptext	= _("\
 Increases by 25% the effect of a Factory and another 25% the effect\
  of a Mfg. Plant, and also reduces the amount of pollution generated\
  by shield production to 50%.\
-"), _("\
+"),
+; /* xgettext:no-c-format */
+_("\
 A Nuclear Plant, in combination with a Factory and Mfg. Plant together\
  give a 100% production bonus, with pollution only 50% of the equivalent\
  combination with a Power Plant. The pollution is reduced to 25% if\
@@ -608,8 +617,10 @@ helptext	= _("\
 Adds 1 extra shield resource on all Oceanic tiles worked by a city.  The\
  city needs to be coastal to build this improvement.  Deep ocean tiles\
  need a buoy placed in the tile to take advantage of the shield bonus\
- (buoys are tile improvements available with the discovery of Radar).\
-"), _("\
+ (buoys are tile improvements available with the discovery of Radio).\
+"),
+; /* xgettext:no-c-format */
+_("\
 Offshore Platforms also increase the pollution caused by the population\
  of the city (+25%).\
 ")
@@ -634,7 +645,7 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Makes a city the capital and the center of your government. \
  Corruption in other cities is related to how far away from the\
- capital they are, except when the government is Democracy or\
+ capital they are, except when the government is Federation or\
  Communism.  The cost of inciting a revolt in a city also depends\
  upon the city's distance from the capital (under all forms of\
  government).\
@@ -765,10 +776,12 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Increases the luxury and tax output in a city by an additional 50%\
  (by 100% if the Internet wonder was built by any player).\
-"), _("\
-The total bonus is 150% if there are Library, University and\
- Research Lab together in the same city. (300% if Great Library,\
- Isaac Newton's College, and Internet were already built).\
+"),
+; /* xgettext:no-c-format */
+_("\
+The total bonus is 150% if a Library, a University and a\
+ Research Lab are all present in the same city. (300% if Great Library,\
+ Isaac Newton's College, and Internet were already built.)\
 ")
 
 [building_sam_battery]
@@ -832,6 +845,7 @@ upkeep		= 2
 sabotage	= 100
 sound		= "b_sewer_system"
 sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
 helptext	= _("\
 Allows a city to grow larger than size 16.  Pre-requirement is an\
  Aqueduct for a city to grow larger than size 8.  The Sewer System\
@@ -859,7 +873,9 @@ helptext	= _("\
 Increases by 25% the effect of a Factory and another 25% the effect\
  of a Mfg. Plant, and also reduces the amount of pollution generated\
  by shield production to 25%.\
-"), _("\
+"),
+; /* xgettext:no-c-format */
+_("\
 A Solar Plant, in combination with a Factory and Mfg. Plant together\
  give a 100% production bonus, with pollution only 25% of the equivalent\
  combination with a Power Plant.  The Solar Plant eliminates all pollution\
@@ -982,9 +998,8 @@ sound		= "b_stock_exchange"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the luxury and tax output in a city by an additional 50%. \
- The total bonus is 150% if there are Marketplace, Bank, and\
- Stock Exchange together in the same city.\
+Increases the luxury and tax output in a city by an additional 50%\
+ (by 100% if Super Highways were built in the city).\
 ")
 
 [building_super_highways]
@@ -1004,11 +1019,16 @@ sound		= "b_super_highways"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the luxury and tax output in a city by an additional 50%.\
-"), _("\
 Each tile around the city with roads, and without farmlands, that\
  is already generating some trade, produces one extra trade resource.\
-"), _("\
+"),
+; /* xgettext:no-c-format */
+_("\
+Increases the luxury and tax output in a city by an additional 50%,\
+ if Stock Exchange was built in the city.\
+"),
+; /* xgettext:no-c-format */
+_("\
 Super Highways also increase the pollution caused by the population\
  of the city (+25%).\
 ")
@@ -1075,18 +1095,20 @@ sound		= "b_university"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the luxury and tax output in a city by an additional 50%\
+Increases the science output in a city by an additional 50%\
  (by 100% if the Great Library wonder was built by any player).\
-"), _("\
-The total bonus is 100% if there are Library and University\
+"),
+; /* xgettext:no-c-format */
+_("\
+The total bonus is 100% if a Library and a University are present\
  together in the same city (200% if Great Library and Isaac\
- Newton's College were already built).
+ Newton's College were already built.)
 ")
 
 
 [building_asmiths_trading_co]
 name		= _("A.Smith's Trading Co.")
-genus		= "SmallWonder"
+genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Economics", "Player"
@@ -1162,6 +1184,7 @@ upkeep		= 0
 sabotage	= 0
 sound		= "w_cure_for_cancer"
 sound_alt	= "w_generic"
+; /* xgettext:no-c-format */
 helptext	= _("\
 This stunning technological achievement makes one content\
  citizen happy in each of your cities (2 extra luxury per\
@@ -1172,7 +1195,7 @@ This stunning technological achievement makes one content\
 
 [building_darwins_voyage]
 name		= _("Darwin's Voyage")
-genus		= "SmallWonder"
+genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Steam Engine", "Player"
@@ -1189,9 +1212,8 @@ helptext	= _("\
 Charles Darwin's voyage sparked the discovery of the evolution\
  of the species, which inspired greater confidence in science. \
  All your cities generate 1 extra science bulb.  It also increases\
- to 3 the output of Scientist specialists\
+ to 3 the output of Scientist specialists for every nation.\
 ")
-
 
 
 [building_great_library]
@@ -1291,7 +1313,7 @@ reqs	=
     }
 graphic	= "b.king_richards_crusade"
 graphic_alt	= "-"
-obsolete_by	= "Industrialization"
+obsolete_by	= "Communism"
 build_cost	= 300
 upkeep		= 0
 sabotage	= 0
@@ -1332,7 +1354,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Ceremonial Burial", "Player"
     }
-graphic	= "b.oracle"
+graphic		= "b.oracle"
 graphic_alt	= "-"
 obsolete_by	= "Explosives"
 build_cost	= 300
@@ -1347,6 +1369,27 @@ Makes one unhappy citizen content in every city with Walls. \
 ")
 
 
+[building_statue_of_zeus]
+name		= _("Statue of Zeus")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Polytheism", "Player"
+    }
+graphic	= "b.oracle"
+graphic_alt	= "-"
+obsolete_by	= "Conscription"
+build_cost	= 250
+upkeep		= 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
+helptext	= _("\
+It neutralises the unhappiness caused by 1 military unit per city,\
+ and it increases by 1 the units free of upkeep per city.\
+")
+
+
 [building_temple_of_artemis]
 name		= _("Temple of Artemis")
 genus		= "SmallWonder"
@@ -1355,9 +1398,9 @@ reqs	=
       "Tech", "Mysticism", "Player"
       "Building", "Temple", "City"
     }
-graphic	= "b.oracle"
+graphic		= "b.oracle"
 graphic_alt	= "-"
-obsolete_by	= "Industrialization"
+obsolete_by	= "Theology"
 build_cost	= 200
 upkeep		= 0
 sabotage	= 0
@@ -1416,7 +1459,7 @@ Reveals all cities in the map.  Gives an immediate technology\
 
 [building_shakespeares_theatre]
 name		= _("Shakespeare's Theatre")
-genus		= "SmallWonder"
+genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Sanitation", "Player"
@@ -1432,6 +1475,7 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Gives 1 additional luxury to every city, and 6 luxuries to the city\
  where it is located.  It also increases to 3 the output of Elvis\
+ specialists for every nation.\
 ")
 
 ; NOTE: 

@@ -26,8 +26,8 @@ Gameplay more similar to civ3, keeping the combat system from civ2.\
 Adapted for single player, with AI less aggressive at start,\
  but more challenging at the end.\
 \n\n\
-Full list of changes inside the file ReadMe_Civ2Civ3.txt.\n\
-For comments and suggestions, visit: http://forum.freeciv.org/viewtopic.php?t=6330\
+Detailed description of the differences from the classic ruleset can be\
+ found in ReadMe_Civ2Civ3.txt.\
 ")
 
 [options]
@@ -153,7 +153,7 @@ illness_pollution_factor = 50
 base_incite_cost = 1000
 improvement_factor = 1
 unit_factor = 2
-total_factor = 500
+total_factor = 100
 
 [global_unit_options]
 ; Shore landing style
@@ -174,7 +174,7 @@ killstack = 1
 ;left will have their attack power reduced by 2/3 or 1/3 respectively. If
 ;this is set to 0 units will attack with full strength even if they have
 ;only fractional moves left.
-tired_attack = 0
+tired_attack = 1
 
 [borders]
 ; Base border radius from city.
@@ -188,10 +188,10 @@ size_effect    = 1
 ; 0 - no upkeep
 ; 1 - upkeep is calculated as:
 ;     <Cost of technology> / tech_upkeep_divider + tech_upkeep_free
-tech_upkeep_style = 1
+tech_upkeep_style = 0
 
 ; upkeep cost is divided by this value
-tech_upkeep_divider = 200
+tech_upkeep_divider = 2000
 
 [calendar]
 ; Year in the beginning of the game
@@ -207,11 +207,13 @@ negative_label = _("BC")
 [teams]
 ; freeciv optional team names definition.
 ;
-; name =
-;  _("Team 0"),
-; _("Team 1"),
-; _("Team 2"),
-; _("Team 3"),
+;names =
+; _("The Empire"),
+; _("det0r's Team"),
+; _("Polar Express"),
+; _("The Knights Orb"),
+; _("Silent Spear"),
+; _("Shriekers")
 ; etc...
 
 [settings]
@@ -236,13 +238,13 @@ negative_label = _("BC")
 ;      "tinyisles", TRUE, FALSE
 ;      "separatepoles", TRUE, FALSE
 ;      "startunits", "cwx", FALSE
-;      "citymindist", 3, FALSE
+;      "citymindist", 5, FALSE
 ;      "techlevel", 1, FALSE
 ;      "sciencebox", 100, FALSE
 ;      "borders", "ENABLED", FALSE
 ;      "foggedborders", TRUE, FALSE
 ;      "happyborders", TRUE, FALSE
-;      "trademindist", 999, FALSE
+;      "trademindist", 250, FALSE
 ;      "restrictinfra", TRUE, FALSE
 ;      "unreachableprotects", FALSE, FALSE
 ;      "onsetbarbs", 120, FALSE
