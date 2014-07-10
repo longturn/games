@@ -261,8 +261,8 @@ reqs    =
       "UnitType", "Nuclear", "Local"
     }
 
-; Advanced Flight increases cruise missle range
-[effect_cruise_missle_range]
+; Advanced Flight increases cruise missile range
+[effect_cruise_missile_range]
 name    = "Move_Bonus"
 value   = 9
 reqs    =
