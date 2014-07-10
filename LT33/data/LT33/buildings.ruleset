@@ -1383,6 +1383,31 @@ Increases trade output by 40% in all cities owned by the\
  player.\
 ")
 
+[building_michelangelos_chapel]
+name		= _("Michelangelo's Chapel")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Monotheism", "Player"
+    }
+graphic	= "b.michelangelos_chapel"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 800
+upkeep		= 0
+sabotage	= 0
+sound		= "w_michelangelos_chapel"
+sound_alt	= "w_generic"
+helptext	= _("\
+Counts as having a Cathedral in each of your cities on the same\
+ continent. This makes 3 unhappy citizens content in each city;\
+ however, it does not affect citizens made unhappy by military activity.\
+ The discovery of Theology increases the effect of a Cathedral,\
+ making an additional unhappy citizen content. The discovery of\
+ Communism lessens the effect of a Cathedral, reducing by one\
+ the number of unhappy citizens made content.\
+")
+
 [building_mausoleum_of_mausolos]
 name		= _("Mausoleum of Mausolos")
 genus		= "SmallWonder"

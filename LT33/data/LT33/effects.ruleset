@@ -1975,15 +1975,19 @@ reqs    =
     }
 
 [effect_cathedral]
-name    = "Make_Content"
+type    = "Make_Content"
 value   = 3
 reqs    =
     { "type", "name", "range"
       "Building", "Cathedral", "City"
     }
+nreqs   =
+    { "type", "name", "range"
+      "Building", "Michelangelo's Chapel", "Continent"
+    }
 
 [effect_cathedral_1]
-name    = "Make_Content"
+type    = "Make_Content"
 value   = 1
 reqs    =
     { "type", "name", "range"
@@ -1992,7 +1996,20 @@ reqs    =
     }
 nreqs   =
     { "type", "name", "range"
-      "Gov", "Communism", "Player"
+      "Building", "Michelangelo's Chapel", "Continent"
+    }
+
+[effect_cathedral_2]
+type    = "Make_Content"
+value   = -1
+reqs    =
+    { "type", "name", "range"
+      "Tech", "Communism", "Player"
+      "Building", "Cathedral", "City"
+    }
+nreqs   =
+    { "type", "name", "range"
+      "Building", "Michelangelo's Chapel", "Continent"
     }
 
 ; Every Land
@@ -3079,6 +3096,32 @@ reqs	=
     { "type", "name", "range"
       "Building", "Marco Polo's Embassy", "Player"
       "OutputType", "Trade", "Local"
+    }
+
+[effect_michelangelos_chapel]
+type    = "Make_Content"
+value	= 3
+reqs	=
+    { "type", "name", "range"
+      "Building", "Michelangelo's Chapel", "Continent"
+    }
+
+[effect_michelangelos_chapel_1]
+type    = "Make_Content"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Tech", "Theology", "Player"
+      "Building", "Michelangelo's Chapel", "Continent"
+    }
+
+[effect_michelangelos_chapel_2]
+type    = "Make_Content"
+value   = -1
+reqs    =
+    { "type", "name", "range"
+      "Tech", "Communism", "Player"
+      "Building", "Michelangelo's Chapel", "Continent"
     }
 
 [effect_mausoleum_of_mausolos]
