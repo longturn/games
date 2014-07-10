@@ -26,7 +26,7 @@ set diplomacy=HUMAN
 set techpenalty=100
 set sciencebox=100
 
-set restrictinfra=enabled
+set restrictinfra=disabled
 set unreachableprotects=disabled
 set maxplayers=126
 set saveturns=1
