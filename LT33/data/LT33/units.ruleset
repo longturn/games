@@ -357,7 +357,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "AddToCity", "Cities", "NoVeteran"
+flags         = "Settlers", "NonMil", "AddToCity", "Cities", "NoVeteran", "Capturable"
 roles         = "Cities"
 helptext      = _("\
 Settlers are one of the key units in the game. As well as building new\
@@ -425,7 +425,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "Airbase"
+flags         = "Settlers", "NonMil", "Airbase", "Capturable"
 roles         = "Settlers"
 helptext      = _("\
 Workers are similar to Settlers in that they can improve terrain --\
@@ -458,7 +458,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "Transform", "Airbase"
+flags         = "Settlers", "NonMil", "Transform", "Airbase", "Capturable"
 roles         = "Settlers"
 helptext      = _("\
 Engineers are similar to Workers, but they work twice as fast and\
