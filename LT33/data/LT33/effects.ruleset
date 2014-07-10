@@ -3075,8 +3075,8 @@ reqs    =
 
 [effect_leonardos_workshop]
 type    = "Upgrade_Unit"
-value	= 2
-reqs	=
+value   = 2
+reqs    =
     { "type", "name", "range"
       "Building", "Leonardo's Workshop", "Player"
     }
@@ -3091,8 +3091,8 @@ reqs    =
 
 [effect_marco_polos_embassy]
 type    = "Output_Bonus"
-value	= 40
-reqs	=
+value   = 40
+reqs    =
     { "type", "name", "range"
       "Building", "Marco Polo's Embassy", "Player"
       "OutputType", "Trade", "Local"
@@ -3100,8 +3100,8 @@ reqs	=
 
 [effect_michelangelos_chapel]
 type    = "Make_Content"
-value	= 3
-reqs	=
+value   = 3
+reqs    =
     { "type", "name", "range"
       "Building", "Michelangelo's Chapel", "Continent"
     }
