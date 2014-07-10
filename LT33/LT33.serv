@@ -19,7 +19,7 @@ set rapturedelay=3
 
 set techlost_recv=100
 set techlost_donor=0
-set diplcost=0
+set diplcost=25
 set trademindist=999
 set diplchance=50
 set diplomacy=HUMAN
