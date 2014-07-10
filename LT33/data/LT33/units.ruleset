@@ -769,7 +769,7 @@ A number of Partisans are granted free when an enemy conquers your\
 [unit_fanatics]
 name          = _("Fanatics")
 class         = "Land"
-tech_req      = "Guerilla Warfare"
+tech_req      = "Fundamentalism"
 gov_req       = "Fundamentalism"
 obsolete_by   = "None"
 graphic       = "u.fanatics"
@@ -779,27 +779,26 @@ sound_move_alt = "m_generic"
 sound_fight   = "f_fanatics"
 sound_fight_alt = "f_generic"
 build_cost    = 20
-pop_cost      = 1
-attack        = 5
-defense       = 5
+pop_cost      = 0
+attack        = 4
+defense       = 4
 hitpoints     = 20
 firepower     = 1
 move_rate     = 3
 vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
-uk_happy      = 0
+uk_happy      = 1
 uk_shield     = 1
-uk_food       = 1
-uk_gold       = 1
-flags         = "Fanatic", "AddToCity", "Capturer"
+uk_food       = 0
+uk_gold       = 0
+flags         = "Fanatic", "Capturer"
 roles         = "DefendGood"
 helptext      = _("\
 Fanatics are warriors extremely devoted to a higher cause.\
 "), _("\
 Fundamentalist nations can maintain Fanatic units without\
- having to pay any upkeep nor causing military unhappiness. \
- Instead, each unit reduces the population by 1.\
+ having to pay any shields for upkeep.\
 ")
 
 [unit_marines]
