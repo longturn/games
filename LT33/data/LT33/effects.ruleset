@@ -244,7 +244,7 @@ nreqs   =
 ; Nuclear power gives +1 moves to sea units
 [effect_nuclear_powered_boats]
 name    = "Move_Bonus"
-value   = 1
+value   = 3
 reqs    =
     { "type", "name", "range"
       "Tech", "Nuclear Power", "Player"
@@ -254,17 +254,27 @@ reqs    =
 ; Advanced Flight enables movement of nuclear weapons
 [effect_nuclear_bomber]
 name    = "Move_Bonus"
-value   = 8
+value   = 9
 reqs    =
     { "type", "name", "range"
       "Tech", "Advanced Flight", "Player"
       "UnitType", "Nuclear", "Local"
     }
 
+; Advanced Flight increases cruise missle range
+[effect_cruise_missle_range]
+name    = "Move_Bonus"
+value   = 9
+reqs    =
+    { "type", "name", "range"
+      "Tech", "Advanced Flight", "Player"
+      "UnitType", "Cruise Missile", "Local"
+    }
+
 ; Rocketry doubles movement of nuclear weapons
 [effect_nuclear_missile]
 name    = "Move_Bonus"
-value   = 8
+value   = 9
 reqs    =
     { "type", "name", "range"
       "Tech", "Rocketry", "Player"
