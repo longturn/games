@@ -3072,7 +3072,14 @@ reqs    =
       "Building", "Manhattan Project", "World", 1
     }
 
-
+[effect_marco_polos_embassy]
+type    = "Output_Bonus"
+value	= 40
+reqs	=
+    { "type", "name", "range"
+      "Building", "Marco Polo's Embassy", "Player"
+      "OutputType", "Trade", "Local"
+    }
 
 [effect_mausoleum_of_mausolos]
 name    = "Make_Content"

@@ -1362,7 +1362,26 @@ sound_alt	= "w_generic"
 ;helptext is set in client/helpdata.c:helptext_wonder()
 ;helptext	=
 
-
+[building_marco_polos_embassy]
+name		= _("Marco Polo's Embassy")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Trade", "Player"
+    }
+graphic	= "b.marco_polos_embassy"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 1000
+upkeep		= 0
+sabotage	= 0
+sound		= "w_marco_polos_embassy"
+sound_alt	= "w_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases trade output by 40% in all cities owned by the\
+ player.\
+")
 
 [building_mausoleum_of_mausolos]
 name		= _("Mausoleum of Mausolos")
