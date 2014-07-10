@@ -1117,14 +1117,14 @@ reqs	=
 graphic	= "b.asmiths_trading_co"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 600
+build_cost	= 300
 upkeep		= 0
 sabotage	= 0
 sound		= "w_asmiths_trading_co"
 sound_alt	= "w_generic"
 helptext	= _("\
 City improvements which would normally have an upkeep of 1 are free\
- of upkeep, for every city with a Stock Exchange.  It also increases\
+ of upkeep.  It also increases\
  to 3 the output of Taxman specialists for every nation.\
 ")
 
