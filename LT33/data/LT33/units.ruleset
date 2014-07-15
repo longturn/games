@@ -135,7 +135,7 @@ name          = _("?unitclass:Big Siege")
 move_type     = "Land"
 min_speed     = 1
 hp_loss_pct   = 0
-flags         = "TerrainSpeed", "DamageSlows", "Capturable", "BuildAnywhere",
+flags         = "TerrainSpeed", "DamageSlows", "BuildAnywhere",
                 "ZOC", "CanFortify", "TerrainDefense", "RoadNative"
 
 [unitclass_merchant]
@@ -778,7 +778,7 @@ A number of Partisans are granted free when an enemy conquers your\
 [unit_fanatics]
 name          = _("Fanatics")
 class         = "Land"
-tech_req      = "Fundamentalism"
+tech_req      = "Guerilla Warfare"
 gov_req       = "Fundamentalism"
 obsolete_by   = "None"
 graphic       = "u.fanatics"
@@ -1191,7 +1191,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = ""
+flags         = "Capturable"
 roles         = "AttackStrong"
 helptext      = _("\
 Catapults are large rock-throwing machines of war.\
@@ -1224,7 +1224,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = ""
+flags         = "Capturable"
 roles         = "AttackStrong", "BarbarianTech", "BarbarianBuildTech"
 helptext      = _("\
 Cannons are large firearms that can fire heavy\
@@ -1258,7 +1258,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "CityBuster"
+flags         = "CityBuster", "Capturable"
 roles         = "AttackStrong"
 helptext      = _("\
 The artillery is an upgraded cannon. It is a very\
@@ -1291,7 +1291,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "CityBuster"
+flags         = "CityBuster", "Capturable"
 roles         = "AttackStrong"
 helptext      = _("\
 Howitzers are upgraded artillery with improved\
