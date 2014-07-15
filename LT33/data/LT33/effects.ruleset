@@ -1985,7 +1985,7 @@ reqs    =
     }
 
 [effect_cathedral]
-type    = "Make_Content"
+name    = "Make_Content"
 value   = 3
 reqs    =
     { "type", "name", "range"
@@ -1993,11 +1993,11 @@ reqs    =
     }
 nreqs   =
     { "type", "name", "range"
-      "Building", "Michelangelo's Chapel", "Continent"
+      "Building", "Michelangelo's Chapel", "Player"
     }
 
 [effect_cathedral_1]
-type    = "Make_Content"
+name    = "Make_Content"
 value   = 1
 reqs    =
     { "type", "name", "range"
@@ -2006,11 +2006,11 @@ reqs    =
     }
 nreqs   =
     { "type", "name", "range"
-      "Building", "Michelangelo's Chapel", "Continent"
+      "Building", "Michelangelo's Chapel", "Player"
     }
 
 [effect_cathedral_2]
-type    = "Make_Content"
+name    = "Make_Content"
 value   = -1
 reqs    =
     { "type", "name", "range"
@@ -2019,7 +2019,7 @@ reqs    =
     }
 nreqs   =
     { "type", "name", "range"
-      "Building", "Michelangelo's Chapel", "Continent"
+      "Building", "Michelangelo's Chapel", "Player"
     }
 
 ; Every Land
@@ -3084,7 +3084,7 @@ reqs    =
     }
 
 [effect_leonardos_workshop]
-type    = "Upgrade_Unit"
+name    = "Upgrade_Unit"
 value   = 2
 reqs    =
     { "type", "name", "range"
@@ -3100,7 +3100,7 @@ reqs    =
     }
 
 [effect_marco_polos_embassy]
-type    = "Output_Bonus"
+name    = "Output_Bonus"
 value   = 40
 reqs    =
     { "type", "name", "range"
@@ -3109,29 +3109,29 @@ reqs    =
     }
 
 [effect_michelangelos_chapel]
-type    = "Make_Content"
+name    = "Make_Content"
 value   = 3
 reqs    =
     { "type", "name", "range"
-      "Building", "Michelangelo's Chapel", "Continent"
+      "Building", "Michelangelo's Chapel", "Player"
     }
 
 [effect_michelangelos_chapel_1]
-type    = "Make_Content"
+name    = "Make_Content"
 value   = 1
 reqs    =
     { "type", "name", "range"
       "Tech", "Theology", "Player"
-      "Building", "Michelangelo's Chapel", "Continent"
+      "Building", "Michelangelo's Chapel", "Player"
     }
 
 [effect_michelangelos_chapel_2]
-type    = "Make_Content"
+name    = "Make_Content"
 value   = -1
 reqs    =
     { "type", "name", "range"
       "Tech", "Communism", "Player"
-      "Building", "Michelangelo's Chapel", "Continent"
+      "Building", "Michelangelo's Chapel", "Player"
     }
 
 [effect_mausoleum_of_mausolos]
