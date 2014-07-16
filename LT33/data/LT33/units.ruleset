@@ -36,7 +36,7 @@ veteran_power_fact = 100, 150, 175, 200, 225, 250, 275, 300, 325, 350
 
 ; The percentage chance of a settler/engineer increasing level through
 ; performing useful work (per turn)
-veteran_work_raise_chance = 12, 9, 9, 9, 7, 7, 7, 5, 5, 5
+veteran_work_raise_chance = 9, 6, 6, 6, 5, 5, 4, 4, 3, 0
 
 ; The additional number of movement points granted for different veteran
 ; levels.  These are thirds of points, so to increase movement
