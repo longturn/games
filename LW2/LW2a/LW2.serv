@@ -1,0 +1,59 @@
+rulesetdir LW2
+
+set mapsize="PLAYER"
+set generator="FRACTAL"
+set startpos="ALL"
+set tilesperplayer=450
+set topology="WRAPX|WRAPY"
+set separatepoles=disabled
+set alltemperate=enabled
+set temperature=50
+set steepness=15
+set landmass=55
+set wetness=60
+set huts=0
+set barbarians=disabled
+set specials=200
+set rapturedelay=3
+#set revealmap=MAP_START
+
+set techlost_recv=100
+set techlost_donor=0
+set diplcost=0
+set trademindist=999
+set diplchance=50
+set diplomacy=HUMAN
+set techpenalty=0
+set sciencebox=100
+
+set restrictinfra=disabled
+set unreachableprotects=disabled
+set maxplayers=126
+set saveturns=1
+set scorelog=1
+set citymindist=5
+set dispersion=4
+set startunits=ccccwwx
+set unitwaittime=36000
+set aifill=0
+set techlevel=0
+set allowtake=""
+set spacerace=enabled
+set timeout=82800
+set revolen=2
+set trading_city=disabled
+set foggedborders=enabled
+set contactturns=0
+set ec_turns=9
+set ec_max_size=5000
+set ec_chat=enabled
+set ec_info=enabled 
+set stats_script=/home/dude/stats/insert.pl
+set compresstype plain
+set cmdlevel info
+metamessage "LW1 | More info: http://longturn.org/game/LW1/"
+metapatches longturn
+
+
+syncturn
+start
