@@ -124,7 +124,7 @@ base_tech_cost   = 20
 ;     (human, AI and barbarians) which already know the tech.
 ; 3 - Technology cost is reduced depending on the number of normal
 ;     players (human and AI) which already know the tech.
-tech_leakage = 2 2 
+tech_leakage = 2 
 
 [illness]
 ; Whether plagues (illness) are possible
