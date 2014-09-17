@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export GAMENAME="LW2a"
-PORT=5121
+export GAMENAME="LW2b"
+PORT=5122
 
 . ~/server/rc.subr

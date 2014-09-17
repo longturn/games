@@ -1,4 +1,4 @@
-rulesetdir LW2
+rulesetdir LW2c
 
 set mapsize="PLAYER"
 set generator="FRACTAL"
@@ -51,7 +51,7 @@ set ec_info=enabled
 set stats_script=/home/dude/stats/insert.pl
 set compresstype plain
 set cmdlevel info
-metamessage "LW2 | More info: http://longturn.org/game/LW2/"
+metamessage "LW2c | More info: http://longturn.org/game/LW2/"
 metapatches longturn
 
 
