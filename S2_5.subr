@@ -1,0 +1,40 @@
+SOURCE=${SOURCE:-"$HOME/src/freeciv-$VERSION"}
+GAMEDIR=${GAMEDIR:-"$HOME/server/$GAMENAME"}
+SERVER=${SERVER:-"$GAMEDIR/freeciv-server"}
+SAVEDIR=${SAVEDIR:-"$GAMEDIR/save"}
+
+OPTIONS+="--exit-on-end --port $PORT "
+OPTIONS+="--saves $SAVEDIR --log $SAVEDIR/freeciv.log --Ranklog $SAVEDIR/rank.log --read $GAMENAME.serv "
+OPTIONS+="--Announce none --meta --identity longturn.org "
+
+if [ -z "$AUTHPROG" ]; then
+	if [ -x "$HOME/server/$GAMENAME/auth.sh" ]; then
+		AUTHPROG="$HOME/server/$GAMENAME/auth.sh"
+	else
+		AUTHPROG="$HOME/server/auth.sh"
+	fi
+fi
+if [ -z "$DELEGPROG" ]; then
+	if [ -x "$HOME/server/$GAMENAME/deleg.sh" ]; then
+		DELEGPROG="$HOME/server/$GAMENAME/deleg.sh"
+	else
+		DELEGPROG="$HOME/server/deleg.sh"
+	fi
+fi
+export AUTHPROG
+export DELEGPROG
+export GAMENAME
+
+if [ "$1" ]; then
+	SAVE="$SAVEDIR/$1"
+elif [ -f "$SAVEDIR/lastsave.sav.bz2" ]; then
+	SAVE="$SAVEDIR/lastsave.sav.bz2"
+fi
+
+if [ "$SAVE" ]; then
+	OPTIONS="$OPTIONS -f $SAVE"
+fi
+
+export FREECIV_DATA_PATH="$GAMEDIR/data:$SOURCE/data"
+
+$SERVER $OPTIONS

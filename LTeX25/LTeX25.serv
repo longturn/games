@@ -55,5 +55,5 @@ set timeout=82800
 set unitwaittime=0
 set nationset=all
 
-#metamessage "LTeX25 | More info: http://longturn.org/game/LTeX25/"
-#metapatches "longturn"
+metamessage "LTeX25 | More info: http://longturn.org/game/LTeX25/"
+metapatches "longturn"
