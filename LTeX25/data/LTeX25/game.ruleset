@@ -261,13 +261,13 @@ colorlist =
 [teams]
 ; freeciv optional team names definition.
 ;
-names =
- _("The Empire"),
- _("det0r's Team"),
- _("Polar Express"),
- _("The Knights Orb"),
- _("Silent Spear"),
- _("Shriekers")
+;names =
+; _("The Empire"),
+; _("det0r's Team"),
+; _("Polar Express"),
+; _("The Knights Orb"),
+; _("Silent Spear"),
+; _("Shriekers")
 ; etc...
 
 [settings]
