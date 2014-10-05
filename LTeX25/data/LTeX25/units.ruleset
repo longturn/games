@@ -37,7 +37,7 @@ veteran_raise_chance = 50, 45, 40, 35, 30, 25, 20, 15, 10, 0
 
 ; The percentage chance of a settler/engineer increasing level through
 ; performing useful work (per turn)
-veteran_work_raise_chance = 9, 6, 6, 6, 5, 5, 4, 4, 3, 0
+veteran_work_raise_chance = 8, 5, 5, 5, 4, 4, 3, 3, 2, 0
 
 ; Power factors are as a percentage.
 ; +50% is represented by 150
