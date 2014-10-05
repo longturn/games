@@ -39,7 +39,7 @@ set techlost_donor=20
 set techlost_recv=70
 set techpenalty=0
 set trademindist=999
-set trading_city=enabled
+set trading_city=disabled
 
 # technical
 set aifill=0
