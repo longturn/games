@@ -286,6 +286,16 @@ reqs    =
       "UnitType", "Nuclear", "Local"
     }
 
+; Advanced Flight increases cruise missile range
+[effect_cruise_missile_range]
+name    = "Move_Bonus"
+value   = 9
+reqs    =
+    { "type", "name", "range"
+      "Tech", "Advanced Flight", "Player"
+      "UnitType", "Cruise Missile", "Local"
+    }
+
 ; Rocketry doubles movement of nuclear weapons
 [effect_nuclear_missile]
 type    = "Move_Bonus"
