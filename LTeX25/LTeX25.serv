@@ -35,9 +35,9 @@ set diplchance=50
 set diplcost=25
 set diplomacy=HUMAN
 set sciencebox=100
-set techlost_donor=20
-set techlost_recv=70
-set techpenalty=0
+set techlost_donor=0
+set techlost_recv=0
+set techpenalty=100
 set trademindist=999
 set trading_city=disabled
 
