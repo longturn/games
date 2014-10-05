@@ -32,7 +32,7 @@ set unreachableprotects=disabled
 
 # diplomacy, technology
 set diplchance=50
-set diplcost=0
+set diplcost=25
 set diplomacy=HUMAN
 set sciencebox=100
 set techlost_donor=20
