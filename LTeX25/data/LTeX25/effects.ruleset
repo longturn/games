@@ -3094,7 +3094,13 @@ reqs    =
       "Gov", "Monarchy", "Player"
     }
 
-
+[effect_leonardos_workshop]
+type    = "Upgrade_Unit"
+value	= 2
+reqs	=
+    { "type", "name", "range"
+      "Building", "Leonardo's Workshop", "Player"
+    }
 
 [effect_manhattan_project]
 type    = "Enable_Nuke"
@@ -3103,8 +3109,6 @@ reqs    =
     { "type", "name", "range", "survives"
       "Building", "Manhattan Project", "World", TRUE
     }
-
-
 
 [effect_mausoleum_of_mausolos]
 type    = "Make_Content"
