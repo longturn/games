@@ -18,6 +18,7 @@ set topology="WRAPX|WRAPY"
 set wetness=60
 
 # general rules
+set autoattack=enabled
 set citymindist=3
 set contactturns=0
 set dispersion=4
