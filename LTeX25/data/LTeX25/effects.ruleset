@@ -3091,24 +3091,12 @@ reqs    =
     }
 
 [effect_king_richards_crusade]
-type    = "Make_Content_Mil"
+type    = "Output_Add_Tile"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Building", "King Richard's Crusade", "Player"
-    }
-nreqs   =
-    { "type", "name", "range"
-      "Gov", "Monarchy", "Player"
-    }
-
-[effect_king_richards_crusade_monarchy_mil]
-type    = "Unhappy_Factor"
-value   = -1
-reqs    =
-    { "type", "name", "range"
-      "Building", "King Richard's Crusade", "Player"
-      "Gov", "Monarchy", "Player"
+      "Building", "King Richard's Crusade", "City"
+      "OutputType", "shield", "local"
     }
 
 [effect_leonardos_workshop]
