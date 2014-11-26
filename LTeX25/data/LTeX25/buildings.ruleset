@@ -1200,7 +1200,7 @@ reqs	=
 graphic	= "b.darwins_voyage"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 300
+build_cost	= 600
 upkeep		= 0
 sabotage	= 0
 sound		= "w_darwins_voyage"
@@ -1208,8 +1208,8 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Charles Darwin's voyage sparked the discovery of the evolution\
  of the species, which inspired greater confidence in science. \
- All your cities generate 1 extra science bulb.  It also increases\
- to 3 the output of Scientist specialists for every nation.\
+ All cities with a University generate 1 extra science bulb. It also increases\
+ to 3 the output of Scientist specialists. These bonuses affect every nation.\
 ")
 
 [building_great_library]

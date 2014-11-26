@@ -2924,8 +2924,9 @@ type    = "Output_Add_Tile"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Building", "Darwin's Voyage", "Player"
+      "Building", "Darwin's Voyage", "World", TRUE
       "CityTile", "Center", "Local"
+      "Building", "University", "City"
       "OutputType", "Science", "Local"
     }
 
