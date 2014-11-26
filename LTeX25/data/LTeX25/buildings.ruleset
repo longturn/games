@@ -1123,6 +1123,7 @@ helptext	= _("\
 City improvements which would normally have an upkeep of 1 are free\
  of upkeep, for every player for every city with a Stock Exchange. \
  It also increases to 3 the output of Taxman specialists for every nation.\
+ Gives 6 additional gold to the city where it is located.\
 ")
 
 [building_colossus]
@@ -1210,6 +1211,7 @@ Charles Darwin's voyage sparked the discovery of the evolution\
  of the species, which inspired greater confidence in science. \
  All cities with a University generate 1 extra science bulb. It also increases\
  to 3 the output of Scientist specialists. These bonuses affect every nation.\
+ Gives 6 additional bulbs to the city where it is located.\
 ")
 
 [building_great_library]
@@ -1525,8 +1527,8 @@ sound		= "w_shakespeares_theatre"
 sound_alt	= "w_generic"
 helptext	= _("\
 Gives 1 additional luxury to every city of every nation with a Colosseum, \
- and 6 luxuries to the city where it is located. It also increases to 3 the \
- output of Elvis specialists for every nation.\
+ It also increases to 3 the output of Elvis specialists for every nation.\
+ Gives 6 additional luxury to the city where it is located.\
 ")
 
 ; NOTE: 
