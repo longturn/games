@@ -3234,14 +3234,15 @@ type    = "Output_Add_Tile"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Building", "Shakespeare's Theatre", "Player"
+      "Building", "Shakespeare's Theatre", "World", TRUE
       "CityTile", "Center", "Local"
+      "Building", "Colosseum", "City"
       "OutputType", "Luxury", "Local"
     }
 
 [effect_shakespeares_theatre_1]
 type    = "Output_Add_Tile"
-value   = 5
+value   = 6
 reqs    =
     { "type", "name", "range"
       "Building", "Shakespeare's Theatre", "City"
