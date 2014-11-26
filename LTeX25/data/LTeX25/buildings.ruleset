@@ -1103,7 +1103,6 @@ The total bonus is 100% if a Library and a University are present\
  Newton's College were already built.)
 ")
 
-
 [building_asmiths_trading_co]
 name		= _("A.Smith's Trading Co.")
 genus		= "GreatWonder"
@@ -1122,8 +1121,8 @@ sound		= "w_asmiths_trading_co"
 sound_alt	= "w_generic"
 helptext	= _("\
 City improvements which would normally have an upkeep of 1 are free\
- of upkeep, for every city with a Stock Exchange.  It also increases\
- to 3 the output of Taxman specialists for every nation.\
+ of upkeep, for every player for every city with a Stock Exchange. \
+ It also increases to 3 the output of Taxman specialists for every nation.\
 ")
 
 [building_colossus]
