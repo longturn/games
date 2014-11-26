@@ -1213,7 +1213,6 @@ Charles Darwin's voyage sparked the discovery of the evolution\
  to 3 the output of Scientist specialists for every nation.\
 ")
 
-
 [building_great_library]
 name		= _("Great Library")
 genus		= "GreatWonder"
@@ -1236,7 +1235,6 @@ Gives an immediate technology advance.  And 4 extra science bulbs\
  It also doubles the effect of Libraries for every nation.\
 ")
 
-
 [building_hanging_gardens]
 name		= _("Hanging Gardens")
 genus		= "SmallWonder"
@@ -1256,8 +1254,6 @@ helptext	= _("\
 Makes one unhappy citizen content in every city. \
  And creates 4 extra luxuries in the city where it is located.\
 ")
-
-
 
 [building_isaac_newtons_college]
 name		= _("Isaac Newton's College")
