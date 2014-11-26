@@ -3321,8 +3321,6 @@ reqs    =
       "OutputType", "Luxury", "Local"
     }
 
-
-
 ;pow(2, value/1000) -> Base = 50% 
 [effect_base_trade_revenue_reduce]
 type    = "Trade_Revenue_Bonus"
@@ -3457,19 +3455,24 @@ value   = 1
 ; each city has at least one slot to build units
 [effect_city_build_slots_basic]
 type    = "City_Build_Slots"
-value   = 3
-nreqs   =
+value   = 1
+
+[effect_city_build_slots_factory]
+type    = "City_Build_Slots"
+value   = 1
+reqs    =
     { "type", "name", "range"
-      "Building", "Mfg. Plant", "City"
+      "Building", "Factory", "City"
     }
 
 [effect_city_build_slots_mfg_plant]
 type    = "City_Build_Slots"
-value   = 4
+value   = 1
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
     }
+
 [effect_city_image_1]
 type    = "City_Image"
 value   = 1

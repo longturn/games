@@ -395,6 +395,7 @@ Increases the shield production in a city by 50%.  This increase may\
  contribute significantly to pollution caused by shield production. \
  The Factory also increases the pollution caused by the population\
  of the city (+100%).\
+ A Factory also increases city build slots by 1. \
 ")
 
 [building_granary]
