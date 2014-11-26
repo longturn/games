@@ -1422,7 +1422,6 @@ Makes one unhappy citizen content in every city with Walls. \
  No one of your cities can be incited to revolt.\
 ")
 
-
 [building_statue_of_zeus]
 name		= _("Statue of Zeus")
 genus		= "SmallWonder"
@@ -1443,7 +1442,6 @@ It neutralises the unhappiness caused by 1 military unit per city,\
  and it increases by 1 the units free of upkeep per city.\
 ")
 
-
 [building_temple_of_artemis]
 name		= _("Temple of Artemis")
 genus		= "SmallWonder"
@@ -1455,7 +1453,7 @@ reqs	=
 graphic         = "b.temple_of_artemis"
 graphic_alt     = "b.oracle"
 obsolete_by	= "Theology"
-build_cost	= 200
+build_cost	= 90
 upkeep		= 0
 sabotage	= 0
 sound		= "w_oracle"
