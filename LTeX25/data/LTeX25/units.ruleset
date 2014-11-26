@@ -549,9 +549,11 @@ uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer"
 roles         = "DefendOk", "FirstBuild"
+veteran_power_fact = 100
 helptext      = _("\
-This unit may be built from the start of the game.  It is the\
- weakest offensive unit.\
+This unit may be built from the start of the game. It is the\
+ weakest offensive unit. Warriors cannot gain veteran status, and are
+ always green.\
 ")
 
 [unit_phalanx]
