@@ -1211,7 +1211,7 @@ trade_bonus    = 0
 compat_special = "Road"
 native_to      = "Land", "Small Land", "Big Land", "Merchant"
 hidden_by      = "Railroad"
-flags          = "RequiresBridge", "NativeTile", "AutoOnCityCenter"
+flags          = "RequiresBridge", "NativeTile", "AlwaysOnCityCenter"
 
 [road_railroad]
 name           = _("Railroad")
