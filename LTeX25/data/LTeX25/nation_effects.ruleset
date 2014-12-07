@@ -1,0 +1,17 @@
+
+[effect_abkhaz]
+name    = "Not_Tech_Source"
+value   = 1
+reqs    =
+    { "type",   "name", "range"
+      "Nation", "Abkhaz", "Player"
+    }
+
+[effect_aborigines]
+name    = "Not_Tech_Source"
+value   = 1
+reqs    =
+    { "type",   "name", "range"
+      "Nation", "Australian Aboriginal", "Player"
+    }
+

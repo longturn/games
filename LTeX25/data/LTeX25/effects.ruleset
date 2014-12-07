@@ -17,6 +17,10 @@ options="+Freeciv-2.5-ruleset"
 ; */ <-- avoid gettext warnings
 
 
+ ; Effects for nations are in separate file
+; Uncomment this to test the Not_Tech_Source setting
+;*include "LTeX25/nation_effects.ruleset"
+
 [effect_academy]
 name  = "Veteran_Build"
 value = 1
