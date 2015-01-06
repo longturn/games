@@ -1680,8 +1680,8 @@ sound_fight   = "f_cruiser"
 sound_fight_alt = "f_generic"
 build_cost    = 90
 pop_cost      = 0
-attack        = 6
-defense       = 6
+attack        = 4
+defense       = 8
 hitpoints     = 30
 firepower     = 1
 move_rate     = 15
@@ -1695,7 +1695,7 @@ uk_gold       = 1
 flags         = "BadCityDefender"
 roles         = "DefendOk"
 helptext      = _("\
-The Cruiser is a strong offensive boat unit.\
+The Cruiser is a strong defensive boat unit.\
 ")
 
 [unit_aegis_cruiser]
@@ -1882,7 +1882,7 @@ attack        = 18
 defense       = 0
 hitpoints     = 10
 firepower     = 1
-move_rate     = 18
+move_rate     = 9
 vision_radius_sq = 18
 transport_cap = 0
 fuel          = 1
