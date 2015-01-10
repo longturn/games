@@ -125,8 +125,8 @@ reqs	=
     { "type", "name", "range", "negated"
       "Terrain", "Lake", "Adjacent", 0
     }
-graphic	= "b.aqueduct"
-graphic_alt	= "-"
+graphic	= "b.aqueduct_lake"
+graphic_alt	= "b.aqueduct"
 obsolete_by	= "None"
 build_cost	= 20
 upkeep		= 0
@@ -148,8 +148,8 @@ reqs	=
       "Special", "River", "Adjacent", 0
       "Terrain", "Lake", "Adjacent", 1
     }
-graphic	= "b.aqueduct"
-graphic_alt	= "-"
+graphic	= "b.aqueduct_river"
+graphic_alt	= "b.aqueduct"
 obsolete_by	= "None"
 build_cost	= 20
 upkeep		= 0
@@ -301,7 +301,8 @@ sabotage	= 50
 sound		= "b_city_walls"
 sound_alt	= "b_generic"
 helptext	= _("\
-City Walls make it easier to defend a city.  They double the defense\
+City Walls make it easier to defend a city and also prevent\
+ losing population if a defending unit dies.  They double the defense\
  strength of units within the city against land units.  They are\
  ineffective against aircraft, helicopter, missile and sea units.\
 ")
@@ -966,9 +967,9 @@ reqs	=
 graphic	= "b.space_structural"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 80
+build_cost	= 800
 upkeep		= 0
-sabotage	= 1000
+sabotage	= 100
 sound		= "b_space_structural"
 sound_alt	= "b_generic"
 helptext	= _("\
@@ -1344,6 +1345,47 @@ helptext	= _("\
 Upgrades two obsolete units per turn.\
 ")
 
+[building_lighthouse]
+name		= _("Lighthouse")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Map Making", "Player"
+      "TerrainClass", "Oceanic", "Adjacent"
+    }
+graphic	= "b.lighthouse"
+graphic_alt	= "-"
+obsolete_by	= "Magnetism"
+build_cost	= 100
+upkeep		= 0
+sabotage	= 0
+sound		= "w_lighthouse"
+sound_alt	= "w_generic"
+helptext	= _("\
+Gives all your sea units 1 additional movement point.\
+")
+
+[building_magellans_expedition]
+name		= _("Magellan's Expedition")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Navigation", "Player"
+      "TerrainClass", "Oceanic", "Adjacent"
+    }
+graphic	= "b.magellans_expedition"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 800
+upkeep		= 0
+sabotage	= 0
+sound		= "w_magellans_expedition"
+sound_alt	= "w_generic"
+helptext	= _("\
+All your new sea units built in cities on the same continent start at\
+ the first veteran level.\
+")
+
 [building_manhattan_project]
 name		= _("Manhattan Project")
 genus		= "GreatWonder"
@@ -1399,8 +1441,8 @@ sabotage	= 0
 sound		= "w_michelangelos_chapel"
 sound_alt	= "w_generic"
 helptext	= _("\
-Counts as having a Cathedral in each of your cities on the same\
- continent. This makes 3 unhappy citizens content in each city;\
+Counts as having a Cathedral in each of your cities.\
+ This makes 3 unhappy citizens content in each city;\
  however, it does not affect citizens made unhappy by military activity.\
  The discovery of Theology increases the effect of a Cathedral,\
  making an additional unhappy citizen content. The discovery of\
@@ -1415,8 +1457,8 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Ceremonial Burial", "Player"
     }
-graphic		= "b.oracle"
-graphic_alt	= "-"
+graphic		= "b.mausolos"
+graphic_alt	= "b.oracle"
 obsolete_by	= "Combustion"
 build_cost	= 180
 upkeep		= 0
@@ -1437,8 +1479,8 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Polytheism", "Player"
     }
-graphic	= "b.oracle"
-graphic_alt	= "-"
+graphic	= "b.zeus"
+graphic_alt	= "b.oracle"
 obsolete_by	= "Conscription"
 build_cost	= 150
 upkeep		= 0
@@ -1459,8 +1501,8 @@ reqs	=
       "Tech", "Mysticism", "Player"
       "Building", "Temple", "City"
     }
-graphic		= "b.oracle"
-graphic_alt	= "-"
+graphic		= "b.artemis"
+graphic_alt	= "b.oracle"
 obsolete_by	= "Theology"
 build_cost	= 90
 upkeep		= 0
@@ -1504,8 +1546,8 @@ reqs	=
       "Tech", "Computers", "Player"
       "Building", "Research Lab", "City"
     }
-graphic	= "b.seti_program"
-graphic_alt	= "-"
+graphic	= "b.internet"
+graphic_alt	= "b.seti_program"
 obsolete_by	= "None"
 build_cost	= 3200
 upkeep		= 0
@@ -1528,7 +1570,7 @@ reqs	=
 graphic	= "b.shakespeares_theatre"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 600
+build_cost	= 300
 upkeep		= 0
 sabotage	= 0
 sound		= "w_shakespeares_theatre"
