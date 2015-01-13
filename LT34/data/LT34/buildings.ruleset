@@ -1107,6 +1107,30 @@ The total bonus is 100% if a Library and a University are present\
 ")
 
 
+
+[building_apollo_program]
+name		= _("Apollo Program")
+genus		= "SmallWonder"
+flags		= "SaveSmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Space Flight", "Player"
+    }
+graphic	= "b.apollo_program"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 600
+upkeep		= 0
+sabotage	= 0
+sound		= "w_apollo_program"
+sound_alt	= "w_generic"
+helptext	= _("\
+Allows you to start building spaceship parts in cities\
+ with factories (assuming you have researched the necessary\
+ technologies).\
+")
+
+
 [building_asmiths_trading_co]
 name		= _("A.Smith's Trading Co.")
 genus		= "GreatWonder"
