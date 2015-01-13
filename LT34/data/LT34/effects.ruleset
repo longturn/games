@@ -2905,6 +2905,15 @@ reqs    =
       "OutputType", "Science", "Local"
     }
 
+[effect_apollo_program]
+name	= "Enable_Space"
+value	= 1
+reqs	=
+; Ideally we'd want this to be a "surviving" effect, but these aren't
+; currently supported for small wonders. Instead we use SaveSmallWonder.
+    { "type", "name", "range"
+      "Building", "Apollo Program", "Player"
+    }
 
 [effect_asmiths_trading_co]
 name    = "Upkeep_Free"
@@ -3099,6 +3108,43 @@ reqs    =
       "Building", "Leonardo's Workshop", "Player"
     }
 
+[effect_lighthouse]
+name	= "Move_Bonus"
+value	= 1
+reqs	=
+    { "type", "name", "range"
+      "Building", "Lighthouse", "Player"
+      "UnitClass", "Sea", "Local"
+    }
+
+[effect_lighthouse_1]
+name	= "Move_Bonus"
+value	= 1
+reqs	=
+    { "type", "name", "range"
+      "Building", "Lighthouse", "Player"
+      "UnitClass", "Trireme", "Local"
+    }	
+
+[effect_magellans_expedition]
+name	= "Veteran_Build"
+value	= 1
+reqs	=
+    { "type", "name", "range"
+      "Building", "Magellan's Expedition", "Continent"
+      "UnitClass", "Sea", "Local"
+    }
+
+; Should be quite useless, just in case:
+[effect_magellans_expedition_1]
+name	= "Veteran_Build"
+value	= 1
+reqs	=
+    { "type", "name", "range"
+      "Building", "Magellan's Expedition", "Continent"
+      "UnitClass", "Trireme", "Local"
+    }
+	
 [effect_manhattan_project]
 name    = "Enable_Nuke"
 value   = 1
