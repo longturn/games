@@ -357,7 +357,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "AddToCity", "Cities", "NoVeteran"
+flags         = "Settlers", "NonMil", "AddToCity", "Cities", "NoVeteran", "NoBuild"
 roles         = "Cities"
 helptext      = _("\
 Settlers are one of the key units in the game. As well as building new\
@@ -425,7 +425,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "Airbase"
+flags         = "Settlers", "NonMil", "Transform", "Airbase"
 roles         = "Settlers"
 helptext      = _("\
 Workers are similar to Settlers in that they can improve terrain --\
@@ -437,7 +437,7 @@ Workers are similar to Settlers in that they can improve terrain --\
 name          = _("Engineers")
 class         = "Small Land"
 tech_req      = "Explosives"
-obsolete_by   = "Geoengineers"
+obsolete_by   = "None"
 graphic       = "u.engineers"
 graphic_alt   = "-"
 sound_move    = "m_engineers"
@@ -458,44 +458,12 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "Airbase"
+flags         = "Settlers", "NonMil", "Transform", "Airbase"
 roles         = "Settlers"
 helptext      = _("\
 Engineers are similar to Workers, but they work twice as fast,\
  move twice as fast, and they may increase his veteran level\
  by performing useful work.\
-")
-
-[unit_geoengineers]
-name          = _("Geoengineers")
-class         = "Small Land"
-tech_req      = "Fusion Power"
-obsolete_by   = "None"
-graphic       = "u.engineers"
-graphic_alt   = "-"
-sound_move    = "m_engineers"
-sound_move_alt = "m_generic"
-sound_fight   = "f_engineers"
-sound_fight_alt = "f_generic"
-build_cost    = 40
-pop_cost      = 0
-attack        = 0
-defense       = 2
-hitpoints     = 20
-firepower     = 1
-move_rate     = 6
-vision_radius_sq = 18
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 1
-uk_food       = 0
-uk_gold       = 1
-flags         = "Settlers", "NonMil", "Transform", "Airbase"
-roles         = "Settlers"
-helptext      = _("\
-Geoengineers are Engineers that can perform major terrain\
- transformations (for example, converting Ocean into Swamp).\
 ")
 
 [unit_warriors]
@@ -509,14 +477,14 @@ sound_move    = "m_warriors"
 sound_move_alt = "m_generic"
 sound_fight   = "f_warriors"
 sound_fight_alt = "f_generic"
-build_cost    = 10
+build_cost    = 8
 pop_cost      = 0
 attack        = 1
 defense       = 1
 hitpoints     = 10
 firepower     = 1
 move_rate     = 3
-vision_radius_sq = 18
+vision_radius_sq = 12
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
@@ -586,7 +554,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "IgZOC", "Capturer"
+flags         = "Capturer"
 roles         = "DefendOk", "Hut", "BarbarianBuild", "BarbarianSea"
 helptext      = _("\
 Archers fight with bows and arrows and have a good offensive\
@@ -781,7 +749,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "IgTer", "IgZOC", "Capturer"
+flags         = "IgTer", "Capturer"
 roles         = "DefendGood", "Partisan", "BarbarianTech"
 helptext      = _("\
 Partisans are guerilla fighters who are experts\
@@ -1201,7 +1169,7 @@ sound_fight   = "f_catapult"
 sound_fight_alt = "f_generic"
 build_cost    = 40
 pop_cost      = 0
-attack        = 6
+attack        = 5
 defense       = 1
 hitpoints     = 10
 firepower     = 1
@@ -1213,7 +1181,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = ""
+flags         = "CityBuster"
 roles         = "AttackStrong"
 helptext      = _("\
 Catapults are large rock-throwing machines of war.\
@@ -1246,7 +1214,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = ""
+flags         = "CityBuster"
 roles         = "AttackStrong", "BarbarianTech", "BarbarianBuildTech"
 helptext      = _("\
 Cannons are large firearms that can fire heavy\
@@ -2001,7 +1969,7 @@ uk_happy      = 0
 uk_shield     = 0
 uk_food       = 0
 uk_gold       = 0
-flags         = "Diplomat", "IgZOC", "NonMil"
+flags         = "Diplomat", "NonMil"
 roles         = "Diplomat"
 helptext      = _("\
 A Diplomat is an official that carries your dispatches and\
@@ -2091,7 +2059,7 @@ uk_happy      = 0
 uk_shield     = 0
 uk_food       = 0
 uk_gold       = 0
-flags         = "Diplomat", "IgZOC", "NonMil", "Spy"
+flags         = "Diplomat", "NonMil", "Spy"
 roles         = "Diplomat"
 helptext      = _("\
 A Spy is more skilled in the arts of espionage than her Diplomat predecessor.\
@@ -2206,14 +2174,14 @@ defense       = 1
 hitpoints     = 10
 firepower     = 1
 move_rate     = 3
-vision_radius_sq = 18
+vision_radius_sq = 27
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
 uk_shield     = 0
 uk_food       = 0
 uk_gold       = 0
-flags         = "IgTer", "IgZOC", "NonMil"
+flags         = "IgTer", "NonMil"
 roles         = "Explorer"
 helptext      = _("\
 Explorers are brave individuals that are very useful for\
