@@ -50,13 +50,13 @@ food_cost        = 2
 ;   if city_size > num_inis;
 ;     city_granary_size = (granary_food_ini[num_inis] +
 ;        granary_food_inc * (city_size - num_inis)) * foodbox / 100
-granary_food_ini = 20, 20, 20, 20, 20, 30, 30, 40
+granary_food_ini = 10, 20, 20, 20, 20, 30, 30, 40
 granary_food_inc = 0
 
 ; City center minimum outputs
 min_city_center_food    = 1
-min_city_center_shield  = 0
-min_city_center_trade   = 0
+min_city_center_shield  = 1
+min_city_center_trade   = 1
 
 ; Square of initially city radius
 init_city_radius_sq     = 15
