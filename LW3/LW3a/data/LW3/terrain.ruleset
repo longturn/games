@@ -28,7 +28,7 @@ ocean_reclaim_requirement = 30
 
 ; Percentage of "water" tiles required to be adjacent to a land tile before
 ; it may be "channeled" into a water tile (0-101; 0=anywhere, default 101=nowhere)
-land_channel_requirement = 10
+land_channel_requirement = 30
 
 ; Bodies of water up to this size are considered freshwater lakes, if there is
 ; also terrain type(s) with flag "FreshWater" in the ruleset.
@@ -428,10 +428,10 @@ road_time            = 2
 irrigation_result    = "yes"
 irrigation_food_incr = 1
 irrigation_time      = 5
-mining_result        = "terrain_forest"
-mining_shield_incr   = 0
+mining_result        = "yes"
+mining_shield_incr   = 1
 mining_time          = 15
-transform_result     = "terrain_hills"
+transform_result     = "terrain_plains"
 transform_time       = 24
 rail_time            = 3
 clean_pollution_time = 3
@@ -498,7 +498,7 @@ trade                = 0
 resources            = "resource_gems", "resource_fruit"
 road_trade_incr      = 0
 road_time            = 4
-irrigation_result    = "terrain_swamp"
+irrigation_result    = "terrain_forest"
 irrigation_food_incr = 0
 irrigation_time      = 5
 mining_result        = "no"
@@ -542,8 +542,8 @@ irrigation_time      = 0
 mining_result        = "yes"
 mining_shield_incr   = 1
 mining_time          = 10
-transform_result     = "no"
-transform_time       = 0
+transform_result     = "terrian_hills"
+transform_time       = 36
 rail_time            = 3
 clean_pollution_time = 3
 clean_fallout_time   = 3
@@ -575,8 +575,8 @@ road_time            = 2
 irrigation_result    = "yes"
 irrigation_food_incr = 1
 irrigation_time      = 5
-mining_result        = "terrain_forest"
-mining_shield_incr   = 0
+mining_result        = "yes"
+mining_shield_incr   = 1
 mining_time          = 15
 transform_result     = "terrain_grassland"
 transform_time       = 24
