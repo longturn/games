@@ -3,17 +3,18 @@ rulesetdir LW3
 set mapsize="PLAYER"
 set generator="FRACTAL"
 set startpos="ALL"
-set tilesperplayer=450
-set topology="WRAPX|WRAPY"
+set tilesperplayer=350
+set topology=""
 set separatepoles=disabled
 set alltemperate=enabled
-set temperature=50
+set temperature=48
 set steepness=15
-set landmass=55
+set landmass=65
 set wetness=60
 set huts=0
 set barbarians=disabled
 set specials=200
+set stepness=0
 
 set rapturedelay=3
 
@@ -33,7 +34,7 @@ set saveturns=1
 set scorelog=1
 set citymindist=5
 set dispersion=0
-set startunits=ccccwwx
+set startunits=ccccccwwx
 set unitwaittime=36000
 set aifill=0
 set techlevel=0
