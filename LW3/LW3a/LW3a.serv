@@ -14,7 +14,7 @@ set wetness=60
 set huts=0
 set barbarians=disabled
 set specials=200
-set stepness=0
+set stepeness=0
 
 set rapturedelay=3
 

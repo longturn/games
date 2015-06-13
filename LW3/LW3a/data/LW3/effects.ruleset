@@ -2059,6 +2059,14 @@ nreqs   =
       "UnitClass", "Missile", "Local"
     }
 
+[effect_city_walls_1]
+name    = "Unit_No_Lose_Pop"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "City Walls", "City"
+    }
+
 [effect_city_walls_visible]
 name    = "Visible_Walls"
 value   = 1
