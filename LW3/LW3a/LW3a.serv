@@ -15,7 +15,7 @@ set huts=0
 set barbarians=disabled
 set specials=200
 set steepeness=0
-set killcitizen=""
+set killcitizen="LAND"
 
 set rapturedelay=3
 
