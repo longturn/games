@@ -153,7 +153,7 @@ name          = _("?unitclass:Sea")
 move_type     = "Sea"
 min_speed     = 2
 hp_loss_pct   = 0
-flags         = "DamageSlows"
+flags         = "ZOC"
 
 [unitclass_trireme]
 ; /* TRANS: Unit class: used adjectivally */
@@ -161,7 +161,7 @@ name          = _("Trireme")
 move_type     = "Sea"
 min_speed     = 2
 hp_loss_pct   = 0
-flags         = "DamageSlows"
+flags         = "ZOC"
 
 [unitclass_heli]
 ; /* TRANS: Unit class: used adjectivally */
