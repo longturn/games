@@ -41,7 +41,7 @@ veteran_work_raise_chance = 9, 6, 6, 6, 5, 5, 4, 4, 3, 0
 ; The additional number of movement points granted for different veteran
 ; levels.  These are thirds of points, so to increase movement
 ; by a whole point 3 must be specified.
-veteran_move_bonus = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+veteran_move_bonus = 0, 1, 2, 3, 4, 5, 6, 8, 10, 13
 
 ; /* <-- avoid gettext warnings
 ;
