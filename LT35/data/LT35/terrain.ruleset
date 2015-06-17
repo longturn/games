@@ -787,6 +787,7 @@ graphic     = "ts.oasis"
 graphic_alt = "-"
 identifier  = "o"
 food        = 2
+trade       = 4
 # desert.
 
 [resource_peat]
