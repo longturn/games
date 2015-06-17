@@ -366,7 +366,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "AddToCity", "Cities", "NoVeteran", "Capturable"
+flags         = "Settlers", "NonMil", "AddToCity", "Cities", "NoVeteran"
 roles         = "Cities"
 helptext      = _("\
 Settlers are one of the key units in the game. As well as building new\
