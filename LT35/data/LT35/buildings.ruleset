@@ -1454,7 +1454,7 @@ name		= _("Trade Company")
 genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Trade", "Player"
+      "Tech", "Navigation", "Player"
     }
 graphic	= "b.marco_polos_embassy"
 graphic_alt	= "-"
