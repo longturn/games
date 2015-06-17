@@ -3,7 +3,7 @@ rulesetdir LT35
 # map
 set alltemperate=disabled
 set barbarians=disabled
-set generator="ISLAND"
+set generator="FRACTAL"
 set huts=0
 set landmass=40
 set mapsize="PLAYER"
