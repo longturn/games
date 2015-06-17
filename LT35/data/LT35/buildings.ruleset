@@ -1455,6 +1455,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Navigation", "Player"
+	  "Building", "Marco Polo's Embassy", "Player"
     }
 graphic	= "b.marco_polos_embassy"
 graphic_alt	= "-"
