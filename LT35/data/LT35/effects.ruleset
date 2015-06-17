@@ -3155,10 +3155,10 @@ reqs    =
 
 [effect_marco_polos_embassy]
 name    = "Output_Bonus"
-value   = 40
+value   = 30
 reqs    =
     { "type", "name", "range"
-      "Building", "Marco Polo's Embassy", "Player"
+      "Building", "Marco Polo's Embassy", "World"
       "OutputType", "Trade", "Local"
     }
 
