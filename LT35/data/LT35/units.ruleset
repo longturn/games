@@ -467,7 +467,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "Transform", "Airbase", "Capturable"
+flags         = "Settlers", "NonMil", "Transform", "Airbase"
 roles         = "Settlers"
 helptext      = _("\
 Engineers are similar to Workers, but they work twice as fast and\
