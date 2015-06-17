@@ -3110,7 +3110,7 @@ reqs    =
 
 [effect_lighthouse]
 name	= "Move_Bonus"
-value	= 1
+value	= 3
 reqs	=
     { "type", "name", "range"
       "Building", "Lighthouse", "Player"
@@ -3119,7 +3119,7 @@ reqs	=
 
 [effect_lighthouse_1]
 name	= "Move_Bonus"
-value	= 1
+value	= 3
 reqs	=
     { "type", "name", "range"
       "Building", "Lighthouse", "Player"
