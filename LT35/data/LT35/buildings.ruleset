@@ -1430,7 +1430,7 @@ sound_alt	= "w_generic"
 
 [building_marco_polos_embassy]
 name		= _("Marco Polo's Embassy")
-genus		= "SmallWonder"
+genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Trade", "Player"
@@ -1445,8 +1445,29 @@ sound		= "w_marco_polos_embassy"
 sound_alt	= "w_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases trade output by 40% in all cities owned by the\
+Increases trade output by 30% in all cities owned by the\
  player.\
+")
+
+[building_trade_company]
+name		= _("Trade Company")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Trade", "Player"
+    }
+graphic	= "b.marco_polos_embassy"
+graphic_alt	= "-"
+obsolete_by	= "Industrialization"
+build_cost	= 120
+sabotage	= 0
+sound		= "w_marco_polos_embassy"
+sound_alt	= "w_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+This wonder gives the player a monopoly on trade with\
+far away countries. Increases trade output by 10% in\
+all cities owned by the player.\
 ")
 
 [building_michelangelos_chapel]

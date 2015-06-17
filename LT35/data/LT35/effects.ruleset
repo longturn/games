@@ -3161,6 +3161,16 @@ reqs    =
       "Building", "Marco Polo's Embassy", "World"
       "OutputType", "Trade", "Local"
     }
+	
+[effect_trade_company]
+name    = "Output_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+      "Building", "Trade Company", "Player"
+	  "Building", "Marco Polo's Embassy", "City"
+      "OutputType", "Trade", "Local"
+    }
 
 [effect_michelangelos_chapel]
 name    = "Make_Content"
