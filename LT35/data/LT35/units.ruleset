@@ -28,7 +28,7 @@ names = "Airbase"
 veteran_names = _("green (100%)"), _("veteran 1 (150%)"), _("veteran 2 (175%)"), _("veteran 3 (200%)"), _("hardened 1 (225%)"), _("hardened 2 (250%)"), _("hardened 3 (275%)"), _("elite 1 (300%)"), _("elite 2 (325%)"), _("elite 3 (350%)")
 
 ; The percentage chance of increasing level through combat
-veteran_raise_chance = 50, 45, 40, 35, 30, 25, 20, 15, 10, 0
+veteran_raise_chance = 65, 60, 55, 50, 45, 30, 20, 15, 10, 0
 
 ; Power factors are as a percentage.
 ; +50% is represented by 150
