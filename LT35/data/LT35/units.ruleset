@@ -2299,3 +2299,101 @@ The AWACS (Airborne Warning and Control System) is an airplane with an \
 advanced radar that can determine the location of enemy units over a \
 wide area.\
 ")
+
+[unit_fusionfighter]
+name          = _("Fusion Powered Fighter")
+class         = "Air"
+tech_req      = "Fusion Power"
+obsolete_by   = "None"
+graphic       = "u.stealth_fighter"
+graphic_alt   = "-"
+sound_move    = "m_stealth_fighter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_stealth_fighter"
+sound_fight_alt = "f_generic"
+build_cost    = 160
+pop_cost      = 0
+attack        = 8
+defense       = 7
+hitpoints     = 20
+firepower     = 2
+move_rate     = 60
+vision_radius_sq = 72
+transport_cap = 0
+fuel          = 1
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+targets       = "Air", "Missile"
+flags         = "Partial_Invis", "Fighter"
+roles         = ""
+helptext      = _("\
+A Stealth Fighter powered with\
+Fusion Power giving longer\
+range and double firepower.\
+")
+
+[unit_fusionarmor]
+name          = _("Fusion Powered Armor")
+class         = "Big Land"
+tech_req      = "Fusion Power"
+obsolete_by   = "None"
+graphic       = "u.armor"
+graphic_alt   = "-"
+sound_move    = "m_armor"
+sound_move_alt = "m_generic"
+sound_fight   = "f_armor"
+sound_fight_alt = "f_generic"
+build_cost    = 80
+pop_cost      = 0
+attack        = 10
+defense       = 5
+hitpoints     = 30
+firepower     = 2
+move_rate     = 9
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = ""
+roles         = "DefendOk", "AttackFast", "Hunter"
+helptext      = _("\
+A fusion powered Armor attacking\
+with double firepower.\
+")
+
+[unit_fusionbattleship]
+name          = _("Fusion Powered Battleship")
+class         = "Sea"
+tech_req      = "Fusion Power"
+obsolete_by   = "None"
+graphic       = "u.battleship"
+graphic_alt   = "-"
+sound_move    = "m_battleship"
+sound_move_alt = "m_generic"
+sound_fight   = "f_battleship"
+sound_fight_alt = "f_generic"
+build_cost    = 160
+pop_cost      = 0
+attack        = 18
+defense       = 18
+hitpoints     = 30
+firepower     = 2
+move_rate     = 12
+vision_radius_sq = 72
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "BadCityDefender"
+roles         = ""
+helptext      = _("\
+A battleship powered by fusion power\
+that attacks with double firepower.\
+")
