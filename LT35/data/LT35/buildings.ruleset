@@ -1445,8 +1445,8 @@ sound		= "w_marco_polos_embassy"
 sound_alt	= "w_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases trade output by 30% in all cities owned by the\
- player.\
+Increases trade output by 30% in all cities for all the\
+ players.\
 ")
 
 [building_trade_company]
