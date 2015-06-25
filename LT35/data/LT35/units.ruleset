@@ -2303,7 +2303,7 @@ wide area.\
 [unit_fusionfighter]
 name          = _("Fusion Powered Fighter")
 class         = "Air"
-tech_req      = "Fusion Power"
+tech_req      = "Fusion Power", "Environmentalism", "Stealth"
 obsolete_by   = "None"
 graphic       = "u.stealth_fighter"
 graphic_alt   = "-"
@@ -2337,7 +2337,7 @@ range and double firepower.\
 [unit_fusionarmor]
 name          = _("Fusion Powered Armor")
 class         = "Big Land"
-tech_req      = "Fusion Power"
+tech_req      = "Fusion Power", "Environmentalism", "Stealth"
 obsolete_by   = "None"
 graphic       = "u.armor"
 graphic_alt   = "-"
@@ -2369,7 +2369,7 @@ with double firepower.\
 [unit_fusionbattleship]
 name          = _("Fusion Powered Battleship")
 class         = "Sea"
-tech_req      = "Fusion Power"
+tech_req      = "Fusion Power", "Environmentalism", "Stealth"
 obsolete_by   = "None"
 graphic       = "u.battleship"
 graphic_alt   = "-"
