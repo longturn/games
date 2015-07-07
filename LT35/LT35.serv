@@ -45,6 +45,7 @@ set techpenalty=0
 set trademindist=999
 set trading_city=disabled
 set team_pooled_research=disabled
+set teamplacement=disabled
 
 # technical
 set aifill=0
