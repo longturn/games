@@ -1467,8 +1467,8 @@ sound		= "w_marco_polos_embassy"
 sound_alt	= "w_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-This wonder gives the player a monopoly on trade with\
-far away countries. Increases trade output by 10% in\
+This wonder gives the player a monopoly on trade with \
+far away countries. Increases trade output by 10% in \
 all cities owned by the player.\
 ")
 
