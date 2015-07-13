@@ -1,0 +1,61 @@
+rulesetdir LW3
+
+set mapsize="PLAYER"
+set generator="FRACTAL"
+set startpos="ALL"
+set tilesperplayer=350
+set topology=""
+set separatepoles=disabled
+set alltemperate=enabled
+set temperature=48
+set steepness=15
+set landmass=65
+set wetness=60
+set huts=0
+set barbarians=disabled
+set specials=200
+set steepeness=0
+set killcitizen="LAND"
+
+set rapturedelay=3
+
+set techlost_recv=100
+set techlost_donor=0
+set diplcost=0
+set trademindist=999
+set diplchance=50
+set diplomacy=HUMAN
+set techpenalty=0
+set sciencebox=200
+
+set restrictinfra=disabled
+set unreachableprotects=disabled
+set maxplayers=126
+set saveturns=1
+set scorelog=1
+set citymindist=5
+set dispersion=0
+set startunits=cccccccwwx
+set unitwaittime=36000
+set aifill=0
+set techlevel=0
+set allowtake=""
+set spacerace=enabled
+set timeout=90000
+set revolen=2
+set trading_city=disabled
+set foggedborders=enabled
+set contactturns=0
+set ec_turns=9
+set ec_max_size=5000
+set ec_chat=enabled
+set ec_info=enabled 
+set stats_script=/home/dude/stats/insert.pl
+set compresstype plain
+set cmdlevel info
+metamessage "LW3a | More info: http://longturn.org/game/LW2/"
+metapatches longturn
+
+
+syncturn
+start
