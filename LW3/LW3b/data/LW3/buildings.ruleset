@@ -125,8 +125,8 @@ reqs	=
     { "type", "name", "range", "negated"
       "Terrain", "Lake", "Adjacent", 0
     }
-graphic	= "b.aqueduct_lake"
-graphic_alt	= "b.aqueduct"
+graphic	= "b.aqueduct"
+graphic_alt	= "-"
 obsolete_by	= "None"
 build_cost	= 20
 upkeep		= 0
@@ -148,8 +148,8 @@ reqs	=
       "Special", "River", "Adjacent", 0
       "Terrain", "Lake", "Adjacent", 1
     }
-graphic	= "b.aqueduct_river"
-graphic_alt	= "b.aqueduct"
+graphic	= "b.aqueduct"
+graphic_alt	= "-"
 obsolete_by	= "None"
 build_cost	= 20
 upkeep		= 0
@@ -301,8 +301,7 @@ sabotage	= 50
 sound		= "b_city_walls"
 sound_alt	= "b_generic"
 helptext	= _("\
-City Walls make it easier to defend a city and also prevent\
- losing population if a defending unit dies.  They double the defense\
+City Walls make it easier to defend a city.  They double the defense\
  strength of units within the city against land units.  They are\
  ineffective against aircraft, helicopter, missile and sea units.\
 ")
@@ -318,7 +317,7 @@ reqs	=
 graphic	= "b.coastal_defense"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 40
+build_cost	= 60
 upkeep		= 1
 sabotage	= 100
 sound		= "b_coastal_defense"
@@ -391,7 +390,7 @@ sound		= "b_factory"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the shield production in a city by 50%.  This increase may\
+Increases the shield production in a city by 25%.  This increase may\
  contribute significantly to pollution caused by shield production. \
  The Factory also increases the pollution caused by the population\
  of the city (+25%).\
@@ -549,14 +548,14 @@ reqs	=
 graphic	= "b.mfg_plant"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 180
+build_cost	= 220
 upkeep		= 5
 sabotage	= 100
 sound		= "b_mfg_plant"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the shield production in a city by an additional 50%. \
+Increases the shield production in a city by an additional 25%. \
  The bonus is 50% if there is any Power Plant in the same city.\
 "),
 ; /* xgettext:no-c-format */
@@ -689,7 +688,7 @@ name		= _("Port Facility")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Electricity", "Player"
+      "Tech", "Amphibious Warfare", "Player"
       "TerrainClass", "Oceanic", "Adjacent"
     }
 graphic	= "b.port_facility"
@@ -815,7 +814,7 @@ reqs	=
 graphic	= "b.sdi_defense"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 240
+build_cost	= 140
 upkeep		= 4
 sabotage	= 100
 sound		= "b_sdi_defense"
@@ -901,7 +900,7 @@ reqs	=
 graphic	= "b.space_component"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 1600
+build_cost	= 160
 upkeep		= 0
 sabotage	= 100
 sound		= "b_space_component"
@@ -930,7 +929,7 @@ reqs	=
 graphic	= "b.space_modules"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 3200
+build_cost	= 320
 upkeep		= 0
 sabotage	= 100
 sound		= "b_space_module"
@@ -967,7 +966,7 @@ reqs	=
 graphic	= "b.space_structural"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 800
+build_cost	= 80
 upkeep		= 0
 sabotage	= 100
 sound		= "b_space_structural"
@@ -1089,7 +1088,7 @@ reqs	=
 graphic	= "b.university"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 100
+build_cost	= 120
 upkeep		= 2
 sabotage	= 100
 sound		= "b_university"
@@ -1107,30 +1106,6 @@ The total bonus is 100% if a Library and a University are present\
 ")
 
 
-
-[building_apollo_program]
-name		= _("Apollo Program")
-genus		= "SmallWonder"
-flags		= "SaveSmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Space Flight", "Player"
-    }
-graphic	= "b.apollo_program"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 600
-upkeep		= 0
-sabotage	= 0
-sound		= "w_apollo_program"
-sound_alt	= "w_generic"
-helptext	= _("\
-Allows you to start building spaceship parts in cities\
- with factories (assuming you have researched the necessary\
- technologies).\
-")
-
-
 [building_asmiths_trading_co]
 name		= _("A.Smith's Trading Co.")
 genus		= "GreatWonder"
@@ -1142,14 +1117,14 @@ reqs	=
 graphic	= "b.asmiths_trading_co"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 700
+build_cost	= 600
 upkeep		= 0
 sabotage	= 0
 sound		= "w_asmiths_trading_co"
 sound_alt	= "w_generic"
 helptext	= _("\
 City improvements which would normally have an upkeep of 1 are free\
- of upkeep.  It also increases\
+ of upkeep, for every city with a Stock Exchange.  It also increases\
  to 3 the output of Taxman specialists for every nation.\
 ")
 
@@ -1163,7 +1138,7 @@ reqs	=
 graphic	= "b.colossus"
 graphic_alt	= "-"
 obsolete_by	= "Automobile"
-build_cost	= 80
+build_cost	= 200
 upkeep		= 0
 sabotage	= 0
 sound		= "w_colossus"
@@ -1183,7 +1158,7 @@ reqs	=
 graphic	= "b.copernicus_observatory"
 graphic_alt	= "-"
 obsolete_by	= "Computers"
-build_cost	= 100
+build_cost	= 300
 upkeep		= 0
 sabotage	= 0
 sound		= "w_copernicus_observatory"
@@ -1228,7 +1203,7 @@ reqs	=
 graphic	= "b.darwins_voyage"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 1500
+build_cost	= 300
 upkeep		= 0
 sabotage	= 0
 sound		= "w_darwins_voyage"
@@ -1252,7 +1227,7 @@ reqs	=
 graphic	= "b.great_library"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 400
+build_cost	= 600
 upkeep		= 0
 sabotage	= 0
 sound		= "w_great_library"
@@ -1274,7 +1249,7 @@ reqs	=
 graphic	= "b.hanging_gardens"
 graphic_alt	= "-"
 obsolete_by	= "Electricity"
-build_cost	= 90
+build_cost	= 300
 upkeep		= 0
 sabotage	= 0
 sound		= "w_hanging_gardens"
@@ -1297,7 +1272,7 @@ reqs	=
 graphic	= "b.isaac_newtons_college"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 600
+build_cost	= 800
 upkeep		= 0
 sabotage	= 0
 sound		= "w_isaac_newtons_college"
@@ -1319,7 +1294,7 @@ reqs	=
 graphic	= "b.js_bachs_cathedral"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 300
+build_cost	= 600
 upkeep		= 0
 sabotage	= 0
 sound		= "w_js_bachs_cathedral"
@@ -1350,65 +1325,7 @@ It neutralises the unhappiness caused by 1 aggressively\
  it neutralises all the unhappiness caused by military units.\
 ")
 
-[building_leonardos_workshop]
-name		= _("Leonardo's Workshop")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Invention", "Player"
-    }
-graphic	= "b.leonardos_workshop"
-graphic_alt	= "-"
-obsolete_by	= "Automobile"
-build_cost	= 300
-upkeep		= 0
-sabotage	= 0
-sound		= "w_leonardos_workshop"
-sound_alt	= "w_generic"
-helptext	= _("\
-Upgrades two obsolete units per turn.\
-")
 
-[building_lighthouse]
-name		= _("Lighthouse")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Map Making", "Player"
-      "TerrainClass", "Oceanic", "Adjacent"
-    }
-graphic	= "b.lighthouse"
-graphic_alt	= "-"
-obsolete_by	= "Magnetism"
-build_cost	= 100
-upkeep		= 0
-sabotage	= 0
-sound		= "w_lighthouse"
-sound_alt	= "w_generic"
-helptext	= _("\
-Gives all your sea units 1 additional movement point.\
-")
-
-[building_magellans_expedition]
-name		= _("Magellan's Expedition")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Navigation", "Player"
-      "TerrainClass", "Oceanic", "Adjacent"
-    }
-graphic	= "b.magellans_expedition"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 800
-upkeep		= 0
-sabotage	= 0
-sound		= "w_magellans_expedition"
-sound_alt	= "w_generic"
-helptext	= _("\
-All your new sea units built in cities on the same continent start at\
- the first veteran level.\
-")
 
 [building_manhattan_project]
 name		= _("Manhattan Project")
@@ -1420,7 +1337,7 @@ reqs	=
 graphic	= "b.manhattan_project"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 1500
+build_cost	= 6000
 upkeep		= 0
 sabotage	= 0
 sound		= "w_manhattan_project"
@@ -1428,51 +1345,7 @@ sound_alt	= "w_generic"
 ;helptext is set in client/helpdata.c:helptext_wonder()
 ;helptext	=
 
-[building_marco_polos_embassy]
-name		= _("Marco Polo's Embassy")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Trade", "Player"
-    }
-graphic	= "b.marco_polos_embassy"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 800
-upkeep		= 0
-sabotage	= 0
-sound		= "w_marco_polos_embassy"
-sound_alt	= "w_generic"
-; /* xgettext:no-c-format */
-helptext	= _("\
-Increases trade output by 40% in all cities owned by the\
- player.\
-")
 
-[building_michelangelos_chapel]
-name		= _("Michelangelo's Chapel")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Monotheism", "Player"
-    }
-graphic	= "b.michelangelos_chapel"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 800
-upkeep		= 0
-sabotage	= 0
-sound		= "w_michelangelos_chapel"
-sound_alt	= "w_generic"
-helptext	= _("\
-Counts as having a Cathedral in each of your cities.\
- This makes 3 unhappy citizens content in each city;\
- however, it does not affect citizens made unhappy by military activity.\
- The discovery of Theology increases the effect of a Cathedral,\
- making an additional unhappy citizen content. The discovery of\
- Communism lessens the effect of a Cathedral, reducing by one\
- the number of unhappy citizens made content.\
-")
 
 [building_mausoleum_of_mausolos]
 name		= _("Mausoleum of Mausolos")
@@ -1481,10 +1354,10 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Ceremonial Burial", "Player"
     }
-graphic		= "b.mausolos"
-graphic_alt	= "b.oracle"
-obsolete_by	= "Combustion"
-build_cost	= 180
+graphic		= "b.oracle"
+graphic_alt	= "-"
+obsolete_by	= "Explosives"
+build_cost	= 300
 upkeep		= 0
 sabotage	= 0
 sound		= "w_oracle"
@@ -1503,10 +1376,10 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Polytheism", "Player"
     }
-graphic	= "b.zeus"
-graphic_alt	= "b.oracle"
+graphic	= "b.oracle"
+graphic_alt	= "-"
 obsolete_by	= "Conscription"
-build_cost	= 150
+build_cost	= 250
 upkeep		= 0
 sabotage	= 0
 sound		= "w_oracle"
@@ -1525,10 +1398,10 @@ reqs	=
       "Tech", "Mysticism", "Player"
       "Building", "Temple", "City"
     }
-graphic		= "b.artemis"
-graphic_alt	= "b.oracle"
+graphic		= "b.oracle"
+graphic_alt	= "-"
 obsolete_by	= "Theology"
-build_cost	= 90
+build_cost	= 200
 upkeep		= 0
 sabotage	= 0
 sound		= "w_oracle"
@@ -1549,7 +1422,7 @@ reqs	=
 graphic	= "b.pyramids"
 graphic_alt	= "-"
 obsolete_by	= "Railroad"
-build_cost	= 100
+build_cost	= 200
 upkeep		= 0
 sabotage	= 0
 sound		= "w_pyramids"
@@ -1570,8 +1443,8 @@ reqs	=
       "Tech", "Computers", "Player"
       "Building", "Research Lab", "City"
     }
-graphic	= "b.internet"
-graphic_alt	= "b.seti_program"
+graphic	= "b.seti_program"
+graphic_alt	= "-"
 obsolete_by	= "None"
 build_cost	= 3200
 upkeep		= 0
@@ -1594,7 +1467,7 @@ reqs	=
 graphic	= "b.shakespeares_theatre"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 300
+build_cost	= 600
 upkeep		= 0
 sabotage	= 0
 sound		= "w_shakespeares_theatre"

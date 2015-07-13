@@ -36,7 +36,7 @@ veteran_power_fact = 100, 150, 175, 200, 225, 250, 275, 300, 325, 350
 
 ; The percentage chance of a settler/engineer increasing level through
 ; performing useful work (per turn)
-veteran_work_raise_chance = 9, 6, 6, 6, 5, 5, 4, 4, 3, 0
+veteran_work_raise_chance = 12, 9, 9, 9, 7, 7, 7, 5, 5, 5
 
 ; The additional number of movement points granted for different veteran
 ; levels.  These are thirds of points, so to increase movement
@@ -128,15 +128,6 @@ min_speed     = 1
 hp_loss_pct   = 0
 flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
                 "CollectRansom", "ZOC", "CanFortify", "TerrainDefense", "RoadNative"
-
-[unitclass_land_siege]
-; /* TRANS: Unit class: used adjectivally */
-name          = _("?unitclass:Big Siege")
-move_type     = "Land"
-min_speed     = 1
-hp_loss_pct   = 0
-flags         = "TerrainSpeed", "DamageSlows", "BuildAnywhere",
-                "ZOC", "CanFortify", "TerrainDefense", "RoadNative"
 
 [unitclass_merchant]
 ; /* TRANS: Unit class: used adjectivally */
@@ -366,7 +357,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "AddToCity", "Cities", "NoVeteran", "Capturable"
+flags         = "Settlers", "NonMil", "AddToCity", "Cities", "NoVeteran", "NoBuild"
 roles         = "Cities"
 helptext      = _("\
 Settlers are one of the key units in the game. As well as building new\
@@ -434,7 +425,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "Airbase", "Capturable"
+flags         = "Settlers", "NonMil", "Transform", "Airbase"
 roles         = "Settlers"
 helptext      = _("\
 Workers are similar to Settlers in that they can improve terrain --\
@@ -453,7 +444,7 @@ sound_move    = "m_engineers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_engineers"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 30
 pop_cost      = 0
 attack        = 0
 defense       = 2
@@ -467,14 +458,12 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "Transform", "Airbase", "Capturable"
+flags         = "Settlers", "NonMil", "Transform", "Airbase"
 roles         = "Settlers"
 helptext      = _("\
-Engineers are similar to Workers, but they work twice as fast and\
- move twice as fast.  Engineers may also perform major terrain\
- transformations (for example, converting Tundra into Desert) which\
- are beyond the capabilities of Workers and Settlers; see the\
- Terrain Alterations section for more details.\
+Engineers are similar to Workers, but they work twice as fast,\
+ move twice as fast, and they may increase his veteran level\
+ by performing useful work.\
 ")
 
 [unit_warriors]
@@ -488,14 +477,14 @@ sound_move    = "m_warriors"
 sound_move_alt = "m_generic"
 sound_fight   = "f_warriors"
 sound_fight_alt = "f_generic"
-build_cost    = 10
+build_cost    = 8
 pop_cost      = 0
 attack        = 1
 defense       = 1
 hitpoints     = 10
 firepower     = 1
 move_rate     = 3
-vision_radius_sq = 18
+vision_radius_sq = 12
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
@@ -565,7 +554,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "IgZOC", "Capturer"
+flags         = "Capturer"
 roles         = "DefendOk", "Hut", "BarbarianBuild", "BarbarianSea"
 helptext      = _("\
 Archers fight with bows and arrows and have a good offensive\
@@ -760,7 +749,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "IgTer", "IgZOC", "Capturer"
+flags         = "IgTer", "Capturer"
 roles         = "DefendGood", "Partisan", "BarbarianTech"
 helptext      = _("\
 Partisans are guerilla fighters who are experts\
@@ -788,26 +777,27 @@ sound_move_alt = "m_generic"
 sound_fight   = "f_fanatics"
 sound_fight_alt = "f_generic"
 build_cost    = 20
-pop_cost      = 0
-attack        = 4
-defense       = 4
+pop_cost      = 1
+attack        = 5
+defense       = 5
 hitpoints     = 20
 firepower     = 1
 move_rate     = 3
 vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 1
-uk_food       = 0
-uk_gold       = 0
-flags         = "Fanatic", "Capturer"
+uk_food       = 1
+uk_gold       = 1
+flags         = "Fanatic", "AddToCity", "Capturer"
 roles         = "DefendGood"
 helptext      = _("\
 Fanatics are warriors extremely devoted to a higher cause.\
 "), _("\
 Fundamentalist nations can maintain Fanatic units without\
- having to pay any shields for upkeep.\
+ having to pay any upkeep nor causing military unhappiness. \
+ Instead, each unit reduces the population by 1.\
 ")
 
 [unit_marines]
@@ -985,7 +975,7 @@ sound_move    = "m_elephants"
 sound_move_alt = "m_generic"
 sound_fight   = "f_elephants"
 sound_fight_alt = "f_generic"
-build_cost    = 25
+build_cost    = 30
 pop_cost      = 0
 attack        = 2
 defense       = 2
@@ -1017,7 +1007,7 @@ sound_move    = "m_crusaders"
 sound_move_alt = "m_generic"
 sound_fight   = "f_crusaders"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 40
 pop_cost      = 0
 attack        = 5
 defense       = 1
@@ -1168,7 +1158,7 @@ Armors are motorized war wagons that are faster,\
 
 [unit_catapult]
 name          = _("Catapult")
-class         = "Big Siege"
+class         = "Big Land"
 tech_req      = "Mathematics"
 obsolete_by   = "Cannon"
 graphic       = "u.catapult"
@@ -1191,7 +1181,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "CityBuster", ""
+flags         = "CityBuster"
 roles         = "AttackStrong"
 helptext      = _("\
 Catapults are large rock-throwing machines of war.\
@@ -1201,7 +1191,7 @@ Catapults are large rock-throwing machines of war.\
 
 [unit_cannon]
 name          = _("Cannon")
-class         = "Big Siege"
+class         = "Big Land"
 tech_req      = "Metallurgy"
 obsolete_by   = "Artillery"
 graphic       = "u.cannon"
@@ -1224,7 +1214,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "CityBuster", ""
+flags         = "CityBuster"
 roles         = "AttackStrong", "BarbarianTech", "BarbarianBuildTech"
 helptext      = _("\
 Cannons are large firearms that can fire heavy\
@@ -1235,7 +1225,7 @@ Cannons are large firearms that can fire heavy\
 
 [unit_artillery]
 name          = _("Artillery")
-class         = "Big Siege"
+class         = "Big Land"
 tech_req      = "Machine Tools"
 obsolete_by   = "Howitzer"
 graphic       = "u.artillery"
@@ -1258,7 +1248,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "CityBuster", ""
+flags         = "CityBuster"
 roles         = "AttackStrong"
 helptext      = _("\
 The artillery is an upgraded cannon. It is a very\
@@ -1268,7 +1258,7 @@ The artillery is an upgraded cannon. It is a very\
 
 [unit_howitzer]
 name          = _("Howitzer")
-class         = "Big Siege"
+class         = "Big Land"
 tech_req      = "Robotics"
 obsolete_by   = "None"
 graphic       = "u.howitzer"
@@ -1291,7 +1281,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "CityBuster", ""
+flags         = "CityBuster"
 roles         = "AttackStrong"
 helptext      = _("\
 Howitzers are upgraded artillery with improved\
@@ -1309,7 +1299,7 @@ sound_move    = "m_fighter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_fighter"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 60
 pop_cost      = 0
 attack        = 4
 defense       = 4
@@ -1342,7 +1332,7 @@ sound_move    = "m_bomber"
 sound_move_alt = "m_generic"
 sound_fight   = "f_bomber"
 sound_fight_alt = "f_generic"
-build_cost    = 90
+build_cost    = 100
 pop_cost      = 0
 attack        = 6
 defense       = 1
@@ -1478,7 +1468,7 @@ sound_move    = "m_trireme"
 sound_move_alt = "m_generic"
 sound_fight   = "f_trireme"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 40
 pop_cost      = 0
 attack        = 1
 defense       = 1
@@ -1559,7 +1549,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Land", "Small Land", "Big Land", "Big Siege", "Merchant"
+cargo         = "Land", "Small Land", "Big Land", "Merchant"
 flags         = "BadCityDefender"
 roles         = "Ferryboat", "BarbarianBoat"
 helptext      = _("\
@@ -1579,7 +1569,7 @@ sound_move    = "m_frigate"
 sound_move_alt = "m_generic"
 sound_fight   = "f_frigate"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 60
 pop_cost      = 0
 attack        = 4
 defense       = 2
@@ -1643,7 +1633,7 @@ sound_move    = "m_destroyer"
 sound_move_alt = "m_generic"
 sound_fight   = "f_destroyer"
 sound_fight_alt = "f_generic"
-build_cost    = 70
+build_cost    = 80
 pop_cost      = 0
 attack        = 4
 defense       = 4
@@ -1680,8 +1670,8 @@ sound_fight   = "f_cruiser"
 sound_fight_alt = "f_generic"
 build_cost    = 90
 pop_cost      = 0
-attack        = 4
-defense       = 8
+attack        = 6
+defense       = 6
 hitpoints     = 30
 firepower     = 1
 move_rate     = 15
@@ -1695,7 +1685,7 @@ uk_gold       = 1
 flags         = "BadCityDefender"
 roles         = "DefendOk"
 helptext      = _("\
-The Cruiser is a strong defensive boat unit.\
+The Cruiser is a strong offensive boat unit.\
 ")
 
 [unit_aegis_cruiser]
@@ -1743,8 +1733,8 @@ sound_fight   = "f_battleship"
 sound_fight_alt = "f_generic"
 build_cost    = 160
 pop_cost      = 0
-attack        = 18
-defense       = 18
+attack        = 12
+defense       = 12
 hitpoints     = 30
 firepower     = 1
 move_rate     = 12
@@ -1776,7 +1766,7 @@ sound_fight_alt = "f_generic"
 build_cost    = 70
 pop_cost      = 0
 attack        = 12
-defense       = 4
+defense       = 5
 hitpoints     = 20
 firepower     = 1
 move_rate     = 15
@@ -1810,7 +1800,7 @@ sound_fight_alt = "f_generic"
 build_cost    = 160
 pop_cost      = 0
 attack        = 0
-defense       = 18
+defense       = 9
 hitpoints     = 40
 firepower     = 1
 move_rate     = 15
@@ -1857,7 +1847,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Land", "Small Land", "Big Land", "Big Siege", "Merchant"
+cargo         = "Land", "Small Land", "Big Land", "Merchant"
 flags         = "BadCityDefender"
 roles         = "Ferryboat"
 helptext      = _("\
@@ -1876,13 +1866,13 @@ sound_move    = "m_cruise_missile"
 sound_move_alt = "m_generic"
 sound_fight   = "f_cruise_missile"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 50
 pop_cost      = 0
 attack        = 18
 defense       = 0
 hitpoints     = 10
 firepower     = 1
-move_rate     = 9
+move_rate     = 36
 vision_radius_sq = 18
 transport_cap = 0
 fuel          = 1
@@ -1979,7 +1969,7 @@ uk_happy      = 0
 uk_shield     = 0
 uk_food       = 0
 uk_gold       = 0
-flags         = "Diplomat", "IgZOC", "NonMil"
+flags         = "Diplomat", "NonMil"
 roles         = "Diplomat"
 helptext      = _("\
 A Diplomat is an official that carries your dispatches and\
@@ -2066,10 +2056,10 @@ vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 1
+uk_shield     = 0
 uk_food       = 0
-uk_gold       = 1
-flags         = "Diplomat", "IgZOC", "NonMil", "Spy"
+uk_gold       = 0
+flags         = "Diplomat", "NonMil", "Spy"
 roles         = "Diplomat"
 helptext      = _("\
 A Spy is more skilled in the arts of espionage than her Diplomat predecessor.\
@@ -2184,14 +2174,14 @@ defense       = 1
 hitpoints     = 10
 firepower     = 1
 move_rate     = 3
-vision_radius_sq = 18
+vision_radius_sq = 27
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
 uk_shield     = 0
 uk_food       = 0
 uk_gold       = 0
-flags         = "IgTer", "IgZOC", "NonMil"
+flags         = "IgTer", "NonMil"
 roles         = "Explorer"
 helptext      = _("\
 Explorers are brave individuals that are very useful for\

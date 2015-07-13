@@ -50,13 +50,13 @@ food_cost        = 2
 ;   if city_size > num_inis;
 ;     city_granary_size = (granary_food_ini[num_inis] +
 ;        granary_food_inc * (city_size - num_inis)) * foodbox / 100
-granary_food_ini = 20, 20, 20, 20, 20, 30, 30, 40
+granary_food_ini = 10, 20, 20, 20, 20, 30, 30, 40
 granary_food_inc = 0
 
 ; City center minimum outputs
 min_city_center_food    = 1
-min_city_center_shield  = 0
-min_city_center_trade   = 0
+min_city_center_shield  = 1
+min_city_center_trade   = 1
 
 ; Square of initially city radius
 init_city_radius_sq     = 15
@@ -114,7 +114,7 @@ gold_upkeep_style = 2
 tech_cost_style = 2
 
 ; Base research cost for tech styles 1 & 2
-base_tech_cost   = 20
+base_tech_cost   = 50
 
 ; Technology leak from other civilizations
 ; 0 - No reduction of the technology cost.
@@ -124,7 +124,7 @@ base_tech_cost   = 20
 ;     (human, AI and barbarians) which already know the tech.
 ; 3 - Technology cost is reduced depending on the number of normal
 ;     players (human and AI) which already know the tech.
-tech_leakage = 2
+tech_leakage = 2 
 
 [illness]
 ; Whether plagues (illness) are possible
@@ -174,7 +174,7 @@ killstack = 1
 ;left will have their attack power reduced by 2/3 or 1/3 respectively. If
 ;this is set to 0 units will attack with full strength even if they have
 ;only fractional moves left.
-tired_attack = 1
+tired_attack = 0
 
 [borders]
 ; Base border radius from city.

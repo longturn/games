@@ -148,7 +148,7 @@ reqs    =
 ; Vision benefit from fortress watchtowers
 [effect_fortress_vision]
 name    = "Unit_Vision_Radius_Sq"
-value   = 8
+value   = 64
 reqs    =
     { "type", "name", "range"
       "Base", "Fortress", "Tile"
@@ -244,7 +244,7 @@ nreqs   =
 ; Nuclear power gives +1 moves to sea units
 [effect_nuclear_powered_boats]
 name    = "Move_Bonus"
-value   = 3
+value   = 1
 reqs    =
     { "type", "name", "range"
       "Tech", "Nuclear Power", "Player"
@@ -254,27 +254,17 @@ reqs    =
 ; Advanced Flight enables movement of nuclear weapons
 [effect_nuclear_bomber]
 name    = "Move_Bonus"
-value   = 9
+value   = 8
 reqs    =
     { "type", "name", "range"
       "Tech", "Advanced Flight", "Player"
       "UnitType", "Nuclear", "Local"
     }
 
-; Advanced Flight increases cruise missile range
-[effect_cruise_missile_range]
-name    = "Move_Bonus"
-value   = 9
-reqs    =
-    { "type", "name", "range"
-      "Tech", "Advanced Flight", "Player"
-      "UnitType", "Cruise Missile", "Local"
-    }
-
 ; Rocketry doubles movement of nuclear weapons
 [effect_nuclear_missile]
 name    = "Move_Bonus"
-value   = 9
+value   = 8
 reqs    =
     { "type", "name", "range"
       "Tech", "Rocketry", "Player"
@@ -1991,10 +1981,6 @@ reqs    =
     { "type", "name", "range"
       "Building", "Cathedral", "City"
     }
-nreqs   =
-    { "type", "name", "range"
-      "Building", "Michelangelo's Chapel", "Player"
-    }
 
 [effect_cathedral_1]
 name    = "Make_Content"
@@ -2006,20 +1992,7 @@ reqs    =
     }
 nreqs   =
     { "type", "name", "range"
-      "Building", "Michelangelo's Chapel", "Player"
-    }
-
-[effect_cathedral_2]
-name    = "Make_Content"
-value   = -1
-reqs    =
-    { "type", "name", "range"
-      "Tech", "Communism", "Player"
-      "Building", "Cathedral", "City"
-    }
-nreqs   =
-    { "type", "name", "range"
-      "Building", "Michelangelo's Chapel", "Player"
+      "Gov", "Communism", "Player"
     }
 
 ; Every Land
@@ -2087,13 +2060,13 @@ nreqs   =
     }
 
 [effect_city_walls_1]
-name	= "Unit_No_Lose_Pop"
-value	= 1
-reqs	=
+name    = "Unit_No_Lose_Pop"
+value   = 1
+reqs    =
     { "type", "name", "range"
       "Building", "City Walls", "City"
     }
-	
+
 [effect_city_walls_visible]
 name    = "Visible_Walls"
 value   = 1
@@ -2183,7 +2156,7 @@ reqs    =
 
 [effect_factory]
 name    = "Output_Bonus"
-value   = 50
+value   = 25
 reqs    =
     { "type", "name", "range"
       "Building", "Factory", "City"
@@ -2361,7 +2334,7 @@ reqs    =
 
 [effect_mfg_plant]
 name    = "Output_Bonus"
-value   = 50
+value   = 25
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
@@ -2905,15 +2878,6 @@ reqs    =
       "OutputType", "Science", "Local"
     }
 
-[effect_apollo_program]
-name	= "Enable_Space"
-value	= 1
-reqs	=
-; Ideally we'd want this to be a "surviving" effect, but these aren't
-; currently supported for small wonders. Instead we use SaveSmallWonder.
-    { "type", "name", "range"
-      "Building", "Apollo Program", "Player"
-    }
 
 [effect_asmiths_trading_co]
 name    = "Upkeep_Free"
@@ -2921,6 +2885,7 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "Building", "A.Smith's Trading Co.", "Player"
+      "Building", "Stock Exchange", "City"
     }
 
 ;2 + 1 = 3
@@ -3100,51 +3065,8 @@ reqs    =
       "Gov", "Monarchy", "Player"
     }
 
-[effect_leonardos_workshop]
-name    = "Upgrade_Unit"
-value   = 2
-reqs    =
-    { "type", "name", "range"
-      "Building", "Leonardo's Workshop", "Player"
-    }
 
-[effect_lighthouse]
-name	= "Move_Bonus"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "Lighthouse", "Player"
-      "UnitClass", "Sea", "Local"
-    }
 
-[effect_lighthouse_1]
-name	= "Move_Bonus"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "Lighthouse", "Player"
-      "UnitClass", "Trireme", "Local"
-    }	
-
-[effect_magellans_expedition]
-name	= "Veteran_Build"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "Magellan's Expedition", "Continent"
-      "UnitClass", "Sea", "Local"
-    }
-
-; Should be quite useless, just in case:
-[effect_magellans_expedition_1]
-name	= "Veteran_Build"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "Magellan's Expedition", "Continent"
-      "UnitClass", "Trireme", "Local"
-    }
-	
 [effect_manhattan_project]
 name    = "Enable_Nuke"
 value   = 1
@@ -3153,40 +3075,7 @@ reqs    =
       "Building", "Manhattan Project", "World", 1
     }
 
-[effect_marco_polos_embassy]
-name    = "Output_Bonus"
-value   = 40
-reqs    =
-    { "type", "name", "range"
-      "Building", "Marco Polo's Embassy", "Player"
-      "OutputType", "Trade", "Local"
-    }
 
-[effect_michelangelos_chapel]
-name    = "Make_Content"
-value   = 3
-reqs    =
-    { "type", "name", "range"
-      "Building", "Michelangelo's Chapel", "Player"
-    }
-
-[effect_michelangelos_chapel_1]
-name    = "Make_Content"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Tech", "Theology", "Player"
-      "Building", "Michelangelo's Chapel", "Player"
-    }
-
-[effect_michelangelos_chapel_2]
-name    = "Make_Content"
-value   = -1
-reqs    =
-    { "type", "name", "range"
-      "Tech", "Communism", "Player"
-      "Building", "Michelangelo's Chapel", "Player"
-    }
 
 [effect_mausoleum_of_mausolos]
 name    = "Make_Content"
