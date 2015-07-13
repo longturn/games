@@ -49,7 +49,7 @@ set team_pooled_research=enabled
 # technical
 set aifill=0
 set allowtake=""
-set cmdlevel info
+cmdlevel info
 set compresstype plain
 set ec_chat=enabled
 set ec_info=enabled 

@@ -207,9 +207,9 @@ negative_label = _("BC")
 [teams]
 ; freeciv optional team names definition.
 ;
-;names =
-; _("Team Green"),
-; _("Team Yellow"),
+names =
+ _("Team Red"),
+ _("Team Blue")
 
 ; etc...
 
