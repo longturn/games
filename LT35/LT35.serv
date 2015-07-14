@@ -1,0 +1,68 @@
+rulesetdir LT35
+
+# map
+set alltemperate=disabled
+set barbarians=disabled
+set generator="FRACTAL"
+set huts=0
+set landmass=35
+set mapsize="PLAYER"
+set separatepoles=disabled
+set specials=200
+set startpos="VARIABLE"
+set steepness=15
+set temperature=50
+set tilesperplayer=550
+set topology="WRAPX|WRAPY"
+set wetness=40
+set alltemperate=disabled
+
+# general rules
+set citymindist=4
+set contactturns=0
+set dispersion=4
+set foggedborders=enabled
+set rapturedelay=3
+set restrictinfra=enabled
+set revolen=2
+set spacerace=enabled
+set startunits=ccccwwww
+set techlevel=0
+set unreachableprotects=disabled
+set killunhomed=0
+set trading_tech=disabled
+set airliftingstyle="FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
+set razechance=10
+
+# diplomacy, technology
+set diplchance=40
+set diplcost=25
+set diplomacy=TEAM
+set sciencebox=600
+set techlost_donor=0
+set techlost_recv=95
+set techpenalty=0
+set trademindist=999
+set trading_city=disabled
+set team_pooled_research=enabled
+
+# technical
+set aifill=0
+set allowtake=""
+cmdlevel info
+set compresstype plain
+set ec_chat=enabled
+set ec_info=enabled 
+set ec_max_size=5000
+set ec_turns=9
+set maxplayers=126
+set saveturns=1
+set scorelog=enabled
+set timeout=82800
+set unitwaittime=36000
+metamessage "LT35 | More info: http://longturn.org/game/LT35/"
+metapatches longturn
+
+
+syncturn
+start

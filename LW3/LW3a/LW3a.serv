@@ -8,13 +8,12 @@ set topology=""
 set separatepoles=disabled
 set alltemperate=enabled
 set temperature=48
-set steepness=15
+set steepness=0
 set landmass=65
 set wetness=60
 set huts=0
 set barbarians=disabled
 set specials=200
-set steepeness=0
 set killcitizen="LAND"
 
 set rapturedelay=3
