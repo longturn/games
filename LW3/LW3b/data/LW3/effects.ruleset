@@ -2041,7 +2041,7 @@ nreqs   =
 ; Every Land
 [effect_city_walls_0]
 name    = "Defend_Bonus"
-value   = 100
+value   = 200
 reqs    =
     { "type", "name", "range"
       "Building", "City Walls", "City"
