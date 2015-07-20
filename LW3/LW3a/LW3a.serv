@@ -1,10 +1,11 @@
 rulesetdir LW3
 
 set mapsize="PLAYER"
-set generator="FRACTAL"
+set generator="RANDOM"
 set startpos="ALL"
 set tilesperplayer=350
 set topology=""
+set startpos="ALL"
 set separatepoles=disabled
 set alltemperate=enabled
 set temperature=48
