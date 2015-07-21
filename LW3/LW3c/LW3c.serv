@@ -53,7 +53,7 @@ set ec_chat=enabled
 set ec_info=enabled
 set stats_script=/home/dude/stats/insert.pl
 set compresstype plain
-set cmdlevel info
+cmdlevel info
 metamessage "LW3c | More info: http://longturn.org/game/LW3/"
 metapatches longturn
 
