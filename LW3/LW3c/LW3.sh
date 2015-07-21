@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export GAMENAME="LW3a"
-PORT=5131
+export GAMENAME="LW3c"
+PORT=5133
 
 . ~/server/rc.subr

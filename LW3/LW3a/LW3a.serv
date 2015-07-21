@@ -49,11 +49,11 @@ set contactturns=0
 set ec_turns=9
 set ec_max_size=5000
 set ec_chat=enabled
-set ec_info=enabled 
+set ec_info=enabled
 set stats_script=/home/dude/stats/insert.pl
 set compresstype plain
 set cmdlevel info
-metamessage "LW3a | More info: http://longturn.org/game/LW2/"
+metamessage "LW3a | More info: http://longturn.org/game/LW3/"
 metapatches longturn
 
 
