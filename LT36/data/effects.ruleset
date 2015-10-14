@@ -132,39 +132,39 @@ value   = 4
 
 ; Barbarian effects
 
-[effect_barb1]
-type    = "No_Diplomacy"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Nation", "Barbarian", "Player"
-    }
+;[effect_barb1]
+;type    = "No_Diplomacy"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Nation", "Barbarian", "Player"
+;    }
 
-[effect_barb2]
-type    = "No_Diplomacy"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Nation", "Pirate", "Player"
-    }
+;[effect_barb2]
+;type    = "No_Diplomacy"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Nation", "Pirate", "Player"
+;    }
 
 ; Barbarian no waste by distance
-[effect_barb3]
-type    = "Output_Waste_By_Distance"
-value   = -2
-reqs    =
-    { "type", "name", "range"
-      "Nation", "Barbarian", "Player"
-    }
+;[effect_barb3]
+;type    = "Output_Waste_By_Distance"
+;value   = -2
+;reqs    =
+;    { "type", "name", "range"
+;      "Nation", "Barbarian", "Player"
+;    }
 
 ; Pirate no waste by distance
-[effect_barb4]
-type    = "Output_Waste_By_Distance"
-value   = -2
-reqs    =
-    { "type", "name", "range"
-      "Nation", "Pirate", "Player"
-    }
+;[effect_barb4]
+;type    = "Output_Waste_By_Distance"
+;value   = -2
+;reqs    =
+;    { "type", "name", "range"
+;      "Nation", "Pirate", "Player"
+;    }
 
 ; Specialist output bonuses
 
@@ -351,7 +351,7 @@ nreqs   =
 ; Nuclear power gives +1 moves to sea units
 [effect_nuclear_powered_boats]
 type    = "Move_Bonus"
-value   = 1
+value   = 3
 reqs    =
     { "type", "name", "range"
       "Tech", "Nuclear Power", "Player"
@@ -361,7 +361,7 @@ reqs    =
 ; Advanced Flight enables movement of nuclear weapons
 [effect_nuclear_bomber]
 type    = "Move_Bonus"
-value   = 8
+value   = 9
 reqs    =
     { "type", "name", "range"
       "Tech", "Advanced Flight", "Player"
@@ -371,7 +371,7 @@ reqs    =
 ; Rocketry doubles movement of nuclear weapons
 [effect_nuclear_missile]
 type    = "Move_Bonus"
-value   = 8
+value   = 9
 reqs    =
     { "type", "name", "range"
       "Tech", "Rocketry", "Player"
@@ -1155,7 +1155,7 @@ reqs    =
 
 [effect_empire_size_base_monarchy]
 type    = "Empire_Size_Base"
-value   = 12
+value   = 20
 reqs    =
     { "type", "name", "range"
       "Gov", "Monarchy", "Player"
@@ -1171,7 +1171,7 @@ reqs    =
 
 [effect_empire_size_base_fundamentalism]
 type    = "Empire_Size_Base"
-value   = 20
+value   = 12
 reqs    =
     { "type", "name", "range"
       "Gov", "Fundamentalism", "Player"
@@ -1219,7 +1219,7 @@ reqs    =
 
 [effect_empire_size_step_monarchy]
 type    = "Empire_Size_Step"
-value   = 12
+value   = 20
 reqs    =
     { "type", "name", "range"
       "Gov", "Monarchy", "Player"
@@ -2177,7 +2177,7 @@ reqs    =
 
 [effect_factory]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Factory", "City"
@@ -2195,7 +2195,7 @@ reqs    =
 ; effect always has value>=50, so this halves food waste
 [effect_granary]
 type    = "Output_Waste_Pct"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Granary", "City"
@@ -2228,7 +2228,7 @@ nreqs   =
 ; Size adjusted when Foodbox increases
 [effect_granary_1]
 type    = "Growth_Food"
-value   = 34
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Granary", "City"
@@ -2242,7 +2242,7 @@ nreqs   =
 ; Size adjusted when Foodbox increases
 [effect_granary_2]
 type    = "Growth_Food"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Granary", "City"
@@ -2372,7 +2372,7 @@ reqs    =
 
 [effect_mfg_plant]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
@@ -2389,7 +2389,7 @@ reqs    =
 
 [effect_nuclear_plant]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Factory", "City"
@@ -2405,7 +2405,7 @@ nreqs   =
 
 [effect_nuclear_plant_1]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
@@ -2625,7 +2625,7 @@ reqs    =
 
 [effect_power_plant]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Factory", "City"
@@ -2642,7 +2642,7 @@ nreqs   =
 
 [effect_power_plant_1]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
@@ -2754,7 +2754,7 @@ reqs    =
 
 [effect_solar_plant]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Factory", "City"
@@ -2768,7 +2768,7 @@ nreqs   =
 
 [effect_solar_plant_1]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
@@ -3254,7 +3254,7 @@ reqs    =
 ; Hoover Dam behaves like a (self-enhanced) Hydro Plant in its own city
 [effect_hoover_dam]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Factory", "City"
@@ -3264,7 +3264,7 @@ reqs    =
 
 [effect_hoover_dam_1]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
@@ -3337,7 +3337,7 @@ reqs    =
 
 [effect_king_richards_crusade_1]
 type    = "Unit_Upkeep_Free_Per_City"
-value   = 2
+value   = 1
 reqs    =
     { "type", "name", "range"
       "Building", "King Richard's Crusade", "Player"
@@ -3346,7 +3346,7 @@ reqs    =
 
 [effect_leonardos_workshop]
 type    = "Upgrade_Unit"
-value   = 1
+value   = 2
 reqs    =
     { "type", "name", "range"
       "Building", "Leonardo's Workshop", "Player"
@@ -3354,7 +3354,7 @@ reqs    =
 
 [effect_lighthouse_move]
 type    = "Move_Bonus"
-value   = 1
+value   = 3
 reqs    =
     { "type", "name", "range"
       "Building", "Lighthouse", "Player"
@@ -3378,7 +3378,7 @@ nreqs   =
 
 [effect_lighthouse_trireme_move]
 type    = "Move_Bonus"
-value   = 1
+value   = 3
 reqs    =
     { "type", "name", "range"
       "Building", "Lighthouse", "Player"
@@ -3422,7 +3422,7 @@ nreqs   =
 
 [effect_magellans_expedition_move]
 type    = "Move_Bonus"
-value   = 1
+value   = 3
 reqs    =
     { "type", "name", "range"
       "Building", "Magellan's Expedition", "Player"
@@ -3452,13 +3452,32 @@ reqs    =
     }
 
 [effect_marco_polos_embassy]
+name    = "Output_Bonus"
+value   = 30
+reqs    =
+    { "type", "name", "range"
+      "Building", "Marco Polo's Embassy", "World"
+      "OutputType", "Trade", "Local"
+    }
+	
+[effect_trade_company]
+name    = "Output_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+      "Building", "Trade Company", "Player"
+	  "Building", "Marco Polo's Embassy", "City"
+      "OutputType", "Trade", "Local"
+    }
+	
+[effect_atlantic_telegraph_company]
 type    = "Have_Embassies"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Building", "Marco Polo's Embassy", "Player"
+      "Building", "Atlantic Telegraph Company", "Player"
     }
-
+	
 [effect_michelangelos_chapel]
 type    = "Make_Content"
 value   = 3
@@ -3479,7 +3498,7 @@ reqs    =
 
 [effect_mausoleum_of_mausolos_1]
 type    = "Make_Content"
-value   = 1
+value   = 3
 reqs    =
     { "type", "name", "range"
       "Building", "Courthouse", "City"
@@ -3796,7 +3815,7 @@ nreqs    =
 ; each city has at least one slot to build units
 [effect_city_build_slots_basic]
 type    = "City_Build_Slots"
-value   = 1
+value   = 3
 nreqs   =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
@@ -3805,7 +3824,7 @@ nreqs   =
 ; Mfg. Plant => 2 slots total
 [effect_city_build_slots_mfg_plant]
 type    = "City_Build_Slots"
-value   = 2
+value   = 4
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"

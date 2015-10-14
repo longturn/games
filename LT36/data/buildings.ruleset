@@ -11,7 +11,7 @@
 ; than minor changes.
 
 [datafile]
-description="Civ2Civ3 buildings data for Freeciv"
+description="LT36 (modifield Civ2Civ3) buildings data for Freeciv"
 options="+Freeciv-2.5-ruleset"
 
 ; /* <-- avoid gettext warnings
@@ -95,7 +95,7 @@ reqs	=
 graphic	= "b.aqueduct"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 60
+build_cost	= 40
 upkeep		= 1
 sabotage	= 100
 sound		= "b_aqueduct"
@@ -221,7 +221,7 @@ graphic	= "b.barracks_i"
 graphic_alt	= "-"
 obsolete_by	= "Gunpowder"
 replaced_by	= "Barracks II"
-build_cost	= 30
+build_cost	= 60
 upkeep		= 1
 sabotage	= 100
 sound		= "b_barracks_i"
@@ -320,7 +320,7 @@ graphic	= "b.city_walls"
 graphic_alt	= "-"
 obsolete_by	= "None"
 build_cost	= 30
-upkeep		= 0
+upkeep		= 1
 sabotage	= 50
 sound		= "b_city_walls"
 sound_alt	= "b_generic"
@@ -345,7 +345,7 @@ reqs	=
 graphic	= "b.coastal_defense"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 60
+build_cost	= 30
 upkeep		= 1
 sabotage	= 100
 sound		= "b_coastal_defense"
@@ -416,7 +416,7 @@ reqs	=
 graphic	= "b.factory"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 140
+build_cost	= 100
 upkeep		= 3
 sabotage	= 100
 sound		= "b_factory"
@@ -554,7 +554,7 @@ reqs	=
 graphic	= "b.marketplace"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 60
+build_cost	= 50
 upkeep		= 0
 sabotage	= 100
 sound		= "b_marketplace"
@@ -596,7 +596,7 @@ reqs	=
 graphic	= "b.mfg_plant"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 220
+build_cost	= 180
 upkeep		= 4
 sabotage	= 100
 sound		= "b_mfg_plant"
@@ -880,7 +880,7 @@ reqs	=
 graphic	= "b.sdi_defense"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 140
+build_cost	= 240
 upkeep		= 3
 sabotage	= 100
 sound		= "b_sdi_defense"
@@ -967,7 +967,7 @@ reqs	=
 graphic	= "b.space_component"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 160
+build_cost	= 240
 upkeep		= 0
 sabotage	= 100
 sound		= "b_space_component"
@@ -995,7 +995,7 @@ reqs	=
 graphic	= "b.space_modules"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 320
+build_cost	= 480
 upkeep		= 0
 sabotage	= 100
 sound		= "b_space_module"
@@ -1032,7 +1032,7 @@ reqs	=
 graphic	= "b.space_structural"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 80
+build_cost	= 120
 upkeep		= 0
 sabotage	= 100
 sound		= "b_space_structural"
@@ -1153,7 +1153,7 @@ reqs	=
 graphic	= "b.university"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 120
+build_cost	= 100
 upkeep		= 2
 sabotage	= 100
 sound		= "b_university"
@@ -1172,7 +1172,7 @@ Isaac Newton's College have both been built.\
 
 [building_apollo_program]
 name		= _("Apollo Program")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Space Flight", "Player"
@@ -1209,7 +1209,7 @@ reqs	=
 graphic	= "b.asmiths_trading_co"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 400
+build_cost	= 700
 upkeep		= 0
 sabotage	= 0
 sound		= "w_asmiths_trading_co"
@@ -1226,7 +1226,7 @@ increases to 3 permanently for every nation.\
 
 [building_colossus]
 name		= _("Colossus")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Bronze Working", "Player"
@@ -1234,7 +1234,7 @@ reqs	=
 graphic	= "b.colossus"
 graphic_alt	= "-"
 obsolete_by	= "Automobile"
-build_cost	= 200
+build_cost	= 80
 upkeep		= 0
 sabotage	= 0
 sound		= "w_colossus"
@@ -1246,7 +1246,7 @@ Each tile around the city where this wonder is built that is already\
 
 [building_copernicus_observatory]
 name		= _("Copernicus' Observatory")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Astronomy", "Player"
@@ -1254,7 +1254,7 @@ reqs	=
 graphic	= "b.copernicus_observatory"
 graphic_alt	= "-"
 obsolete_by	= "Computers"
-build_cost	= 300
+build_cost	= 100
 upkeep		= 0
 sabotage	= 0
 sound		= "w_copernicus_observatory"
@@ -1266,7 +1266,7 @@ one extra research point.\
 
 [building_cure_for_cancer]
 name		= _("Cure For Cancer")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Genetic Engineering", "Player"
@@ -1274,7 +1274,7 @@ reqs	=
 graphic	= "b.cure_for_cancer"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 600
+build_cost	= 1000
 upkeep		= 0
 sabotage	= 0
 sound		= "w_cure_for_cancer"
@@ -1345,7 +1345,7 @@ reqs	=
 graphic	= "b.great_library"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 300
+build_cost	= 400
 upkeep		= 0
 sabotage	= 0
 sound		= "w_great_library"
@@ -1368,7 +1368,7 @@ reqs	=
 graphic	= "b.great_wall"
 graphic_alt	= "-"
 obsolete_by	= "Machine Tools"
-build_cost	= 300
+build_cost	= 5000
 upkeep		= 0
 sabotage	= 0
 sound		= "w_great_wall"
@@ -1383,7 +1383,7 @@ when a defending unit is defeated by a land unit.\
 
 [building_hanging_gardens]
 name		= _("Hanging Gardens")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Pottery", "Player"
@@ -1391,7 +1391,7 @@ reqs	=
 graphic	= "b.hanging_gardens"
 graphic_alt	= "-"
 obsolete_by	= "Electricity"
-build_cost	= 200
+build_cost	= 90
 upkeep		= 0
 sabotage	= 0
 sound		= "w_hanging_gardens"
@@ -1415,7 +1415,7 @@ reqs	=
 graphic	= "b.hoover_dam"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 600
+build_cost	= 6000
 upkeep		= 0
 sabotage	= 0
 sound		= "w_hoover_dam"
@@ -1438,7 +1438,7 @@ reqs	=
 graphic	= "b.isaac_newtons_college"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 400
+build_cost	= 600
 upkeep		= 0
 sabotage	= 0
 sound		= "w_isaac_newtons_college"
@@ -1453,7 +1453,7 @@ Universities for every player.\
 
 [building_js_bachs_cathedral]
 name		= _("J.S. Bach's Cathedral")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Theology", "Player"
@@ -1461,7 +1461,7 @@ reqs	=
 graphic	= "b.js_bachs_cathedral"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 400
+build_cost	= 300
 upkeep		= 0
 sabotage	= 0
 sound		= "w_js_bachs_cathedral"
@@ -1473,7 +1473,7 @@ it (2 extra luxury points per city).\
 
 [building_king_richards_crusade]
 name		= _("King Richard's Crusade")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Chivalry", "Player"
@@ -1497,7 +1497,7 @@ towards upkeep every turn.\
 
 [building_leonardos_workshop]
 name		= _("Leonardo's Workshop")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Invention", "Player"
@@ -1505,18 +1505,18 @@ reqs	=
 graphic	= "b.leonardos_workshop"
 graphic_alt	= "-"
 obsolete_by	= "Combustion"
-build_cost	= 400
+build_cost	= 300
 upkeep		= 0
 sabotage	= 0
 sound		= "w_leonardos_workshop"
 sound_alt	= "w_generic"
 helptext	= _("\
-Upgrades one obsolete unit per game turn.\
+Upgrades two obsolete units per game turn.\
 ")
 
 [building_lighthouse]
 name		= _("Lighthouse")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Map Making", "Player"
@@ -1531,14 +1531,14 @@ sabotage	= 0
 sound		= "w_lighthouse"
 sound_alt	= "w_generic"
 helptext	= _("\
-Gives all your sea units 1 additional movement point (except Triremes \
-while moving on rivers). Makes all your new sea units veterans (for all \
+Gives all your sea units 3 additional movement points. \
+Makes all your new sea units veterans (for all \
 your cities).\
 ")
 
 [building_magellans_expedition]
 name		= _("Magellan's Expedition")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Magnetism", "Player"
@@ -1547,13 +1547,13 @@ reqs	=
 graphic	= "b.magellans_expedition"
 graphic_alt	= "-"
 obsolete_by	= "Nuclear Power"
-build_cost	= 400
+build_cost	= 300
 upkeep		= 0
 sabotage	= 0
 sound		= "w_magellans_expedition"
 sound_alt	= "w_generic"
 helptext	= _("\
-Gives all your sea units 1 additional movement point. The chance\
+Gives all your sea units 3 additional movement points. The chance\
  of a sea unit getting the next veteran level after a battle\
  increases by half.\
 ")
@@ -1568,7 +1568,7 @@ reqs	=
 graphic	= "b.manhattan_project"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 600
+build_cost	= 1500
 upkeep		= 0
 sabotage	= 0
 sound		= "w_manhattan_project"
@@ -1586,21 +1586,63 @@ reqs	=
 graphic	= "b.marco_polos_embassy"
 graphic_alt	= "-"
 obsolete_by	= "Democracy"
-build_cost	= 200
+build_cost	= 600
 upkeep		= 0
 sabotage	= 0
 sound		= "w_marco_polos_embassy"
 sound_alt	= "w_generic"
 helptext	= _("\
-The player who owns it gets an embassy with all players.\
-"), _("\
-TIP: if you're behind in research, this can help you catch up, by \
-reducing the cost of technologies that other players already know.\
+Increases trade output by 30% in all cities for all the\
+ players.\
 ")
+
+[building_trade_company]
+name		= _("Trade Company")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Navigation", "Player"
+	  "Building", "Marco Polo's Embassy", "Player"
+    }
+graphic	= "b.marco_polos_embassy"
+graphic_alt	= "-"
+obsolete_by	= "Industrialization"
+build_cost	= 120
+upkeep		= 0
+sabotage	= 0
+sound		= "w_marco_polos_embassy"
+sound_alt	= "w_generic"
+helptext	= _("\
+This wonder gives the player a monopoly on trade with \
+far away countries. Increases trade output by 10% in \
+all cities owned by the player.\
+")
+
+
+[building_atlantic_telegraph_company]
+name		= _("Atlantic Telegraph Company")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+	  "Tech", "Electricity", "Player"
+      "Building", "University", "City"
+    }
+graphic	= "b.university"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_marco_polos_embassy"
+sound_alt	= "w_generic"
+helptext	= _("\
+Player building it gets an embassy with all players.\
+")
+
 
 [building_michelangelos_chapel]
 name		= _("Michelangelo's Chapel")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Monotheism", "Player"
@@ -1609,7 +1651,7 @@ reqs	=
 graphic	= "b.michelangelos_chapel"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 400
+build_cost	= 800
 upkeep		= 0
 sabotage	= 0
 sound		= "w_michelangelos_chapel"
@@ -1622,15 +1664,15 @@ not affect citizens made unhappy by aggression.\
 
 [building_mausoleum_of_mausolos]
 name		= _("Mausoleum of Mausolos")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Ceremonial Burial", "Player"
     }
 graphic         = "b.mausoleum"
 graphic_alt     = "b.oracle"
-obsolete_by	= "Sanitation"
-build_cost	= 200
+obsolete_by	= "Combustion"
+build_cost	= 180
 upkeep		= 0
 sabotage	= 0
 sound		= "w_oracle"
@@ -1643,7 +1685,7 @@ aggression. Also, none of the owner's cities can be incited to revolt.\
 
 [building_statue_of_zeus]
 name		= _("Statue of Zeus")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Polytheism", "Player"
@@ -1651,7 +1693,7 @@ reqs	=
 graphic         = "b.statue_of_zeus"
 graphic_alt     = "b.oracle"
 obsolete_by	= "Conscription"
-build_cost	= 200
+build_cost	= 150
 upkeep		= 0
 sabotage	= 0
 sound		= "w_oracle"
@@ -1666,7 +1708,7 @@ one shield of upkeep for units.\
 
 [building_temple_of_artemis]
 name		= _("Temple of Artemis")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Mysticism", "Player"
@@ -1675,7 +1717,7 @@ reqs	=
 graphic         = "b.temple_of_artemis"
 graphic_alt     = "b.oracle"
 obsolete_by	= "Theology"
-build_cost	= 200
+build_cost	= 90
 upkeep		= 0
 sabotage	= 0
 sound		= "w_oracle"
@@ -1687,7 +1729,7 @@ a Temple. Does not affect citizens made unhappy by aggression.\
 
 [building_pyramids]
 name		= _("Pyramids")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Masonry", "Player"
@@ -1695,7 +1737,7 @@ reqs	=
 graphic	= "b.pyramids"
 graphic_alt	= "-"
 obsolete_by	= "Railroad"
-build_cost	= 200
+build_cost	= 100
 upkeep		= 0
 sabotage	= 0
 sound		= "w_pyramids"
@@ -1719,7 +1761,7 @@ reqs	=
 graphic		= "b.internet"
 graphic_alt	= "b.seti_program"
 obsolete_by	= "None"
-build_cost	= 600
+build_cost	= 3200
 upkeep		= 0
 sabotage	= 0
 sound		= "w_seti_program"
@@ -1767,7 +1809,7 @@ reqs	=
 graphic	= "b.statue_of_liberty"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 400
+build_cost	= 8000
 upkeep		= 0
 sabotage	= 0
 sound		= "w_statue_of_liberty"
@@ -1782,7 +1824,7 @@ government or by the United Nations.\
 
 [building_sun_tzus_war_academy]
 name		= _("Sun Tzu's War Academy")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Feudalism", "Player"
@@ -1790,7 +1832,7 @@ reqs	=
 graphic	= "b.sun_tzus_war_academy"
 graphic_alt	= "-"
 obsolete_by	= "Mobile Warfare"
-build_cost	= 300
+build_cost	= 600
 upkeep		= 0
 sabotage	= 0
 sound		= "w_sun_tzus_war_academy"
@@ -1798,7 +1840,7 @@ sound_alt	= "w_generic"
 helptext	= _("\
 All your new military land units start with an additional veteran level \
 (this is cumulative with any Barracks building in a city; with both, units \
-are created as Hardened).\
+are created as Veteran 2).\
 ")
 
 [building_united_nations]
@@ -1811,7 +1853,7 @@ reqs	=
 graphic	= "b.united_nations"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 600
+build_cost	= 6000
 upkeep		= 0
 sabotage	= 0
 sound		= "w_united_nations"
@@ -1831,7 +1873,7 @@ Republic and Democracy).\
 
 [building_womens_suffrage]
 name		= _("Women's Suffrage")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Conscription", "Player"
@@ -1839,7 +1881,7 @@ reqs	=
 graphic	= "b.womens_suffrage"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 600
+build_cost	= 1200
 upkeep		= 0
 sabotage	= 0
 sound		= "w_womens_suffrage"

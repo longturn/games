@@ -10,24 +10,24 @@
 ; than minor changes.
 
 [datafile]
-description="Civ2Civ3 game rules for Freeciv"
+description="LT36 (modified Civ2Civ3) game rules for Freeciv"
 options="+Freeciv-2.5-ruleset"
 
 [about]
 ; Ruleset name
-name = _("Civ2Civ3 ruleset")
+name = _("LT36 (modified Civ2Civ3) ruleset")
 
 ; Description of the ruleset
 description = _("\
-You are playing Freeciv with civ2civ3 rules:\
+You are playing Freeciv with LT36 (modified Civ2Civ3) rules:\
 \n\n\
 Gameplay more similar to civ3, keeping the combat system from civ2.\
 \n\n\
-Adapted for single player, with AI less aggressive at start,\
- but more challenging at the end.\
+Adapted for Longturn multiplayer, with fast gameplay,\
+ but more challenging for the advanced players.\
 \n\n\
-Detailed description of the differences from the classic ruleset can be\
- found in README.ruleset_civ2civ3.\
+Discussion about the differences to the Civ2Civ3 ruleset can be\
+ found from the forum of www.longturn.org.\
 ")
 
 [options]
@@ -59,10 +59,10 @@ min_city_center_shield  = 0
 min_city_center_trade   = 0
 
 ; Square of initial city radius
-init_city_radius_sq     = 5
+init_city_radius_sq     = 15
 
 ; Square of initially visible radius (true distance).
-init_vis_radius_sq      = 5
+init_vis_radius_sq      = 15
 
 ; The type of collateral contamination produced by a nuclear attack.
 ;   "Pollution" - Pollution (same as industrial/population-generated).
@@ -76,10 +76,10 @@ base_bribe_cost  = 750
 ransom_gold      = 100
 
 ; Number of veteran levels lost when upgrading a unit
-upgrade_veteran_loss     = 1
+upgrade_veteran_loss     = 0
 
 ; Number of veteran levels lost when auto-upgrading a unit
-autoupgrade_veteran_loss = 1
+autoupgrade_veteran_loss = 0
 
 ; Whether player gets to select which terrain improvement to pillage.
 pillage_select           = TRUE
@@ -117,7 +117,7 @@ paradrop_to_transport    = FALSE
 ;     gold, alternatively a random buildings from a random cities is sold
 ;     and a random units with gold upkeep is disbanded till the treasury is
 ;     balanced.
-gold_upkeep_style = 1
+gold_upkeep_style = 2
 
 ; Method of calculating technology costs
 ;   0 - Civ (I|II) style. Every new tech add researchcost to cost of next tech.
@@ -144,7 +144,7 @@ base_tech_cost   = 20
 ;     (human, AI and barbarians) which already know the tech.
 ; 3 - Technology cost is reduced depending on the number of normal
 ;     players (human and AI) which already know the tech.
-tech_leakage = 1
+tech_leakage = 2
 
 [illness]
 ; Whether plagues (illness) are possible
@@ -190,11 +190,11 @@ slow_invasions = TRUE
 ; 2/3 move points will have attack power 2/3 of normal.
 ; If this is set to FALSE units will attack with full strength even if they
 ; have only fractional moves left.
-tired_attack = FALSE
+tired_attack = TRUE
 
 [borders]
 ; Base border radius from city.
-radius_sq_city = 5
+radius_sq_city = 17
 
 ; Border radius square increased by this amount / point of city size
 size_effect    = 1
@@ -208,7 +208,7 @@ size_effect    = 1
 tech_upkeep_style = "Cities"
 
 ; upkeep cost is divided by this value
-tech_upkeep_divider = 6000
+tech_upkeep_divider = 2000
 
 ; Method of selecting techs given for free
 ; "Goal"     - Towards player`s goal, random if no goal
@@ -374,7 +374,7 @@ set =
       "tilesperplayer", 100
       "tinyisles", "ENABLED"
       "startunits", "cwx"
-      "citymindist", 3
+      "citymindist", 4
       "techlevel", 1
       "sciencebox", 100
       "borders", "ENABLED"

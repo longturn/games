@@ -239,7 +239,7 @@ irrigation_time      = 0
 mining_result        = "no"
 mining_shield_incr   = 0
 mining_time          = 0
-transform_result     = "terrain_grassland"
+transform_result     = "terrain_swamp"
 transform_time       = 36
 clean_pollution_time = 3
 clean_fallout_time   = 3
@@ -281,12 +281,12 @@ mining_result        = "no"
 mining_shield_incr   = 0
 mining_time          = 0
 transform_result     = "terrain_swamp"
-transform_time       = 36
+transform_time       = 24
 clean_pollution_time = 3
 clean_fallout_time   = 3
-warmer_wetter_result = "terrain_deep_ocean"
-warmer_drier_result  = "no"
-cooler_wetter_result = "no"
+warmer_wetter_result = "no"
+warmer_drier_result  = "terrain_swamp"
+cooler_wetter_result = "terrain_glacier"
 cooler_drier_result  = "terrain_glacier"
 native_to            = "Sea", "Air", "Missile", "Helicopter", "Trireme"
 flags                = "NoCities", "UnsafeCoast"
@@ -347,7 +347,7 @@ graphic              = "arctic"
 graphic_alt          = "-"
 identifier           = "a"
 class                = "Land"
-movement_cost        = 2
+movement_cost        = 4
 defense_bonus        = 0
 food                 = 0
 shield               = 0
@@ -364,11 +364,11 @@ irrigation_time      = 0
 mining_result        = "yes"
 mining_shield_incr   = 1
 mining_time          = 10
-transform_result     = "terrain_lake"
+transform_result     = "terrain_tundra"
 transform_time       = 36
 clean_pollution_time = 3
 clean_fallout_time   = 3
-warmer_wetter_result = "terrain_lake"
+warmer_wetter_result = "terrain_tundra"
 warmer_drier_result  = "terrain_tundra"
 cooler_wetter_result = "no"
 cooler_drier_result  = "no"
@@ -411,10 +411,10 @@ transform_result     = "terrain_plains"
 transform_time       = 24
 clean_pollution_time = 3
 clean_fallout_time   = 3
-warmer_wetter_result = "terrain_swamp"
+warmer_wetter_result = "terrain_grassland"
 warmer_drier_result  = "no"
-cooler_wetter_result = "terrain_tundra"
-cooler_drier_result  = "no"
+cooler_wetter_result = "terrain_plains"
+cooler_drier_result  = "terrain_tundra"
 native_to            = "Land", "Small Land", "Big Land", "Air", "Missile", "Helicopter"
 flags                = "CanHaveRiver"
 property_dry         = 100
@@ -438,7 +438,7 @@ graphic              = "forest"
 graphic_alt          = "-"
 identifier           = "f"
 class                = "Land"
-movement_cost        = 2
+movement_cost        = 4
 defense_bonus        = 25
 food                 = 1
 shield               = 2
@@ -452,17 +452,17 @@ road_time            = 4
 irrigation_result    = "terrain_plains"
 irrigation_food_incr = 0
 irrigation_time      = 10
-mining_result        = "terrain_grassland"
+mining_result        = "terrain_swamp"
 mining_shield_incr   = 0
 mining_time          = 15
-transform_result     = "terrain_hills"
+transform_result     = "terrain_grassland"
 transform_time       = 24
 clean_pollution_time = 3
 clean_fallout_time   = 3
 warmer_wetter_result = "terrain_jungle"
-warmer_drier_result  = "no"
-cooler_wetter_result = "no"
-cooler_drier_result  = "no"
+warmer_drier_result  = "terrain_plains"
+cooler_wetter_result = "terrain_swamp"
+cooler_drier_result  = "terrain_tundra"
 native_to            = "Land", "Small Land", "Big Land", "Air", "Missile", "Helicopter"
 flags                = "Starter", "CanHaveRiver", "NoPollution"
 property_cold        = 20
@@ -525,7 +525,7 @@ graphic              = "hills"
 graphic_alt          = "-"
 identifier           = "h"
 class                = "Land"
-movement_cost        = 2
+movement_cost        = 4
 defense_bonus        = 50
 food                 = 1
 shield               = 1
@@ -571,7 +571,7 @@ graphic              = "jungle"
 graphic_alt          = "-"
 identifier           = "j"
 class                = "Land"
-movement_cost        = 2
+movement_cost        = 4
 defense_bonus        = 25
 food                 = 1
 shield               = 1
@@ -582,20 +582,20 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
-irrigation_result    = "terrain_swamp"
+irrigation_result    = "terrain_grassland"
 irrigation_food_incr = 0
-irrigation_time      = 10
-mining_result        = "no"
-mining_shield_incr   = 0
+irrigation_time      = 5
+mining_result        = "terrain_forest"
+mining_shield_incr   = 24
 mining_time          = 0
 transform_result     = "terrain_plains"
 transform_time       = 24
 clean_pollution_time = 3
 clean_fallout_time   = 3
-warmer_wetter_result = "no"
-warmer_drier_result  = "no"
-cooler_wetter_result = "no"
-cooler_drier_result  = "terrain_forest"
+warmer_wetter_result = "terrain_ocean"
+warmer_drier_result  = "terrain_desert"
+cooler_wetter_result = "terrain_swamp"
+cooler_drier_result  = "terrain_tundra"
 native_to            = "Land", "Small Land", "Air", "Missile", "Helicopter"
 flags                = "CanHaveRiver", "NoPollution"
 property_foliage     = 50
@@ -616,7 +616,7 @@ graphic              = "mountains"
 graphic_alt          = "-"
 identifier           = "m"
 class                = "Land"
-movement_cost        = 3
+movement_cost        = 6
 defense_bonus        = 100
 food                 = 0
 shield               = 1
@@ -633,8 +633,8 @@ irrigation_time      = 0
 mining_result        = "yes"
 mining_shield_incr   = 1
 mining_time          = 10
-transform_result     = "no"
-transform_time       = 0
+transform_result     = "terrain_hills"
+transform_time       = 24
 clean_pollution_time = 3
 clean_fallout_time   = 3
 warmer_wetter_result = "no"
@@ -679,7 +679,7 @@ irrigation_food_incr = 1
 irrigation_time      = 5
 mining_result        = "terrain_forest"
 mining_shield_incr   = 0
-mining_time          = 10
+mining_time          = 15
 transform_result     = "terrain_grassland"
 transform_time       = 24
 clean_pollution_time = 3
@@ -706,7 +706,7 @@ graphic              = "swamp"
 graphic_alt          = "-"
 identifier           = "s"
 class                = "Land"
-movement_cost        = 2
+movement_cost        = 4
 defense_bonus        = 25
 food                 = 1
 shield               = 0
@@ -717,19 +717,19 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
-irrigation_result    = "yes"
+irrigation_result    = "terrain_grassland"
 irrigation_food_incr = 1
-irrigation_time      = 5
-mining_result        = "no"
+irrigation_time      = 10
+mining_result        = "terrain_forest"
 mining_shield_incr   = 0
-mining_time          = 0
-transform_result     = "terrain_grassland"
+mining_time          = 15
+transform_result     = "terrain_ocean"
 transform_time       = 24
 clean_pollution_time = 3
 clean_fallout_time   = 3
-warmer_wetter_result = "no"
+warmer_wetter_result = "terrain_ocean"
 warmer_drier_result  = "terrain_desert"
-cooler_wetter_result = "no"
+cooler_wetter_result = "terrain_glacier"
 cooler_drier_result  = "terrain_tundra"
 native_to            = "Land", "Small Land", "Air", "Missile", "Helicopter"
 flags                = "CanHaveRiver"
@@ -769,11 +769,11 @@ irrigation_time      = 0
 mining_result        = "yes"
 mining_shield_incr   = 1
 mining_time          = 5
-transform_result     = "terrain_plains"
+transform_result     = "terrain_desert"
 transform_time       = 24
 clean_pollution_time = 3
 clean_fallout_time   = 3
-warmer_wetter_result = "no"
+warmer_wetter_result = "terrain_ocean"
 warmer_drier_result  = "terrain_desert"
 cooler_wetter_result = "terrain_glacier"
 cooler_drier_result  = "no"
@@ -903,7 +903,8 @@ name        = _("Oasis")
 graphic     = "ts.oasis"
 graphic_alt = "-"
 identifier  = "o"
-food        = 3
+food        = 2
+trade       = 4
 # desert.
 
 [resource_peat]
@@ -1037,8 +1038,8 @@ shield      = 3 ; glacier used to have 4
 ;
 ; */ <-- avoid gettext warnings
 
-[base_fortress]
-name           = _("Fortress")
+[base_prefortress]
+name           = _("Pre-Fortress")
 graphic        = "base.fortress"
 graphic_alt    = "-"
 activity_gfx   = "unit.fortress"
@@ -1057,6 +1058,37 @@ build_time     = 3
 border_sq      = -1
 conflicts      = "Airbase"
 native_to      = "Land", "Small Land", "Big Land"
+flags          = "NativeTile"
+helptext       = _("\
+Units in a fortress receive double defense against land units and boats. \
+Any kind of land unit remaining in a fortress for a whole turn without \
+moving recovers a quarter of its hit points. With Astronomy, fortresses gain \
+watchtowers from which units can see further afield.\
+")
+
+
+
+[base_fortress]
+name           = _("Fortress")
+graphic        = "base.fortress"
+graphic_alt    = "-"
+activity_gfx   = "unit.fortress"
+act_gfx_alt    = "-"
+reqs           =
+    { "type", "name", "range", "negated"
+      "Tech", "Construction", "Player", FALSE
+      "TerrainClass", "Land", "Local", FALSE
+      "UnitFlag", "Settlers", "Local", FALSE
+      "UnitClass", "Sea", "Local", TRUE
+      "CityTile", "Center", "Local", TRUE
+      "Road", "River", "Local", TRUE
+      "Base", "Pre-Fortress", "Tile", TRUE
+	  }
+gui_type       = "Fortress"
+build_time     = 3
+border_sq      = -1
+conflicts      = "Airbase"
+native_to      = "Land", "Small Land", "Big Land"
 flags          = "NoAggressive", "NoStackDeath", "DiplomatDefense", "NativeTile"
 helptext       = _("\
 Units in a fortress receive double defense against land units and boats. \
@@ -1064,6 +1096,7 @@ Any kind of land unit remaining in a fortress for a whole turn without \
 moving recovers a quarter of its hit points. With Astronomy, fortresses gain \
 watchtowers from which units can see further afield.\
 ")
+
 
 [base_airbase]
 name           = _("Airbase")
