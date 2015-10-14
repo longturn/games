@@ -1261,7 +1261,7 @@ reqs           =
       "UnitClass", "Sea", "Local", TRUE
       "TerrainClass", "Land", "Local", FALSE
     }
-move_cost      = 2
+move_cost      = 3
 build_time     = 0
 food_incr      = 0
 shield_incr    = 0
@@ -1324,6 +1324,45 @@ A railroad also increases any shield resources produced by a tile.\
 City center tiles with roads are automatically upgraded to railroads\
  when you learn the Railroad technology.\
 ")
+
+[road_maglev]
+name           = _("Maglev")
+graphic        = "road.maglev"
+graphic_alt    = "road.rail"
+activity_gfx   = "unit.maglev"
+act_gfx_alt    = "unit.road"
+reqs           =
+    { "type", "name", "range"
+      "Tech", "Superconductors", "Player"
+      "Road", "Railroad", "Local"
+      "UnitFlag", "Settlers", "Local"
+      "TerrainClass", "Land", "Local"
+    }
+move_cost      = 0
+build_time     = 3
+food_incr      = 0
+shield_incr    = 0
+trade_incr     = 0
+food_bonus     = 0
+shield_bonus   = 0
+trade_bonus    = 0
+native_to      = "Land"
+flags          = "NativeTile", "RequiresBridge", "AutoOnCityCenter"
+helptext       = _("\
+With sufficient technology, you may build magnetic levitation systems\
+ along your railroad routes. Land units expend no movement points\
+ when riding a maglev; you may ride indefinitely. (As may your enemies!)\
+"), _("\
+Your regular railroads are still used to carry heavy Big Land\
+ units for which the maglev system is unsuitable, and they continue\
+ to provide production and trade bonuses.\
+"), _("\
+City center tiles with railroads are automatically upgraded to maglev\
+ when you learn about Superconductors.\
+")
+
+
+
 
 [road_river]
 name           = _("River")
