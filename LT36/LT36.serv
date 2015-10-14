@@ -63,7 +63,7 @@ set saveturns=1
 set scorelog=enabled
 set timeout=82800
 set unitwaittime=36000
-metamessage "LT35 | More info: http://longturn.org/game/LT35/"
+metamessage "LT36 | More info: http://longturn.org/game/LT36/"
 metapatches longturn
 
 
