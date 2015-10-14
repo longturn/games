@@ -1172,7 +1172,7 @@ Isaac Newton's College have both been built.\
 
 [building_apollo_program]
 name		= _("Apollo Program")
-genus		= "SmallWonder"
+genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Space Flight", "Player"
@@ -1892,6 +1892,28 @@ deployed military unit per city. Under Democracy, it additionally \
 halves the unhappiness caused by military units (reducing it to the \
 same level as a Republic).\
 ")
+
+[building_second_palace]
+name		= _("Second Palace")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Theology", "Player"
+    }
+graphic	= "b.courthouse"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 180
+upkeep		= 1
+sabotage	= 100
+sound		= "b_courthouse"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Creates a government center to combat waste and corrupton (similar to Palace).\
+")
+
+
 
 [building_capitalization]
 name		= _("Coinage")

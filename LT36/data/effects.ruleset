@@ -3958,6 +3958,14 @@ nreqs   =
     { "type", "name", "range"
       "UnitClass", "Sea", "Local"
     }
+	
+[effect_second_gov_center]
+type    = "Gov_Center"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Second Palace", "City"
+    }
 
 [effect_transform]
 type    = "Transform_Possible"
