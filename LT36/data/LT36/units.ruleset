@@ -1738,7 +1738,7 @@ The Galleon is a pure transport ship, the first which can\
 name          = _("Frigate")
 class         = "Sea"
 tech_req      = "Navigation"
-obsolete_by   = "Ironclad"
+obsolete_by   = "Destroyer"
 graphic       = "u.frigate"
 graphic_alt   = "-"
 sound_move    = "m_frigate"
@@ -1751,7 +1751,7 @@ attack        = 4
 defense       = 2
 hitpoints     = 20
 firepower     = 1
-move_rate     = 12
+move_rate     = 13
 vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
