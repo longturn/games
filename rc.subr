@@ -1,8 +1,13 @@
-GAMEDIR="$HOME/server/$GAMENAME"
-[ -z $SOURCE ] && SOURCE="$HOME/src/freeciv"
-SERVER="$GAMEDIR/freeciv-server"
-SAVEDIR="$GAMEDIR/save"
-OPTIONS="-P -A none -p $PORT --saves $SAVEDIR --log $SAVEDIR/freeciv.log -r $GAMENAME.serv --meta"
+GAMEDIR=${GAMEDIR:-"$HOME/server/$GAMENAME"}
+SOURCE=${SOURCE:-"$HOME/src/freeciv"}
+SERVER=${SERVER:-"$GAMEDIR/freeciv-server"}
+SAVEDIR=${SAVEDIR:-"$GAMEDIR/save"}
+
+if [ "$FC_VERSION" = "2_5" ]; then
+	OPTIONS="-A none -p $PORT --saves $SAVEDIR --log $SAVEDIR/freeciv.log -r $GAMENAME.serv --meta"
+else
+	OPTIONS="-P -A none -p $PORT --saves $SAVEDIR --log $SAVEDIR/freeciv.log -r $GAMENAME.serv --meta"
+fi
 
 if [ -z "$AUTHPROG" ]; then
 	if [ -x "$HOME/server/$GAMENAME/auth.sh" ]; then
@@ -33,5 +38,5 @@ if [ "$SAVE" ]; then
 fi
 
 export FREECIV_DATA_PATH="$GAMEDIR/data:$SOURCE/data"
-
+printenv
 $SERVER $OPTIONS
