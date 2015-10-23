@@ -1585,7 +1585,7 @@ reqs	=
     }
 graphic	= "b.marco_polos_embassy"
 graphic_alt	= "-"
-obsolete_by	= "Democracy"
+obsolete_by	= "None"
 build_cost	= 600
 upkeep		= 0
 sabotage	= 0
@@ -1606,7 +1606,7 @@ reqs	=
     }
 graphic	= "b.marco_polos_embassy"
 graphic_alt	= "-"
-obsolete_by	= "Industrialization"
+obsolete_by	= "None"
 build_cost	= 120
 upkeep		= 0
 sabotage	= 0
