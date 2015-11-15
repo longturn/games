@@ -38,7 +38,7 @@ set airliftingstyle="FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
 set razechance=10
 
 # diplomacy, technology
-set diplchance=40
+set diplchance=50
 set diplcost=20
 set diplomacy=TEAM
 set sciencebox=80
