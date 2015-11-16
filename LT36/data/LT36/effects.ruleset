@@ -3363,7 +3363,7 @@ reqs    =
 
 [effect_lighthouse_veteran]
 type    = "Veteran_Build"
-value   = 1
+value   = 0
 reqs    =
     { "type", "name", "range"
       "Building", "Lighthouse", "Player"
