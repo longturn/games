@@ -3422,7 +3422,7 @@ nreqs   =
 
 [effect_magellans_expedition_move]
 type    = "Move_Bonus"
-value   = 3
+value   = 2
 reqs    =
     { "type", "name", "range"
       "Building", "Magellan's Expedition", "Player"
