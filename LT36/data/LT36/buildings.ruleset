@@ -1541,7 +1541,7 @@ name		= _("Magellan's Expedition")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Magnetism", "Player"
+      "Tech", "Navigation", "Player"
       "Terrain", "Ocean", "Adjacent"
     }
 graphic	= "b.magellans_expedition"
