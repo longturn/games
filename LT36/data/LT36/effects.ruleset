@@ -3967,6 +3967,42 @@ reqs    =
       "Building", "Second Palace", "City"
     }
 
+[effect_2_second_gov_center]
+type    = "Spy_Resistant"
+value   = 50
+reqs    =
+    { "type", "name", "range"
+      "Building", "Second Palace", "City"
+    }
+
+[effect_3_second_gov_center]
+type    = "No_Incite"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Second Palace", "City"
+    }
+	
+[effect_second_palace_despotism]
+type    = "Output_Bonus"
+value   = 75
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "Building", "Second Palace", "City"
+      "OutputType", "Gold", "Local"
+    }
+
+[effect_second_palace_monarchy]
+type    = "Output_Bonus"
+value   = 50
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Monarchy", "Player"
+      "Building", "Second Palace", "City"
+      "OutputType", "Gold", "Local"
+    }
+	
 [effect_transform]
 type    = "Transform_Possible"
 value   = 1
