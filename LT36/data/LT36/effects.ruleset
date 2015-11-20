@@ -1075,7 +1075,7 @@ reqs    =
 
 [effect_civil_war_tribal]
 type    = "Civil_War_Chance"
-value   = 90
+value   = 45
 reqs    =
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
@@ -1083,7 +1083,7 @@ reqs    =
 
 [effect_civil_war_despotism]
 type    = "Civil_War_Chance"
-value   = 80
+value   = 40
 reqs    =
     { "type", "name", "range"
       "Gov", "Despotism", "Player"
@@ -1091,7 +1091,7 @@ reqs    =
 
 [effect_civil_war_monarchy]
 type    = "Civil_War_Chance"
-value   = 70
+value   = 35
 reqs    =
     { "type", "name", "range"
       "Gov", "Monarchy", "Player"
@@ -1099,7 +1099,7 @@ reqs    =
 
 [effect_civil_war_communism]
 type    = "Civil_War_Chance"
-value   = 50
+value   = 25
 reqs    =
     { "type", "name", "range"
       "Gov", "Communism", "Player"
@@ -1107,7 +1107,7 @@ reqs    =
 
 [effect_civil_war_fundamentalism]
 type    = "Civil_War_Chance"
-value   = 60
+value   = 30
 reqs    =
     { "type", "name", "range"
       "Gov", "Fundamentalism", "Player"
@@ -1115,7 +1115,7 @@ reqs    =
 
 [effect_civil_war_federation]
 type    = "Civil_War_Chance"
-value   = 20
+value   = 10
 reqs    =
     { "type", "name", "range"
       "Gov", "Federation", "Player"
@@ -1123,7 +1123,7 @@ reqs    =
 
 [effect_civil_war_republic]
 type    = "Civil_War_Chance"
-value   = 40
+value   = 20
 reqs    =
     { "type", "name", "range"
       "Gov", "Republic", "Player"
@@ -1131,7 +1131,7 @@ reqs    =
 
 [effect_civil_war_democracy]
 type    = "Civil_War_Chance"
-value   = 30
+value   = 15
 reqs    =
     { "type", "name", "range"
       "Gov", "Democracy", "Player"
