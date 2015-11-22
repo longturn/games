@@ -21,6 +21,7 @@ set wetness=40
 set alltemperate=disabled
 
 # general rules
+set nationset=all
 set citymindist=4
 set contactturns=0
 set dispersion=6
