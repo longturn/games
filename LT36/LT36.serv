@@ -40,7 +40,7 @@ set razechance=10
 
 # diplomacy, technology
 set diplchance=50
-set diplcost=20
+set diplcost=10
 set diplomacy=TEAM
 set sciencebox=80
 set techlost_donor=0
