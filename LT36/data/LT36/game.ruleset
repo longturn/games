@@ -117,7 +117,7 @@ paradrop_to_transport    = FALSE
 ;     gold, alternatively a random buildings from a random cities is sold
 ;     and a random units with gold upkeep is disbanded till the treasury is
 ;     balanced.
-gold_upkeep_style = 2
+gold_upkeep_style = 1
 
 ; Method of calculating technology costs
 ;   0 - Civ (I|II) style. Every new tech add researchcost to cost of next tech.
