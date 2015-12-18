@@ -1559,6 +1559,14 @@ reqs    =
       "Gov", "Federation", "Player"
     }
 
+[effect_incite_fundamentalism]
+type    = "No_Incite"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+	  "Gov", "Fundamentalism", "Player"
+    }
+
 [effect_incite_democracy]
 type    = "No_Incite"
 value   = 1
