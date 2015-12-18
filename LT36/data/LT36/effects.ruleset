@@ -4019,3 +4019,16 @@ reqs    =
       "Tech", "Fusion Power", "Player"
       "UnitFlag", "Transform", "Local"
     }
+	
+; give +1 food to hills/desert cities with a mine
+; this reverts the newly changed no free irrigation if mined
+[effect_municipal_water_system]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "TerrainAlter", "CanIrrigate", "Local"
+      "Special", "Mine", "Local"
+      "CityTile", "Center", "Local"
+      "OutputType", "Food", "Local"
+    }
