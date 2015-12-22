@@ -1270,7 +1270,7 @@ food_bonus     = 0
 shield_bonus   = 0
 trade_bonus    = 0
 compat_special = "Road"
-native_to      = "Land", "Small Land", "Big Land", "Merchant"
+native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege"
 hidden_by      = "Railroad"
 flags          = "RequiresBridge", "NativeTile", "AlwaysOnCityCenter"
 helptext       = _("\
@@ -1310,7 +1310,7 @@ food_bonus     = 0
 shield_bonus   = 50
 trade_bonus    = 0
 compat_special = "Railroad"
-native_to      = "Land", "Small Land", "Big Land", "Merchant"
+native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege"
 flags          = "RequiresBridge", "NativeTile", "AutoOnCityCenter"
 helptext       = _("\
 Once you learn the Railroad technology, you may upgrade your roads\
@@ -1346,7 +1346,7 @@ trade_incr     = 0
 food_bonus     = 0
 shield_bonus   = 0
 trade_bonus    = 0
-native_to      = "Land"
+native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege"
 flags          = "NativeTile", "RequiresBridge", "AutoOnCityCenter"
 helptext       = _("\
 With sufficient technology, you may build magnetic levitation systems\
@@ -1377,7 +1377,7 @@ move_cost      = 2
 move_mode      = "Cardinal"
 trade_incr_const = 1
 compat_special = "River"
-native_to      = "Land", "Small Land", "Merchant", "Trireme"
+native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege", "Trireme"
 flags          = "River", "PreventsOtherRoads", "NativeTile", "Natural"
 ; /* xgettext:no-c-format */
 helptext       = _("\
