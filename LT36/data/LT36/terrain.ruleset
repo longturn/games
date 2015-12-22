@@ -1082,7 +1082,7 @@ reqs           =
       "UnitClass", "Sea", "Local", TRUE
       "CityTile", "Center", "Local", TRUE
       "Road", "River", "Local", TRUE
-      "Base", "Pre-Fortress", "Tile", TRUE
+      "Base", "Pre-Fortress", "Tile", FALSE
 	  }
 gui_type       = "Fortress"
 build_time     = 3
