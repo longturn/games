@@ -4011,14 +4011,15 @@ reqs    =
       "OutputType", "Gold", "Local"
     }
 	
+	
 [effect_transform]
 type    = "Transform_Possible"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Tech", "Fusion Power", "Player"
       "UnitFlag", "Transform", "Local"
     }
+	
 	
 ; give +1 food to hills/desert cities with a mine
 ; this reverts the newly changed no free irrigation if mined
