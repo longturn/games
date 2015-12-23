@@ -9,11 +9,9 @@ SERVER=${SERVER:-"$GAMEDIR/freeciv-server"}
 SAVEDIR=${SAVEDIR:-"$GAMEDIR/save"}
 
 if [ "$FC_VERSION" = "2_5" ]; then
-	OPTIONS="-A none -p $PORT --saves $SAVEDIR "
-	OPTIONS+="--log $SAVEDIR/freeciv.log -r $GAMENAME.serv --meta"
+	OPTIONS="-A none -p $PORT --saves $SAVEDIR --log $SAVEDIR/freeciv.log -r $GAMENAME.serv --meta"
 else
-	OPTIONS="-P -A none -p $PORT --saves $SAVEDIR "
-	OPTIONS+="--log $SAVEDIR/freeciv.log -r $GAMENAME.serv --meta"
+	OPTIONS="-P -A none -p $PORT --saves $SAVEDIR --log $SAVEDIR/freeciv.log -r $GAMENAME.serv --meta"
 fi
 
 if [ -z "$AUTHPROG" ]; then
