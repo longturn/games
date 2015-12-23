@@ -1,12 +1,19 @@
+#
+# common code to start a freeciv server, sourced by individual games.
+#
+
+FC_VERSION=${FC_VERSION:-"2_5"}
 GAMEDIR=${GAMEDIR:-"$HOME/server/$GAMENAME"}
-SOURCE=${SOURCE:-"$HOME/src/freeciv"}
+SOURCE=${SOURCE:-"$HOME/src/freeciv-S${FC_VERSION}"}
 SERVER=${SERVER:-"$GAMEDIR/freeciv-server"}
 SAVEDIR=${SAVEDIR:-"$GAMEDIR/save"}
 
 if [ "$FC_VERSION" = "2_5" ]; then
-	OPTIONS="-A none -p $PORT --saves $SAVEDIR --log $SAVEDIR/freeciv.log -r $GAMENAME.serv --meta"
+	OPTIONS="-A none -p $PORT --saves $SAVEDIR "
+	OPTIONS+="--log $SAVEDIR/freeciv.log -r $GAMENAME.serv --meta"
 else
-	OPTIONS="-P -A none -p $PORT --saves $SAVEDIR --log $SAVEDIR/freeciv.log -r $GAMENAME.serv --meta"
+	OPTIONS="-P -A none -p $PORT --saves $SAVEDIR "
+	OPTIONS+="--log $SAVEDIR/freeciv.log -r $GAMENAME.serv --meta"
 fi
 
 if [ -z "$AUTHPROG" ]; then
@@ -16,6 +23,7 @@ if [ -z "$AUTHPROG" ]; then
 		AUTHPROG="$HOME/server/auth.sh"
 	fi
 fi
+
 if [ -z "$DELEGPROG" ]; then
 	if [ -x "$HOME/server/$GAMENAME/deleg.sh" ]; then
 		DELEGPROG="$HOME/server/$GAMENAME/deleg.sh"
@@ -23,6 +31,7 @@ if [ -z "$DELEGPROG" ]; then
 		DELEGPROG="$HOME/server/deleg.sh"
 	fi
 fi
+
 export AUTHPROG
 export DELEGPROG
 export GAMENAME
@@ -37,6 +46,9 @@ if [ "$SAVE" ]; then
 	OPTIONS="$OPTIONS -f $SAVE"
 fi
 
+mkdir $SAVEDIR # if the game is a fresh new one this directory won't exist
+
 export FREECIV_DATA_PATH="$GAMEDIR/data:$SOURCE/data"
 printenv
+
 $SERVER $OPTIONS
