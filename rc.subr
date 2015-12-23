@@ -46,7 +46,7 @@ if [ "$SAVE" ]; then
 	OPTIONS="$OPTIONS -f $SAVE"
 fi
 
-mkdir $SAVEDIR # if the game is a fresh new one this directory won't exist
+test ! -d $SAVEDIR && mkdir $SAVEDIR
 
 export FREECIV_DATA_PATH="$GAMEDIR/data:$SOURCE/data"
 printenv
