@@ -2,6 +2,10 @@
 #
 # perl continent_sizes.pl ../LT36/save/a.sav
 #
+# for I in $(seq 1 100); do echo -e "autocreate players\nstart\nsave $I\nquit" | sh LT36.sh; done
+# for I in *.sav; do echo -e "===\n$I:" ; ../../scripts/continent_sizes.pl $I; done > /tmp/maps
+# grep -A3 ^=== /tmp/maps  | grep -B2 'pole' | grep sav | sed -e 's/:/ bad/' | sed -e 's/^/mv /' > /tmp/x
+#
 
 use strict;
 use warnings;
@@ -82,8 +86,13 @@ while (keys %land) {
 
 my $total = keys %result;
 print "$tiles tiles forming $total landmasses on map:\n";
+my $i = " 1";
 for $continent_id (sort { $result{$b} <=> $result{$a} } keys %result) {
-	last if $result{$continent_id} < 10;
-	my $pole = $ispole{$continent_id} ? " including $ispole{$continent_id} tiles of pole" : "";
-	print " $result{$continent_id}$pole\n";
+	my $size = $result{$continent_id};
+	last if $size < 10;
+
+	my $pole = $ispole{$continent_id} ? " pole: $ispole{$continent_id}" : "";
+	my $percent = sprintf("%4.1f%%", $size / $tiles * 100.0);
+	print "$i $percent $size $pole\n";
+	$i = sprintf("%2d", $i + 1);
 }
