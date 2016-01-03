@@ -13,8 +13,6 @@ while (<>) {
 	if (/^t\d\d\d\d="(.*)"$/) {
 		my $tmp = $1;
 		$tmp =~ s/[:\+]/ /g;
-		#$tmp =~ s/a/_/g;
-		$tmp =~ s/[a-z]/X/g;
 		$map[$line++] = [split(//, $tmp)];
 	}
 }
@@ -56,6 +54,8 @@ sub process {
 
 my $continent_id = 0;
 my %result;
+my %ispole;
+my $tiles;
 
 while (keys %land) {
 	my $tile = (keys %land)[0];
@@ -65,6 +65,8 @@ while (keys %land) {
 	while (@tmp) {
 		($y, $x) = @{pop @tmp};
 		$result{$continent_id}++;
+		$tiles++;
+		$ispole{$continent_id}++ if $map[$y][$x] eq 'a';
 
 		process($y + 1, $x);
 		process($y - 1, $x);
@@ -79,8 +81,9 @@ while (keys %land) {
 }
 
 my $total = keys %result;
-print "$total landmasses on map\n";
-for (sort {$b <=> $a} values %result) {
-	last if $_ < 10;
-	print "$_\n";
+print "$tiles tiles forming $total landmasses on map:\n";
+for $continent_id (sort { $result{$b} <=> $result{$a} } keys %result) {
+	last if $result{$continent_id} < 10;
+	my $pole = $ispole{$continent_id} ? " including $ispole{$continent_id} tiles of pole" : "";
+	print " $result{$continent_id}$pole\n";
 }
