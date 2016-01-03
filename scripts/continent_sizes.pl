@@ -19,8 +19,8 @@ while (<>) {
 	}
 }
 
-my $w = @map;
-my $h = @{$map[0]};
+my $w = @{$map[0]};
+my $h = @map;
 my %land; # hash of tiles that are land, keys: "$y $x", values: 1
 
 for (my $y = 0; $y < $h; $y++) {
@@ -36,6 +36,8 @@ sub wrap {
 
 	$x -= $w if $x >= $w;
 	$y -= $h if $y >= $h;
+	$x += $w if $x < 0;
+	$y += $h if $y < 0;
 
 	return [$y, $x];
 }
@@ -48,7 +50,6 @@ sub process {
 	my $key = "$y $x";
 	if ($land{$key}) {
 		delete $land{$key};
-		my ($y, $x) = $key =~ /^(\d+) (\d+)$/;
 		push @tmp, [$y, $x];
 	}
 }
@@ -58,9 +59,9 @@ my %result;
 
 while (keys %land) {
 	my $tile = (keys %land)[0];
-	delete $land{$tile};
 	my ($y, $x) = $tile =~ /^(\d+) (\d+)$/;
-	push @tmp, [$y, $x];
+	process($y, $x);
+
 	while (@tmp) {
 		($y, $x) = @{pop @tmp};
 		$result{$continent_id}++;
@@ -71,8 +72,8 @@ while (keys %land) {
 		process($y, $x - 1);
 		process($y + 1, $x + 1);
 		process($y - 1, $x - 1);
-		process($y + 1, $x + 1);
-		process($y - 1, $x - 1);
+		process($y + 1, $x - 1);
+		process($y - 1, $x + 1);
 	}
 	$continent_id++;
 }
@@ -81,5 +82,5 @@ my $total = keys %result;
 print "$total landmasses on map\n";
 for (sort {$b <=> $a} values %result) {
 	last if $_ < 10;
-	print "$_\n"
+	print "$_\n";
 }
