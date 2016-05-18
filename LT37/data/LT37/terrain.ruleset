@@ -11,7 +11,7 @@
 ; than minor changes.
 
 [datafile]
-description="Civ2Civ3 tile_type data for Freeciv"
+description="LT37 (modified Civ2Civ3) terrain data for Freeciv"
 options="+Freeciv-2.5-ruleset"
 
 [control]
