@@ -376,10 +376,8 @@ set =
       "startunits", "cwx"
       "citymindist", 4
       "techlevel", 1
-      "sciencebox", 100
       "borders", "ENABLED"
       "foggedborders", "ENABLED"
-      "happyborders", "DISABLED"
       "restrictinfra", "ENABLED"
       "unreachableprotects", "DISABLED"
       "onsetbarbs", 120

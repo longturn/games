@@ -20,8 +20,9 @@ options="+Freeciv-2.5-ruleset"
 
 [control]
 ; Names for custom unit type flags. There can be up to 16 of these.
-; name          = rule name; not translateable, but may be displayed in
-;                 some circumstances
+; name          = rule name; In some circumstances user may see this
+;                 as part of some sentences, so try to make it descriptive
+;                 and sensible.
 ; helptxt       = displayed in the help for units with this flag (optional)
 flags =
   { "name", "helptxt"
@@ -65,8 +66,8 @@ veteran_move_bonus = 0, 1, 2, 3, 4, 5, 6, 8, 10, 13
 ; want add effect giving City Walls defence bonus against new class
 ; too.
 ;
-; The actual tag used (the * in [unitclass_*]) does not matter, except 
-; it must be unique within this file, and it may be used in debug 
+; The actual tag used (the * in [unitclass_*]) does not matter, except
+; it must be unique within this file, and it may be used in debug
 ; output when reading this file.
 ;
 ; ** Fields **
@@ -113,7 +114,7 @@ veteran_move_bonus = 0, 1, 2, 3, 4, 5, 6, 8, 10, 13
 ;                       still work that tile
 ; "AttackNonNative"   = Unit can attack units on non-native tiles. Unit type
 ;                       flag "Only_Native_Attack" can override this
-; "AttFromNonNative"  = Unit can launch attach from non-native tile (against
+; "AttFromNonNative"  = Unit can launch attack from non-native tile (against
 ;                       native one)
 ;                       This applies for both attacking from transport or
 ;                       cities. If only some unit types of the class should
@@ -211,15 +212,15 @@ flags         = "Unreachable", "DoesntOccupyTile", "CanPillage"
 ;
 ; Below: The individual units, one per section.
 ;
-; The number can be variable, up to 200.  
-; However for the "official" rulesets, units should not be removed 
+; The number can be variable, up to 200.
+; However for the "official" rulesets, units should not be removed
 ; because that would break backward compatability with savegames.
 ;
 ; The order here matters: later units are considered "better" for
-; a given flag or role.  
+; a given flag or role.
 ;
-; The actual tag used (the * in [unit_*]) does not matter, except 
-; it must be unique within this file, and it may be used in debug 
+; The actual tag used (the * in [unit_*]) does not matter, except
+; it must be unique within this file, and it may be used in debug
 ; output when reading this file.
 ;
 ; ** Fields **
@@ -230,9 +231,9 @@ flags         = "Unreachable", "DoesntOccupyTile", "CanPillage"
 ;                 must not change, use this when renaming a unit after a
 ;                 ruleset has been released.
 ; graphic       = tag specifying preferred graphic
-; graphic_alt	= tag for alternate garphic if preferred graphic is not 
-;		  present; especially if preferred graphic is non-standard, 
-;		  this should be a standard tag.  Otherwise can use eg "-" 
+; graphic_alt	= tag for alternate graphic if preferred graphic is not
+;		  present; especially if preferred graphic is non-standard,
+;		  this should be a standard tag.  Otherwise can use eg "-"
 ;		  for no alternate graphic.
 ; tech_req      = required advance, names from techs.ruleset, or special:
 ;                 "None" => available from start
@@ -253,9 +254,9 @@ flags         = "Unreachable", "DoesntOccupyTile", "CanPillage"
 ; convert_time  = time it takes to convert to another unit type
 ; class         = One of the classes listed above
 ; transport_cap = Number of units (ground, or air/missiles, depending on flags)
-; fuel          = number of turns air units can fly before they crash. For
-;                 barbarians this is used as lifetime instead. If this is zero,
-;                 the unit has unlimited fuel, despite flying.
+; fuel          = Number of turns unit can spend outside refuel points.
+;                 If more time passes without unit refueling over turn change,
+;                 they are lost. If this is zero, unit has no need to refuel
 ; uk_*          = upkeep costs, these are used as base values in the game
 ; cargo         = Unit classes this unit can transport
 ; city_size     = Initial size of the cities built by 'Cities' type units
@@ -374,7 +375,8 @@ flags         = "Unreachable", "DoesntOccupyTile", "CanPillage"
 ;
 ; Following flag strings require extra fields:
 ;  "Paratroopers"
-;   paratroopers_range = the maximal range the unit can be paradropped to
+;   paratroopers_range  = the maximal range the unit can be paradropped to.
+;                         Max range is 255.
 ;   paratroopers_mr_req = the move rate which is required at least for
 ;                         paradropping (whole movement points)
 ;   paratroopers_mr_sub = the move rate which is subtracted after paradropping
@@ -1014,7 +1016,6 @@ immediately ready to act there. (Beware dropping into unseen territory, \
 as Paratroopers landing on a tile occupied by enemy units are easy \
 targets!)\
 ")
-
 paratroopers_range = 15
 paratroopers_mr_req = 1
 paratroopers_mr_sub = 0
@@ -1901,7 +1902,8 @@ flags         = "BadCityDefender"
 roles         = "DefendGood"
 helptext      = _("\
 The AEGIS Cruiser is equipped with an advanced\
- defensive missile system.\
+ defensive missile system, giving it quintuple defense against\
+ all (non-nuclear) air attacks.\
 ")
 
 [unit_battleship]
@@ -2210,9 +2212,10 @@ If a foreign unit is alone on a tile, you may attempt to bribe it\
 Diplomats can also perform a number of actions in another player's\
  city, although each Diplomat may attempt only one action. Most of\
  these actions have a chance of failure. Also, any enemy Diplomats or\
- Spies in the city will oppose hostile actions; in this case, either\
- your unit or the defending unit will die. If the defending unit dies,\
- you lose one movement point and may try again.\
+ Spies in the city will oppose hostile actions, as will the enemy Leader\
+ in games with leaders; in this case, either your unit or the defending\
+ unit will die (if you go up against the Leader you will always die). If\
+ the defending unit dies, you lose one movement point and may try again.\
 "), _("\
 The actions available to Diplomats in a city are:\
 "), _("\

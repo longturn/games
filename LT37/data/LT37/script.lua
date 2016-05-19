@@ -9,6 +9,12 @@
 --   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 --   GNU General Public License for more details.
 
+-- This file is for lua-functionality that is specific to a given
+-- ruleset. When freeciv loads a ruleset, it also loads script
+-- file called 'default.lua'. The one loaded if your ruleset
+-- does not provide an override is default/default.lua.
+
+
 -- Place Ruins at the location of the destroyed city.
 function city_destroyed_callback(city, loser, destroyer)
   city.tile:create_base("Ruins", NIL)
@@ -46,7 +52,7 @@ function place_map_labels()
 
   -- Decide if a label should be included and, in case it should, where.
   if random(1, 100) <= 75 then
-    selected_mountains = random(1, mountains)
+    selected_mountain = random(1, mountains)
   end
   if random(1, 100) <= 75 then
     selected_ocean = random(1, deep_oceans)

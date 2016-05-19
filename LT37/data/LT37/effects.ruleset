@@ -132,39 +132,39 @@ value   = 4
 
 ; Barbarian effects
 
-;[effect_barb1]
-;type    = "No_Diplomacy"
-;value   = 1
-;reqs    =
-;    { "type", "name", "range"
-;      "Nation", "Barbarian", "Player"
-;    }
+[effect_barb1]
+type    = "No_Diplomacy"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Nation", "Barbarian", "Player"
+    }
 
-;[effect_barb2]
-;type    = "No_Diplomacy"
-;value   = 1
-;reqs    =
-;    { "type", "name", "range"
-;      "Nation", "Pirate", "Player"
-;    }
+[effect_barb2]
+type    = "No_Diplomacy"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Nation", "Pirate", "Player"
+    }
 
 ; Barbarian no waste by distance
-;[effect_barb3]
-;type    = "Output_Waste_By_Distance"
-;value   = -2
-;reqs    =
-;    { "type", "name", "range"
-;      "Nation", "Barbarian", "Player"
-;    }
+[effect_barb3]
+type    = "Output_Waste_By_Distance"
+value   = -2
+reqs    =
+    { "type", "name", "range"
+      "Nation", "Barbarian", "Player"
+    }
 
 ; Pirate no waste by distance
-;[effect_barb4]
-;type    = "Output_Waste_By_Distance"
-;value   = -2
-;reqs    =
-;    { "type", "name", "range"
-;      "Nation", "Pirate", "Player"
-;    }
+[effect_barb4]
+type    = "Output_Waste_By_Distance"
+value   = -2
+reqs    =
+    { "type", "name", "range"
+      "Nation", "Pirate", "Player"
+    }
 
 ; Specialist output bonuses
 

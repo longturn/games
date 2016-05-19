@@ -649,11 +649,11 @@ However, a Nuclear Plant also reduces the pollution associated with shield \
 production to 50% of its normal value, or 25% in combination with a \
 Recycling Center. (Its effect is the same as that of a Hydro Plant.)\
 "), _("\
-In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or \
-Solar Plant can take effect at any one time.\
-"), _("\
 A Nuclear Plant has a small risk of suffering a nuclear accident, which \
 can lead to fallout and reduce the city's population.\
+"), _("\
+In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or \
+Solar Plant can take effect at any one time.\
 ")
 
 [building_offshore_platform]
@@ -715,6 +715,10 @@ buildings.\
 Take good care of your capital, as its loss may result in your \
 empire plunging into civil war. Losing your current palace also \
 results in losing whatever spaceship you might have.\
+"), _("\
+If the capital is in a dangerous location, or a more central capital\
+ would give a better corruption distribution, you can move your palace\
+ by rebuilding it in another city.\
 "),
 ; /* xgettext:no-c-format */
 _("\
@@ -887,11 +891,11 @@ sound		= "b_sdi_defense"
 sound_alt	= "b_generic"
 helptext	= _("\
 Protects a city and its environs (up to 2 tiles away) from attacks \
-by Nuclear units. A Nuclear unit attacking a city with SDI Defense, \
-or attacking a unit (or deliberately exploded) within range, is shot \
-down and simply has no effect. Also, doubles the intrinsic \
-defense strength of units in the city when defending against \
-conventional missiles.\
+by enemy Nuclear units. A Nuclear unit not owned by you or an ally \
+which attacks a city with SDI Defense, or attacks a unit (or is \
+deliberately exploded) within range, is shot down and simply has no effect. \
+Also, doubles the intrinsic defense strength of units in the city when \
+defending against conventional missiles.\
 ")
 
 [building_sewer_system]
@@ -1531,8 +1535,8 @@ sabotage	= 0
 sound		= "w_lighthouse"
 sound_alt	= "w_generic"
 helptext	= _("\
-Gives all your sea units 3 additional movement points. \
-Makes all your new sea units veterans (for all \
+Gives all your sea units 3 additional movement points (except Triremes \
+while moving on rivers). Makes all your new sea units veterans (for all \
 your cities).\
 ")
 
