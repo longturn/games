@@ -423,7 +423,7 @@ sound		= "b_factory"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the shield production in a city by 25%, or 50% with an \
+Increases the shield production in a city by 50%, or 100% with an \
 electrical plant of any kind in the same city.\
 "), _("\
 This increase in production may contribute significantly to \
@@ -502,11 +502,11 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Any kind of electrical plant increases the shield production \
-effects of any Factory or Mfg. Plant in its city by 25% each. \
+effects of any Factory or Mfg. Plant in its city by 50% each. \
 Thus, an electrical plant in combination with either a Factory \
-or Mfg. Plant gives a 50% production bonus over \
+or Mfg. Plant gives a 100% production bonus over \
 the level without any of these improvements; an electrical plant, \
-Factory, and Mfg. Plant together give a 100% production bonus. \
+Factory, and Mfg. Plant together give a 200% production bonus. \
 The extra production may lead to the city generating more \
 pollution.\
 "),
@@ -603,8 +603,8 @@ sound		= "b_mfg_plant"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the shield production in a city by an additional 25%, or \
-50% with an electrical plant of any kind in the same city; this \
+Increases the shield production in a city by an additional 50%, or \
+100% with an electrical plant of any kind in the same city; this \
 effect is cumulative with that of a Factory.\
 "), _("\
 With sufficient shield production, cities with a Manufacturing Plant \
@@ -635,11 +635,11 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Any kind of electrical plant increases the shield production \
-effects of any Factory or Mfg. Plant in its city by 25% each. \
+effects of any Factory or Mfg. Plant in its city by 50% each. \
 Thus, an electrical plant in combination with either a Factory \
-or Mfg. Plant gives a 50% production bonus over \
+or Mfg. Plant gives a 100% production bonus over \
 the level without any of these improvements; an electrical plant, \
-Factory, and Mfg. Plant together give a 100% production bonus. \
+Factory, and Mfg. Plant together give a 200% production bonus. \
 The extra production may lead to the city generating more \
 pollution.\
 "),
@@ -790,11 +790,11 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Any kind of electrical plant increases the shield production \
-effects of any Factory or Mfg. Plant in its city by 25% each. \
+effects of any Factory or Mfg. Plant in its city by 50% each. \
 Thus, an electrical plant in combination with either a Factory \
-or Mfg. Plant gives a 50% production bonus over \
+or Mfg. Plant gives a 100% production bonus over \
 the level without any of these improvements; an electrical plant, \
-Factory, and Mfg. Plant together give a 100% production bonus. \
+Factory, and Mfg. Plant together give a 200% production bonus. \
 The extra production may lead to the city generating more \
 pollution.\
 "), _("\
@@ -939,11 +939,11 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Any kind of electrical plant increases the shield production \
-effects of any Factory or Mfg. Plant in its city by 25% each. \
+effects of any Factory or Mfg. Plant in its city by 50% each. \
 Thus, an electrical plant in combination with either a Factory \
-or Mfg. Plant gives a 50% production bonus over \
+or Mfg. Plant gives a 100% production bonus over \
 the level without any of these improvements; an electrical plant, \
-Factory, and Mfg. Plant together give a 100% production bonus. \
+Factory, and Mfg. Plant together give a 200% production bonus. \
 The extra production may lead to the city generating more \
 pollution.\
 "),
