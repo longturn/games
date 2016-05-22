@@ -180,14 +180,14 @@ flags         = "BuildAnywhere", "DoesntOccupyTile",
 name          = _("?unitclass:Sea")
 min_speed     = 2
 hp_loss_pct   = 0
-flags         = "AttackNonNative", "ZOC"
+flags         = "DamageSlows", "AttackNonNative", "AttFromNonNative", "ZOC"
 
 [unitclass_trireme]
 ; /* TRANS: Unit class: used adjectivally */
 name          = _("?unitclass:Trireme")
 min_speed     = 2
 hp_loss_pct   = 0
-flags         = "ZOC"
+flags         = "DamageSlows", "AttFromNonNative", "ZOC"
 
 [unitclass_heli]
 ; /* TRANS: Unit class: used adjectivally */
