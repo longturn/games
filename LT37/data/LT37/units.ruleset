@@ -2552,18 +2552,18 @@ advanced radar that can determine the location of enemy units over a \
 wide area.\
 ")
 
-[unit_fusionfighter]
-name          = _("Fusion Powered Fighter")
+[unit_fusion_fighter]
+name          = _("Fusion Fighter")
 class         = "Air"
-tech_req      = "Fusion Power", "Environmentalism", "Stealth"
+tech_req      = "Fusion Power", "Stealth"
 obsolete_by   = "None"
-graphic       = "u.stealth_fighter"
-graphic_alt   = "-"
+graphic       = "u.fusion_fighter"
+graphic_alt   = "u.stealth_fighter"
 sound_move    = "m_stealth_fighter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_stealth_fighter"
 sound_fight_alt = "f_generic"
-build_cost    = 160
+build_cost    = 120
 pop_cost      = 0
 attack        = 8
 defense       = 7
@@ -2589,18 +2589,51 @@ An improved Stealth Fighter, with a higher movement\
  radius.\
 ")
 
-[unit_fusionbattleship]
-name          = _("Fusion Powered Battleship")
-class         = "Sea"
-tech_req      = "Fusion Power", "Environmentalism", "Stealth"
+[unit_fusion_bomber]
+name          = _("Fusion Bomber")
+class         = "Air"
+tech_req      = "Fusion Power", "Stealth"
 obsolete_by   = "None"
-graphic       = "u.battleship"
-graphic_alt   = "-"
+graphic       = "u.fusion_bomber"
+graphic_alt   = "u.stealth_bomber"
+sound_move    = "m_stealth_bomber"
+sound_move_alt = "m_generic"
+sound_fight   = "f_stealth_bomber"
+sound_fight_alt = "f_generic"
+build_cost    = 180
+pop_cost      = 0
+attack        = 9
+defense       = 3
+hitpoints     = 30
+firepower     = 1
+move_rate     = 54
+vision_radius_sq = 72
+transport_cap = 0
+fuel          = 2
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder"
+roles         = "DefendOk"
+helptext      = _("\
+An improved Stealth Bomber, with a higher movement\
+ radius.\
+")
+bombard_rate = 4
+
+[unit_fusion_battleship]
+name          = _("Fusion Battleship")
+class         = "Sea"
+tech_req      = "Fusion Power", "Mass Production"
+obsolete_by   = "None"
+graphic       = "u.fusion_battleship"
+graphic_alt   = "u.battleship"
 sound_move    = "m_battleship"
 sound_move_alt = "m_generic"
 sound_fight   = "f_battleship"
 sound_fight_alt = "f_generic"
-build_cost    = 160
+build_cost    = 220
 pop_cost      = 0
 attack        = 24
 defense       = 24
@@ -2621,18 +2654,18 @@ A battleship powered by fusion power \
 that attacks with triple firepower.\
 ")
 
-[unit_fusionarmor]
-name          = _("Fusion Powered Armor")
+[unit_fusion_armor]
+name          = _("Fusion Armor")
 class         = "Big Land"
-tech_req      = "Fusion Power", "Environmentalism", "Stealth"
+tech_req      = "Fusion Power", "Mobile Warfare"
 obsolete_by   = "None"
-graphic       = "u.armor"
-graphic_alt   = "-"
+graphic       = "u.fusion_armor"
+graphic_alt   = "u.armor"
 sound_move    = "m_armor"
 sound_move_alt = "m_generic"
 sound_fight   = "f_armor"
 sound_fight_alt = "f_generic"
-build_cost    = 100
+build_cost    = 120
 pop_cost      = 0
 attack        = 10
 defense       = 5

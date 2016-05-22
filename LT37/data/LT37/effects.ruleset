@@ -358,6 +358,16 @@ reqs    =
       "UnitClass", "Sea", "Local"
     }
 
+; Fusion power gives +9 moves to sea units
+[effect_fusion_powered_boats]
+type    = "Move_Bonus"
+value   = 9
+reqs    =
+    { "type", "name", "range"
+      "Tech", "Fusion Power", "Player"
+      "UnitClass", "Sea", "Local"
+    }
+
 ; Advanced Flight enables movement of nuclear weapons
 [effect_nuclear_bomber]
 type    = "Move_Bonus"
