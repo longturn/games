@@ -365,23 +365,23 @@ colorlist =
 [settings]
 ; freeciv game settings for civ2civ3 ruleset
 ;
-set =
-    { "name", "value"
-      "aifill", 12
-      "generator", "FRACTAL"
-      "topology", "WRAPX|WRAPY|ISO"
-      "mapsize", "PLAYER"
-      "tilesperplayer", 100
-      "tinyisles", "ENABLED"
-      "startunits", "cwx"
-      "citymindist", 4
-      "techlevel", 1
-      "borders", "ENABLED"
-      "foggedborders", "ENABLED"
-      "restrictinfra", "ENABLED"
-      "unreachableprotects", "DISABLED"
-      "onsetbarbs", 120
-      "occupychance", 100
-      "techlossforgiveness", 0
-      "techlossrestore", 50
-    }
+;set =
+;    { "name", "value"
+;      "aifill", 12
+;      "generator", "FRACTAL"
+;      "topology", "WRAPX|WRAPY|ISO"
+;      "mapsize", "PLAYER"
+;      "tilesperplayer", 100
+;      "tinyisles", "ENABLED"
+;      "startunits", "cwx"
+;      "citymindist", 4
+;      "techlevel", 1
+;      "borders", "ENABLED"
+;      "foggedborders", "ENABLED"
+;      "restrictinfra", "ENABLED"
+;      "unreachableprotects", "DISABLED"
+;      "onsetbarbs", 120
+;      "occupychance", 100
+;      "techlossforgiveness", 0
+;      "techlossrestore", 50
+;    }
