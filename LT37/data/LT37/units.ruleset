@@ -30,6 +30,7 @@ flags =
     _("Transform")
     _("AirAttacker"), _("Very bad at attacking AEGIS.")
     _("Submarine"), _("Attack value halved when attacking Destroyer.")
+    _("Helicopter"), _("Defends very badly against Fighters.")
   }
 
 [veteran_system]
@@ -1476,11 +1477,17 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 targets       = "Air", "Missile", "Helicopter"
+bonuses       =
+   { "flag", "type", "value"
+     "Helicopter", "DefenseDivider", 1
+   }
 flags         = "AirAttacker"
 roles         = "DefendOk"
 helptext      = _("\
 Fighters are your first airborne units. They can\
  move anywhere and attack any unit.\
+Fighters are particularly effective when attacking Helicopters; the\
+ Helicopter's defense is halved.\
 ")
 
 [unit_bomber]
@@ -1546,7 +1553,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Land"
-flags         = "OneAttack", "AirAttacker", "Bombarder"
+flags         = "OneAttack", "AirAttacker", "Bombarder", "Helicopter"
 roles         = ""
 helptext      = _("\
 A Helicopter's attack against units on land is a bombard attack; against \
@@ -1588,6 +1595,10 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 targets       = "Air", "Missile", "Helicopter"
+bonuses       =
+   { "flag", "type", "value"
+     "Helicopter", "DefenseDivider", 1
+   }
 flags         = "Partial_Invis", "AirAttacker"
 roles         = "DefendGood"
 helptext      = _("\
@@ -2567,6 +2578,10 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 targets       = "Air", "Missile", "Helicopter"
+bonuses       =
+   { "flag", "type", "value"
+     "Helicopter", "DefenseDivider", 1
+   }
 flags         = "Partial_Invis", "AirAttacker"
 roles         = "DefendGood"
 helptext      = _("\
