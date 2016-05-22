@@ -205,7 +205,7 @@ size_effect    = 1
 ; "Basic"  - upkeep is calculated as:
 ;     <Cost of technology> / tech_upkeep_divider - tech_upkeep_free
 ; "Cities" - upkeep is calculated like "Basic", but multiplied by number of cities
-tech_upkeep_style = "Cities"
+tech_upkeep_style = "None"
 
 ; upkeep cost is divided by this value
 tech_upkeep_divider = 2000
@@ -214,7 +214,7 @@ tech_upkeep_divider = 2000
 ; "Goal"     - Towards player`s goal, random if no goal
 ; "Random"   - Random researchable tech
 ; "Cheapest" - Cheapest researchable tech, random among equal cost ones
-free_tech_method = "Cheapest"
+free_tech_method = "Goal"
 
 [calendar]
 ; Year in the beginning of the game
