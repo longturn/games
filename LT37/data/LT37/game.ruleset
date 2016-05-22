@@ -303,8 +303,8 @@ settings =
   { "type",       "pct", "cancelling"
     "National",   0,     "Cancel"
     "NationalIC", 0,     "Cancel"
-    "IN",         100,   "Cancel"
-    "INIC",       200,   "Cancel"
+    "IN",         0,     "Cancel"
+    "INIC",       0,     "Cancel"
   }
 
 [playercolors]
