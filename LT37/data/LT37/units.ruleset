@@ -164,13 +164,8 @@ name          = _("?unitclass:Big Siege")
 min_speed     = 1
 hp_loss_pct   = 0
 flags         = "TerrainSpeed", "DamageSlows", "BuildAnywhere",
-                "CollectRansom","ZOC", "CanFortify", "KillCitizen", "TerrainDefense", "AttackNonNative"		
-				
-				
-				
-				
-				
-				
+                "CollectRansom","ZOC", "CanFortify", "KillCitizen", "TerrainDefense", "AttackNonNative"
+
 [unitclass_merchant]
 ; /* TRANS: Unit class: used adjectivally */
 name          = _("?unitclass:Merchant")
@@ -2536,7 +2531,7 @@ attack        = 0
 defense       = 1
 hitpoints     = 20
 firepower     = 1
-move_rate     =35
+move_rate     = 35
 vision_radius_sq = 234
 transport_cap = 0
 fuel          = 2
@@ -2551,7 +2546,6 @@ The AWACS (Airborne Warning and Control System) is an airplane with an \
 advanced radar that can determine the location of enemy units over a \
 wide area.\
 ")
-
 
 [unit_fusionfighter]
 name          = _("Fusion Powered Fighter")

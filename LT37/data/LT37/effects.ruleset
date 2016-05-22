@@ -1564,7 +1564,7 @@ type    = "No_Incite"
 value   = 1
 reqs    =
     { "type", "name", "range"
-	  "Gov", "Fundamentalism", "Player"
+      "Gov", "Fundamentalism", "Player"
     }
 
 [effect_incite_democracy]
@@ -3467,17 +3467,17 @@ reqs    =
       "Building", "Marco Polo's Embassy", "World"
       "OutputType", "Trade", "Local"
     }
-	
+
 [effect_trade_company]
 name    = "Output_Bonus"
 value   = 10
 reqs    =
     { "type", "name", "range"
       "Building", "Trade Company", "Player"
-	  "Building", "Marco Polo's Embassy", "City"
+      "Building", "Marco Polo's Embassy", "City"
       "OutputType", "Trade", "Local"
     }
-	
+
 [effect_atlantic_telegraph_company]
 type    = "Have_Embassies"
 value   = 1
@@ -3485,7 +3485,7 @@ reqs    =
     { "type", "name", "range"
       "Building", "Atlantic Telegraph Company", "Player"
     }
-	
+
 [effect_michelangelos_chapel]
 type    = "Make_Content"
 value   = 3
@@ -3966,7 +3966,7 @@ nreqs   =
     { "type", "name", "range"
       "UnitClass", "Sea", "Local"
     }
-	
+
 [effect_second_gov_center]
 type    = "Gov_Center"
 value   = 1
@@ -3990,7 +3990,7 @@ reqs    =
     { "type", "name", "range"
       "Building", "Second Palace", "City"
     }
-	
+
 [effect_second_palace_despotism]
 type    = "Output_Bonus"
 value   = 75
@@ -4010,8 +4010,7 @@ reqs    =
       "Building", "Second Palace", "City"
       "OutputType", "Gold", "Local"
     }
-	
-	
+
 [effect_transform]
 type    = "Transform_Possible"
 value   = 1
@@ -4019,8 +4018,7 @@ reqs    =
     { "type", "name", "range"
       "UnitFlag", "Transform", "Local"
     }
-	
-	
+
 ; give +1 food to hills/desert cities with a mine
 ; this reverts the newly changed no free irrigation if mined
 [effect_municipal_water_system]

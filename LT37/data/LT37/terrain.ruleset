@@ -1070,8 +1070,6 @@ moving recovers a quarter of its hit points. With Astronomy, fortresses gain \
 watchtowers from which units can see further afield.\
 ")
 
-
-
 [base_fortress]
 name           = _("Fortress")
 graphic        = "base.fortress"
@@ -1087,7 +1085,7 @@ reqs           =
       "CityTile", "Center", "Local", TRUE
       "Road", "River", "Local", TRUE
       "Base", "Pre-Fortress", "Tile", FALSE
-	  }
+    }
 gui_type       = "Fortress"
 build_time     = 3
 border_sq      = 5
@@ -1100,7 +1098,6 @@ Any kind of land unit remaining in a fortress for a whole turn without \
 moving recovers a quarter of its hit points. With Astronomy, fortresses gain \
 watchtowers from which units can see further afield.\
 ")
-
 
 [base_airbase]
 name           = _("Airbase")
@@ -1364,9 +1361,6 @@ Your regular railroads are still used to carry heavy Big Land\
 City center tiles with railroads are automatically upgraded to maglev\
  when you learn about Superconductors.\
 ")
-
-
-
 
 [road_river]
 name           = _("River")
