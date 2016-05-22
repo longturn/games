@@ -768,8 +768,8 @@ reqs    =
     }
 
 ; Govs with 1 free unit
-[effect_upkeep_free_mil_1]
-type    = "Make_Content_Mil"
+[effect_upkeep_free_mil_town_1]
+name    = "Make_Content_Mil"
 value   = 1
 nreqs   =
     { "type", "name", "range"
@@ -778,15 +778,36 @@ nreqs   =
       "Gov", "Communism", "Player"
       "Gov", "Despotism", "Player"
       "Gov", "Monarchy", "Player"
-      "Gov", "Fundamentalism", "Player"
+;      "Gov", "Fundamentalism", "Player"
+      "Gov", "Federation", "Player"
+;      "Gov", "Republic", "Player"
+      "Gov", "Democracy", "Player"
+    }
+
+; Doubled for city size >= 8
+[effect_upkeep_free_mil_city_1]
+name    = "Make_Content_Mil"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "8", "City"
+    }
+nreqs   =
+    { "type", "name", "range"
+      "Gov", "Anarchy", "Player"
+      "Gov", "Tribal", "Player"
+      "Gov", "Communism", "Player"
+      "Gov", "Despotism", "Player"
+      "Gov", "Monarchy", "Player"
+;      "Gov", "Fundamentalism", "Player"
       "Gov", "Federation", "Player"
 ;      "Gov", "Republic", "Player"
       "Gov", "Democracy", "Player"
     }
 
 ; Govs with 2 free units (exclusive with previous)
-[effect_upkeep_free_mil_2]
-type    = "Make_Content_Mil"
+[effect_upkeep_free_mil_town_2]
+name    = "Make_Content_Mil"
 value   = 2
 nreqs   =
     { "type", "name", "range"
@@ -795,21 +816,63 @@ nreqs   =
       "Gov", "Communism", "Player"
 ;      "Gov", "Despotism", "Player"
       "Gov", "Monarchy", "Player"
-;      "Gov", "Fundamentalism", "Player"
+      "Gov", "Fundamentalism", "Player"
+;      "Gov", "Federation", "Player"
+      "Gov", "Republic", "Player"
+;      "Gov", "Democracy", "Player"
+    }
+
+; Doubled for city size >= 8
+[effect_upkeep_free_mil_city_2]
+name    = "Make_Content_Mil"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "8", "City"
+    }
+nreqs   =
+    { "type", "name", "range"
+;      "Gov", "Anarchy", "Player"
+;      "Gov", "Tribal", "Player"
+      "Gov", "Communism", "Player"
+;      "Gov", "Despotism", "Player"
+      "Gov", "Monarchy", "Player"
+      "Gov", "Fundamentalism", "Player"
 ;      "Gov", "Federation", "Player"
       "Gov", "Republic", "Player"
 ;      "Gov", "Democracy", "Player"
     }
 
 ; Govs with 3 free units (exclusive with previous)
-[effect_upkeep_free_mil_3]
-type    = "Make_Content_Mil"
+[effect_upkeep_free_mil_town_3]
+name    = "Make_Content_Mil"
 value   = 3
 nreqs   =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
       "Gov", "Tribal", "Player"
 ;      "Gov", "Communism", "Player"
+      "Gov", "Despotism", "Player"
+;      "Gov", "Monarchy", "Player"
+      "Gov", "Fundamentalism", "Player"
+      "Gov", "Federation", "Player"
+      "Gov", "Republic", "Player"
+      "Gov", "Democracy", "Player"
+    }
+
+; Doubled for city size >= 8
+[effect_upkeep_free_mil_city_3]
+name    = "Make_Content_Mil"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "8", "City"
+    }
+nreqs   =
+    { "type", "name", "range"
+      "Gov", "Anarchy", "Player"
+      "Gov", "Tribal", "Player"
+      "Gov", "Communism", "Player"
       "Gov", "Despotism", "Player"
 ;      "Gov", "Monarchy", "Player"
       "Gov", "Fundamentalism", "Player"
@@ -829,8 +892,8 @@ reqs    =
       "Gov", "Democracy", "Player"
     }
 
-[effect_upkeep_free_units_anarchy]
-type    = "Unit_Upkeep_Free_Per_City"
+[effect_upkeep_free_units_town_anarchy]
+name    = "Unit_Upkeep_Free_Per_City"
 value   = 2
 reqs    =
     { "type", "name", "range"
@@ -838,8 +901,18 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
-[effect_upkeep_free_units_tribal]
-type    = "Unit_Upkeep_Free_Per_City"
+[effect_upkeep_free_units_city_anarchy]
+name    = "Unit_Upkeep_Free_Per_City"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Anarchy", "Player"
+      "OutputType", "Shield", "Local"
+      "MinSize", "8", "City"
+    }
+
+[effect_upkeep_free_units_town_tribal]
+name    = "Unit_Upkeep_Free_Per_City"
 value   = 2
 reqs    =
     { "type", "name", "range"
@@ -847,8 +920,18 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
-[effect_upkeep_free_units_despotism]
-type    = "Unit_Upkeep_Free_Per_City"
+[effect_upkeep_free_units_city_tribal]
+name    = "Unit_Upkeep_Free_Per_City"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Tribal", "Player"
+      "OutputType", "Shield", "Local"
+      "MinSize", "8", "City"
+    }
+
+[effect_upkeep_free_units_town_despotism]
+name    = "Unit_Upkeep_Free_Per_City"
 value   = 2
 reqs    =
     { "type", "name", "range"
@@ -856,8 +939,18 @@ reqs    =
       "OutputType", "Gold", "Local"
     }
 
-[effect_upkeep_free_units_monarchy]
-type    = "Unit_Upkeep_Free_Per_City"
+[effect_upkeep_free_units_city_despotism]
+name    = "Unit_Upkeep_Free_Per_City"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+      "OutputType", "Gold", "Local"
+      "MinSize", "8", "City"
+    }
+
+[effect_upkeep_free_units_town_monarchy]
+name    = "Unit_Upkeep_Free_Per_City"
 value   = 3
 reqs    =
     { "type", "name", "range"
@@ -865,8 +958,18 @@ reqs    =
       "OutputType", "Gold", "Local"
     }
 
-[effect_upkeep_free_units_fundamentalism]
-type    = "Unit_Upkeep_Free_Per_City"
+[effect_upkeep_free_units_city_monarchy]
+name    = "Unit_Upkeep_Free_Per_City"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Monarchy", "Player"
+      "OutputType", "Gold", "Local"
+      "MinSize", "8", "City"
+    }
+
+[effect_upkeep_free_units_town_fundamentalism]
+name    = "Unit_Upkeep_Free_Per_City"
 value   = 4
 reqs    =
     { "type", "name", "range"
@@ -874,8 +977,18 @@ reqs    =
       "OutputType", "Gold", "Local"
     }
 
-[effect_upkeep_free_units_republic]
-type    = "Unit_Upkeep_Free_Per_City"
+[effect_upkeep_free_units_city_fundamentalism]
+name    = "Unit_Upkeep_Free_Per_City"
+value   = 4
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Fundamentalism", "Player"
+      "OutputType", "Gold", "Local"
+      "MinSize", "8", "City"
+    }
+
+[effect_upkeep_free_units_town_republic]
+name    = "Unit_Upkeep_Free_Per_City"
 value   = 1
 reqs    =
     { "type", "name", "range"
@@ -883,8 +996,18 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
-[effect_upkeep_free_units_democracy]
-type    = "Unit_Upkeep_Free_Per_City"
+[effect_upkeep_free_units_city_republic]
+name    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Republic", "Player"
+      "OutputType", "Shield", "Local"
+      "MinSize", "8", "City"
+    }
+
+[effect_upkeep_free_units_town_democracy]
+name    = "Unit_Upkeep_Free_Per_City"
 value   = 2
 reqs    =
     { "type", "name", "range"
@@ -892,8 +1015,18 @@ reqs    =
       "OutputType", "Gold", "Local"
     }
 
-[effect_upkeep_free_units_federation]
-type    = "Unit_Upkeep_Free_Per_City"
+[effect_upkeep_free_units_city_democracy]
+name    = "Unit_Upkeep_Free_Per_City"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Democracy", "Player"
+      "OutputType", "Gold", "Local"
+      "MinSize", "8", "City"
+    }
+
+[effect_upkeep_free_units_town_federation]
+name    = "Unit_Upkeep_Free_Per_City"
 value   = 4
 reqs    =
     { "type", "name", "range"
@@ -901,13 +1034,33 @@ reqs    =
       "OutputType", "Gold", "Local"
     }
 
-[effect_upkeep_free_units_communism]
-type    = "Unit_Upkeep_Free_Per_City"
+[effect_upkeep_free_units_city_federation]
+name    = "Unit_Upkeep_Free_Per_City"
+value   = 4
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Federation", "Player"
+      "OutputType", "Gold", "Local"
+      "MinSize", "8", "City"
+    }
+
+[effect_upkeep_free_units_town_communism]
+name    = "Unit_Upkeep_Free_Per_City"
 value   = 3
 reqs    =
     { "type", "name", "range"
       "Gov", "Communism", "Player"
       "OutputType", "Shield", "Local"
+    }
+
+[effect_upkeep_free_units_city_communism]
+name    = "Unit_Upkeep_Free_Per_City"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Communism", "Player"
+      "OutputType", "Shield", "Local"
+      "MinSize", "8", "City"
     }
 
 ; Any city can support up to four units...
