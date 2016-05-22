@@ -55,7 +55,7 @@ veteran_power_fact = 100, 150, 175, 200, 225, 250, 275, 300, 325, 350
 ; levels. These are fractional move points as defined by move_fragments in
 ; terrain.ruleset.
 ;veteran_move_bonus = 0, 0, 0, 0
-veteran_move_bonus = 0, 1, 2, 3, 4, 5, 6, 8, 10, 13
+veteran_move_bonus = 0, 3, 6, 9, 12, 15, 18, 24, 30, 39
 
 ; /* <-- avoid gettext warnings
 ;
