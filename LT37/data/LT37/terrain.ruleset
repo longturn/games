@@ -1055,7 +1055,6 @@ reqs           =
       "UnitFlag", "Settlers", "Local", FALSE
       "UnitClass", "Sea", "Local", TRUE
       "CityTile", "Center", "Local", TRUE
-      "Road", "River", "Local", TRUE
     }
 gui_type       = "Fortress"
 build_time     = 3
@@ -1083,7 +1082,6 @@ reqs           =
       "UnitFlag", "Settlers", "Local", FALSE
       "UnitClass", "Sea", "Local", TRUE
       "CityTile", "Center", "Local", TRUE
-      "Road", "River", "Local", TRUE
       "Base", "Pre-Fortress", "Tile", FALSE
     }
 gui_type       = "Fortress"
@@ -1111,7 +1109,6 @@ reqs           =
       "TerrainClass", "Land", "Local", FALSE
       "UnitFlag", "Airbase", "Local", FALSE
       "CityTile", "Center", "Local", TRUE
-      "Road", "River", "Local", TRUE
     }
 gui_type       = "Airbase"
 build_time     = 3
