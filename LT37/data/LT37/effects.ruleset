@@ -348,7 +348,7 @@ nreqs   =
       "Road", "Road", "Local"
     }
 
-; Nuclear power gives +1 moves to sea units
+; Nuclear power gives +3 moves to sea units
 [effect_nuclear_powered_boats]
 type    = "Move_Bonus"
 value   = 3

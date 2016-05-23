@@ -608,7 +608,7 @@ req2     = "Miniaturization"
 flags    = ""
 graphic     = "a.nuclear_power"
 graphic_alt = "-"
-helptext = _("Gives sea units one extra move.")
+helptext = _("Gives sea units three extra moves.")
 cost     = 560
 
 [advance_philosophy]
