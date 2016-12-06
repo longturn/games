@@ -1155,8 +1155,9 @@ Elephants are towering animals trained for war that are often used as\
 [unit_crusaders]
 name          = _("Crusaders")
 class         = "Land"
-tech_req      = "Monotheism"
-obsolete_by   = "Dragoons"
+tech_req      = "Navigation"
+gov_req       = "Fundamentalism"
+obsolete_by   = "Fanatics"
 graphic       = "u.crusaders"
 graphic_alt   = "u.knights"
 sound_move    = "m_crusaders"
@@ -1165,11 +1166,11 @@ sound_fight   = "f_crusaders"
 sound_fight_alt = "f_generic"
 build_cost    = 25
 pop_cost      = 0
-attack        = 5
-defense       = 1
-hitpoints     = 10
+attack        = 2
+defense       = 2
+hitpoints     = 20
 firepower     = 1
-move_rate     = 6
+move_rate     = 4
 vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
@@ -1177,11 +1178,13 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer"
+flags         = "Fanatic", "Capturer"
 roles         = "AttackFast", "Hunter"
 helptext      = _("\
-Crusaders are highly disciplined mounted\
- warriors driven by a higher cause.\
+Crusaders are highly disciplined\
+warriors driven by a higher cause.\
+Fundamentalist nations can maintain Crusader units without\
+having to pay any upkeep nor causing military unhappiness. \
 ")
 
 [unit_knights]
