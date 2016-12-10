@@ -485,7 +485,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.map_making"
 graphic_alt = "-"
-cost     = 20
+cost     = 25
 
 [advance_masonry]
 name     = _("Masonry")
@@ -647,7 +647,7 @@ req2     = "Ceremonial Burial"
 flags    = ""
 graphic     = "a.polytheism"
 graphic_alt = "-"
-cost     = 30
+cost     = 20
 
 [advance_pottery]
 name     = _("Pottery")
