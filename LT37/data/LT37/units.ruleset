@@ -1131,7 +1131,7 @@ sound_move    = "m_elephants"
 sound_move_alt = "m_generic"
 sound_fight   = "f_elephants"
 sound_fight_alt = "f_generic"
-build_cost    = 20
+build_cost    = 22
 pop_cost      = 0
 attack        = 3
 defense       = 2
@@ -1181,9 +1181,9 @@ uk_gold       = 1
 flags         = "Fanatic", "Capturer"
 roles         = "AttackFast", "Hunter"
 helptext      = _("\
-Crusaders are highly disciplined\
-warriors driven by a higher cause.\
-Fundamentalist nations can maintain Crusader units without\
+Crusaders are highly disciplined \
+warriors driven by a higher cause. \
+Fundamentalist nations can maintain Crusader units without \
 having to pay any upkeep nor causing military unhappiness. \
 ")
 
