@@ -521,7 +521,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "Airbase", "Capturable"
+flags         = "Settlers", "NonMil", "Airbase"
 ; No veteran levels (level name is never displayed)
 ;veteran_power_fact = 100
 ;veteran_move_bonus = 0
