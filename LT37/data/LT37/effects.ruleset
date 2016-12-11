@@ -477,6 +477,17 @@ reqs    =
       "OutputType", "Trade", "Local"
     }
 
+	
+[effect_bonus_sci_federation]
+type    = "Output_Bonus_2"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Federation", "Player"
+      "OutputType", "Science", "Local"
+    }
+	
+	
 ; Corruption + waste = 30% for all govs
 
 [effect_corruption_tribal]
