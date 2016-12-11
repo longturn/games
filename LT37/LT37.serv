@@ -3,19 +3,19 @@ rulesetdir LT37
 # map
 set alltemperate=disabled
 set barbarians=disabled
-set generator="FRACTAL"
+set generator="ISLAND"
 set huts=0
-set landmass=50
+set landmass=40
 set mapsize="PLAYER"
 set separatepoles=disabled
-set specials=220
-set startpos="ALL"
-set steepness=10
-set temperature=35
-set tilesperplayer=450
+set specials=200
+set startpos="VARIABLE"
+set steepness=40
+set temperature=50
+set tilesperplayer=400
 set topology="WRAPX|WRAPY"
-set wetness=50
-set alltemperate=disabled
+set wetness=60
+set alltemperate=enabled
 set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
