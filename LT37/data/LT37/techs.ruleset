@@ -485,7 +485,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.map_making"
 graphic_alt = "-"
-cost     = 25
+cost     = 15
 
 [advance_masonry]
 name     = _("Masonry")
