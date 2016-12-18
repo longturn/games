@@ -197,7 +197,7 @@ req2     = "Advanced Flight"
 flags    = ""
 graphic     = "a.combined_arms"
 graphic_alt = "-"
-cost     = 600
+cost     = 1500
 
 [advance_combustion]
 name     = _("Combustion")
