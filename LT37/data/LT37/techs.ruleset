@@ -377,7 +377,7 @@ req2     = "Tactics"
 flags    = ""
 graphic     = "a.guerilla_warfare"
 graphic_alt = "-"
-cost     = 480
+cost     = 200
 
 [advance_gunpowder]
 name     = _("Gunpowder")
