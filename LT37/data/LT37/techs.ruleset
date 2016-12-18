@@ -599,7 +599,7 @@ req2     = "Atomic Theory"
 flags    = ""
 graphic     = "a.nuclear_fission"
 graphic_alt = "-"
-cost     = 530
+cost     = 1200
 
 [advance_nuclear_power]
 name     = _("Nuclear Power")
