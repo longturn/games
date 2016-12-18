@@ -359,7 +359,7 @@ flags    = ""
 graphic     = "a.fusion_power"
 graphic_alt = "-"
 helptext = _("Gives sea units nine extra moves.")
-cost     = 770
+cost     = 3000
 
 [advance_genetic_engineering]
 name     = _("Genetic Engineering")
