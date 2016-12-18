@@ -731,7 +731,7 @@ flags    = ""
 graphic     = "a.rocketry"
 graphic_alt = "-"
 helptext = _("Doubles movement of nuclear units.")
-cost     = 590
+cost     = 1000
 
 [advance_sanitation]
 name     = _("Sanitation")
