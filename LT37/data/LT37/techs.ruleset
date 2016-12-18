@@ -803,7 +803,7 @@ req2     = "Leadership"
 flags    = ""
 graphic     = "a.tactics"
 graphic_alt = "-"
-cost     = 290
+cost     = 800
 
 [advance_the_corporation]
 name     = _("The Corporation")
