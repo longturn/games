@@ -823,7 +823,7 @@ name        = _("Iron")
 graphic     = "ts.iron"
 graphic_alt = "-"
 identifier  = "/"
-shield      = 3
+shield      = 4
 # mountains.
 
 [resource_game]
@@ -959,7 +959,7 @@ name        = _("Spice")
 graphic     = "ts.spice"
 graphic_alt = "-"
 identifier  = "t"
-food        = 1
+food        = 2
 trade       = 4
 # swamp-only.
 
