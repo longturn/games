@@ -60,6 +60,7 @@ options="+Freeciv-2.5-ruleset"
 [building_airport]
 name		= _("Airport")
 genus		= "Improvement"
+flags		= "VisibleByOthers"
 reqs	=
     { "type", "name", "range"
       "Tech", "Radio", "Player"
