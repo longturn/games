@@ -337,6 +337,7 @@ when a defending unit is defeated by a land unit.\
 [building_coastal_defense]
 name		= _("Coastal Defense")
 genus		= "Improvement"
+flags		= "VisibleByOthers"
 reqs	=
     { "type", "name", "range"
       "Tech", "Gunpowder", "Player"
