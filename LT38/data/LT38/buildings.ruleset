@@ -339,7 +339,7 @@ name		= _("Coastal Defense")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Navigation", "Player"
+      "Tech", "Gunpowder", "Player"
       "TerrainClass", "Oceanic", "Adjacent"
     }
 graphic	= "b.coastal_defense"
