@@ -1633,6 +1633,20 @@ nreqs   =
       "Tech", "Railroad", "World"
     }
 
+
+[effect_gov_tile_bonus_fundamentalism]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Fundamentalism", "Player"
+      "OutputType", "Trade", "Local"
+    }
+nreqs   =
+    { "type", "name", "range"
+      "TerrainClass", "Oceanic", "Local"
+    }
+	
 [effect_gov_tile_bonus_republic]
 type    = "Output_Inc_Tile"
 value   = 1
