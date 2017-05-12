@@ -308,7 +308,7 @@ reqs    =
 ; Vision benefit from mountains (for every land unit)
 [effect_mountains_vision]
 type    = "Unit_Vision_Radius_Sq"
-value   = 4
+value   = 12
 reqs    =
     { "type", "name", "range"
       "Terrain", "Mountains", "Local"
