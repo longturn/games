@@ -3497,7 +3497,7 @@ reqs    =
 
 [effect_isaac_newtons_college_1]
 type    = "Output_Add_Tile"
-value   = 6
+value   = 12
 reqs    =
     { "type", "name", "range"
       "Building", "Isaac Newton's College", "City"
