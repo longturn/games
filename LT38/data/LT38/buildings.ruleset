@@ -1665,29 +1665,6 @@ not affect citizens made unhappy by aggression.\
 ")
 
 
-[building_statue_of_zeus]
-name		= _("Statue of Zeus")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Polytheism", "Player"
-    }
-graphic         = "b.statue_of_zeus"
-graphic_alt     = "b.oracle"
-obsolete_by	= "Conscription"
-build_cost	= 150
-upkeep		= 0
-sabotage	= 0
-sound		= "w_oracle"
-sound_alt	= "w_generic"
-helptext	= _("\
-Reduces the unhappiness caused by aggressively deployed military \
-units owned by the city by 1 -- in other words, it neutralizes the \
-unhappiness caused by a single military unit (except under Democracy, \
-where a single unit makes two citizens unhappy). Each city also avoids \
-one shield of upkeep for units.\
-")
-
 [building_temple_of_artemis]
 name		= _("Temple of Artemis")
 genus		= "SmallWonder"
