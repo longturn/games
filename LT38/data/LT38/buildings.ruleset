@@ -1664,26 +1664,6 @@ citizens content in each city with a Cathedral; however, it does \
 not affect citizens made unhappy by aggression.\
 ")
 
-[building_mausoleum_of_mausolos]
-name		= _("Mausoleum of Mausolos")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Ceremonial Burial", "Player"
-    }
-graphic         = "b.mausoleum"
-graphic_alt     = "b.oracle"
-obsolete_by	= "Combustion"
-build_cost	= 180
-upkeep		= 0
-sabotage	= 0
-sound		= "w_oracle"
-sound_alt	= "w_generic"
-helptext	= _("\
-With this wonder, City Walls and Courthouses each make one unhappy \
-citizen content in their city, unless that citizen is unhappy about \
-aggression. Also, none of the owner's cities can be incited to revolt.\
-")
 
 [building_statue_of_zeus]
 name		= _("Statue of Zeus")
