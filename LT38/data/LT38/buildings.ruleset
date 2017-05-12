@@ -1786,12 +1786,12 @@ name		= _("Sun Tzu's War Academy")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Feudalism", "Player"
+      "Tech", "University", "Player"
     }
 graphic	= "b.sun_tzus_war_academy"
 graphic_alt	= "-"
-obsolete_by	= "Mobile Warfare"
-build_cost	= 600
+obsolete_by	= "Conscription"
+build_cost	= 150
 upkeep		= 0
 sabotage	= 0
 sound		= "w_sun_tzus_war_academy"
