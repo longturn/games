@@ -907,7 +907,7 @@ A number of Partisans are granted free when an enemy conquers your\
 [unit_fanatics]
 name          = _("Fanatics")
 class         = "Land"
-tech_req      = "Guerilla Warfare"
+tech_req      = "Conscription"
 gov_req       = "Fundamentalism"
 obsolete_by   = "None"
 graphic       = "u.fanatics"
@@ -916,9 +916,9 @@ sound_move    = "m_fanatics"
 sound_move_alt = "m_generic"
 sound_fight   = "f_fanatics"
 sound_fight_alt = "f_generic"
-build_cost    = 25
+build_cost    = 30
 pop_cost      = 0
-attack        = 4
+attack        = 3
 defense       = 4
 hitpoints     = 20
 firepower     = 1
