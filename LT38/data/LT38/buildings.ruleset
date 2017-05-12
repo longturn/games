@@ -449,11 +449,8 @@ sabotage	= 100
 sound		= "b_granary"
 sound_alt	= "b_generic"
 helptext	= _("\
-When any small city grows or shrinks, 10 food points are saved; this \
-helps cities to grow faster and more easily withstand famine. With a \
-Granary this is extended to cities of size 4 and above. (10 food points \
-is half what a small city needs to grow, but more points are needed \
-for later growth steps.)\
+When any small city grows or shrinks, 50% of food points are saved; this \
+helps cities to grow faster and more easily withstand famine. \
 "), _("\
 A Granary also halves the food wasted in cities far from your capital. \
 Together with a Courthouse it eliminates food waste.\
