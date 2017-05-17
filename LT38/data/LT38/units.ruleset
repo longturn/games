@@ -40,7 +40,7 @@ veteran_names = _("green (100%)"), _("veteran 1 (150%)"), _("veteran 2 (175%)"),
 
 ; The percentage chance of increasing level through combat
 ;veteran_raise_chance = 50, 33, 20, 0
-veteran_raise_chance = 65, 60, 55, 50, 45, 30, 20, 15, 10, 0
+veteran_raise_chance = 50, 45, 40, 35, 30, 25, 20, 15, 10, 0
 
 ; The percentage chance of a settler/engineer increasing level through
 ; performing useful work (per turn)
@@ -56,7 +56,7 @@ veteran_power_fact = 100, 150, 175, 200, 225, 250, 275, 300, 325, 350
 ; levels. These are fractional move points as defined by move_fragments in
 ; terrain.ruleset.
 ;veteran_move_bonus = 0, 0, 0, 0
-veteran_move_bonus = 0, 3, 6, 9, 12, 15, 18, 24, 30, 39
+veteran_move_bonus = 0, 3, 6, 9, 12, 15, 18, 21, 24, 27
 
 ; /* <-- avoid gettext warnings
 ;
