@@ -1688,7 +1688,6 @@ sound_move    = "m_caravel"
 sound_move_alt = "m_generic"
 sound_fight   = "f_caravel"
 sound_fight_alt = "f_generic"
-build_cost    = 30
 pop_cost      = 0
 attack        = 1
 defense       = 2
