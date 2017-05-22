@@ -198,7 +198,7 @@ reqs    =
 ; Vision benefit from fortress watchtowers
 [effect_fortress_vision]
 type    = "Unit_Vision_Radius_Sq"
-value   = 65
+value   = 18
 reqs    =
     { "type", "name", "range"
       "Base", "Fortress", "Local"
@@ -308,7 +308,7 @@ reqs    =
 ; Vision benefit from mountains (for every land unit)
 [effect_mountains_vision]
 type    = "Unit_Vision_Radius_Sq"
-value   = 65
+value   = 18
 reqs    =
     { "type", "name", "range"
       "Terrain", "Mountains", "Local"
