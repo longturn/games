@@ -3652,50 +3652,6 @@ reqs    =
       "Building", "Michelangelo's Chapel", "Player"
     }
 
-[effect_mausoleum_of_mausolos]
-type    = "Make_Content"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Building", "City Walls", "City"
-      "Building", "Mausoleum of Mausolos", "Player"
-    }
-
-[effect_mausoleum_of_mausolos_1]
-type    = "Make_Content"
-value   = 3
-reqs    =
-    { "type", "name", "range"
-      "Building", "Courthouse", "City"
-      "Building", "Mausoleum of Mausolos", "Player"
-    }
-
-[effect_mausoleum_of_mausolos_2]
-type    = "No_Incite"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Mausoleum of Mausolos", "Player"
-    }
-
-; Note that this doesn't cancel a whole unit's unhappiness in Democracy
-[effect_statue_of_zeus]
-type    = "Make_Content_Mil"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Statue of Zeus", "Player"
-    }
-
-[effect_statue_of_zeus_1]
-type    = "Unit_Upkeep_Free_Per_City"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Statue of Zeus", "Player"
-      "OutputType", "Shield", "Local"
-    }
-
 [effect_temple_of_artemis]
 type    = "Make_Content"
 value   = 2
