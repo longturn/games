@@ -767,7 +767,7 @@ req2     = "Space Flight"
 flags    = ""
 graphic     = "a.stealth"
 graphic_alt = "-"
-cost     = 1600
+cost     = 670
 
 [advance_steam_engine]
 name     = _("Steam Engine")
