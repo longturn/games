@@ -1345,7 +1345,7 @@ reqs    =
 
 [effect_empire_size_base_fundamentalism]
 type    = "Empire_Size_Base"
-value   = 12
+value   = 20
 reqs    =
     { "type", "name", "range"
       "Gov", "Fundamentalism", "Player"
