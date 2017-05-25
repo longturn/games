@@ -1794,6 +1794,7 @@ defense       = 4
 hitpoints     = 20
 firepower     = 1
 move_rate     = 11
+vision_radius_sq = 26
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
