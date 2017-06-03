@@ -3511,7 +3511,7 @@ reqs    =
 
 [effect_leonardos_workshop]
 type    = "Upgrade_Unit"
-value   = 1
+value   = 2
 reqs    =
     { "type", "name", "range"
       "Building", "Leonardo's Workshop", "Player"
