@@ -2643,6 +2643,15 @@ reqs    =
     }
 
 [effect_palace]
+type    = "Make_Content_Mil"
+value   = 4
+reqs    =
+    { "type", "name", "range"
+      "Building", "Palace", "City"
+    }
+	
+	
+[effect_palace]
 type    = "Output_Waste_Pct"
 value   = 50
 reqs    =
