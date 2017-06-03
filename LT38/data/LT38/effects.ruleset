@@ -2416,7 +2416,7 @@ reqs    =
 
 [effect_harbour]
 type    = "Output_Add_Tile"
-value   = 1
+value   = 2
 reqs    =
     { "type", "name", "range"
       "TerrainClass", "Oceanic", "Local"
