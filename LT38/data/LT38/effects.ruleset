@@ -4090,6 +4090,15 @@ nreqs   =
     }
 
 [effect_second_gov_center]
+type    = "Make_Content_Mil"
+value   = 4
+reqs    =
+    { "type", "name", "range"
+      "Building", "Second Palace", "City"
+    }
+	
+	
+[effect_second_gov_center]
 type    = "Gov_Center"
 value   = 1
 reqs    =
