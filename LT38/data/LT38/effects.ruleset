@@ -2642,13 +2642,7 @@ reqs    =
       "Building", "Offshore Platform", "City"
     }
 
-[effect_palace]
-type    = "Make_Content_Mil"
-value   = 4
-reqs    =
-    { "type", "name", "range"
-      "Building", "Palace", "City"
-    }
+
 	
 	
 [effect_palace]
@@ -2693,6 +2687,14 @@ reqs    =
       "Building", "Palace", "City"
     }
 
+[effect_palace_5]
+type    = "Make_Content_Mil"
+value   = 4
+reqs    =
+    { "type", "name", "range"
+      "Building", "Palace", "City"
+    }
+	
 [effect_palace_gov_center]
 type    = "Gov_Center"
 value	= 1
@@ -4089,14 +4091,7 @@ nreqs   =
       "UnitClass", "Sea", "Local"
     }
 
-[effect_second_gov_center]
-type    = "Make_Content_Mil"
-value   = 4
-reqs    =
-    { "type", "name", "range"
-      "Building", "Second Palace", "City"
-    }
-	
+
 	
 [effect_second_gov_center]
 type    = "Gov_Center"
@@ -4122,6 +4117,15 @@ reqs    =
       "Building", "Second Palace", "City"
     }
 
+[effect_4_second_gov_center]
+type    = "Make_Content_Mil"
+value   = 4
+reqs    =
+    { "type", "name", "range"
+      "Building", "Second Palace", "City"
+    }
+	
+	
 [effect_second_palace_despotism]
 type    = "Output_Bonus"
 value   = 75
