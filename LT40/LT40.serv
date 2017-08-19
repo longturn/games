@@ -8,19 +8,19 @@ set huts=0
 set landmass=40
 set mapsize="PLAYER"
 set separatepoles=disabled
-set specials=250
+set specials=400
 set startpos="ALL"
 set steepness=40
 set temperature=50
-set tilesperplayer=450
+set tilesperplayer=900
 set topology="WRAPX|WRAPY"
 set wetness=60
 set alltemperate=enabled
-#set revealmap=START  #uncomment this for revealing the map for test games
+set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
 set nationset=all
-set citymindist=5
+set citymindist=6
 set contactturns=0
 set dispersion=6
 set foggedborders=enabled
@@ -41,7 +41,7 @@ set occupychance=0
 # diplomacy, technology
 set diplchance=50
 set diplcost=50
-set diplomacy=TEAM
+set diplomacy=HUMAN
 set sciencebox=100
 set techlost_donor=0
 set techlost_recv=100
