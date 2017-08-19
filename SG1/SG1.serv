@@ -1,4 +1,4 @@
-rulesetdir LT38
+rulesetdir SG1
 
 # map
 set alltemperate=disabled
@@ -65,7 +65,7 @@ set saveturns=1
 set scorelog=enabled
 set timeout=82800
 set unitwaittime=36000
-metamessage "LT38 | More info: http://longturn.org/game/LT38/"
+metamessage "LT38 | More info: http://longturn.org/game/SG1/"
 metapatches longturn
 
 
