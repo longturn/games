@@ -16,11 +16,11 @@ set tilesperplayer=450
 set topology="WRAPX|WRAPY"
 set wetness=60
 set alltemperate=enabled
-#set revealmap=START  #uncomment this for revealing the map for test games
+set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
 set nationset=all
-set citymindist=5
+set citymindist=4
 set contactturns=0
 set dispersion=6
 set foggedborders=enabled
@@ -41,7 +41,7 @@ set occupychance=0
 # diplomacy, technology
 set diplchance=50
 set diplcost=50
-set diplomacy=TEAM
+set diplomacy=HUMAN
 set sciencebox=100
 set techlost_donor=0
 set techlost_recv=100
