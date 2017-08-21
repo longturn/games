@@ -277,7 +277,7 @@ ruler_female_title = _("Supreme Leader %s")
 helptext = _("\
 Nationalism is a range of political, social, and economic systems\
  characterised by promoting the interests of a particular nation.\
-The political ideology holds that a nation should govern itself,\
+ The political ideology holds that a nation should govern itself,\
  free from unwanted outside interference.\
 "), _("\
 Nationalism is inherently divisive because it highlights perceived\

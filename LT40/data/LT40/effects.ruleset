@@ -499,6 +499,15 @@ reqs    =
       "OutputType", "Trade", "Local"
     }
 
+[effect_corruption_nationalism]
+type    = "Output_Waste"
+value   = 30
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Nationalism", "Player"
+      "OutputType", "Trade", "Local"
+    }
+	
 [effect_corruption_despotism]
 type    = "Output_Waste"
 value   = 20
@@ -633,6 +642,15 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
+[effect_waste_nationalism]
+type    = "Output_Waste"
+value   = 15
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Nationalism", "Player"
+      "OutputType", "Shield", "Local"
+    }
+	
 [effect_waste_federation]
 type    = "Output_Waste"
 value   = 30
@@ -697,6 +715,7 @@ nreqs   =
       "Gov", "Tribal", "Player"
       "Gov", "Communism", "Player"
 ;      "Gov", "Despotism", "Player"
+;      "Gov", "Nationalism", "Player"
 ;      "Gov", "Monarchy", "Player"
 ;      "Gov", "Fundamentalism", "Player"
 ;      "Gov", "Federation", "Player"
@@ -719,10 +738,26 @@ nreqs   =
       "Gov", "Communism", "Player"
       "Gov", "Despotism", "Player"
       "Gov", "Monarchy", "Player"
+;      "Gov", "Nationalism", "Player"
 ;      "Gov", "Fundamentalism", "Player"
 ;      "Gov", "Federation", "Player"
       "Gov", "Republic", "Player"
 ;      "Gov", "Democracy", "Player"
+    }
+	
+	
+	
+; additive with previous 
+[effect_base_unit_upkeep_gold_3]
+type    = "Upkeep_Factor"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Gold", "Local"
+    }
+nreqs   =
+    { "type", "name", "range"
+      "Gov", "Nationalism", "Player"
     }
 
 [effect_base_unit_upkeep_shield]
@@ -739,6 +774,7 @@ nreqs   =
 ;      "Gov", "Communism", "Player"
       "Gov", "Despotism", "Player"
       "Gov", "Monarchy", "Player"
+      "Gov", "Nationalism", "Player"
       "Gov", "Fundamentalism", "Player"
       "Gov", "Federation", "Player"
 ;      "Gov", "Republic", "Player"
@@ -873,6 +909,7 @@ nreqs   =
       "Gov", "Anarchy", "Player"
       "Gov", "Tribal", "Player"
 ;      "Gov", "Communism", "Player"
+      "Gov", "Nationalism", "Player"
       "Gov", "Despotism", "Player"
 ;      "Gov", "Monarchy", "Player"
       "Gov", "Fundamentalism", "Player"
@@ -894,6 +931,7 @@ nreqs   =
       "Gov", "Anarchy", "Player"
       "Gov", "Tribal", "Player"
       "Gov", "Communism", "Player"
+      "Gov", "Nationalism", "Player"
       "Gov", "Despotism", "Player"
 ;      "Gov", "Monarchy", "Player"
       "Gov", "Fundamentalism", "Player"
@@ -989,6 +1027,26 @@ reqs    =
       "MinSize", "9", "City"
     }
 
+[effect_upkeep_free_units_town_nationalism]
+name    = "Unit_Upkeep_Free_Per_City"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Nationalism", "Player"
+      "OutputType", "Gold", "Local"
+    }
+
+[effect_upkeep_free_units_city_nationalism]
+name    = "Unit_Upkeep_Free_Per_City"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Nationalism", "Player"
+      "OutputType", "Gold", "Local"
+      "MinSize", "9", "City"
+    }
+
+	
 [effect_upkeep_free_units_town_fundamentalism]
 name    = "Unit_Upkeep_Free_Per_City"
 value   = 4
@@ -1254,6 +1312,15 @@ reqs    =
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
     }
+	
+[effect_civil_war_nationalism]
+type    = "Civil_War_Chance"
+value   = 45
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Nationalism", "Player"
+    }
+
 
 [effect_civil_war_despotism]
 type    = "Civil_War_Chance"
@@ -1374,6 +1441,14 @@ reqs    =
     { "type", "name", "range"
       "Gov", "Democracy", "Player"
     }
+	
+[effect_empire_size_base_nationalism]
+type    = "Empire_Size_Base"
+value   = 28
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Nationalism", "Player"
+    }
 
 [effect_empire_size_step_tribal]
 type    = "Empire_Size_Step"
@@ -1397,6 +1472,14 @@ value   = 20
 reqs    =
     { "type", "name", "range"
       "Gov", "Monarchy", "Player"
+    }
+	
+[effect_empire_size_step_nationalism]
+type    = "Empire_Size_Step"
+value   = 28
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Nationalism", "Player"
     }
 
 [effect_empire_size_step_communism]
@@ -1454,7 +1537,15 @@ reqs    =
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
     }
-
+	
+[effect_max_rates_nationalism]
+type    = "Max_Rates"
+value   = 50
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Nationalism", "Player"
+    }
+	
 [effect_max_rates_despotism]
 type    = "Max_Rates"
 value   = 60
@@ -1582,6 +1673,14 @@ reqs    =
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
     }
+	
+[effect_martial_law_max_nationalism]
+type    = "Martial_Law_Max"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Nationalism", "Player"
+    }
 
 [effect_martial_law_max_communism]
 type    = "Martial_Law_Max"
@@ -1659,6 +1758,19 @@ nreqs   =
     { "type", "name", "range"
       "TerrainClass", "Oceanic", "Local"
     }
+	
+[effect_gov_tile_bonus_nationalism]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Nationalism", "Player"
+      "OutputType", "Trade", "Local"
+    }
+nreqs   =
+    { "type", "name", "range"
+      "TerrainClass", "Oceanic", "Local"
+    }
 
 [effect_gov_tile_bonus_democracy]
 type    = "Output_Inc_Tile"
@@ -1688,6 +1800,7 @@ nreqs   =
       "Gov", "Despotism", "Player"
 ;      "Gov", "Monarchy", "Player"
       "Gov", "Fundamentalism", "Player"
+	  "Gov", "Nationalism", "Player"
 ;      "Gov", "Federation", "Player"
 ;      "Gov", "Republic", "Player"
 ;      "Gov", "Democracy", "Player"
@@ -1713,6 +1826,15 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "Gov", "Republic", "Player"
+    }
+	
+	
+[effect_unbribable_nationalism]
+type    = "Unbribable_Units"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Nationalism", "Player"
     }
 
 [effect_unbribable_democracy]
@@ -1745,6 +1867,15 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "Gov", "Federation", "Player"
+    }
+	
+	
+[effect_incite_nationalism]
+type    = "No_Incite"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Nationalism", "Player"
     }
 
 [effect_incite_fundamentalism]
