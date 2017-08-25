@@ -2605,6 +2605,78 @@ Spies built under Communist or Federation governments will start\
  at the first veteran level (handler).\
 ")
 
+
+[unit_early_spy]
+name          = _("Early Spy")
+class         = "Small Land"
+tech_req      = "Communism"
+gov_req       = "Monarchy"
+obsolete_by   = "Spy"
+graphic       = "u.spy"
+graphic_alt   = "-"
+sound_move    = "m_spy"
+sound_move_alt = "m_generic"
+sound_fight   = "f_spy"
+sound_fight_alt = "f_generic"
+build_cost    = 26
+pop_cost      = 0
+attack        = 0
+defense       = 0
+hitpoints     = 10
+firepower     = 1
+move_rate     = 5
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+flags         = "Diplomat", "IgZOC", "NonMil", "Spy"
+veteran_names =
+; /* TRANS: Spy veteran level */
+  _("?spy_level:informant"),
+; /* TRANS: Spy veteran level */
+  _("?spy_level:handler"),
+; /* TRANS: Spy veteran level */
+  _("?spy_level:agent"),
+; /* TRANS: Spy veteran level */
+  _("?spy_level:spymaster")
+veteran_raise_chance = 50, 33, 20, 0
+veteran_work_raise_chance = 0, 0, 0, 0
+veteran_power_fact = 100, 110, 125, 140
+veteran_move_bonus = 0, 9, 18, 27
+roles         = "Diplomat"
+helptext      = _("\
+A Spy is more skilled in the arts of espionage than her Diplomat predecessor.\
+"), _("\
+She can perform all the functions of the Diplomat; refer to the Diplomat\
+ entry for more details. Unlike a Diplomat, a Spy may also survive an\
+ operation in a foreign city and become more experienced as a result.\
+ Spies are also more effective than Diplomats at defending cities\
+ against foreign Diplomats and Spies.\
+"), _("\
+A Spy can also be used to:\n\
+ - sabotage an enemy unit (reducing its hit points to half), if it is\
+ alone on a tile and the players are at war;\n\
+ - poison the water supply of an enemy city (reducing the population\
+ by one and emptying the granary);\n\
+ - steal specific technology (with a reduced chance of success);\n\
+ - steal further technologies from a city which has already been\
+ stolen from (although cities become more resistant each time they\
+ are stolen from);\n\
+ - sabotage predetermined city targets (with a reduced chance of\
+ success).\
+"), _("\
+A Spy that survives the more aggressive actions (sabotage, theft,\
+ inciting rebellion, and poisoning) escapes to the safety of the\
+ nearest friendly city.\
+"), _("\
+Spies built under Communist or Federation governments will start\
+ at the first veteran level (handler).\
+")
+
+
 [unit_caravan]
 name          = _("Caravan")
 class         = "Merchant"
