@@ -723,7 +723,7 @@ nreqs   =
 ;      "Gov", "Democracy", "Player"
     }
 
-; additive with previous => x2 for Fundamentalism, Federation, Democracy
+; additive with previous => x2 for Fundamentalism, Federation, Democracy, Nationalism
 [effect_base_unit_upkeep_gold_2]
 type    = "Upkeep_Factor"
 value   = 1
@@ -745,6 +745,29 @@ nreqs   =
 ;      "Gov", "Democracy", "Player"
     }
 	
+	
+	
+	; additive with previous => x2 for Nationalism
+[effect_base_unit_upkeep_gold_3]
+type    = "Upkeep_Factor"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Gold", "Local"
+    }
+nreqs   =
+    { "type", "name", "range"
+      "Gov", "Anarchy", "Player"
+      "Gov", "Tribal", "Player"
+      "Gov", "Communism", "Player"
+      "Gov", "Despotism", "Player"
+      "Gov", "Monarchy", "Player"
+;      "Gov", "Nationalism", "Player"
+      "Gov", "Fundamentalism", "Player"
+      "Gov", "Federation", "Player"
+      "Gov", "Republic", "Player"
+      "Gov", "Democracy", "Player"
+    }
 	
 	
 ; additive with previous 
