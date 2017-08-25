@@ -1384,6 +1384,44 @@ without roads), and unable to use less rough terrain to improve their \
 defense.\
 ")
 
+
+[unit_early_armor]
+name          = _("Early Armor")
+class         = "Big Land"
+tech_req      = "Automobile"
+gov_req       = "Nationalism"
+obsolete_by   = "Armor"
+graphic       = "u.armor"
+graphic_alt   = "-"
+sound_move    = "m_armor"
+sound_move_alt = "m_generic"
+sound_fight   = "f_armor"
+sound_fight_alt = "f_generic"
+build_cost    = 70
+pop_cost      = 0
+attack        = 9
+defense       = 5
+hitpoints     = 30
+firepower     = 1
+move_rate     = 7
+vision_radius_sq = 40
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = ""
+roles         = "DefendOk", "AttackFast", "Hunter"
+helptext      = _("\
+Armors are motorized war wagons that are faster, stronger, and can take \
+more damage than any mounted unit. However, they are less adaptable to \
+very rough terrain (they cannot move into mountains, swamps, or jungles \
+without roads), and unable to use less rough terrain to improve their \
+defense.\
+")
+
+
 [unit_catapult]
 name          = _("Catapult")
 class         = "Big Siege"
