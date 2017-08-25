@@ -1881,6 +1881,47 @@ TIP:  A very fast unit, which is very useful for hunting down enemy\
  Transports and Submarines.\
 ")
 
+
+[unit_early_destroyer]
+name          = _("Early Destroyer")
+class         = "Sea"
+tech_req      = "Communism"
+gov_req       = "Communism"
+obsolete_by   = "Destroyer"
+graphic       = "u.destroyer"
+graphic_alt   = "-"
+sound_move    = "m_destroyer"
+sound_move_alt = "m_generic"
+sound_fight   = "f_destroyer"
+sound_fight_alt = "f_generic"
+build_cost    = 65
+pop_cost      = 0
+attack        = 4
+defense       = 4
+hitpoints     = 30
+firepower     = 1
+move_rate     = 16
+vision_radius_sq = 72
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+bonuses       =
+   { "flag", "type", "value"
+     "Submarine", "DefenseMultiplier", 1
+   }
+flags         = "BadCityDefender"
+roles         = "Hunter"
+helptext      = _("\
+An improved Ironclad, with better move rate and vision.\
+ Anti-submarine weapons double its defense against Submarines.\
+"), _("\
+TIP:  A very fast unit, which is very useful for hunting down enemy\
+ Transports and Submarines.\
+")
+
 [unit_cruiser]
 name          = _("Cruiser")
 class         = "Sea"
