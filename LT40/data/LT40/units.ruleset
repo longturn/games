@@ -1219,6 +1219,40 @@ helptext      = _("\
 Knights are mounted and heavily armored warriors.\
 ")
 
+[unit_early_knights]
+name          = _("Early Knights")
+class         = "Land"
+tech_req      = "Feudalism"
+gov_req       = "Despotism"
+obsolete_by   = "Knights"
+graphic       = "u.knights"
+graphic_alt   = "-"
+sound_move    = "m_knights"
+sound_move_alt = "m_generic"
+sound_fight   = "f_knights"
+sound_fight_alt = "f_generic"
+build_cost    = 24
+pop_cost      = 0
+attack        = 4
+defense       = 2
+hitpoints     = 10
+firepower     = 1
+move_rate     = 5
+vision_radius_sq = 28
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer"
+roles         = "DefendOk", "AttackFast", "HutTech","BarbarianTech",
+                "BarbarianBuildTech", "Hunter"
+helptext      = _("\
+Knights are mounted and heavily armored warriors.\
+")
+
+
 [unit_dragoons]
 name          = _("Dragoons")
 class         = "Land"
