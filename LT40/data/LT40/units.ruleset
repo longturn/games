@@ -1719,6 +1719,50 @@ for every turn not spent in a city or airbase or on a Carrier.\
 ")
 bombard_rate = 2
 
+
+[unit_early_helicopter]
+name          = _("Early Helicopter")
+class         = "Helicopter"
+tech_req      = "Advanced Flight"
+gov_req       = "Democracy"
+obsolete_by   = "Helicopter"
+graphic       = "u.helicopter"
+graphic_alt   = "-"
+sound_move    = "m_helicopter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_helicopter"
+sound_fight_alt = "f_generic"
+build_cost    = 45
+pop_cost      = 0
+attack        = 5
+defense       = 3
+hitpoints     = 30
+firepower     = 1
+move_rate     = 12
+vision_radius_sq = 72
+transport_cap = 1
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Land"
+flags         = "OneAttack", "AirAttacker", "Bombarder", "Helicopter"
+roles         = ""
+helptext      = _("\
+A Helicopter's attack against units on land is a bombard attack; against \
+units on water it has a regular attack.\
+"), _("\
+Helicopters can also transport one unit of infantry; while most troops \
+must load or unload in a city or airbase units specializing in mobility \
+(Paratroopers, Alpine Troops, Marines, Partisans, and Fanatics) can \
+embark or disembark at any time.\
+"), _("\
+Care must be exercised, because Helicopters lose a small amount of health \
+for every turn not spent in a city or airbase or on a Carrier.\
+")
+bombard_rate = 2
+
 [unit_stealth_fighter]
 name          = _("Stealth Fighter")
 class         = "Air"
