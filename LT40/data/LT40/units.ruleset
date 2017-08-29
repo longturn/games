@@ -873,8 +873,8 @@ sound_move    = "m_partisan"
 sound_move_alt = "m_generic"
 sound_fight   = "f_partisan"
 sound_fight_alt = "f_generic"
-build_cost    = 60
-pop_cost      = 0
+build_cost    = 40
+pop_cost      = 1
 attack        = 4
 defense       = 5
 hitpoints     = 20
@@ -889,19 +889,13 @@ uk_food       = 1
 uk_gold       = 1
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
-flags         = "IgTer", "IgZOC", "Capturer"
+flags         = "IgTer", "IgZOC", "Capturer", "NoHome"
 roles         = "DefendGood", "Partisan", "BarbarianTech"
 helptext      = _("\
 Partisans are guerilla fighters who are experts\
- at using the terrain to their advantage.\
-"), _("\
-A number of Partisans are granted free when an enemy conquers your\
- city -- they automatically assume defensive positions in the\
- surrounding countryside -- but only under these conditions:\n\
- - Guerilla Warfare must be known by at least one player.\n\
- - At least three quarters of the citizens must have your nationality.\n\
- - You must know about Communism and Gunpowder.\n\
- - You must run either a Democracy or a Communist government.\
+ at using the terrain to their advantage. Partisans\
+ have no home city and can't be killed by conquering\
+ cities. \
 ")
 
 [unit_fanatics]
