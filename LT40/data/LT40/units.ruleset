@@ -1014,7 +1014,7 @@ uk_food       = 1
 uk_gold       = 1
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
-flags         = "Fanatic", "AddToCity", "Capturer"
+flags         = "Fanatic", "Capturer", "Unbribable"
 roles         = "DefendGood"
 helptext      = _("\
 Fanatics are warriors extremely devoted to a higher cause.\
@@ -1294,7 +1294,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Fanatic", "Capturer"
+flags         = "Fanatic", "Capturer", , "Unbribable"
 roles         = "AttackFast", "Hunter"
 helptext      = _("\
 Crusaders are highly disciplined \
