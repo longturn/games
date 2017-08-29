@@ -417,7 +417,7 @@ flags         = "Unreachable", "DoesntOccupyTile", "CanPillage"
 name          = _("Settlers")
 class         = "Small Land"
 tech_req      = "None"
-obsolete_by   = "None"
+obsolete_by   = "Colonists"
 graphic       = "u.settlers"
 graphic_alt   = "-"
 sound_move    = "m_settlers"
@@ -456,6 +456,54 @@ Workers.\
 TIP: optimal production of Settlers occurs in cities of at most \
 size 4, or cities with a Granary of at most size 6.\
 ")
+
+
+[unit_colonists]
+name          = _("Colonists")
+class         = "Small Land"
+tech_req      = "Railroad"
+obsolete_by   = "None"
+graphic       = "u.settlers"
+graphic_alt   = "-"
+sound_move    = "m_settlers"
+sound_move_alt = "m_generic"
+sound_fight   = "f_settlers"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 2
+attack        = 0
+defense       = 1
+hitpoints     = 30
+firepower     = 1
+move_rate     = 6
+vision_radius_sq = 25
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+flags         = "Settlers", "NonMil", "AddToCity", "Cities"
+; No veteran levels (level name is never displayed)
+veteran_names = _("green")
+veteran_raise_chance = 0
+veteran_work_raise_chance = 0
+veteran_power_fact = 100
+veteran_move_bonus = 0
+roles         = "Cities"
+helptext      = _("\
+Colonists are one of the key units in the game, as they are your main \
+means of founding new cities.\
+"), _("\
+Colonists can also perform some of the same terrain alterations as \
+Workers.\
+"), _("\
+TIP: optimal production of Colonists occurs in cities of at most \
+size 4, or cities with a Granary of at most size 6.\
+")
+
+
+
 
 [unit_migrants]
 name          = _("Migrants")
