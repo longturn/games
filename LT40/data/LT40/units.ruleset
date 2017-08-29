@@ -977,13 +977,15 @@ uk_food       = 1
 uk_gold       = 1
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
-flags         = "IgTer", "IgZOC", "Capturer", "NoHome"
+flags         = "IgTer", "IgZOC", "Capturer", "NoHome", "AddToCity"
 roles         = "DefendGood", "Partisan", "BarbarianTech"
 helptext      = _("\
 Partisans are guerilla fighters who are experts\
  at using the terrain to their advantage. Partisans\
  have no home city and can't be killed by conquering\
- cities. \
+ cities. Since partisans are trained citizens\
+ they can return to that and and once again become\
+ part of the normal population.\
 ")
 
 [unit_fanatics]
