@@ -1494,7 +1494,7 @@ Reduces the unhappiness caused by aggressively deployed military \
 units owned by the city by 1 -- in other words, it neutralizes the \
 unhappiness caused by a single military unit (except under Democracy, \
 where a single unit makes two citizens unhappy). Under governments \
-where unit upkeep is paid in gold, it gives two free gold per city \
+where unit upkeep is paid in gold, it gives one free gold per city \
 towards upkeep every turn.\
 ")
 
