@@ -776,18 +776,7 @@ nreqs   =
     }
 	
 	
-; additive with previous 
-[effect_base_unit_upkeep_gold_3]
-type    = "Upkeep_Factor"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "OutputType", "Gold", "Local"
-    }
-nreqs   =
-    { "type", "name", "range"
-      "Gov", "Nationalism", "Player"
-    }
+
 
 [effect_base_unit_upkeep_shield]
 type    = "Upkeep_Factor"
