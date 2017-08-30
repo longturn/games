@@ -1557,9 +1557,9 @@ sabotage	= 0
 sound		= "w_magellans_expedition"
 sound_alt	= "w_generic"
 helptext	= _("\
-Gives all your sea units 3 additional movement points. The chance\
+Gives all your sea units 2 additional movement points. The chance\
  of a sea unit getting the next veteran level after a battle\
- increases by half.\
+ increases by 10%.\
 ")
 
 [building_manhattan_project]
