@@ -1529,13 +1529,13 @@ reqs	=
 graphic	= "b.lighthouse"
 graphic_alt	= "-"
 obsolete_by	= "Engineering"
-build_cost	= 200
+build_cost	= 100
 upkeep		= 0
 sabotage	= 0
 sound		= "w_lighthouse"
 sound_alt	= "w_generic"
 helptext	= _("\
-Gives all your sea units 3 additional movement points (except Triremes \
+Gives all your triremes get 2 additional movement points (except \
 while moving on rivers). Makes all your new triremes veterans (for all \
 your cities).\
 ")
