@@ -364,10 +364,10 @@ reqs    =
       "UnitClass", "Sea", "Local"
     }
 
-; Fusion power gives +9 moves to sea units
+; Fusion power gives +3 moves to sea units
 [effect_fusion_powered_boats]
 type    = "Move_Bonus"
-value   = 9
+value   = 3
 reqs    =
     { "type", "name", "range"
       "Tech", "Fusion Power", "Player"

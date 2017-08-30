@@ -358,7 +358,7 @@ req2     = "Labor Union"
 flags    = ""
 graphic     = "a.fusion_power"
 graphic_alt = "-"
-helptext = _("Gives sea units nine extra moves.")
+helptext = _("Gives sea units three extra moves.")
 cost     = 3000
 
 [advance_genetic_engineering]
