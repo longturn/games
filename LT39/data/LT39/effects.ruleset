@@ -811,7 +811,7 @@ name    = "Make_Content_Mil"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "MinSize", "9", "City"
+      "MinSize", "8", "City"
     }
 nreqs   =
     { "type", "name", "range"
@@ -849,7 +849,7 @@ name    = "Make_Content_Mil"
 value   = 2
 reqs    =
     { "type", "name", "range"
-      "MinSize", "9", "City"
+      "MinSize", "8", "City"
     }
 nreqs   =
     { "type", "name", "range"
@@ -887,7 +887,7 @@ name    = "Make_Content_Mil"
 value   = 3
 reqs    =
     { "type", "name", "range"
-      "MinSize", "9", "City"
+      "MinSize", "8", "City"
     }
 nreqs   =
     { "type", "name", "range"
@@ -929,7 +929,7 @@ reqs    =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
       "OutputType", "Shield", "Local"
-      "MinSize", "9", "City"
+      "MinSize", "8", "City"
     }
 
 [effect_upkeep_free_units_town_tribal]
@@ -948,7 +948,7 @@ reqs    =
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
       "OutputType", "Shield", "Local"
-      "MinSize", "9", "City"
+      "MinSize", "8", "City"
     }
 
 [effect_upkeep_free_units_town_despotism]
@@ -967,7 +967,7 @@ reqs    =
     { "type", "name", "range"
       "Gov", "Despotism", "Player"
       "OutputType", "Gold", "Local"
-      "MinSize", "9", "City"
+      "MinSize", "8", "City"
     }
 
 [effect_upkeep_free_units_town_monarchy]
@@ -986,7 +986,7 @@ reqs    =
     { "type", "name", "range"
       "Gov", "Monarchy", "Player"
       "OutputType", "Gold", "Local"
-      "MinSize", "9", "City"
+      "MinSize", "8", "City"
     }
 
 [effect_upkeep_free_units_town_fundamentalism]
@@ -1005,7 +1005,7 @@ reqs    =
     { "type", "name", "range"
       "Gov", "Fundamentalism", "Player"
       "OutputType", "Gold", "Local"
-      "MinSize", "9", "City"
+      "MinSize", "8", "City"
     }
 
 [effect_upkeep_free_units_town_republic]
@@ -1024,7 +1024,7 @@ reqs    =
     { "type", "name", "range"
       "Gov", "Republic", "Player"
       "OutputType", "Shield", "Local"
-      "MinSize", "9", "City"
+      "MinSize", "8", "City"
     }
 
 [effect_upkeep_free_units_town_democracy]
@@ -1043,7 +1043,7 @@ reqs    =
     { "type", "name", "range"
       "Gov", "Democracy", "Player"
       "OutputType", "Gold", "Local"
-      "MinSize", "9", "City"
+      "MinSize", "8", "City"
     }
 
 [effect_upkeep_free_units_town_federation]
@@ -1062,7 +1062,7 @@ reqs    =
     { "type", "name", "range"
       "Gov", "Federation", "Player"
       "OutputType", "Gold", "Local"
-      "MinSize", "9", "City"
+      "MinSize", "8", "City"
     }
 
 [effect_upkeep_free_units_town_communism]
@@ -1081,7 +1081,7 @@ reqs    =
     { "type", "name", "range"
       "Gov", "Communism", "Player"
       "OutputType", "Shield", "Local"
-      "MinSize", "9", "City"
+      "MinSize", "8", "City"
     }
 
 ; Any city can support up to four units...
@@ -1137,7 +1137,7 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "OutputType", "Food", "Local"
-      "MinSize", "9", "City"
+      "MinSize", "8", "City"
     }
 
 [effect_upkeep_free_units_food_10]
@@ -2208,7 +2208,7 @@ type    = "Defend_Bonus"
 value   = 50
 reqs    =
     { "type", "name", "range"
-      "MinSize", "9", "City"
+      "MinSize", "8", "City"
       "CityTile", "Center", "Local"
     }
 nreqs   =
