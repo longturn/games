@@ -2387,6 +2387,30 @@ nreqs   =
       "UnitClass", "Air", "Local"
       "UnitClass", "Missile", "Local"
     }
+	
+; Every Land, Sea, Trireme
+[effect_city_defense_2]
+type    = "Defend_Bonus"
+value   = 50
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "20", "City"
+      "CityTile", "Center", "Local"
+    }
+nreqs   =
+    { "type", "name", "range"
+;      "UnitClass", "Land", "Local"
+;      "UnitClass", "Small Land", "Local"
+;      "UnitClass", "Non Military", "Local"
+;      "UnitClass", "Big Land", "Local"
+;      "UnitClass", "Merchant", "Local"
+;      "UnitClass", "Sea", "Local"
+;      "UnitClass", "Trireme", "Local"
+      "UnitClass", "Helicopter", "Local"
+      "UnitClass", "Air", "Local"
+      "UnitClass", "Missile", "Local"
+    }
+	
 
 ; Every Land
 [effect_city_walls_0]
