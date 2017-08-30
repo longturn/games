@@ -1173,6 +1173,34 @@ together in the same city, increasing to 200% once the Great Library and \
 Isaac Newton's College have both been built.\
 ")
 
+
+[building_resource_agency]
+name		= _("Resource Agency")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Economics", "Player"
+    }
+graphic	= "b.university"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 50
+upkeep		= 2
+sabotage	= 100
+sound		= "b_university"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases the work area of the city. \
+"),
+; /* xgettext:no-c-format */
+_("\
+Resource Agency is needed for working futher away tiles. \
+")
+
+
+
+
 [building_apollo_program]
 name		= _("Apollo Program")
 genus		= "GreatWonder"
