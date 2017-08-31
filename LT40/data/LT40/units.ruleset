@@ -3314,6 +3314,45 @@ that attacks with triple firepower.\
 
 
 
+[unit_flagship_fusion_battleship]
+name          = _("Flagship Fusion Battleship")
+class         = "Sea"
+tech_req      = "Fusion Power", "Mass Production"
+obsolete_by   = "None"
+graphic       = "u.fusion_battleship"
+graphic_alt   = "u.battleship"
+sound_move    = "m_battleship"
+sound_move_alt = "m_generic"
+sound_fight   = "f_battleship"
+sound_fight_alt = "f_generic"
+build_cost    = 600
+pop_cost      = 0
+attack        = 36
+defense       = 24
+hitpoints     = 30
+firepower     = 3
+move_rate     = 16
+vision_radius_sq = 90
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "BadCityDefender", "Unique", "Unbribable"
+roles         = "DefendOk"
+helptext      = _("\
+A battleship powered by fusion power \
+that attacks with triple firepower.\
+ The Flagship Fusion Battleship is the ultimate\
+ naval unit. Virtually nothing can survive the\
+ attack of this monster.\
+ You can have only one unit of this type at a time\
+ and it can't be bribed.\
+")
+
+
+
 [unit_fusion_armor]
 name          = _("Fusion Armor")
 class         = "Big Land"
