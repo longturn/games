@@ -1812,6 +1812,31 @@ Upon completion of this wonder, entertainer specialists' luxury \
 output increases to 3 permanently for every nation.\
 ")
 
+[building_malbork_castle]
+name		= _("Malbork Castle")
+rule_name	= "Malbork Castle" 
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Construction", "Player"
+    }
+graphic	= "b.university"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 140
+upkeep		= 0
+sabotage	= 0
+sound		= "b_university"
+sound_alt	= "w_generic"
+helptext	= _("\
+Gives 1 additional luxury to the city \
+where it is located.\
+"), _("\
+Upon completion of this wonder, entertainer specialists' luxury \
+output increases to 3 for the city with this wonder.\
+")
+
+
 [building_statue_of_liberty]
 name		= _("Statue of Liberty")
 genus		= "GreatWonder"
