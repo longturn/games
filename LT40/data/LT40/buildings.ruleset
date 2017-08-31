@@ -1200,6 +1200,32 @@ Resource Agency is needed for working futher away tiles. \
 
 
 
+[building_house_of_peasants]
+name		= _("House of Peasants")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Trade", "Player"
+    }
+graphic	= "b.university"
+graphic_alt	= "-"
+obsolete_by	= "Economics"
+build_cost	= 40
+upkeep		= 0
+sabotage	= 100
+sound		= "b_university"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases the work area of the city. \
+"),
+; /* xgettext:no-c-format */
+_("\
+House of Peasants is needed for working\
+ futher away tiles. \
+")
+
+
 
 [building_apollo_program]
 name		= _("Apollo Program")
