@@ -2198,6 +2198,41 @@ The Ironclad is an armored ship,\
  more sturdy than the Frigate.\
 ")
 
+
+[unit_flagship_ironclad]
+name          = _("Flagship Ironclad")
+class         = "Sea"
+tech_req      = "Steam Engine"
+obsolete_by   = "Destroyer"
+graphic       = "u.ironclad"
+graphic_alt   = "-"
+sound_move    = "m_ironclad"
+sound_move_alt = "m_generic"
+sound_fight   = "f_ironclad"
+sound_fight_alt = "f_generic"
+build_cost    = 90
+pop_cost      = 0
+attack        = 6
+defense       = 6
+hitpoints     = 20
+firepower     = 1
+move_rate     = 11
+vision_radius_sq = 26
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "BadCityDefender", "Unique", "Unbribable"
+roles         = "Hunter"
+helptext      = _("\
+The Ironclad is an armored ship,\
+ more sturdy than the Frigate.\
+ You can have only one unit of this type at a time\
+ and it can't be bribed.\
+")
+
 [unit_destroyer]
 name          = _("Destroyer")
 class         = "Sea"
@@ -2236,6 +2271,8 @@ An improved Ironclad, with better move rate and vision.\
 TIP:  A very fast unit, which is very useful for hunting down enemy\
  Transports and Submarines.\
 ")
+
+
 
 
 [unit_early_destroyer]
@@ -2308,6 +2345,9 @@ roles         = "DefendOk"
 helptext      = _("\
 The Cruiser is a strong offensive boat unit.\
 ")
+
+
+
 
 [unit_aegis_cruiser]
 name          = _("AEGIS Cruiser")
