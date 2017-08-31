@@ -2390,6 +2390,39 @@ The Cruiser is a strong offensive boat unit.\
 
 
 
+[unit_flagship_cruiser]
+name          = _("Flagship Cruiser")
+class         = "Sea"
+tech_req      = "Steel"
+obsolete_by   = "AEGIS Cruiser"
+graphic       = "u.cruiser"
+graphic_alt   = "-"
+sound_move    = "m_cruiser"
+sound_move_alt = "m_generic"
+sound_fight   = "f_cruiser"
+sound_fight_alt = "f_generic"
+build_cost    = 140
+pop_cost      = 0
+attack        = 6
+defense       = 12
+hitpoints     = 30
+firepower     = 1
+move_rate     = 15
+vision_radius_sq = 72
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "BadCityDefender", "Unique", "Unbribable"
+roles         = "DefendOk"
+helptext      = _("\
+The Cruiser is a strong offensive boat unit.\
+ You can have only one unit of this type at a time\
+ and it can't be bribed.\
+")
+
 
 [unit_aegis_cruiser]
 name          = _("AEGIS Cruiser")
