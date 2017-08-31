@@ -3734,6 +3734,15 @@ reqs    =
       "UnitClass", "Sea", "Local"
     }
 
+[effect_lighthouse_vision_1]
+type    = "City_Vision_Radius_Sq"
+value   = 50
+reqs    =
+    { "type", "name", "range"
+	  "Building", "Lighthouse", "City"
+    }
+	
+	
 [effect_lighthouse_veteran]
 type    = "Veteran_Build"
 value   = 0
