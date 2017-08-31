@@ -1994,6 +1994,41 @@ The Caravel is a sailing ship that can enter\
 ")
 
 
+[unit_flagship_caravel]
+name          = _("Flagship Caravel")
+class         = "Sea"
+tech_req      = "Magnetism"
+obsolete_by   = "Galleon"
+graphic       = "u.caravel"
+graphic_alt   = "-"
+sound_move    = "m_caravel"
+sound_move_alt = "m_generic"
+sound_fight   = "f_caravel"
+sound_fight_alt = "f_generic"
+build_cost    = 65
+pop_cost      = 0
+attack        = 1
+defense       = 3
+hitpoints     = 10
+firepower     = 1
+move_rate     = 10
+vision_radius_sq = 28
+transport_cap = 3
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Land", "Small Land", "Merchant", "Non Military"
+flags         = "BadCityDefender", "Only_Native_Attack", "Unique", "Unbribable"
+roles         = "Ferryboat", "BarbarianBoat"
+helptext      = _("\
+The Flagship Caravel is a sailing ship that can enter\
+ any ocean tile. As a flagship it's better than standard\
+ caravels. You can have only one unit of this type at a time.\
+ ")
+
+
 [unit_early_caravel]
 name          = _("Early Caravel")
 class         = "Sea"
