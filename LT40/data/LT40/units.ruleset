@@ -2493,6 +2493,43 @@ The Battleship is the supreme naval unit with\
  excellent offensive and defensive values.\
 ")
 
+
+[unit_flagship_battleship]
+name          = _("Flagship Battleship")
+class         = "Sea"
+tech_req      = "Mass Production"
+obsolete_by   = "None"
+graphic       = "u.battleship"
+graphic_alt   = "-"
+sound_move    = "m_battleship"
+sound_move_alt = "m_generic"
+sound_fight   = "f_battleship"
+sound_fight_alt = "f_generic"
+build_cost    = 450
+pop_cost      = 0
+attack        = 27
+defense       = 27
+hitpoints     = 30
+firepower     = 2
+move_rate     = 15
+vision_radius_sq = 90
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "BadCityDefender", "Unique", "Unbribable"
+roles         = "DefendOk"
+helptext      = _("\
+The Battleship is the supreme naval unit with\
+ excellent offensive and defensive values.\
+ You can have only one unit of this type at a time\
+ and it can't be bribed.\
+")
+
+
+
 [unit_submarine]
 name          = _("Submarine")
 class         = "Sea"
@@ -3274,6 +3311,8 @@ helptext      = _("\
 A battleship powered by fusion power \
 that attacks with triple firepower.\
 ")
+
+
 
 [unit_fusion_armor]
 name          = _("Fusion Armor")
