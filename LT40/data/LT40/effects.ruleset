@@ -2457,6 +2457,37 @@ reqs    =
       "Building", "City Walls", "City"
     }
 
+	
+[effect_underground_tunnels_0]
+type    = "Defend_Bonus"
+value   = 100
+reqs    =
+    { "type", "name", "range"
+      "Building", "Underground Tunnels", "City"
+    }
+nreqs   =
+    { "type", "name", "range"
+;      "UnitClass", "Land", "Local"
+;      "UnitClass", "Small Land", "Local"
+;      "UnitClass", "Non Military", "Local"
+;      "UnitClass", "Big Land", "Local"
+;      "UnitClass", "Merchant", "Local"
+      "UnitClass", "Sea", "Local"
+      "UnitClass", "Trireme", "Local"
+      "UnitClass", "Helicopter", "Local"
+      "UnitClass", "Air", "Local"
+      "UnitClass", "Missile", "Local"
+    }
+
+[effect_underground_tunnels_1]
+type    = "Unit_No_Lose_Pop"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Underground Tunnels", "City"
+    }
+	
+	
 [effect_coastal_defense]
 type    = "Defend_Bonus"
 value   = 100

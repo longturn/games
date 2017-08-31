@@ -335,6 +335,37 @@ sea units. City Walls also prevent the loss of population which occurs \
 when a defending unit is defeated by a land unit.\
 ")
 
+
+[building_underground_tunnels]
+name		= _("Underground Tunnels")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Bridge Building", "Player"
+    }
+graphic	= "b.university"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 80
+upkeep		= 1
+sabotage	= 50
+sound		= "b_university"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Tunnel warfare is a general name for war being conducted in tunnels and\
+ other underground cavities. Tunnels provide citizens and the defending\
+ troops a shelter and allow the possibility of ambush, counterattack and\
+ the ability to transfer troops from one portion of the battleground to\
+ another unseen and protected. Tunnels make it easier to defend a city.\
+ They add a +100% bonus to the intrinsic defense strength of units within\
+ the city against land units (that is a two-thirds increase for small cities,\
+ or a one-half increase for cities larger than size 8), but are\
+ ineffective against airborne and sea units. Underground Tunnels also\
+ prevent the loss of population which occurs when a defending unit is\
+ defeated by a land unit. The tunnels are not visible to outside the city.\
+")
+
 [building_coastal_defense]
 name		= _("Coastal Defense")
 genus		= "Improvement"
