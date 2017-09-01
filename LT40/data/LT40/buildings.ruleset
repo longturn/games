@@ -359,11 +359,11 @@ Tunnel warfare is a general name for war being conducted in tunnels and\
  the ability to transfer troops from one portion of the battleground to\
  another unseen and protected. Tunnels make it easier to defend a city.\
  They add a +100% bonus to the intrinsic defense strength of units within\
- the city against land units (that is a two-thirds increase for small cities,\
- or a one-half increase for cities larger than size 8), but are\
- ineffective against airborne and sea units. Underground Tunnels also\
- prevent the loss of population which occurs when a defending unit is\
- defeated by a land unit. The tunnels are not visible to outside the city.\
+ the city against land, air and sea units (that is a two-thirds increase\
+ for small cities, or a one-half increase for cities larger than size 8)\
+ Underground Tunnels also prevent the loss of population which occurs\
+ when a defending unit is defeated by a land unit. The tunnels are not\
+ visible to outside the city.\
 ")
 
 [building_coastal_defense]

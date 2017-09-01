@@ -2472,11 +2472,11 @@ nreqs   =
 ;      "UnitClass", "Non Military", "Local"
 ;      "UnitClass", "Big Land", "Local"
 ;      "UnitClass", "Merchant", "Local"
-      "UnitClass", "Sea", "Local"
-      "UnitClass", "Trireme", "Local"
-      "UnitClass", "Helicopter", "Local"
-      "UnitClass", "Air", "Local"
-      "UnitClass", "Missile", "Local"
+;      "UnitClass", "Sea", "Local"
+;      "UnitClass", "Trireme", "Local"
+;      "UnitClass", "Helicopter", "Local"
+;      "UnitClass", "Air", "Local"
+;      "UnitClass", "Missile", "Local"
     }
 
 [effect_underground_tunnels_1]
