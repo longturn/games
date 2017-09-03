@@ -508,7 +508,7 @@ sabotage	= 100
 sound		= "b_harbour"
 sound_alt	= "b_generic"
 helptext	= _("\
-Gives one extra food resource on all Ocean or Deep Ocean tiles (but \
+Gives two extra food resource on all Ocean or Deep Ocean tiles (but \
 not Lakes). The city needs to be coastal to build this improvement.\
 ")
 
