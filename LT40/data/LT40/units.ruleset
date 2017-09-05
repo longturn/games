@@ -965,7 +965,7 @@ Riflemen are World War-era infantry, very good\
 ")
 
 
-[unit_riflemen]
+[unit_drafted_riflemen]
 name          = _("Drafted Riflemen")
 class         = "Land"
 tech_req      = "Conscription"
