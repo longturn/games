@@ -892,6 +892,46 @@ Musketeers are infantry equipped with early\
  city defender.\
 ")
 
+
+
+[unit_drafted_musketeers]
+name          = _("Drafted Musketeers")
+class         = "Land"
+tech_req      = "Gunpowder"
+obsolete_by   = "Riflemen"
+graphic       = "u.musketeers"
+graphic_alt   = "-"
+sound_move    = "m_musketeers"
+sound_move_alt = "m_generic"
+sound_fight   = "f_musketeers"
+sound_fight_alt = "f_generic"
+build_cost    = 20
+pop_cost      = 2
+attack        = 2
+defense       = 3
+hitpoints     = 20
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer"
+roles         = "DefendGood", "FirstBuild", "HutTech", "NoVeteran"
+                "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
+helptext      = _("\
+Musketeers ar drafted infantry equipped with early\
+ firearms and replace Pikemen as the preferred\
+ city defender. The drafted units cost less to produce\
+ but each unit takes 2 population from the city.\
+ The drafted musketeers are inferior to normal musketeers\
+ when attacking enemy units.\
+ ")
+
+
 [unit_riflemen]
 name          = _("Riflemen")
 class         = "Land"
