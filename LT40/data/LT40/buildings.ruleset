@@ -503,12 +503,12 @@ graphic	= "b.harbour"
 graphic_alt	= "-"
 obsolete_by	= "None"
 build_cost	= 40
-upkeep		= 5
+upkeep		= 1
 sabotage	= 100
 sound		= "b_harbour"
 sound_alt	= "b_generic"
 helptext	= _("\
-Gives two extra food resource on all Ocean or Deep Ocean tiles (but \
+Gives one extra food resource on all Ocean or Deep Ocean tiles (but \
 not Lakes). The city needs to be coastal to build this improvement.\
 ")
 
