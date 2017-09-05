@@ -976,6 +976,7 @@ sound_move    = "m_riflemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_riflemen"
 sound_fight_alt = "f_generic"
+build_cost    = 25
 pop_cost      = 2
 attack        = 3
 defense       = 4
