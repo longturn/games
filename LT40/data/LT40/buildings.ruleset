@@ -512,6 +512,30 @@ Gives two extra food resource on all Ocean or Deep Ocean tiles (but \
 not Lakes). The city needs to be coastal to build this improvement.\
 ")
 
+
+[building_harbour_improvements]
+name            = _("Harbor Improvements")
+rule_name       = "Harbour  Improvements"     ; en_GB spelling used originally
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Electricity", "Player"
+      "TerrainClass", "Oceanic", "Adjacent"
+	  "Building", "Harbour", "City"
+    }
+graphic	= "b.harbour"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 60
+upkeep		= 4
+sabotage	= 100
+sound		= "b_harbour"
+sound_alt	= "b_generic"
+helptext	= _("\
+Gives additional extra food resource on all Ocean or Deep Ocean tiles (but \
+not Lakes). The city needs to be coastal to build this improvement.\
+")
+
 [building_hydro_plant]
 name		= _("Hydro Plant")
 genus		= "Improvement"

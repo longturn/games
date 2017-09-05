@@ -2654,6 +2654,22 @@ nreqs   =
     { "type", "name", "range"
       "Terrain", "Lake", "Local"
     }
+	
+	
+[effect_harbour_improvements]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "TerrainClass", "Oceanic", "Local"
+      "Building", "Harbour", "City"
+	  "Building", "Harbour  Improvements", "City"
+      "OutputType", "Food", "Local"
+    }
+nreqs   =
+    { "type", "name", "range"
+      "Terrain", "Lake", "Local"
+    }
 
 [effect_hydro_plant]
 type    = "Output_Bonus"
