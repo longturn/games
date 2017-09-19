@@ -3664,6 +3664,16 @@ reqs    =
       "OutputType", "Trade", "Local"
     }
 
+[effect_trade_Hambach Castle]
+name    = "Output_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+      "Building", "Hambach Castle", "Player"
+      "OutputType", "Trade", "Local"
+    }
+	
+	
 [effect_atlantic_telegraph_company]
 type    = "Have_Embassies"
 value   = 1

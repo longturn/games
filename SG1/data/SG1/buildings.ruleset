@@ -1664,6 +1664,28 @@ The second wonder leading to German unification.\
  This wonder will give the player 10% boost in trade.\
 ")
 
+[building_trade_Hambach Castle]
+name		= _("Hambach Castle")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Steel", "Player"
+	  "Building", "Monument to the Battle of the Nations", "City"
+    }
+graphic	= "b.university"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 100
+upkeep		= 0
+sabotage	= 0
+sound		= "w_marco_polos_embassy"
+sound_alt	= "w_generic"
+helptext	= _("\
+The third wonder leading to German unification.\
+ This wonder will give the player 10% boost in trade.\
+")
+
+
 
 [building_atlantic_telegraph_company]
 name		= _("Atlantic Telegraph Company")
