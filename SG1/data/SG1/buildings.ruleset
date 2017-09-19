@@ -1622,6 +1622,26 @@ far away countries. Increases trade output by 10% in \
 all cities owned by the player.\
 ")
 
+
+[building_trade_hermannsdenkmal]
+name		= _("Hermannsdenkmal")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Steel", "Player"
+    }
+graphic	= "b.marco_polos_embassy"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 100
+upkeep		= 0
+sabotage	= 0
+sound		= "w_marco_polos_embassy"
+sound_alt	= "w_generic"
+helptext	= _("\
+The first wonder leading to German unification.\
+")
+
 [building_atlantic_telegraph_company]
 name		= _("Atlantic Telegraph Company")
 genus		= "SmallWonder"
