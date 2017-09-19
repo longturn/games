@@ -1729,6 +1729,27 @@ The fifth wonder leading to German unification.\
 ")
 
 
+[building_trade_bismarck_tower]
+name		= _("Bismarck Tower")
+genus		= "WorldWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Steel", "Player"
+	  "Building", "Brandenburg Gate", "City"
+    }
+graphic	= "b.university"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 100
+upkeep		= 0
+sabotage	= 0
+sound		= "w_marco_polos_embassy"
+sound_alt	= "w_generic"
+helptext	= _("\
+The final wonder leading to German unification.\
+ This World Wonder will also end the game.\
+")
+
 
 [building_atlantic_telegraph_company]
 name		= _("Atlantic Telegraph Company")
