@@ -20,13 +20,13 @@ set alltemperate=enabled
 
 # general rules
 set nationset=all
-set citymindist=5
+set citymindist=3
 set contactturns=0
 set dispersion=6
 set foggedborders=enabled
 set rapturedelay=3
 set restrictinfra=enabled
-set revolen=2
+set revolen=1
 set spacerace=enabled
 set startunits=ccccwwwwwwx
 set techlevel=0
@@ -41,8 +41,8 @@ set occupychance=0
 # diplomacy, technology
 set diplchance=50
 set diplcost=50
-set diplomacy=TEAM
-set sciencebox=100
+set diplomacy=HUMAN
+set sciencebox=30
 set techlost_donor=0
 set techlost_recv=100
 set techpenalty=20
