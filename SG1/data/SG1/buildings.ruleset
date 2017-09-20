@@ -1664,7 +1664,7 @@ The second wonder leading to German unification.\
  This wonder will give the player 10% boost in trade.\
 ")
 
-[building_trade_Hambach Castle]
+[building_trade_hambach_castle]
 name		= _("Hambach Castle")
 genus		= "SmallWonder"
 reqs	=
@@ -1731,7 +1731,7 @@ The fifth wonder leading to German unification.\
 
 [building_trade_bismarck_tower]
 name		= _("Bismarck Tower")
-genus		= "WorldWonder"
+genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Steel", "Player"
