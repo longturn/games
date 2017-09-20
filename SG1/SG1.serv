@@ -20,7 +20,7 @@ set alltemperate=enabled
 
 # general rules
 set nationset=all
-set citymindist=3
+set citymindist=2
 set contactturns=0
 set dispersion=6
 set foggedborders=enabled
