@@ -1615,7 +1615,7 @@ government_name="Despotism"
 city_style_by_name="Classical"
 is_male=TRUE
 is_alive=TRUE
-ai.control=TRUE
+ai.control=FALSE
 diplstate={"type","max_state","first_contact_turn","turns_left","has_reason_to_cancel","contact_turns_left","embassy","gives_shared_vision"
 5,5,0,0,0,0,FALSE,FALSE
 5,5,0,0,0,0,FALSE,FALSE
@@ -3853,7 +3853,7 @@ government_name="Despotism"
 city_style_by_name="Celtic"
 is_male=TRUE
 is_alive=TRUE
-ai.control=TRUE
+ai.control=FALSE
 diplstate={"type","max_state","first_contact_turn","turns_left","has_reason_to_cancel","contact_turns_left","embassy","gives_shared_vision"
 5,5,0,0,0,0,FALSE,FALSE
 5,5,0,0,0,0,FALSE,FALSE
@@ -4972,7 +4972,7 @@ government_name="Despotism"
 city_style_by_name="Tropical"
 is_male=TRUE
 is_alive=TRUE
-ai.control=TRUE
+ai.control=FALSE
 diplstate={"type","max_state","first_contact_turn","turns_left","has_reason_to_cancel","contact_turns_left","embassy","gives_shared_vision"
 5,5,0,0,0,0,FALSE,FALSE
 5,5,0,0,0,0,FALSE,FALSE
@@ -6091,7 +6091,7 @@ government_name="Despotism"
 city_style_by_name="European"
 is_male=TRUE
 is_alive=TRUE
-ai.control=TRUE
+ai.control=FALSE
 diplstate={"type","max_state","first_contact_turn","turns_left","has_reason_to_cancel","contact_turns_left","embassy","gives_shared_vision"
 5,5,0,0,0,0,FALSE,FALSE
 5,5,0,0,0,0,FALSE,FALSE
@@ -7210,7 +7210,7 @@ government_name="Despotism"
 city_style_by_name="Asian"
 is_male=TRUE
 is_alive=TRUE
-ai.control=TRUE
+ai.control=FALSE
 diplstate={"type","max_state","first_contact_turn","turns_left","has_reason_to_cancel","contact_turns_left","embassy","gives_shared_vision"
 5,5,0,0,0,0,FALSE,FALSE
 5,5,0,0,0,0,FALSE,FALSE
@@ -8329,7 +8329,7 @@ government_name="Despotism"
 city_style_by_name="Classical"
 is_male=TRUE
 is_alive=TRUE
-ai.control=TRUE
+ai.control=FALSE
 diplstate={"type","max_state","first_contact_turn","turns_left","has_reason_to_cancel","contact_turns_left","embassy","gives_shared_vision"
 5,5,0,0,0,0,FALSE,FALSE
 5,5,0,0,0,0,FALSE,FALSE
@@ -9448,7 +9448,7 @@ government_name="Despotism"
 city_style_by_name="Celtic"
 is_male=TRUE
 is_alive=TRUE
-ai.control=TRUE
+ai.control=FALSE
 diplstate={"type","max_state","first_contact_turn","turns_left","has_reason_to_cancel","contact_turns_left","embassy","gives_shared_vision"
 5,5,0,0,0,0,FALSE,FALSE
 5,5,0,0,0,0,FALSE,FALSE
@@ -10567,7 +10567,7 @@ government_name="Despotism"
 city_style_by_name="Classical"
 is_male=FALSE
 is_alive=TRUE
-ai.control=TRUE
+ai.control=FALSE
 diplstate={"type","max_state","first_contact_turn","turns_left","has_reason_to_cancel","contact_turns_left","embassy","gives_shared_vision"
 5,5,0,0,0,0,FALSE,FALSE
 5,5,0,0,0,0,FALSE,FALSE
@@ -11686,7 +11686,7 @@ government_name="Despotism"
 city_style_by_name="Celtic"
 is_male=TRUE
 is_alive=TRUE
-ai.control=TRUE
+ai.control=FALSE
 diplstate={"type","max_state","first_contact_turn","turns_left","has_reason_to_cancel","contact_turns_left","embassy","gives_shared_vision"
 5,5,0,0,0,0,FALSE,FALSE
 5,5,0,0,0,0,FALSE,FALSE
@@ -12805,7 +12805,7 @@ government_name="Despotism"
 city_style_by_name="Tropical"
 is_male=TRUE
 is_alive=TRUE
-ai.control=TRUE
+ai.control=FALSE
 diplstate={"type","max_state","first_contact_turn","turns_left","has_reason_to_cancel","contact_turns_left","embassy","gives_shared_vision"
 5,5,0,0,0,0,FALSE,FALSE
 5,5,0,0,0,0,FALSE,FALSE
@@ -13924,7 +13924,7 @@ government_name="Despotism"
 city_style_by_name="European"
 is_male=TRUE
 is_alive=TRUE
-ai.control=TRUE
+ai.control=FALSE
 diplstate={"type","max_state","first_contact_turn","turns_left","has_reason_to_cancel","contact_turns_left","embassy","gives_shared_vision"
 5,5,0,0,0,0,FALSE,FALSE
 5,5,0,0,0,0,FALSE,FALSE
@@ -15043,7 +15043,7 @@ government_name="Despotism"
 city_style_by_name="European"
 is_male=TRUE
 is_alive=TRUE
-ai.control=TRUE
+ai.control=FALSE
 diplstate={"type","max_state","first_contact_turn","turns_left","has_reason_to_cancel","contact_turns_left","embassy","gives_shared_vision"
 5,5,0,0,0,0,FALSE,FALSE
 5,5,0,0,0,0,FALSE,FALSE
@@ -16162,7 +16162,7 @@ government_name="Despotism"
 city_style_by_name="Asian"
 is_male=TRUE
 is_alive=TRUE
-ai.control=TRUE
+ai.control=FALSE
 diplstate={"type","max_state","first_contact_turn","turns_left","has_reason_to_cancel","contact_turns_left","embassy","gives_shared_vision"
 5,5,0,0,0,0,FALSE,FALSE
 5,5,0,0,0,0,FALSE,FALSE
@@ -17281,7 +17281,7 @@ government_name="Despotism"
 city_style_by_name="Babylonian"
 is_male=TRUE
 is_alive=TRUE
-ai.control=TRUE
+ai.control=FALSE
 diplstate={"type","max_state","first_contact_turn","turns_left","has_reason_to_cancel","contact_turns_left","embassy","gives_shared_vision"
 5,5,0,0,0,0,FALSE,FALSE
 5,5,0,0,0,0,FALSE,FALSE
@@ -18400,7 +18400,7 @@ government_name="Despotism"
 city_style_by_name="Celtic"
 is_male=TRUE
 is_alive=TRUE
-ai.control=TRUE
+ai.control=FALSE
 diplstate={"type","max_state","first_contact_turn","turns_left","has_reason_to_cancel","contact_turns_left","embassy","gives_shared_vision"
 5,5,0,0,0,0,FALSE,FALSE
 5,5,0,0,0,0,FALSE,FALSE
