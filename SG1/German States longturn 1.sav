@@ -1603,7 +1603,7 @@ shuffled_player_15=31
 [player0]
 ai_type="classic"
 name="kevin551"
-username="Unassigned"
+username="kevin551"
 color.r=255
 color.g=0
 color.b=0
@@ -2722,7 +2722,7 @@ dc_total=0
 [player1]
 ai_type="classic"
 name="Sketlux"
-username="Unassigned"
+username="Sketlux"
 color.r=255
 color.g=255
 color.b=0
@@ -3841,7 +3841,7 @@ dc_total=0
 [player3]
 ai_type="classic"
 name="chill"
-username="Unassigned"
+username="chill"
 color.r=138
 color.g=43
 color.b=226
@@ -4960,7 +4960,7 @@ dc_total=0
 [player4]
 ai_type="classic"
 name="ferg"
-username="Unassigned"
+username="ferg"
 color.r=255
 color.g=165
 color.b=0
@@ -6079,7 +6079,7 @@ dc_total=0
 [player5]
 ai_type="classic"
 name="Lord_P"
-username="Unassigned"
+username="Lord_P"
 color.r=255
 color.g=0
 color.b=255
@@ -7198,7 +7198,7 @@ dc_total=0
 [player6]
 ai_type="classic"
 name="Corbeau"
-username="Unassigned"
+username="Corbeau"
 color.r=173
 color.g=216
 color.b=230
@@ -8317,7 +8317,7 @@ dc_total=0
 [player7]
 ai_type="classic"
 name="Tomak"
-username="Unassigned"
+username="Tomak"
 color.r=0
 color.g=255
 color.b=127
@@ -9436,7 +9436,7 @@ dc_total=0
 [player8]
 ai_type="classic"
 name="Mooreinstore"
-username="Unassigned"
+username="Mooreinstore"
 color.r=250
 color.g=128
 color.b=114
@@ -10555,7 +10555,7 @@ dc_total=0
 [player9]
 ai_type="classic"
 name="Joschtl"
-username="Unassigned"
+username="Joschtl"
 color.r=124
 color.g=252
 color.b=0
@@ -11674,7 +11674,7 @@ dc_total=0
 [player12]
 ai_type="classic"
 name="LosPepes"
-username="Unassigned"
+username="LosPepes"
 color.r=211
 color.g=211
 color.b=211
@@ -12793,7 +12793,7 @@ dc_total=0
 [player19]
 ai_type="classic"
 name="alekito"
-username="Unassigned"
+username="alekito"
 color.r=192
 color.g=255
 color.b=128
@@ -13912,7 +13912,7 @@ dc_total=0
 [player23]
 ai_type="classic"
 name="Caedo"
-username="Unassigned"
+username="Caedo"
 color.r=240
 color.g=145
 color.b=169
@@ -15031,7 +15031,7 @@ dc_total=0
 [player24]
 ai_type="classic"
 name="ravenclaw"
-username="Unassigned"
+username="ravenclaw"
 color.r=255
 color.g=219
 color.b=88
@@ -16150,7 +16150,7 @@ dc_total=0
 [player25]
 ai_type="classic"
 name="Sokrat"
-username="Unassigned"
+username="Sokrat"
 color.r=153
 color.g=17
 color.b=153
@@ -17269,7 +17269,7 @@ dc_total=0
 [player29]
 ai_type="classic"
 name="Alexandra"
-username="Unassigned"
+username="Alexandra"
 color.r=195
 color.g=33
 color.b=72
@@ -18388,7 +18388,7 @@ dc_total=0
 [player31]
 ai_type="classic"
 name="Zelrond"
-username="Unassigned"
+username="Zelrond"
 color.r=255
 color.g=250
 color.b=205
