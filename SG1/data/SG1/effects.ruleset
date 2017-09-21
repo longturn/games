@@ -10,7 +10,7 @@
 ; than minor changes.
 
 [datafile]
-description="LT38 (modified Civ2Civ3) effects data for Freeciv"
+description="SG1 (modified Civ2Civ3) effects data for Freeciv"
 options="+Freeciv-2.5-ruleset"
 
 ; /* <-- avoid gettext warnings
