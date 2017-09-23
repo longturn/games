@@ -3664,7 +3664,7 @@ reqs    =
       "OutputType", "Trade", "Local"
     }
 
-[effect_trade_Hambach Castle]
+[effect_trade_hambach_castle]
 name    = "Output_Bonus"
 value   = 10
 reqs    =
