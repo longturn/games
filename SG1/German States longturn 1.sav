@@ -112,7 +112,7 @@ set={"name","value","gamestart"
 "fixedlength",FALSE,FALSE
 "foggedborders",FALSE,FALSE
 "fogofwar",TRUE,TRUE
-"foodbox",10,10
+"foodbox",100,100
 "freecost",0,0
 "fulltradesize",1,1
 "gameseed",1455101934,1455101934
