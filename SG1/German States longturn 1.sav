@@ -185,7 +185,7 @@ set={"name","value","gamestart"
 "tinyisles",FALSE,FALSE
 "topology","",""
 "trademindist",9,9
-"trading_city",TRUE,TRUE
+"trading_city",FALSE,FALSE
 "trading_gold",TRUE,TRUE
 "trading_tech",TRUE,TRUE
 "turnblock",TRUE,TRUE
