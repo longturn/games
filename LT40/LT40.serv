@@ -65,6 +65,7 @@ set saveturns=1
 set scorelog=enabled
 set timeout=82800
 set unitwaittime=36000
+set fixedlength 1
 metamessage "LT40 | More info: http://longturn.org/game/LT40/"
 metapatches longturn
 
