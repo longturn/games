@@ -294,12 +294,12 @@ value   = 0
 ; Base vision range - radius of vision is sqrt(5) = 2.24
 [effect_city_vision]
 type    = "City_Vision_Radius_Sq"
-value   = 5
+value   = 18
 
 ; 5 + 5 = 10
 [effect_city_vision_1]
 type    = "City_Vision_Radius_Sq"
-value   = 5
+value   = 10
 reqs    =
     { "type", "name", "range"
       "Tech", "Electricity", "Player"
