@@ -2070,41 +2070,6 @@ The Caravel is a sailing ship that can enter\
 ")
 
 
-[unit_flagship_caravel]
-name          = _("Flagship Caravel")
-class         = "Sea"
-tech_req      = "Magnetism"
-obsolete_by   = "Galleon"
-graphic       = "u.caravel"
-graphic_alt   = "-"
-sound_move    = "m_caravel"
-sound_move_alt = "m_generic"
-sound_fight   = "f_caravel"
-sound_fight_alt = "f_generic"
-build_cost    = 65
-pop_cost      = 0
-attack        = 1
-defense       = 3
-hitpoints     = 10
-firepower     = 1
-move_rate     = 10
-vision_radius_sq = 28
-transport_cap = 3
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 1
-cargo         = "Land", "Small Land", "Merchant", "Non Military"
-flags         = "BadCityDefender", "Only_Native_Attack", "Unique", "Unbribable"
-roles         = "Ferryboat", "BarbarianBoat"
-helptext      = _("\
-The Flagship Caravel is a sailing ship that can enter\
- any ocean tile. As a flagship it's better than standard\
- caravels. You can have only one unit of this type at a time\
- and it can't be bribed.\
- ")
-
 
 [unit_early_caravel]
 name          = _("Early Caravel")
@@ -2275,39 +2240,6 @@ The Ironclad is an armored ship,\
 ")
 
 
-[unit_flagship_ironclad]
-name          = _("Flagship Ironclad")
-class         = "Sea"
-tech_req      = "Steam Engine"
-obsolete_by   = "Destroyer"
-graphic       = "u.ironclad"
-graphic_alt   = "-"
-sound_move    = "m_ironclad"
-sound_move_alt = "m_generic"
-sound_fight   = "f_ironclad"
-sound_fight_alt = "f_generic"
-build_cost    = 90
-pop_cost      = 0
-attack        = 6
-defense       = 6
-hitpoints     = 20
-firepower     = 1
-move_rate     = 11
-vision_radius_sq = 26
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 1
-flags         = "BadCityDefender", "Unique", "Unbribable"
-roles         = "Hunter"
-helptext      = _("\
-The Ironclad is an armored ship,\
- more sturdy than the Frigate.\
- You can have only one unit of this type at a time\
- and it can't be bribed.\
-")
 
 [unit_destroyer]
 name          = _("Destroyer")
@@ -2348,48 +2280,6 @@ TIP:  A very fast unit, which is very useful for hunting down enemy\
  Transports and Submarines.\
 ")
 
-
-
-[unit_flagship_destroyer]
-name          = _("Flagship Destroyer")
-class         = "Sea"
-tech_req      = "Engineering"
-obsolete_by   = "None"
-graphic       = "u.destroyer"
-graphic_alt   = "-"
-sound_move    = "m_destroyer"
-sound_move_alt = "m_generic"
-sound_fight   = "f_destroyer"
-sound_fight_alt = "f_generic"
-build_cost    = 130
-pop_cost      = 0
-attack        = 6
-defense       = 6
-hitpoints     = 30
-firepower     = 1
-move_rate     = 20
-vision_radius_sq = 72
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 1
-bonuses       =
-   { "flag", "type", "value"
-     "Submarine", "DefenseMultiplier", 1
-   }
-flags         = "BadCityDefender", "Unique", "Unbribable"
-roles         = "Hunter"
-helptext      = _("\
-An improved Ironclad, with better move rate and vision.\
- Anti-submarine weapons double its defense against Submarines.\
- You can have only one unit of this type at a time\
- and it can't be bribed.\
- "), _("\
-TIP:  A very fast unit, which is very useful for hunting down enemy\
- Transports and Submarines.\
-")
 
 
 
@@ -2466,39 +2356,6 @@ The Cruiser is a strong offensive boat unit.\
 
 
 
-[unit_flagship_cruiser]
-name          = _("Flagship Cruiser")
-class         = "Sea"
-tech_req      = "Steel"
-obsolete_by   = "AEGIS Cruiser"
-graphic       = "u.cruiser"
-graphic_alt   = "-"
-sound_move    = "m_cruiser"
-sound_move_alt = "m_generic"
-sound_fight   = "f_cruiser"
-sound_fight_alt = "f_generic"
-build_cost    = 140
-pop_cost      = 0
-attack        = 6
-defense       = 12
-hitpoints     = 30
-firepower     = 1
-move_rate     = 15
-vision_radius_sq = 72
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 1
-flags         = "BadCityDefender", "Unique", "Unbribable"
-roles         = "DefendOk"
-helptext      = _("\
-The Cruiser is a strong offensive boat unit.\
- You can have only one unit of this type at a time\
- and it can't be bribed.\
-")
-
 
 [unit_aegis_cruiser]
 name          = _("AEGIS Cruiser")
@@ -2569,40 +2426,6 @@ The Battleship is the supreme naval unit with\
  excellent offensive and defensive values.\
 ")
 
-
-[unit_flagship_battleship]
-name          = _("Flagship Battleship")
-class         = "Sea"
-tech_req      = "Mass Production"
-obsolete_by   = "None"
-graphic       = "u.battleship"
-graphic_alt   = "-"
-sound_move    = "m_battleship"
-sound_move_alt = "m_generic"
-sound_fight   = "f_battleship"
-sound_fight_alt = "f_generic"
-build_cost    = 450
-pop_cost      = 0
-attack        = 27
-defense       = 27
-hitpoints     = 30
-firepower     = 2
-move_rate     = 15
-vision_radius_sq = 90
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 1
-flags         = "BadCityDefender", "Unique", "Unbribable"
-roles         = "DefendOk"
-helptext      = _("\
-The Battleship is the supreme naval unit with\
- excellent offensive and defensive values.\
- You can have only one unit of this type at a time\
- and it can't be bribed.\
-")
 
 
 
@@ -3386,45 +3209,6 @@ roles         = "DefendOk"
 helptext      = _("\
 A battleship powered by fusion power \
 that attacks with triple firepower.\
-")
-
-
-
-[unit_flagship_fusion_battleship]
-name          = _("Flagship Fusion Battleship")
-class         = "Sea"
-tech_req      = "Fusion Power", "Mass Production"
-obsolete_by   = "None"
-graphic       = "u.fusion_battleship"
-graphic_alt   = "u.battleship"
-sound_move    = "m_battleship"
-sound_move_alt = "m_generic"
-sound_fight   = "f_battleship"
-sound_fight_alt = "f_generic"
-build_cost    = 600
-pop_cost      = 0
-attack        = 36
-defense       = 24
-hitpoints     = 30
-firepower     = 3
-move_rate     = 16
-vision_radius_sq = 90
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 1
-flags         = "BadCityDefender", "Unique", "Unbribable"
-roles         = "DefendOk"
-helptext      = _("\
-A battleship powered by fusion power \
-that attacks with triple firepower.\
- The Flagship Fusion Battleship is the ultimate\
- naval unit. Virtually nothing can survive the\
- attack of this monster.\
- You can have only one unit of this type at a time\
- and it can't be bribed.\
 ")
 
 
