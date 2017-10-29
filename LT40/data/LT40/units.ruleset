@@ -920,14 +920,16 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer"
-roles         = "DefendGood", "FirstBuild", "HutTech", "NoVeteran"
+flags         = "Capturer", "NoVeteran"
+roles         = "DefendGood", "FirstBuild", "HutTech", 
                 "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
 helptext      = _("\
 Musketeers ar drafted infantry equipped with early\
  firearms and replace Pikemen as the preferred\
  city defender. The drafted units cost less to produce\
  but each unit takes 2 population from the city.\
+ These units are the last resort and should not be
+ used if not absolutely necessary.\
  The drafted musketeers are inferior to normal musketeers\
  when attacking enemy units.\
  ")
@@ -970,7 +972,7 @@ Riflemen are World War-era infantry, very good\
 name          = _("Drafted Riflemen")
 class         = "Land"
 tech_req      = "Conscription"
-obsolete_by   = "Marines"
+obsolete_by   = "None"
 graphic       = "u.riflemen"
 graphic_alt   = "-"
 sound_move    = "m_riflemen"
@@ -991,12 +993,16 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer"
-roles         = "DefendGood", "FirstBuild", "NoVeteran"
+flags         = "Capturer", "NoVeteran"
+roles         = "DefendGood", "FirstBuild"
 helptext      = _("\
 Drafted Riflemen are World War-era infantry, very good\
- at defending your cities but inferior in attacking.\
- compared to normal riflemen.\
+ at defending your cities but inferior in attacking\
+ compared to normal riflemen. Each unit will cost\
+ 2 population. Because of the hefty cost on city\
+ population the drafted riflemen are only suitable\
+ to be used as the last resort if your empire\
+ is about to fall.\
 ")
 
 
