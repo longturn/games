@@ -1418,7 +1418,7 @@ reqs    =
 
 [effect_empire_size_base_tribal]
 type    = "Empire_Size_Base"
-value   = 14
+value   = 24
 reqs    =
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
@@ -1426,7 +1426,7 @@ reqs    =
 
 [effect_empire_size_base_despotism]
 type    = "Empire_Size_Base"
-value   = 25
+value   = 22
 reqs    =
     { "type", "name", "range"
       "Gov", "Despotism", "Player"
@@ -1434,7 +1434,7 @@ reqs    =
 
 [effect_empire_size_base_monarchy]
 type    = "Empire_Size_Base"
-value   = 35
+value   = 28
 reqs    =
     { "type", "name", "range"
       "Gov", "Monarchy", "Player"
@@ -1442,7 +1442,7 @@ reqs    =
 
 [effect_empire_size_base_communism]
 type    = "Empire_Size_Base"
-value   = 30
+value   = 25
 reqs    =
     { "type", "name", "range"
       "Gov", "Communism", "Player"
@@ -1450,7 +1450,7 @@ reqs    =
 
 [effect_empire_size_base_fundamentalism]
 type    = "Empire_Size_Base"
-value   = 30
+value   = 26
 reqs    =
     { "type", "name", "range"
       "Gov", "Fundamentalism", "Player"
@@ -1458,7 +1458,7 @@ reqs    =
 
 [effect_empire_size_base_federation]
 type    = "Empire_Size_Base"
-value   = 34
+value   = 29
 reqs    =
     { "type", "name", "range"
       "Gov", "Federation", "Player"
@@ -1466,7 +1466,7 @@ reqs    =
 
 [effect_empire_size_base_republic]
 type    = "Empire_Size_Base"
-value   = 32
+value   = 26
 reqs    =
     { "type", "name", "range"
       "Gov", "Republic", "Player"
@@ -1474,7 +1474,7 @@ reqs    =
 
 [effect_empire_size_base_democracy]
 type    = "Empire_Size_Base"
-value   = 30
+value   = 25
 reqs    =
     { "type", "name", "range"
       "Gov", "Democracy", "Player"
@@ -1482,7 +1482,7 @@ reqs    =
 	
 [effect_empire_size_base_nationalism]
 type    = "Empire_Size_Base"
-value   = 28
+value   = 23
 reqs    =
     { "type", "name", "range"
       "Gov", "Nationalism", "Player"
