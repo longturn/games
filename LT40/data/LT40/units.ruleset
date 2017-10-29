@@ -446,7 +446,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "AddToCity", "Cities"
+flags         = "Settlers", "NonMil", "Cities"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
