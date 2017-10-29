@@ -2582,6 +2582,43 @@ TIP:  A handful of these can successfully keep the waters around\
  your treasured homeland free of enemy ships.\
 ")
 
+
+[unit_missile]
+name          = _("Missile")
+class         = "Missile"
+tech_req      = "Flight"
+obsolete_by   = "None"
+graphic       = "u.cruise_missile"
+graphic_alt   = "-"
+sound_move    = "m_cruise_missile"
+sound_move_alt = "m_generic"
+sound_fight   = "f_cruise_missile"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 0
+attack        = 30
+defense       = 0
+hitpoints     = 1
+firepower     = 3
+move_rate     = 8
+vision_radius_sq = 5
+transport_cap = 0
+fuel          = 1
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+flags         = "OneAttack", "AirAttacker", "CityBuster"
+roles         = ""
+helptext      = _("\
+The Missile is the first missile unit\
+ that can strike into enemy territory.\
+ The missiles can be launched from submarines.\
+"), _("\
+TIP:  A handful of these can successfully keep the waters around\
+ your treasured homeland free of enemy ships.\
+")
+
 [unit_nuclear]
 name          = _("Nuclear")
 class         = "Missile"
