@@ -968,6 +968,45 @@ Riflemen are World War-era infantry, very good\
 ")
 
 
+[unit_anti_aircraft_riflemen]
+name          = _("Anti-Aircraft Riflemen")
+class         = "Land"
+tech_req      = "Tactics"
+obsolete_by   = "None"
+graphic       = "u.riflemen"
+graphic_alt   = "-"
+sound_move    = "m_riflemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_riflemen"
+sound_fight_alt = "f_generic"
+build_cost    = 90
+pop_cost      = 0
+attack        = 5
+defense       = 4
+hitpoints     = 20
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 27
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+bonuses       =
+   { "flag", "type", "value"
+     "AirAttacker", "DefenseMultiplier", 2
+   }
+flags         = "Capturer"
+roles         = "DefendGood", "FirstBuild"
+helptext      = _("\
+Anti-Aircraft Riflemen are the first unit equipped\
+ with defenses against air units. They are very good\
+ at defending your cities against air attacks.\
+ However the units are very slow to move.\
+")
+
+
 [unit_drafted_riflemen]
 name          = _("Drafted Riflemen")
 class         = "Land"
