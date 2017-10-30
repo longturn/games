@@ -924,10 +924,10 @@ flags         = "Capturer", "NoVeteran"
 roles         = "DefendGood", "FirstBuild", "HutTech", 
                 "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
 helptext      = _("\
-Musketeers ar drafted infantry equipped with early\
+Musketeers are drafted infantry equipped with early\
  firearms and replace Pikemen as the preferred\
  city defender. The drafted units cost less to produce\
- but each unit takes 2 population from the city.\
+ but there is a hefty cost of 2 population from the city.\
  These units are the last resort and should not be
  used if not absolutely necessary.\
  The drafted musketeers are inferior to normal musketeers\
@@ -1041,7 +1041,7 @@ Drafted Riflemen are World War-era infantry, very good\
  2 population. Because of the hefty cost on city\
  population the drafted riflemen are only suitable\
  to be used as the last resort if your empire\
- is about to fall.\
+ is facing a real threat.\
 ")
 
 
@@ -1111,10 +1111,11 @@ roles         = "DefendGood", "Partisan", "BarbarianTech"
 helptext      = _("\
 Partisans are guerilla fighters who are experts\
  at using the terrain to their advantage. Partisans\
- have no home city and can't be killed by conquering\
- cities. Since partisans are trained citizens\
- they can return to that and and once again become\
- part of the normal population.\
+ have no home city and units outside cities won't be\
+ killed if the city building them is lost. Since partisans\
+ are citizens trained to fight the oppressor they can\
+ once again become part of the normal population when\
+ the war is over.\
 ")
 
 [unit_fanatics]
