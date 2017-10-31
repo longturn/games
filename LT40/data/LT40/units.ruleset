@@ -134,6 +134,14 @@ hp_loss_pct   = 0
 hut_behavior  = "Frighten"
 flags         = "Missile", "Unreachable", "DoesntOccupyTile"
 
+[unitclass_nuclear_missile]
+; /* TRANS: Unit class: used adjectivally */
+name          = _("?unitclass:Nuclear Missile")
+min_speed     = 0
+hp_loss_pct   = 0
+hut_behavior  = "Frighten"
+flags         = "Missile", "Unreachable", "DoesntOccupyTile"
+
 [unitclass_land]
 ; /* TRANS: Unit class: used adjectivally */
 name          = _("?unitclass:Land")
@@ -2459,12 +2467,13 @@ hitpoints     = 30
 firepower     = 2
 move_rate     = 12
 vision_radius_sq = 72
-transport_cap = 0
+transport_cap = 1
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+cargo         = "Nuclear Missile", "Missile"
 flags         = "BadCityDefender"
 roles         = "DefendOk"
 helptext      = _("\
@@ -2534,7 +2543,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Air", "Missile", "Helicopter"
+cargo         = "Air", "Nuclear Missile", "Missile", "Helicopter"
 flags         = "BadCityDefender"
 roles         = "DefendGood"
 helptext      = _("\
@@ -2661,7 +2670,7 @@ TIP:  A handful of these can successfully keep the waters around\
 
 [unit_nuclear]
 name          = _("Nuclear")
-class         = "Missile"
+class         = "Nuclear Missile"
 tech_req      = "Nuclear Fission"
 obsolete_by   = "None"
 graphic       = "u.nuclear"
@@ -3281,12 +3290,13 @@ hitpoints     = 30
 firepower     = 3
 move_rate     = 16
 vision_radius_sq = 72
-transport_cap = 0
+transport_cap = 1
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+cargo         = "Nuclear Missile", "Missile"
 flags         = "BadCityDefender"
 roles         = "DefendOk"
 helptext      = _("\
