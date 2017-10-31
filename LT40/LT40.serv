@@ -1,5 +1,9 @@
 rulesetdir LT40
 
+# [effect_free_techs] needs to be updated from effects.ruleset to correspond the number of the players in a game
+# the value defines how many players need to invent a tech before it's given free to everyone. currently set to 20
+
+
 # map
 set alltemperate=disabled
 set barbarians=disabled
