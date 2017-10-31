@@ -362,8 +362,29 @@ Tunnel warfare is a general name for war being conducted in tunnels and\
  the city against land, air and sea units (that is a two-thirds increase\
  for small cities, or a one-half increase for cities larger than size 8)\
  Underground Tunnels also prevent the loss of population which occurs\
- when a defending unit is defeated by a land unit. The tunnels are not\
- visible to outside the city.\
+ when a defending unit is defeated by a land unit.\
+")
+
+[building_nuclear_defense_system]
+name		= _("Nuclear Defense System")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Flight", "Player"
+    }
+graphic	= "b.university"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 240
+upkeep		= 1
+sabotage	= 50
+sound		= "b_university"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+The nuclear defense system is the first generation anti-nuclear missile defense system.\
+ As the first defensive system against missile threats it's only able to protect the city\
+ in most cases. With 95% success rate it's able to stop most of the nuclear attacks.\
 ")
 
 [building_coastal_defense]
