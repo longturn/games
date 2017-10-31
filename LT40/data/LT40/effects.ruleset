@@ -3848,14 +3848,6 @@ reqs    =
       "Building", "King Richard's Crusade", "Player"
     }
 
-[effect_king_richards_crusade_1]
-type    = "Unit_Upkeep_Free_Per_City"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Building", "King Richard's Crusade", "Player"
-      "OutputType", "Gold", "Local"
-    }
 
 [effect_leonardos_workshop]
 type    = "Upgrade_Unit"
