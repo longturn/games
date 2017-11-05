@@ -203,7 +203,7 @@ flags         = "DamageSlows", "AttackNonNative", "AttFromNonNative", "ZOC"
 name          = _("?unitclass:Big Sea")
 min_speed     = 2
 hp_loss_pct   = 0
-flags         = "DamageSlows", "AttackNonNative", "AttFromNonNative", "ZOC"
+flags         = "AttackNonNative", "AttFromNonNative", "ZOC"
 
 [unitclass_trireme]
 ; /* TRANS: Unit class: used adjectivally */
