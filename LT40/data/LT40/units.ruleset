@@ -198,6 +198,13 @@ min_speed     = 2
 hp_loss_pct   = 0
 flags         = "DamageSlows", "AttackNonNative", "AttFromNonNative", "ZOC"
 
+[unitclass_big_sea]
+; /* TRANS: Unit class: used adjectivally */
+name          = _("?unitclass:Big Sea")
+min_speed     = 2
+hp_loss_pct   = 0
+flags         = "DamageSlows", "AttackNonNative", "AttFromNonNative", "ZOC"
+
 [unitclass_trireme]
 ; /* TRANS: Unit class: used adjectivally */
 name          = _("?unitclass:Trireme")
@@ -2450,7 +2457,7 @@ The AEGIS Cruiser is equipped with an advanced\
 
 [unit_battleship]
 name          = _("Battleship")
-class         = "Sea"
+class         = "Big Sea"
 tech_req      = "Mass Production"
 obsolete_by   = "None"
 graphic       = "u.battleship"
@@ -2522,7 +2529,7 @@ Traveling under the surface of the ocean, Submarines have\
 
 [unit_carrier]
 name          = _("Carrier")
-class         = "Sea"
+class         = "Big Sea"
 tech_req      = "Advanced Flight"
 obsolete_by   = "None"
 graphic       = "u.carrier"
@@ -2611,7 +2618,7 @@ sound_fight   = "f_cruise_missile"
 sound_fight_alt = "f_generic"
 build_cost    = 40
 pop_cost      = 0
-attack        = 20
+attack        = 30
 defense       = 0
 hitpoints     = 5
 firepower     = 3
@@ -2623,6 +2630,12 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
+bonuses       =
+   { "flag", "type", "value"
+     "Battleship", "DefenseDivider", 1
+	 "Fusion Battleship", "DefenseDivider", 1
+	 "Carrier", "DefenseDivider", 1
+   }
 flags         = "OneAttack", "AirAttacker", "CityBuster"
 roles         = ""
 helptext      = _("\
@@ -3275,7 +3288,7 @@ bombard_rate = 4
 
 [unit_fusion_battleship]
 name          = _("Fusion Battleship")
-class         = "Sea"
+class         = "Big Sea"
 tech_req      = "Fusion Power", "Mass Production"
 obsolete_by   = "None"
 graphic       = "u.fusion_battleship"
