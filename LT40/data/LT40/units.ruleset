@@ -1603,7 +1603,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = ""
+flags         = "AttackNonNative" 
 roles         = "DefendOk", "AttackFast", "Hunter"
 helptext      = _("\
 Armors are motorized war wagons that are faster, stronger, and can take \
@@ -1640,7 +1640,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = ""
+flags         = "AttackNonNative" 
 roles         = "DefendOk", "AttackFast", "Hunter"
 helptext      = _("\
 Armors are motorized war wagons that are faster, stronger, and can take \
@@ -3353,7 +3353,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = ""
+flags         = "AttackNonNative" 
 roles         = "DefendOk", "AttackFast", "Hunter"
 helptext      = _("\
 A fusion powered Armor attacking \
