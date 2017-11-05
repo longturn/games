@@ -2459,10 +2459,10 @@ sound_move    = "m_battleship"
 sound_move_alt = "m_generic"
 sound_fight   = "f_battleship"
 sound_fight_alt = "f_generic"
-build_cost    = 260
+build_cost    = 280
 pop_cost      = 0
-attack        = 18
-defense       = 18
+attack        = 20
+defense       = 20
 hitpoints     = 30
 firepower     = 2
 move_rate     = 12
@@ -2474,11 +2474,13 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Nuclear Missile", "Missile"
-flags         = "BadCityDefender"
+flags         = "BadCityDefender", "NoVeteran"
 roles         = "DefendOk"
 helptext      = _("\
 The Battleship is the supreme naval unit with\
- excellent offensive and defensive values.\
+ excellent offensive and defensive values. The Battleship\
+ cannot become veteran as it's already the supreme naval ship\
+ or the era.\
 ")
 
 
@@ -3284,24 +3286,28 @@ sound_fight   = "f_battleship"
 sound_fight_alt = "f_generic"
 build_cost    = 300
 pop_cost      = 0
-attack        = 24
-defense       = 12
+attack        = 22
+defense       = 14
 hitpoints     = 30
 firepower     = 3
 move_rate     = 16
 vision_radius_sq = 72
-transport_cap = 1
+transport_cap = 2
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Nuclear Missile", "Missile"
-flags         = "BadCityDefender"
+flags         = "BadCityDefender", "NoVeteran"
 roles         = "DefendOk"
 helptext      = _("\
 A battleship powered by fusion power \
 that attacks with triple firepower.\
+ The fusion battleship is the ultimate\
+ ship but also more vulnerable because of the\
+ fusion engine.\
+
 ")
 
 
