@@ -44,12 +44,12 @@ set occupychance=0
 
 # diplomacy, technology
 set diplchance=50
-set diplcost=50
+set diplcost=10
 set diplomacy=HUMAN
 set sciencebox=120
-set techlost_donor=10
-set techlost_recv=50
-set techpenalty=20
+set techlost_donor=0
+set techlost_recv=0
+set techpenalty=10
 set trademindist=999
 set trading_city=enabled
 set team_pooled_research=disabled
