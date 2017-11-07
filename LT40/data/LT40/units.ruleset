@@ -1603,7 +1603,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "AttackNonNative" 
+flags         = ""
 roles         = "DefendOk", "AttackFast", "Hunter"
 helptext      = _("\
 Armors are motorized war wagons that are faster, stronger, and can take \
@@ -1640,7 +1640,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "AttackNonNative" 
+flags         = ""
 roles         = "DefendOk", "AttackFast", "Hunter"
 helptext      = _("\
 Armors are motorized war wagons that are faster, stronger, and can take \
@@ -2634,8 +2634,8 @@ uk_food       = 0
 uk_gold       = 1
 bonuses       =
    { "flag", "type", "value"
-     "Battleship", "DefenseDivider", 1
-	 "Fusion Battleship", "DefenseDivider", 1
+     "Battleship", "DefenseDivider", 1,
+	 "Fusion Battleship", "DefenseDivider", 1,
 	 "Carrier", "DefenseDivider", 1
    }
 flags         = "OneAttack", "AirAttacker", "CityBuster"
@@ -3396,7 +3396,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "AttackNonNative" 
+flags         = ""
 roles         = "DefendOk", "AttackFast", "Hunter"
 helptext      = _("\
 A fusion powered Armor attacking \
