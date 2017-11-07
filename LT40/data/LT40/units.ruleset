@@ -2685,6 +2685,49 @@ TIP:  A handful of these can successfully keep the waters around\
  your treasured homeland free of enemy ships.\
 ")
 
+
+
+[unit_anti_aircraft_missile]
+name          = _("Anti-Aircraft Missile")
+class         = "Missile"
+tech_req      = "Radio"
+obsolete_by   = "None"
+graphic       = "u.cruise_missile"
+graphic_alt   = "-"
+sound_move    = "m_cruise_missile"
+sound_move_alt = "m_generic"
+sound_fight   = "f_cruise_missile"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 0
+attack        = 20
+defense       = 0
+hitpoints     = 1
+firepower     = 2
+move_rate     = 9
+vision_radius_sq = 1
+transport_cap = 0
+fuel          = 1
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+targets       = "Air", "Missile", "Helicopter", "Nuclear Missile"
+flags         = "OneAttack", "AirAttacker"
+roles         = ""
+helptext      = _("\
+The Anti-Aircraft Missile is a missile unit\
+ that can attack against enemy aircrafts and other air units.\
+ The anti-aircraft missiles can be launched from submarines\
+ and also from bombers. It's also the only unit able to defeat\
+ high flying nuclear missiles out in the open.\
+ 
+"), _("\
+TIP:  A handful of these can help you to defeat enemy airplanes\
+ attacking your cities.\
+")
+
+
 [unit_nuclear]
 name          = _("Nuclear")
 class         = "Nuclear Missile"
