@@ -1819,7 +1819,7 @@ bonuses       =
    { "flag", "type", "value"
      "Helicopter", "DefenseDivider", 1
    }
-flags         = "AirAttacker"
+flags         = "AirAttacker", "Unbribable"
 roles         = "DefendOk"
 helptext      = _("\
 Fighters are your first airborne units. They can\
@@ -1860,7 +1860,7 @@ bonuses       =
    { "flag", "type", "value"
      "Helicopter", "DefenseDivider", 1
    }
-flags         = "AirAttacker"
+flags         = "AirAttacker", "Unbribable"
 roles         = "DefendOk"
 helptext      = _("\
 Fighters are your first airborne units. They can\
@@ -1895,7 +1895,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Missile"
-flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder"
+flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "Unbribable"
 roles         = ""
 helptext      = _("\
 Bombers are specialized airborne units that may\
@@ -2023,7 +2023,7 @@ bonuses       =
    { "flag", "type", "value"
      "Helicopter", "DefenseDivider", 1
    }
-flags         = "Partial_Invis", "AirAttacker"
+flags         = "Partial_Invis", "AirAttacker", "Unbribable"
 roles         = "DefendGood"
 helptext      = _("\
 An improved Fighter, with improved attack and a higher movement\
@@ -2056,7 +2056,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Missile"
-flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder"
+flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "Unbribable"
 roles         = "DefendOk"
 helptext      = _("\
 An improved Bomber, with improved attack and a higher movement\
@@ -2638,7 +2638,7 @@ bonuses       =
 	 "Fusion Battleship", "DefenseDivider", 1,
 	 "Carrier", "DefenseDivider", 1
    }
-flags         = "OneAttack", "AirAttacker", "CityBuster"
+flags         = "OneAttack", "AirAttacker", "CityBuster", "Unbribable"
 roles         = ""
 helptext      = _("\
 The Cruise Missile is a long-distance missile\
@@ -2674,7 +2674,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "OneAttack", "AirAttacker", "CityBuster"
+flags         = "OneAttack", "AirAttacker", "CityBuster", "Unbribable"
 roles         = ""
 helptext      = _("\
 The Missile is the first missile unit\
@@ -2713,7 +2713,7 @@ uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
 targets       = "Air", "Missile", "Helicopter", "Nuclear Missile"
-flags         = "OneAttack", "AirAttacker"
+flags         = "OneAttack", "AirAttacker", "Unbribable"
 roles         = ""
 helptext      = _("\
 The Anti-Aircraft Missile is a missile unit\
@@ -3253,7 +3253,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = ""
+flags         = "Unbribable"
 roles         = ""
 helptext      = _("\
 The AWACS (Airborne Warning and Control System) is an airplane with an \
@@ -3291,7 +3291,7 @@ bonuses       =
    { "flag", "type", "value"
      "Helicopter", "DefenseDivider", 1
    }
-flags         = "Partial_Invis", "AirAttacker"
+flags         = "Partial_Invis", "AirAttacker", "Unbribable"
 roles         = "DefendGood"
 helptext      = _("\
 An improved Stealth Fighter, with a higher movement\
@@ -3324,7 +3324,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Missile"
-flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder"
+flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "Unbribable"
 roles         = "DefendOk"
 helptext      = _("\
 An improved Stealth Bomber, with a higher movement\
