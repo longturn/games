@@ -24,7 +24,7 @@ set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
 set nationset=all
-set citymindist=6
+set citymindist=5
 set contactturns=0
 set dispersion=6
 set foggedborders=enabled
@@ -32,7 +32,7 @@ set rapturedelay=3
 set restrictinfra=enabled
 set revolen=1
 set spacerace=enabled
-set startunits=ccccccwwwwwwwwxx
+set startunits=cccccwwwwwwwxx
 set techlevel=0
 set unreachableprotects=disabled
 set killunhomed=0
