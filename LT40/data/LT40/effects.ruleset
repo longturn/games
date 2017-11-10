@@ -2863,6 +2863,16 @@ reqs    =
       "Building", "Mass Transit", "City"
     }
 
+; City radius with Mass Transit - radius is sqrt(n +2) (2,83 - 3,74)
+[effect_mass_transit_2]
+type    = "City_Radius_Sq"
+value   = 9
+reqs    =
+    { "type", "name", "range"
+   "Building", "Mass Transit", "City"
+   }
+	
+	
 [effect_mfg_plant]
 type    = "Output_Bonus"
 value   = 50
