@@ -365,27 +365,6 @@ Tunnel warfare is a general name for war being conducted in tunnels and\
  when a defending unit is defeated by a land unit.\
 ")
 
-[building_nuclear_defense_system]
-name		= _("Nuclear Defense System")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Flight", "Player"
-    }
-graphic	= "b.university"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 240
-upkeep		= 0
-sabotage	= 50
-sound		= "b_university"
-sound_alt	= "b_generic"
-; /* xgettext:no-c-format */
-helptext	= _("\
-The nuclear defense system is the first generation anti-nuclear missile defense system.\
- As the first defensive system against missile threats it's only able to protect the city\
- in most cases. With 95% success rate it's able to stop most of the nuclear attacks.\
-")
 
 [building_coastal_defense]
 name		= _("Coastal Defense")
@@ -950,27 +929,54 @@ when defending against aircraft (including helicopters).\
 
 [building_sdi_defense]
 name		= _("SDI Defense")
-genus		= "Improvement"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Laser", "Player"
+      "Tech", "Flight", "Player"
     }
 graphic	= "b.sdi_defense"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 240
+build_cost	= 180
 upkeep		= 3
 sabotage	= 100
 sound		= "b_sdi_defense"
 sound_alt	= "b_generic"
 helptext	= _("\
-Protects a city and its environs (up to 2 tiles away) from attacks \
-by enemy Nuclear units. A Nuclear unit not owned by you or an ally \
-which attacks a city with SDI Defense, or attacks a unit (or is \
-deliberately exploded) within range, is shot down and simply has no effect. \
-Also, doubles the intrinsic defense strength of units in the city when \
+
+The SDI is the general purpose nuclear defense system. It's possible to build the SDI on\
+ any city. The SDI defense system against nuclear missile threats is able to protect the city\
+ in most cases. With 95% success rate it's able to stop most of the nuclear attacks.\
+ Also, doubles the intrinsic defense strength of units in the city when \
 defending against conventional missiles.\
 ")
+
+[building_nuclear_defense_system]
+name		= _("Nuclear Defense System")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Laser", "Player"
+    }
+graphic	= "b.university"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 240
+upkeep		= 0
+sabotage	= 50
+sound		= "b_university"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Protects a city and its environs (up to 2 tiles away) from attacks \
+by enemy Nuclear units. A Nuclear unit not owned by you or an ally \
+which attacks a city with NDS, or attacks a unit (or is \
+deliberately exploded) within range, is shot down and simply has no effect. \
+ The Nuclear Defense System is the best possible protection against\
+ nuclear attacks and it's the only one able to block 100% of the\
+ enemy nuclear missiles attacking your city\
+")
+
 
 [building_sewer_system]
 name		= _("Sewer System")
