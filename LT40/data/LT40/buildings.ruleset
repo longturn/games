@@ -1761,12 +1761,12 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Electricity", "Player"
-      "Building", "University", "City"
+      "Building", "Library", "City"
     }
 graphic	= "b.university"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 120
+build_cost	= 60
 upkeep		= 0
 sabotage	= 0
 sound		= "w_marco_polos_embassy"
