@@ -623,12 +623,12 @@ name		= _("Mass Transit")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Railroad", "Player"
+      "Tech", "Automobile", "Player"
     }
 graphic	= "b.mass_transit"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 50
+build_cost	= 40
 upkeep		= 1
 sabotage	= 100
 sound		= "b_mass_transit"

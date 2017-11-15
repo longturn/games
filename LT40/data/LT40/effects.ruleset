@@ -333,9 +333,9 @@ nreqs   =
 
 	
 ; City radius with Resource Agency - radius is sqrt(n +2) (2,83 - 3,74)
-[effect_city_radius_resource_agancy_1]
+[effect_city_radius_resource_agency_1]
 type    = "City_Radius_Sq"
-value   = 9
+value   = 18
 reqs    =
     { "type", "name", "range"
    "Building", "Resource Agency", "City"
@@ -344,7 +344,7 @@ reqs    =
 ; City radius with House of Peasants - radius is sqrt(n +2) (2,83 - 3,74)
 [effect_city_radius_peasants_1]
 type    = "City_Radius_Sq"
-value   = 9
+value   = 18
 reqs    =
     { "type", "name", "range"
    "Building", "House of Peasants", "City"
@@ -2885,15 +2885,6 @@ reqs    =
     { "type", "name", "range"
       "Building", "Mass Transit", "City"
     }
-
-; City radius with Mass Transit - radius is sqrt(n +2) (2,83 - 3,74)
-[effect_mass_transit_2]
-type    = "City_Radius_Sq"
-value   = 9
-reqs    =
-    { "type", "name", "range"
-   "Building", "Mass Transit", "City"
-   }
 	
 	
 [effect_mfg_plant]
