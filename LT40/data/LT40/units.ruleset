@@ -838,7 +838,7 @@ uk_gold       = 1
 flags         = "Capturer"
 roles         = "DefendOk", "BarbarianBuild", "BarbarianSea"
 helptext      = _("\
-Legions are heavily armed and well disciplined infantry\
+Swordsmen are heavily armed and well disciplined infantry\
  units with an excellent offensive value.\
 ")
 
@@ -2767,8 +2767,8 @@ You can build Nuclear units when you have the required advance, and\
  However, without further technology they cannot move on their own.\
 "), _("\
 With Advanced Flight, all Nuclear units (including those already\
- built) gain a range of 8 movement points, and Rocketry increases\
- this to 16.\
+ built) gain a range of 9 movement points, and Rocketry increases\
+ this to 18.\
 "), _("\
 On impact, the blast will destroy any unit in an area 3 tiles wide\
  (3x3 squares for rectangular grids), including friendly units.\
