@@ -1303,7 +1303,7 @@ Increases the work area of the city. \
 ; /* xgettext:no-c-format */
 _("\
 House of Peasants is needed for working\
- futher away tiles. \
+ further away tiles. \
 ")
 
 
