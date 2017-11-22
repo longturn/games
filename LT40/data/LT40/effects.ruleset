@@ -3718,7 +3718,7 @@ reqs    =
 	
 [effect_free_techs]
 type    = "Tech_Parasite"
-value   = 20
+value   = 18
 reqs   =
     { "type", "name", "range"
       "Building", "Palace", "Player"
