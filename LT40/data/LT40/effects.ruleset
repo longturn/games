@@ -796,29 +796,6 @@ nreqs   =
     }
 	
 	
-; additive with previous => x2 for Nationalism
-[effect_base_unit_upkeep_gold_4]
-type    = "Upkeep_Factor"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "OutputType", "Gold", "Local"
-    }
-nreqs   =
-    { "type", "name", "range"
-      "Gov", "Anarchy", "Player"
-      "Gov", "Tribal", "Player"
-      "Gov", "Communism", "Player"
-      "Gov", "Despotism", "Player"
-      "Gov", "Monarchy", "Player"
-;      "Gov", "Nationalism", "Player"
-      "Gov", "Fundamentalism", "Player"
-      "Gov", "Federation", "Player"
-      "Gov", "Republic", "Player"
-      "Gov", "Democracy", "Player"
-    }
-	
-	
 
 
 [effect_base_unit_upkeep_shield]
