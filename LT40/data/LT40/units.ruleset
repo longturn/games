@@ -942,7 +942,7 @@ helptext      = _("\
 Musketeers are drafted infantry equipped with early\
  firearms and replace Pikemen as the preferred\
  city defender. The drafted units cost less to produce\
- but there is a hefty cost of 2 population from the city.\
+ but there is a hefty cost of 1 population from the city.\
  These units are the last resort and should not be
  used if not absolutely necessary.\
  The drafted musketeers are inferior to normal musketeers\
@@ -1053,7 +1053,7 @@ helptext      = _("\
 Drafted Riflemen are World War-era infantry, very good\
  at defending your cities but inferior in attacking\
  compared to normal riflemen. Each unit will cost\
- 2 population. Because of the hefty cost on city\
+ 1 population. Because of the hefty cost on city\
  population the drafted riflemen are only suitable\
  to be used as the last resort if your empire\
  is facing a real threat.\
