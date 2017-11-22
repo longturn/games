@@ -3716,13 +3716,6 @@ reqs    =
       "Building", "Great Library", "Player"
     }
 	
-[effect_free_techs]
-type    = "Tech_Parasite"
-value   = 18
-reqs   =
-    { "type", "name", "range"
-      "Building", "Palace", "Player"
-    }
 
 ; Every Land unit
 [effect_great_wall]
