@@ -291,9 +291,9 @@ Nationalism is a suitable government for producing gold and units, \
 ; /* xgettext:no-c-format */
 _("\
 * Max rate for sci, lux and tax rates are 50%.\n\
-* Each city can support up to 3 units for free; further units each cost\
+* Each city can support up to 1 units for free; further units each cost\
  3 gold per turn.\n\
-* Each city tolerates up to 4 aggressively deployed military units;\
+* Each city tolerates up to 3 aggressively deployed military units;\
  each further unit causes 1 unhappy citizen.\n\
 * Base corruption is 15%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
