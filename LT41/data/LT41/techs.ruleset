@@ -8,7 +8,7 @@
 ; use your new customized file.
 
 [datafile]
-description="Civ2Civ3 technology data for Freeciv"
+description="LT41/Civ2Civ3 technology data for Freeciv"
 options="+Freeciv-2.5-ruleset"
 
 [control]
