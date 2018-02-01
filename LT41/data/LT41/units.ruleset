@@ -723,7 +723,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Marines", "Capturer"
+flags         = "Capturer"
 roles         = "DefendOk", "BarbarianBuild", "BarbarianSea"
 helptext      = _("\
 Swordsmen are heavily armed and well disciplined infantry\
