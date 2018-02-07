@@ -1672,10 +1672,10 @@ The Trireme is your first boat unit if not counting\
 ")
 
 [unit_early_trireme]
-name          = _("Early Trireme")
-class         = "Trireme"
+name          = _("Ruler's Trireme")
+class         = "Sea"
 tech_req      = "None"
-obsolete_by   = "Trireme"
+obsolete_by   = "Caravel"
 graphic       = "u.trireme"
 graphic_alt   = "-"
 sound_move    = "m_trireme"
@@ -1700,12 +1700,13 @@ cargo         = "Land", "Small Land", "Merchant"
 flags         = "BadCityDefender", "Unique", "Unbribable"
 roles         = "Ferryboat"
 helptext      = _("\
-The Early Trireme is your first boat unit. It can act\
+The Ruler's Trireme is your first boat unit. It can act\
  as a transport ship and has rudimentary defensive\
  capabilities but can't attack other units.\
- It's also unique and you can only have one Early Trireme\
- at a time. Unlike most later boats can travel on\
- rivers, but it may not enter deep ocean tiles.\
+ It's also unique and you can only have one Ruler's Trireme\
+ at a time. The Ruler's Trireme is heavier than the standard\
+ trireme and this allows it to travel also on deep ocean but \
+ not on rivers.\
 ")
 
 [unit_caravel]
