@@ -1627,7 +1627,7 @@ name		= _("Atlantic Telegraph Company")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Electricity", "Player"
+      "Tech", "Espionage", "Player"
       "Building", "University", "City"
     }
 graphic	= "b.university"
