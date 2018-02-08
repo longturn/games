@@ -1682,7 +1682,7 @@ sound_move    = "m_trireme"
 sound_move_alt = "m_generic"
 sound_fight   = "f_trireme"
 sound_fight_alt = "f_generic"
-build_cost    = 15
+build_cost    = 20
 pop_cost      = 0
 attack        = 0
 defense       = 1
@@ -1700,12 +1700,12 @@ cargo         = "Land", "Small Land", "Merchant"
 flags         = "BadCityDefender", "Unique", "Unbribable"
 roles         = "Ferryboat"
 helptext      = _("\
-The Ruler's Trireme is your first boat unit. It can act\
+The Longboat is your first deep ocean capable boat unit. It can act\
  as a transport ship and has rudimentary defensive\
  capabilities but can't attack other units.\
- It's also unique and you can only have one Ruler's Trireme\
- at a time. The Ruler's Trireme is heavier than the standard\
- trireme and this allows it to travel also on deep ocean but \
+ It's also unique and you can only have one Longboat\
+ at a time. The Longboat is heavier than the \
+ trireme and this allows it to travel on deep ocean but \
  not on rivers.\
 ")
 
