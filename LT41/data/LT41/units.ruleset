@@ -1672,9 +1672,9 @@ The Trireme is your first boat unit if not counting\
 ")
 
 [unit_early_trireme]
-name          = _("Ruler's Trireme")
+name          = _("Longboat")
 class         = "Sea"
-tech_req      = "None"
+tech_req      = "Map Making"
 obsolete_by   = "Caravel"
 graphic       = "u.trireme"
 graphic_alt   = "-"
