@@ -3607,7 +3607,7 @@ reqs    =
 
 [effect_magellans_expedition_veteran]
 type    = "Veteran_Combat"
-value   = 50
+value   = 10
 reqs    =
     { "type", "name", "range"
       "Building", "Magellan's Expedition", "Player"
