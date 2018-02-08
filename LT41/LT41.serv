@@ -16,7 +16,7 @@ set tilesperplayer=320
 set topology="WRAPX|WRAPY"
 set wetness=60
 set alltemperate=enabled
-set revealmap=START  #uncomment this for revealing the map for test games
+#set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
 set nationset=all
