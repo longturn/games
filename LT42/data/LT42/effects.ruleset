@@ -4524,13 +4524,6 @@ reqs    =
 ;;;;;;; CITY RADIUS ;;;;;;;;;;;;
 
 
-[effect_city_radius_size_1]
-type    = "City_Radius_Sq"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "MinSize", "1", "City"
-    }
 
 [effect_city_radius_size_2]
 type    = "City_Radius_Sq"
@@ -4856,6 +4849,26 @@ reqs    =
     }
 
 
+[effect_spy_resist_spy_courthouse]
+type    = "Spy_Resistant"
+value   = 25
+reqs    =
+    { "type", "name", "range"
+      "building", "Courthouse", "City"
+    }
 
+[effect_spy_resist_spy_barracks]
+type    = "Spy_Resistant"
+value   = 25
+reqs    =
+    { "type", "name", "range"
+      "building", "Barracks", "City"
+    }
 
-
+[effect_spy_resist_spy_police]
+type    = "Spy_Resistant"
+value   = 25
+reqs    =
+    { "type", "name", "range"
+      "building", "Police Station", "City"
+    }
