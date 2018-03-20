@@ -31,17 +31,17 @@ set startunits=cccccwwwwwwwxx
 set techlevel=0
 set unreachableprotects=disabled
 set killunhomed=0
-set trading_tech=disabled
+set trading_tech=enabled
 set airliftingstyle="FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
 set razechance=10
 set happyborders=enabled
 set occupychance=0
 
 # diplomacy, technology
-set diplchance=50
-set diplcost=50
+set diplchance=80
+set diplcost=20
 set diplomacy=HUMAN
-set sciencebox=100
+set sciencebox=150
 set techlost_donor=0
 set techlost_recv=100
 set techpenalty=20
