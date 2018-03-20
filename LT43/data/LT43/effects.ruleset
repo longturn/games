@@ -972,7 +972,7 @@ reqs    =
 
 [effect_upkeep_free_units_town_monarchy]
 name    = "Unit_Upkeep_Free_Per_City"
-value   = 3
+value   = 4
 reqs    =
     { "type", "name", "range"
       "Gov", "Monarchy", "Player"
@@ -981,7 +981,7 @@ reqs    =
 
 [effect_upkeep_free_units_city_monarchy]
 name    = "Unit_Upkeep_Free_Per_City"
-value   = 3
+value   = 4
 reqs    =
     { "type", "name", "range"
       "Gov", "Monarchy", "Player"
