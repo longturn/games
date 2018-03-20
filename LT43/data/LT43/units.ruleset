@@ -873,8 +873,7 @@ sound_move    = "m_partisan"
 sound_move_alt = "m_generic"
 sound_fight   = "f_partisan"
 sound_fight_alt = "f_generic"
-build_cost    = 60
-pop_cost      = 0
+pop_cost      = 1
 attack        = 4
 defense       = 5
 hitpoints     = 20
@@ -889,11 +888,16 @@ uk_food       = 1
 uk_gold       = 1
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
-flags         = "IgTer", "IgZOC", "Capturer"
+flags         = "IgTer", "IgZOC", "Capturer", "NoHome", "AddToCity"
 roles         = "DefendGood", "Partisan", "BarbarianTech"
 helptext      = _("\
 Partisans are guerilla fighters who are experts\
- at using the terrain to their advantage.\
+ at using the terrain to their advantage. Partisans\
+ have no home city and units outside cities won't be\
+ killed if the city building them is lost. Since partisans\
+ are citizens trained to fight the oppressor they can\
+ once again become part of the normal population when\
+ the war is over.\
 ")
 
 
