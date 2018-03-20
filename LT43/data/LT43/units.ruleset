@@ -1690,17 +1690,18 @@ hitpoints     = 10
 firepower     = 1
 move_rate     = 9
 vision_radius_sq = 18
-transport_cap = 2
+transport_cap = 1
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Land", "Small Land", "Merchant"
+cargo         = "Small Land", "Merchant"
 flags         = "BadCityDefender", "Unique", "Unbribable"
 roles         = "Ferryboat"
 helptext      = _("\
-The Longboat is your first deep ocean capable boat unit. It can act\
+The Longboat is your first deep ocean capable boat unit\
+ that only can carry one Merchant or Small Land unit. It can act\
  as a transport ship and has rudimentary defensive\
  capabilities but can't attack other units.\
  It's also unique and you can only have one Longboat\
