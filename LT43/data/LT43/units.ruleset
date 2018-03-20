@@ -787,7 +787,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Marines", "Capturer"
+flags         = "Capturer"
 roles         = "DefendGood", "FirstBuild", "HutTech",
                 "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
 helptext      = _("\
@@ -821,7 +821,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Marines", "Capturer"
+flags         = "Capturer"
 roles         = "DefendGood", "FirstBuild"
 helptext      = _("\
 Riflemen are World War-era infantry, very good\
