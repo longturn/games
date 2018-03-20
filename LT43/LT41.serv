@@ -1,0 +1,74 @@
+rulesetdir LT41
+
+# map
+set alltemperate=disabled
+set barbarians=disabled
+set generator="ISLAND"
+set huts=0
+set landmass=20
+set mapsize="PLAYER"
+set separatepoles=disabled
+set specials=200
+set startpos="VARIABLE"
+set steepness=40
+set temperature=50
+set tilesperplayer=320
+set topology="WRAPX|WRAPY"
+set wetness=60
+set alltemperate=enabled
+#set revealmap=START  #uncomment this for revealing the map for test games
+
+# general rules
+set nationset=all
+set citymindist=4
+set contactturns=0
+set dispersion=6
+set foggedborders=enabled
+set rapturedelay=3
+set restrictinfra=enabled
+set revolen=2
+set spacerace=enabled
+set startunits=ccccwwwwwwx
+set techlevel=0
+set unreachableprotects=disabled
+set killunhomed=0
+set trading_tech=disabled
+set airliftingstyle="FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
+set razechance=10
+set happyborders=enabled
+set occupychance=0
+
+# diplomacy, technology
+set diplchance=50
+set diplcost=50
+set diplomacy=HUMAN
+set sciencebox=100
+set techlost_donor=0
+set techlost_recv=100
+set techpenalty=20
+set trademindist=999
+set trading_city=disabled
+set team_pooled_research=disabled
+set techlevel=0
+
+# technical
+set aifill=0
+set allowtake=""
+cmdlevel info
+set compresstype plain
+set ec_chat=enabled
+set ec_info=enabled 
+set ec_max_size=5000
+set ec_turns=9
+set maxplayers=126
+set saveturns=1
+set scorelog=enabled
+set timeout=82800
+set unitwaittime=36000
+set fixedlength 1
+metamessage "LT41 | More info: http://longturn.org/game/LT41/"
+metapatches longturn
+
+
+syncturn
+start
