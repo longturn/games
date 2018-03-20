@@ -2191,7 +2191,7 @@ TIP:  You may be involved in a situation where you've invaded an\
 [unit_diplomat]
 name          = _("Diplomat")
 class         = "Small Land"
-tech_req      = "Alphabet"
+tech_req      = "None"
 obsolete_by   = "Spy"
 graphic       = "u.diplomat"
 graphic_alt   = "-"
@@ -2199,7 +2199,7 @@ sound_move    = "m_diplomat"
 sound_move_alt = "m_generic"
 sound_fight   = "f_diplomat"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 20
 pop_cost      = 0
 attack        = 0
 defense       = 0
