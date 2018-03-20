@@ -934,7 +934,7 @@ reqs    =
 
 [effect_upkeep_free_units_town_tribal]
 name    = "Unit_Upkeep_Free_Per_City"
-value   = 4
+value   = 3
 reqs    =
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
@@ -943,7 +943,7 @@ reqs    =
 
 [effect_upkeep_free_units_city_tribal]
 name    = "Unit_Upkeep_Free_Per_City"
-value   = 4
+value   = 3
 reqs    =
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
