@@ -15,7 +15,7 @@ set tilesperplayer=450
 set topology="WRAPX|WRAPY"
 set wetness=60
 set alltemperate=enabled
-set revealmap=START  #uncomment this for revealing the map for test games
+#set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
 set nationset=all
@@ -65,7 +65,7 @@ set scorelog=enabled
 set timeout=82800
 set unitwaittime=36000
 set fixedlength 1
-metamessage "LT41 | More info: http://longturn.org/game/LT41/"
+metamessage "LT43 | More info: http://longturn.org/game/LT43/"
 metapatches longturn
 
 
