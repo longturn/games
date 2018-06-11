@@ -355,9 +355,9 @@ colorlist =
 [teams]
 ; freeciv optional team names definition.
 ;
-;names =
-; _("Red"),
-; _("Blue")
+names =
+ _("Red"),
+ _("Blue")
 ; name =
 ;  _("Team 0"),
 ; _("Team 1"),
