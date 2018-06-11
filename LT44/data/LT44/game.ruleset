@@ -10,16 +10,16 @@
 ; than minor changes.
 
 [datafile]
-description="LT43 (modified Civ2Civ3/LT39) game rules for Freeciv"
+description="LT44 (modified Civ2Civ3/LT43) game rules for Freeciv"
 options="+Freeciv-2.5-ruleset"
 
 [about]
 ; Ruleset name
-name = _("LT43 (modified Civ2Civ3/LT39/LT41) ruleset")
+name = _("LT44 (modified Civ2Civ3/LT39/LT41/LT43) ruleset")
 
 ; Description of the ruleset
 description = _("\
-You are playing Freeciv with LT43 (modified Civ2Civ3/LT39/LT41) rules:\
+You are playing Freeciv with LT44 (modified Civ2Civ3/LT39/LT41/LT43) rules:\
 \n\n\
 Gameplay more similar to civ3, keeping the combat system from civ2.\
 \n\n\

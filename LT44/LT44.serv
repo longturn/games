@@ -1,4 +1,4 @@
-rulesetdir LT43
+rulesetdir LT44
 
 set alltemperate=disabled
 set barbarians=disabled
@@ -65,7 +65,7 @@ set scorelog=enabled
 set timeout=82800
 set unitwaittime=36000
 set fixedlength 1
-metamessage "LT43 | More info: http://longturn.org/game/LT43/"
+metamessage "LT44 | More info: http://longturn.org/game/LT44/"
 metapatches longturn
 
 
