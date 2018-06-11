@@ -38,9 +38,9 @@ set happyborders=enabled
 set occupychance=0
 
 # diplomacy, technology
-set diplchance=60
-set diplcost=10
-set diplomacy=HUMAN
+set diplchance=10
+set diplcost=0
+set diplomacy=TEAM
 set sciencebox=60
 set techlost_donor=0
 set techlost_recv=0
