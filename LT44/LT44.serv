@@ -4,9 +4,9 @@ set alltemperate=disabled
 set barbarians=disabled
 set generator="FRACTAL"
 set huts=1
-set landmass=40
+set landmass=50
 set mapsize="PLAYER"
-set separatepoles=disabled
+set separatepoles=enabled
 set specials=250
 set startpos="ALL"
 set steepness=40
@@ -15,7 +15,7 @@ set tilesperplayer=450
 set topology="WRAPX|WRAPY"
 set wetness=60
 set alltemperate=enabled
-#set revealmap=START  #uncomment this for revealing the map for test games
+set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
 set nationset=all
@@ -31,20 +31,20 @@ set startunits=cccccwwwwwwwxx
 set techlevel=0
 set unreachableprotects=disabled
 set killunhomed=0
-set trading_tech=enabled
+set trading_tech=team
 set airliftingstyle="FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
 set razechance=10
 set happyborders=enabled
 set occupychance=0
 
 # diplomacy, technology
-set diplchance=80
-set diplcost=20
+set diplchance=60
+set diplcost=10
 set diplomacy=HUMAN
-set sciencebox=40
+set sciencebox=60
 set techlost_donor=0
 set techlost_recv=0
-set techpenalty=20
+set techpenalty=10
 set trademindist=999
 set trading_city=disabled
 set team_pooled_research=disabled
