@@ -11,7 +11,7 @@
 ; than minor changes.
 
 [datafile]
-description="LT41 governments data for Freeciv"
+description="LT44 governments data for Freeciv"
 options="+Freeciv-2.5-ruleset"
 
 [governments]
