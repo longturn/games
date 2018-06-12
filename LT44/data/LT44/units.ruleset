@@ -695,7 +695,7 @@ flags         = "Capturer"
 roles         = "DefendOk", "Hut", "BarbarianBuild", "BarbarianSea", "Bombarder"
 helptext      = _("\
 Archers fight with bows and arrows and have a good offensive\
- value.\
+ value. The archers attack by bombarding.\
 ")
 
 [unit_legion]
