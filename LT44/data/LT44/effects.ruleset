@@ -1805,7 +1805,24 @@ reqs    =
       "UnitFlag", "Diplomat", "Local"
     }
 	
-	[effect_partisan_communism]
+	
+[effect_partisan_fundamentalism]
+type    = "Inspire_Partisans"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Fundamentalism", "Player"
+      "Tech", "Communism", "Player"
+      "Tech", "Gunpowder", "Player"
+      "Tech", "Guerilla Warfare", "World"
+    }
+nreqs  =
+    { "type", "name", "range"
+      "Nation", "Barbarian", "Player"
+      "Nation", "Pirate", "Player"
+    }
+	
+[effect_partisan_communism]
 type    = "Inspire_Partisans"
 value   = 1
 reqs    =
