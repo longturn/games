@@ -1241,7 +1241,7 @@ reqs    =
 
 [effect_civil_war_anarchy]
 type    = "Civil_War_Chance"
-value   = 99
+value   = 49
 reqs    =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
