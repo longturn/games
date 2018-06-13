@@ -679,7 +679,7 @@ sound_fight   = "f_archers"
 sound_fight_alt = "f_generic"
 build_cost    = 20
 pop_cost      = 0
-attack        = 3
+attack        = 2
 defense       = 1
 hitpoints     = 10
 firepower     = 1
@@ -697,6 +697,7 @@ helptext      = _("\
 Archers fight with bows and arrows and have a good offensive\
  value. The archers attack by bombarding.\
 ")
+bombard_rate = 2
 
 [unit_legion]
 name          = _("Swordsmen")
