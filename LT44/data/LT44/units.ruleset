@@ -691,8 +691,8 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer"
-roles         = "DefendOk", "Hut", "BarbarianBuild", "BarbarianSea", "Bombarder"
+flags         = "Capturer", "Bombarder"
+roles         = "DefendOk", "Hut", "BarbarianBuild", "BarbarianSea"
 helptext      = _("\
 Archers fight with bows and arrows and have a good offensive\
  value. The archers attack by bombarding.\
