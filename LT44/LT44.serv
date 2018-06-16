@@ -39,7 +39,7 @@ set occupychance=0
 
 # diplomacy, technology
 set diplchance=40
-set diplcost=0
+set diplcost=10
 set diplomacy=TEAM
 set sciencebox=60
 set techlost_donor=0
