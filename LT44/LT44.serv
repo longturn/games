@@ -40,10 +40,11 @@ set occupychance=0
 # diplomacy, technology
 set diplchance=40
 set diplcost=10
+set diplchance_steal=12
 set diplomacy=TEAM
 set sciencebox=60
 set techlost_donor=0
-set techlost_recv=70
+set techlost_recv=0
 set techpenalty=10
 set trademindist=999
 set trading_city=disabled
