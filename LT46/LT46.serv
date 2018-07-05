@@ -1,0 +1,78 @@
+rulesetdir LT46
+
+# [effect_free_techs] needs to be updated from effects.ruleset to correspond the number of the players in a game
+# the value defines how many players need to invent a tech before it's given free to everyone. currently set to 18
+
+
+# map
+set alltemperate=disabled
+set barbarians=disabled
+set generator="FRACTAL"
+set huts=0
+set landmass=40
+set mapsize="PLAYER"
+set separatepoles=disabled
+set specials=380
+set startpos="ALL"
+set steepness=40
+set temperature=50
+set tilesperplayer=700
+set topology="WRAPX|WRAPY"
+set wetness=60
+set alltemperate=enabled
+#set revealmap=START  #uncomment this for revealing the map for test games
+
+# general rules
+set nationset=all
+set citymindist=5
+set contactturns=0
+set dispersion=6
+set foggedborders=enabled
+set rapturedelay=3
+set restrictinfra=enabled
+set revolen=1
+set spacerace=enabled
+set startunits=cccccwwwwwwwxx
+set techlevel=0
+set unreachableprotects=disabled
+set killunhomed=0
+set trading_tech=disabled
+set airliftingstyle="FROM_ALLIES|TO_ALLIES"
+set razechance=10
+set happyborders=enabled
+set occupychance=0
+
+# diplomacy, technology
+set diplchance=50
+set diplcost=10
+set diplomacy=HUMAN
+set sciencebox=150
+set techlost_donor=0
+set techlost_recv=50
+set techpenalty=10
+set trademindist=999
+set trading_city=disabled
+set team_pooled_research=disabled
+set techlevel=0
+
+# technical
+set aifill=0
+set allowtake=""
+cmdlevel info
+set compresstype plain
+set ec_chat=enabled
+set ec_info=enabled 
+set ec_max_size=5000
+set ec_turns=9
+set maxplayers=126
+set saveturns=1
+set scorelog=enabled
+set timeout=82800
+set unitwaittime=36000
+set fixedlength 1
+metamessage "LT46 | More info: http://longturn.org/game/LT46/"
+metapatches longturn
+
+
+syncturn
+start
