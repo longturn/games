@@ -1567,29 +1567,29 @@ reqs    =
       "Gov", "Democracy", "Player"
     }
 
-[effect_senate_federation]
-type    = "Has_Senate"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Federation", "Player"
-    }
-nreqs   =
-    { "type", "name", "range"
-      "Building", "Statue of Liberty", "Player"
-    }
+;[effect_senate_federation]
+;type    = "Has_Senate"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Gov", "Federation", "Player"
+;    }
+;nreqs   =
+;    { "type", "name", "range"
+;      "Building", "Statue of Liberty", "Player"
+;    }
 
-[effect_senate_democracy]
-type    = "Has_Senate"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Democracy", "Player"
-    }
-nreqs   =
-    { "type", "name", "range"
-      "Building", "Statue of Liberty", "Player"
-    }
+;[effect_senate_democracy]
+;type    = "Has_Senate"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Gov", "Democracy", "Player"
+;    }
+;nreqs   =
+;    { "type", "name", "range"
+;      "Building", "Statue of Liberty", "Player"
+;    }
 
 [effect_veteran_communism_diplomat]
 type    = "Veteran_Build"
@@ -3451,12 +3451,12 @@ reqs    =
       "Building", "Manhattan Project", "World", TRUE
     }
 
-[effect_marco_polos_embassy]
+[effect_atlantic_telegraph_company]
 type    = "Have_Embassies"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Building", "Marco Polo's Embassy", "Player"
+      "Building", "Atlantic Telegraph Company", "Player"
     }
 
 [effect_michelangelos_chapel]
@@ -3588,22 +3588,22 @@ reqs    =
     }
 
 ; No_Anarchy includes no_senate effect
-[effect_statue_of_liberty]
-type    = "No_Anarchy"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Statue of Liberty", "Player"
-    }
+;[effect_statue_of_liberty]
+;type    = "No_Anarchy"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Building", "Statue of Liberty", "Player"
+;    }
 
 
-[effect_statue_of_liberty_1]
-type    = "Any_Government"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Statue of Liberty", "Player"
-    }
+;[effect_statue_of_liberty_1]
+;type    = "Any_Government"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Building", "Statue of Liberty", "Player"
+;    }
 
 ;[effect_provisional_government]
 ;type    = "No_Anarchy"
@@ -3721,6 +3721,19 @@ nreqs   =
     { "type", "name", "range", "survives"
       "Building", "Apollo Program", "World", TRUE
     }
+
+[effect_united_nations_democracy]
+type    = "Has_Senate"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Democracy", "Player"
+    }
+nreqs   =
+    { "type", "name", "range"
+      "Building", "United Nations", "Player"
+    }
+
 
 [effect_united_nations_1]
 type    = "Revolution_When_Unhappy"

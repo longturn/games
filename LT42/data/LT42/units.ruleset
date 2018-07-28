@@ -32,10 +32,10 @@ flags =
   }
 
 [veteran_system]
-; What are the names of the levels?
+; What are the names of the levels?   
 veteran_names = _("cannon fodder"), _("drafted"), _("recruits"), _("novice"), _("green"), _("regular"), _("disciplined"), _("seasoned"), _("experienced"), _("expert"), _("master"), _("veteran"), _("hardened"), _("guards"), _("special"), _("commando"), _("elite")
 
-; The percentage chance of increasing level through combat
+; The percentage chance of increasing level through combat  
 veteran_raise_chance = 100, 95, 90, 75, 60, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5, 5, 0
 
 ; The percentage chance of a settler/engineer increasing level through
@@ -44,7 +44,7 @@ veteran_work_raise_chance = 50, 30, 10, 10, 10, 10, 10, 5, 5, 5, 5, 5, 5, 5, 5, 
 
 ; Power factors are as a percentage.
 ; +50% is represented by 150
-veteran_power_fact = 100, 110, 120, 140, 150, 160, 170, 180, 200, 210, 220, 230, 240, 260, 280, 300, 330
+veteran_power_fact = 100, 110, 120, 140, 150, 160, 170, 180, 200, 220, 240, 260, 280, 300, 320, 340, 360
 
 ; The additional number of movement points granted for different veteran
 ; levels. These are fractional move points as defined by move_fragments in
@@ -751,12 +751,7 @@ uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
 flags         = "Settlers", "NonMil", "Airbase"
-; No veteran levels (level name is never displayed)
-veteran_names = _("green")
-veteran_raise_chance = 0
-veteran_work_raise_chance = 0
-veteran_power_fact = 100
-veteran_move_bonus = 0
+
 roles         = "Settlers"
 helptext      = _("\
 Workers have the ability to improve terrain tiles.\
@@ -815,11 +810,7 @@ uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
 flags         = "Settlers", "NonMil", "Airbase", "Transform"
-veteran_names = _("green"), _("veteran"), _("hardened"), _("elite")
-veteran_raise_chance      = 50, 33, 20, 0
-veteran_work_raise_chance = 3, 2, 1, 0
-veteran_power_fact        = 100, 150, 175, 200
-veteran_move_bonus        = 0, 0, 0, 0
+
 roles         = "Settlers"
 helptext      = _("\
 Engineers are similar to Workers, but they work twice as fast, \
@@ -911,7 +902,7 @@ sound_fight   = "f_archers"
 sound_fight_alt = "f_generic"
 build_cost    = 10
 pop_cost      = 0
-attack        = 3
+attack        = 1
 defense       = 2
 hitpoints     = 10
 firepower     = 1
@@ -925,7 +916,7 @@ uk_food       = 1
 uk_gold       = 3
 flags         = "Capturer", "Bombarder"
 roles         = "DefendOk", "Hut"
-bombard_rate  = 6
+bombard_rate  = 5
 helptext      = _("\
 Archers fight with bows and arrows and have a good offensive\
  value.\
@@ -956,7 +947,7 @@ uk_happy      = 1
 uk_shield     = 0
 uk_food       = 1
 uk_gold       = 3
-flags         = "Marines", "Capturer"
+flags         = "Capturer"
 roles         = "DefendOk", "BarbarianBuild", "BarbarianSea"
 helptext      = _("\
 Legions are heavily armed and well disciplined infantry\
@@ -1008,7 +999,7 @@ sound_fight   = "f_musketeers"
 sound_fight_alt = "f_generic"
 build_cost    = 15
 pop_cost      = 0
-attack        = 3
+attack        = 2
 defense       = 3
 hitpoints     = 10
 firepower     = 2
@@ -1020,7 +1011,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 3
-flags         = "Marines", "Capturer"
+flags         = "Capturer"
 roles         = "DefendGood", "FirstBuild", "HutTech",
                 "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
 helptext      = _("\
@@ -1033,7 +1024,6 @@ Musketeers are infantry equipped with early\
 name          = _("Riflemen")
 class         = "Land"
 tech_req      = "Conscription"
-obsolete_by   = "Marines"
 graphic       = "u.riflemen"
 graphic_alt   = "-"
 sound_move    = "m_riflemen"
@@ -1042,10 +1032,10 @@ sound_fight   = "f_riflemen"
 sound_fight_alt = "f_generic"
 build_cost    = 20
 pop_cost      = 0
-attack        = 5
-defense       = 5
+attack        = 3
+defense       = 4
 hitpoints     = 20
-firepower     = 1
+firepower     = 2
 move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 0
@@ -1054,7 +1044,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 3
-flags         = "Marines", "Capturer"
+flags         = "Capturer"
 roles         = "DefendGood", "FirstBuild"
 helptext      = _("\
 Riflemen are World War-era infantry, very good\
@@ -1077,7 +1067,7 @@ pop_cost      = 0
 attack        = 7
 defense       = 4
 hitpoints     = 20
-firepower     = 1
+firepower     = 2
 move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
@@ -1108,8 +1098,8 @@ sound_fight   = "f_partisan"
 sound_fight_alt = "f_generic"
 build_cost    = 10
 pop_cost      = 0
-attack        = 3
-defense       = 2
+attack        = 2
+defense       = 5
 hitpoints     = 10
 firepower     = 2
 move_rate     = 1
@@ -1191,7 +1181,7 @@ pop_cost      = 0
 attack        = 8
 defense       = 5
 hitpoints     = 20
-firepower     = 1
+firepower     = 2
 move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 0
@@ -1224,7 +1214,7 @@ pop_cost      = 0
 attack        = 6
 defense       = 4
 hitpoints     = 20
-firepower     = 1
+firepower     = 2
 move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 0
@@ -1266,7 +1256,7 @@ pop_cost      = 0
 attack        = 5
 defense       = 6
 hitpoints     = 30
-firepower     = 1
+firepower     = 2
 move_rate     = 6
 vision_radius_sq = 2
 transport_cap = 0
@@ -1466,7 +1456,7 @@ pop_cost      = 0
 attack        = 5
 defense       = 2
 hitpoints     = 20
-firepower     = 1
+firepower     = 2
 move_rate     = 4
 vision_radius_sq = 2
 transport_cap = 0
@@ -1497,7 +1487,7 @@ pop_cost      = 0
 attack        = 8
 defense       = 3
 hitpoints     = 20
-firepower     = 1
+firepower     = 2
 move_rate     = 4
 vision_radius_sq = 2
 transport_cap = 0
@@ -1528,7 +1518,7 @@ pop_cost      = 0
 attack        = 10
 defense       = 5
 hitpoints     = 30
-firepower     = 1
+firepower     = 3
 move_rate     = 6
 vision_radius_sq = 2
 transport_cap = 0
@@ -1560,7 +1550,7 @@ sound_fight   = "f_catapult"
 sound_fight_alt = "f_generic"
 build_cost    = 20
 pop_cost      = 0
-attack        = 6
+attack        = 1
 defense       = 1
 hitpoints     = 1
 firepower     = 1
@@ -1574,7 +1564,7 @@ uk_food       = 1
 uk_gold       = 3
 flags         = "Bombarder"
 roles         = "AttackStrong"
-bombard_rate  = 10
+bombard_rate  = 9
 helptext      = _("\
 Catapults are large rock-throwing machines of war.\
  They are very strong attackers but equally weak\
@@ -1599,10 +1589,10 @@ sound_fight   = "f_cannon"
 sound_fight_alt = "f_generic"
 build_cost    = 30
 pop_cost      = 0
-attack        = 8
+attack        = 1
 defense       = 1
 hitpoints     = 10
-firepower     = 2
+firepower     = 1
 move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 0
@@ -1634,10 +1624,10 @@ sound_fight   = "f_artillery"
 sound_fight_alt = "f_generic"
 build_cost    = 40
 pop_cost      = 0
-attack        = 10
+attack        = 3
 defense       = 2
 hitpoints     = 10
-firepower     = 2
+firepower     = 1
 move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 0
@@ -1648,7 +1638,7 @@ uk_food       = 1
 uk_gold       = 5
 flags         = "Bombarder"
 roles         = "AttackStrong"
-bombard_rate  = 10
+bombard_rate  = 12
 helptext      = _("\
 The artillery is an upgraded cannon. As with its predecessors, it is a \
 very strong attacker but equally weak defender and will need an escort \
@@ -1668,10 +1658,10 @@ sound_fight   = "f_howitzer"
 sound_fight_alt = "f_generic"
 build_cost    = 50
 pop_cost      = 0
-attack        = 12
+attack        = 5
 defense       = 3
 hitpoints     = 10
-firepower     = 3
+firepower     = 1
 move_rate     = 4
 vision_radius_sq = 2
 transport_cap = 0
@@ -1682,7 +1672,7 @@ uk_food       = 1
 uk_gold       = 5
 flags         = "Bombarder"
 roles         = "AttackStrong"
-bombard_rate  = 18
+bombard_rate  = 12
 helptext      = _("\
 Howitzers are upgraded artillery with improved defensive as well as \
 offensive capabilities. However, they still have the limited mobility \
@@ -2198,7 +2188,7 @@ uk_food       = 1
 uk_gold       = 4
 cargo         = "Missile", "Non Military"
 flags         = "Partial_Invis", "BadCityDefender", "Only_Native_Attack", "Submarine", "Bombarder"
-bombard_rate  = 10
+bombard_rate  = 8
 roles         = "Hunter"
 helptext      = _("\
 Traveling under the surface of the ocean, Submarines have\

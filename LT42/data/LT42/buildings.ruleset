@@ -1785,28 +1785,28 @@ Upon completion of this wonder, entertainer specialists' luxury \
 output increases to 3 permanently for every nation.\
 ")
 
-[building_statue_of_liberty]
-name		= _("Statue of Liberty")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Democracy", "Player"
-    }
-graphic	= "b.statue_of_liberty"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 400
-upkeep		= 0
-sabotage	= 0
-sound		= "w_statue_of_liberty"
-sound_alt	= "w_generic"
-helptext	= _("\
-Allows you to choose any government, including those that have not yet \
-been researched by your civilization, and without the transition \
-period of Anarchy. It also allows unprovoked declaration of war \
-regardless of any senate instituted by a Democracy or Federation \
-government or by the United Nations.\
-")
+;[building_statue_of_liberty]
+;name		= _("Statue of Liberty")
+;genus		= "SmallWonder"
+;reqs	=
+;    { "type", "name", "range"
+;      "Tech", "Democracy", "Player"
+;    }
+;graphic	= "b.statue_of_liberty"
+;graphic_alt	= "-"
+;obsolete_by	= "None"
+;build_cost	= 400
+;upkeep		= 0
+;sabotage	= 0
+;sound		= "w_statue_of_liberty"
+;sound_alt	= "w_generic"
+;helptext	= _("\
+;Allows you to choose any government, including those that have not yet \
+;been researched by your civilization, and without the transition \
+;period of Anarchy. It also allows unprovoked declaration of war \
+;regardless of any senate instituted by a Democracy or Federation \
+;government or by the United Nations.\
+;")
 
 [building_sun_tzus_war_academy]
 name		= _("Sun Tzu's War Academy")
@@ -1839,7 +1839,7 @@ reqs	=
 graphic	= "b.united_nations"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 600
+build_cost	= 1500
 upkeep		= 0
 sabotage	= 0
 sound		= "w_united_nations"
@@ -1848,6 +1848,8 @@ helptext	= _("\
 Creates a world senate that prevents unprovoked declaration of war by \
 any nuclear-capable nation (that is, any nation with knowledge of \
 Nuclear Fission, once the Manhattan Project has been built). \
+Also allows declaration of war by player who built it even if his \
+government is Democracy. \
 AI players are more inclined to be friendly and forgiving toward the \
 owner of this wonder. These effects last until the Apollo Program \
 is completed.\
@@ -2065,5 +2067,25 @@ effort of the People. Some sacrifices are neccessary, but \
 in the end, it is for the greater good.
 "), _("\
 Adds one unit of production to every city belonging to the player.
+")
+
+[building_atlantic_telegraph_company]
+name		= _("Atlantic Telegraph Company")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Electricity", "Player"
+      "Building", "Library", "City"
+    }
+graphic	= "b.university"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 60
+upkeep		= 0
+sabotage	= 0
+sound		= "w_marco_polos_embassy"
+sound_alt	= "w_generic"
+helptext	= _("\
+Player building it gets an embassy with all players.\
 ")
 
