@@ -737,6 +737,17 @@ graphic_alt = "-"
 helptext = _("Allows Workers and Engineers to build airbases and buoys.")
 cost     = 540
 
+
+[advance_radio]
+name     = _("Television")
+req1     = "Radio"
+flags    = ""
+graphic     = "a.radio"
+graphic_alt = "-"
+helptext = _("Allows building the Television Station.")
+cost     = 580
+
+
 [advance_railroad]
 name     = _("?tech:Railroad")
 req1     = "Steam Engine"
@@ -787,6 +798,7 @@ cost     = 350
 name     = _("Robotics")
 req1     = "Mobile Warfare"
 req2     = "Computers"
+req3     = "Television"
 flags    = ""
 graphic     = "a.robotics"
 graphic_alt = "-"

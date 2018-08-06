@@ -3081,6 +3081,37 @@ nreqs    =
     { "type", "name", "range"
       "Building", "Women's Suffrage", "Player"
     }
+	
+[effect_television_station]
+type    = "Make_Content"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "Building", "Television Station", "City"
+    }
+
+[effect_television_station_1]
+type    = "Make_Content_Mil"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Television Station", "City"
+    }
+
+; Net effect is to neutralize one unit's unhappiness
+[effect_television_station_democracy]
+type    = "Make_Content_Mil"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Democracy", "Player"
+      "Building", "Television Station", "City"
+    }
+nreqs    =
+    { "type", "name", "range"
+      "Building", "University", "City"
+    }
+
 
 [effect_port_facility]
 type    = "Veteran_Build"

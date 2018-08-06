@@ -800,6 +800,28 @@ unit in its city. It also makes up to 2 more unhappy citizens content \
 provided they are not unhappy about aggression.\
 ")
 
+
+[building_television_station]
+name		= _("Television Station")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Television", "Player"
+    }
+graphic	= "b.police_station"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 50
+upkeep		= 2
+sabotage	= 100
+sound		= "b_police_station"
+sound_alt	= "b_generic"
+helptext	= _("\
+A Television Station neutralizes any unhappiness caused by one military \
+unit in its city. It also makes up to 3 more unhappy citizens content \
+provided they are not unhappy about aggression.\
+")
+
 [building_port_facility]
 name		= _("Port Facility")
 genus		= "Improvement"
