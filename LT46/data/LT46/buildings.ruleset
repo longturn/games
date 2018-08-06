@@ -912,7 +912,7 @@ name		= _("SAM Battery")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Rocketry", "Player"
+      "Tech", "Anti Aircraft", "Player"
     }
 graphic	= "b.sam_battery"
 graphic_alt	= "-"

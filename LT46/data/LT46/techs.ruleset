@@ -93,6 +93,7 @@ cost     = 670
 [advance_rocket_engine]
 name     = _("Rocket Engine")
 req1     = "Combustion"
+req1     = "Anti Aircraft"
 flags    = ""
 graphic     = "a.advanced_flight"
 graphic_alt = "-"
@@ -487,6 +488,14 @@ flags    = ""
 graphic     = "a.machine_tools"
 graphic_alt = "-"
 cost     = 480
+
+[advance_anti_aircraft]
+name     = _("Anti Aircraft")
+req1     = "Machine Tools"
+flags    = ""
+graphic     = "a.machine_tools"
+graphic_alt = "-"
+cost     = 520
 
 [advance_magnetism]
 name     = _("Magnetism")
