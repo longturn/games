@@ -519,7 +519,7 @@ rule_name       = "Harbour  Improvements"     ; en_GB spelling used originally
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Electricity", "Player"
+      "Tech", "Oceanic Farming", "Player"
       "TerrainClass", "Oceanic", "Adjacent"
 	  "Building", "Harbour", "City"
     }

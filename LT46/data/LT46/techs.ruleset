@@ -317,6 +317,17 @@ effect of Amphitheaters, and increases city vision radius.\
 ")
 cost     = 310
 
+[advance_oceanic_farming]
+name     = _("Oceanic Farming")
+req1     = "Electricity"
+flags    = ""
+graphic     = "a.electricity"
+graphic_alt = "-"
+helptext = _("\
+Allows food farming on the oceanic tiles. \
+")
+cost     = 450
+
 [advance_shore_engineering]
 name     = _("Shore Engineering")
 req1     = "Theology"
