@@ -784,7 +784,7 @@ name		= _("Police Station")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Communism", "Player"
+      "Tech", "Police Organization", "Player"
     }
 graphic	= "b.police_station"
 graphic_alt	= "-"

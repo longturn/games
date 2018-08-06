@@ -468,8 +468,16 @@ cost     = 30
 
 [advance_labor_union]
 name     = _("Labor Union")
-req1     = "Communism"
+req1     = "Police Organization"
 req2     = "Mobile Warfare"
+flags    = ""
+graphic     = "a.labor_union"
+graphic_alt = "-"
+cost     = 580
+
+[advance_police_organization]
+name     = _("Police Organization")
+req1     = "Communism"
 flags    = ""
 graphic     = "a.labor_union"
 graphic_alt = "-"
