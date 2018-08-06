@@ -1996,7 +1996,7 @@ bombard_rate = 2
 [unit_stealth_fighter]
 name          = _("Stealth Fighter")
 class         = "Air"
-tech_req      = "Stealth"
+tech_req      = "Advanced Stealth"
 obsolete_by   = "None"
 graphic       = "u.stealth_fighter"
 graphic_alt   = "-"

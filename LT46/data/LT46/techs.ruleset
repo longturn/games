@@ -788,6 +788,14 @@ graphic     = "a.stealth"
 graphic_alt = "-"
 cost     = 670
 
+[advance_advanced_stealth]
+name     = _("Advanced Stealth")
+req1     = "Stealth"
+flags    = ""
+graphic     = "a.stealth"
+graphic_alt = "-"
+cost     = 740
+
 [advance_steam_engine]
 name     = _("Steam Engine")
 req1     = "Chemistry"
