@@ -87,8 +87,17 @@ req1     = "Advanced Flight"
 flags    = ""
 graphic     = "a.advanced_flight"
 graphic_alt = "-"
-helptext = _("Makes possible building a ship carrying aircrafts.")
+helptext = _("Makes possible building a ship for carrying aircrafts.")
 cost     = 670
+
+[advance_cargo_aviation]
+name     = _("Cargo Aviation")
+req1     = "Naval Aviation"
+flags    = ""
+graphic     = "a.advanced_flight"
+graphic_alt = "-"
+helptext = _("Makes possible building heavy duty cargo airplanes.")
+cost     = 800
 
 [advance_rocket_engine]
 name     = _("Rocket Engine")
