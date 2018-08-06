@@ -735,7 +735,7 @@ cost     = 400
 
 [advance_refrigeration]
 name     = _("Refrigeration")
-req1     = "Drama"
+req1     = "Sanitation"
 req2     = "Electricity"
 flags    = "Farmland"
 graphic     = "a.refrigeration"
@@ -769,15 +769,6 @@ flags    = ""
 graphic     = "a.sanitation"
 graphic_alt = "-"
 cost     = 180
-
-[advance_drama]
-name     = _("Drama")
-req1     = "Sanitation"
-req2     = "Theology"
-flags    = ""
-graphic     = "a.sanitation"
-graphic_alt = "-"
-cost     = 220
 
 [advance_seafaring]
 name     = _("Seafaring")

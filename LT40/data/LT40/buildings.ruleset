@@ -1873,7 +1873,7 @@ rule_name	= "Shakespeare's Theatre"  ; en_GB spelling used originally
 genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Drama", "Player"
+      "Tech", "Sanitation", "Player"
     }
 graphic	= "b.shakespeares_theatre"
 graphic_alt	= "-"
