@@ -2532,7 +2532,7 @@ Traveling under the surface of the ocean, Submarines have\
 [unit_carrier]
 name          = _("Carrier")
 class         = "Big Sea"
-tech_req      = "Advanced Flight"
+tech_req      = "Naval Aviation"
 obsolete_by   = "None"
 graphic       = "u.carrier"
 graphic_alt   = "-"
