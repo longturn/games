@@ -299,6 +299,7 @@ cost     = 170
 name     = _("Electricity")
 req1     = "Metallurgy"
 req2     = "Theory of Gravity"
+req3     = "Shore Engineering"
 flags    = ""
 graphic     = "a.electricity"
 graphic_alt = "-"
@@ -307,6 +308,19 @@ Allows irrigation without an adjacent water source, improves the \
 effect of Amphitheaters, and increases city vision radius.\
 ")
 cost     = 310
+
+[advance_shore_engineering]
+name     = _("Shore Engineering")
+req1     = "Theology"
+req2     = "Gunpowder"
+flags    = ""
+graphic     = "a.electricity"
+graphic_alt = "-"
+helptext = _("\
+Allows building port facilities.\
+")
+cost     = 310
+
 
 [advance_electronics]
 name     = _("Electronics")
