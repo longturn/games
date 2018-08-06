@@ -1159,7 +1159,7 @@ name		= _("Super Highways")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Automobile", "Player"
+      "Tech", "Advanced Road Transport", "Player"
     }
 graphic	= "b.super_highways"
 graphic_alt	= "-"

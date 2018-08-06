@@ -146,6 +146,14 @@ graphic     = "a.automobile"
 graphic_alt = "-"
 cost     = 460
 
+[advance_advanced_road_transport]
+name     = _("Advanced Road Transport")
+req1     = "Automobile"
+flags    = ""
+graphic     = "a.automobile"
+graphic_alt = "-"
+cost     = 520
+
 [advance_banking]
 name     = _("Banking")
 req1     = "Trade"
