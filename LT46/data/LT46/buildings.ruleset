@@ -1027,7 +1027,7 @@ name		= _("Solar Plant")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Environmentalism", "Player"
+      "Tech", "Solar Energy", "Player"
       "Building", "Factory", "City"
     }
 graphic	= "b.solar_plant"

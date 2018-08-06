@@ -361,6 +361,14 @@ cost     = 370
 
 [advance_environmentalism]
 name     = _("Environmentalism")
+req1     = "Solar Energy"
+flags    = ""
+graphic     = "a.environmentalism"
+graphic_alt = "-"
+cost     = 680
+
+[advance_solar_energy]
+name     = _("Solar Energy")
 req1     = "Recycling"
 req2     = "Space Flight"
 flags    = ""
