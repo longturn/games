@@ -2080,9 +2080,9 @@ reqs    =
 ; Base max city size of 8
 [effect_aqueduct_base]
 type    = "Size_Adj"
-value   = 8
+value   = 16
 
-; Max city size 8 + 8 = 16
+; Max city size 16 + 8 = 24
 [effect_aqueduct]
 type    = "Size_Adj"
 value   = 8

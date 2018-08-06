@@ -102,8 +102,8 @@ sabotage	= 100
 sound		= "b_aqueduct"
 sound_alt	= "b_generic"
 helptext	= _("\
-Allows a city to grow larger than size 8. (A Sewer System is required \
-for a city to grow larger than size 16.)\
+Allows a city to grow larger than size 16. (A Sewer System is required \
+for a city to grow larger than size 24.)\
 "),
 ; /* xgettext:no-c-format */
 _("\
@@ -136,8 +136,8 @@ sabotage	= 100
 sound		= "b_aqueduct"
 sound_alt	= "b_generic"
 helptext	= _("\
-Allows a city to grow larger than size 8. (A Sewer System is required \
-for a city to grow larger than size 16.)\
+Allows a city to grow larger than size 16. (A Sewer System is required \
+for a city to grow larger than size 24.)\
 "),
 ; /* xgettext:no-c-format */
 _("\
@@ -171,8 +171,8 @@ sabotage	= 100
 sound		= "b_aqueduct"
 sound_alt	= "b_generic"
 helptext	= _("\
-Allows a city to grow larger than size 8. (A Sewer System is required \
-for a city to grow larger than size 16.)\
+Allows a city to grow larger than size 16. (A Sewer System is required \
+for a city to grow larger than size 24.)\
 "),
 ; /* xgettext:no-c-format */
 _("\
