@@ -11,7 +11,7 @@
 ; than minor changes.
 
 [datafile]
-description="LT38 (modified Civ2Civ3) terrain data for Freeciv"
+description="LT46 (modified Civ2Civ3/LT40) terrain data for Freeciv"
 options="+Freeciv-2.5-ruleset"
 
 [control]
