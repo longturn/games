@@ -73,17 +73,27 @@ options="+Freeciv-2.5-ruleset"
 [advance_advanced_flight]
 name     = _("Advanced Flight")
 req1     = "Radio"
-req2     = "Machine Tools"
-req3     = "Rocket Engine"
+req2     = "Rocket Engine"
 flags    = ""
 graphic     = "a.advanced_flight"
 graphic_alt = "-"
 helptext = _("Enables movement of nuclear units.")
 cost     = 570
 
+[advance_advanced_surveillance]
+name     = _("Advanced Surveillance")
+req1     = "Advanced Flight"
+req2     = "Television"
+flags    = ""
+graphic     = "a.advanced_flight"
+graphic_alt = "-"
+helptext = _("Allows surveillance aircrafts.")
+cost     = 570
+
 [advance_naval_aviation]
 name     = _("Naval Aviation")
 req1     = "Advanced Flight"
+req2     = "None"
 flags    = ""
 graphic     = "a.advanced_flight"
 graphic_alt = "-"
@@ -93,6 +103,7 @@ cost     = 670
 [advance_cargo_aviation]
 name     = _("Cargo Aviation")
 req1     = "Naval Aviation"
+req2     = "None"
 flags    = ""
 graphic     = "a.advanced_flight"
 graphic_alt = "-"
@@ -102,7 +113,7 @@ cost     = 800
 [advance_rocket_engine]
 name     = _("Rocket Engine")
 req1     = "Combustion"
-req1     = "Anti Aircraft"
+req2     = "Anti Aircraft"
 flags    = ""
 graphic     = "a.advanced_flight"
 graphic_alt = "-"
@@ -158,6 +169,7 @@ cost     = 460
 [advance_advanced_road_transport]
 name     = _("Advanced Road Transport")
 req1     = "Automobile"
+req2     = "None"
 flags    = ""
 graphic     = "a.automobile"
 graphic_alt = "-"
@@ -230,7 +242,7 @@ cost     = 20
 [advance_combined_arms]
 name     = _("Combined Arms")
 req1     = "Mobile Warfare"
-req2     = "Naval Aviation"
+req2     = "Cargo Aviation"
 flags    = ""
 graphic     = "a.combined_arms"
 graphic_alt = "-"
@@ -316,7 +328,6 @@ cost     = 170
 name     = _("Electricity")
 req1     = "Metallurgy"
 req2     = "Theory of Gravity"
-req3     = "Shore Engineering"
 flags    = ""
 graphic     = "a.electricity"
 graphic_alt = "-"
@@ -329,6 +340,7 @@ cost     = 310
 [advance_oceanic_farming]
 name     = _("Oceanic Farming")
 req1     = "Electricity"
+req2     = "None"
 flags    = ""
 graphic     = "a.electricity"
 graphic_alt = "-"
@@ -371,6 +383,7 @@ cost     = 370
 [advance_environmentalism]
 name     = _("Environmentalism")
 req1     = "Solar Energy"
+req2     = "None"
 flags    = ""
 graphic     = "a.environmentalism"
 graphic_alt = "-"
@@ -424,7 +437,7 @@ cost     = 500
 [advance_fusion_power]
 name     = _("Fusion Power")
 req1     = "Superconductors"
-req2     = "Labor Union"
+req2     = "Advanced Stealth"
 flags    = ""
 graphic     = "a.fusion_power"
 graphic_alt = "-"
@@ -506,6 +519,7 @@ cost     = 580
 [advance_police_organization]
 name     = _("Police Organization")
 req1     = "Communism"
+req2     = "None"
 flags    = ""
 graphic     = "a.labor_union"
 graphic_alt = "-"
@@ -550,6 +564,7 @@ cost     = 480
 [advance_anti_aircraft]
 name     = _("Anti Aircraft")
 req1     = "Machine Tools"
+req2     = "None"
 flags    = ""
 graphic     = "a.machine_tools"
 graphic_alt = "-"
@@ -755,9 +770,10 @@ helptext = _("Allows Workers and Engineers to build airbases and buoys.")
 cost     = 540
 
 
-[advance_radio]
+[advance_television]
 name     = _("Television")
 req1     = "Radio"
+req2     = "None"
 flags    = ""
 graphic     = "a.radio"
 graphic_alt = "-"
@@ -815,7 +831,6 @@ cost     = 350
 name     = _("Robotics")
 req1     = "Mobile Warfare"
 req2     = "Computers"
-req3     = "Television"
 flags    = ""
 graphic     = "a.robotics"
 graphic_alt = "-"
@@ -879,6 +894,7 @@ cost     = 670
 [advance_advanced_stealth]
 name     = _("Advanced Stealth")
 req1     = "Stealth"
+req2     = "None"
 flags    = ""
 graphic     = "a.stealth"
 graphic_alt = "-"
@@ -914,6 +930,7 @@ cost     = 700
 [advance_tactics]
 name     = _("Tactics")
 req1     = "Mounted Infantry"
+req2     = "None"
 flags    = ""
 graphic     = "a.tactics"
 graphic_alt = "-"
