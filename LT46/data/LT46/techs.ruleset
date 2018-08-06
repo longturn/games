@@ -81,6 +81,15 @@ graphic_alt = "-"
 helptext = _("Enables movement of nuclear units.")
 cost     = 570
 
+[advance_naval_aviation]
+name     = _("Naval Aviation")
+req1     = "Advanced Flight"
+flags    = ""
+graphic     = "a.advanced_flight"
+graphic_alt = "-"
+helptext = _("Makes possible building a ship carrying aircrafts.")
+cost     = 670
+
 [advance_rocket_engine]
 name     = _("Rocket Engine")
 req1     = "Combustion"
@@ -203,7 +212,7 @@ cost     = 20
 [advance_combined_arms]
 name     = _("Combined Arms")
 req1     = "Mobile Warfare"
-req2     = "Advanced Flight"
+req2     = "Naval Aviation"
 flags    = ""
 graphic     = "a.combined_arms"
 graphic_alt = "-"
