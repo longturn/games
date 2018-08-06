@@ -8,7 +8,7 @@
 ; use your new customized file.
 
 [datafile]
-description="Civ2Civ3 cities data for Freeciv"
+description="LT46 (based on Civ2Civ3/LT40) cities data for Freeciv"
 options="+Freeciv-2.5-ruleset"
 
 ; /* <-- avoid gettext warnings
@@ -86,7 +86,7 @@ A.Smith's Trading Co.\
 ")
 
 [parameters]
-add_to_size_limit  = 8		; cities >= this cannot be added to.
+add_to_size_limit  = 16		; cities >= this cannot be added to.
 angry_citizens = TRUE           ; set to FALSE to disable angry citizens
 celebrate_size_limit = 3        ; cities >= can celebrate
 
