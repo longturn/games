@@ -10,20 +10,20 @@
 ; than minor changes.
 
 [datafile]
-description="LT38 (modified Civ2Civ3) game rules for Freeciv"
+description="LT46 (modified Civ2Civ3, LT40) game rules for Freeciv"
 options="+Freeciv-2.5-ruleset"
 
 [about]
 ; Ruleset name
-name = _("LT38 (modified Civ2Civ3) ruleset")
+name = _("LT46 (modified Civ2Civ3, LT40) ruleset")
 
 ; Description of the ruleset
 description = _("\
-You are playing Freeciv with LT38 (modified Civ2Civ3) rules:\
+You are playing Freeciv with LT46 (modified Civ2Civ3, LT40) rules:\
 \n\n\
 Gameplay more similar to civ3, keeping the combat system from civ2.\
 \n\n\
-Adapted for Longturn multiplayer, with fast gameplay,\
+Adapted for Longturn.org multiplayer, with fast gameplay,\
  but more challenging for the advanced players.\
 \n\n\
 Discussion about the differences to the Civ2Civ3 ruleset can be\
