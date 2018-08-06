@@ -834,12 +834,21 @@ cost     = 700
 
 [advance_tactics]
 name     = _("Tactics")
+req1     = "Mounted Infantry"
+flags    = ""
+graphic     = "a.tactics"
+graphic_alt = "-"
+cost     = 320
+
+[advance_mounted_infantry]
+name     = _("Mounted Infantry")
 req1     = "Conscription"
 req2     = "Leadership"
 flags    = ""
 graphic     = "a.tactics"
 graphic_alt = "-"
 cost     = 290
+
 
 [advance_the_corporation]
 name     = _("The Corporation")

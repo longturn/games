@@ -1550,7 +1550,7 @@ Dragoons are mounted warriors carrying early firearms.\
 [unit_cavalry]
 name          = _("Cavalry")
 class         = "Land"
-tech_req      = "Tactics"
+tech_req      = "Mounted Infantry"
 obsolete_by   = "Armor"
 graphic       = "u.cavalry"
 graphic_alt   = "-"
