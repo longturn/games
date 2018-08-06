@@ -74,10 +74,20 @@ options="+Freeciv-2.5-ruleset"
 name     = _("Advanced Flight")
 req1     = "Radio"
 req2     = "Machine Tools"
+req3     = "Rocket Engine"
 flags    = ""
 graphic     = "a.advanced_flight"
 graphic_alt = "-"
 helptext = _("Enables movement of nuclear units.")
+cost     = 570
+
+[advance_rocket_engine]
+name     = _("Rocket Engine")
+req1     = "Combustion"
+flags    = ""
+graphic     = "a.advanced_flight"
+graphic_alt = "-"
+helptext = _("Allows building the first crude missile units.")
 cost     = 570
 
 [advance_alphabet]
