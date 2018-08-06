@@ -3354,7 +3354,7 @@ When a Barbarian Leader is killed on a tile without any defending units,\
 [unit_awacs]
 name          = _("AWACS")
 class         = "Air"
-tech_req      = "Advanced Flight"
+tech_req      = "Advanced Surveillance"
 obsolete_by   = "None"
 graphic       = "u.awacs"
 graphic_alt   = "u.bomber"  ; backwards compatibility
