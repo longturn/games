@@ -567,6 +567,46 @@ may not found new cities. They can also perform some of the same \
 terrain alterations as Workers.\
 ")
 
+[unit_great_migrants]
+name          = _("Great Migrants")
+class         = "Small Land"
+tech_req      = "Pottery"
+obsolete_by   = "Great Immigrants"
+graphic       = "u.refugee"
+graphic_alt   = "u.worker"
+sound_move    = "m_worker"
+sound_move_alt = "m_generic"
+sound_fight   = "f_worker"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 4
+attack        = 0
+defense       = 1
+hitpoints     = 20
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+flags         = "Settlers", "NonMil", "AddToCity", "Capturable"
+; No veteran levels (level name is never displayed)
+veteran_names = _("green")
+veteran_raise_chance = 0
+veteran_work_raise_chance = 0
+veteran_power_fact = 100
+veteran_move_bonus = 0
+roles         = "Settlers"
+helptext      = _("\
+Great Migrants can be used to transfer population to other cities, but \
+may not found new cities. They can also perform some of the same \
+terrain alterations as Workers. The great migrants move 4x population as the\
+ regular migrants do.\
+")
+
 [unit_immigrants]
 name          = _("Immigrants")
 class         = "Small Land"
@@ -604,6 +644,46 @@ helptext      = _("\
 Immigrants can be used to transfer population to other cities, but \
 may not found new cities. They can also perform some of the same \
 terrain alterations as Workers.\
+")
+
+[unit_great_immigrants]
+name          = _("Great Immigrants")
+class         = "Small Land"
+tech_req      = "Railroad"
+obsolete_by   = "None"
+graphic       = "u.refugee"
+graphic_alt   = "u.worker"
+sound_move    = "m_worker"
+sound_move_alt = "m_generic"
+sound_fight   = "f_worker"
+sound_fight_alt = "f_generic"
+build_cost    = 90
+pop_cost      = 4
+attack        = 0
+defense       = 1
+hitpoints     = 20
+firepower     = 1
+move_rate     = 6
+vision_radius_sq = 25
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+flags         = "Settlers", "NonMil", "AddToCity", "Capturable"
+; No veteran levels (level name is never displayed)
+veteran_names = _("green")
+veteran_raise_chance = 0
+veteran_work_raise_chance = 0
+veteran_power_fact = 100
+veteran_move_bonus = 0
+roles         = "Settlers"
+helptext      = _("\
+Great Immigrants can be used to transfer population to other cities, but \
+may not found new cities. They can also perform some of the same \
+terrain alterations as Workers. The great migrants move 4x population as the\
+ regular immigrants do.\
 ")
 
 
@@ -2068,7 +2148,7 @@ bombard_rate = 4
 name          = _("Trireme")
 class         = "Trireme"
 tech_req      = "Map Making"
-obsolete_by   = "Transport"
+obsolete_by   = "Coastal Transport"
 graphic       = "u.trireme"
 graphic_alt   = "-"
 sound_move    = "m_trireme"
@@ -2603,6 +2683,49 @@ The Transport cannot attack on its own but\
  may defend itself when under attack.\
 "), _("\
 Transports can also clean pollution and fallout on water tiles.\
+")
+; FIXME: also cleans pollution/fallout in coastal cities (and faster
+; than Engineers)
+
+
+[unit_coastal_transport]
+name          = _("Coastal Transport")
+class         = "Trireme"
+tech_req      = "Engineering"
+obsolete_by   = "None"
+graphic       = "u.coastaltransport"
+graphic_alt   = "u.transport"
+sound_move    = "m_transport"
+sound_move_alt = "m_generic"
+sound_fight   = "f_transport"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 0
+attack        = 0
+defense       = 2
+hitpoints     = 20
+firepower     = 1
+move_rate     = 9
+vision_radius_sq = 72
+transport_cap = 2
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Land", "Small Land", "Merchant", "Non Military"
+flags         = "Settlers", "BadCityDefender"
+;veteran_names = _("green"), _("veteran"), _("hardened"), _("elite")
+;veteran_raise_chance      = 50, 33, 20, 0
+;veteran_work_raise_chance = 0, 0, 0, 0
+;veteran_power_fact        = 100, 150, 175, 200
+;veteran_move_bonus        = 0, 0, 0, 0
+roles         = "Ferryboat"
+helptext      = _("\
+The Coastal Transport cannot attack on its own but\
+ may defend itself when under attack.\
+"), _("\
+The Coastal Transport is able to move on rivers.\
 ")
 ; FIXME: also cleans pollution/fallout in coastal cities (and faster
 ; than Engineers)
@@ -3286,7 +3409,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-cargo         = "Land", "Small Land", "Big Land", "Big Siege", "Merchant", "Non Military"
+cargo         = "Land", "Small Land", "Big Land", "Big Siege", "Merchant", "Non Military", "Trireme"
 flags         = "Unbribable"
 roles         = ""
 helptext      = _("\
