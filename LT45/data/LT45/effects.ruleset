@@ -2425,6 +2425,7 @@ nreqs   =
       "MinSize", "4", "City"
     }
 
+
 ; Granary size fixed to 10
 [effect_granary_0]
 type    = "Growth_Food"
@@ -2442,7 +2443,7 @@ nreqs   =
 ; Size adjusted when Foodbox increases
 [effect_granary_1]
 type    = "Growth_Food"
-value   = 50
+value   = 34
 reqs    =
     { "type", "name", "range"
       "Building", "Granary", "City"
@@ -2456,13 +2457,13 @@ nreqs   =
 ; Size adjusted when Foodbox increases
 [effect_granary_2]
 type    = "Growth_Food"
-value   = 50
+value   = 25
 reqs    =
     { "type", "name", "range"
       "Building", "Granary", "City"
       "MinSize", "7", "City"
     }
-
+	
 [effect_harbour]
 type    = "Output_Add_Tile"
 value   = 1
