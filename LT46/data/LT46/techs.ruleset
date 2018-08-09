@@ -340,7 +340,7 @@ cost     = 310
 [advance_oceanic_farming]
 name     = _("Oceanic Farming")
 req1     = "Electricity"
-req2     = "None"
+req2     = "Shore Engineering"
 flags    = ""
 graphic     = "a.electricity"
 graphic_alt = "-"
