@@ -1481,7 +1481,7 @@ reqs    =
 
 [effect_max_rates_fundamentalism]
 type    = "Max_Rates"
-value   = 70
+value   = 60
 reqs    =
     { "type", "name", "range"
       "Gov", "Fundamentalism", "Player"
@@ -1866,7 +1866,7 @@ reqs    =
 
 [effect_bad_sci_fundamentalism]
 type    = "Output_Bonus_2"
-value   = -25
+value   = -30
 reqs    =
     { "type", "name", "range"
       "Gov", "Fundamentalism", "Player"
