@@ -1690,9 +1690,9 @@ sound_fight   = "f_trireme"
 sound_fight_alt = "f_generic"
 build_cost    = 20
 pop_cost      = 0
-attack        = 0
-defense       = 1
-hitpoints     = 10
+attack        = 1
+defense       = 2
+hitpoints     = 4
 firepower     = 1
 move_rate     = 9
 vision_radius_sq = 18
@@ -1709,7 +1709,7 @@ helptext      = _("\
 The Longboat is your first deep ocean capable boat unit\
  that only can carry one Merchant or Small Land unit. It can act\
  as a transport ship and has rudimentary defensive\
- capabilities but can't attack other units.\
+ and offensive capabilities.\
  It's also unique and you can only have one Longboat\
  at a time. The Longboat is heavier than the \
  trireme and this allows it to travel on deep ocean but \
