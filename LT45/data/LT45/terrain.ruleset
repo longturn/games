@@ -1044,8 +1044,8 @@ shield      = 3 ; glacier used to have 4
 
 [base_prefortress]
 name           = _("Pre-Fortress")
-graphic        = "base.fortress"
-graphic_alt    = "-"
+graphic        = "base.outpost"
+graphic_alt    = "base.fortress"
 activity_gfx   = "unit.fortress"
 act_gfx_alt    = "-"
 reqs           =
