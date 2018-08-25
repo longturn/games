@@ -2443,7 +2443,7 @@ nreqs   =
 ; Size adjusted when Foodbox increases
 [effect_granary_1]
 type    = "Growth_Food"
-value   = 34
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Granary", "City"
@@ -2457,7 +2457,7 @@ nreqs   =
 ; Size adjusted when Foodbox increases
 [effect_granary_2]
 type    = "Growth_Food"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Granary", "City"
