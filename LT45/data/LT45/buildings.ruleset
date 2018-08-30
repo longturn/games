@@ -1515,7 +1515,6 @@ sound		= "w_leonardos_workshop"
 sound_alt	= "w_generic"
 helptext	= _("\
 Upgrades two obsolete units per game turn. \
-The upgraded units will lose one veteran level. \
 ")
 
 [building_lighthouse]
