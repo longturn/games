@@ -604,7 +604,7 @@ for more details.\
 ")
 
 [unit_warriors]
-name          = _("Warriors")
+name          = _("Pikemen")
 class         = "Land"
 tech_req      = "None"
 obsolete_by   = "Musketeers"
