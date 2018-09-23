@@ -1,19 +1,18 @@
 rulesetdir LT45
 
-set alltemperate=disabled
 set barbarians=disabled
 set generator="FRACTAL"
 set huts=1
-set landmass=50
+set landmass=60
 set mapsize="PLAYER"
 set separatepoles=enabled
 set specials=250
 set startpos="ALL"
 set steepness=40
-set temperature=50
+set temperature=40
 set tilesperplayer=450
 set topology="WRAPX|WRAPY"
-set wetness=60
+set wetness=50
 set alltemperate=enabled
 #set revealmap=START  #uncomment this for revealing the map for test games
 
