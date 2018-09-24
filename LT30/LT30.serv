@@ -1,0 +1,42 @@
+rulesetdir lt30
+
+set alltemperate=enabled
+set barbarians=0
+set generator=fractal
+set huts=0
+set landmass=60
+set mapsize="PLAYER"
+set separatepoles=disabled
+set specials=150
+set startpos=all
+set steepness=60
+set tilesperplayer=600
+set topology="WRAPX|WRAPY"
+
+set aifill=0
+set allowtake=""
+set citymindist=5
+set cmdlevel info
+set compresstype plain
+set contactturns=0
+set diplchance=50
+set dispersion=4
+set ec_chat=enabled
+set ec_info=enabled 
+set ec_max_size=1000
+set ec_turns=9
+set foggedborders=enabled
+set maxplayers=126
+set newcomerunits=wxkd
+set revolen=2
+set saveturns=1
+set scorelog=1
+set spacerace=disabled
+set startunits=ccccwwxx
+set stats_script=/home/mmazurek/stats/insert.pl
+set techlevel=0
+set timeout=82800
+set trading_city=disabled
+set unitwaittime=36000
+
+start
