@@ -140,13 +140,6 @@ reqs    =
       "Nation", "Barbarian", "Player"
     }
 
-[effect_barb2]
-type    = "No_Diplomacy"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Nation", "Pirate", "Player"
-    }
 
 ; Barbarian no waste by distance
 [effect_barb3]
@@ -157,14 +150,6 @@ reqs    =
       "Nation", "Barbarian", "Player"
     }
 
-; Pirate no waste by distance
-[effect_barb4]
-type    = "Output_Waste_By_Distance"
-value   = -2
-reqs    =
-    { "type", "name", "range"
-      "Nation", "Pirate", "Player"
-    }
 
 ; Specialist output bonuses
 
