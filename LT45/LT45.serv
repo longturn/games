@@ -3,7 +3,7 @@ rulesetdir LT45
 set barbarians=disabled
 set generator="FRACTAL"
 set huts=1
-set landmass=60
+set landmass=50
 set mapsize="PLAYER"
 set separatepoles=enabled
 set specials=250
