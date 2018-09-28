@@ -8,7 +8,7 @@ rulesetdir LT46
 set alltemperate=disabled
 set barbarians=disabled
 set generator="FRACTAL"
-set huts=0
+set huts=1
 set landmass=40
 set mapsize="PLAYER"
 set separatepoles=disabled
