@@ -239,7 +239,7 @@ irrigation_time      = 0
 mining_result        = "no"
 mining_shield_incr   = 0
 mining_time          = 0
-transform_result     = "terrain_grassland"
+transform_result     = "terrain_swamp"
 transform_time       = 36
 clean_pollution_time = 3
 clean_fallout_time   = 3
@@ -281,7 +281,7 @@ mining_result        = "no"
 mining_shield_incr   = 0
 mining_time          = 0
 transform_result     = "terrain_swamp"
-transform_time       = 36
+transform_time       = 54
 clean_pollution_time = 3
 clean_fallout_time   = 3
 warmer_wetter_result = "terrain_deep_ocean"
@@ -322,8 +322,8 @@ irrigation_time      = 0
 mining_result        = "no"
 mining_shield_incr   = 0
 mining_time          = 0
-transform_result     = "no"
-transform_time       = 0
+transform_result     = "terrain_ocean"
+transform_time       = 72
 clean_pollution_time = 3
 clean_fallout_time   = 3
 warmer_wetter_result = "no"
@@ -408,7 +408,7 @@ mining_result        = "yes"
 mining_shield_incr   = 1
 mining_time          = 5
 transform_result     = "terrain_plains"
-transform_time       = 24
+transform_time       = 36
 clean_pollution_time = 3
 clean_fallout_time   = 3
 warmer_wetter_result = "terrain_swamp"
@@ -451,11 +451,11 @@ base_time            = 1
 road_time            = 4
 irrigation_result    = "terrain_plains"
 irrigation_food_incr = 0
-irrigation_time      = 10
-mining_result        = "terrain_grassland"
+irrigation_time      = 15
+mining_result        = "no"
 mining_shield_incr   = 0
 mining_time          = 15
-transform_result     = "terrain_hills"
+transform_result     = "no"
 transform_time       = 24
 clean_pollution_time = 3
 clean_fallout_time   = 3
@@ -496,11 +496,11 @@ base_time            = 1
 road_time            = 2
 irrigation_result    = "yes"
 irrigation_food_incr = 1
-irrigation_time      = 5
-mining_result        = "terrain_forest"
+irrigation_time      = 9
+mining_result        = "terrain_swamp"
 mining_shield_incr   = 0
 mining_time          = 15
-transform_result     = "terrain_hills"
+transform_result     = "no"
 transform_time       = 24
 clean_pollution_time = 3
 clean_fallout_time   = 3
@@ -542,7 +542,7 @@ irrigation_time      = 10
 mining_result        = "yes"
 mining_shield_incr   = 2
 mining_time          = 10
-transform_result     = "terrain_plains"
+transform_result     = "no"
 transform_time       = 24
 clean_pollution_time = 3
 clean_fallout_time   = 3
@@ -584,11 +584,11 @@ base_time            = 1
 road_time            = 4
 irrigation_result    = "terrain_swamp"
 irrigation_food_incr = 0
-irrigation_time      = 10
+irrigation_time      = 18
 mining_result        = "no"
 mining_shield_incr   = 0
 mining_time          = 0
-transform_result     = "terrain_plains"
+transform_result     = "no"
 transform_time       = 24
 clean_pollution_time = 3
 clean_fallout_time   = 3
@@ -679,8 +679,8 @@ irrigation_food_incr = 1
 irrigation_time      = 5
 mining_result        = "terrain_forest"
 mining_shield_incr   = 0
-mining_time          = 10
-transform_result     = "terrain_grassland"
+mining_time          = 15
+transform_result     = "no"
 transform_time       = 24
 clean_pollution_time = 3
 clean_fallout_time   = 3
@@ -714,16 +714,16 @@ trade                = 0
 resources            = "resource_peat", "resource_spice"
 road_food_incr_pct   = 0
 road_shield_incr_pct = 0
-road_trade_incr_pct  = 0
+road_trade_incr_pct  = 1
 base_time            = 1
 road_time            = 4
 irrigation_result    = "yes"
-irrigation_food_incr = 1
-irrigation_time      = 5
-mining_result        = "no"
-mining_shield_incr   = 0
+irrigation_food_incr = 2
+irrigation_time      = 15
+mining_result        = "terrain_grassland"
+mining_shield_incr   = 10
 mining_time          = 0
-transform_result     = "terrain_grassland"
+transform_result     = "no"
 transform_time       = 24
 clean_pollution_time = 3
 clean_fallout_time   = 3
@@ -770,7 +770,7 @@ mining_result        = "yes"
 mining_shield_incr   = 1
 mining_time          = 5
 transform_result     = "terrain_plains"
-transform_time       = 24
+transform_time       = 36
 clean_pollution_time = 3
 clean_fallout_time   = 3
 warmer_wetter_result = "no"
@@ -1115,6 +1115,30 @@ Buoys may be built in the ocean (by units on a sea-going vessel).\
 "), _("\
 As well as granting vision, a buoy in deep ocean yields a shield \
 resource to cities with an Offshore Platform.\
+")
+
+[base_resort]
+name           = _("Resort")
+graphic        = "base.buoy"
+graphic_alt    = "base.ruins"
+activity_gfx   = "unit.buoy"
+act_gfx_alt    = "unit.fortress"
+reqs           =
+    { "type", "name", "range", "negated"
+      "Tech", "Explosives", "Player", FALSE
+      "Terrain", "Mountains", "Local", FALSE
+      "UnitFlag", "Settlers", "Local", FALSE
+      "CityTile", "Center", "Local", TRUE
+    }
+gui_type       = "Fortress"
+build_time     = 15
+border_sq      = 0
+vision_main_sq = 2
+helptext       = _("\
+Resort can be built on mountains.\
+"), _("\
+The city population uses it for rest and recreation \
+resulting in additional Trade produced in the city.\
 ")
 
 [base_ruins]

@@ -475,11 +475,9 @@ sabotage	= 100
 sound		= "b_granary"
 sound_alt	= "b_generic"
 helptext	= _("\
-When any small city grows or shrinks, 10 food points are saved; this \
+When any small city grows or shrinks, some food points are saved; this \
 helps cities to grow faster and more easily withstand famine. With a \
-Granary this is extended to cities of size 4 and above. (10 food points \
-is half what a small city needs to grow, but more points are needed \
-for later growth steps.)\
+Granary this is extended to cities of size 4 and above. \
 "), _("\
 A Granary also halves the food wasted in cities far from your capital. \
 Together with a Courthouse it eliminates food waste.\
@@ -492,10 +490,10 @@ Granary before it grows larger than size 4.\
 name            = _("Harbor")
 rule_name       = "Harbour"     ; en_GB spelling used originally
 genus		= "Improvement"
-reqs	=
+reqs   =
     { "type", "name", "range"
       "Tech", "Seafaring", "Player"
-      "TerrainClass", "Oceanic", "Adjacent"
+      "TerrainClass", "Oceanic", "City"
     }
 graphic	= "b.harbour"
 graphic_alt	= "-"
@@ -684,30 +682,30 @@ A Nuclear Plant has a small risk of suffering a nuclear accident, which \
 can lead to fallout and reduce the city's population.\
 ")
 
-[building_offshore_platform]
-name		= _("Offshore Platform")
-genus		= "Improvement"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Miniaturization", "Player"
-      "TerrainClass", "Oceanic", "Adjacent"
-    }
-graphic	= "b.offshore_platform"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 120
-upkeep		= 3
-sabotage	= 100
-sound		= "b_offshore_platform"
-sound_alt	= "b_generic"
-helptext	= _("\
-Every Ocean tile worked by the city yields one extra shield resource, \
-as well as any Deep Ocean tile containing a Buoy. The city needs to be \
-coastal to build this improvement.\
-"), _("\
-Offshore Platforms also increase the pollution caused by the population \
-of the city.\
-")
+;[building_offshore_platform]
+;name		= _("Offshore Platform")
+;genus		= "Improvement"
+;reqs	=
+;    { "type", "name", "range"
+;      "Tech", "Miniaturization", "Player"
+;      "TerrainClass", "Oceanic", "Adjacent"
+;    }
+;graphic	= "b.offshore_platform"
+;graphic_alt	= "-"
+;obsolete_by	= "None"
+;build_cost	= 120
+;upkeep		= 3
+;sabotage	= 100
+;sound		= "b_offshore_platform"
+;sound_alt	= "b_generic"
+;helptext	= _("\
+;Every Ocean tile worked by the city yields one extra shield resource, \
+;as well as any Deep Ocean tile containing a Buoy. The city needs to be \
+;coastal to build this improvement.\
+;"), _("\
+;Offshore Platforms also increase the pollution caused by the population \
+;of the city.\
+;")
 
 [building_palace]
 name		= _("Palace")
@@ -720,7 +718,7 @@ reqs	=
 graphic	= "b.palace"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 70
+build_cost	= 30
 upkeep		= 0
 sabotage	= 0
 sound		= "b_palace"
@@ -772,7 +770,7 @@ provided they are not unhappy about aggression.\
 ")
 
 [building_port_facility]
-name		= _("Port Facility")
+name		= _("Naval Base")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
@@ -782,7 +780,7 @@ reqs	=
 graphic	= "b.port_facility"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 60
+build_cost	= 80
 upkeep		= 2
 sabotage	= 100
 sound		= "b_port_facility"
@@ -794,6 +792,28 @@ Allows a city to build veteran sea units.  Also, damaged sea units\
 ")
 ; Includes Triremes, but not worth mentioning explicitly as unlikely
 ; to happen
+
+[building_port_terminal]
+name		=_("Port Terminal Facility")
+genus		="Improvement"
+reqs		=
+	{ "type", "name", "range"
+	  "Tech", "The Corporation", "Player"
+          "TerrainClass", "Oceanic", "Adjacent"
+    	}
+graphic	= "b.port_terminal"
+graphic_alt	= "b.port_facility"
+obsolete_by	= "None"
+build_cost	= 60
+upkeep		= 2
+sabotage	= 100
+sound		= "b_port_facility"
+sound_alt	= "b_generic"
+helptext	= _("\
+Gives +1 Trade for all Ocean tiles.\
+")
+
+
 
 [building_power_plant]
 name		= _("Power Plant")

@@ -40,7 +40,7 @@ veteran_raise_chance = 100, 95, 90, 75, 60, 50, 45, 40, 35, 30, 25, 20, 15, 10, 
 
 ; The percentage chance of a settler/engineer increasing level through
 ; performing useful work (per turn)
-veteran_work_raise_chance = 50, 30, 10, 10, 10, 10, 10, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0
+veteran_work_raise_chance = 50, 20, 15, 10, 8, 6, 5, 4, 3, 3, 2, 2, 2, 1, 1, 1, 0
 
 ; Power factors are as a percentage.
 ; +50% is represented by 150
@@ -416,8 +416,8 @@ sound_move    = "m_settlers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_settlers"
 sound_fight_alt = "f_generic"
-build_cost    = 30
-pop_cost      = 2
+build_cost    = 20
+pop_cost      = 1
 attack        = 0
 defense       = 1
 hitpoints     = 20
@@ -453,7 +453,6 @@ size 4, or cities with a Granary of at most size 6.\
 name          = _("Migrants")
 class         = "Small Land"
 tech_req      = "Pottery"
-obsolete_by   = "Migrants II"
 graphic       = "u.refugee"
 graphic_alt   = "u.worker"
 sound_move    = "m_worker"
@@ -470,247 +469,11 @@ move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
-uk_happy      = 0
+uk_happy      = 2
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "AddToCity", "Capturable"
-; No veteran levels (level name is never displayed)
-veteran_names = _("green")
-veteran_raise_chance = 0
-veteran_work_raise_chance = 0
-veteran_power_fact = 100
-veteran_move_bonus = 0
-roles         = "Settlers"
-helptext      = _("\
-Migrants can be used to transfer population to other cities, but \
-may not found new cities. They can also perform some of the same \
-terrain alterations as Workers.\
-")
-
-[unit_migrants2]
-name          = _("Migrants II")
-class         = "Small Land"
-tech_req      = "Trade"
-obsolete_by   = "Migrants III"
-graphic       = "u.refugee"
-graphic_alt   = "u.worker"
-sound_move    = "m_worker"
-sound_move_alt = "m_generic"
-sound_fight   = "f_worker"
-sound_fight_alt = "f_generic"
-build_cost    = 20
-pop_cost      = 1
-attack        = 0
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 1
-flags         = "Settlers", "NonMil", "AddToCity", "Capturable"
-; No veteran levels (level name is never displayed)
-veteran_names = _("green")
-veteran_raise_chance = 0
-veteran_work_raise_chance = 0
-veteran_power_fact = 100
-veteran_move_bonus = 0
-roles         = "Settlers"
-helptext      = _("\
-Migrants can be used to transfer population to other cities, but \
-may not found new cities. They can also perform some of the same \
-terrain alterations as Workers.\
-")
-
-[unit_migrants3]
-name          = _("Migrants III")
-class         = "Small Land"
-tech_req      = "Medicine"
-obsolete_by   = "Migrants IV"
-graphic       = "u.refugee"
-graphic_alt   = "u.worker"
-sound_move    = "m_worker"
-sound_move_alt = "m_generic"
-sound_fight   = "f_worker"
-sound_fight_alt = "f_generic"
-build_cost    = 30
-pop_cost      = 1
-attack        = 0
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 1
-flags         = "Settlers", "NonMil", "AddToCity", "Capturable"
-; No veteran levels (level name is never displayed)
-veteran_names = _("green")
-veteran_raise_chance = 0
-veteran_work_raise_chance = 0
-veteran_power_fact = 100
-veteran_move_bonus = 0
-roles         = "Settlers"
-helptext      = _("\
-Migrants can be used to transfer population to other cities, but \
-may not found new cities. They can also perform some of the same \
-terrain alterations as Workers.\
-")
-
-
-[unit_migrants4]
-name          = _("Migrants IV")
-class         = "Small Land"
-tech_req      = "Democracy"
-obsolete_by   = "Migrants V"
-graphic       = "u.refugee"
-graphic_alt   = "u.worker"
-sound_move    = "m_worker"
-sound_move_alt = "m_generic"
-sound_fight   = "f_worker"
-sound_fight_alt = "f_generic"
-build_cost    = 40
-pop_cost      = 1
-attack        = 0
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 1
-flags         = "Settlers", "NonMil", "AddToCity", "Capturable"
-; No veteran levels (level name is never displayed)
-veteran_names = _("green")
-veteran_raise_chance = 0
-veteran_work_raise_chance = 0
-veteran_power_fact = 100
-veteran_move_bonus = 0
-roles         = "Settlers"
-helptext      = _("\
-Migrants can be used to transfer population to other cities, but \
-may not found new cities. They can also perform some of the same \
-terrain alterations as Workers.\
-")
-
-
-[unit_migrants5]
-name          = _("Migrants V")
-class         = "Small Land"
-tech_req      = "Railroad"
-obsolete_by   = "Migrants VI"
-graphic       = "u.refugee"
-graphic_alt   = "u.worker"
-sound_move    = "m_worker"
-sound_move_alt = "m_generic"
-sound_fight   = "f_worker"
-sound_fight_alt = "f_generic"
-build_cost    = 50
-pop_cost      = 1
-attack        = 0
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 1
-flags         = "Settlers", "NonMil", "AddToCity", "Capturable"
-; No veteran levels (level name is never displayed)
-veteran_names = _("green")
-veteran_raise_chance = 0
-veteran_work_raise_chance = 0
-veteran_power_fact = 100
-veteran_move_bonus = 0
-roles         = "Settlers"
-helptext      = _("\
-Migrants can be used to transfer population to other cities, but \
-may not found new cities. They can also perform some of the same \
-terrain alterations as Workers.\
-")
-
-[unit_migrants6]
-name          = _("Migrants VI")
-class         = "Small Land"
-tech_req      = "Communism"
-obsolete_by   = "Migrants VII"
-graphic       = "u.refugee"
-graphic_alt   = "u.worker"
-sound_move    = "m_worker"
-sound_move_alt = "m_generic"
-sound_fight   = "f_worker"
-sound_fight_alt = "f_generic"
-build_cost    = 60
-pop_cost      = 1
-attack        = 0
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 1
-flags         = "Settlers", "NonMil", "AddToCity", "Capturable"
-; No veteran levels (level name is never displayed)
-veteran_names = _("green")
-veteran_raise_chance = 0
-veteran_work_raise_chance = 0
-veteran_power_fact = 100
-veteran_move_bonus = 0
-roles         = "Settlers"
-helptext      = _("\
-Migrants can be used to transfer population to other cities, but \
-may not found new cities. They can also perform some of the same \
-terrain alterations as Workers.\
-")
-
-[unit_migrants7]
-name          = _("Migrants VII")
-class         = "Small Land"
-tech_req      = "Automobile"
-obsolete_by   = "None"
-graphic       = "u.refugee"
-graphic_alt   = "u.worker"
-sound_move    = "m_worker"
-sound_move_alt = "m_generic"
-sound_fight   = "f_worker"
-sound_fight_alt = "f_generic"
-build_cost    = 80
-pop_cost      = 1
-attack        = 0
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 1
-uk_food       = 2
-uk_gold       = 1
-flags         = "Settlers", "NonMil", "AddToCity", "Capturable"
+flags         = "FieldUnit", "Settlers", "NonMil", "AddToCity", "Capturable", "Unique"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
@@ -742,7 +505,7 @@ attack        = 0
 defense       = 1
 hitpoints     = 10
 firepower     = 1
-move_rate     = 2
+move_rate     = 3
 vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
@@ -851,7 +614,7 @@ uk_happy      = 1
 uk_shield     = 0
 uk_food       = 1
 uk_gold       = 0
-flags         = "Capturer"
+flags         = "Capturer", "Marines"
 roles         = "DefendOk", "FirstBuild"
 helptext      = _("\
 This unit may be built from the start of the game.  It is the\
@@ -1192,7 +955,7 @@ uk_food       = 1
 uk_gold       = 5
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
-flags         = "Marines", "Capturer"
+flags         = "Marines", "Capturer", "CityBuster"
 roles         = "DefendGood", "FirstBuild", "BarbarianSeaTech"
 helptext      = _("\
 Marines are infantry who are experts at marine warfare.\
@@ -1225,7 +988,7 @@ uk_food       = 1
 uk_gold       = 5
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
-flags         = "Paratroopers", "Capturer"
+flags         = "Paratroopers", "Capturer", "CityBuster"
 roles         = "DefendOk"
 helptext      = _("\
 Paratroopers are experts at airborne attacks. \

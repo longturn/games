@@ -23,6 +23,7 @@ set alltemperate=enabled
 #set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
+set aifill=10
 set nationset=all
 set citymindist=1
 set contactturns=2
@@ -42,11 +43,14 @@ set razechance=10
 set happyborders=enabled
 set occupychance=0
 
+set migration=enabled
+set endturn=5000
+
 # diplomacy, technology
 set diplchance=50
 set diplcost=5
 set diplomacy=HUMAN
-set sciencebox=180
+set sciencebox=30
 set techlost_donor=0
 set techlost_recv=100
 set techpenalty=50
@@ -54,9 +58,11 @@ set trademindist=10
 set trading_city=disabled
 set team_pooled_research=disabled
 set techlevel=0
+set borders=enabled
+set contactturns=1
+set savepalace=disabled
 
 # technical
-set aifill=0
 set allowtake=""
 cmdlevel info
 set compresstype plain
@@ -68,11 +74,14 @@ set maxplayers=126
 set saveturns=1
 set scorelog=enabled
 set timeout=82800
-set unitwaittime=36000
+set unitwaittime=0
 set fixedlength 1
-metamessage "LT42 | More info: http://longturn.org/game/LT42/"
+metamessage "LT42 | More info: http://longturn.org/game/LT40/"
 metapatches longturn
 
+set civilwarsize=1000
+set mgr_distance=5
+set mgr_worldchance=5
 
 syncturn
 start
