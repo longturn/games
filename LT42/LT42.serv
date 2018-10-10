@@ -20,7 +20,7 @@ set tilesperplayer=700
 set topology="WRAPX"
 set wetness=60
 set alltemperate=enabled
-#set revealmap=START  #uncomment this for revealing the map for test games
+set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
 set aifill=10
