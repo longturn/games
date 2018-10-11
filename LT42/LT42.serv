@@ -26,7 +26,6 @@ set revealmap=START  #uncomment this for revealing the map for test games
 set aifill=0
 set nationset=all
 set citymindist=1
-set contactturns=2
 set dispersion=6
 set foggedborders=enabled
 set rapturedelay=3
@@ -34,7 +33,6 @@ set restrictinfra=enabled
 set revolen=2
 set spacerace=enabled
 set startunits=cccccwwwwwwwxxx
-set techlevel=0
 set unreachableprotects=disabled
 set killunhomed=0
 set trading_tech=disabled
@@ -76,11 +74,11 @@ set scorelog=enabled
 set timeout=82800
 set unitwaittime=0
 set fixedlength 1
-metamessage "LT42 | More info: http://longturn.org/game/LT40/"
+metamessage "LT42 | More info: http://longturn.org/game/LT42/"
 metapatches longturn
 
 set civilwarsize=1000
-set mgr_distance=5
+set mgr_distance=10
 set mgr_worldchance=5
 
 syncturn
