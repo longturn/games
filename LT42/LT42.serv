@@ -23,7 +23,7 @@ set alltemperate=enabled
 set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
-set aifill=10
+set aifill=0
 set nationset=all
 set citymindist=1
 set contactturns=2
