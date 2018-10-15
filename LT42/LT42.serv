@@ -60,6 +60,9 @@ set borders=enabled
 set contactturns=1
 set savepalace=disabled
 
+set techlossforgiveness=1
+set techlossrestore=50
+
 # technical
 set allowtake=""
 cmdlevel info
