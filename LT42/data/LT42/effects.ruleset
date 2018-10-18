@@ -3586,12 +3586,20 @@ reqs    =
       "Building", "Manhattan Project", "World", TRUE
     }
 
-[effect_atlantic_telegraph_company]
+[effect_Marco_Polo]
 type    = "Have_Embassies"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Building", "Atlantic Telegraph Company", "Player"
+      "Building", "Marco Polo's Embassy", "Player"
+    }
+
+[effect_electricity_embassies]
+type    = "Have_Embassies"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Tech", "Electricity", "Player"
     }
 
 [effect_michelangelos_chapel]
