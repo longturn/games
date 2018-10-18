@@ -1624,27 +1624,6 @@ sound_alt	= "w_generic"
 ;helptext is set in client/helpdata.c:helptext_wonder()
 ;helptext	=
 
-[building_marco_polos_embassy]
-name		= _("Marco Polo's Embassy")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Trade", "Player"
-    }
-graphic	= "b.marco_polos_embassy"
-graphic_alt	= "-"
-obsolete_by	= "Democracy"
-build_cost	= 200
-upkeep		= 0
-sabotage	= 0
-sound		= "w_marco_polos_embassy"
-sound_alt	= "w_generic"
-helptext	= _("\
-The player who owns it gets an embassy with all players.\
-"), _("\
-TIP: if you're behind in research, this can help you catch up, by \
-reducing the cost of technologies that other players already know.\
-")
 
 [building_michelangelos_chapel]
 name		= _("Michelangelo's Chapel")
@@ -2089,18 +2068,17 @@ in the end, it is for the greater good.
 Adds one unit of production to every city belonging to the player.
 ")
 
-[building_atlantic_telegraph_company]
-name		= _("Atlantic Telegraph Company")
+[building_Maro_Polo]
+name		= _("Marco Polo's Embassy")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Electricity", "Player"
-      "Building", "Library", "City"
+      "Tech", "Banking", "Player"
     }
 graphic	= "b.university"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 60
+build_cost	= 100
 upkeep		= 0
 sabotage	= 0
 sound		= "w_marco_polos_embassy"
@@ -2108,4 +2086,5 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Player building it gets an embassy with all players.\
 ")
+
 
