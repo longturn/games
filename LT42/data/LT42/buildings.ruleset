@@ -433,7 +433,7 @@ population of the city.\
 ")
 
 [building_factory_mf]
-name		= _("Factory")
+name		= _("Factory, MF")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
@@ -456,6 +456,9 @@ electrical plant of any kind in the same city.\
 This increase in production may contribute significantly to \
 pollution; a Factory also increases the pollution caused by the \
 population of the city.\
+"),  _("\
+Due to continuation of the city manufacturing tradition started \
+by Manufaktur production, this factory is slightly cheaper to build.\
 ")
 
 
