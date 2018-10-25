@@ -751,6 +751,26 @@ Under Despotism the city containing the palace gains a +75% \
 gold bonus, and under Monarchy a +50% gold bonus.\
 ")
 
+[building_second_palace]
+name		= _("Second Palace")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Theology", "Player"
+    }
+graphic	= "b.courthouse"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 150
+upkeep		= 1
+sabotage	= 100
+sound		= "b_courthouse"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Creates a government center to combat waste and corrupton (similar to Palace).\
+")
+
 [building_police_station]
 name		= _("Police Station")
 genus		= "Improvement"
