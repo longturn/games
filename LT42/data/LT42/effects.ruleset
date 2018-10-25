@@ -1844,23 +1844,24 @@ nreqs    =
 type    = "Output_Bonus"
 value   = 50
 reqs    =
-    { "type", "name", "range"
-      "Building", "Bank", "City"
-      "OutputType", "Gold", "Local"
+    { "type", "name", "range", "negated"
+      "Building", "Bank", "City", FALSE
+      "OutputType", "Gold", "Local", FALSE
     }
 
 [effect_bank_1]
 type    = "Output_Bonus"
 value   = 50
 reqs    =
-    { "type", "name", "range"
-      "Building", "Bank", "City"
-      "OutputType", "Luxury", "Local"
+    { "type", "name", "range", "negated"
+      "Building", "Bank", "City", FALSE
+      "OutputType", "Luxury", "Local", FALSE
+      "Gov", "Communism", "Player", TRUE
     }
 
 [effect_barracks]
 type    = "Veteran_Build"
-value   = 1
+value   = 3
 reqs    =
     { "type", "name", "range"
       "Building", "Barracks", "City"
@@ -1920,7 +1921,7 @@ nreqs   =
 
 [effect_barracks_ii]
 type    = "Veteran_Build"
-value   = 1
+value   = 3
 reqs    =
     { "type", "name", "range"
       "Building", "Barracks II", "City"
@@ -1976,7 +1977,7 @@ nreqs   =
 
 [effect_barracks_iii]
 type    = "Veteran_Build"
-value   = 1
+value   = 3
 reqs    =
     { "type", "name", "range"
       "Building", "Barracks III", "City"
@@ -2983,18 +2984,21 @@ reqs    =
 type    = "Output_Bonus"
 value   = 50
 reqs    =
-    { "type", "name", "range"
-      "Building", "Stock Exchange", "City"
-      "OutputType", "Gold", "Local"
+    { "type", "name", "range", "negated"
+      "Building", "Stock Exchange", "City", FALSE
+      "OutputType", "Gold", "Local", FALSE
+      "Gov", "Communism", "Player", TRUE
+
     }
 
 [effect_stock_exchange_1]
 type    = "Output_Bonus"
 value   = 50
 reqs    =
-    { "type", "name", "range"
-      "Building", "Stock Exchange", "City"
-      "OutputType", "Luxury", "Local"
+    { "type", "name", "range", "negated"
+      "Building", "Stock Exchange", "City", FALSE
+      "OutputType", "Luxury", "Local", FALSE
+      "Gov", "Communism", "Player", TRUE
     }
 
 ; Tiles with farmland don't get Super Highways trade bonus
