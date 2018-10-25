@@ -2217,6 +2217,23 @@ reqs    =
     { "type", "name", "range"
       "Building", "Factory", "City"
     }
+    
+[effect_factory_MF]
+type    = "Output_Bonus"
+value   = 25
+reqs    =
+    { "type", "name", "range"
+      "Building", "Factory, MF", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+[effect_factory__MF_1]
+type    = "Pollu_Pop_Pct"
+value   = 100
+reqs    =
+    { "type", "name", "range"
+      "Building", "Factory, MF", "City"
+    }
 
 ; effect always has value>=50, so this halves food waste
 [effect_granary]
