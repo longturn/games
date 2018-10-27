@@ -3896,6 +3896,18 @@ nreqs   =
       "UnitFlag", "NoVeteran", "Local"
     }
 
+[effect_veteran_anarchy]
+type    = "Veteran_Build"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Anarchy", "Player"
+    }
+nreqs   =
+    { "type", "name", "range"
+      "UnitFlag", "NonMil", "Local"
+      "UnitFlag", "NoVeteran", "Local"
+    }
     
 
 [effect_sun_tzus_war_academy]
