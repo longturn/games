@@ -208,6 +208,11 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Increases the luxury and tax output in a city by an additional 50%. \
 With both a Bank and a Marketplace in a city, the total bonus is 100%.\
+\
+Under Communism, the Bank does not give a luxury bonus.\
+\
+Units constructed in a city with this building have one additional\
+veteran level.\
 ")
 
 [building_barracks]
@@ -229,10 +234,9 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 With a Barracks, each new land unit built in a city will\
- automatically have Veteran status, which means that its attack and\
- defense strengths are increased by 50%.  Also, damaged land units\
- which stay in town for one full turn without moving are completely\
- restored.\
+ automatically have three additional Veteran levels.\
+ Also, damaged land units which stay in town for one full \
+ turn without moving are completely restored.\
 ")
 
 [building_barracks_ii]
@@ -254,10 +258,9 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 With a Barracks, each new land unit built in a city will\
- automatically have Veteran status, which means that its attack and\
- defense strengths are increased by 50%.  Also, damaged land units\
- which stay in town for one full turn without moving are completely\
- restored.\
+ automatically have three additional Veteran levels.\
+ Also, damaged land units which stay in town for one full \
+ turn without moving are completely restored.\
 ")
 
 [building_barracks_iii]
@@ -278,10 +281,9 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 With a Barracks, each new land unit built in a city will\
- automatically have Veteran status, which means that its attack and\
- defense strengths are increased by 50%.  Also, damaged land units\
- which stay in town for one full turn without moving are completely\
- restored.\
+ automatically have three additional Veteran levels.\
+ Also, damaged land units which stay in town for one full \
+ turn without moving are completely restored.\
 ")
 
 [building_cathedral]
@@ -306,6 +308,11 @@ easier to maintain order in that city; however, it does not affect \
 citizens made unhappy by aggression. Knowledge of Theology \
 increases the effect of a Cathedral, making an additional unhappy \
 citizen content, except under Communism.\
+\
+Units constructed in a city with this building have one additional\
+veteran level.\
+\
+Decreases corruption by a small amount, depending on government.\
 ")
 
 [building_city_walls]
@@ -396,8 +403,8 @@ sabotage	= 100
 sound		= "b_courthouse"
 sound_alt	= "b_generic"
 helptext	= _("\
-Halves all kinds of waste in a city (corruption, production waste, and \
-food waste). In your capital, corruption and production waste is \
+Reduces corruption in a city, amount depending on government. \
+In your capital, corruption and production waste is \
 eliminated. A Granary together with a Courthouse in a city will \
 eliminate food waste.\
 "), _("\
@@ -571,6 +578,11 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Increases the science output in a city by 50%, or by 100% once the \
 Great Library has been built by any player.\
+\
+Units constructed in a city with this building have one additional\
+veteran level.\
+\
+Decreases corruption by a small amount, depending on government.\
 ")
 
 [building_marketplace]
@@ -591,6 +603,9 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Increases the luxury and tax output in a city by 50%.\
+\
+Units constructed in a city with this building have one additional\
+veteran level.\
 ")
 
 [building_mass_transit]
@@ -790,6 +805,8 @@ helptext	= _("\
 A Police Station neutralizes any unhappiness caused by one military \
 unit in its city. It also makes up to 2 more unhappy citizens content \
 provided they are not unhappy about aggression.\
+\
+Decreases corruption by a small amount, depending on government.\
 ")
 
 [building_port_facility]
@@ -1213,6 +1230,11 @@ Makes one unhappy citizen content. The Mysticism advance doubles \
 this effect (except under a Communist government). With both Mysticism \
 and the Temple of Artemis, 4 citizens are made content (3 under \
 Communism). Does not affect citizens made unhappy by aggression.\
+\
+Units constructed in a city with this building have one additional\
+veteran level.\
+\
+Decreases corruption by a small amount, depending on government.\
 ")
 
 [building_university]
@@ -1241,6 +1263,11 @@ _("\
 The total bonus is 100% if a Library and a University are present \
 together in the same city, increasing to 200% once the Great Library and \
 Isaac Newton's College have both been built.\
+\
+Units constructed in a city with this building have one additional\
+veteran level.\
+\
+Decreases corruption by a small amount, depending on government.\
 ")
 
 [building_apollo_program]
@@ -1926,7 +1953,10 @@ sound_alt   = "b_generic"
 helptext   = _("\
 Increases production in the city by 2 Shields.\
 With the onset of Industrialization, it becomes\
-a museum and produces 2 Trade instead.
+a museum and produces 2 Trade instead. \
+\
+If a Factory is built in a city with Manufaktur,\
+its cost is decreased.\
 ")
 
 
