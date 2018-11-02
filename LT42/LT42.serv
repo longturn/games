@@ -81,7 +81,7 @@ metamessage "LT42 | More info: http://longturn.org/game/LT42/"
 metapatches longturn
 
 set civilwarsize=1000
-set mgr_distance=10
+set mgr_distance=5
 set mgr_worldchance=5
 
 syncturn
