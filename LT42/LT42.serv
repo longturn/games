@@ -32,6 +32,7 @@ set rapturedelay=3
 set restrictinfra=enabled
 set revolen=2
 set spacerace=enabled
+set endspaceship=disabled
 set startunits=cccccwwwwwwwxxx
 set unreachableprotects=disabled
 set killunhomed=0
