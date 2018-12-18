@@ -21,3 +21,6 @@ How To Start A Game
     echo '/autocreate players' >> input
     echo '/start' >> input
     echo '/syncturn 3' >> input
+
+    mkdir -p save/autosave
+    sh autosave.sh
