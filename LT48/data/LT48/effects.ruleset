@@ -847,7 +847,8 @@ reqs    =
       "OutputType", "Gold", "Local"
     }
 nreqs   =
-    { "Gov", "Anarchy", "Player"
+    { "type", "name", "range"
+      "Gov", "Anarchy", "Player"
       "Gov", "Monarchy", "Player"
       "Gov", "Republic", "Player"
       "Gov", "Communism", "Player"
@@ -862,7 +863,8 @@ reqs    =
       "OutputType", "Gold", "Local"
     }
 nreqs   =
-    { "Gov", "Anarchy", "Player"
+    { "type", "name", "range"
+      "Gov", "Anarchy", "Player"
       "Gov", "Despotism", "Player"
       "Gov", "Republic", "Player"
       "Gov", "Fundamentalism", "Player"
@@ -877,7 +879,8 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 nreqs   =
-    { "Gov", "Anarchy", "Player"
+    { "type", "name", "range"
+      "Gov", "Anarchy", "Player"
       "Gov", "Despotism", "Player"
       "Gov", "Republic", "Player"
       "Gov", "Democracy", "Player"
@@ -891,7 +894,8 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 nreqs   =
-    { "Gov", "Republic", "Player"
+    { "type", "name", "range"
+      "Gov", "Republic", "Player"
       "Gov", "Fundamentalism", "Player"
       "Gov", "Communism", "Player"
       "Gov", "Monarchy", "Player"
@@ -917,7 +921,7 @@ reqs    =
       "OutputType", "Food", "Local"
     }
 nreqs   =
-    {
+    { "type", "name", "range"
       "Gov", "Anarchy", "Player"
       "Gov", "Republic", "Player"
       "Gov", "Monarchy", "Player"
@@ -942,7 +946,7 @@ reqs    =
       "OutputType", "Food", "Local"
     }
 nreqs   =
-    {
+    { "type", "name", "range"
       "Gov", "Anarchy", "Player"
       "Gov", "Despotism", "Player"
       "Gov", "Monarchy", "Player"
