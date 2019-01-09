@@ -10,7 +10,7 @@
 ; than minor changes.
 
 [datafile]
-description="LT44 (modified Civ2Civ3/LT39/LT41/LT43) effects data for Freeciv"
+description="LT47 (modified Civ2Civ3/LT39/LT41/LT43/LT44/LT45) effects data for Freeciv"
 options="+Freeciv-2.5-ruleset"
 
 ; /* <-- avoid gettext warnings
