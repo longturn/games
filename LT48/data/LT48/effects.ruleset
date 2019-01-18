@@ -133,7 +133,7 @@ value   = 4
       "Gov", "Anarchy", "Player", TRUE
     }
 
-[effect_unhappysize]
+[effect_unhappysize_anarchy]
 type    = "City_Unhappy_Size"
 value   = 1
     { "type", "name", "range"
