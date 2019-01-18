@@ -129,6 +129,17 @@ nreqs    =
 [effect_unhappysize]
 type    = "City_Unhappy_Size"
 value   = 4
+    { "type", "name", "range", "negated"
+      "Gov", "Anarchy", "Player", TRUE
+    }
+
+[effect_unhappysize]
+type    = "City_Unhappy_Size"
+value   = 1
+    { "type", "name", "range"
+      "Gov", "Anarchy", "Player"
+    }
+
 
 ; Barbarian effects
 
