@@ -657,6 +657,18 @@ graphic     = "a.pottery"
 graphic_alt = "-"
 cost     = 10
 
+[advance_Agriculture]
+name     = _("Agriculture")
+req1     = "pottery"
+req2     = "None"
+flags    = ""
+graphic     = "a.agriculture"
+graphic_alt = "a.pottery"
+cost     = 10
+helptext = _("Removes food penalty from 2+ tiles.")
+
+
+
 [advance_radio]
 name     = _("Radio")
 req1     = "Flight"
