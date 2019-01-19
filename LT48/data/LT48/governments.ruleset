@@ -73,8 +73,7 @@ Anarchy is simply the absence of any recognizable government.\
 ; /* xgettext:no-c-format */
 _("\
 * Buildings and technologies do not require any upkeep.\n\
-* Each city can support up to 2 units for free; further units each cost\
- 1 shield per turn.\n\
+* Units do not require gold upkeep; shield upkeep is intact.\n\
 * Military units do not cause unhappiness even when deployed aggressively.\n\
 * You have no control over tax rates. Half of the trade income is\
  simply lost to your economy, and the remainder all goes to luxuries.\
@@ -83,39 +82,38 @@ _("\
 ")
 
 ;------------------------------------------------------------------------
-;[government_tribal]
+[government_tribal]
 
-;name        = _("Tribal")
+name        = _("Tribal")
 ; No reqs
-;graphic     = "gov.tribal"
-;graphic_alt = "s.tax_luxury"
-;
-;ruler_male_title = _("Warlord %s")
-;ruler_female_title = _("Warlady %s")
-;
-;helptext = _("\
-;Under a Tribal government, you are part ruler of your people. Your\
-; control over your citizens is maintained largely by spiritual counsel.\
-;"), _("\
-;Compared to Despotism, a Tribal economy is more shield-oriented. Its\
-; bonuses to veterancy and strong martial law can be an advantage in\
-; wartime.\
-;"),
-;; /* xgettext:no-c-format */
-;_("\
-;* Increases by half the chance of land units getting the next veteran level\
-; after a battle.\n\
-;* Each city can support up to 2 units for free; further units each cost\
-; 1 shield per turn.\n\
-;* Unlike later governments, military units do not cause unhappiness even\
-; when deployed aggressively.\n\
-;* Base corruption is 30% (the highest under any government). This\
-; increases with distance from the capital (half as fast with knowledge\
-; of The Corporation).\n\
-;* There is no base level of production waste, but an increasing amount\
-; with distance from the capital (half as fast with knowledge of Trade).\
-;")
-;
+graphic     = "gov.tribal"
+graphic_alt = "s.tax_luxury"
+
+ruler_male_title = _("Chief %s")
+ruler_female_title = _("Chief %s")
+
+helptext = _("\
+Under a Tribal government, you are part ruler of your people. Your\
+ control over your citizens is maintained largely by spiritual counsel.\
+"), _("\
+A Tribal societly is people-oriented. People take care of thir own needs, \
+ supply their army and maintain their buildings, but no surplus comes \
+ to the government. There is no centralised science, but occasional local \
+ scientists occasionally trickle in some data, although very, very \
+ little. On low tech levels the local communities take care of their \
+ tech upkeep to a slightly higher degree than in other governments. \
+ Bonuses to veterancy can be an advantage in wartime.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Up to three units can keep marshall law, each making two unhappy \
+ citizens content.\n\
+* Each city supports food and gold to all its military. \n\
+* Unlike later governments, military units do not cause unhappiness even\
+ when deployed aggressively.\n\
+* Every unit is created with 3 veteran levels.\
+")
+
 ;------------------------------------------------------------------------
 [government_despotism]
 
