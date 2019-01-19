@@ -183,27 +183,49 @@ reqs    =
 type    = "Specialist_Output"
 value   = 2
 reqs    =
-    { "type", "name", "range"
-      "Specialist", "Elvis", "Local"
-      "OutputType", "Luxury", "Local"
+    { "type", "name", "range", "negated"
+      "Specialist", "Elvis", "Local", FALSE
+      "OutputType", "Luxury", "Local", FALSE
     }
 
 [effect_scientist]
 type    = "Specialist_Output"
 value   = 2
 reqs    =
-    { "type", "name", "range"
-      "Specialist", "Scientist", "Local"
-      "OutputType", "Science", "Local"
+    { "type", "name", "range", "negated"
+      "Specialist", "Scientist", "Local", FALSE
+      "OutputType", "Science", "Local", FALSE
+      "Gov", "Anarchy", "Player", TRUE
+}
+
+[effect_taxman_tribal]
+type    = "Specialist_Output"
+value   = 0
+reqs    =
+    { "type", "name", "range", "negated"
+      "Specialist", "Taxman", "Local", FALSE
+      "OutputType", "Gold", "Local", FALSE
+      "Gov", "Tribal", "Player", FALSE
     }
+
+[effect_scientist_tribal]
+type    = "Specialist_Output"
+value   = 1
+reqs    =
+    { "type", "name", "range", "negated"
+      "Specialist", "Scientist", "Local", FALSE
+      "OutputType", "Science", "Local", FALSE
+      "Gov", "Tribal", "Player", FALSE
+}
 
 [effect_taxman]
 type    = "Specialist_Output"
 value   = 2
 reqs    =
-    { "type", "name", "range"
-      "Specialist", "Taxman", "Local"
-      "OutputType", "Gold", "Local"
+    { "type", "name", "range", "negated"
+      "Specialist", "Taxman", "Local", FALSE
+      "OutputType", "Gold", "Local", FALSE
+      "Gov", "Tribal", "Player", TRUE
     }
 
 ; Vision benefit from fortress watchtowers
