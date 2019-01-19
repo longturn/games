@@ -113,7 +113,7 @@ reqs    =
       "AI", "Cheating", "Player"
     }
 
-[effect_ai_cheat_defense]
+[effect_ai_cheat]
 type    = "Defend_Bonus"
 value   = 50
 reqs    =
@@ -587,66 +587,11 @@ reqs    =
 ;      "OutputType", "Shield", "Local"
 ;    }
 
-[effect_waste_anarchy]
+[effect_waste]
 type    = "Output_Waste"
 value   = 49
 reqs    =
     { "type", "name", "range"
-      "Gov", "Anarchy", "Player"
-      "OutputType", "Shield", "Local"
-    }
-
-[effect_waste_despotism]
-type    = "Output_Waste"
-value   = 49
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Despotism", "Player"
-      "OutputType", "Shield", "Local"
-    }
-
-[effect_waste_monarchy]
-type    = "Output_Waste"
-value   = 49
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Monarchy", "Player"
-      "OutputType", "Shield", "Local"
-    }
-
-[effect_waste_fundamentalism]
-type    = "Output_Waste"
-value   = 49
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Fundamentalism", "Player"
-      "OutputType", "Shield", "Local"
-    }
-
-;[effect_waste_federation]
-;type    = "Output_Waste"
-;value   = 49
-;reqs    =
-;    { "type", "name", "range"
-;      "Gov", "Federation", "Player"
-;      "OutputType", "Shield", "Local"
-;    }
-
-[effect_waste_republic]
-type    = "Output_Waste"
-value   = 49
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Republic", "Player"
-      "OutputType", "Shield", "Local"
-    }
-
-[effect_waste_democracy]
-type    = "Output_Waste"
-value   = 49
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Democracy", "Player"
       "OutputType", "Shield", "Local"
     }
 
@@ -664,6 +609,22 @@ value   = 99
 reqs    =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
+    }
+
+[effect_tech_upkeep_tribal]
+type    = "Tech_Upkeep_Free"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Tribal", "Player"
+    }
+
+[effect_building_upkeep_tribal]
+type    = "Upkeep_Free"
+value   = 99
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Tribal", "Player"
     }
 
 [effect_building_upkeep_communism]
@@ -705,7 +666,7 @@ reqs    =
 nreqs   =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
-;      "Gov", "Tribal", "Player"
+      "Gov", "Tribal", "Player"
       "Gov", "Communism", "Player"
       "Gov", "Despotism", "Player"
       "Gov", "Monarchy", "Player"
@@ -749,7 +710,7 @@ value   = 1
 nreqs   =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
-;      "Gov", "Tribal", "Player"
+      "Gov", "Tribal", "Player"
 ;      "Gov", "Communism", "Player"
       "Gov", "Despotism", "Player"
 ;      "Gov", "Monarchy", "Player"
@@ -785,7 +746,7 @@ value   = 1
 nreqs   =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
-;      "Gov", "Tribal", "Player"
+      "Gov", "Tribal", "Player"
       "Gov", "Communism", "Player"
       "Gov", "Despotism", "Player"
       "Gov", "Monarchy", "Player"
@@ -849,6 +810,15 @@ reqs    =
       "OutputType", "Gold", "Local"
       "Gov", "Anarchy", "Player"
     }
+    
+[effect_upkeep_free_units_gold_base_tribal]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 99
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Gold", "Local"
+      "Gov", "Tribal", "Player"
+    }
 
 [effect_upkeep_free_units_gold_base_despotism_funda]
 type    = "Unit_Upkeep_Free_Per_City"
@@ -860,6 +830,7 @@ reqs    =
 nreqs   =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
+      "Gov", "Tribal", "Player"
       "Gov", "Monarchy", "Player"
       "Gov", "Republic", "Player"
       "Gov", "Communism", "Player"
@@ -876,6 +847,7 @@ reqs    =
 nreqs   =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
+      "Gov", "Tribal", "Player"
       "Gov", "Despotism", "Player"
       "Gov", "Republic", "Player"
       "Gov", "Fundamentalism", "Player"
@@ -892,6 +864,7 @@ reqs    =
 nreqs   =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
+      "Gov", "Tribal", "Player"
       "Gov", "Despotism", "Player"
       "Gov", "Republic", "Player"
       "Gov", "Democracy", "Player"
@@ -924,6 +897,16 @@ reqs    =
       "Gov", "Anarchy", "Player"
     }
 
+[effect_upkeep_free_units_food_base_anarchy]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 99
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "Gov", "Tribal", "Player"
+    }
+
+
 [effect_upkeep_free_units_food_base_despotism_funda]
 type    = "Unit_Upkeep_Free_Per_City"
 value   = 5
@@ -934,6 +917,7 @@ reqs    =
 nreqs   =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
+      "Gov", "Tribal", "Player"
       "Gov", "Republic", "Player"
       "Gov", "Monarchy", "Player"
       "Gov", "Communism", "Player"
@@ -959,6 +943,7 @@ reqs    =
 nreqs   =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
+      "Gov", "Tribal", "Player"
       "Gov", "Despotism", "Player"
       "Gov", "Monarchy", "Player"
       "Gov", "Fundamentalism", "Player"
@@ -1313,6 +1298,15 @@ reqs    =
       "Gov", "Anarchy", "Player"
     }
 
+[effect_max_rates_tribal]
+type    = "Max_Rates"
+value   = 100
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Tribal", "Player"
+    }
+
+
 ;[effect_max_rates_tribal]
 ;type    = "Max_Rates"
 ;value   = 60
@@ -1379,7 +1373,7 @@ reqs    =
 
 [effect_martial_law_each_anarchy]
 type    = "Martial_Law_Each"
-value   = 1
+value   = 0
 reqs    =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
@@ -1401,13 +1395,13 @@ reqs    =
       "Gov", "Monarchy", "Player"
     }
 
-;[effect_martial_law_each_tribal]
-;type    = "Martial_Law_Each"
-;value   = 2
-;reqs    =
-;    { "type", "name", "range"
-;      "Gov", "Tribal", "Player"
-;    }
+[effect_martial_law_each_tribal]
+type    = "Martial_Law_Each"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Tribal", "Player"
+    }
 
 [effect_martial_law_each_communism]
 type    = "Martial_Law_Each"
@@ -1424,6 +1418,15 @@ reqs    =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
     }
+
+[effect_martial_law_max_tribal]
+type    = "Martial_Law_Max"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Tribal", "Player"
+    }
+
 
 [effect_martial_law_max_despotism]
 type    = "Martial_Law_Max"
@@ -1457,33 +1460,6 @@ reqs    =
       "Gov", "Communism", "Player"
     }
 
-; Railroad because makes Pyramids obsolete
-[effect_gov_tile_penalty_anarchy]
-type    = "Output_Penalty_Tile"
-value   = 2
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Anarchy", "Player"
-    }
-nreqs   =
-    { "type", "name", "range"
-      "Building", "Pyramids", "Player"
-      "Tech", "Railroad", "World"
-    }
-
-; Railroad because makes Pyramids obsolete
-;[effect_gov_tile_penalty_tribal]
-;type    = "Output_Penalty_Tile"
-;value   = 2
-;reqs    =
-;    { "type", "name", "range"
-;      "Gov", "Tribal", "Player"
-;    }
-;nreqs   =
-;    { "type", "name", "range"
-;      "Building", "Pyramids", "Player"
-;      "Tech", "Railroad", "World"
-;    }
 
 ; Railroad because makes Pyramids obsolete
 [effect_gov_tile_penalty_despotism]
@@ -1491,12 +1467,11 @@ type    = "Output_Penalty_Tile"
 value   = 2
 reqs    =
     { "type", "name", "range"
-      "Gov", "Despotism", "Player"
+      "OutputType", "Food", "Local"
     }
 nreqs   =
     { "type", "name", "range"
-      "Building", "Pyramids", "Player"
-      "Tech", "Railroad", "World"
+      "Tech", "Improved Agriculture", "Player"
     }
 
 [effect_gov_tile_bonus_republic]
@@ -1535,7 +1510,7 @@ reqs    =
 nreqs   =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
-;      "Gov", "Tribal", "Player"
+      "Gov", "Tribal", "Player"
       "Gov", "Communism", "Player"
       "Gov", "Despotism", "Player"
 ;      "Gov", "Monarchy", "Player"
@@ -2058,47 +2033,47 @@ nreqs   =
     }
 
 ; Every Land
-[effect_city_defense_0]
-type    = "Defend_Bonus"
-value   = 50
-reqs    =
-    { "type", "name", "range"
-      "CityTile", "Center", "Local"
-    }
-nreqs   =
-    { "type", "name", "range"
-;      "UnitClass", "Land", "Local"
-;      "UnitClass", "Small Land", "Local"
-;      "UnitClass", "Big Land", "Local"
-;      "UnitClass", "Merchant", "Local"
-      "UnitClass", "Sea", "Local"
-      "UnitClass", "Trireme", "Local"
-      "UnitClass", "Helicopter", "Local"
-      "UnitClass", "Air", "Local"
-      "UnitClass", "Missile", "Local"
-    }
-
-; Every Land, Sea, Trireme
-[effect_city_defense_1]
-type    = "Defend_Bonus"
-value   = 50
-reqs    =
-    { "type", "name", "range"
-      "MinSize", "9", "City"
-      "CityTile", "Center", "Local"
-    }
-nreqs   =
-    { "type", "name", "range"
-;      "UnitClass", "Land", "Local"
-;      "UnitClass", "Small Land", "Local"
-;      "UnitClass", "Big Land", "Local"
-;      "UnitClass", "Merchant", "Local"
+;[effect_city_defense_0]
+;type    = "Defend_Bonus"
+;value   = 50
+;reqs    =
+;    { "type", "name", "range"
+;      "CityTile", "Center", "Local"
+;    }
+;nreqs   =
+;    { "type", "name", "range"
+;;      "UnitClass", "Land", "Local"
+;;      "UnitClass", "Small Land", "Local"
+;;      "UnitClass", "Big Land", "Local"
+;;      "UnitClass", "Merchant", "Local"
 ;      "UnitClass", "Sea", "Local"
 ;      "UnitClass", "Trireme", "Local"
-      "UnitClass", "Helicopter", "Local"
-      "UnitClass", "Air", "Local"
-      "UnitClass", "Missile", "Local"
-    }
+;      "UnitClass", "Helicopter", "Local"
+;      "UnitClass", "Air", "Local"
+;      "UnitClass", "Missile", "Local"
+;    }
+
+; Every Land, Sea, Trireme
+;[effect_city_defense_1]
+;type    = "Defend_Bonus"
+;value   = 50
+;reqs    =
+;    { "type", "name", "range"
+;      "MinSize", "9", "City"
+;      "CityTile", "Center", "Local"
+;    }
+;nreqs   =
+;    { "type", "name", "range"
+;;      "UnitClass", "Land", "Local"
+;;      "UnitClass", "Small Land", "Local"
+;;      "UnitClass", "Big Land", "Local"
+;;      "UnitClass", "Merchant", "Local"
+;;      "UnitClass", "Sea", "Local"
+;;      "UnitClass", "Trireme", "Local"
+;      "UnitClass", "Helicopter", "Local"
+;      "UnitClass", "Air", "Local"
+;      "UnitClass", "Missile", "Local"
+;    }
 
 ; Every Land
 [effect_city_walls_0]
@@ -4004,7 +3979,20 @@ nreqs   =
       "UnitFlag", "NonMil", "Local"
       "UnitFlag", "NoVeteran", "Local"
     }
-    
+
+[effect_veteran_tribal]
+type    = "Veteran_Build"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Tribal", "Player"
+    }
+nreqs   =
+    { "type", "name", "range"
+      "UnitFlag", "NonMil", "Local"
+      "UnitFlag", "NoVeteran", "Local"
+    }
+
 
 [effect_sun_tzus_war_academy]
 type    = "Veteran_Build"
@@ -5171,6 +5159,7 @@ reqs    =
       "Building", "Sewer System", "City"
     }
 
+
 ;;;;;;;;;;;; FIVE YEAR PLANS ;;;;;;;;;;;;;;;;;;;
 [effect_5yrPlan1]
 type    = "Output_Add_Tile"
@@ -5404,3 +5393,216 @@ reqs    =
     { "type", "name", "range"
       "MinSize", "20", "City"
     }
+
+;;;;;;;;;;;;;;;;; PROGRESSIVE CITY DEFENCE ;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[effect_city_defense_1]
+type    = "Defend_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+      "CityTile", "Center", "Local"
+      "MinSize", "1", "City"
+    }
+nreqs   =
+    { "type", "name", "range"
+;      "UnitClass", "Land", "Local"
+;      "UnitClass", "Small Land", "Local"
+;      "UnitClass", "Big Land", "Local"
+;      "UnitClass", "Merchant", "Local"
+      "UnitClass", "Sea", "Local"
+      "UnitClass", "Trireme", "Local"
+      "UnitClass", "Helicopter", "Local"
+      "UnitClass", "Air", "Local"
+      "UnitClass", "Missile", "Local"
+    }
+
+[effect_city_defense_2]
+type    = "Defend_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+      "CityTile", "Center", "Local"
+      "MinSize", "2", "City"
+    }
+nreqs   =
+    { "type", "name", "range"
+;      "UnitClass", "Land", "Local"
+;      "UnitClass", "Small Land", "Local"
+;      "UnitClass", "Big Land", "Local"
+;      "UnitClass", "Merchant", "Local"
+      "UnitClass", "Sea", "Local"
+      "UnitClass", "Trireme", "Local"
+      "UnitClass", "Helicopter", "Local"
+      "UnitClass", "Air", "Local"
+      "UnitClass", "Missile", "Local"
+    }
+
+[effect_city_defense_3]
+type    = "Defend_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+      "CityTile", "Center", "Local"
+      "MinSize", "3", "City"
+    }
+nreqs   =
+    { "type", "name", "range"
+;      "UnitClass", "Land", "Local"
+;      "UnitClass", "Small Land", "Local"
+;      "UnitClass", "Big Land", "Local"
+;      "UnitClass", "Merchant", "Local"
+      "UnitClass", "Sea", "Local"
+      "UnitClass", "Trireme", "Local"
+      "UnitClass", "Helicopter", "Local"
+      "UnitClass", "Air", "Local"
+      "UnitClass", "Missile", "Local"
+    }
+
+[effect_city_defense_4]
+type    = "Defend_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+      "CityTile", "Center", "Local"
+      "MinSize", "4", "City"
+    }
+nreqs   =
+    { "type", "name", "range"
+;      "UnitClass", "Land", "Local"
+;      "UnitClass", "Small Land", "Local"
+;      "UnitClass", "Big Land", "Local"
+;      "UnitClass", "Merchant", "Local"
+      "UnitClass", "Sea", "Local"
+      "UnitClass", "Trireme", "Local"
+      "UnitClass", "Helicopter", "Local"
+      "UnitClass", "Air", "Local"
+      "UnitClass", "Missile", "Local"
+    }
+
+[effect_city_defense_5]
+type    = "Defend_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+      "CityTile", "Center", "Local"
+      "MinSize", "5", "City"
+    }
+nreqs   =
+    { "type", "name", "range"
+;      "UnitClass", "Land", "Local"
+;      "UnitClass", "Small Land", "Local"
+;      "UnitClass", "Big Land", "Local"
+;      "UnitClass", "Merchant", "Local"
+      "UnitClass", "Sea", "Local"
+      "UnitClass", "Trireme", "Local"
+      "UnitClass", "Helicopter", "Local"
+      "UnitClass", "Air", "Local"
+      "UnitClass", "Missile", "Local"
+    }
+
+[effect_city_defense_6]
+type    = "Defend_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+      "CityTile", "Center", "Local"
+      "MinSize", "6", "City"
+    }
+nreqs   =
+    { "type", "name", "range"
+;      "UnitClass", "Land", "Local"
+;      "UnitClass", "Small Land", "Local"
+;      "UnitClass", "Big Land", "Local"
+;      "UnitClass", "Merchant", "Local"
+      "UnitClass", "Sea", "Local"
+      "UnitClass", "Trireme", "Local"
+      "UnitClass", "Helicopter", "Local"
+      "UnitClass", "Air", "Local"
+      "UnitClass", "Missile", "Local"
+    }
+
+[effect_city_defense_7]
+type    = "Defend_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+      "CityTile", "Center", "Local"
+      "MinSize", "7", "City"
+    }
+nreqs   =
+    { "type", "name", "range"
+;      "UnitClass", "Land", "Local"
+;      "UnitClass", "Small Land", "Local"
+;      "UnitClass", "Big Land", "Local"
+;      "UnitClass", "Merchant", "Local"
+      "UnitClass", "Sea", "Local"
+      "UnitClass", "Trireme", "Local"
+      "UnitClass", "Helicopter", "Local"
+      "UnitClass", "Air", "Local"
+      "UnitClass", "Missile", "Local"
+    }
+
+[effect_city_defense_8]
+type    = "Defend_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+      "CityTile", "Center", "Local"
+      "MinSize", "8", "City"
+    }
+nreqs   =
+    { "type", "name", "range"
+;      "UnitClass", "Land", "Local"
+;      "UnitClass", "Small Land", "Local"
+;      "UnitClass", "Big Land", "Local"
+;      "UnitClass", "Merchant", "Local"
+      "UnitClass", "Sea", "Local"
+      "UnitClass", "Trireme", "Local"
+      "UnitClass", "Helicopter", "Local"
+      "UnitClass", "Air", "Local"
+      "UnitClass", "Missile", "Local"
+    }
+
+[effect_city_defense_9]
+type    = "Defend_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+      "CityTile", "Center", "Local"
+      "MinSize", "9", "City"
+    }
+nreqs   =
+    { "type", "name", "range"
+;      "UnitClass", "Land", "Local"
+;      "UnitClass", "Small Land", "Local"
+;      "UnitClass", "Big Land", "Local"
+;      "UnitClass", "Merchant", "Local"
+      "UnitClass", "Sea", "Local"
+      "UnitClass", "Trireme", "Local"
+      "UnitClass", "Helicopter", "Local"
+      "UnitClass", "Air", "Local"
+      "UnitClass", "Missile", "Local"
+    }
+
+[effect_city_defense_10]
+type    = "Defend_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+      "CityTile", "Center", "Local"
+      "MinSize", "10", "City"
+    }
+nreqs   =
+    { "type", "name", "range"
+;      "UnitClass", "Land", "Local"
+;      "UnitClass", "Small Land", "Local"
+;      "UnitClass", "Big Land", "Local"
+;      "UnitClass", "Merchant", "Local"
+      "UnitClass", "Sea", "Local"
+      "UnitClass", "Trireme", "Local"
+      "UnitClass", "Helicopter", "Local"
+      "UnitClass", "Air", "Local"
+      "UnitClass", "Missile", "Local"
+    }
+
