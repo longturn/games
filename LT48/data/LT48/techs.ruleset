@@ -866,6 +866,15 @@ graphic     = "a.theory_of_gravity"
 graphic_alt = "-"
 cost     = 190
 
+[advance_tools]
+name     = _("Tools")
+req1     = "Pottery"
+req2     = "Bronze Working"
+flags    = ""
+helptext = _("\
+Cancels the penalty to worked tiles with output greater than 2. \
+")
+
 [advance_trade]
 name     = _("Trade")
 req1     = "Currency"
