@@ -2233,7 +2233,7 @@ reqs    =
 
 [effect_factory]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Factory", "City"
@@ -2383,7 +2383,7 @@ nreqs   =
 
 [effect_hydro_plant]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Factory", "City"
@@ -2398,7 +2398,7 @@ nreqs   =
     
 [effect_hydro_plant_1]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
@@ -2490,7 +2490,7 @@ reqs    =
 
 [effect_mfg_plant]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
@@ -2507,7 +2507,7 @@ reqs    =
 
 [effect_nuclear_plant]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Factory", "City"
@@ -2524,7 +2524,7 @@ nreqs   =
 
 [effect_nuclear_plant_1]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
@@ -2838,7 +2838,7 @@ reqs    =
 
 [effect_power_plant]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Factory", "City"
@@ -2856,7 +2856,7 @@ nreqs   =
 
 [effect_power_plant_1]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
@@ -2968,7 +2968,7 @@ reqs    =
 
 [effect_solar_plant]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Factory", "City"
@@ -2983,7 +2983,7 @@ nreqs   =
 
 [effect_solar_plant_1]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
@@ -3472,7 +3472,7 @@ reqs    =
 ; Hoover Dam behaves like a (self-enhanced) Hydro Plant in its own city
 [effect_hoover_dam]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Factory", "City"
@@ -3482,7 +3482,7 @@ reqs    =
 
 [effect_hoover_dam_1]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
@@ -3494,7 +3494,7 @@ reqs    =
 
 [effect_hoover_dam_1]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
