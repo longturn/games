@@ -439,34 +439,6 @@ pollution; a Factory also increases the pollution caused by the \
 population of the city.\
 ")
 
-[building_factory_mf]
-name		= _("Factory, MF")
-genus		= "Improvement"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Industrialization", "Player"
-      "Building", "Manufaktur", "City"
-    }
-graphic	= "b.factory"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 110
-upkeep		= 3
-sabotage	= 100
-sound		= "b_factory"
-sound_alt	= "b_generic"
-; /* xgettext:no-c-format */
-helptext	= _("\
-Increases the shield production in a city by 25%, or 50% with an \
-electrical plant of any kind in the same city.\
-"), _("\
-This increase in production may contribute significantly to \
-pollution; a Factory also increases the pollution caused by the \
-population of the city.\
-"),  _("\
-Due to continuation of the city manufacturing tradition started \
-by Manufaktur production, this factory is slightly cheaper to build.\
-")
 
 
 [building_granary]
