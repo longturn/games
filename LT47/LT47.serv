@@ -35,7 +35,8 @@ set airliftingstyle="FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
 set razechance=10
 set happyborders=enabled
 set occupychance=0
-set globalwarming=disabled
+set globalwarming=enabled
+set globalwarming_percent=50
 
 # diplomacy, technology
 set diplchance=40
