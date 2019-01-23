@@ -258,7 +258,7 @@ cost     = 20
 
 [advance_democracy]
 name     = _("Democracy")
-req1     = "Banking"
+req1     = "Economics"
 req2     = "Invention"
 flags    = ""
 graphic     = "a.democracy"
@@ -820,7 +820,7 @@ cost     = 400
 [advance_the_republic]
 name     = _("The Republic")
 req1     = "Code of Laws"
-req2     = "Literacy"
+req2     = "Philosophy"
 flags    = ""
 graphic     = "a.the_republic"
 graphic_alt = "-"
