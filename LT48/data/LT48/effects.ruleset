@@ -4138,7 +4138,11 @@ value   = -100
 ; tech_upkeep_divider = 6000, Max tech upkeep = 13
 [effect_upkeep_tech_base]
 type    = "Tech_Upkeep_Free"
-value   = 3
+value   = 1
+reqs    =
+    { "type", "name", "range", "negated"
+      "Gov", "Tribal", "Player", TRUE
+    }
 
 [effect_tech_cost_base]
 type    = "Tech_Cost_Factor"
