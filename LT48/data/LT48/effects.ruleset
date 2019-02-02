@@ -5549,3 +5549,20 @@ nreqs   =
       "UnitClass", "Missile", "Local"
     }
 
+
+[effect_migration_size_1]
+type	= "Migration_Pct"
+value	= 200
+reqs	=
+    { 	"type", "name", "range", "negated"
+	"Minsize", "1", "City", FALSE
+	"Minsize", "2", "City", TRUE
+    }
+
+[effect_migration_city_hall]
+type	= "Migration_Pct"
+value	= 100
+reqs	=
+    { 	"type", "name", "range"
+	"Building", "City Hall", "City"
+    }
