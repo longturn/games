@@ -315,6 +315,29 @@ veteran level.\
 Decreases corruption by a small amount, depending on government.\
 ")
 
+[building_city_hall]
+name		= _("City Hall")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Monarchy", "Player"
+    }
+graphic		= "b.city_hall"
+graphic_alt	= "b.police_station"
+obsolete_by	= "None"
+build_cost	= 50
+upkeep		= 1
+sabotage	= 100
+sound		= "b_city_hall"
+sound_alt	= "b_generic"
+helptext	= _("\
+City Hall is the step that signifies the upgrade of a village \
+or a settlement into a city. With this building, the chance of \
+migration into the city is doubled. \
+\
+")
+
+
 [building_city_walls]
 name		= _("City Walls")
 genus		= "Improvement"
