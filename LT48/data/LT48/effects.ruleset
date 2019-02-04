@@ -5552,16 +5552,27 @@ nreqs   =
 
 [effect_migration_size_1]
 type	= "Migration_Pct"
-value	= 200
+value	= 100
 reqs	=
     { 	"type", "name", "range", "negated"
 	"Minsize", "1", "City", FALSE
 	"Minsize", "2", "City", TRUE
     }
 
+[effect_migration_size_1_granary]
+type	= "Migration_Pct"
+value	= 1000
+reqs	=
+    { 	"type", "name", "range", "negated"
+	"Minsize", "1", "City", FALSE
+	"Minsize", "2", "City", TRUE
+	"Building", "Granary", FALSE
+}
+
+
 [effect_migration_city_hall]
 type	= "Migration_Pct"
-value	= 100
+value	= 200
 reqs	=
     { 	"type", "name", "range"
 	"Building", "City Hall", "City"
