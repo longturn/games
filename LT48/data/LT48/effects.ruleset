@@ -1671,13 +1671,13 @@ nreqs  =
       "Nation", "Pirate", "Player"
     }
 
-[effect_bad_lux_anarchy]
+[effect_no_trade_anarchy]
 type    = "Output_Bonus_2"
-value   = -50
+value   = -100
 reqs    =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
-      "OutputType", "Luxury", "Local"
+      "OutputType", "Trade", "Local"
     }
 
 [effect_no_gold_tribal]
@@ -5577,3 +5577,14 @@ reqs	=
     { 	"type", "name", "range"
 	"Building", "City Hall", "City"
     }
+
+[effect_monarchy_trade]
+type    = "Output_Add_Tile"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+      "CityTile", "Center", "Local"
+      "OutputType", "Trade", "Local"
+      "Gov", "Monarchy", "Player"
+      "Building", "Palace", "City"
+}
