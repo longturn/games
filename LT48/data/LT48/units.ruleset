@@ -593,7 +593,7 @@ for more details.\
 name          = _("Warriors")
 class         = "Land"
 tech_req      = "None"
-obsolete_by   = "Musketeers"
+obsolete_by   = "Phalanx"
 graphic       = "u.warriors"
 graphic_alt   = "-"
 sound_move    = "m_warriors"
@@ -656,7 +656,7 @@ The Phalanx is armored infantry, suitable for defending your cities.\
 name          = _("Archers")
 class         = "Land"
 tech_req      = "Warrior Code"
-obsolete_by   = "Musketeers"
+obsolete_by   = "Bowmen"
 graphic       = "u.archers"
 graphic_alt   = "-"
 sound_move    = "m_archers"
@@ -666,7 +666,7 @@ sound_fight_alt = "f_generic"
 build_cost    = 10
 pop_cost      = 0
 attack        = 1
-defense       = 2
+defense       = 1
 hitpoints     = 10
 firepower     = 1
 move_rate     = 2
@@ -685,11 +685,76 @@ Archers fight with bows and arrows and have a good offensive\
  value.\
 ")
 
+[unit_Bowmen]
+name          = _("Bowmen")
+class         = "Land"
+gov_req       = "Tribal"
+obsolete_by   = "Musketeers"
+graphic       = "u.bowmen"
+graphic_alt   = "u.archers"
+sound_move    = "m_archers"
+sound_move_alt = "m_generic"
+sound_fight   = "f_archers"
+sound_fight_alt = "f_generic"
+build_cost    = 10
+pop_cost      = 0
+attack        = 1
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 0
+uk_food       = 1
+uk_gold       = 3
+flags         = "Capturer", "Bombarder"
+roles         = "DefendOk", "Hut"
+bombard_rate  = 2
+helptext      = _("\
+Archers fight with bows and arrows and have a good offensive\
+ value.\
+")
+
+[unit_tribesmen]
+name          = _("Tribesmen")
+class         = "Land"
+tech_req      = "none"
+obsolete_by   = "Musketeers"
+graphic       = "u.tribesmen"
+graphic_alt   = "u.warriors"
+sound_move    = "m_legion"
+sound_move_alt = "m_generic"
+sound_fight   = "f_legion"
+sound_fight_alt = "f_generic"
+build_cost    = 10
+pop_cost      = 0
+attack        = 4
+defense       = 2
+hitpoints     = 10
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 0
+uk_food       = 1
+uk_gold       = 3
+flags         = "Capturer"
+roles         = "DefendOk", "BarbarianBuild", "BarbarianSea"
+helptext      = _("\
+Legions are heavily armed and well disciplined infantry\
+ units with an excellent offensive value.\
+")
+
 [unit_legion]
 name          = _("Legion")
 class         = "Land"
 tech_req      = "Iron Working"
-obsolete_by   = "Musketeers"
+obsolete_by   = "Tribesmen"
 graphic       = "u.legion"
 graphic_alt   = "-"
 sound_move    = "m_legion"
@@ -721,7 +786,7 @@ Legions are heavily armed and well disciplined infantry\
 name          = _("Pikemen")
 class         = "Land"
 tech_req      = "Feudalism"
-obsolete_by   = "Musketeers"
+obsolete_by   = "Tribesmen"
 graphic       = "u.pikemen"
 graphic_alt   = "-"
 sound_move    = "m_pikemen"
@@ -875,7 +940,7 @@ uk_food       = 0
 uk_gold       = 0
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
-flags         = "IgTer", "IgZOC", "Capturer"
+flags         = "IgTer", "IgZOC", "Capturer", "Partial_Invis"
 roles         = "DefendGood", "Partisan", "BarbarianTech"
 helptext      = _("\
 Partisans are guerilla fighters who are experts\
@@ -1071,11 +1136,45 @@ Horsemen are mounted warriors and an early\
  enemy territory.\
 ")
 
+[unit_mounted]
+name          = _("Mounted Warriors")
+class         = "Land"
+gov_req	      = "Tribal"
+tech_req      = "Horseback Riding"
+obsolete_by   = "Knights"
+graphic       = "u.mounted"
+graphic_alt   = "u.horsemen"
+sound_move    = "m_horsemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_horsemen"
+sound_fight_alt = "f_generic"
+build_cost    = 10
+pop_cost      = 0
+attack        = 2
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 4
+vision_radius_sq = 3
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 0
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer"
+roles         = "AttackFast", "Hut", "Barbarian", "Hunter"
+helptext      = _("\
+Horsemen are mounted warriors and an early\
+ shock-troop that can penetrate deep into\
+ enemy territory.\
+")
+
 [unit_chariot]
 name          = _("Chariot")
 class         = "Big Land"
 tech_req      = "The Wheel"
-obsolete_by   = "Dragoons"
+obsolete_by   = "Mounted Warriors"
 graphic       = "u.chariot"
 graphic_alt   = "-"
 sound_move    = "m_chariot"
@@ -1111,7 +1210,7 @@ without roads, and they cannot be transported by sea using early ships \
 name          = _("Elephants")
 class         = "Big Land"
 tech_req      = "Polytheism"
-obsolete_by   = "Dragoons"
+obsolete_by   = "Mounted Warriors"
 graphic       = "u.elephants"
 graphic_alt   = "u.chariot"
 sound_move    = "m_elephants"
@@ -1624,7 +1723,8 @@ bombard_rate = 6
 name          = _("Trireme")
 class         = "Trireme"
 tech_req      = "Map Making"
-obsolete_by   = "Transport"
+obsolete_by   = "Boat"
+gov_req       = "Tribal"
 graphic       = "u.trireme"
 graphic_alt   = "-"
 sound_move    = "m_trireme"
@@ -1646,6 +1746,41 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Land", "Small Land", "Merchant", "Non Military"
+flags         = "BadCityDefender", "Capturable"
+roles         = "Ferryboat"
+helptext      = _("\
+The Trireme is your first boat unit. It can act\
+ as a transport ship and has rudimentary offensive\
+ capabilities, and unlike later boats can travel on\
+ rivers, but it may not enter deep ocean tiles.\
+")
+
+[unit_boat]
+name          = _("Boat")
+class         = "Trireme"
+tech_req      = "Map Making"
+obsolete_by   = "Transport"
+graphic       = "u.boat"
+graphic_alt   = "u.trireme"
+sound_move    = "m_trireme"
+sound_move_alt = "m_generic"
+sound_fight   = "f_boat"
+sound_fight_alt = "f_trireme"
+build_cost    = 20
+pop_cost      = 0
+attack        = 0
+defense       = 0
+hitpoints     = 10
+firepower     = 0
+move_rate     = 4
+vision_radius_sq = 2
+transport_cap = 1
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Land", "Small Land", "Merchant", "Non Military"
 flags         = "BadCityDefender"
 roles         = "Ferryboat"
 helptext      = _("\
@@ -1654,6 +1789,7 @@ The Trireme is your first boat unit. It can act\
  capabilities, and unlike later boats can travel on\
  rivers, but it may not enter deep ocean tiles.\
 ")
+
 
 [unit_caravel]
 name          = _("Caravel")
