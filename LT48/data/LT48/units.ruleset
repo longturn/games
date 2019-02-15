@@ -499,7 +499,7 @@ sound_move    = "m_worker"
 sound_move_alt = "m_generic"
 sound_fight   = "f_worker"
 sound_fight_alt = "f_generic"
-build_cost    = 20
+build_cost    = 10
 pop_cost      = 0
 attack        = 0
 defense       = 1
@@ -593,7 +593,7 @@ for more details.\
 name          = _("Warriors")
 class         = "Land"
 tech_req      = "None"
-obsolete_by   = "Skirmishers"
+obsolete_by   = "Phalanx"
 graphic       = "u.warriors"
 graphic_alt   = "-"
 sound_move    = "m_warriors"
@@ -677,7 +677,7 @@ uk_happy      = 1
 uk_shield     = 0
 uk_food       = 1
 uk_gold       = 3
-flags         = "Capturer", "Bombarder"
+flags         = "Capturer", "Bombarder", "Marines"
 roles         = "DefendOk", "Hut"
 bombard_rate  = 5
 helptext      = _("\
@@ -710,7 +710,7 @@ uk_happy      = 1
 uk_shield     = 0
 uk_food       = 1
 uk_gold       = 3
-flags         = "Capturer", "Bombarder"
+flags         = "Capturer", "Bombarder", "Marines"
 roles         = "DefendOk", "Hut"
 bombard_rate  = 2
 helptext      = _("\
@@ -718,12 +718,12 @@ Archers fight with bows and arrows and have a good offensive\
  value.\
 ")
 
-[unit_tribesmen]
-name          = _("Tribesmen")
+[unit_raiders]
+name          = _("Raiders")
 class         = "Land"
 tech_req      = "none"
 obsolete_by   = "Musketeers"
-graphic       = "u.tribesmen"
+graphic       = "u.raiders"
 graphic_alt   = "u.warriors"
 sound_move    = "m_legion"
 sound_move_alt = "m_generic"
@@ -742,8 +742,8 @@ fuel          = 0
 uk_happy      = 1
 uk_shield     = 0
 uk_food       = 1
-uk_gold       = 3
-flags         = "Capturer"
+uk_gold       = 1
+flags         = "Capturer", "Marines"
 roles         = "DefendOk", "BarbarianBuild", "BarbarianSea"
 helptext      = _("\
 Legions are heavily armed and well disciplined infantry\
@@ -754,7 +754,7 @@ Legions are heavily armed and well disciplined infantry\
 name          = _("Legion")
 class         = "Land"
 tech_req      = "Iron Working"
-obsolete_by   = "Tribesmen"
+obsolete_by   = "Raiders"
 graphic       = "u.legion"
 graphic_alt   = "-"
 sound_move    = "m_legion"
@@ -786,7 +786,7 @@ Legions are heavily armed and well disciplined infantry\
 name          = _("Pikemen")
 class         = "Land"
 tech_req      = "Feudalism"
-obsolete_by   = "Tribesmen"
+obsolete_by   = "Raiders"
 graphic       = "u.pikemen"
 graphic_alt   = "-"
 sound_move    = "m_pikemen"
@@ -829,8 +829,8 @@ build_cost    = 15
 pop_cost      = 0
 attack        = 2
 defense       = 3
-hitpoints     = 10
-firepower     = 2
+hitpoints     = 20
+firepower     = 1
 move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 0
@@ -1554,10 +1554,11 @@ sound_fight   = "f_fighter"
 sound_fight_alt = "f_generic"
 build_cost    = 40
 pop_cost      = 0
-attack        = 4
-defense       = 4
-hitpoints     = 20
+attack        = 1
+defense       = 2
+hitpoints     = 10
 firepower     = 1
+bombard_rate  = 6
 move_rate     = 12
 vision_radius_sq = 8
 transport_cap = 0
@@ -1567,7 +1568,7 @@ uk_shield     = 2
 uk_food       = 1
 uk_gold       = 4
 targets       = "Air", "Missile", "Helicopter"
-flags         = "AirAttacker"
+flags         = "AirAttacker", "Bombarder"
 roles         = "DefendOk"
 helptext      = _("\
 Fighters are your first airborne units. They can\
@@ -1588,7 +1589,7 @@ sound_fight_alt = "f_generic"
 build_cost    = 60
 pop_cost      = 0
 attack        = 6
-defense       = 2
+defense       = 1
 hitpoints     = 10
 firepower     = 3
 move_rate     = 8
@@ -1599,6 +1600,7 @@ uk_happy      = 1
 uk_shield     = 4
 uk_food       = 1
 uk_gold       = 6
+bombard_rate  = 5
 flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder"
 roles         = ""
 helptext      = _("\
@@ -1609,7 +1611,6 @@ Bombers are specialized airborne units that may\
 A Bomber's attack against units on land is a bombard attack; against\
  units on water it has a regular attack.\
 ")
-bombard_rate = 5
 
 [unit_helicopter]
 name          = _("Helicopter")
@@ -1771,7 +1772,7 @@ pop_cost      = 0
 attack        = 0
 defense       = 0
 hitpoints     = 10
-firepower     = 0
+firepower     = 1
 move_rate     = 4
 vision_radius_sq = 2
 transport_cap = 1
