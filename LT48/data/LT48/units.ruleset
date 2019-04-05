@@ -469,7 +469,7 @@ move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
-uk_happy      = 2
+uk_happy      = 3
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
@@ -593,7 +593,7 @@ for more details.\
 name          = _("Warriors")
 class         = "Land"
 tech_req      = "None"
-obsolete_by   = "Phalanx"
+obsolete_by   = "Militia"
 graphic       = "u.warriors"
 graphic_alt   = "-"
 sound_move    = "m_warriors"
@@ -621,11 +621,46 @@ This unit may be built from the start of the game.  It is the\
  weakest offensive unit.\
 ")
 
+[unit_raiders]
+name          = _("Raiders")
+class         = "Land"
+tech_req      = "None"
+gov_req       = "Tribal"
+obsolete_by   = "Arquebusiers"
+graphic       = "u.raiders"
+graphic_alt   = "u.warriors"
+sound_move    = "m_warriors"
+sound_move_alt = "m_generic"
+sound_fight   = "f_warriors"
+sound_fight_alt = "f_generic"
+build_cost    = 5
+pop_cost      = 0
+attack        = 2
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 0
+uk_food       = 0
+uk_gold       = 0
+flags         = "Capturer", "Marines"
+roles         = "DefendOk", "FirstBuild"
+helptext      = _("\
+This unit may be built from the start of the game.  It is the\
+ weakest offensive unit.\
+")
+
+
 [unit_phalanx]
 name          = _("Phalanx")
 class         = "Land"
 tech_req      = "Bronze Working"
-obsolete_by   = "Pikemen"
+gov_req       = "Despotism"
+obsolete_by   = "Arquebusiers"
 graphic       = "u.phalanx"
 graphic_alt   = "-"
 sound_move    = "m_phalanx"
@@ -652,11 +687,44 @@ helptext      = _("\
 The Phalanx is armored infantry, suitable for defending your cities.\
 ")
 
+[unit_Bowmen]
+name          = _("Bowmen")
+class         = "Land"
+gov_req       = "Tribal"
+obsolete_by   = "Skirmishers"
+graphic       = "u.bowmen"
+graphic_alt   = "u.archers"
+sound_move    = "m_archers"
+sound_move_alt = "m_generic"
+sound_fight   = "f_archers"
+sound_fight_alt = "f_generic"
+build_cost    = 10
+pop_cost      = 0
+attack        = 1
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 0
+uk_food       = 1
+uk_gold       = 0
+flags         = "Capturer", "Bombarder", "Marines"
+roles         = "DefendOk", "Hut"
+bombard_rate  = 2
+helptext      = _("\
+Archers fight with bows and arrows and have a good offensive\
+ value.\
+")
+
 [unit_archers]
 name          = _("Archers")
 class         = "Land"
 tech_req      = "Warrior Code"
-obsolete_by   = "Bowmen"
+obsolete_by   = "Skirmishers"
 graphic       = "u.archers"
 graphic_alt   = "-"
 sound_move    = "m_archers"
@@ -677,7 +745,7 @@ uk_happy      = 1
 uk_shield     = 0
 uk_food       = 1
 uk_gold       = 3
-flags         = "Capturer", "Bombarder", "Marines"
+flags         = "Capturer", "Bombarder"
 roles         = "DefendOk", "Hut"
 bombard_rate  = 5
 helptext      = _("\
@@ -685,76 +753,12 @@ Archers fight with bows and arrows and have a good offensive\
  value.\
 ")
 
-[unit_Bowmen]
-name          = _("Bowmen")
-class         = "Land"
-gov_req       = "Tribal"
-obsolete_by   = "Musketeers"
-graphic       = "u.bowmen"
-graphic_alt   = "u.archers"
-sound_move    = "m_archers"
-sound_move_alt = "m_generic"
-sound_fight   = "f_archers"
-sound_fight_alt = "f_generic"
-build_cost    = 10
-pop_cost      = 0
-attack        = 1
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 3
-flags         = "Capturer", "Bombarder", "Marines"
-roles         = "DefendOk", "Hut"
-bombard_rate  = 2
-helptext      = _("\
-Archers fight with bows and arrows and have a good offensive\
- value.\
-")
 
-[unit_raiders]
-name          = _("Raiders")
-class         = "Land"
-tech_req      = "none"
-obsolete_by   = "Musketeers"
-graphic       = "u.raiders"
-graphic_alt   = "u.warriors"
-sound_move    = "m_legion"
-sound_move_alt = "m_generic"
-sound_fight   = "f_legion"
-sound_fight_alt = "f_generic"
-build_cost    = 10
-pop_cost      = 0
-attack        = 4
-defense       = 2
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 1
-flags         = "Capturer", "Marines"
-roles         = "DefendOk", "BarbarianBuild", "BarbarianSea"
-helptext      = _("\
-Legions are heavily armed and well disciplined infantry\
- units with an excellent offensive value.\
-")
-
-[unit_legion]
-name          = _("Legion")
+[unit_swordsmen]
+name          = _("Swordsmen")
 class         = "Land"
 tech_req      = "Iron Working"
-obsolete_by   = "Raiders"
+obsolete_by   = "Musketeers"
 graphic       = "u.legion"
 graphic_alt   = "-"
 sound_move    = "m_legion"
@@ -778,7 +782,7 @@ uk_gold       = 3
 flags         = "Capturer"
 roles         = "DefendOk", "BarbarianBuild", "BarbarianSea"
 helptext      = _("\
-Legions are heavily armed and well disciplined infantry\
+Swordsmen are heavily armed and well disciplined infantry\
  units with an excellent offensive value.\
 ")
 
@@ -786,7 +790,8 @@ Legions are heavily armed and well disciplined infantry\
 name          = _("Pikemen")
 class         = "Land"
 tech_req      = "Feudalism"
-obsolete_by   = "Raiders"
+gov_req       = "Monarchy"
+obsolete_by   = "Arquebusiers"
 graphic       = "u.pikemen"
 graphic_alt   = "-"
 sound_move    = "m_pikemen"
