@@ -1870,6 +1870,7 @@ The Trireme is your first boat unit. It can act\
 name          = _("Boat")
 class         = "Trireme"
 tech_req      = "Map Making"
+gov_req       = "Tribal"
 obsolete_by   = "Transport"
 graphic       = "u.boat"
 graphic_alt   = "u.trireme"
