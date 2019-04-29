@@ -647,7 +647,7 @@ uk_happy      = 0
 uk_shield     = 0
 uk_food       = 0
 uk_gold       = 0
-flags         = "Capturer", "Marines"
+flags         = "Capturer", "Marines", "IgZOC"
 roles         = "DefendOk", "FirstBuild"
 helptext      = _("\
 This unit may be built from the start of the game.  It is the\
@@ -892,7 +892,7 @@ technology.\
 [unit_musketeers]
 name          = _("Musketeers")
 class         = "Land"
-tech_req      = "Gunpowder"
+tech_req      = "Leadership"
 obsolete_by   = "Riflemen"
 graphic       = "u.musketeers"
 graphic_alt   = "-"
@@ -1037,10 +1037,10 @@ sound_fight_alt = "f_generic"
 build_cost    = 10
 pop_cost      = 0
 attack        = 2
-defense       = 5
-hitpoints     = 10
-firepower     = 2
-move_rate     = 1
+defense       = 2
+hitpoints     = 30
+firepower     = 1
+move_rate     = 3
 vision_radius_sq = 6
 transport_cap = 0
 fuel          = 0
@@ -1050,7 +1050,7 @@ uk_food       = 0
 uk_gold       = 0
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
-flags         = "IgTer", "IgZOC", "Capturer", "Partial_Invis"
+flags         = "IgTer", "IgZOC", "Capturer", "Partial_Invis", "Marines"
 roles         = "DefendGood", "Partisan", "BarbarianTech"
 helptext      = _("\
 Partisans are guerilla fighters who are experts\
