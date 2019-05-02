@@ -1246,39 +1246,6 @@ Horsemen are mounted warriors and an early\
  enemy territory.\
 ")
 
-[unit_mounted]
-name          = _("Mounted Warriors")
-class         = "Land"
-gov_req	      = "Tribal"
-tech_req      = "Horseback Riding"
-obsolete_by   = "Knights"
-graphic       = "u.mounted"
-graphic_alt   = "u.horsemen"
-sound_move    = "m_horsemen"
-sound_move_alt = "m_generic"
-sound_fight   = "f_horsemen"
-sound_fight_alt = "f_generic"
-build_cost    = 10
-pop_cost      = 0
-attack        = 2
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 3
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 1
-flags         = "Capturer"
-roles         = "AttackFast", "Hut", "Barbarian", "Hunter"
-helptext      = _("\
-Horsemen are mounted warriors and an early\
- shock-troop that can penetrate deep into\
- enemy territory.\
-")
 
 [unit_chariot]
 name          = _("Chariot")
