@@ -1,6 +1,6 @@
 ; Modifying this file:
 ; You should not modify this file except to make bugfixes or
-; for other "maintenance".  If you want to make custom changes,
+; for other "maintenance". If you want to make custom changes,
 ; you should create a new datadir subdirectory and copy this file
 ; into that directory, and then modify that copy.  Then use the
 ; command "rulesetdir <mysubdir>" in the server to have freeciv
@@ -1835,7 +1835,6 @@ name          = _("Trireme")
 class         = "Trireme"
 tech_req      = "Map Making"
 obsolete_by   = "Boat"
-gov_req       = "Tribal"
 graphic       = "u.trireme"
 graphic_alt   = "-"
 sound_move    = "m_trireme"
@@ -1871,7 +1870,7 @@ name          = _("Boat")
 class         = "Trireme"
 tech_req      = "Map Making"
 gov_req       = "Tribal"
-obsolete_by   = "Transport"
+obsolete_by   = "Caravel"
 graphic       = "u.boat"
 graphic_alt   = "u.trireme"
 sound_move    = "m_trireme"
