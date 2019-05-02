@@ -380,7 +380,7 @@ cost     = 480
 
 [advance_gunpowder]
 name     = _("Gunpowder")
-req1     = "Invention"
+req1     = "Physics"
 req2     = "Feudalism"
 graphic     = "a.gunpowder"
 graphic_alt = "-"
@@ -443,8 +443,8 @@ cost     = 650
 
 [advance_leadership]
 name     = _("Leadership")
-req1     = "Chivalry"
-req2     = "Gunpowder"
+req1     = "Theology"
+req2     = "Banking"
 flags    = ""
 graphic     = "a.leadership"
 graphic_alt = "-"
