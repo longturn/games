@@ -1593,24 +1593,24 @@ where unit upkeep is paid in gold, it gives two free gold per city \
 towards upkeep every turn.\
 ")
 
-[building_leonardos_workshop]
-name		= _("Leonardo's Workshop")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Invention", "Player"
-    }
-graphic	= "b.leonardos_workshop"
-graphic_alt	= "-"
-obsolete_by	= "Combustion"
-build_cost	= 400
-upkeep		= 0
-sabotage	= 0
-sound		= "w_leonardos_workshop"
-sound_alt	= "w_generic"
-helptext	= _("\
-Upgrades two obsolete units per game turn.\
-")
+;[building_leonardos_workshop]
+;name		= _("Leonardo's Workshop")
+;genus		= "SmallWonder"
+;reqs	=
+;    { "type", "name", "range"
+;      "Tech", "Invention", "Player"
+;    }
+;graphic	= "b.leonardos_workshop"
+;graphic_alt	= "-"
+;obsolete_by	= "Combustion"
+;build_cost	= 400
+;upkeep		= 0
+;sabotage	= 0
+;sound		= "w_leonardos_workshop"
+;sound_alt	= "w_generic"
+;helptext	= _("\
+;Upgrades two obsolete units per game turn.\
+;")
 
 [building_lighthouse]
 name		= _("Lighthouse")
