@@ -158,7 +158,7 @@ name          = _("?unitclass:Big Land")
 min_speed     = 1
 hp_loss_pct   = 0
 flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
-                "CollectRansom","ZOC", "CanFortify", "KillCitizen"
+                "CollectRansom","ZOC", "CanFortify", "KillCitizen", "AttackNonNative"
 
 [unitclass_merchant]
 ; /* TRANS: Unit class: used adjectivally */
@@ -758,7 +758,7 @@ Archers fight with bows and arrows and have a good offensive\
 name          = _("Swordsmen")
 class         = "Land"
 tech_req      = "Iron Working"
-obsolete_by   = "Musketeers"
+obsolete_by   = "Arquebusiers"
 graphic       = "u.legion"
 graphic_alt   = "-"
 sound_move    = "m_legion"
@@ -927,7 +927,7 @@ Musketeers are infantry equipped with early\
 name          = _("Skirmishers")
 class         = "Land"
 tech_req      = "Leadership"
-obsolete_by   = "Riflemen"
+obsolete_by   = "Partisan"
 graphic       = "u.skirmishers"
 graphic_alt   = "u.musketeers"
 sound_move    = "m_musketeers"
@@ -1251,7 +1251,6 @@ Horsemen are mounted warriors and an early\
 name          = _("Chariot")
 class         = "Big Land"
 tech_req      = "The Wheel"
-obsolete_by   = "Mounted Warriors"
 graphic       = "u.chariot"
 graphic_alt   = "-"
 sound_move    = "m_chariot"
@@ -1287,7 +1286,6 @@ without roads, and they cannot be transported by sea using early ships \
 name          = _("Elephants")
 class         = "Big Land"
 tech_req      = "Polytheism"
-obsolete_by   = "Mounted Warriors"
 graphic       = "u.elephants"
 graphic_alt   = "u.chariot"
 sound_move    = "m_elephants"
@@ -1395,7 +1393,7 @@ pop_cost      = 0
 attack        = 5
 defense       = 2
 hitpoints     = 20
-firepower     = 2
+firepower     = 1
 move_rate     = 4
 vision_radius_sq = 2
 transport_cap = 0
@@ -1414,7 +1412,6 @@ Dragoons are mounted warriors carrying early firearms.\
 name          = _("Cavalry")
 class         = "Land"
 tech_req      = "Tactics"
-obsolete_by   = "Armor"
 graphic       = "u.cavalry"
 graphic_alt   = "-"
 sound_move    = "m_cavalry"
@@ -1426,7 +1423,7 @@ pop_cost      = 0
 attack        = 8
 defense       = 3
 hitpoints     = 20
-firepower     = 2
+firepower     = 1
 move_rate     = 4
 vision_radius_sq = 2
 transport_cap = 0
@@ -1457,7 +1454,7 @@ pop_cost      = 0
 attack        = 10
 defense       = 5
 hitpoints     = 30
-firepower     = 3
+firepower     = 1
 move_rate     = 6
 vision_radius_sq = 2
 transport_cap = 0
