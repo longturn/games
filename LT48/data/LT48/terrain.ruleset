@@ -1037,8 +1037,8 @@ shield      = 3 ; glacier used to have 4
 ;
 ; */ <-- avoid gettext warnings
 
-[base_fortress]
-name           = _("Fortress")
+[base_pre-fort]
+name           = _("Pre-Fort")
 graphic        = "base.fortress"
 graphic_alt    = "-"
 activity_gfx   = "unit.fortress"
@@ -1057,7 +1057,36 @@ build_time     = 3
 border_sq      = -1
 conflicts      = "Airbase"
 native_to      = "Land", "Small Land", "Big Land"
-flags          = "NoAggressive", "NoStackDeath", "DiplomatDefense", "NativeTile"
+flags          = "NoStackDeath", "DiplomatDefense", "NativeTile"
+helptext       = _("\
+Units in a fortress receive double defense against land units and boats. \
+Any kind of land unit remaining in a fortress for a whole turn without \
+moving recovers a quarter of its hit points. With Astronomy, fortresses gain \
+watchtowers from which units can see further afield.\
+")
+
+[base_fortress]
+name           = _("Fortress")
+graphic        = "base.fortress"
+graphic_alt    = "-"
+activity_gfx   = "unit.fortress"
+act_gfx_alt    = "-"
+reqs           =
+    { "type", "name", "range", "negated"
+      "Tech", "Construction", "Player", FALSE
+      "Base", "Pre-Fort", "Local", FALSE
+      "TerrainClass", "Land", "Local", FALSE
+      "UnitFlag", "Settlers", "Local", FALSE
+      "UnitClass", "Sea", "Local", TRUE
+      "CityTile", "Center", "Local", TRUE
+      "Road", "River", "Local", TRUE
+    }
+gui_type       = "Fortress"
+build_time     = 3
+border_sq      = -1
+conflicts      = "Airbase"
+native_to      = "Land", "Small Land", "Big Land"
+flags          = "NoStackDeath", "DiplomatDefense", "NativeTile"
 helptext       = _("\
 Units in a fortress receive double defense against land units and boats. \
 Any kind of land unit remaining in a fortress for a whole turn without \
@@ -1084,7 +1113,7 @@ build_time     = 3
 border_sq      = -1
 conflicts      = "Fortress"
 native_to      = "Air", "Helicopter", "Missile"
-flags          = "NoAggressive", "NoStackDeath", "ParadropFrom"
+flags          = "NoStackDeath", "ParadropFrom"
 helptext       = _("\
 Airbases allow your air units to land and refuel. Units in an airbase \
 receive double defense against enemy air units. \
