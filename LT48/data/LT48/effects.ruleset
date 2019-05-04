@@ -1896,6 +1896,8 @@ nreqs   =
       "Building", "Barracks III", "City"
       "UnitFlag", "NonMil", "Local"
       "UnitFlag", "NoVeteran", "Local"
+      "Gov", "Anarchy", "Player"
+      "Gov", "Tribal", "Player"
     }
 
 [effect_barracks_b]
@@ -1912,6 +1914,9 @@ nreqs   =
       "Building", "Barracks III", "City"
       "UnitFlag", "NonMil", "Local"
       "UnitFlag", "NoVeteran", "Local"
+      "Gov", "Anarchy", "Player"
+      "Gov", "Tribal", "Player"
+
     }
 
 [effect_barracks_hp]
@@ -1955,6 +1960,8 @@ nreqs   =
       "Building", "Barracks III", "City"
       "UnitFlag", "NonMil", "Local"
       "UnitFlag", "NoVeteran", "Local"
+      "Gov", "Anarchy", "Player"
+      "Gov", "Tribal", "Player"
     }
 
 [effect_barracks_ii_b]
@@ -1970,6 +1977,9 @@ nreqs   =
       "Building", "Barracks III", "City"
       "UnitFlag", "NonMil", "Local"
       "UnitFlag", "NoVeteran", "Local"
+      "Gov", "Anarchy", "Player"
+      "Gov", "Tribal", "Player"
+
     }
 
 [effect_barracks_ii_hp]
@@ -2010,6 +2020,10 @@ nreqs   =
     { "type", "name", "range"
       "UnitFlag", "NonMil", "Local"
       "UnitFlag", "NoVeteran", "Local"
+      "Gov", "Anarchy", "Player"
+      "Gov", "Tribal", "Player"
+
+      
     }
 
 [effect_barracks_iii_b]
@@ -2024,6 +2038,9 @@ nreqs   =
     { "type", "name", "range"
       "UnitFlag", "NonMil", "Local"
       "UnitFlag", "NoVeteran", "Local"
+      "Gov", "Anarchy", "Player"
+      "Gov", "Tribal", "Player"
+
     }
 
 [effect_barracks_iii_hp]
@@ -2689,15 +2706,18 @@ reqs    =
       "OutputType", "Gold", "Local"
     }
 
-[effect_palace_monarchy]
-type    = "Output_Bonus"
-value   = 50
+[effect_palace_trade]
+type    = "Output_Add_Tile"
+value   = 10
 reqs    =
-    { "type", "name", "range"
-      "Gov", "Monarchy", "Player"
-      "Building", "Palace", "City"
-      "OutputType", "Gold", "Local"
-    }
+    { "type", "name", "range", "negated"
+      "CityTile", "Center", "Local", FALSE
+      "OutputType", "Trade", "Local", FALSE
+      "Building", "Palace", "City", 
+      "Gov", "Anarchy", "Player", TRUE
+      "Gov", "Tribal", "Player", TRUE
+      "Gov", "Despotism", "Player", TRUE
+}
 
 [effect_second_gov_center]
 type    = "Gov_Center"
@@ -2732,25 +2752,25 @@ reqs    =
     }
 	
 	
-[effect_second_palace_despotism]
-type    = "Output_Bonus"
-value   = 75
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Despotism", "Player"
-      "Building", "Second Palace", "City"
-      "OutputType", "Gold", "Local"
-    }
-
-[effect_second_palace_monarchy]
-type    = "Output_Bonus"
-value   = 50
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Monarchy", "Player"
-      "Building", "Second Palace", "City"
-      "OutputType", "Gold", "Local"
-    }
+;[effect_second_palace_despotism]
+;type    = "Output_Bonus"
+;value   = 75
+;reqs    =
+;    { "type", "name", "range"
+;      "Gov", "Despotism", "Player"
+;      "Building", "Second Palace", "City"
+;      "OutputType", "Gold", "Local"
+;    }
+;
+;[effect_second_palace_monarchy]
+;type    = "Output_Bonus"
+;value   = 50
+;reqs    =
+;    { "type", "name", "range"
+;      "Gov", "Monarchy", "Player"
+;      "Building", "Second Palace", "City"
+;      "OutputType", "Gold", "Local"
+;    }
 
 
 [effect_police_station]
