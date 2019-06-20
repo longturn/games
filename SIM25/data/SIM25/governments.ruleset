@@ -78,7 +78,9 @@ _("\
 * You have no control over tax rates. Half of the trade income is\
  simply lost to your economy, and the remainder all goes to luxuries.\
  Conventional corruption increases with distance from the capital\
- (half as fast with knowledge of The Corporation).\n\
+ (half as fast with knowledge of The Corporation).\
+* Cities revolt en masse and production is hindered
+n\
 ")
 
 ;------------------------------------------------------------------------
@@ -161,7 +163,6 @@ Monarchy gives low unit upkeep costs.\
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Your capital city gets a +50% bonus to gold production.\n\
 * Celebrating cities produce one extra trade point for every tile which is\
  already producing trade. (Cities below size 3 will not celebrate.)\n\
 ")
@@ -190,6 +191,7 @@ Communism is a good government for maximizing shield production, and\
 "),
 ; /* xgettext:no-c-format */
 _("\
+* Your capital city gets a +10 Trade.\n\
 * City improvements which would normally have an upkeep of 1 gold are\
  free of upkeep.\n\
 ")
@@ -227,6 +229,7 @@ Fundamentalism is a good government for maximizing gold, and its Fanatics\
 "),
 ; /* xgettext:no-c-format */
 _("\
+* Your capital city gets +10 Trade.\n\
 * Science production is half that of other governments.\n\
 ")
 
@@ -289,6 +292,7 @@ Under a Republican government, citizens hold an election to select a\
 _("\
 * Cities produce an extra trade point for every worked land tile that is\
  already producing trade.\n\
+* Your capital city gets +10 Trade.\n\
 * Celebrating cities produce a further trade point for every worked tile\
  (land or water) which is already producing trade. (Cities below size 3\
  will not celebrate.)\n\
@@ -317,6 +321,7 @@ Under Democracy, citizens govern directly by voting on issues.\
 _("\
 * Cities produce an extra trade point for every worked land tile that is\
  already producing trade.\n\
+* Your capital city gets +10 Trade.\n\
 * Celebrating cities produce a further trade point for every worked tile\
  (land or water) which is already producing trade. (Cities below size 3\
  will not celebrate.)\n\
