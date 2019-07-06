@@ -41,7 +41,7 @@ set globalwarming_percent=50
 # diplomacy, technology
 set diplchance=40
 set diplcost=10
-set diplchance_steal=5
+set diplchance_steal=8
 set diplomacy=HUMAN
 set sciencebox=100
 set techlost_donor=0
