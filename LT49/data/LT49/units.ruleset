@@ -880,7 +880,7 @@ attack        = 4
 defense       = 5
 hitpoints     = 20
 firepower     = 1
-move_rate     = 3
+move_rate     = 2
 vision_radius_sq = 25
 transport_cap = 0
 fuel          = 0
@@ -890,7 +890,7 @@ uk_food       = 1
 uk_gold       = 1
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
-flags         = "IgTer", "IgZOC", "Capturer", "NoHome", "AddToCity"
+flags         = "IgTer", "IgZOC", "Capturer", "NoHome", "AddToCity", "Partial_Invis"
 roles         = "DefendGood", "Partisan", "BarbarianTech"
 helptext      = _("\
 Partisans are guerilla fighters who are experts\
