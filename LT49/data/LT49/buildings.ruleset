@@ -1664,6 +1664,29 @@ not affect citizens made unhappy by aggression.\
 ")
 
 
+[building_the_hypogeum_tomb]
+name		= _("The Hypogeum Tomb")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Ceremonial Burial", "Player"
+    }
+graphic         = "b.mausoleum"
+graphic_alt     = "b.oracle"
+obsolete_by	= "Bronze Working"
+build_cost	= 50
+upkeep		= 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
+helptext	= _("\
+The Hypogeum is thought to have been a sanctuary and necropolis. \
+It pre-dates broze age and was one of the first, if not the first, shrines built. \
+With this wonder, the city having it will get 4 additional unhappy \
+citizens. \
+")
+
+
 [building_temple_of_artemis]
 name		= _("Temple of Artemis")
 genus		= "SmallWonder"

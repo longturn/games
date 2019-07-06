@@ -2599,6 +2599,17 @@ nreqs   =
       "Building", "Hoover Dam", "City"
     }
 
+[effect_the_hypogeum_tomb]
+type    = "Output_Add_Tile"
+value   = 4
+reqs    =
+    { "type", "name", "range"
+      "Building", "The Hypogeum Tomb", "Player"
+	  "CityTile", "Center", "Local"
+      "OutputType", "Luxury", "Local"
+    }		
+	
+	
 [effect_offshore_platform]
 type    = "Output_Add_Tile"
 value   = 1
