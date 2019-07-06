@@ -2160,7 +2160,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "OneAttack", "AirAttacker"
+flags         = "OneAttack", "AirAttacker", "NoVeteran"
 roles         = ""
 helptext      = _("\
 The Cruise Missile is a long-distance missile\
@@ -2196,7 +2196,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "OneAttack", "AirAttacker", "CityBuster", "Unbribable"
+flags         = "OneAttack", "AirAttacker", "CityBuster", "Unbribable", "NoVeteran"
 roles         = ""
 helptext      = _("\
 The Missile is the first missile unit\
@@ -2233,7 +2233,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "FieldUnit", "OneAttack", "Nuclear", "AirAttacker"
+flags         = "FieldUnit", "OneAttack", "Nuclear", "AirAttacker", "NoVeteran"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
