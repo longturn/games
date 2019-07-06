@@ -1083,7 +1083,7 @@ reqs	=
 graphic	= "b.super_highways"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 120
+build_cost	= 100
 upkeep		= 3
 sabotage	= 100
 sound		= "b_super_highways"
@@ -1094,8 +1094,8 @@ Each tile around the city with roads, and without farmlands, that\
 "),
 ; /* xgettext:no-c-format */
 _("\
-Also doubles the effect of any Stock Exchange in the city (increasing\
- luxury and tax output by an additional 50%).\
+Also increases the effect of any Stock Exchange in the city (increasing\
+ luxury and tax output by an additional 25%).\
 "), _("\
 Super Highways also increase the pollution caused by the population\
  of the city.\

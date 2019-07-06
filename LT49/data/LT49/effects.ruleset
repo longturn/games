@@ -3133,7 +3133,7 @@ nreqs   =
 
 [effect_super_highways_1]
 type    = "Output_Bonus"
-value   = 50
+value   = 25
 reqs    =
     { "type", "name", "range"
       "Building", "Super Highways", "City"
@@ -3143,7 +3143,7 @@ reqs    =
 
 [effect_super_highways_2]
 type    = "Output_Bonus"
-value   = 50
+value   = 25
 reqs    =
     { "type", "name", "range"
       "Building", "Super Highways", "City"
