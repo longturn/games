@@ -493,6 +493,7 @@ reqs	=
 graphic	= "b.hydro_plant"
 graphic_alt	= "-"
 obsolete_by	= "None"
+build_cost	= 120
 upkeep		= 1
 sabotage	= 100
 sound		= "b_hydro_plant"
