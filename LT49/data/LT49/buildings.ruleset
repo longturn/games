@@ -626,9 +626,9 @@ reqs	=
 graphic	= "b.nuclear_plant"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 140
+build_cost	= 135
 upkeep		= 2
-sabotage	= 100
+sabotage	= 40
 sound		= "b_nuclear_plant"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
