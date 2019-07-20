@@ -2802,3 +2802,38 @@ helptext      = _("\
 A fusion powered Armor attacking \
 with double firepower.\
 ")
+
+
+[unit_cargo_aircraft]
+name          = _("Cargo Aircraft")
+class         = "Air"
+tech_req      = "Aviation Endurance"
+obsolete_by   = "None"
+graphic       = "u.cargoair"
+graphic_alt   = "u.bomber"  ; backwards compatibility
+sound_move    = "m_awacs"
+sound_move_alt = "m_generic"
+sound_fight   = "f_awacs"
+sound_fight_alt = "f_generic"
+build_cost    = 200
+pop_cost      = 
+attack        = 0
+defense       = 3
+hitpoints     = 30
+firepower     = 1
+move_rate     = 28
+vision_radius_sq = 96
+transport_cap = 2
+fuel          = 3
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+cargo         = "Land", "Small Land", "Big Land", "Big Siege", "Merchant", "Non Military", "Trireme"
+flags         = "Unbribable"
+roles         = ""
+helptext      = _("\
+The Cargo Aircraft is an airplane with an exceptionally high range while caarying \
+a heavy cargo. It is able to transport a wide range of units able to surprise your enemy. \
+This exceptionally heavy airplane has no offecive capabilities but is able to defend.\
+")
