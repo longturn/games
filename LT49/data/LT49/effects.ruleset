@@ -2601,7 +2601,7 @@ nreqs   =
 
 [effect_hal_salflieni_hypogeum]
 type    = "Output_Add_Tile"
-value   = 4
+value   = 6
 reqs    =
     { "type", "name", "range"
       "Building", "Ħal Saflieni Hypogeum", "Player"
