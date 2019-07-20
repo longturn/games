@@ -6,7 +6,7 @@ set generator="ISLAND"
 set huts=1
 set landmass=20
 set mapsize="PLAYER"
-set separatepoles=enabled
+set separatepoles=disabled
 set specials=250
 set startpos="VARIABLE"
 set steepness=40
@@ -14,7 +14,7 @@ set temperature=50
 set tilesperplayer=400
 set topology="WRAPX|WRAPY"
 set wetness=60
-set alltemperate=enabled
+set alltemperate=disabled
 set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
