@@ -2829,11 +2829,11 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-cargo         = "Land", "Small Land", "Big Land", "Big Siege", "Merchant", "Non Military", "Trireme"
+cargo         = "Land", "Small Land", "Big Land", "Big Siege", "Merchant", "Trireme"
 flags         = "Unbribable"
 roles         = ""
 helptext      = _("\
-The Cargo Aircraft is an airplane with an exceptionally high range while caarying \
+The Cargo Aircraft is an airplane with an exceptionally high range while carrying \
 a heavy cargo. It is able to transport a wide range of units able to surprise your enemy. \
 This exceptionally heavy airplane has no offecive capabilities but is able to defend.\
 ")
