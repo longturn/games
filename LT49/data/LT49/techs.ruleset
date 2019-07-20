@@ -363,7 +363,7 @@ cost     = 3000
 
 [advance_aviation_endurance]
 name     = _("Aviation Endurance")
-req1     = "Fusion"
+req1     = "Fusion Power"
 req2     = ""
 flags    = ""
 graphic     = "a.flightendurance"
