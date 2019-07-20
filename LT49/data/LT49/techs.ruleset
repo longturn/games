@@ -361,6 +361,16 @@ graphic_alt = "-"
 helptext = _("Gives sea units nine extra moves.")
 cost     = 3000
 
+[advance_aviation_endurance]
+name     = _("Aviation Endurance")
+req1     = "Fusion"
+req2     = ""
+flags    = ""
+graphic     = "a.flightendurance"
+graphic_alt = "a.flight"
+helptext = _("Allows the construction of unit cargo planes.")
+cost     = 3500
+
 [advance_genetic_engineering]
 name     = _("Genetic Engineering")
 req1     = "Refrigeration"
