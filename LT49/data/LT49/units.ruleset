@@ -2163,7 +2163,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "OneAttack", "AirAttacker", "NoVeteran"
+flags         = "OneAttack", "AirAttacker"
 roles         = ""
 helptext      = _("\
 The Fusion Missile is an ultra long-distance missile\
@@ -2187,7 +2187,7 @@ sound_fight   = "f_cruise_missile"
 sound_fight_alt = "f_generic"
 build_cost    = 45
 pop_cost      = 0
-attack        = 20
+attack        = 18
 defense       = 0
 hitpoints     = 5
 firepower     = 3
@@ -2199,7 +2199,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "OneAttack", "AirAttacker", "NoVeteran"
+flags         = "OneAttack", "AirAttacker"
 roles         = ""
 helptext      = _("\
 The Cruise Missile is a long-distance missile\
@@ -2223,11 +2223,11 @@ sound_fight   = "f_cruise_missile"
 sound_fight_alt = "f_generic"
 build_cost    = 30
 pop_cost      = 0
-attack        = 20
+attack        = 15
 defense       = 0
-hitpoints     = 1
+hitpoints     = 2
 firepower     = 2
-move_rate     = 10
+move_rate     = 9
 vision_radius_sq = 1
 transport_cap = 0
 fuel          = 1
@@ -2244,6 +2244,10 @@ The Missile is the first missile unit\
 "), _("\
 TIP:  A handful of these can successfully keep the waters around\
  your treasured homeland not such nice place for the eney ships.\
+ Your first missile is always green because the crude design of the\
+ unit is already as efficient as it can be. The missile can't\
+ be enhanced further without completely upgrading it into a new\
+ and more modern cruise missile\
 ")
 
 
