@@ -2199,6 +2199,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
+targets       = "Helicopter"
 flags         = "OneAttack", "AirAttacker"
 roles         = ""
 helptext      = _("\
