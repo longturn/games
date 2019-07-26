@@ -1557,11 +1557,11 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Land"
-flags         = "OneAttack", "AirAttacker", "Bombarder", "Helicopter"
+flags         = "OneAttack", "AirAttacker", "Helicopter"
 roles         = ""
 helptext      = _("\
-A Helicopter's attack against units on land is a bombard attack; against \
-units on water it has a regular attack.\
+A Helicopter's attack against other units happens just\
+ like with any other unit and it does not do bombard attacks.\
 "), _("\
 Helicopters can also transport one unit of infantry; while most troops \
 must load or unload in a city or airbase units specializing in mobility \
