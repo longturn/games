@@ -874,7 +874,7 @@ sound_move    = "m_partisan"
 sound_move_alt = "m_generic"
 sound_fight   = "f_partisan"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 80
 pop_cost      = 1
 attack        = 4
 defense       = 5
@@ -899,7 +899,9 @@ Partisans are guerilla fighters who are experts\
  killed if the city building them is lost. Since partisans\
  are citizens trained to fight the oppressor they can\
  once again become part of the normal population when\
- the war is over.\
+ the war is over. The partisans are almost invisible to\
+ the enemy but this comes with a cost. The partisans are\
+ not that fast when moving to a new loaction.\
 ")
 
 
