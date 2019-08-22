@@ -2604,7 +2604,7 @@ type    = "Output_Add_Tile"
 value   = 6
 reqs    =
     { "type", "name", "range"
-      "Building", "Ħal Saflieni Hypogeum", "Player"
+      "Building", "Ħal Saflieni Hypogeum", "City"
 	  "CityTile", "Center", "Local"
       "OutputType", "Luxury", "Local"
     }		
