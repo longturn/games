@@ -2607,7 +2607,11 @@ reqs    =
       "Building", "Ħal Saflieni Hypogeum", "City"
 	  "CityTile", "Center", "Local"
       "OutputType", "Luxury", "Local"
-    }		
+    }	
+nreqs   =
+    { "type", "name", "range"
+      "Tech", "Bronze Working", "Player"
+    }	
 	
 	
 [effect_offshore_platform]
