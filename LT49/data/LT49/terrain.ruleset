@@ -831,8 +831,9 @@ name        = _("?animals:Game")
 graphic     = "ts.tundra_game"
 graphic_alt = "-"
 identifier  = "e"
-food        = 2
+food        = 3
 shield      = 1
+trade       = 2
 # tundra.
 
 [resource_furs]
@@ -840,8 +841,9 @@ name        = _("Furs")
 graphic     = "ts.furs"
 graphic_alt = "-"
 identifier  = "u"
-food        = 1
-trade       = 3
+food        = 2
+shield      = 1
+trade       = 4
 # tundra-only (beaver pelts).
 
 [resource_coal]
