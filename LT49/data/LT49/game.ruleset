@@ -369,7 +369,7 @@ names =
 ; etc...
 
 [settings]
-; freeciv game settings for civ2civ3 ruleset
+; freeciv game settings for civ2civ3 / LT49 ruleset
 ;
 ;set =
 ;    { "name", "value"

@@ -2613,7 +2613,6 @@ nreqs   =
       "Tech", "Bronze Working", "Player"
     }	
 	
-	
 [effect_offshore_platform]
 type    = "Output_Add_Tile"
 value   = 1
