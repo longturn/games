@@ -8,7 +8,7 @@
 ; use your new customized file.
 
 [datafile]
-description="LT49/Civ2Civ3 longturn traditional technology data for Freeciv"
+description="LT49/Civ2Civ3 longturn traditional technology data for Freeciv. Based on LT47."
 options="+Freeciv-2.5-ruleset"
 
 [control]
