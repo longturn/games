@@ -1,0 +1,6 @@
+# Server commands to make warciv Freeciv rules
+#
+
+rulesetdir warciv
+
+# changed game settings are defined in game.ruleset
