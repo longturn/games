@@ -427,9 +427,6 @@ sound		= "b_courthouse"
 sound_alt	= "b_generic"
 helptext	= _("\
 Reduces corruption in a city, amount depending on government. \
-In your capital, corruption and production waste is \
-eliminated. A Granary together with a Courthouse in a city will \
-eliminate food waste.\
 "), _("\
 Also makes one unhappy citizen content (unless that citizen is unhappy \
 about military activity), and makes the revolt cost of the city 4 times \
@@ -442,7 +439,6 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range", "negated"
       "Tech", "Industrialization", "Player", FALSE
-      "Building", "Manufaktur", "City", TRUE
     }
 graphic	= "b.factory"
 graphic_alt	= "-"
@@ -485,7 +481,8 @@ helps cities to grow faster and more easily withstand famine. With a \
 Granary this is extended to cities of size 4 and above. \
 "), _("\
 A Granary also halves the food wasted in cities far from your capital. \
-Together with a Courthouse it eliminates food waste.\
+"), _("\
+Granary decreases the chance that population will migrate to bigger cities.\
 "), _("\
 TIP: to maximise the speed with which a city grows, you should build a \
 Granary before it grows larger than size 4.\
@@ -723,26 +720,19 @@ can lead to fallout and reduce the city's population.\
 [building_palace]
 name		= _("Palace")
 genus		= "SmallWonder"
-flags		= "SaveSmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Masonry", "Player"
     }
 graphic	= "b.palace"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 50
+build_cost	= 20
 upkeep		= 0
 sabotage	= 0
 sound		= "b_palace"
 sound_alt	= "b_generic"
 helptext	= _("\
-Makes a city the capital and the center of your government. \
-Waste in other cities (corruption, production waste, and food waste) \
-is often related to how far away from the capital they are. On top of \
-this, corruption and production waste in your capital itself is half \
-of what it would otherwise be (and a Courthouse will eliminate it \
-entirely).\
+Makes a city the capital and the center of your government. \Corruption in other cities is often related to how far away from the capital they are. \
 "), _("\
 The cost to enemy Diplomats and Spies of inciting a revolt in a \
 city also depends upon the city's distance from the capital \
@@ -751,8 +741,8 @@ be incited to revolt, and enjoys a bonus when enemy agents try \
 to evade your own agents stationed in the city, or sabotage your \
 buildings.\
 "), _("\
-Take good care of your capital, as its loss may result in your \
-empire plunging into civil war. Losing your current palace also \
+Take good care of your capital, as its loss will result in the loss of \
+all centrally collected trade until you rebuild the palace. Losing it also \
 results in losing whatever spaceship you might have.\
 "),
 ; /* xgettext:no-c-format */
@@ -1950,11 +1940,11 @@ sound_alt   = "b_generic"
 ; /* xgettext:no-c-format */
 helptext   = _("\
 Increases production in the city by 2 Shields.\
-With the onset of Industrialization, it becomes\
-a museum and produces 2 Trade instead. \
+With the onset of industrial revolution it represents \
+tradition of manufacturing in that city and, if it is \
+not present in the city at that time, it cannot be \
+built/established anymore.\ 
 \
-If a Factory is built in a city with Manufaktur,\
-its cost is decreased.\
 ")
 
 
@@ -2139,5 +2129,4 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Player building it gets an embassy with all players.\
 ")
-
 
