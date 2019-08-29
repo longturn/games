@@ -78,19 +78,28 @@ _("\
 * You have no control over tax rates. Half of the trade income is\
  simply lost to your economy, and the remainder all goes to luxuries.\
  Conventional corruption increases with distance from the capital\
- (half as fast with knowledge of The Corporation).\n\
+ (half as fast with knowledge of The Corporation).\
+* Cities revolt en masse and production is hindered. \
+* You can not use military units for martial law. \
+n\
 ")
 
 ;------------------------------------------------------------------------
 [government_tribal]
 
 name        = _("Tribal")
-; No reqs
+
+reqs = { "type", "name", "range", "negated"
+         "building", "Palace", "Player", TRUE
+         "tech", "Writing", "Player", TRUE
+         "tech", "Polytheism", "Player", TRUE
+       }
+
 graphic     = "gov.tribal"
 graphic_alt = "s.tax_luxury"
 
-ruler_male_title = _("Chief %s")
-ruler_female_title = _("Chief %s")
+ruler_male_title = _("Divine %s")
+ruler_female_title = _("Divine %s")
 
 helptext = _("\
 Under a Tribal government, you are part ruler of your people. Your\
@@ -118,24 +127,25 @@ _("\
 [government_despotism]
 
 name        = _("Despotism")
-; No reqs
+reqs = { "type", "name", "range"
+         "building", "Palace", "Player"
+       }
+
 graphic     = "gov.despotism"
 graphic_alt = "-"
 
-ruler_male_title = _("Chief %s")
-ruler_female_title = _("?female:Chief %s")
+ruler_male_title = _("Divine %s")
+ruler_female_title = _("?female:Divine %s")
 
 helptext = _("\
 Under Despotism, you are the absolute ruler of your people.  Your\
  control over your citizens is maintained largely by martial law.\
-"), _("\
-Compared to Tribalism, a Despotic economy is more trade-oriented.\
-"),
+"), 
 ; /* xgettext:no-c-format */
 _("\
 * Your capital city gets a +75% bonus to gold production.\n\
-* Each city can support up to 2 units for free; further units each cost\
- 1 gold per turn.\n\
+* Each city provides two coins for supporting its military units ("free upkeep"). The \
+rest must be paid from the state treasury. \
 * Unlike later governments, military units do not cause unhappiness even\
  when deployed aggressively.\n\
 ")
@@ -161,7 +171,6 @@ Monarchy gives low unit upkeep costs.\
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Your capital city gets a +50% bonus to gold production.\n\
 * Celebrating cities produce one extra trade point for every tile which is\
  already producing trade. (Cities below size 3 will not celebrate.)\n\
 ")
@@ -190,6 +199,7 @@ Communism is a good government for maximizing shield production, and\
 "),
 ; /* xgettext:no-c-format */
 _("\
+* Your capital city gets a +10 Trade.\n\
 * City improvements which would normally have an upkeep of 1 gold are\
  free of upkeep.\n\
 ")
@@ -227,6 +237,7 @@ Fundamentalism is a good government for maximizing gold, and its Fanatics\
 "),
 ; /* xgettext:no-c-format */
 _("\
+* Your capital city gets +10 Trade.\n\
 * Science production is half that of other governments.\n\
 ")
 
@@ -289,6 +300,7 @@ Under a Republican government, citizens hold an election to select a\
 _("\
 * Cities produce an extra trade point for every worked land tile that is\
  already producing trade.\n\
+* Your capital city gets +10 Trade.\n\
 * Celebrating cities produce a further trade point for every worked tile\
  (land or water) which is already producing trade. (Cities below size 3\
  will not celebrate.)\n\
@@ -317,6 +329,7 @@ Under Democracy, citizens govern directly by voting on issues.\
 _("\
 * Cities produce an extra trade point for every worked land tile that is\
  already producing trade.\n\
+* Your capital city gets +10 Trade.\n\
 * Celebrating cities produce a further trade point for every worked tile\
  (land or water) which is already producing trade. (Cities below size 3\
  will not celebrate.)\n\
