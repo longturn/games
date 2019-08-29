@@ -410,7 +410,7 @@ flags         = "Unreachable", "DoesntOccupyTile", "CanPillage"
 name          = _("Settlers")
 class         = "Small Land"
 tech_req      = "None"
-obsolete_by   = "None"
+obsolete_by   = "Tribe"
 graphic       = "u.settlers"
 graphic_alt   = "-"
 sound_move    = "m_settlers"
@@ -449,6 +449,52 @@ Workers.\
 TIP: optimal production of Settlers occurs in cities of at most \
 size 4, or cities with a Granary of at most size 6.\
 ")
+
+[unit_tribe]
+name          = _("Tribe")
+class         = "Small Land"
+tech_req      = "None"
+gov_req       = "Tribal"
+obsolete_by   = "None"
+graphic       = "u.tribe"
+graphic_alt   = "u.settlers"
+sound_move    = "m_settlers"
+sound_move_alt = "m_generic"
+sound_fight   = "f_settlers"
+sound_fight_alt = "f_generic"
+build_cost    = 10
+pop_cost      = 1
+attack        = 0
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 5
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 0
+uk_food       = 0
+uk_gold       = 0
+flags         = "Settlers", "NonMil", "Cities"
+; No veteran levels (level name is never displayed)
+veteran_names = _("green")
+veteran_raise_chance = 0
+veteran_work_raise_chance = 0
+veteran_power_fact = 100
+veteran_move_bonus = 0
+roles         = "Cities"
+helptext      = _("\
+In the early stages of civilization, expansion was a constant. \
+People simply moved from one place to another and settled in  \
+new locations, carrying only basic stuff, because that was all \
+they had. \
+"), _("\
+Tribe is a predecessor of Settlers and is used for founding new 
+cities. Tribe can also perform some of the same terrain alterations
+as Workers.\
+")
+
 
 [unit_migrants]
 name          = _("Migrants")
@@ -594,7 +640,7 @@ for more details.\
 name          = _("Warriors")
 class         = "Land"
 tech_req      = "None"
-obsolete_by   = "Militia"
+obsolete_by   = "Raiders"
 graphic       = "u.warriors"
 graphic_alt   = "-"
 sound_move    = "m_warriors"
@@ -622,12 +668,13 @@ This unit may be built from the start of the game.  It is the\
  weakest offensive unit.\
 ")
 
+
 [unit_raiders]
 name          = _("Raiders")
 class         = "Land"
 tech_req      = "None"
 gov_req       = "Tribal"
-obsolete_by   = "Arquebusiers"
+obsolete_by   = "Militia"
 graphic       = "u.raiders"
 graphic_alt   = "u.warriors"
 sound_move    = "m_warriors"
@@ -660,8 +707,7 @@ This unit may be built from the start of the game.  It is the\
 name          = _("Phalanx")
 class         = "Land"
 tech_req      = "Bronze Working"
-gov_req       = "Despotism"
-obsolete_by   = "Arquebusiers"
+obsolete_by   = "Raiders"
 graphic       = "u.phalanx"
 graphic_alt   = "-"
 sound_move    = "m_phalanx"
@@ -691,6 +737,7 @@ The Phalanx is armored infantry, suitable for defending your cities.\
 [unit_Bowmen]
 name          = _("Bowmen")
 class         = "Land"
+tech_req      = "None"
 gov_req       = "Tribal"
 obsolete_by   = "Skirmishers"
 graphic       = "u.bowmen"
@@ -766,7 +813,7 @@ sound_move    = "m_legion"
 sound_move_alt = "m_generic"
 sound_fight   = "f_legion"
 sound_fight_alt = "f_generic"
-build_cost    = 14
+build_cost    = 15
 pop_cost      = 0
 attack        = 4
 defense       = 2
@@ -851,7 +898,8 @@ roles         = "DefendGood", "FirstBuild", "HutTech",
 helptext      = _("\
 Militia is the first unit equipped with \
 Gunpowder technology, but represents hastily \
-and not too well organised units. Best used \
+and not too well organised units consisting of \
+citizens and requires no gold upkeep. Best used \
 in case of emergency. \
 ")
 
@@ -1713,13 +1761,10 @@ uk_shield     = 4
 uk_food       = 1
 uk_gold       = 6
 cargo         = "Land", "Non Military"
-flags         = "OneAttack", "AirAttacker", "Bombarder"
+flags         = "AirAttacker"
 roles         = ""
 helptext      = _("\
-A Helicopter's attack against units on land is a bombard attack; against \
-units on water it has a regular attack.\
-"), _("\
-Helicopters can also transport one unit of infantry; while most troops \
+Helicopters can transport one unit of infantry; while most troops \
 must load or unload in a city or airbase units specializing in mobility \
 (Paratroopers, Alpine Troops, Marines, Partisans, and Fanatics) can \
 embark or disembark at any time.\
@@ -1727,7 +1772,6 @@ embark or disembark at any time.\
 Care must be exercised, because Helicopters lose a small amount of health \
 for every turn not spent in a city or airbase or on a Carrier.\
 ")
-bombard_rate = 5
 
 [unit_stealth_fighter]
 name          = _("Stealth Fighter")
@@ -1799,6 +1843,7 @@ bombard_rate = 6
 name          = _("Trireme")
 class         = "Trireme"
 tech_req      = "Map Making"
+impr_req      = "Docks"
 obsolete_by   = "Boat"
 graphic       = "u.trireme"
 graphic_alt   = "-"
@@ -1833,7 +1878,7 @@ The Trireme is your first boat unit. It can act\
 [unit_boat]
 name          = _("Boat")
 class         = "Trireme"
-tech_req      = "Map Making"
+tech_req      = "None"
 gov_req       = "Tribal"
 obsolete_by   = "Caravel"
 graphic       = "u.boat"
@@ -2934,7 +2979,8 @@ hitpoints     = 10
 firepower     = 1
 move_rate     = 4
 vision_radius_sq = 2
-transport_cap = 0
+transport_cap = 2
+cargo         = "Missile"
 fuel          = 0
 uk_happy      = 0
 uk_shield     = 1
