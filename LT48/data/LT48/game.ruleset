@@ -15,20 +15,17 @@ options="+Freeciv-2.5-ruleset"
 
 [about]
 ; Ruleset name
-name = _("Corbeau's Ruleset")
+name = _("Simulation Ruleset 2.1")
 
 ; Description of the ruleset
 description = _("\
-You are playing Freeciv with rules designed for multiplayer gaming. \
-The biggest differences from the classic ruleset are that trade routes \
-are disabled, and that most wonders can be built once by each player, \
-and affect only cities on the same continent. A full description of \
-the differences can be found in README.ruleset_multiplayer.\
+Check http://forum.freeciv.org/f/viewforum.php?f=11 \
+for details, search for 'Simulation ruleset' or 'Sim' \
 ")
 
 [options]
 global_init_techs=""
-global_init_buildings="Palace"
+global_init_buildings=""
 
 [civstyle]
 ; Value added to city pollution
@@ -46,7 +43,7 @@ food_cost        = 2
 ;   if city_size > num_inis;
 ;     city_granary_size = (granary_food_ini[num_inis] +
 ;        granary_food_inc * (city_size - num_inis)) * foodbox / 100
-granary_food_ini = 10, 12, 14, 16, 20, 25, 30, 35, 40
+granary_food_ini = 10, 12, 15, 18, 22, 26, 30, 35, 40
 granary_food_inc = 10
 
 ; City center minimum outputs
