@@ -69,6 +69,15 @@ options="+Freeciv-2.5-ruleset"
 ;
 ; */ <-- avoid gettext warnings
 
+[advance_alchemy]
+name     = _("Alchemy")
+req1     = "Trade"
+req2     = "Philosophy"
+flags    = ""
+graphic     = "a.alchemy"
+graphic_alt = "a.philosophy"
+cost     = 100
+
 [advance_advanced_flight]
 name     = _("Advanced Flight")
 req1     = "Radio"
@@ -164,8 +173,8 @@ cost     = 10
 
 [advance_chemistry]
 name     = _("Chemistry")
-req1     = "University"
-req2     = "Medicine"
+req1     = "Alchemy"
+req2     = "University"
 flags    = ""
 graphic     = "a.chemistry"
 graphic_alt = "-"
@@ -380,7 +389,7 @@ cost     = 480
 
 [advance_gunpowder]
 name     = _("Gunpowder")
-req1     = "Physics"
+req1     = "Alchemy"
 req2     = "Feudalism"
 graphic     = "a.gunpowder"
 graphic_alt = "-"
@@ -443,8 +452,8 @@ cost     = 650
 
 [advance_leadership]
 name     = _("Leadership")
-req1     = "Theology"
-req2     = "Banking"
+req1     = "Gunpowder"
+req2     = "Chivalry"
 flags    = ""
 graphic     = "a.leadership"
 graphic_alt = "-"
@@ -623,8 +632,8 @@ cost     = 70
 
 [advance_physics]
 name     = _("Physics")
-req1     = "The Wheel"
-req2     = "Magnetism"
+req1     = "Philosophy"
+req2     = "Feudalism"
 flags    = ""
 graphic     = "a.physics"
 graphic_alt = "-"
