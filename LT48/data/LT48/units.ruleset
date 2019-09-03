@@ -1724,6 +1724,7 @@ uk_shield     = 4
 uk_food       = 1
 uk_gold       = 6
 bombard_rate  = 5
+hp_loss_pct   = 20
 flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder"
 roles         = ""
 helptext      = _("\
