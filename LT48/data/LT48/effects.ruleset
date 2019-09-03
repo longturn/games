@@ -3887,36 +3887,36 @@ reqs    =
       "Building", "Internet", "Player"
     }
 
-[effect_shakespeares_theatre]
-type    = "Output_Add_Tile"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Shakespeare's Theatre", "Player"
-      "CityTile", "Center", "Local"
-      "OutputType", "Luxury", "Local"
-    }
+;[effect_shakespeares_theatre]
+;type    = "Output_Add_Tile"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range"
+;      "Building", "Shakespeare's Theatre", "Player"
+;      "CityTile", "Center", "Local"
+;      "OutputType", "Luxury", "Local"
+;    }
 
-[effect_shakespeares_theatre_1]
-type    = "Output_Add_Tile"
-value   = 5
-reqs    =
-    { "type", "name", "range"
-      "Building", "Shakespeare's Theatre", "City"
-      "CityTile", "Center", "Local"
-      "OutputType", "Luxury", "Local"
-    }
+;[effect_shakespeares_theatre_1]
+;type    = "Output_Add_Tile"
+;value   = 5
+;reqs    =
+;    { "type", "name", "range"
+;      "Building", "Shakespeare's Theatre", "City"
+;      "CityTile", "Center", "Local"
+;      "OutputType", "Luxury", "Local"
+;    }
 
 ;2 + 1 = 3
-[effect_shakespeares_theatre_2]
-type    = "Specialist_Output"
-value   = 1
-reqs    =
-    { "type", "name", "range", "survives"
-      "Building", "Shakespeare's Theatre", "World", TRUE
-      "Specialist", "Elvis", "Local"
-      "OutputType", "Luxury", "Local"
-    }
+;[effect_shakespeares_theatre_2]
+;type    = "Specialist_Output"
+;value   = 1
+;reqs    =
+;    { "type", "name", "range", "survives"
+;      "Building", "Shakespeare's Theatre", "World", TRUE
+;      "Specialist", "Elvis", "Local"
+;      "OutputType", "Luxury", "Local"
+;    }
 
 ; No_Anarchy includes no_senate effect
 ;[effect_statue_of_liberty]
