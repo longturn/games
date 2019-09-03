@@ -1800,29 +1800,29 @@ Completion of this wonder permanently doubles the effect of \
 Research Labs for every player.\
 ")
 
-[building_shakespeares_theatre]
-name		= _("Shakespeare's Theater")
-rule_name	= "Shakespeare's Theatre"  ; en_GB spelling used originally
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Sanitation", "Player"
-    }
-graphic	= "b.shakespeares_theatre"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 300
-upkeep		= 0
-sabotage	= 0
-sound		= "w_shakespeares_theatre"
-sound_alt	= "w_generic"
-helptext	= _("\
-Gives 1 additional luxury to every city, and 6 luxuries to the city \
-where it is located.\
-"), _("\
-Upon completion of this wonder, entertainer specialists' luxury \
-output increases to 3 permanently for every nation.\
-")
+;[building_shakespeares_theatre]
+;name		= _("Shakespeare's Theater")
+;rule_name	= "Shakespeare's Theatre"  ; en_GB spelling used originally
+;genus		= "GreatWonder"
+;reqs	=
+;    { "type", "name", "range"
+;     "Tech", "Sanitation", "Player"
+;    }
+;graphic	= "b.shakespeares_theatre"
+;graphic_alt	= "-"
+;obsolete_by	= "None"
+;build_cost	= 300
+;upkeep		= 0
+;sabotage	= 0
+;sound		= "w_shakespeares_theatre"
+;sound_alt	= "w_generic"
+;helptext	= _("\
+;Gives 1 additional luxury to every city, and 6 luxuries to the city \
+;where it is located.\
+;"), _("\
+;Upon completion of this wonder, entertainer specialists' luxury \
+;output increases to 3 permanently for every nation.\
+;")
 
 ;[building_statue_of_liberty]
 ;name		= _("Statue of Liberty")
