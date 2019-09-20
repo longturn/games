@@ -1844,7 +1844,6 @@ bombard_rate = 6
 name          = _("Trireme")
 class         = "Trireme"
 tech_req      = "Map Making"
-impr_req      = "Docks"
 obsolete_by   = "Boat"
 graphic       = "u.trireme"
 graphic_alt   = "-"
