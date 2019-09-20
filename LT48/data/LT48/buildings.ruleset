@@ -237,6 +237,8 @@ With a Barracks, each new land unit built in a city will\
  automatically have three additional Veteran levels.\
  Also, damaged land units which stay in town for one full \
  turn without moving are completely restored.\
+ \
+ Barracks have no effect under Tribal government.\
 ")
 
 [building_barracks_ii]
@@ -2129,4 +2131,3 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Player building it gets an embassy with all players.\
 ")
-
