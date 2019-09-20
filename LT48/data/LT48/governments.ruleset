@@ -144,8 +144,8 @@ Under Despotism, you are the absolute ruler of your people.  Your\
 ; /* xgettext:no-c-format */
 _("\
 * Your capital city gets a +75% bonus to gold production.\n\
-* Each city provides two coins for supporting its military units ("free upkeep"). The \
-rest must be paid from the state treasury. \
+* Each city provides two coins for supporting its military \ 
+units ('free upkeep'). The rest must be paid from the state treasury. \
 * Unlike later governments, military units do not cause unhappiness even\
  when deployed aggressively.\n\
 ")
