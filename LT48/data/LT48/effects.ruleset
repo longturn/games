@@ -230,7 +230,6 @@ reqs    =
       "Specialist", "Taxman", "Local", FALSE
       "OutputType", "Gold", "Local", FALSE
       "Gov", "Tribal", "Player", FALSE
-      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_scientist_tribal]
@@ -251,7 +250,7 @@ reqs    =
       "Specialist", "Scientist", "Local"
       "OutputType", "Science", "Local"
       "Gov", "Anarchy", "Player"
-
+    }
 
 [effect_taxman]
 type    = "Specialist_Output"
@@ -260,6 +259,9 @@ reqs    =
     { "type", "name", "range", "negated"
       "Specialist", "Taxman", "Local", FALSE
       "OutputType", "Gold", "Local", FALSE
+    }
+nreqs   =
+    { "type", "name", "range", "negated"
       "Gov", "Tribal", "Player", TRUE
       "Gov", "Anarchy", "Player", TRUE
     }
@@ -272,7 +274,7 @@ reqs    =
       "Specialist", "Taxman", "Local"
       "OutputType", "Gold", "Local"
       "Gov", "Anarchy", "Player"
-
+    }
 
 
 ; Vision benefit from fortress watchtowers
