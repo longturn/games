@@ -3,7 +3,7 @@
 # the value defines how many players need to invent a tech before it's given free to everyone. currently set to 18
 
 
-rulesetdir SimV2.1
+rulesetdir LT48
 
 # map
 set alltemperate=disabled
