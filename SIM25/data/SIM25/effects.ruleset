@@ -198,7 +198,6 @@ reqs    =
       "Specialist", "Scientist", "Local", FALSE
       "OutputType", "Science", "Local", FALSE
       "Gov", "Anarchy", "Player", TRUE
-      "Gov", "Tribal", "Player", TRUE
 }
 
 [effect_taxman_tribal]
@@ -215,10 +214,10 @@ reqs    =
 type    = "Specialist_Output"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "Specialist", "Scientist", "Local"
-      "OutputType", "Science", "Local"
-      "Gov", "Tribal", "Player"
+    { "type", "name", "range", "negated"
+      "Specialist", "Scientist", "Local", FALSE
+      "OutputType", "Science", "Local", FALSE
+      "Gov", "Tribal", "Player", FALSE
 }
 
 [effect_taxman]
@@ -415,13 +414,13 @@ reqs    =
     }
 
 ; Invention halves unit upgrade prices
-;[effect_upgrade_price_halfed]
-;type    = "Upgrade_Price_Pct"
-;value   = -50
-;reqs    =
-;    { "type", "name", "range"
-;      "Tech", "Invention", "Player"
-;    }
+[effect_upgrade_price_halfed]
+type    = "Upgrade_Price_Pct"
+value   = -50
+reqs    =
+    { "type", "name", "range"
+      "Tech", "Invention", "Player"
+    }
 
 ; Medicine increases city health
 [effect_unit_recover_medicine]
@@ -913,23 +912,13 @@ nreqs   =
 
 
 ; Any city can support up to X units with FOOD...
-[effect_upkeep_free_units_food_base_anarchy_tribal]
+[effect_upkeep_free_units_food_base_anarchy]
 type    = "Unit_Upkeep_Free_Per_City"
 value   = 99
 reqs    =
     { "type", "name", "range"
       "OutputType", "Food", "Local"
-    }
-nreqs   =
-    { "type", "name", "range"
       "Gov", "Anarchy", "Player"
-      "Gov", "Tribal", "Player"
-;      "Gov", "Despotism", "Player"
-;      "Gov", "Fundamentalism", "Player"
-;      "Gov", "Republic", "Player"
-;      "Gov", "Monarchy", "Player"
-;      "Gov", "Communism", "Player"
-;      "Gov", "Democracy", "Player"
     }
 
 
@@ -942,14 +931,12 @@ reqs    =
     }
 nreqs   =
     { "type", "name", "range"
-;      "Gov", "Anarchy", "Player"
-;      "Gov", "Tribal", "Player"
-      "Gov", "Despotism", "Player"
-      "Gov", "Fundamentalism", "Player"
-;      "Gov", "Republic", "Player"
-;      "Gov", "Monarchy", "Player"
-;      "Gov", "Communism", "Player"
-;      "Gov", "Democracy", "Player"
+      "Gov", "Anarchy", "Player"
+      "Gov", "Tribal", "Player"
+      "Gov", "Republic", "Player"
+      "Gov", "Monarchy", "Player"
+      "Gov", "Communism", "Player"
+      "Gov", "Democracy", "Player"
     }
 
 [effect_upkeep_free_units_food_base_monarchy]
@@ -958,20 +945,8 @@ value   = 4
 reqs    =
     { "type", "name", "range"
       "OutputType", "Food", "Local"
-    }
-nreqs   =
-    { "type", "name", "range"
-;      "Gov", "Anarchy", "Player"
-;      "Gov", "Tribal", "Player"
-;      "Gov", "Despotism", "Player"
-;      "Gov", "Fundamentalism", "Player"
-;      "Gov", "Republic", "Player"
       "Gov", "Monarchy", "Player"
-;      "Gov", "Communism", "Player"
-;      "Gov", "Democracy", "Player"
     }
-
-
 
 [effect_upkeep_free_units_food_base_republic_communism_democracy]
 type    = "Unit_Upkeep_Free_Per_City"
@@ -982,14 +957,11 @@ reqs    =
     }
 nreqs   =
     { "type", "name", "range"
-;      "Gov", "Anarchy", "Player"
-;      "Gov", "Tribal", "Player"
-;      "Gov", "Despotism", "Player"
-;      "Gov", "Fundamentalism", "Player"
-      "Gov", "Republic", "Player"
-;      "Gov", "Monarchy", "Player"
-      "Gov", "Communism", "Player"
-      "Gov", "Democracy", "Player"
+      "Gov", "Anarchy", "Player"
+      "Gov", "Tribal", "Player"
+      "Gov", "Despotism", "Player"
+      "Gov", "Monarchy", "Player"
+      "Gov", "Fundamentalism", "Player"
     }
 
 
@@ -1708,23 +1680,23 @@ reqs    =
       "OutputType", "Trade", "Local"
     }
 
-[effect_no_trade_tribal]
+[effect_no_gold_tribal]
 type    = "Output_Bonus"
 value   = -100
 reqs    =
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
-      "OutputType", "Trade", "Local"
+      "OutputType", "Gold", "Local"
     }
     
-;[effect_no-science_tribal]
-;type    = "Output_Bonus"
-;value   = -100
-;reqs    =
-;    { "type", "name", "range"
-;      "Gov", "Tribal", "Player"
-;      "OutputType", "Science", "Local"
-;    }
+[effect_no-science_tribal]
+type    = "Output_Bonus"
+value   = -100
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Tribal", "Player"
+      "OutputType", "Gold", "Local"
+    }
 
 [effect_bad_sci_fundamentalism]
 type    = "Output_Bonus_2"
@@ -2741,7 +2713,7 @@ reqs    =
     { "type", "name", "range", "negated"
       "CityTile", "Center", "Local", FALSE
       "OutputType", "Trade", "Local", FALSE
-      "Building", "Palace", "City", FALSE
+      "Building", "Palace", "City", 
       "Gov", "Anarchy", "Player", TRUE
       "Gov", "Tribal", "Player", TRUE
       "Gov", "Despotism", "Player", TRUE
@@ -3604,15 +3576,20 @@ reqs    =
       "OutputType", "Gold", "Local"
     }
 
-;[effect_leonardos_workshop]
-;type    = "Upgrade_Unit"
-;value   = 2
-;reqs    =
-;    { "type", "name", "range"
-;      "Building", "Leonardo's Workshop", "Player"
-;    }
+[effect_leonardos_workshop]
+type    = "Upgrade_Unit"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Building", "Leonardo's Workshop", "Player"
+    }
 
-
+[effect_leonardos_automatic]
+type    = "Upgrade_Unit"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+    }
 
 
 [effect_lighthouse_move]
@@ -4291,19 +4268,19 @@ nreqs   =
 ; through climate change.)
 ; Deserts with food bonuses _are_ allowed farmland (hence nreqs).
 ; -4 counterbalances all the above positive Irrig_Possible effects
-;[effect_no_desert_farmland_1]
-;type    = "Irrig_Possible"
-;value   = -4
-;reqs    =
-;    { "type", "name", "range"
-;      "Terrain", "Desert", "Local"
-;      "Special", "Irrigation", "Local"
-;    }
-;nreqs   =
-;    { "type", "name", "range"
-;      "Resource", "Oasis", "Local"
-;      "Road", "River", "Local"
-;    }
+[effect_no_desert_farmland_1]
+type    = "Irrig_Possible"
+value   = -4
+reqs    =
+    { "type", "name", "range"
+      "Terrain", "Desert", "Local"
+      "Special", "Irrigation", "Local"
+    }
+nreqs   =
+    { "type", "name", "range"
+      "Resource", "Oasis", "Local"
+      "Road", "River", "Local"
+    }
 
 [effect_mining]
 type    = "Mining_Possible"
@@ -5609,8 +5586,8 @@ reqs	=
     { 	"type", "name", "range", "negated"
 	"Minsize", "1", "City", FALSE
 	"Minsize", "2", "City", TRUE
-	"Building", "Granary", "City", FALSE
-    }
+	"Building", "Granary", FALSE
+}
 
 
 [effect_migration_city_hall]

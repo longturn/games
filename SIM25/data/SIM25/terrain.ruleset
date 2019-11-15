@@ -1290,7 +1290,7 @@ food_bonus     = 0
 shield_bonus   = 0
 trade_bonus    = 0
 compat_special = "Road"
-native_to      = "Land", "Small Land", "Big Land", "Merchant", "Non Military"
+native_to      = "Land", "Small Land", "Big Land", "Merchant"
 hidden_by      = "Railroad"
 flags          = "RequiresBridge", "NativeTile", "AutoOnCityCenter"
 helptext       = _("\
@@ -1330,7 +1330,7 @@ food_bonus     = 0
 shield_bonus   = 50
 trade_bonus    = 0
 compat_special = "Railroad"
-native_to      = "Land", "Small Land", "Big Land", "Merchant", "Non Military"
+native_to      = "Land", "Small Land", "Big Land", "Merchant"
 flags          = "RequiresBridge", "NativeTile", "AutoOnCityCenter"
 helptext       = _("\
 Once you learn the Railroad technology, you may upgrade your roads\
@@ -1358,7 +1358,7 @@ move_cost      = 2
 move_mode      = "Cardinal"
 trade_incr_const = 1
 compat_special = "River"
-native_to      = "Land", "Small Land", "Merchant", "Trireme", "Non Military"
+native_to      = "Land", "Small Land", "Merchant", "Trireme"
 flags          = "River", "PreventsOtherRoads", "NativeTile", "Natural"
 ; /* xgettext:no-c-format */
 helptext       = _("\
