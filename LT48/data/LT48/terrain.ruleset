@@ -407,7 +407,7 @@ irrigation_time      = 5
 mining_result        = "yes"
 mining_shield_incr   = 1
 mining_time          = 5
-transform_result     = "terrain_plains"
+transform_result     = "no"
 transform_time       = 36
 clean_pollution_time = 3
 clean_fallout_time   = 3
@@ -1059,10 +1059,8 @@ conflicts      = "Airbase"
 native_to      = "Land", "Small Land", "Big Land"
 flags          = "NoStackDeath", "DiplomatDefense", "NativeTile"
 helptext       = _("\
-Units in a fortress receive double defense against land units and boats. \
-Any kind of land unit remaining in a fortress for a whole turn without \
-moving recovers a quarter of its hit points. With Astronomy, fortresses gain \
-watchtowers from which units can see further afield.\
+Pre-fort has no effect in itself, but it is a prerequisite for \
+building a fort.\
 ")
 
 [base_fortress]
@@ -1290,7 +1288,7 @@ food_bonus     = 0
 shield_bonus   = 0
 trade_bonus    = 0
 compat_special = "Road"
-native_to      = "Land", "Small Land", "Big Land", "Merchant"
+native_to      = "Land", "Small Land", "Big Land", "Merchant", "Non Military"
 hidden_by      = "Railroad"
 flags          = "RequiresBridge", "NativeTile", "AutoOnCityCenter"
 helptext       = _("\
@@ -1330,7 +1328,7 @@ food_bonus     = 0
 shield_bonus   = 50
 trade_bonus    = 0
 compat_special = "Railroad"
-native_to      = "Land", "Small Land", "Big Land", "Merchant"
+native_to      = "Land", "Small Land", "Big Land", "Merchant", "Non Military"
 flags          = "RequiresBridge", "NativeTile", "AutoOnCityCenter"
 helptext       = _("\
 Once you learn the Railroad technology, you may upgrade your roads\
@@ -1358,7 +1356,7 @@ move_cost      = 2
 move_mode      = "Cardinal"
 trade_incr_const = 1
 compat_special = "River"
-native_to      = "Land", "Small Land", "Merchant", "Trireme"
+native_to      = "Land", "Small Land", "Merchant", "Trireme", "Non Military"
 flags          = "River", "PreventsOtherRoads", "NativeTile", "Natural"
 ; /* xgettext:no-c-format */
 helptext       = _("\

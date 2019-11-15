@@ -14,7 +14,7 @@ options="+Freeciv-2.5-ruleset"
 [compatibility]
 ; Initial government for all the nations that do not
 ; have it explicitly defined
-default_government = "Despotism"
+default_government = "Tribal"
 
 [default_traits]
 ;expansionist = 50

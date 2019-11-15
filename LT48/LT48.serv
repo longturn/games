@@ -1,8 +1,9 @@
-rulesetdir LT48
 
 # [effect_free_techs] needs to be updated from effects.ruleset to correspond the number of the players in a game
 # the value defines how many players need to invent a tech before it's given free to everyone. currently set to 18
 
+
+rulesetdir LT48
 
 # map
 set alltemperate=disabled
@@ -14,7 +15,7 @@ set mapsize="PLAYER"
 set separatepoles=disabled
 set specials=380
 set startpos="ALL"
-set steepness=40
+set steepness=25
 set temperature=50
 set tilesperplayer=500
 set topology="WRAPX"
@@ -66,7 +67,7 @@ set techlossrestore=50
 
 # technical
 set allowtake=""
-cmdlevel info
+set cmdlevel basic
 set compresstype plain
 set ec_chat=enabled
 set ec_info=enabled 
@@ -76,15 +77,13 @@ set maxplayers=126
 set saveturns=1
 set scorelog=enabled
 set timeout=82800
-set unitwaittime=0
+set unitwaittime=36000
 set fixedlength 1
-metamessage "LT48 | More info: http://longturn.org/game/LT48/"
+metamessage "Longturn Sim Test Game"
 metapatches longturn
 
 set civilwarsize=1000
-set mgr_distance=5
+set mgr_distance=2
 set mgr_worldchance=5
 set razechance=100
 
-syncturn
-start
