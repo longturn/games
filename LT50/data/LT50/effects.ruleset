@@ -971,7 +971,7 @@ reqs    =
     { "type", "name", "range"
       "Gov", "Monarchy", "Player"
       "OutputType", "Gold", "Local"
-      "MinSize", "16", "City"
+      "MinSize", "12", "City"
     }
 
 [effect_upkeep_free_units_town_fundamentalism]
