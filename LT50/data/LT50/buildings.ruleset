@@ -1714,7 +1714,7 @@ name		= _("Pyramids")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Code of Laws", "Player"
+      "Tech", "Mathematics", "Player"
     }
 graphic	= "b.pyramids"
 graphic_alt	= "-"
