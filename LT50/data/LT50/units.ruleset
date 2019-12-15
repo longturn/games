@@ -1472,7 +1472,7 @@ attack        = 4
 defense       = 4
 hitpoints     = 20
 firepower     = 1
-move_rate     = 10
+move_rate     = 12
 vision_radius_sq = 72
 transport_cap = 0
 fuel          = 2
@@ -1480,7 +1480,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-targets       = "Air", "Missile", "Helicopter"
+targets       = "Air", "Missile", "Helicopter", "OneAttack"
 bonuses       =
    { "flag", "type", "value"
      "Helicopter", "DefenseDivider", 1
@@ -1598,7 +1598,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-targets       = "Air", "Missile", "Helicopter"
+targets       = "Air", "Missile", "Helicopter", "OneAttack"
 bonuses       =
    { "flag", "type", "value"
      "Helicopter", "DefenseDivider", 1
