@@ -3,20 +3,20 @@ rulesetdir LT50
 # map
 set alltemperate=disabled
 set barbarians=disabled
-set generator="ISLAND"
+set generator="FRACTAL"
 set huts=1
-set landmass=20
+set landmass=30
 set mapsize="PLAYER"
 set separatepoles=disabled
 set specials=250
 set startpos="VARIABLE"
 set steepness=20
 set temperature=50
-set tilesperplayer=300
+set tilesperplayer=500
 set topology="WRAPX|WRAPY"
 set wetness=60
 set alltemperate=disabled
-#set revealmap=START  #uncomment this for revealing the map for test games
+set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
 set nationset=all
@@ -38,12 +38,12 @@ set razechance=10
 set happyborders=enabled
 set occupychance=0
 set globalwarming=enabled
-set globalwarming_percent=40
+set globalwarming_percent=30
 
 # diplomacy, technology
 set diplchance=40
-set diplcost=30
-set diplchance_steal=8
+set diplcost=20
+set diplchance_steal=12
 set diplomacy=HUMAN
 set sciencebox=100
 set techlost_donor=0
