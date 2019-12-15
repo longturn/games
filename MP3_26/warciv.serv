@@ -1,6 +1,6 @@
 # Server commands to make warciv Freeciv rules
 #
 
-rulesetdir warciv
+rulesetdir MP3_26
 
 # changed game settings are defined in game.ruleset
