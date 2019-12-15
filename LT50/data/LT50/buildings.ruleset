@@ -1371,7 +1371,7 @@ reqs	=
     }
 graphic	= "b.great_wall"
 graphic_alt	= "-"
-obsolete_by	= ""Gunpowder""
+obsolete_by	= "Gunpowder"
 build_cost	= 150
 upkeep		= 0
 sabotage	= 0

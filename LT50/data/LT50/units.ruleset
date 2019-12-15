@@ -1480,12 +1480,12 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-targets       = "Air", "Missile", "Helicopter", "OneAttack"
+targets       = "Air", "Missile", "Helicopter"
 bonuses       =
    { "flag", "type", "value"
      "Helicopter", "DefenseDivider", 1
    }
-flags         = "AirAttacker"
+flags         = "AirAttacker", "OneAttack"
 roles         = "DefendOk"
 helptext      = _("\
 Fighters are your first airborne units. They can\
@@ -1598,12 +1598,12 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-targets       = "Air", "Missile", "Helicopter", "OneAttack"
+targets       = "Air", "Missile", "Helicopter"
 bonuses       =
    { "flag", "type", "value"
      "Helicopter", "DefenseDivider", 1
    }
-flags         = "Partial_Invis", "AirAttacker"
+flags         = "Partial_Invis", "AirAttacker", "OneAttack"
 roles         = "DefendGood"
 helptext      = _("\
 An improved Fighter, with improved attack and a higher movement\
