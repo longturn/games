@@ -1624,7 +1624,7 @@ all cities owned by the player.\
 
 [building_atlantic_telegraph_company]
 name		= _("Atlantic Telegraph Company")
-genus		= "SmallWonder"
+genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Espionage", "Player"
@@ -1633,13 +1633,17 @@ reqs	=
 graphic	= "b.university"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 300
+build_cost	= 250
 upkeep		= 0
 sabotage	= 0
 sound		= "w_marco_polos_embassy"
 sound_alt	= "w_generic"
 helptext	= _("\
-Player building it gets an embassy with all players.\
+The world will become smaller place with when the new means \
+of communication connect all the people over the globe. \
+All the players will get an embassy with all the players. \
+The city where the wonder is located gets extra trade for each \
+tile already producing trade.\
 ")
 
 [building_michelangelos_chapel]

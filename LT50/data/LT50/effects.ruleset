@@ -3661,8 +3661,18 @@ type    = "Have_Embassies"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Building", "Atlantic Telegraph Company", "Player"
+      "Building", "Atlantic Telegraph Company", "World"
     }
+
+[effect_atlantic_telegraph_company_2]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Atlantic Telegraph Company", "City"
+      "OutputType", "Trade", "Local"
+    }
+
 
 [effect_michelangelos_chapel]
 type    = "Make_Content"
