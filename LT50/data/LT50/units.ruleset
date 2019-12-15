@@ -1792,6 +1792,47 @@ The Caravel is a sailing ship that can enter\
  any ocean tile.\
 ")
 
+[unit_square_rigged_caravel]
+name          = _("Square-Rigged Caravel")
+class         = "Sea"
+tech_req      = "Magnetism"
+obsolete_by   = "None"
+graphic       = "u.srcaravel"
+graphic_alt   = "u.caravel"
+sound_move    = "m_caravel"
+sound_move_alt = "m_generic"
+sound_fight   = "f_caravel"
+sound_fight_alt = "f_generic"
+build_cost    = 60
+pop_cost      = 0
+attack        = 3
+defense       = 2
+hitpoints     = 12
+firepower     = 1
+move_rate     = 9
+vision_radius_sq = 40
+transport_cap = 1
+fuel          = 5
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Land", "Small Land", "Big Land", "Merchant"
+flags         = "BadCityDefender", "Unique", "Unbribable"
+roles         = "Ferryboat", "BarbarianBoat"
+helptext      = _("\
+ A much larger version of the caravel, it is most notorious \
+because of heavy offensive capabilities. Much of the focus \
+on the design is on combat capabilities and because of that it \
+only has limited transport capacity even while it can also carry \
+big land units the regular caravel can't. This ship needs to return to \
+port for support and maintenance and it can't survive on it's own \
+for too long. In the early ages of exploration it's able to \
+keep your coastals free of enemy ships.\
+")
+
+
+
 [unit_galleon]
 name          = _("Galleon")
 class         = "Sea"
