@@ -3382,7 +3382,7 @@ reqs    =
 ; Every Land unit
 [effect_great_wall]
 type    = "Defend_Bonus"
-value   = 50
+value   = 25
 reqs    =
     { "type", "name", "range"
       "Building", "Great Wall", "Player"
