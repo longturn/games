@@ -3409,6 +3409,16 @@ reqs    =
       "Building", "Great Wall", "Player"
     }
 
+; City radius with Palace - radius is sqrt(n +2) (2,83 - 3,74)
+[effect_city_radius_resource_agency_1]
+type    = "City_Radius_Sq"
+value   = 9
+reqs    =
+    { "type", "name", "range"
+   "Building", "Palace", "City"
+   }
+
+
 [effect_hanging_gardens]
 type    = "Make_Content"
 value   = 1
