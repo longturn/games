@@ -1802,7 +1802,7 @@ reqs    =
 
 [effect_bad_sci_fundamentalism]
 type    = "Output_Bonus_2"
-value   = -30
+value   = -35
 reqs    =
     { "type", "name", "range"
       "Gov", "Fundamentalism", "Player"
