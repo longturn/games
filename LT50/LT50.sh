@@ -1,6 +1,6 @@
 #!/bin/sh
 
-GAMENAME="LT49"
-PORT=5049
+GAMENAME="LT50"
+PORT=5050
 
 . ../rc.subr
