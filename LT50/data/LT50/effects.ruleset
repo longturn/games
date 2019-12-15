@@ -4147,53 +4147,6 @@ reqs    =
     }
 	
 	
-[effect_partisan_fundamentalism]
-type    = "Inspire_Partisans"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Fundamentalism", "Player"
-      "Tech", "Communism", "Player"
-      "Tech", "Gunpowder", "Player"
-      "Tech", "Guerilla Warfare", "World"
-    }
-nreqs  =
-    { "type", "name", "range"
-      "Nation", "Barbarian", "Player"
-      "Nation", "Pirate", "Player"
-    }
-	
-[effect_partisan_communism]
-type    = "Inspire_Partisans"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Communism", "Player"
-      "Tech", "Communism", "Player"
-      "Tech", "Gunpowder", "Player"
-      "Tech", "Guerilla Warfare", "World"
-    }
-nreqs  =
-    { "type", "name", "range"
-      "Nation", "Barbarian", "Player"
-      "Nation", "Pirate", "Player"
-    }
-
-[effect_partisan_democracy]
-type    = "Inspire_Partisans"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Gov", "Democracy", "Player"
-      "Tech", "Communism", "Player"
-      "Tech", "Gunpowder", "Player"
-      "Tech", "Guerilla Warfare", "World"
-    }
-nreqs  =
-    { "type", "name", "range"
-      "Nation", "Barbarian", "Player"
-      "Nation", "Pirate", "Player"
-    }
 
 
 [effect_transform]
