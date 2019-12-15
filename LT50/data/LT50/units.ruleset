@@ -1647,7 +1647,7 @@ bombard_rate = 4
 name          = _("Trireme")
 class         = "Trireme"
 tech_req      = "Map Making"
-obsolete_by   = "None"
+obsolete_by   = "Barge"
 graphic       = "u.trireme"
 graphic_alt   = "-"
 sound_move    = "m_trireme"
@@ -1678,6 +1678,47 @@ The Trireme is your first boat unit if not counting\
  capabilities, and unlike later boats can travel on\
  rivers, but it may not enter deep ocean tiles.\
 ")
+
+[unit_barge]
+name          = _("Barge")
+class         = "Trireme"
+tech_req      = "Engineering"
+obsolete_by   = "None"
+graphic       = "u.barge"
+graphic_alt   = "u.trireme"
+sound_move    = "m_trireme"
+sound_move_alt = "m_generic"
+sound_fight   = "f_trireme"
+sound_fight_alt = "f_generic"
+build_cost    = 45
+pop_cost      = 0
+attack        = 1
+defense       = 2
+hitpoints     = 10
+firepower     = 1
+move_rate     = 9
+vision_radius_sq = 18
+transport_cap = 3
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Land", "Small Land", "Merchant", "Big Siege"
+flags         = "BadCityDefender"
+roles         = "Ferryboat"
+helptext      = _("\
+The Longboat is your first deep ocean capable boat unit\
+ that only can carry one Merchant or Small Land unit. It can act\
+ as a transport ship and has rudimentary defensive\
+ and offensive capabilities.\
+ It's also unique and you can only have one Longboat\
+ at a time. The Longboat is heavier than the \
+ trireme and this allows it to travel on deep ocean but \
+ not on rivers.\
+")
+
+
 
 [unit_early_trireme]
 name          = _("Longboat")
