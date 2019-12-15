@@ -1669,7 +1669,7 @@ nreqs   =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
       "Gov", "Tribal", "Player"
-      "Gov", "Communism", "Player"
+;      "Gov", "Communism", "Player"
       "Gov", "Despotism", "Player"
 ;      "Gov", "Monarchy", "Player"
       "Gov", "Fundamentalism", "Player"
