@@ -468,7 +468,7 @@ sound_move    = "m_worker"
 sound_move_alt = "m_generic"
 sound_fight   = "f_worker"
 sound_fight_alt = "f_generic"
-build_cost    = 10
+build_cost    = 15
 pop_cost      = 1
 attack        = 0
 defense       = 1
@@ -480,7 +480,7 @@ transport_cap = 0
 fuel          = 0
 uk_happy      = 0
 uk_shield     = 1
-uk_food       = 0
+uk_food       = 1
 uk_gold       = 1
 flags         = "Settlers", "NonMil", "AddToCity", "Capturable"
 ; No veteran levels (level name is never displayed)
