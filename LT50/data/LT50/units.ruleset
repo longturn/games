@@ -1708,14 +1708,9 @@ cargo         = "Land", "Small Land", "Merchant", "Big Siege"
 flags         = "BadCityDefender"
 roles         = "Ferryboat"
 helptext      = _("\
-The Longboat is your first deep ocean capable boat unit\
- that only can carry one Merchant or Small Land unit. It can act\
- as a transport ship and has rudimentary defensive\
- and offensive capabilities.\
- It's also unique and you can only have one Longboat\
- at a time. The Longboat is heavier than the \
- trireme and this allows it to travel on deep ocean but \
- not on rivers.\
+The Barge can travel on ocean (but not deep ocean) and it can\
+ carry all but Big Land units, like Armors. It's also able to\
+ move on rivers.\
 ")
 
 
