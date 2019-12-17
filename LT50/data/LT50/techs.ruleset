@@ -369,7 +369,7 @@ flags    = ""
 graphic     = "a.flightendurance"
 graphic_alt = "a.flight"
 helptext = _("Allows the construction of unit cargo planes.")
-cost     = 3500
+cost     = 6650
 
 [advance_genetic_engineering]
 name     = _("Genetic Engineering")
