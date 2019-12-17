@@ -133,7 +133,7 @@ req2     = "The Republic"
 flags    = ""
 graphic     = "a.banking"
 graphic_alt = "-"
-cost     = 100
+cost     = 120
 
 [advance_bridge_building]
 name     = _("Bridge Building")
@@ -179,7 +179,7 @@ req2     = "Horseback Riding"
 flags    = ""
 graphic     = "a.chivalry"
 graphic_alt = "-"
-cost     = 100
+cost     = 120
 
 [advance_code_of_laws]
 name     = _("Code of Laws")
@@ -423,7 +423,7 @@ flags    = ""
 graphic     = "a.invention"
 graphic_alt = "-"
 helptext = _("Halves the upgrade cost of your units.")
-cost     = 120
+cost     = 144
 
 [advance_iron_working]
 name     = _("Iron Working")
@@ -536,7 +536,7 @@ helptext = _("\
 Reduces the risk of plague in your cities by 30% of the base chance \
 (this is additive with the benefits of any buildings).\
 ")
-cost     = 120
+cost     = 144
 
 [advance_metallurgy]
 name     = _("Metallurgy")
@@ -639,7 +639,7 @@ req2     = "Magnetism"
 flags    = ""
 graphic     = "a.physics"
 graphic_alt = "-"
-cost     = 130
+cost     = 156
 
 [advance_plastics]
 name     = _("Plastics")
@@ -854,7 +854,7 @@ flags    = ""
 graphic     = "a.theology"
 graphic_alt = "-"
 helptext = _("Improves the effect of Cathedrals.")
-cost     = 140
+cost     = 168
 
 [advance_theory_of_gravity]
 name     = _("Theory of Gravity")
@@ -884,7 +884,7 @@ req2     = "Philosophy"
 flags    = ""
 graphic     = "a.university"
 graphic_alt = "-"
-cost     = 100
+cost     = 120
 
 [advance_warrior_code]
 name     = _("Warrior Code")
