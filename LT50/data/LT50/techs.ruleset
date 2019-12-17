@@ -142,7 +142,7 @@ req2     = "Construction"
 flags    = "Bridge"
 graphic     = "a.bridge_building"
 graphic_alt = "-"
-cost     = 70
+cost     = 80
 helptext = _("Allows roads to be built on river tiles.")
 
 [advance_bronze_working]
@@ -340,7 +340,7 @@ req2     = "Monarchy"
 flags    = ""
 graphic     = "a.feudalism"
 graphic_alt = "-"
-cost     = 80
+cost     = 92
 
 [advance_flight]
 name     = _("Flight")
@@ -486,7 +486,7 @@ req2     = "Astronomy"
 flags    = ""
 graphic     = "a.magnetism"
 graphic_alt = "-"
-cost     = 100
+cost     = 115
 
 [advance_map_making]
 name     = _("Map Making")
@@ -581,7 +581,7 @@ req2     = "Polytheism"
 flags    = ""
 graphic     = "a.monotheism"
 graphic_alt = "-"
-cost     = 90
+cost     = 104
 
 [advance_mysticism]
 name     = _("Mysticism")
@@ -630,7 +630,7 @@ bonus_message = _("Great philosophers from all the world join \
 your civilization: you get an immediate advance.")
 graphic     = "a.philosophy"
 graphic_alt = "-"
-cost     = 70
+cost     = 81
 
 [advance_physics]
 name     = _("Physics")
@@ -835,7 +835,7 @@ req2     = "Literacy"
 flags    = ""
 graphic     = "a.the_republic"
 graphic_alt = "-"
-cost     = 50
+cost     = 58
 
 [advance_the_wheel]
 name     = _("The Wheel")
