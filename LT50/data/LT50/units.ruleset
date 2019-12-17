@@ -1791,7 +1791,7 @@ The Caravel is a sailing ship that can enter\
 name          = _("Square-Rigged Caravel")
 class         = "Sea"
 tech_req      = "Magnetism"
-obsolete_by   = "None"
+obsolete_by   = "Transport"
 graphic       = "u.srcaravel"
 graphic_alt   = "u.caravel"
 sound_move    = "m_caravel"
@@ -1807,7 +1807,7 @@ firepower     = 1
 move_rate     = 9
 vision_radius_sq = 40
 transport_cap = 1
-fuel          = 5
+fuel          = 4
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
@@ -1818,12 +1818,12 @@ roles         = "Ferryboat"
 helptext      = _("\
  A much larger version of the caravel, it is most notorious \
 because of heavy offensive capabilities. Much of the focus \
-on the design is on combat capabilities and because of that it \
+on the design is on combat and because of that it \
 only has limited transport capacity even while it can also carry \
 big land units the regular caravel can't. This ship needs to return to \
 port for support and maintenance and it can't survive on it's own \
-for too long. In the early ages of exploration it's able to \
-keep your coastals free of enemy ships.\
+for too long. In the early ages of exploration it's great for \
+keeping your coastals free of enemy ships.\
 ")
 
 
