@@ -96,7 +96,7 @@ req2     = "Tactics"
 flags    = ""
 graphic     = "a.amphibious_warfare"
 graphic_alt = "-"
-cost     = 450
+cost     = 650
 
 [advance_astronomy]
 name     = _("Astronomy")
@@ -115,7 +115,7 @@ req2     = "Refrigeration"
 flags    = ""
 graphic     = "a.atomic_theory"
 graphic_alt = "-"
-cost     = 370
+cost     = 540
 
 [advance_automobile]
 name     = _("Automobile")
@@ -216,7 +216,7 @@ flags    = ""
 graphic     = "a.communism"
 graphic_alt = "-"
 helptext = _("Reduces the effect of Cathedrals.")
-cost     = 420
+cost     = 610
 
 [advance_computers]
 name     = _("Computers")
@@ -713,7 +713,7 @@ req2     = "Industrialization"
 flags    = ""
 graphic     = "a.refining"
 graphic_alt = "-"
-cost     = 400
+cost     = 580
 
 [advance_refrigeration]
 name     = _("Refrigeration")
@@ -795,7 +795,7 @@ req2     = "Industrialization"
 flags    = ""
 graphic     = "a.steel"
 graphic_alt = "-"
-cost     = 420
+cost     = 610
 
 [advance_superconductors]
 name     = _("Superconductors")
@@ -826,7 +826,7 @@ helptext = _("\
 Halves the corruption of trade related to distance from the capital \
 (or eliminates it for Federation governments).\
 ")
-cost     = 400
+cost     = 580
 
 [advance_the_republic]
 name     = _("The Republic")
