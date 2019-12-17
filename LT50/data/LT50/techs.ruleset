@@ -106,7 +106,7 @@ flags    = ""
 graphic     = "a.astronomy"
 graphic_alt = "-"
 helptext = _("Increases units' vision when in fortresses.")
-cost     = 63
+cost     = 70
 
 [advance_atomic_theory]
 name     = _("Atomic Theory")
@@ -246,7 +246,7 @@ graphic_alt = "-"
 helptext = _("\
 Allows Settlers, Migrants, Workers and Engineers to build fortresses.\
 ")
-cost     = 40
+cost     = 44
 
 [advance_currency]
 name     = _("Currency")
@@ -468,7 +468,7 @@ req2     = "Code of Laws"
 flags    = ""
 graphic     = "a.literacy"
 graphic_alt = "-"
-cost     = 40
+cost     = 44
 
 [advance_machine_tools]
 name     = _("Machine Tools")
@@ -572,7 +572,7 @@ req2     = "Code of Laws"
 flags    = ""
 graphic     = "a.monarchy"
 graphic_alt = "-"
-cost     = 40
+cost     = 44
 
 [advance_monotheism]
 name     = _("Monotheism")
@@ -759,7 +759,7 @@ req2     = "Map Making"
 flags    = ""
 graphic     = "a.seafaring"
 graphic_alt = "-"
-cost     = 40
+cost     = 44
 
 [advance_space_flight]
 name     = _("Space Flight")
@@ -875,7 +875,7 @@ graphic_alt = "-"
 helptext = _("\
 Halves the waste of production related to distance from the capital.\
 ")
-cost     = 40
+cost     = 44
 
 [advance_university]
 name     = _("University")
