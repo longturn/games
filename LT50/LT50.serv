@@ -1,26 +1,25 @@
 rulesetdir LT50
 
 # map
-set alltemperate=disabled
-set barbarians=disabled
-set generator="FRACTAL"
-set huts=1
-set landmass=30
 set mapsize="PLAYER"
-set separatepoles=disabled
-set specials=250
-set startpos="VARIABLE"
+set generator="FRACTAL"
+set barbarians=disabled
+set startpos="ALL"
+set huts=1
+set landmass=50
+set separatepoles=enabled
+set specials=300
 set steepness=20
-set temperature=50
-set tilesperplayer=500
+set temperature=70
+set tilesperplayer=600
 set topology="WRAPX|WRAPY"
-set wetness=60
+set wetness=40
 set alltemperate=disabled
 set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
 set nationset=all
-set citymindist=4
+set citymindist=5
 set contactturns=0
 set dispersion=6
 set foggedborders=enabled
@@ -28,7 +27,7 @@ set rapturedelay=3
 set restrictinfra=enabled
 set revolen=2
 set spacerace=enabled
-set startunits=cccccwwwwwwwxx
+set startunits=cccccwwwwwwwxxd
 set techlevel=0
 set unreachableprotects=disabled
 set killunhomed=0
