@@ -356,11 +356,11 @@ colorlist =
 ; freeciv optional team names definition.
 ;
 names =
- _("Buccaneers"),
- _("Corsairs"),
- _("Blue"),
- _("White"),
- _("Black")
+; _("Buccaneers"),
+; _("Corsairs"),
+; _("Blue"),
+; _("White"),
+; _("Black")
 ; name =
 ;  _("Team 0"),
 ; _("Team 1"),
