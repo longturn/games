@@ -206,7 +206,7 @@ req2     = "Engineering"
 flags    = ""
 graphic     = "a.combustion"
 graphic_alt = "-"
-cost     = 440
+cost     = 660
 
 [advance_communism]
 name     = _("Communism")
@@ -295,7 +295,7 @@ req2     = "Electricity"
 flags    = ""
 graphic     = "a.electronics"
 graphic_alt = "-"
-cost     = 430
+cost     = 650
 
 [advance_engineering]
 name     = _("Engineering")
@@ -322,7 +322,7 @@ req2     = "Democracy"
 flags    = ""
 graphic     = "a.espionage"
 graphic_alt = "-"
-cost     = 440
+cost     = 660
 
 [advance_explosives]
 name     = _("Explosives")
@@ -378,7 +378,7 @@ req2     = "The Corporation"
 flags    = ""
 graphic     = "a.genetic_engineering"
 graphic_alt = "-"
-cost     = 450
+cost     = 675
 
 [advance_guerilla_warfare]
 name     = _("Guerilla Warfare")
@@ -387,7 +387,7 @@ req2     = "Tactics"
 flags    = ""
 graphic     = "a.guerilla_warfare"
 graphic_alt = "-"
-cost     = 200
+cost     = 300
 
 [advance_gunpowder]
 name     = _("Gunpowder")
@@ -477,7 +477,7 @@ req2     = "Tactics"
 flags    = ""
 graphic     = "a.machine_tools"
 graphic_alt = "-"
-cost     = 480
+cost     = 720
 
 [advance_magnetism]
 name     = _("Magnetism")
