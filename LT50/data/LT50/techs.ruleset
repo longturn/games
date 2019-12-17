@@ -331,7 +331,7 @@ req2     = "Chemistry"
 flags    = ""
 graphic     = "a.explosives"
 graphic_alt = "-"
-cost     = 270
+cost     = 350
 
 [advance_feudalism]
 name     = _("Feudalism")
@@ -459,7 +459,7 @@ req2     = "Gunpowder"
 flags    = ""
 graphic     = "a.leadership"
 graphic_alt = "-"
-cost     = 200
+cost     = 260
 
 [advance_literacy]
 name     = _("Literacy")
@@ -545,7 +545,7 @@ req2     = "Mathematics"
 flags    = ""
 graphic     = "a.metallurgy"
 graphic_alt = "-"
-cost     = 200
+cost     = 260
 
 [advance_miniaturization]
 name     = _("Miniaturization")
@@ -786,7 +786,7 @@ req2     = "Navigation"
 flags    = ""
 graphic     = "a.steam_engine"
 graphic_alt = "-"
-cost     = 280
+cost     = 364
 
 [advance_steel]
 name     = _("Steel")
