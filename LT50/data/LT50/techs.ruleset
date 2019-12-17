@@ -313,7 +313,7 @@ req2     = "Space Flight"
 flags    = ""
 graphic     = "a.environmentalism"
 graphic_alt = "-"
-cost     = 660
+cost     = 1200
 
 [advance_espionage]
 name     = _("Espionage")
@@ -777,7 +777,7 @@ req2     = "Space Flight"
 flags    = ""
 graphic     = "a.stealth"
 graphic_alt = "-"
-cost     = 670
+cost     = 1200
 
 [advance_steam_engine]
 name     = _("Steam Engine")
@@ -804,7 +804,7 @@ req2     = "Laser"
 flags    = ""
 graphic     = "a.superconductors"
 graphic_alt = "-"
-cost     = 700
+cost     = 1260
 
 [advance_tactics]
 name     = _("Tactics")
