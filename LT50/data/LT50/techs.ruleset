@@ -359,7 +359,7 @@ flags    = ""
 graphic     = "a.fusion_power"
 graphic_alt = "-"
 helptext = _("Gives sea units nine extra moves.")
-cost     = 3000
+cost     = 5700
 
 [advance_aviation_endurance]
 name     = _("Aviation Endurance")
