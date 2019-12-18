@@ -1882,6 +1882,7 @@ same level as a Republic).\
 [building_second_palace]
 name		= _("Second Palace")
 genus		= "SmallWonder"
+flags		= "SaveSmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Theology", "Player"
