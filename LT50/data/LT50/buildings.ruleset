@@ -1365,6 +1365,7 @@ for every player.\
 [building_great_wall]
 name		= _("Great Wall")
 genus		= "SmallWonder"
+flags		= "SaveSmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Construction", "Player"
@@ -1382,7 +1383,8 @@ helptext	= _("\
 Increases the defense of all your cities by adding a +25% bonus to \
 its units' intrinsic defense strength against land units (this is cumulative \
 with any City Walls), and preventing the loss of population which occurs \
-when a defending unit is defeated by a land unit. \
+when a defending unit is defeated by a land unit. If you lose the city with \
+the great wall small wonder a new great wall small wonder is built in a random city.\
 ")
 
 [building_hanging_gardens]
