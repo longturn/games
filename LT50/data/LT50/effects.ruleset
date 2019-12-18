@@ -2875,7 +2875,7 @@ reqs    =
 	
 [effect_sdi_defense_2]
 type    = "Nuke_Proof"
-value   = 100
+value   = 10
 reqs    =
     { "type", "name", "range"
       "Building", "SDI Defense", "City"
