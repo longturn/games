@@ -465,7 +465,7 @@ reqs    =
 	
 [effect_bonus_sci_federation]
 type    = "Output_Bonus_2"
-value   = 5
+value   = 30
 reqs    =
     { "type", "name", "range"
       "Gov", "Federation", "Player"
