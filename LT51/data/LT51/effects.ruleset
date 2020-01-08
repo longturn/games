@@ -2893,6 +2893,15 @@ reqs    =
       "UnitClass", "Missile", "Local"
     }
 
+[effect_sdi_defense_2]
+type    = "Nuke_Proof"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+      "Building", "SDI Defense", "City"
+	  "Building", "Palace", "City"
+    }
+
 [effect_sewer_system]
 type    = "Size_Unlimit"
 value   = 1
