@@ -4159,8 +4159,6 @@ reqs    =
     }
 nreqs  =
     { "type", "name", "range"
-      "Nation", "Barbarian", "Player"
-      "Nation", "Pirate", "Player"
     }
 	
 [effect_partisan_communism]
@@ -4175,8 +4173,6 @@ reqs    =
     }
 nreqs  =
     { "type", "name", "range"
-      "Nation", "Barbarian", "Player"
-      "Nation", "Pirate", "Player"
     }
 
 [effect_partisan_democracy]
@@ -4191,8 +4187,6 @@ reqs    =
     }
 nreqs  =
     { "type", "name", "range"
-      "Nation", "Barbarian", "Player"
-      "Nation", "Pirate", "Player"
     }
 
 
