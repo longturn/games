@@ -11,7 +11,7 @@
 ; than minor changes.
 
 [datafile]
-description="LT49 (modified Civ2Civ3/LT39/LT47 - longturn traditional) terrain data for Freeciv"
+description="LT51 (modified Civ2Civ3/LT39/LT47/LT49 - longturn traditional) terrain data for Freeciv"
 options="+Freeciv-2.5-ruleset"
 
 [control]
@@ -502,7 +502,7 @@ mining_result        = "terrain_forest"
 mining_shield_incr   = 0
 mining_time          = 15
 transform_result     = "terrain_hills"
-transform_time       = 24
+transform_time       = 48
 clean_pollution_time = 3
 clean_fallout_time   = 3
 warmer_wetter_result = "terrain_swamp"
@@ -831,7 +831,7 @@ name        = _("?animals:Game")
 graphic     = "ts.tundra_game"
 graphic_alt = "-"
 identifier  = "e"
-food        = 2
+food        = 3
 shield      = 1
 trade       = 2
 # tundra.
