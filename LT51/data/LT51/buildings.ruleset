@@ -1362,27 +1362,32 @@ Completion of this wonder permanently doubles the effect of Libraries \
 for every player.\
 ")
 
+
+
+
 [building_great_wall]
 name		= _("Great Wall")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
+flags		= "SaveSmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Construction", "Player"
     }
 graphic	= "b.great_wall"
 graphic_alt	= "-"
-obsolete_by	= "Machine Tools"
-build_cost	= 5000
+obsolete_by	= "Gunpowder"
+build_cost	= 150
 upkeep		= 0
 sabotage	= 0
 sound		= "w_great_wall"
 sound_alt	= "w_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the defense of all your cities by adding a +50% bonus to \
+Increases the defense of all your cities by adding a +25% bonus to \
 its units' intrinsic defense strength against land units (this is cumulative \
 with any City Walls), and preventing the loss of population which occurs \
-when a defending unit is defeated by a land unit.\
+when a defending unit is defeated by a land unit. If you lose the city with \
+the great wall small wonder a new great wall small wonder is built in a random city.\
 ")
 
 [building_hanging_gardens]
