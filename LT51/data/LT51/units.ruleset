@@ -2641,7 +2641,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Diplomat", "IgZOC", "NonMil", "Spy", "IgTer"
+flags         = "Diplomat", "IgZOC", "NonMil", "Spy", "IgTer", "Partial_Invis"
 veteran_names =
 ; /* TRANS: Spy veteran level */
   _("?spy_level:informant"),
