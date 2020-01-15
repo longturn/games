@@ -2770,7 +2770,7 @@ The Freight unit replaces the Caravan, and moves at twice the speed.\
 [unit_explorer]
 name          = _("Explorer")
 class         = "Small Land"
-tech_req      = "Seafaring"
+tech_req      = "Map Making"
 obsolete_by   = "Agent"
 graphic       = "u.explorer"
 graphic_alt   = "-"
