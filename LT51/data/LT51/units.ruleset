@@ -1719,7 +1719,7 @@ The Barge can travel on ocean (but not deep ocean) and it can\
 [unit_early_trireme]
 name          = _("Longboat")
 class         = "Sea"
-tech_req      = "Seafaring"
+tech_req      = "Map Making"
 obsolete_by   = "Caravel"
 graphic       = "u.longboat"
 graphic_alt   = "u.trireme"
