@@ -997,9 +997,10 @@ uk_happy      = 1
 uk_shield     = 0
 uk_food       = 1
 uk_gold       = 3
-flags         = "Capturer", "Marines"
+flags         = "Capturer", "Marines", "Bombarder"
 roles         = "DefendGood", "FirstBuild", "HutTech",
                 "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
+bombard_rate  = 5
 helptext      = _("\
 Skirmishers are hit-and-run unit designated \
 to harrass enemy units from distance, stall \
