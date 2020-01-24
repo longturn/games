@@ -1,3092 +1,2133 @@
+
 ; Modifying this file:
 ; You should not modify this file except to make bugfixes or
-; for other "maintenance". If you want to make custom changes,
+; for other "maintenance".  If you want to make custom changes,
 ; you should create a new datadir subdirectory and copy this file
 ; into that directory, and then modify that copy.  Then use the
 ; command "rulesetdir <mysubdir>" in the server to have freeciv
 ; use your new customized file.
-;
-; You should sort role units from worst to better, as often the best
-; available role unit of a given sort will be picked by choosing
-; the first available (not obsolete) such unit, or by picking the last
-; such unit directly. When determining starting units, the first 
-; unit with the relevant role that the player can build will be chosen.
-; If no such unit can be found (eg Explorers that require Seafaring),
-; then the first unit with this role will be chosen.
+
+; Note that the freeciv AI may not cope well with anything more
+; than minor changes.
 
 [datafile]
-description="Civ2Civ3 unit_type data for Freeciv"
+description="Civ2Civ3 buildings data for Freeciv"
 options="+Freeciv-2.5-ruleset"
 
-[control]
-; Names for custom unit type flags. There can be up to 16 of these.
-; name          = rule name; not translateable, but may be displayed in
-;                 some circumstances
-; helptxt       = displayed in the help for units with this flag (optional)
-flags =
-  { "name", "helptxt"
-    _("Airbase")
-    _("Transform")
-    _("AirAttacker"), _("Very bad at attacking AEGIS.")
-    _("Submarine"), _("Attack value halved when attacking Destroyer.")
-  }
-
-[veteran_system]
-; What are the names of the levels?   
-veteran_names = _("cannon fodder"), _("drafted"), _("recruits"), _("novice"), _("green"), _("regular"), _("disciplined"), _("seasoned"), _("experienced"), _("expert"), _("master"), _("veteran"), _("hardened"), _("guards"), _("special"), _("commando"), _("elite")
-
-; The percentage chance of increasing level through combat  
-veteran_raise_chance = 100, 95, 90, 75, 60, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5, 5, 0
-
-; The percentage chance of a settler/engineer increasing level through
-; performing useful work (per turn)
-veteran_work_raise_chance = 50, 20, 15, 10, 8, 6, 5, 4, 3, 3, 2, 2, 2, 1, 1, 1, 0
-
-; Power factors are as a percentage.
-; +50% is represented by 150
-veteran_power_fact = 100, 110, 120, 140, 150, 160, 170, 180, 200, 220, 240, 260, 280, 300, 320, 340, 360
-
-; The additional number of movement points granted for different veteran
-; levels. These are fractional move points as defined by move_fragments in
-; terrain.ruleset.
-veteran_move_bonus = 0, 0, 0, 2, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
-
 ; /* <-- avoid gettext warnings
 ;
-; Unit classes
-; The number can be variable, up to 32
-; When adding new classes, remember to check effects.ruleset also.
-; Eg. if you divide class 'Land' to two separate classes, you may
-; want add effect giving City Walls defence bonus against new class
-; too.
+; Below: The individual buildings, one per section.
+; (Buildings = City Improvements and Wonders)
 ;
-; The actual tag used (the * in [unitclass_*]) does not matter, except 
+; The actual tag used (the * in [building_*]) does not matter, except 
 ; it must be unique within this file, and it may be used in debug 
 ; output when reading this file.
 ;
-; ** Fields **
+; Notes:
 ;
 ; name          = translatable name as seen by user
 ; rule_name     = (optional) name for savegames, rulesets etc; if not
 ;                 present, 'name' is used. Since the name used in savegames
-;                 must not change, use this when renaming a unit class after a
+;                 must not change, use this when renaming a building after a
 ;                 ruleset has been released.
-; move_type     = Where unit moves; "Land", "Sea", or "Both".
-;                 This is optional field. If it's not
-;                 given, move type is automatically determined from native
-;                 terrains. You need to set it only if you want to set move
-;                 type "Both" for unit that has no native Land terrains or
-;                 for unit that has no native Oceanic terrains.
-; min_speed     = Minimum speed after damage and effects (whole movement points)
-; hp_loss_pct   = Hitpoints lost each turn if unit not in city or native base
-; non_native_def_pct = Defense power percentage applying when defending on
-;                      non-native terrain (such as ship in harbour)
-; hut_behavior  = What happens to huts when unit enters tile:
-;                 "Normal", "Nothing" or "Frighten"
-; flags         = List of unit class flags (from the following list; you
-;                 cannot add custom unit class flags)
+; genus	        = genus; one of:
+;                 "GreatWonder", "SmallWonder", "Improvement", "Special".
+; reqs		= requirements to build the building (see effects.ruleset
+;		  and README.effects for help on requirements)
+; graphic	= icon of improvement (used in city dialog)
+; graphic_alt	= alternate icon of improvement
+; obsolete_by	= advance which makes building obsolete; special
+;		  value "None" means does not become obsolete
+; build_cost	= production shields required to build
+; upkeep	= monetary upkeep value
+; sabotage	= percent chance of diplomat sabotage being successful
+; flags         = special flag strings
 ;
-; ** Unit class Flags **
-;
-; "TerrainSpeed"   = Units use terrain specific speed
-; "TerrainDefense" = Units gain defense bonus from terrain
-; "DamageSlows"   = Damaged units are slowed down
-; "CanOccupyCity" = Military units of this class can occupy enemy cities
-; "Missile"       = Unit is destroyed when it attacks
-; "BuildAnywhere" = Unit can be built even in the middle of non-native terrain
-; "Unreachable"   = Unit can be attacked only by units explicitly listing this
-;                   class in its 'targets', unless on a city or native base.
-;                   For class members which are transports, cargo cannot load/
-;                   unload except in a city or native base, unless that unit
-;                   explicitly lists this class in its 'embarks'/'disembarks'.
-; "CollectRansom" = Unit can collect ransom when killing lone barbarian leader
-; "ZOC"           = Unit is subject to ZOC rules. Unit type flag "IgZOC" can
-;                   override this
-; "CanFortify"    = Unit can fortify at land tiles
-; "CanPillage"    = Unit can pillage tile infrastructure
-; "DoesntOccupyTile"  = Even if this kind of enemy unit is on tile, cities can
-;                       still work that tile
-; "AttackNonNative"   = Unit can attack units on non-native tiles. Unit type
-;                       flag "Only_Native_Attack" can override this
-; "AttFromNonNative"  = Unit can launch attach from non-native tile (against
-;                       native one)
-;                       This applies for both attacking from transport or
-;                       cities. If only some unit types of the class should
-;                       get this property, use type flag "Marines"
-; "KillCitizen"       = Upon successful attack against a city, unit kills one
-;                       citizen. The effect "Unit_No_Lose_Pop" and the server
-;                       setting 'killcitizen' can disable this.
+; ** Building flags **
+; "VisibleByOthers"  = Anyone who can see your city knows whether it has
+;                      this improvement. (Great and small wonders are
+;                      always visible.)
+; "SaveSmallWonder"  = If you lose the city with this building in, and the
+;                      "savepalace" server setting is enabled, another will
+;                      be built for free in a random city.
+;                      Should only be used with genus "SmallWonder".
+; "Gold"             = Not a real building; production turned into gold
+;                      indefinitely (capitalization/coinage).
+;                      Genus should be "Special".
 ;
 ; */ <-- avoid gettext warnings
 
-[unitclass_missile]
-; /* TRANS: Unit class: used adjectivally */
-name          = _("?unitclass:Missile")
-min_speed     = 0
-hp_loss_pct   = 0
-hut_behavior  = "Frighten"
-flags         = "Missile", "Unreachable", "DoesntOccupyTile"
-
-[unitclass_land]
-; /* TRANS: Unit class: used adjectivally */
-name          = _("?unitclass:Land")
-min_speed     = 1
-hp_loss_pct   = 0
-flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
-                "CollectRansom", "ZOC", "CanFortify", "CanPillage",
-                "TerrainDefense"
-
-[unitclass_land_small]
-; /* TRANS: Unit class: used adjectivally */
-name          = _("?unitclass:Small Land")
-min_speed     = 1
-hp_loss_pct   = 0
-flags         = "TerrainSpeed", "DamageSlows", "BuildAnywhere", "CollectRansom",
-                "ZOC", "TerrainDefense", "DoesntOccupyTile"
-
-[unitclass_non_military]
-; /* TRANS: Unit class: used adjectivally */
-name          = _("?unitclass:Non Military")
-min_speed     = 1
-hp_loss_pct   = 0
-flags         = "TerrainSpeed", "DamageSlows", "BuildAnywhere", "CollectRansom",
-                "ZOC", "TerrainDefense", "DoesntOccupyTile"
-move-type     = "Land"
-
-[unitclass_land_big]
-; /* TRANS: Unit class: used adjectivally */
-name          = _("?unitclass:Big Land")
-min_speed     = 1
-hp_loss_pct   = 0
-flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
-                "CollectRansom","ZOC", "CanFortify", "KillCitizen", "AttackNonNative"
-
-[unitclass_merchant]
-; /* TRANS: Unit class: used adjectivally */
-name          = _("?unitclass:Merchant")
-min_speed     = 1
-hp_loss_pct   = 0
-flags         = "BuildAnywhere", "DoesntOccupyTile",
-                "TerrainDefense", "TerrainSpeed"
-
-[unitclass_sea]
-; /* TRANS: Unit class: used adjectivally */
-name          = _("?unitclass:Sea")
-min_speed     = 2
-hp_loss_pct   = 0
-flags         = "DamageSlows", "AttackNonNative", "AttFromNonNative"
-
-[unitclass_trireme]
-; /* TRANS: Unit class: used adjectivally */
-name          = _("?unitclass:Trireme")
-min_speed     = 2
-hp_loss_pct   = 0
-flags         = "DamageSlows", "AttFromNonNative"
-
-[unitclass_heli]
-; /* TRANS: Unit class: used adjectivally */
-name          = _("?unitclass:Helicopter")
-min_speed     = 1
-hp_loss_pct   = 10
-flags         = "Unreachable", "DoesntOccupyTile", "CanOccupyCity", "CollectRansom"
-
-[unitclass_air]
-; /* TRANS: Unit class: used adjectivally */
-name          = _("?unitclass:Air")
-min_speed     = 1
-hp_loss_pct   = 0
-hut_behavior  = "Frighten"
-flags         = "Unreachable", "DoesntOccupyTile", "CanPillage"
-
-; /* <-- avoid gettext warnings
-;
-; Below: The individual units, one per section.
-;
-; The number can be variable, up to 200.  
-; However for the "official" rulesets, units should not be removed 
-; because that would break backward compatability with savegames.
-;
-; The order here matters: later units are considered "better" for
-; a given flag or role.  
-;
-; The actual tag used (the * in [unit_*]) does not matter, except 
-; it must be unique within this file, and it may be used in debug 
-; output when reading this file.
-;
-; ** Fields **
-;
-; name          = translatable name as seen by user
-; rule_name     = (optional) name for savegames, rulesets etc; if not
-;                 present, 'name' is used. Since the name used in savegames
-;                 must not change, use this when renaming a unit after a
-;                 ruleset has been released.
-; graphic       = tag specifying preferred graphic
-; graphic_alt	= tag for alternate garphic if preferred graphic is not 
-;		  present; especially if preferred graphic is non-standard, 
-;		  this should be a standard tag.  Otherwise can use eg "-" 
-;		  for no alternate graphic.
-; tech_req      = required advance, names from techs.ruleset, or special:
-;                 "None" => available from start
-; impr_req	= required city improvement, names from buildings.ruleset
-; gov_req       = required government, names from governments.ruleset
-; obsolete_by   = can be upgraded to and made obsolete by another unit by name
-; build_cost    = production shields required to build
-; pop_cost      = population removed from city when built; for 'AddToCity'
-;                 units this is also the population added to the destination
-; attack        = base attack strength (0 = cannot attack)
-; defense       = base defense strength (0 = cannot defend)
-; hitpoints     = how much damage unit can withstand
-; firepower     = number of hitpoints removed per round of combat; at least 1
-; move_rate     = base move rate (whole movement points)
-; vision_radius_sq = base vision of unit: unit can see tile up to the square
-;                 root of this value away
-; convert_to    = can be converted to another type of unit by name
-; convert_time  = time it takes to convert to another unit type
-; class         = One of the classes listed above
-; transport_cap = Number of units (ground, or air/missiles, depending on flags)
-; fuel          = number of turns air units can fly before they crash. For
-;                 barbarians this is used as lifetime instead. If this is zero,
-;                 the unit has unlimited fuel, despite flying.
-; uk_*          = upkeep costs, these are used as base values in the game
-; cargo         = Unit classes this unit can transport
-; city_size     = Initial size of the cities built by 'Cities' type units
-;                 (but 'AddToCity' uses pop_cost)
-; targets       = list of unit classes this unit can attack against even
-;                 if they have Unreachable unit class flag
-; embarks       = list of unit classes this unit may load into while not in
-;                 native base or city even if transporter has Unreachable unit
-;                 class flag
-; disembarks    = list of unit classes this unit may unload from while not in
-;                 native base or city even if transporter has Unreachable unit
-;                 class flag
-; bonuses       = definitions of combat bonuses against specific other units
-; bonuses.flag  = flag of the unit that bonus applies against
-; bonuses.type  = type of the bonus. See below
-; bonuses.value = value of the bonus. Sum of these is used if multiple apply.
-; flags         = special flag strings; list of built-in flags described below
-;                 and/or user flags defined above
-;
-; veteran_names = Special veteran level for this unit. See the definitions in
-;                 game.ruleset. All of the veteran_* entries have to have the
-;                 same length!
-; veteran_raise_chance =
-; veteran_work_raise_chance =
-; veteran_power_fact =
-; veteran_move_bonus =
-;
-; roles         = special role strings
-; sound_move	= optional sound effect when the unit moves
-; sound_move_alt= optional alternative sound effect if above not
-;		  supported in client
-; sound_fight	= optional sound effect when the unit fights
-; sound_fight_alt= optional alternative sound effect if above not
-;		   supported in client
-; helptext	= optional help text string; should escape all raw newlines 
-;		  so that xgettext parsing works
-;
-;
-; ** Bonuses **
-;
-; "DefenseMultiplier" = Multiply defense value (1 + 'value') times.
-;                       Value of 1 means multiplication by 2, value 2 by 3...
-;                       Bonus is defined in defenders entry.
-; "DefenseDivider"    = Divide defense value with (1 + 'value').
-;                       Bonus is defined in attackers entry.
-; "FirePower1"        = Defender firepower is reduced to value 1 when
-;                       ever this has non-zero value.
-;                       Bonus is defined in attackers entry.
-;
-;
-; ** Flags **
-;
-; "HelpWonder"	= can help build wonders
-; "TradeRoute"	= can establish trade routes
-; "IgZOC"       = ignore Zones of Control (ZOC) even if unit class has
-;                 "ZOC" flag
-; "NonMil"	= a non-military unit: no attacks; no martial law; can enter
-;                 peaceful borders; DoesntOccupyTile
-; "IgTer"       = use constant move cost defined in igter_cost (terrain.ruleset)
-;                 rather than terrain/road etc cost, unless terrain cost is
-;                 less
-; "OneAttack"	= can only make a single attack, regardless of movement points
-; "IgWall"	= ignore effect of city walls
-; "FieldUnit"	= cause unhappiness even when not being aggressive
-; "Marines"	= can attack from non-native tile (from transport or city)
-; "Partial_Invis" = visible only to adjancent units; does not hide transported
-;		  units other than missiles
-; "Settlers"	= can irrigate and build roads
-; "Diplomat"	= can do diplomat actions (see diplchance server option)
-; "Spy"		= can do poison and sabotage, _must_ be "Diplomat" also
-; "Trireme"	= (sea only) cannot leave shoreline
-; "Nuclear"	= nuke!
-; "Paratroopers"= can paradrop
-; "Cities"      = can disband to produce a city (initial population city_size)
-; "Only_Native_Attack" = cannot attack targets on non-native tiles even if
-;                 unit class can
-; "AddToCity"   = can disband to add pop_cost population to a city
-;                 (see cities.ruleset for limitation of this ability)
-; "Fanatic"	= can only be built by governments that allow them
-;		  (see civ2/governments.ruleset, Fundamentalism government)
-; "Unique"	= a player can only have one of these units in the game at
-;		  the same time; barbarians cannot use this at present
-; "GameLoss"	= losing one of these units means you lose the game, but it
-;		  is produced without homecity and upkeep
-; "Unbribable"	= this unit cannot be bribed
-; "Undisbandable" = this unit cannot be disbanded, will not drown, and will not
-;		  disband due to lack of shields to upkeep it in homecity;
-;		  if not given enough food to upkeep it, homecity will shrink 
-;		  every turn it cannot do so, however
-; "SuperSpy"	= this unit always wins diplomatic contests, that is, unless
-;		  it encounters another SuperSpy, in which case defender wins;
-;		  can also be used on non-diplomat units, in which case it can
-;		  protect cities from diplomats; also 100% spy survival chance
-; "NoHome"	= this unit has no homecity and will be free of all upkeep, and
-;		  therefore will not revolt along with its city of origin should
-;		  it be incited
-; "NoVeteran"   = this unit cannot gain veteran levels through experience
-;                 (as if both raise_chance and work_raise_chance were zero);
-;                 it can still gain veterancy through Veteran_Build, etc
-; "Bombarder"   = this unit cannot kill other units, only damage them, but
-;                 also is not harmed by return fire when attacking; the field
-;                 bombard_rate regulates its number of shots
-; "CityBuster"  = this unit has double firepower against cities
-; "NoBuild"     = this unit cannot be built
-; "BadWallAttacker"	= the firepower of this unit is set to 1 if
-;                 attacking a city
-;		  defended by a city wall (or other city building defense)
-; "BadCityDefender"	= if attacked while in a city, firepower is set to 1
-;		  and firepower of attacker is doubled (the Pearl Harbour
-;                 rule)
-; "BarbarianOnly" = only barbarians can build this unit
-; "Shield2Gold" = Switch from shield upkeep to gold upkeep possible
-; "Capturable"  = can be captured by units with "Capturer" flag
-; "Capturer"    = can capture units with flag "Capturable" instead of
-;                 fighting them
-;
-; Following flag strings require extra fields:
-;  "Paratroopers"
-;   paratroopers_range = the maximal range the unit can be paradropped to
-;   paratroopers_mr_req = the move rate which is required at least for
-;                         paradropping (whole movement points)
-;   paratroopers_mr_sub = the move rate which is subtracted after paradropping
-;                         (whole movement points)
-;  "Bombarder"
-;   bombard_rate = the number of shots fired at enemy units when attacking
-;
-; ** Roles **
-;
-; "FirstBuild"	= first to be built when city founded
-; "Explorer"	= initial explorer unit (only one unit can have this flag)
-; "Hut"		= can be found in a hut
-; "HutTech"	= can be found in a hut, but its techs required
-; "Partisan"	= can be created as a partisan (only one unit can have this 
-;                 flag), see end of this file for its tech requirements option
-; "DefendOk"	= AI hint: ok for defending with
-; "DefendGood"	= AI hint: good for defending with
-; "AttackFast"	= AI hint: quick attacking unit (unused)
-; "AttackStrong"= AI hint: strong attacker (unused)
-; "Ferryboat"	= AI hint: useful for ferrying
-; "Barbarian"	       = can be created as land barbarian
-; "BarbarianTech"      = can be created as land barbarian, if someone has
-;		         researched its tech requirements
-; "BarbarianBoat"      = can be created as boat for sea barbarian
-; "BarbarianBuild"     = can be built by barbarians
-; "BarbarianBuildTech" = can be built by barbarians if someone has
-;		         researched its tech requirements
-; "BarbarianLeader"    = this unit is the barbarian leader (only one)
-; "BarbarianSea"       = can be created as a barbarian that disembarks from a barbarian boat
-; "BarbarianSeaTech"   = can be created as a barbarian that disembarks from a barbarian boat
-;                        if someone has researched its tech requirements
-; "Cities"	= can disband to produce a city
-; "Settlers"	= can irrigate and build roads
-; "GameLoss"	= losing one of these units means you lose the game, but it
-;		  is produced without homecity and upkeep
-; "Diplomat"	= can do diplomat actions (see diplchance server option)
-; "Hunter"      = AI hint: good for hunting other units
-;
-; */ <-- avoid gettext warnings
-
-[unit_settlers]
-name          = _("Settlers")
-class         = "Small Land"
-tech_req      = "None"
-obsolete_by   = "None"
-graphic       = "u.settlers"
-graphic_alt   = "-"
-sound_move    = "m_settlers"
-sound_move_alt = "m_generic"
-sound_fight   = "f_settlers"
-sound_fight_alt = "f_generic"
-build_cost    = 20
-pop_cost      = 1
-attack        = 0
-defense       = 1
-hitpoints     = 20
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 1
-uk_food       = 0
-uk_gold       = 1
-flags         = "Settlers", "NonMil", "Cities"
-; No veteran levels (level name is never displayed)
-veteran_names = _("green")
-veteran_raise_chance = 0
-veteran_work_raise_chance = 0
-veteran_power_fact = 100
-veteran_move_bonus = 0
-roles         = "Cities"
-helptext      = _("\
-Settlers are one of the key units in the game, as they are your main \
-means of founding new cities.\
+[building_airport]
+name		= _("Airport")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Radio", "Player"
+    }
+graphic	= "b.airport"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 80
+upkeep		= 3
+sabotage	= 100
+sound		= "b_airport"
+sound_alt	= "b_generic"
+helptext	= _("\
+Allows a city to produce veteran air units (including helicopters). \
+ Also, damaged air units (again, including helicopters) which stay in\
+ town for one full turn without moving are completely restored.\
 "), _("\
-Settlers can also perform some of the same terrain alterations as \
-Workers.\
+Two cities with Airports can airlift one unit per turn. \
+ Airlifting instantly transports the unit from one city to another\
+ and will use all of the unit's movement points.  A unit must have\
+ some movement points left to be airlifted.\
+")
+
+[building_aqueduct]
+name		= _("Aqueduct")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "negated"
+      "Tech", "Construction", "Player", FALSE
+      "Road", "River", "Adjacent", TRUE
+      "Terrain", "Lake", "Adjacent", TRUE
+    }
+graphic	= "b.aqueduct"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 40
+upkeep		= 1
+sabotage	= 100
+sound		= "b_aqueduct"
+sound_alt	= "b_generic"
+helptext	= _("\
+Allows a city to grow larger than size 8. (A Sewer System is required \
+for a city to grow larger than size 16.)\
+"),
+; /* xgettext:no-c-format */
+_("\
+These larger cities enjoy increased defense (+50%) against both land and \
+sea units; however, such large settlements have a small risk of fire, \
+which can destroy buildings in the city.\
+"),
+; /* xgettext:no-c-format */
+_("\
+Starting at size 5, growing cities incur an increasing risk of plague \
+due to overcrowding; an Aqueduct reduces that base chance by 30%.\
 "), _("\
-TIP: optimal production of Settlers occurs in cities of at most \
-size 4, or cities with a Granary of at most size 6.\
+Building an Aqueduct in a city without access to a lake or river requires \
+knowledge of Construction, and it costs more to build and maintain.\
 ")
 
-[unit_migrants]
-name          = _("Migrants")
-class         = "Small Land"
-tech_req      = "Pottery"
-graphic       = "u.refugee"
-graphic_alt   = "u.worker"
-sound_move    = "m_worker"
-sound_move_alt = "m_generic"
-sound_fight   = "f_worker"
-sound_fight_alt = "f_generic"
-build_cost    = 10
-pop_cost      = 1
-attack        = 0
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 3
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 1
-flags         = "FieldUnit", "Settlers", "NonMil", "AddToCity", "Capturable", "Unique"
-; No veteran levels (level name is never displayed)
-veteran_names = _("green")
-veteran_raise_chance = 0
-veteran_work_raise_chance = 0
-veteran_power_fact = 100
-veteran_move_bonus = 0
-roles         = "Settlers"
-helptext      = _("\
-Migrants can be used to transfer population to other cities, but \
-may not found new cities. They can also perform some of the same \
-terrain alterations as Workers.\
-")
-
-
-[unit_worker]
-name          = _("?unit:Workers")
-class         = "Small Land"
-tech_req      = "None"
-obsolete_by   = "Engineers"
-graphic       = "u.worker"
-graphic_alt   = "u.engineers" ; for compatibility
-sound_move    = "m_worker"
-sound_move_alt = "m_generic"
-sound_fight   = "f_worker"
-sound_fight_alt = "f_generic"
-build_cost    = 10
-pop_cost      = 0
-attack        = 0
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 3
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 1
-uk_food       = 0
-uk_gold       = 1
-flags         = "Settlers", "NonMil", "Airbase", "Capturable"
-
-roles         = "Settlers"
-helptext      = _("\
-Workers have the ability to improve terrain tiles.\
+[building_aqueduct_lake]
+name		= _("Aqueduct, Lake")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "negated"
+      "Terrain", "Lake", "Adjacent", FALSE
+    }
+graphic	= "b.aqueduct"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 20
+upkeep		= 0
+sabotage	= 100
+sound		= "b_aqueduct"
+sound_alt	= "b_generic"
+helptext	= _("\
+Allows a city to grow larger than size 8. (A Sewer System is required \
+for a city to grow larger than size 16.)\
+"),
+; /* xgettext:no-c-format */
+_("\
+These larger cities enjoy increased defense (+50%) against both land and \
+sea units; however, such large settlements have a small risk of fire, \
+which can destroy buildings in the city.\
+"),
+; /* xgettext:no-c-format */
+_("\
+Starting at size 5, growing cities incur an increasing risk of plague \
+due to overcrowding; an Aqueduct reduces that base chance by 30%.\
 "), _("\
-Building an irrigation system on a suitable tile causes it to \
-produce some extra food each turn. Without knowledge of Electricity, \
-this requires a nearby source of water: an ocean, lake, or river tile, \
-or another tile with an irrigation system, must share an edge (not \
-just a corner) with the target tile. Once Electricity is known, \
-irrigation systems may be built without a water source. Once \
-irrigated, land remains so even if the water source is removed. \
-When Refrigeration is known, irrigation systems can be upgraded to \
-Farmland by irrigating them a second time; this provides more food \
-to a city if it has a Supermarket.\
+Aqueducts in cities with access to a lake require no special technology and \
+are cheap to build and maintain.\
+")
+
+[building_aqueduct_river]
+name		= _("Aqueduct, River")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "negated"
+      "Road", "River", "Adjacent", FALSE
+      "Terrain", "Lake", "Adjacent", TRUE
+    }
+graphic	= "b.aqueduct"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 20
+upkeep		= 0
+sabotage	= 100
+sound		= "b_aqueduct"
+sound_alt	= "b_generic"
+helptext	= _("\
+Allows a city to grow larger than size 8. (A Sewer System is required \
+for a city to grow larger than size 16.)\
+"),
+; /* xgettext:no-c-format */
+_("\
+These larger cities enjoy increased defense (+50%) against both land and \
+sea units; however, such large settlements have a small risk of fire, \
+which can destroy buildings in the city.\
+"),
+; /* xgettext:no-c-format */
+_("\
+Starting at size 5, growing cities incur an increasing risk of plague \
+due to overcrowding; an Aqueduct reduces that base chance by 30%.\
 "), _("\
-Building a mine on suitable terrain increases the \
-number of production points produced by that tile. However, it is not \
-possible to have an irrigation system and a mine on the same tile.\
+Aqueducts in cities with access to a river require no special technology and \
+are cheap to build and maintain.\
+")
+
+[building_bank]
+name		= _("Bank")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Banking", "Player"
+      "Building", "Marketplace", "City"
+    }
+graphic	= "b.bank"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 60
+upkeep		= 1
+sabotage	= 100
+sound		= "b_bank"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases the luxury and tax output in a city by an additional 50%. \
+With both a Bank and a Marketplace in a city, the total bonus is 100%.\
+\
+Under Communism, the Bank does not give a luxury bonus.\
+\
+Units constructed in a city with this building have one additional\
+veteran level.\
+")
+
+[building_barracks]
+name		= _("Barracks")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+
+    }
+graphic	= "b.barracks_i"
+graphic_alt	= "-"
+obsolete_by	= "Gunpowder"
+replaced_by	= "Barracks II"
+build_cost	= 30
+upkeep		= 1
+sabotage	= 100
+sound		= "b_barracks_i"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+With a Barracks, each new land unit built in a city will\
+ automatically have three additional Veteran levels.\
+ Also, damaged land units which stay in town for one full \
+ turn without moving are completely restored.\
+ \
+ Barracks have no effect under Tribal government.\
+")
+
+[building_barracks_ii]
+name		= _("Barracks II")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Gunpowder", "Player"
+    }
+graphic	= "b.barracks_ii"
+graphic_alt	= "b.barracks_i"
+obsolete_by	= "Mobile Warfare"
+replaced_by	= "Barracks III"
+build_cost	= 40
+upkeep		= 1
+sabotage	= 100
+sound		= "b_barracks_ii"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+With a Barracks, each new land unit built in a city will\
+ automatically have three additional Veteran levels.\
+ Also, damaged land units which stay in town for one full \
+ turn without moving are completely restored.\
+")
+
+[building_barracks_iii]
+name		= _("Barracks III")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Mobile Warfare", "Player"
+    }
+graphic	= "b.barracks_iii"
+graphic_alt	= "b.barracks_i"
+obsolete_by	= "None"
+build_cost	= 60
+upkeep		= 1
+sabotage	= 100
+sound		= "b_barracks_iii"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+With a Barracks, each new land unit built in a city will\
+ automatically have three additional Veteran levels.\
+ Also, damaged land units which stay in town for one full \
+ turn without moving are completely restored.\
+")
+
+[building_cathedral]
+name		= _("Cathedral")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Monotheism", "Player"
+      "Building", "Temple", "City"
+    }
+graphic	= "b.cathedral"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 60
+upkeep		= 3
+sabotage	= 100
+sound		= "b_cathedral"
+sound_alt	= "b_generic"
+helptext	= _("\
+A Cathedral makes 3 unhappy citizens content in a city, making it \
+easier to maintain order in that city; however, it does not affect \
+citizens made unhappy by aggression. Knowledge of Theology \
+increases the effect of a Cathedral, making an additional unhappy \
+citizen content, except under Communism.\
+\
+Units constructed in a city with this building have one additional\
+veteran level.\
+\
+Decreases corruption by a small amount, depending on government.\
+")
+
+[building_city_hall]
+name		= _("City Hall")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Monarchy", "Player"
+    }
+graphic		= "b.city_hall"
+graphic_alt	= "b.police_station"
+obsolete_by	= "None"
+build_cost	= 50
+upkeep		= 1
+sabotage	= 100
+sound		= "b_city_hall"
+sound_alt	= "b_generic"
+helptext	= _("\
+City Hall is the step that signifies the upgrade of a village \
+or a settlement into a city. With this building, the chance of \
+migration into the city is doubled. \
+\
+")
+
+
+[building_city_walls]
+name		= _("City Walls")
+genus		= "Improvement"
+flags		= "VisibleByOthers"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Masonry", "Player"
+    }
+graphic	= "b.city_walls"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 30
+upkeep		= 0
+sabotage	= 50
+sound		= "b_city_walls"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+City Walls make it easier to defend a city. They add a +100% bonus to the \
+intrinsic defense strength of units within the city against land units \
+(that is a two-thirds increase for small cities, or a one-half increase \
+for cities larger than size 8), but are ineffective against airborne and \
+sea units. City Walls also prevent the loss of population which occurs \
+when a defending unit is defeated by a land unit.\
+")
+
+[building_coastal_defense]
+name		= _("Coastal Defense")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Navigation", "Player"
+      "TerrainClass", "Oceanic", "Adjacent"
+    }
+graphic	= "b.coastal_defense"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 40
+upkeep		= 1
+sabotage	= 100
+sound		= "b_coastal_defense"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Gives a +100% bonus to the intrinsic defense strength of units within \
+a city when defending against enemy ships. For small cities the defense \
+strength is doubled by this improvement; for cities larger than size 8, \
+it is increased by two-thirds.\
+")
+
+[building_colosseum]
+name            = _("Amphitheater")
+rule_name	= "Colosseum"
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Construction", "Player"
+    }
+graphic	= "b.colosseum"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 70
+upkeep		= 3
+sabotage	= 100
+sound		= "b_colosseum"
+sound_alt	= "b_generic"
+helptext	= _("\
+Entertains the citizens of a city, making 3 unhappy citizens content. \
+ (Four after the discovery of Electricity.)  However, it does not\
+ affect citizens made unhappy by military activity.\
+")
+
+[building_courthouse]
+name		= _("Courthouse")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Code of Laws", "Player"
+    }
+graphic	= "b.courthouse"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 40
+upkeep		= 1
+sabotage	= 100
+sound		= "b_courthouse"
+sound_alt	= "b_generic"
+helptext	= _("\
+Reduces corruption in a city, amount depending on government. \
 "), _("\
-On terrain unsuitable for irrigation systems or mines, issuing the \
-\"irrigate\" or \"mine\" order may permanently convert the terrain \
-to another type; this is usually more expensive. For instance, Forest \
-may be \"irrigated\" to yield Plains. (Terrain conversion with \
-the \"irrigate\" order does not require a water source.)\
+Also makes one unhappy citizen content (unless that citizen is unhappy \
+about military activity), and makes the revolt cost of the city 4 times \
+bigger.\
+")
+
+[building_factory]
+name		= _("Factory")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "negated"
+      "Tech", "Industrialization", "Player", FALSE
+    }
+graphic	= "b.factory"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 140
+upkeep		= 3
+sabotage	= 100
+sound		= "b_factory"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases the shield production in a city by 25%, or 50% with an \
+electrical plant of any kind in the same city.\
 "), _("\
-Workers can build airbases and buoys, which Settlers and Migrants \
-cannot. Workers must be on board a ship to build buoys.\
+This increase in production may contribute significantly to \
+pollution; a Factory also increases the pollution caused by the \
+population of the city.\
+")
+
+
+
+[building_granary]
+name		= _("Granary")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Pottery", "Player"
+    }
+graphic	= "b.granary"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 30
+upkeep		= 1
+sabotage	= 100
+sound		= "b_granary"
+sound_alt	= "b_generic"
+helptext	= _("\
+When any small city grows or shrinks, some food points are saved; this \
+helps cities to grow faster and more easily withstand famine. With a \
+Granary this is extended to cities of size 4 and above. \
 "), _("\
-See the help on Terrain and Terrain Alterations for the effects of \
-these actions.\
-")
-
-[unit_engineers]
-name          = _("Engineers")
-class         = "Small Land"
-tech_req      = "Explosives"
-obsolete_by   = "None"
-graphic       = "u.engineers"
-graphic_alt   = "-"
-sound_move    = "m_engineers"
-sound_move_alt = "m_generic"
-sound_fight   = "f_engineers"
-sound_fight_alt = "f_generic"
-build_cost    = 30
-pop_cost      = 0
-attack        = 0
-defense       = 2
-hitpoints     = 20
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 1
-uk_food       = 0
-uk_gold       = 1
-flags         = "Settlers", "NonMil", "Airbase", "Transform"
-
-roles         = "Settlers"
-helptext      = _("\
-Engineers are similar to Workers, but they work twice as fast, \
-move twice as fast, and may gain experience from work enabling \
-them to work up to four times faster than Workers.\
+A Granary also halves the food wasted in cities far from your capital. \
 "), _("\
-With knowledge of Fusion Power, Engineers may also perform more \
-radical terrain transformations than Workers, Settlers, or Migrants, \
-with the \"transform\" order. Examples include conversion of \
-Tundra into Plains, or even Ocean into Swamp in some circumstances \
-(when on board an ocean-going vessel, on a tile surrounded by \
-sufficient existing land). See the Terrain Alterations section \
-for more details.\
-")
-
-[unit_warriors]
-name          = _("Warriors")
-class         = "Land"
-tech_req      = "None"
-obsolete_by   = "Militia"
-graphic       = "u.warriors"
-graphic_alt   = "-"
-sound_move    = "m_warriors"
-sound_move_alt = "m_generic"
-sound_fight   = "f_warriors"
-sound_fight_alt = "f_generic"
-build_cost    = 5
-pop_cost      = 0
-attack        = 1
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 0
-flags         = "Capturer", "Marines"
-roles         = "DefendOk", "FirstBuild"
-helptext      = _("\
-This unit may be built from the start of the game.  It is the\
- weakest offensive unit.\
-")
-
-[unit_raiders]
-name          = _("Raiders")
-class         = "Land"
-tech_req      = "None"
-gov_req       = "Tribal"
-obsolete_by   = "Arquebusiers"
-graphic       = "u.raiders"
-graphic_alt   = "u.warriors"
-sound_move    = "m_warriors"
-sound_move_alt = "m_generic"
-sound_fight   = "f_warriors"
-sound_fight_alt = "f_generic"
-build_cost    = 5
-pop_cost      = 0
-attack        = 2
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 0
-uk_food       = 0
-uk_gold       = 0
-flags         = "Capturer", "Marines", "IgZOC"
-roles         = "DefendOk", "FirstBuild"
-helptext      = _("\
-This unit may be built from the start of the game.  It is the\
- weakest offensive unit.\
-")
-
-
-[unit_phalanx]
-name          = _("Phalanx")
-class         = "Land"
-tech_req      = "Bronze Working"
-gov_req       = "Despotism"
-obsolete_by   = "Arquebusiers"
-graphic       = "u.phalanx"
-graphic_alt   = "-"
-sound_move    = "m_phalanx"
-sound_move_alt = "m_generic"
-sound_fight   = "f_phalanx"
-sound_fight_alt = "f_generic"
-build_cost    = 10
-pop_cost      = 0
-attack        = 2
-defense       = 2
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 1
-flags         = "Capturer"
-roles         = "DefendGood", "FirstBuild"
-helptext      = _("\
-The Phalanx is armored infantry, suitable for defending your cities.\
-")
-
-[unit_Bowmen]
-name          = _("Bowmen")
-class         = "Land"
-gov_req       = "Tribal"
-obsolete_by   = "Skirmishers"
-graphic       = "u.bowmen"
-graphic_alt   = "u.archers"
-sound_move    = "m_archers"
-sound_move_alt = "m_generic"
-sound_fight   = "f_archers"
-sound_fight_alt = "f_generic"
-build_cost    = 10
-pop_cost      = 0
-attack        = 1
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 0
-flags         = "Capturer", "Bombarder", "Marines"
-roles         = "DefendOk", "Hut"
-bombard_rate  = 2
-helptext      = _("\
-Archers fight with bows and arrows and have a good offensive\
- value.\
-")
-
-[unit_archers]
-name          = _("Archers")
-class         = "Land"
-tech_req      = "Warrior Code"
-obsolete_by   = "Bowmen"
-graphic       = "u.archers"
-graphic_alt   = "-"
-sound_move    = "m_archers"
-sound_move_alt = "m_generic"
-sound_fight   = "f_archers"
-sound_fight_alt = "f_generic"
-build_cost    = 10
-pop_cost      = 0
-attack        = 1
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 3
-flags         = "Capturer", "Bombarder"
-roles         = "DefendOk", "Hut"
-bombard_rate  = 5
-helptext      = _("\
-Archers fight with bows and arrows and have a good offensive\
- value.\
-")
-
-
-[unit_swordsmen]
-name          = _("Swordsmen")
-class         = "Land"
-tech_req      = "Iron Working"
-obsolete_by   = "Arquebusiers"
-graphic       = "u.legion"
-graphic_alt   = "-"
-sound_move    = "m_legion"
-sound_move_alt = "m_generic"
-sound_fight   = "f_legion"
-sound_fight_alt = "f_generic"
-build_cost    = 14
-pop_cost      = 0
-attack        = 4
-defense       = 2
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 3
-flags         = "Capturer"
-roles         = "DefendOk", "BarbarianBuild", "BarbarianSea"
-helptext      = _("\
-Swordsmen are heavily armed and well disciplined infantry\
- units with an excellent offensive value.\
-")
-
-[unit_pikemen]
-name          = _("Pikemen")
-class         = "Land"
-tech_req      = "Feudalism"
-gov_req       = "Monarchy"
-obsolete_by   = "Arquebusiers"
-graphic       = "u.pikemen"
-graphic_alt   = "-"
-sound_move    = "m_pikemen"
-sound_move_alt = "m_generic"
-sound_fight   = "f_pikemen"
-sound_fight_alt = "f_generic"
-build_cost    = 10
-pop_cost      = 0
-attack        = 1
-defense       = 3
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 1
-flags         = "Capturer"
-roles         = "DefendGood", "FirstBuild"
-helptext      = _("\
-Equipped with long pikes, Pikemen replaces Phalanx\
- as the preferred city defender.\
-")
-
-[unit_militia]
-name          = _("Militia")
-class         = "Land"
-tech_req      = "Gunpowder"
-; obsolete_by   = none
-graphic       = "u.militia"
-graphic_alt   = "u.musketeers"
-sound_move    = "m_musketeers"
-sound_move_alt = "m_generic"
-sound_fight   = "f_musketeers"
-sound_fight_alt = "f_generic"
-build_cost    = 10
-pop_cost      = 0
-attack        = 1
-defense       = 1
-hitpoints     = 20
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 0
-flags         = "Capturer", "Marines"
-roles         = "DefendGood", "FirstBuild", "HutTech",
-                "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
-helptext      = _("\
-Militia is the first unit equipped with \
-Gunpowder technology, but represents hastily \
-and not too well organised units. Best used \
-in case of emergency. \
-")
-
-
-[unit_arquebusiers]
-name          = _("Arquebusiers")
-class         = "Land"
-tech_req      = "Gunpowder"
-obsolete_by   = "Musketeers"
-graphic       = "u.arquebusiers"
-graphic_alt   = "u.musketeers"
-sound_move    = "m_musketeers"
-sound_move_alt = "m_generic"
-sound_fight   = "f_musketeers"
-sound_fight_alt = "f_generic"
-build_cost    = 10
-pop_cost      = 0
-attack        = 2
-defense       = 2
-hitpoints     = 20
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 2
-flags         = "Capturer"
-roles         = "DefendGood", "FirstBuild", "HutTech",
-                "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
-helptext      = _("\
-This is the first well-trained and \
-professional military unit using gunpowder \
-technology.\
-")
-
-[unit_musketeers]
-name          = _("Musketeers")
-class         = "Land"
-tech_req      = "Leadership"
-obsolete_by   = "Riflemen"
-graphic       = "u.musketeers"
-graphic_alt   = "-"
-sound_move    = "m_musketeers"
-sound_move_alt = "m_generic"
-sound_fight   = "f_musketeers"
-sound_fight_alt = "f_generic"
-build_cost    = 15
-pop_cost      = 0
-attack        = 2
-defense       = 3
-hitpoints     = 20
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 3
-flags         = "Capturer"
-roles         = "DefendGood", "FirstBuild", "HutTech",
-                "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
-helptext      = _("\
-Musketeers are infantry equipped with early\
- firearms and replace Pikemen as the preferred\
- city defender.\
-")
-
-[unit_skirmishers]
-name          = _("Skirmishers")
-class         = "Land"
-tech_req      = "Leadership"
-obsolete_by   = "Partisan"
-graphic       = "u.skirmishers"
-graphic_alt   = "u.musketeers"
-sound_move    = "m_musketeers"
-sound_move_alt = "m_generic"
-sound_fight   = "f_musketeers"
-sound_fight_alt = "f_generic"
-build_cost    = 10
-pop_cost      = 0
-attack        = 2
-defense       = 1
-hitpoints     = 20
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 3
-flags         = "Capturer", "Marines"
-roles         = "DefendGood", "FirstBuild", "HutTech",
-                "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
-helptext      = _("\
-Skirmishers are hit-and-run unit designated \
-to harrass enemy units from distance, stall \
-any advances and test enemy strength before \
-the main assault units attack.\
-")
-
-[unit_riflemen]
-name          = _("Riflemen")
-class         = "Land"
-tech_req      = "Conscription"
-graphic       = "u.riflemen"
-graphic_alt   = "-"
-sound_move    = "m_riflemen"
-sound_move_alt = "m_generic"
-sound_fight   = "f_riflemen"
-sound_fight_alt = "f_generic"
-build_cost    = 20
-pop_cost      = 0
-attack        = 4
-defense       = 4
-hitpoints     = 20
-firepower     = 2
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 3
-flags         = "Capturer"
-roles         = "DefendGood", "FirstBuild"
-helptext      = _("\
-Riflemen are World War-era infantry, very good\
- at defending your cities.\
-")
-
-[unit_alpine_troops]
-name          = _("Alpine Troops")
-class         = "Land"
-tech_req      = "Tactics"
-obsolete_by   = "None"
-graphic       = "u.alpine_troops"
-graphic_alt   = "-"
-sound_move    = "m_alpine_troops"
-sound_move_alt = "m_generic"
-sound_fight   = "f_alpine_troops"
-sound_fight_alt = "f_generic"
-build_cost    = 20
-pop_cost      = 0
-attack        = 7
-defense       = 4
-hitpoints     = 20
-firepower     = 2
-move_rate     = 1
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 4
-embarks       = "Helicopter"
-disembarks    = "Helicopter"
-flags         = "IgTer", "Capturer", "CityBuster"
-roles         = "DefendOk"
-helptext      = _("\
-Alpine Troops are highly mobile units as well as\
- excellent defenders.\
-")
-
-[unit_partisan]
-name          = _("Partisan")
-class         = "Land"
-tech_req      = "Guerilla Warfare"
-obsolete_by   = "None"
-graphic       = "u.partisan"
-graphic_alt   = "-"
-sound_move    = "m_partisan"
-sound_move_alt = "m_generic"
-sound_fight   = "f_partisan"
-sound_fight_alt = "f_generic"
-build_cost    = 10
-pop_cost      = 0
-attack        = 2
-defense       = 2
-hitpoints     = 30
-firepower     = 1
-move_rate     = 3
-vision_radius_sq = 6
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 0
-uk_food       = 0
-uk_gold       = 0
-embarks       = "Helicopter"
-disembarks    = "Helicopter"
-flags         = "IgTer", "IgZOC", "Capturer", "Partial_Invis", "Marines"
-roles         = "DefendGood", "Partisan", "BarbarianTech"
-helptext      = _("\
-Partisans are guerilla fighters who are experts\
- at using the terrain to their advantage.\
+Granary decreases the chance that population will migrate to bigger cities.\
 "), _("\
-A number of Partisans are granted free when an enemy conquers your\
- city -- they automatically assume defensive positions in the\
- surrounding countryside -- but only under these conditions:\n\
- - Guerilla Warfare must be known by at least one player.\n\
- - At least three quarters of the citizens must have your nationality.\n\
- - You must know about Communism and Gunpowder.\n\
- - You must run either a Democracy or a Communist government.\
+TIP: to maximise the speed with which a city grows, you should build a \
+Granary before it grows larger than size 4.\
 ")
 
-[unit_fanatics]
-name          = _("Fanatics")
-class         = "Land"
-tech_req      = "Guerilla Warfare"
-gov_req       = "Fundamentalism"
-obsolete_by   = "None"
-graphic       = "u.fanatics"
-graphic_alt   = "-"
-sound_move    = "m_fanatics"
-sound_move_alt = "m_generic"
-sound_fight   = "f_fanatics"
-sound_fight_alt = "f_generic"
-build_cost    = 10
-pop_cost      = 1
-attack        = 5
-defense       = 3
-hitpoints     = 10
-firepower     = 2
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 0
-embarks       = "Helicopter"
-disembarks    = "Helicopter"
-flags         = "Fanatic", "Capturer"
-roles         = "DefendGood"
-helptext      = _("\
-Fanatics are warriors extremely devoted to a higher cause.\
+[building_harbour]
+name            = _("Harbor")
+rule_name       = "Harbour"     ; en_GB spelling used originally
+genus		= "Improvement"
+reqs   =
+    { "type", "name", "range"
+      "Tech", "Seafaring", "Player"
+      "TerrainClass", "Oceanic", "City"
+    }
+graphic	= "b.harbour"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 40
+upkeep		= 1
+sabotage	= 100
+sound		= "b_harbour"
+sound_alt	= "b_generic"
+helptext	= _("\
+Gives one extra food resource on all Ocean or Deep Ocean tiles (but \
+not Lakes). The city needs to be coastal to build this improvement.\
+")
+
+[building_hydro_plant]
+name		= _("Hydro Plant")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Electronics", "Player"
+      "Building", "Factory", "City"
+      "Road", "River", "Adjacent"
+    }
+graphic	= "b.hydro_plant"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 120
+upkeep		= 4
+sabotage	= 100
+sound		= "b_hydro_plant"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Any kind of electrical plant increases the shield production \
+effects of any Factory or Mfg. Plant in its city by 25% each. \
+Thus, an electrical plant in combination with either a Factory \
+or Mfg. Plant gives a 50% production bonus over \
+the level without any of these improvements; an electrical plant, \
+Factory, and Mfg. Plant together give a 100% production bonus. \
+The extra production may lead to the city generating more \
+pollution.\
+"),
+; /* xgettext:no-c-format */
+_("\
+However, a Hydro Plant also reduces the pollution associated with shield \
+production to 50% of its normal value, or 25% in combination with a \
+Recycling Center; pollution is reduced further for the player who owns \
+the Hoover Dam. (A Hydro Plant's effect is the same as that of a \
+Nuclear Plant; with the Hoover Dam, its effect is increased to that of \
+a Solar Plant.)\
 "), _("\
-Fundamentalist nations can maintain Fanatic units without\
- having to pay any upkeep nor causing military unhappiness. \
- Instead, each unit reduces the population by 1.\
+In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or \
+Solar Plant can take effect at any one time.\
 ")
 
-[unit_marines]
-name          = _("Marines")
-class         = "Land"
-tech_req      = "Amphibious Warfare"
-obsolete_by   = "None"
-graphic       = "u.marines"
-graphic_alt   = "-"
-sound_move    = "m_marines"
-sound_move_alt = "m_generic"
-sound_fight   = "f_marines"
-sound_fight_alt = "f_generic"
-build_cost    = 20
-pop_cost      = 0
-attack        = 8
-defense       = 5
-hitpoints     = 20
-firepower     = 2
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 5
-embarks       = "Helicopter"
-disembarks    = "Helicopter"
-flags         = "Marines", "Capturer", "CityBuster"
-roles         = "DefendGood", "FirstBuild", "BarbarianSeaTech"
-helptext      = _("\
-Marines are infantry who are experts at marine warfare.\
+[building_library]
+name		= _("Library")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Writing", "Player"
+    }
+graphic	= "b.library"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 40
+upkeep		= 1
+sabotage	= 100
+sound		= "b_library"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases the science output in a city by 50%, or by 100% once the \
+Great Library has been built by any player.\
+\
+Units constructed in a city with this building have one additional\
+veteran level.\
+\
+Decreases corruption by a small amount, depending on government.\
 ")
 
-[unit_paratroopers]
-name          = _("Paratroopers")
-class         = "Land"
-tech_req      = "Combined Arms"
-obsolete_by   = "None"
-graphic       = "u.paratroopers"
-graphic_alt   = "-"
-sound_move    = "m_paratroopers"
-sound_move_alt = "m_generic"
-sound_fight   = "f_paratroopers"
-sound_fight_alt = "f_generic"
-build_cost    = 30
-pop_cost      = 0
-attack        = 6
-defense       = 4
-hitpoints     = 20
-firepower     = 2
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 5
-embarks       = "Helicopter"
-disembarks    = "Helicopter"
-flags         = "Paratroopers", "Capturer", "CityBuster"
-roles         = "DefendOk"
-helptext      = _("\
-Paratroopers are experts at airborne attacks. \
-From a friendly city or airbase, Paratroopers who have not expended any \
-movement points can paradrop directly to any tile in range, and be \
-immediately ready to act there. (Beware dropping into unseen territory, \
-as Paratroopers landing on a tile occupied by enemy units are easy \
-targets!)\
+[building_marketplace]
+name		= _("Marketplace")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Currency", "Player"
+    }
+graphic	= "b.marketplace"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 40
+upkeep		= 0
+sabotage	= 100
+sound		= "b_marketplace"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases the luxury and tax output in a city by 50%.\
+\
+Units constructed in a city with this building have one additional\
+veteran level.\
 ")
 
-paratroopers_range = 10
-paratroopers_mr_req = 1
-paratroopers_mr_sub = 0
-
-[unit_mech_inf]
-name          = _("Mech. Inf.")
-class         = "Land"
-tech_req      = "Labor Union"
-obsolete_by   = "None"
-graphic       = "u.mech_inf"
-graphic_alt   = "-"
-sound_move    = "m_mech_inf"
-sound_move_alt = "m_generic"
-sound_fight   = "f_mech_inf"
-sound_fight_alt = "f_generic"
-build_cost    = 40
-pop_cost      = 0
-attack        = 5
-defense       = 6
-hitpoints     = 30
-firepower     = 2
-move_rate     = 6
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 2
-uk_food       = 1
-uk_gold       = 3
-flags         = ""
-roles         = "DefendGood", "FirstBuild"
-helptext      = _("\
-The Mechanized Infantry has the strongest inherent defensive strength \
-of any land unit, and is very fast on roads and easy terrain, but it is \
-hindered rather than helped by rough terrain (it cannot move into \
-mountains, swamps, or jungles), and it is only available near the end \
-of the technology tree.\
+[building_mass_transit]
+name		= _("Mass Transit")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Mass Production", "Player"
+    }
+graphic	= "b.mass_transit"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 100
+upkeep		= 2
+sabotage	= 100
+sound		= "b_mass_transit"
+sound_alt	= "b_generic"
+helptext	= _("\
+Reduces the pollution generated by the population in a city; this \
+building counteracts the additional pollution associated with any \
+two other buildings.\
 ")
 
-[unit_horsemen]
-name          = _("Horsemen")
-class         = "Land"
-tech_req      = "Horseback Riding"
-obsolete_by   = "Knights"
-graphic       = "u.horsemen"
-graphic_alt   = "-"
-sound_move    = "m_horsemen"
-sound_move_alt = "m_generic"
-sound_fight   = "f_horsemen"
-sound_fight_alt = "f_generic"
-build_cost    = 10
-pop_cost      = 0
-attack        = 2
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 1
-flags         = "Capturer"
-roles         = "AttackFast", "Hut", "Barbarian", "Hunter"
-helptext      = _("\
-Horsemen are mounted warriors and an early\
- shock-troop that can penetrate deep into\
- enemy territory.\
+[building_mfg_plant]
+name		= _("Mfg. Plant")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Plastics", "Player"
+      "Building", "Factory", "City"
+    }
+graphic	= "b.mfg_plant"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 120
+upkeep		= 4
+sabotage	= 100
+sound		= "b_mfg_plant"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases the shield production in a city by an additional 25%, or \
+50% with an electrical plant of any kind in the same city; this \
+effect is cumulative with that of a Factory.\
+"), _("\
+With sufficient shield production, cities with a Manufacturing Plant \
+can produce up to two units each turn (but only single units of types \
+which cost population).\
+"), _("\
+This increase in shield production may contribute significantly to \
+pollution; a Manufacturing Plant also increases the pollution caused \
+by the population of the city.\
 ")
 
-
-[unit_chariot]
-name          = _("Chariot")
-class         = "Land"
-tech_req      = "The Wheel"
-graphic       = "u.chariot"
-graphic_alt   = "-"
-sound_move    = "m_chariot"
-sound_move_alt = "m_generic"
-sound_fight   = "f_chariot"
-sound_fight_alt = "f_generic"
-build_cost    = 15
-pop_cost      = 0
-attack        = 3
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 2
-flags         = "Capturer"
-roles         = "AttackFast"
-helptext      = _("\
-Chariots are horse-pulled war wagons. They have a stronger attack than \
-Horsemen, but their speed comes at a cost: they are more expensive \
-to build, they cannot take advantage of terrain to defend themselves, \
-they cannot move in rough terrain (mountains, swamps, and jungles) \
-without roads, and they cannot be transported by sea using early ships \
-(Triremes and Caravels).\
+[building_nuclear_plant]
+name		= _("Nuclear Plant")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Nuclear Power", "Player"
+      "Building", "Factory", "City"
+    }
+graphic	= "b.nuclear_plant"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 140
+upkeep		= 2
+sabotage	= 100
+sound		= "b_nuclear_plant"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Any kind of electrical plant increases the shield production \
+effects of any Factory or Mfg. Plant in its city by 25% each. \
+Thus, an electrical plant in combination with either a Factory \
+or Mfg. Plant gives a 50% production bonus over \
+the level without any of these improvements; an electrical plant, \
+Factory, and Mfg. Plant together give a 100% production bonus. \
+The extra production may lead to the city generating more \
+pollution.\
+"),
+; /* xgettext:no-c-format */
+_("\
+However, a Nuclear Plant also reduces the pollution associated with shield \
+production to 50% of its normal value, or 25% in combination with a \
+Recycling Center. (Its effect is the same as that of a Hydro Plant.)\
+"), _("\
+In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or \
+Solar Plant can take effect at any one time.\
+"), _("\
+A Nuclear Plant has a small risk of suffering a nuclear accident, which \
+can lead to fallout and reduce the city's population.\
 ")
 
-[unit_elephants]
-name          = _("Elephants")
-class         = "Land"
-tech_req      = "Polytheism"
-graphic       = "u.elephants"
-graphic_alt   = "u.chariot"
-sound_move    = "m_elephants"
-sound_move_alt = "m_generic"
-sound_fight   = "f_elephants"
-sound_fight_alt = "f_generic"
-build_cost    = 15
-pop_cost      = 0
-attack        = 3
-defense       = 2
-hitpoints     = 10
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 2
-flags         = "Capturer"
-roles         = "DefendOk", "AttackFast", "Hunter"
-helptext      = _("\
-Elephants are towering animals trained for war that are often used as\
- powerful shock troops.\
-")
-
-;[unit_crusaders]
-;name          = _("Crusaders")
-;class         = "Land"
-;tech_req      = "Monotheism"
-;obsolete_by   = "Dragoons"
-;graphic       = "u.crusaders"
-;graphic_alt   = "u.knights"
-;sound_move    = "m_crusaders"
-;sound_move_alt = "m_generic"
-;sound_fight   = "f_crusaders"
-;sound_fight_alt = "f_generic"
-;build_cost    = 40
-;pop_cost      = 0
-;attack        = 5
-;defense       = 1
-;hitpoints     = 10
-;firepower     = 1
-;move_rate     = 4
-;vision_radius_sq = 2
-;transport_cap = 0
-;fuel          = 0
-;uk_happy      = 0
-;uk_shield     = 1
-;uk_food       = 1
-;uk_gold       = 1
-;flags         = "Capturer"
-;roles         = "AttackFast", "Hunter"
-;helptext      = _("\
-;Crusaders are highly disciplined mounted\
-; warriors driven by a higher cause.\
+;[building_offshore_platform]
+;name		= _("Offshore Platform")
+;genus		= "Improvement"
+;reqs	=
+;    { "type", "name", "range"
+;      "Tech", "Miniaturization", "Player"
+;      "TerrainClass", "Oceanic", "Adjacent"
+;    }
+;graphic	= "b.offshore_platform"
+;graphic_alt	= "-"
+;obsolete_by	= "None"
+;build_cost	=80
+;upkeep		= 3
+;sabotage	= 100
+;sound		= "b_offshore_platform"
+;sound_alt	= "b_generic"
+;helptext	= _("\
+;Every Ocean tile worked by the city yields one extra shield resource, \
+;as well as any Deep Ocean tile containing a Buoy. The city needs to be \
+;coastal to build this improvement.\
+;"), _("\
+;Offshore Platforms also increase the pollution caused by the population \
+;of the city.\
 ;")
 
-[unit_knights]
-name          = _("Knights")
-class         = "Land"
-tech_req      = "Chivalry"
-obsolete_by   = "Dragoons"
-graphic       = "u.knights"
-graphic_alt   = "-"
-sound_move    = "m_knights"
-sound_move_alt = "m_generic"
-sound_fight   = "f_knights"
-sound_fight_alt = "f_generic"
-build_cost    = 20
-pop_cost      = 0
-attack        = 4
-defense       = 2
-hitpoints     = 10
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 2
-flags         = "Capturer"
-roles         = "DefendOk", "AttackFast", "HutTech","BarbarianTech",
-                "BarbarianBuildTech", "Hunter"
-helptext      = _("\
-Knights are mounted and heavily armored warriors.\
+[building_palace]
+name		= _("Palace")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+    }
+graphic	= "b.palace"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 20
+upkeep		= 0
+sabotage	= 0
+sound		= "b_palace"
+sound_alt	= "b_generic"
+helptext	= _("\
+Makes a city the capital and the center of your government. \Corruption in other cities is often related to how far away from the capital they are. \
+"), _("\
+The cost to enemy Diplomats and Spies of inciting a revolt in a \
+city also depends upon the city's distance from the capital \
+(under all forms of government). Your capital city itself cannot \
+be incited to revolt, and enjoys a bonus when enemy agents try \
+to evade your own agents stationed in the city, or sabotage your \
+buildings.\
+"), _("\
+Take good care of your capital, as its loss will result in the loss of \
+all centrally collected trade until you rebuild the palace. Losing it also \
+results in losing whatever spaceship you might have.\
+"),
+; /* xgettext:no-c-format */
+_("\
+Under Despotism the city containing the palace gains a +75% \
+gold bonus, and under Monarchy a +50% gold bonus.\
 ")
 
-[unit_dragoons]
-name          = _("Dragoons")
-class         = "Land"
-tech_req      = "Leadership"
-obsolete_by   = "Cavalry"
-graphic       = "u.dragoons"
-graphic_alt   = "-"
-sound_move    = "m_dragoons"
-sound_move_alt = "m_generic"
-sound_fight   = "f_dragoons"
-sound_fight_alt = "f_generic"
-build_cost    = 20
-pop_cost      = 0
-attack        = 5
-defense       = 2
-hitpoints     = 20
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 0
-uk_food       = 1
-uk_gold       = 3
-flags         = "Capturer"
-roles         = "AttackFast", "BarbarianBuildTech", "Hunter"
-helptext      = _("\
-Dragoons are mounted warriors carrying early firearms.\
+[building_second_palace]
+name		= _("Second Palace")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Theology", "Player"
+    }
+graphic	= "b.courthouse"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 150
+upkeep		= 1
+sabotage	= 100
+sound		= "b_courthouse"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Creates a government center to combat waste and corrupton (similar to Palace).\
 ")
 
-[unit_cavalry]
-name          = _("Cavalry")
-class         = "Land"
-tech_req      = "Tactics"
-graphic       = "u.cavalry"
-graphic_alt   = "-"
-sound_move    = "m_cavalry"
-sound_move_alt = "m_generic"
-sound_fight   = "f_cavalry"
-sound_fight_alt = "f_generic"
-build_cost    = 25
-pop_cost      = 0
-attack        = 8
-defense       = 3
-hitpoints     = 20
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 4
-flags         = "Capturer"
-roles         = "AttackFast", "Hunter"
-helptext      = _("\
-Cavalry are mounted and highly trained soldiers.\
+[building_police_station]
+name		= _("Police Station")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Industrialization", "Player"
+    }
+graphic	= "b.police_station"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 50
+upkeep		= 2
+sabotage	= 100
+sound		= "b_police_station"
+sound_alt	= "b_generic"
+helptext	= _("\
+A Police Station neutralizes any unhappiness caused by one military \
+unit in its city. It also makes up to 2 more unhappy citizens content \
+provided they are not unhappy about aggression.\
+\
+Decreases corruption by a small amount, depending on government.\
 ")
 
-[unit_armor]
-name          = _("Armor")
-class         = "Land"
-tech_req      = "Mobile Warfare"
+[building_port_facility]
+name		= _("Naval Base")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Amphibious Warfare", "Player"
+      "TerrainClass", "Oceanic", "Adjacent"
+    }
+graphic	= "b.port_facility"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 60
+upkeep		= 2
+sabotage	= 100
+sound		= "b_port_facility"
+sound_alt	= "b_generic"
+helptext	= _("\
+Allows a city to build veteran sea units.  Also, damaged sea units\
+ which stay in town for one full turn without moving are completely\
+ restored.\
+")
+; Includes Triremes, but not worth mentioning explicitly as unlikely
+; to happen
+
+[building_port_terminal]
+name		=_("Port Terminal Facility")
+genus		="Improvement"
+reqs		=
+	{ "type", "name", "range"
+	  "Tech", "The Corporation", "Player"
+          "TerrainClass", "Oceanic", "Adjacent"
+    	}
+graphic	= "b.port_terminal"
+graphic_alt	= "b.port_facility"
+obsolete_by	= "None"
+build_cost	= 60
+upkeep		= 2
+sabotage	= 100
+sound		= "b_port_facility"
+sound_alt	= "b_generic"
+helptext	= _("\
+Gives +1 Trade for all Ocean tiles.\
+")
+
+
+
+[building_power_plant]
+name		= _("Power Plant")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Refining", "Player"
+      "Building", "Factory", "City"
+    }
+graphic	= "b.power_plant"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 110
+upkeep		= 4
+sabotage	= 100
+sound		= "b_power_plant"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Any kind of electrical plant increases the shield production \
+effects of any Factory or Mfg. Plant in its city by 25% each. \
+Thus, an electrical plant in combination with either a Factory \
+or Mfg. Plant gives a 50% production bonus over \
+the level without any of these improvements; an electrical plant, \
+Factory, and Mfg. Plant together give a 100% production bonus. \
+The extra production may lead to the city generating more \
+pollution.\
+"), _("\
+In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or \
+Solar Plant can take effect at any one time.\
+")
+
+[building_recycling_center]
+name		= _("Recycling Center")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Recycling", "Player"
+    }
+graphic	= "b.recycling_center"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 100
+upkeep		= 2
+sabotage	= 100
+sound		= "b_recycling_center"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Building a Recycling Center reduces the amount of pollution \
+generated by shield production in a city by 50%, or by an additional \
+25% in cities with another building which reduces pollution \
+(Nuclear Plant, Hydro Plant, or Solar Plant).\
+")
+
+[building_research_lab]
+name		= _("Research Lab")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Computers", "Player"
+      "Building", "University", "City"
+    }
+graphic	= "b.research_lab"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 100
+upkeep		= 3
+sabotage	= 100
+sound		= "b_research_lab"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases the science output in a city by an additional 50%, or \
+by 100% once the Internet wonder has been built by any player.\
+"),
+; /* xgettext:no-c-format */
+_("\
+The total bonus is 150% if a Library, a University and a \
+Research Lab are all present in the same city, increasing to 300% \
+once the Great Library, Isaac Newton's College, and the Internet have \
+all been built.\
+")
+
+[building_sam_battery]
+name		= _("SAM Battery")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Rocketry", "Player"
+    }
+graphic	= "b.sam_battery"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 70
+upkeep		= 2
+sabotage	= 100
+sound		= "b_sam_battery"
+sound_alt	= "b_generic"
+helptext	= _("\
+Doubles the intrinsic defense strength of units within a city \
+when defending against aircraft (including helicopters).\
+")
+
+[building_sdi_defense]
+name		= _("SDI Defense")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Laser", "Player"
+    }
+graphic	= "b.sdi_defense"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 140
+upkeep		= 3
+sabotage	= 100
+sound		= "b_sdi_defense"
+sound_alt	= "b_generic"
+helptext	= _("\
+Protects a city and its environs (up to 2 tiles away) from attacks \
+by Nuclear units. A Nuclear unit attacking a city with SDI Defense, \
+or attacking a unit (or deliberately exploded) within range, is shot \
+down and simply has no effect. Also, doubles the intrinsic \
+defense strength of units in the city when defending against \
+conventional missiles.\
+")
+
+[building_sewer_system]
+name		= _("Sewer System")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Sanitation", "Player"
+      "MinSize", "9", "City"
+    }
+graphic	= "b.sewer_system"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 60
+upkeep		= 2
+sabotage	= 100
+sound		= "b_sewer_system"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Together with an Aqueduct, allows a city to grow larger than size 16, \
+and further reduces the chance of a plague (by 30% of the base chance).\
+")
+
+[building_solar_plant]
+name		= _("Solar Plant")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Environmentalism", "Player"
+      "Building", "Factory", "City"
+    }
+graphic	= "b.solar_plant"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 150
+upkeep		= 4
+sabotage	= 100
+sound		= "b_solar_plant"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Any kind of electrical plant increases the shield production \
+effects of any Factory or Mfg. Plant in its city by 25% each. \
+Thus, an electrical plant in combination with either a Factory \
+or Mfg. Plant gives a 50% production bonus over \
+the level without any of these improvements; an electrical plant, \
+Factory, and Mfg. Plant together give a 100% production bonus. \
+The extra production may lead to the city generating more \
+pollution.\
+"),
+; /* xgettext:no-c-format */
+_("\
+However, a Solar Plant also reduces the pollution associated with shield \
+production to 25% of its normal value, or eliminates it entirely in \
+combination with a Recycling Center.\
+"), _("\
+In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or \
+Solar Plant can take effect at any one time.\
+")
+
+[building_space_component]
+name		= _("Space Component")
+genus		= "Special"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Superconductors", "Player"
+      "Building", "Factory", "City"
+      "Building", "Library", "City"
+      "Building", "University", "City"
+      "Building", "Research Lab", "City"
+    }
+graphic	= "b.space_component"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 160
+upkeep		= 0
+sabotage	= 100
+sound		= "b_space_component"
+sound_alt	= "b_generic"
+helptext	= _("\
+Space Components can be differentiated into Propulsion and Fuel\
+ Components.  Each pair of them reduces your spaceship's travel\
+ time.  You can build up to 8 pairs.\
+"), _("\
+Before you can build any spaceship parts, the Apollo Program wonder\
+ must have been built by any player.\
+")
+
+[building_space_module]
+name		= _("Space Module")
+genus		= "Special"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Environmentalism", "Player"
+      "Building", "Factory", "City"
+      "Building", "Library", "City"
+      "Building", "University", "City"
+      "Building", "Research Lab", "City"
+    }
+graphic	= "b.space_modules"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 320
+upkeep		= 0
+sabotage	= 100
+sound		= "b_space_module"
+sound_alt	= "b_generic"
+helptext	= _("\
+Space Modules are the most expensive parts of spaceships.  There\
+ are three different types of Space Module:\
+"), _("\
+- Habitation Module: provides living space for 10,000 people.\
+"), _("\
+- Life Support Module: provides food and water for the population of\
+ one Habitation Module.\
+"), _("\
+- Solar Panels: provides the energy needed for any two of the other\
+ Modules.\
+"), _("\
+You can build up to 4 Space Modules of each kind.\
+"), _("\
+Before you can build any spaceship parts, the Apollo Program wonder\
+ must have been built by any player.\
+")
+
+[building_space_structural]
+name		= _("Space Structural")
+genus		= "Special"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Space Flight", "Player"
+      "Building", "Factory", "City"
+      "Building", "Library", "City"
+      "Building", "University", "City"
+      "Building", "Research Lab", "City"
+    }
+graphic	= "b.space_structural"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 80
+upkeep		= 0
+sabotage	= 100
+sound		= "b_space_structural"
+sound_alt	= "b_generic"
+helptext	= _("\
+Space Structurals form the base of your spaceship.  All other\
+ spaceship parts need to be connected to Structurals in order to\
+ function.  You can build up to 32 Space Structurals.\
+"), _("\
+Before you can build any spaceship parts, the Apollo Program wonder\
+ must have been built by any player.\
+")
+
+[building_stock_exchange]
+name		= _("Stock Exchange")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Economics", "Player"
+      "Building", "Bank", "City"
+    }
+graphic	= "b.stock_exchange"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 100
+upkeep		= 2
+sabotage	= 100
+sound		= "b_stock_exchange"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases the luxury and tax output in a city by an additional 50%, \
+or 100% if Super Highways are also in the city. A Marketplace, Bank, \
+and Stock Exchange together in a city yield a total bonus of 150%; \
+adding Super Highways yields a total of 200%.\
+\
+Stock Exchange doesn't have any effect under a Communist government.
+")
+
+[building_super_highways]
+name		= _("Super Highways")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Automobile", "Player"
+    }
+graphic	= "b.super_highways"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 100
+upkeep		= 3
+sabotage	= 100
+sound		= "b_super_highways"
+sound_alt	= "b_generic"
+helptext	= _("\
+Each tile around the city with roads, and without farmlands, that\
+ is already generating some trade, produces one extra trade resource.\
+"),
+; /* xgettext:no-c-format */
+_("\
+Also doubles the effect of any Stock Exchange in the city (increasing\
+ luxury and tax output by an additional 50%).\
+"), _("\
+Super Highways also increase the pollution caused by the population\
+ of the city.\
+")
+
+[building_supermarket]
+name		= _("Supermarket")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Refrigeration", "Player"
+    }
+graphic	= "b.supermarket"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 60
+upkeep		= 3
+sabotage	= 100
+sound		= "b_supermarket"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases the food resources by 50% on each farmland tile which\
+ is being used around the city.  Farmland tiles are those which\
+ have been irrigated a second time.\
+")
+
+[building_temple]
+name		= _("Temple")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Ceremonial Burial", "Player"
+    }
+graphic	= "b.temple"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 30
+upkeep		= 1
+sabotage	= 100
+sound		= "b_temple"
+sound_alt	= "b_generic"
+helptext	= _("\
+Makes one unhappy citizen content. The Mysticism advance doubles \
+this effect (except under a Communist government). With both Mysticism \
+and the Temple of Artemis, 4 citizens are made content (3 under \
+Communism). Does not affect citizens made unhappy by aggression.\
+\
+Units constructed in a city with this building have one additional\
+veteran level.\
+\
+Decreases corruption by a small amount, depending on government.\
+")
+
+[building_university]
+name		= _("University")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "University", "Player"
+      "Building", "Library", "City"
+    }
+graphic	= "b.university"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 70
+upkeep		= 2
+sabotage	= 100
+sound		= "b_university"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases the science output in a city by an additional 50%, or \
+by 100% once Isaac Newton's College has been built by any player.\
+"),
+; /* xgettext:no-c-format */
+_("\
+The total bonus is 100% if a Library and a University are present \
+together in the same city, increasing to 200% once the Great Library and \
+Isaac Newton's College have both been built.\
+\
+Under Democracy, University makes additional citizen unhappy for \
+each aggressively deployed military unit.\
+\
+Units constructed in a city with this building have one additional\
+veteran level.\
+\
+Decreases corruption by a small amount, depending on government.\
+")
+
+[building_apollo_program]
+name		= _("Apollo Program")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Space Flight", "Player"
+    }
+graphic	= "b.apollo_program"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 600
+upkeep		= 0
+sabotage	= 0
+sound		= "w_apollo_program"
+sound_alt	= "w_generic"
+helptext	= _("\
+The entire map becomes permanently visible to the player who owns it \
+-- the player always has up-to-date knowledge of all terrain and \
+cities (but not units) despite fog-of-war.  It allows all players to \
+start building spaceship parts (assuming they have researched the \
+necessary technologies).\
+"), _("\
+Completion of the Apollo Program also allows nuclear-armed powers to \
+declare war without provocation, regardless of the existence of the \
+United Nations, and AI players will no longer be friendly towards the \
+owner of the United Nations or the Eiffel Tower.\
+")
+
+[building_asmiths_trading_co]
+name		= _("A.Smith's Trading Co.")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Economics", "Player"
+      "Building", "Stock Exchange", "City"
+    }
+graphic	= "b.asmiths_trading_co"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 400
+upkeep		= 0
+sabotage	= 0
+sound		= "w_asmiths_trading_co"
+sound_alt	= "w_generic"
+helptext	= _("\
+In every city with a Stock Exchange, city improvements which would \
+normally have an upkeep of 1 become free of upkeep. (Communist \
+governments inherently give this benefit, so there is no bonus under \
+Communism.)\
+"), _("\
+Upon completion of this wonder, tax collector specialists' gold output \
+increases to 3 permanently for every nation.\
+")
+
+[building_colossus]
+name		= _("Colossus")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Bronze Working", "Player"
+    }
+graphic	= "b.colossus"
+graphic_alt	= "-"
+obsolete_by	= "Automobile"
+build_cost	= 200
+upkeep		= 0
+sabotage	= 0
+sound		= "w_colossus"
+sound_alt	= "w_generic"
+helptext	= _("\
+Each tile around the city where this wonder is built that is already\
+ generating some trade produces one extra trade resource.\
+")
+
+[building_copernicus_observatory]
+name		= _("Copernicus' Observatory")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Astronomy", "Player"
+    }
+graphic	= "b.copernicus_observatory"
+graphic_alt	= "-"
+obsolete_by	= "Computers"
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_copernicus_observatory"
+sound_alt	= "w_generic"
+helptext	= _("\
+Each tile worked by the city where this wonder is built produces \
+one extra research point.\
+")
+
+[building_cure_for_cancer]
+name		= _("Cure For Cancer")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Genetic Engineering", "Player"
+    }
+graphic	= "b.cure_for_cancer"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 600
+upkeep		= 0
+sabotage	= 0
+sound		= "w_cure_for_cancer"
+sound_alt	= "w_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+This stunning technological achievement makes one content citizen \
+happy in each of your cities (2 extra luxury per city). It further \
+reduces the risk of plague in the city (by 10% of the base chance); \
+together with an Aqueduct, a Sewer System, and knowledge of Medicine, \
+it entirely eliminates the risk of plague.\
+")
+
+[building_darwins_voyage]
+name		= _("Darwin's Voyage")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Steam Engine", "Player"
+    }
+graphic	= "b.darwins_voyage"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_darwins_voyage"
+sound_alt	= "w_generic"
+helptext	= _("\
+Charles Darwin's voyage sparked the discovery of the evolution \
+of the species, which inspired greater confidence in science. \
+All your cities generate 1 extra science bulb.\
+"), _("\
+Upon completion of this wonder, scientist specialists' research output \
+increases to 3 permanently for every nation.\
+")
+
+[building_eiffel_tower]
+name		= _("Eiffel Tower")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Railroad", "Player"
+    }
+graphic	= "b.eiffel_tower"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_eiffel_tower"
+sound_alt	= "w_generic"
+helptext	= _("\
+AI nations are more inclined to be friendly and forgiving toward the \
+owner of this wonder (until the Apollo Program is completed). It also \
+reduces the pollution caused by the population; it counteracts the \
+pollution associated with a single building in each of your cities.\
+")
+
+[building_great_library]
+name		= _("Great Library")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Literacy", "Player"
+      "Building", "Library", "City"
+    }
+graphic	= "b.great_library"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_great_library"
+sound_alt	= "w_generic"
+helptext	= _("\
+Gives an immediate technology advance to the player that builds it, \
+and thereafter 4 extra research points every turn to its city.\
+"), _("\
+Completion of this wonder permanently doubles the effect of Libraries \
+for every player.\
+")
+
+[building_great_wall]
+name		= _("Great Wall")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Construction", "Player"
+    }
+graphic	= "b.great_wall"
+graphic_alt	= "-"
+obsolete_by	= "Machine Tools"
+build_cost	= 2000
+upkeep		= 0
+sabotage	= 0
+sound		= "w_great_wall"
+sound_alt	= "w_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases the defense of all your cities by adding a +50% bonus to \
+its units' intrinsic defense strength against land units (this is cumulative \
+with any City Walls), and preventing the loss of population which occurs \
+when a defending unit is defeated by a land unit.\
+")
+
+[building_hanging_gardens]
+name		= _("Hanging Gardens")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Pottery", "Player"
+    }
+graphic	= "b.hanging_gardens"
+graphic_alt	= "-"
+obsolete_by	= "Electricity"
+build_cost	= 200
+upkeep		= 0
+sabotage	= 0
+sound		= "w_hanging_gardens"
+sound_alt	= "w_generic"
+helptext	= _("\
+Makes one unhappy citizen content in every city of the player that \
+owns it (not including citizens unhappy about aggression). This wonder \
+also makes two content citizens happy in the city where it is located \
+(4 extra luxury points).\
+")
+
+[building_hoover_dam]
+name		= _("Hoover Dam")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Electronics", "Player"
+      "Road", "River", "Adjacent"
+      "Building", "Factory", "City"
+    }
+graphic	= "b.hoover_dam"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 600
+upkeep		= 0
+sabotage	= 0
+sound		= "w_hoover_dam"
+sound_alt	= "w_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Acts as a Hydro Plant in the city where it is built, and reduces \
+pollution from shield production by a further 25% in all cities \
+with Hydro Plants, making them equivalent to Solar Plants.\
+")
+
+[building_isaac_newtons_college]
+name		= _("Isaac Newton's College")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Theory of Gravity", "Player"
+      "Building", "University", "City"
+    }
+graphic	= "b.isaac_newtons_college"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 400
+upkeep		= 0
+sabotage	= 0
+sound		= "w_isaac_newtons_college"
+sound_alt	= "w_generic"
+helptext	= _("\
+Gives an immediate technology advance to the player that builds it, \
+and thereafter 6 extra research points every turn to its city.\
+"), _("\
+Completion of this wonder permanently doubles the effect of \
+Universities for every player.\
+")
+
+[building_js_bachs_cathedral]
+name		= _("J.S. Bach's Cathedral")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Theology", "Player"
+    }
+graphic	= "b.js_bachs_cathedral"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 400
+upkeep		= 0
+sabotage	= 0
+sound		= "w_js_bachs_cathedral"
+sound_alt	= "w_generic"
+helptext	= _("\
+Makes one content citizen happy in every city of the player that owns \
+it (2 extra luxury points per city).\
+")
+
+[building_king_richards_crusade]
+name		= _("King Richard's Crusade")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Chivalry", "Player"
+    }
+graphic	= "b.king_richards_crusade"
+graphic_alt	= "-"
+obsolete_by	= "Communism"
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_king_richards_crusade"
+sound_alt	= "w_generic"
+helptext	= _("\
+Reduces the unhappiness caused by aggressively deployed military \
+units owned by the city by 1 -- in other words, it neutralizes the \
+unhappiness caused by a single military unit (except under Democracy, \
+where a single unit makes two citizens unhappy). Under governments \
+where unit upkeep is paid in gold, it gives two free gold per city \
+towards upkeep every turn.\
+")
+
+;[building_leonardos_workshop]
+;name		= _("Leonardo's Workshop")
+;genus		= "SmallWonder"
+;reqs	=
+;    { "type", "name", "range"
+;      "Tech", "Invention", "Player"
+;    }
+;graphic	= "b.leonardos_workshop"
+;graphic_alt	= "-"
+;obsolete_by	= "Combustion"
+;build_cost	= 400
+;upkeep		= 0
+;sabotage	= 0
+;sound		= "w_leonardos_workshop"
+;sound_alt	= "w_generic"
+;helptext	= _("\
+;Upgrades two obsolete units per game turn.\
+;")
+
+[building_lighthouse]
+name		= _("Lighthouse")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Map Making", "Player"
+      "Terrain", "Ocean", "Adjacent"
+    }
+graphic	= "b.lighthouse"
+graphic_alt	= "-"
+obsolete_by	= "Engineering"
+build_cost	= 200
+upkeep		= 0
+sabotage	= 0
+sound		= "w_lighthouse"
+sound_alt	= "w_generic"
+helptext	= _("\
+Gives all your sea units 1 additional movement point (except Triremes \
+while moving on rivers). Makes all your new sea units veterans (for all \
+your cities).\
+")
+
+[building_magellans_expedition]
+name		= _("Magellan's Expedition")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Magnetism", "Player"
+      "Terrain", "Ocean", "Adjacent"
+    }
+graphic	= "b.magellans_expedition"
+graphic_alt	= "-"
+obsolete_by	= "Nuclear Power"
+build_cost	= 400
+upkeep		= 0
+sabotage	= 0
+sound		= "w_magellans_expedition"
+sound_alt	= "w_generic"
+helptext	= _("\
+Gives all your sea units 1 additional movement point. The chance\
+ of a sea unit getting the next veteran level after a battle\
+ increases by half.\
+")
+
+[building_manhattan_project]
+name		= _("Manhattan Project")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Nuclear Fission", "Player"
+    }
+graphic	= "b.manhattan_project"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 600
+upkeep		= 0
+sabotage	= 0
+sound		= "w_manhattan_project"
+sound_alt	= "w_generic"
+;helptext is set in client/helpdata.c:helptext_wonder()
+;helptext	=
+
+
+[building_michelangelos_chapel]
+name		= _("Michelangelo's Chapel")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Monotheism", "Player"
+      "Building", "Cathedral", "City"
+    }
+graphic	= "b.michelangelos_chapel"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 400
+upkeep		= 0
+sabotage	= 0
+sound		= "w_michelangelos_chapel"
+sound_alt	= "w_generic"
+helptext	= _("\
+Doubles the base effect of Cathedrals. This makes 3 additional unhappy \
+citizens content in each city with a Cathedral; however, it does \
+not affect citizens made unhappy by aggression.\
+")
+
+[building_mausoleum_of_mausolos]
+name		= _("Mausoleum of Mausolos")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Ceremonial Burial", "Player"
+    }
+graphic         = "b.mausoleum"
+graphic_alt     = "b.oracle"
+obsolete_by	= "Sanitation"
+build_cost	= 200
+upkeep		= 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
+helptext	= _("\
+With this wonder, City Walls and Courthouses each make one unhappy \
+citizen content in their city, unless that citizen is unhappy about \
+aggression. Also, none of the owner's cities can be incited to revolt.\
+")
+
+[building_statue_of_zeus]
+name		= _("Statue of Zeus")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Polytheism", "Player"
+    }
+graphic         = "b.statue_of_zeus"
+graphic_alt     = "b.oracle"
+obsolete_by	= "Conscription"
+build_cost	= 200
+upkeep		= 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
+helptext	= _("\
+Reduces the unhappiness caused by aggressively deployed military \
+units owned by the city by 1 -- in other words, it neutralizes the \
+unhappiness caused by a single military unit (except under Democracy, \
+where a single unit makes two citizens unhappy). Each city also avoids \
+one shield of upkeep for units.\
+")
+
+[building_temple_of_artemis]
+name		= _("Temple of Artemis")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Mysticism", "Player"
+      "Building", "Temple", "City"
+    }
+graphic         = "b.temple_of_artemis"
+graphic_alt     = "b.oracle"
+obsolete_by	= "Theology"
+build_cost	= 200
+upkeep		= 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
+helptext	= _("\
+Makes 2 additional unhappy citizens content in every city with \
+a Temple. Does not affect citizens made unhappy by aggression.\
+")
+
+[building_pyramids]
+name		= _("Pyramids")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Masonry", "Player"
+    }
+graphic	= "b.pyramids"
+graphic_alt	= "-"
+obsolete_by	= "Railroad"
+build_cost	= 200
+upkeep		= 0
+sabotage	= 0
+sound		= "w_pyramids"
+sound_alt	= "w_generic"
+helptext	= _("\
+Each tile around the city where this wonder is built that is already \
+generating some shield output produces one extra shield resource. \
+Under Despotism or Tribal governments, the Pyramids cancel the penalty \
+to worked tiles with output greater than 2 (for all kinds of output), \
+as if all your cities were always celebrating.\
+")
+
+[building_internet]
+name		= _("Internet")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Computers", "Player"
+      "Building", "Research Lab", "City"
+    }
+graphic		= "b.internet"
+graphic_alt	= "b.seti_program"
+obsolete_by	= "None"
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_seti_program"
+sound_alt	= "w_generic"
+helptext	= _("\
+Gives an immediate technology advance to the player that builds it, \
+and thereafter all cities on the map are continuously visible to its \
+owner despite fog-of-war.\
+"), _("\
+Completion of this wonder permanently doubles the effect of \
+Research Labs for every player.\
+")
+
+;[building_shakespeares_theatre]
+;name		= _("Shakespeare's Theater")
+;rule_name	= "Shakespeare's Theatre"  ; en_GB spelling used originally
+;genus		= "GreatWonder"
+;reqs	=
+;    { "type", "name", "range"
+;     "Tech", "Sanitation", "Player"
+;    }
+;graphic	= "b.shakespeares_theatre"
+;graphic_alt	= "-"
+;obsolete_by	= "None"
+;build_cost	= 300
+;upkeep		= 0
+;sabotage	= 0
+;sound		= "w_shakespeares_theatre"
+;sound_alt	= "w_generic"
+;helptext	= _("\
+;Gives 1 additional luxury to every city, and 6 luxuries to the city \
+;where it is located.\
+;"), _("\
+;Upon completion of this wonder, entertainer specialists' luxury \
+;output increases to 3 permanently for every nation.\
+;")
+
+;[building_statue_of_liberty]
+;name		= _("Statue of Liberty")
+;genus		= "SmallWonder"
+;reqs	=
+;    { "type", "name", "range"
+;      "Tech", "Democracy", "Player"
+;    }
+;graphic	= "b.statue_of_liberty"
+;graphic_alt	= "-"
+;obsolete_by	= "None"
+;build_cost	= 400
+;upkeep		= 0
+;sabotage	= 0
+;sound		= "w_statue_of_liberty"
+;sound_alt	= "w_generic"
+;helptext	= _("\
+;Allows you to choose any government, including those that have not yet \
+;been researched by your civilization, and without the transition \
+;period of Anarchy. It also allows unprovoked declaration of war \
+;regardless of any senate instituted by a Democracy or Federation \
+;government or by the United Nations.\
+;")
+
+[building_sun_tzus_war_academy]
+name		= _("Sun Tzu's War Academy")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Feudalism", "Player"
+    }
+graphic	= "b.sun_tzus_war_academy"
+graphic_alt	= "-"
+obsolete_by	= "Mobile Warfare"
+build_cost	= 150
+upkeep		= 0
+sabotage	= 0
+sound		= "w_sun_tzus_war_academy"
+sound_alt	= "w_generic"
+helptext	= _("\
+All your new military land units start with an additional veteran level \
+(this is cumulative with any Barracks building in a city; with both, units \
+are created as Hardened).\
+")
+
+[building_united_nations]
+name		= _("United Nations")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Communism", "Player"
+    }
+graphic	= "b.united_nations"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 1500
+upkeep		= 0
+sabotage	= 0
+sound		= "w_united_nations"
+sound_alt	= "w_generic"
+helptext	= _("\
+Creates a world senate that prevents unprovoked declaration of war by \
+any nuclear-capable nation (that is, any nation with knowledge of \
+Nuclear Fission, once the Manhattan Project has been built). \
+Also allows declaration of war by player who built it even if his \
+government is Democracy. \
+AI players are more inclined to be friendly and forgiving toward the \
+owner of this wonder. These effects last until the Apollo Program \
+is completed.\
+"), _("\
+Also, if any player's city is in disorder for more than two turns in \
+a row, that player's government falls (even for governments other than \
+Republic and Democracy).\
+")
+
+;[building_womens_suffrage]
+;name		= _("Women's Suffrage")
+;genus		= "SmallWonder"
+;reqs	=
+;    { "type", "name", "range"
+;      "Tech", "Conscription", "Player"
+;    }
+;graphic	= "b.womens_suffrage"
+;graphic_alt	= "-"
+;obsolete_by	= "None"
+;build_cost	= 600
+;upkeep		= 0
+;sabotage	= 0
+;;sound		= "w_womens_suffrage"
+;sound_alt	= "w_generic"
+;helptext	= _("\
+;Neutralizes the unhappiness caused by one aggressively \
+;deployed military unit per city. Under Democracy, it additionally \
+;halves the unhappiness caused by military units (reducing it to the \
+;same level as a Republic).\
+;")
+
+[building_manufaktur]
+name      = _("Manufaktur")
+genus      = "Improvement"
+reqs   =
+    { "type", "name", "range", "negated"
+      "Tech", "Monarchy", "Player", FALSE
+      "Tech", "Industrialization", "Player", TRUE
+      "Building", "Factory", "City", TRUE
+    }
+graphic   = "b.manufaktur"
+graphic_alt   = "b.barracks_i"
 obsolete_by   = "None"
-graphic       = "u.armor"
-graphic_alt   = "-"
-sound_move    = "m_armor"
-sound_move_alt = "m_generic"
-sound_fight   = "f_armor"
-sound_fight_alt = "f_generic"
-build_cost    = 40
-pop_cost      = 0
-attack        = 10
-defense       = 5
-hitpoints     = 30
-firepower     = 1
-move_rate     = 6
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 3
-uk_food       = 1
-uk_gold       = 5
-flags         = ""
-roles         = "DefendOk", "AttackFast", "Hunter"
-helptext      = _("\
-Armors are motorized war wagons that are faster, stronger, and can take \
-more damage than any mounted unit. However, they are less adaptable to \
-very rough terrain (they cannot move into mountains, swamps, or jungles \
-without roads), and unable to use less rough terrain to improve their \
-defense.\
-")
-
-[unit_catapult]
-name          = _("Catapult")
-class         = "Big Land"
-tech_req      = "Mathematics"
-obsolete_by   = "Cannon"
-graphic       = "u.catapult"
-graphic_alt   = "-"
-sound_move    = "m_catapult"
-sound_move_alt = "m_generic"
-sound_fight   = "f_catapult"
-sound_fight_alt = "f_generic"
-build_cost    = 20
-pop_cost      = 0
-attack        = 1
-defense       = 1
-hitpoints     = 1
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 3
-flags         = "Bombarder", "Capturable"
-roles         = "AttackStrong"
-bombard_rate  = 9
-helptext      = _("\
-Catapults are large rock-throwing machines of war.\
- They are very strong attackers but equally weak\
- defenders and will need an escort to be effective.\
-"), _("\
-While powerful, Catapults (and their successors) are bulky and awkward; \
-they require roads to move in rough terrain (mountains, swamps, and \
-jungles), are difficult to defend, and are too big for early ships \
-(Triremes and Caravels).\
-")
-
-[unit_cannon]
-name          = _("Cannon")
-class         = "Big Land"
-tech_req      = "Metallurgy"
-obsolete_by   = "Artillery"
-graphic       = "u.cannon"
-graphic_alt   = "-"
-sound_move    = "m_cannon"
-sound_move_alt = "m_generic"
-sound_fight   = "f_cannon"
-sound_fight_alt = "f_generic"
-build_cost    = 30
-pop_cost      = 0
-attack        = 1
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 2
-uk_food       = 1
-uk_gold       = 4
-flags         = "Bombarder", "Capturable"
-bombard_rate  = 12
-roles         = "AttackStrong", "BarbarianTech", "BarbarianBuildTech"
-helptext      = _("\
-Cannons are large firearms that can fire heavy projectiles over long \
-distances. As with the catapults they replace, they are very strong \
-attackers but equally weak defenders and will need an escort to be \
-effective, and have limited mobility.\
-")
-
-[unit_artillery]
-name          = _("Artillery")
-class         = "Big Land"
-tech_req      = "Machine Tools"
-obsolete_by   = "Howitzer"
-graphic       = "u.artillery"
-graphic_alt   = "-"
-sound_move    = "m_artillery"
-sound_move_alt = "m_generic"
-sound_fight   = "f_artillery"
-sound_fight_alt = "f_generic"
-build_cost    = 40
-pop_cost      = 0
-attack        = 3
-defense       = 2
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 3
-uk_food       = 1
-uk_gold       = 5
-flags         = "Bombarder", "Capturable"
-roles         = "AttackStrong"
-bombard_rate  = 12
-helptext      = _("\
-The artillery is an upgraded cannon. As with its predecessors, it is a \
-very strong attacker but equally weak defender and will need an escort \
-to be effective, and has limited mobility.\
-")
-
-[unit_howitzer]
-name          = _("Howitzer")
-class         = "Big Land"
-tech_req      = "Robotics"
-obsolete_by   = "None"
-graphic       = "u.howitzer"
-graphic_alt   = "-"
-sound_move    = "m_howitzer"
-sound_move_alt = "m_generic"
-sound_fight   = "f_howitzer"
-sound_fight_alt = "f_generic"
-build_cost    = 50
-pop_cost      = 0
-attack        = 5
-defense       = 3
-hitpoints     = 10
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 3
-uk_food       = 1
-uk_gold       = 5
-flags         = "Bombarder"
-roles         = "AttackStrong"
-bombard_rate  = 12
-helptext      = _("\
-Howitzers are upgraded artillery with improved defensive as well as \
-offensive capabilities. However, they still have the limited mobility \
-of their predecessors.\
-")
-
-[unit_fighter]
-name          = _("Fighter")
-class         = "Air"
-tech_req      = "Flight"
-obsolete_by   = "Stealth Fighter"
-graphic       = "u.fighter"
-graphic_alt   = "-"
-sound_move    = "m_fighter"
-sound_move_alt = "m_generic"
-sound_fight   = "f_fighter"
-sound_fight_alt = "f_generic"
-build_cost    = 40
-pop_cost      = 0
-attack        = 1
-defense       = 2
-hitpoints     = 10
-firepower     = 1
-bombard_rate  = 6
-move_rate     = 12
-vision_radius_sq = 8
-transport_cap = 0
-fuel          = 1
-uk_happy      = 0
-uk_shield     = 2
-uk_food       = 1
-uk_gold       = 4
-targets       = "Air", "Missile", "Helicopter"
-flags         = "AirAttacker", "Bombarder"
-roles         = "DefendOk"
-helptext      = _("\
-Fighters are your first airborne units. They can\
- move anywhere and attack any unit.\
-")
-
-[unit_bomber]
-name          = _("Bomber")
-class         = "Air"
-tech_req      = "Advanced Flight"
-obsolete_by   = "Stealth Bomber"
-graphic       = "u.bomber"
-graphic_alt   = "-"
-sound_move    = "m_bomber"
-sound_move_alt = "m_generic"
-sound_fight   = "f_bomber"
-sound_fight_alt = "f_generic"
-build_cost    = 60
-pop_cost      = 0
-attack        = 6
-defense       = 1
-hitpoints     = 10
-firepower     = 3
-move_rate     = 8
-vision_radius_sq = 8
-transport_cap = 0
-fuel          = 2
-uk_happy      = 1
-uk_shield     = 4
-uk_food       = 1
-uk_gold       = 6
-bombard_rate  = 5
-flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder"
-roles         = ""
-helptext      = _("\
-Bombers are specialized airborne units that may\
- only attack ground targets, not other airborne\
- units.\
-"), _("\
-A Bomber's attack against units on land is a bombard attack; against\
- units on water it has a regular attack.\
-")
-
-[unit_helicopter]
-name          = _("Helicopter")
-class         = "Helicopter"
-tech_req      = "Combined Arms"
-obsolete_by   = "None"
-graphic       = "u.helicopter"
-graphic_alt   = "-"
-sound_move    = "m_helicopter"
-sound_move_alt = "m_generic"
-sound_fight   = "f_helicopter"
-sound_fight_alt = "f_generic"
-build_cost    = 50
-pop_cost      = 0
-attack        = 5
-defense       = 3
-hitpoints     = 20
-firepower     = 2
-move_rate     = 8
-vision_radius_sq = 8
-transport_cap = 1
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 4
-uk_food       = 1
-uk_gold       = 6
-cargo         = "Land", "Non Military"
-flags         = "OneAttack", "AirAttacker", "Bombarder"
-roles         = ""
-helptext      = _("\
-A Helicopter's attack against units on land is a bombard attack; against \
-units on water it has a regular attack.\
-"), _("\
-Helicopters can also transport one unit of infantry; while most troops \
-must load or unload in a city or airbase units specializing in mobility \
-(Paratroopers, Alpine Troops, Marines, Partisans, and Fanatics) can \
-embark or disembark at any time.\
-"), _("\
-Care must be exercised, because Helicopters lose a small amount of health \
-for every turn not spent in a city or airbase or on a Carrier.\
-")
-bombard_rate = 5
-
-[unit_stealth_fighter]
-name          = _("Stealth Fighter")
-class         = "Air"
-tech_req      = "Stealth"
-obsolete_by   = "None"
-graphic       = "u.stealth_fighter"
-graphic_alt   = "-"
-sound_move    = "m_stealth_fighter"
-sound_move_alt = "m_generic"
-sound_fight   = "f_stealth_fighter"
-sound_fight_alt = "f_generic"
-build_cost    = 60
-pop_cost      = 0
-attack        = 8
-defense       = 8
-hitpoints     = 20
-firepower     = 2
-move_rate     = 16
-vision_radius_sq = 8
-transport_cap = 0
-fuel          = 1
-uk_happy      = 0
-uk_shield     = 4
-uk_food       = 1
-uk_gold       = 6
-targets       = "Air", "Missile", "Helicopter"
-flags         = "Partial_Invis", "AirAttacker"
-roles         = "DefendGood"
-helptext      = _("\
-An improved Fighter, with improved attack and a higher movement\
- radius.\
-")
-
-[unit_stealth_bomber]
-name          = _("Stealth Bomber")
-class         = "Air"
-tech_req      = "Stealth"
-obsolete_by   = "None"
-graphic       = "u.stealth_bomber"
-graphic_alt   = "-"
-sound_move    = "m_stealth_bomber"
-sound_move_alt = "m_generic"
-sound_fight   = "f_stealth_bomber"
-sound_fight_alt = "f_generic"
-build_cost    = 80
-pop_cost      = 0
-attack        = 9
-defense       = 5
-hitpoints     = 10
-firepower     = 3
-move_rate     = 12
-vision_radius_sq = 8
-transport_cap = 0
-fuel          = 2
-uk_happy      = 1
-uk_shield     = 6
-uk_food       = 1
-uk_gold       = 10
-flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder"
-roles         = "DefendOk"
-helptext      = _("\
-An improved Bomber, with improved attack and a higher movement\
- radius.\
-")
-bombard_rate = 6
-
-[unit_trireme]
-name          = _("Trireme")
-class         = "Trireme"
-tech_req      = "Map Making"
-obsolete_by   = "Boat"
-graphic       = "u.trireme"
-graphic_alt   = "-"
-sound_move    = "m_trireme"
-sound_move_alt = "m_generic"
-sound_fight   = "f_trireme"
-sound_fight_alt = "f_generic"
-build_cost    = 20
-pop_cost      = 0
-attack        = 1
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 6
-vision_radius_sq = 2
-transport_cap = 2
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 1
-cargo         = "Land", "Small Land", "Merchant", "Non Military"
-flags         = "BadCityDefender", "Capturable"
-roles         = "Ferryboat"
-helptext      = _("\
-The Trireme is your first boat unit. It can act\
- as a transport ship and has rudimentary offensive\
- capabilities, and unlike later boats can travel on\
- rivers, but it may not enter deep ocean tiles.\
-")
-
-[unit_boat]
-name          = _("Boat")
-class         = "Trireme"
-tech_req      = "Map Making"
-gov_req       = "Tribal"
-obsolete_by   = "Caravel"
-graphic       = "u.boat"
-graphic_alt   = "u.trireme"
-sound_move    = "m_trireme"
-sound_move_alt = "m_generic"
-sound_fight   = "f_boat"
-sound_fight_alt = "f_trireme"
-build_cost    = 10
-pop_cost      = 0
-attack        = 0
-defense       = 0
-hitpoints     = 5
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
-transport_cap = 1
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 0
-uk_food       = 0
-uk_gold       = 0
-cargo         = "Land", "Small Land", "Merchant", "Non Military"
-flags         = "BadCityDefender"
-roles         = "Ferryboat"
-helptext      = _("\
-The Trireme is your first boat unit. It can act\
- as a transport ship and has rudimentary offensive\
- capabilities, and unlike later boats can travel on\
- rivers, but it may not enter deep ocean tiles.\
+build_cost   = 40
+upkeep      = 1
+sabotage   = 100
+sound      = "b_generic"
+sound_alt   = "b_generic"
+; /* xgettext:no-c-format */
+helptext   = _("\
+Increases production in the city by 2 Shields.\
+With the onset of industrial revolution it represents \
+tradition of manufacturing in that city and, if it is \
+not present in the city at that time, it cannot be \
+built/established anymore.\ 
+\
 ")
 
 
-[unit_caravel]
-name          = _("Caravel")
-class         = "Sea"
-tech_req      = "Magnetism"
-obsolete_by   = "Galleon"
-graphic       = "u.caravel"
-graphic_alt   = "-"
-sound_move    = "m_caravel"
-sound_move_alt = "m_generic"
-sound_fight   = "f_caravel"
-sound_fight_alt = "f_generic"
-build_cost    = 20
-pop_cost      = 0
-attack        = 1
-defense       = 2
-hitpoints     = 10
-firepower     = 1
-move_rate     = 6
-vision_radius_sq = 2
-transport_cap = 3
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 2
-uk_food       = 1
-uk_gold       = 1
-cargo         = "Land", "Small Land", "Merchant", "Non Military"
-flags         = "BadCityDefender", "Only_Native_Attack"
-roles         = "Ferryboat", "BarbarianBoat"
-helptext      = _("\
-The Caravel is a sailing ship that can enter\
- any ocean tile.\
+[building_capitalization]
+name		= _("Coinage")
+genus		= "Special"
+flags		= "Gold"
+reqs	=
+    { "type", "name", "range"
+
+    }
+graphic	= "b.capitalization"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 999
+upkeep		= 0
+sabotage	= 0
+; FIXME: this is the real helptext; restore when have a subordnate analogue
+; /* (ignore for gettext until fixed)
+;helptext	= _("\
+;This is not a normal improvement.  Instead, setting a city's\
+; production to Capitalization means its shield production is\
+; converted to tax output (money).\
+;")
+; */
+helptext	= _("\
+This is not a normal improvement.  Instead, setting a city's\
+ production to Coinage means its shield production is\
+ converted to tax output (money, coins!).\
 ")
 
-[unit_galleon]
-name          = _("Galleon")
-class         = "Sea"
-tech_req      = "Navigation"
-obsolete_by   = "Transport"
-graphic       = "u.galleon"
-graphic_alt   = "-"
-sound_move    = "m_galleon"
-sound_move_alt = "m_generic"
-sound_fight   = "f_galleon"
-sound_fight_alt = "f_generic"
-build_cost    = 30
-pop_cost      = 0
-attack        = 0
-defense       = 2
-hitpoints     = 10
-firepower     = 1
-move_rate     = 8
-vision_radius_sq = 2
-transport_cap = 4
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 2
-uk_food       = 1
-uk_gold       = 1
-cargo         = "Land", "Small Land", "Big Land", "Merchant", "Non Military"
-flags         = "BadCityDefender"
-roles         = "Ferryboat", "BarbarianBoat"
-helptext      = _("\
-The Galleon is a pure transport ship, the first which can\
- transport large wheeled units. It cannot attack other ships, though\
- it may still defend itself when attacked.\
+[building_5yrPlan1]
+name		= _("1st Five Year Plan")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Communism", "Player"
+      "Building", "Palace", "City"
+      "Tech", "Communism", "Player"
+    }
+
+graphic	= "gov.communism"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 200
+upkeep		= 0
+sabotage	= 0
+sound		= "w_united_nations"
+sound_alt	= "w_generic"
+helptext	= _("\
+The main point of Planned Economy, the Five Year Plan is \
+aimed at increasing the nation's production by concentrated \
+effort of the People. Some sacrifices are neccessary, but \
+in the end, it is for the greater good.
+"), _("\
+Adds one unit of production to every city belonging to the player.
 ")
 
-[unit_frigate]
-name          = _("Frigate")
-class         = "Sea"
-tech_req      = "Navigation"
-obsolete_by   = "Ironclad"
-graphic       = "u.frigate"
-graphic_alt   = "-"
-sound_move    = "m_frigate"
-sound_move_alt = "m_generic"
-sound_fight   = "f_frigate"
-sound_fight_alt = "f_generic"
-build_cost    = 40
-pop_cost      = 0
-attack        = 3
-defense       = 2
-hitpoints     = 10
-firepower     = 1
-move_rate     = 8
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 2
-uk_food       = 1
-uk_gold       = 1
-flags         = "BadCityDefender"
-roles         = "Hunter"
-helptext      = _("\
-The Frigate is a specialized ship with a strong offensive value,\
- and can attack units on land, but it cannot transport units.\
+[building_5yrPlan2]
+name		= _("2nd Five Year Plan")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Communism", "Player"
+      "Building", "1st Five Year Plan", "City"
+      "Tech", "Communism", "Player"
+    }
+
+graphic	= "gov.communism"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 400
+upkeep		= 0
+sabotage	= 0
+sound		= "w_united_nations"
+sound_alt	= "w_generic"
+helptext	= _("\
+The main point of Planned Economy, the Five Year Plan is \
+aimed at increasing the nation's production by concentrated \
+effort of the People. Some sacrifices are neccessary, but \
+in the end, it is for the greater good.
+"), _("\
+Adds one unit of production to every city belonging to the player.
 ")
 
-[unit_ironclad]
-name          = _("Ironclad")
-class         = "Sea"
-tech_req      = "Steam Engine"
-obsolete_by   = "Destroyer"
-graphic       = "u.ironclad"
-graphic_alt   = "-"
-sound_move    = "m_ironclad"
-sound_move_alt = "m_generic"
-sound_fight   = "f_ironclad"
-sound_fight_alt = "f_generic"
-build_cost    = 50
-pop_cost      = 0
-attack        = 4
-defense       = 3
-hitpoints     = 20
-firepower     = 1
-move_rate     = 8
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 3
-uk_food       = 1
-uk_gold       = 2
-flags         = "BadCityDefender"
-roles         = "Hunter"
-helptext      = _("\
-The Ironclad is an armored ship,\
- more sturdy than the Frigate.\
+[building_5yrPlan3]
+name		= _("3rd Five Year Plan")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Communism", "Player"
+      "Building", "2nd Five Year Plan", "City"
+      "Tech", "Communism", "Player"
+    }
+
+graphic	= "gov.communism"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 600
+upkeep		= 0
+sabotage	= 0
+sound		= "w_united_nations"
+sound_alt	= "w_generic"
+helptext	= _("\
+The main point of Planned Economy, the Five Year Plan is \
+aimed at increasing the nation's production by concentrated \
+effort of the People. Some sacrifices are neccessary, but \
+in the end, it is for the greater good.
+"), _("\
+Adds one unit of production to every city belonging to the player.
 ")
 
-[unit_destroyer]
-name          = _("Destroyer")
-class         = "Sea"
-tech_req      = "Engineering"
-obsolete_by   = "None"
-graphic       = "u.destroyer"
-graphic_alt   = "-"
-sound_move    = "m_destroyer"
-sound_move_alt = "m_generic"
-sound_fight   = "f_destroyer"
-sound_fight_alt = "f_generic"
-build_cost    = 60
-pop_cost      = 0
-attack        = 5
-defense       = 5
-hitpoints     = 30
-firepower     = 1
-move_rate     = 12
-vision_radius_sq = 8
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 5
-uk_food       = 1
-uk_gold       = 3
-bonuses       =
-   { "flag", "type", "value"
-     "Submarine", "DefenseMultiplier", 1
-   }
-flags         = "BadCityDefender"
-roles         = "Hunter"
-helptext      = _("\
-An improved Ironclad, with better move rate and vision.\
- Anti-submarine weapons double its defense against Submarines.\
+[building_5yrPlan4]
+name		= _("4th Five Year Plan")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Communism", "Player"
+      "Building", "3rd Five Year Plan", "City"
+      "Tech", "Communism", "Player"
+    }
+
+graphic	= "gov.communism"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 800
+upkeep		= 0
+sabotage	= 0
+sound		= "w_united_nations"
+sound_alt	= "w_generic"
+helptext	= _("\
+The main point of Planned Economy, the Five Year Plan is \
+aimed at increasing the nation's production by concentrated \
+effort of the People. Some sacrifices are neccessary, but \
+in the end, it is for the greater good.
 "), _("\
-TIP:  A very fast unit, which is very useful for hunting down enemy\
- Transports and Submarines.\
+Adds one unit of production to every city belonging to the player.
 ")
 
-[unit_cruiser]
-name          = _("Cruiser")
-class         = "Sea"
-tech_req      = "Steel"
-obsolete_by   = "AEGIS Cruiser"
-graphic       = "u.cruiser"
-graphic_alt   = "-"
-sound_move    = "m_cruiser"
-sound_move_alt = "m_generic"
-sound_fight   = "f_cruiser"
-sound_fight_alt = "f_generic"
-build_cost    = 70
-pop_cost      = 0
-attack        = 6
-defense       = 6
-hitpoints     = 30
-firepower     = 1
-move_rate     = 10
-vision_radius_sq = 8
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 6
-uk_food       = 1
-uk_gold       = 4
-flags         = "BadCityDefender"
-roles         = "DefendOk"
-helptext      = _("\
-The Cruiser is a strong offensive boat unit.\
+[building_5yrPlan5]
+name		= _("5th Five Year Plan")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Communism", "Player"
+      "Building", "4th Five Year Plan", "City"
+      "Tech", "Communism", "Player"
+    }
+
+graphic	= "gov.communism"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 1000
+upkeep		= 0
+sabotage	= 0
+sound		= "w_united_nations"
+sound_alt	= "w_generic"
+helptext	= _("\
+The main point of Planned Economy, the Five Year Plan is \
+aimed at increasing the nation's production by concentrated \
+effort of the People. Some sacrifices are neccessary, but \
+in the end, it is for the greater good.
+"), _("\
+Adds one unit of production to every city belonging to the player.
 ")
 
-[unit_aegis_cruiser]
-name          = _("AEGIS Cruiser")
-class         = "Sea"
-tech_req      = "Rocketry"
-obsolete_by   = "None"
-graphic       = "u.aegis_cruiser"
-graphic_alt   = "-"
-sound_move    = "m_aegis_cruiser"
-sound_move_alt = "m_generic"
-sound_fight   = "f_aegis_cruiser"
-sound_fight_alt = "f_generic"
-build_cost    = 70
-pop_cost      = 0
-attack        = 6
-defense       = 6
-hitpoints     = 30
-firepower     = 1
-move_rate     = 10
-vision_radius_sq = 8
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 6
-uk_food       = 1
-uk_gold       = 4
-bonuses       =
-   { "flag", "type", "value"
-     "AirAttacker", "DefenseMultiplier", 4
-   }
-flags         = "BadCityDefender"
-roles         = "DefendGood"
-helptext      = _("\
-The AEGIS Cruiser is equipped with an advanced\
- defensive missile system.\
-")
-
-[unit_battleship]
-name          = _("Battleship")
-class         = "Sea"
-tech_req      = "Mass Production"
-obsolete_by   = "None"
-graphic       = "u.battleship"
-graphic_alt   = "-"
-sound_move    = "m_battleship"
-sound_move_alt = "m_generic"
-sound_fight   = "f_battleship"
-sound_fight_alt = "f_generic"
-build_cost    = 100
-pop_cost      = 0
-attack        = 12
-defense       = 12
-hitpoints     = 30
-firepower     = 1
-move_rate     = 8
-vision_radius_sq = 8
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 8
-uk_food       = 1
-uk_gold       = 6
-flags         = "BadCityDefender"
-roles         = "DefendOk"
-helptext      = _("\
-The Battleship is the supreme naval unit with\
- excellent offensive and defensive values.\
-")
-
-[unit_submarine]
-name          = _("Submarine")
-class         = "Sea"
-tech_req      = "Combustion"
-obsolete_by   = "None"
-graphic       = "u.submarine"
-graphic_alt   = "-"
-sound_move    = "m_submarine"
-sound_move_alt = "m_generic"
-sound_fight   = "f_submarine"
-sound_fight_alt = "f_generic"
-build_cost    = 40
-pop_cost      = 0
-attack        = 12
-defense       = 3
-hitpoints     = 20
-firepower     = 2
-move_rate     = 10
-vision_radius_sq = 8
-transport_cap = 8
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 5
-uk_food       = 1
-uk_gold       = 4
-cargo         = "Missile", "Non Military"
-flags         = "Partial_Invis", "BadCityDefender", "Only_Native_Attack", "Submarine", "Bombarder"
-bombard_rate  = 8
-roles         = "Hunter"
-helptext      = _("\
-Traveling under the surface of the ocean, Submarines have\
- a very high strategic value, but a weak defense if caught\
- off guard.\
-")
-
-
-[unit_carrier]
-name          = _("Carrier")
-class         = "Sea"
-tech_req      = "Advanced Flight"
-obsolete_by   = "None"
-graphic       = "u.carrier"
-graphic_alt   = "-"
-sound_move    = "m_carrier"
-sound_move_alt = "m_generic"
-sound_fight   = "f_carrier"
-sound_fight_alt = "f_generic"
-build_cost    = 120
-pop_cost      = 0
-attack        = 1
-defense       = 9
-hitpoints     = 30
-firepower     = 1
-move_rate     = 8
-vision_radius_sq = 8
-transport_cap = 8
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 10
-uk_food       = 1
-uk_gold       = 8
-cargo         = "Air", "Missile", "Helicopter", "Non Military"
-flags         = "BadCityDefender"
-roles         = "DefendGood"
-helptext      = _("\
-The Carrier is a mobile airport.\
-"), _("\
-TIP:  Guard Carriers with a handful of fast-moving ships and a\
- battleship, as losing a fully-equipped Carrier is VERY\
- painful and expensive.\
-")
-
-[unit_transport]
-name          = _("Transport")
-class         = "Sea"
-tech_req      = "Engineering"
-obsolete_by   = "None"
-graphic       = "u.transport"
-graphic_alt   = "-"
-sound_move    = "m_transport"
-sound_move_alt = "m_generic"
-sound_fight   = "f_transport"
-sound_fight_alt = "f_generic"
-build_cost    = 40
-pop_cost      = 0
-attack        = 0
-defense       = 3
-hitpoints     = 10
-firepower     = 1
-move_rate     = 8
-vision_radius_sq = 8
-transport_cap = 8
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 2
-uk_food       = 1
-uk_gold       = 3
-cargo         = "Land", "Small Land", "Big Land", "Merchant", "Non Military"
-flags         = "Settlers", "BadCityDefender"
-veteran_names = _("green"), _("veteran"), _("hardened"), _("elite")
-veteran_raise_chance      = 50, 33, 20, 0
-veteran_work_raise_chance = 0, 0, 0, 0
-veteran_power_fact        = 100, 150, 175, 200
-veteran_move_bonus        = 0, 0, 0, 0
-roles         = "Ferryboat"
-helptext      = _("\
-The Transport cannot attack on its own but\
- may defend itself when under attack.\
-"), _("\
-Transports can also clean pollution and fallout on water tiles.\
-")
-; FIXME: also cleans pollution/fallout in coastal cities (and faster
-; than Engineers)
-
-[unit_cruise_missile]
-name          = _("Cruise Missile")
-class         = "Missile"
-tech_req      = "Rocketry"
-obsolete_by   = "None"
-graphic       = "u.cruise_missile"
-graphic_alt   = "-"
-sound_move    = "m_cruise_missile"
-sound_move_alt = "m_generic"
-sound_fight   = "f_cruise_missile"
-sound_fight_alt = "f_generic"
-build_cost    = 50
-pop_cost      = 0
-attack        = 18
-defense       = 0
-hitpoints     = 10
-firepower     = 1
-move_rate     = 12
-vision_radius_sq = 0
-transport_cap = 0
-fuel          = 1
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 0
-uk_gold       = 5
-flags         = "OneAttack", "AirAttacker", "CityBuster"
-roles         = ""
-helptext      = _("\
-The Cruise Missile is a long-distance missile\
- that can strike deep into enemy territory.\
-"), _("\
-TIP:  A handful of these can successfully keep the waters around\
- your treasured homeland free of enemy ships.\
-")
-
-[unit_nuclear]
-name          = _("Nuclear")
-class         = "Missile"
-tech_req      = "Nuclear Fission"
-obsolete_by   = "None"
-graphic       = "u.nuclear"
-graphic_alt   = "-"
-sound_move    = "m_nuclear"
-sound_move_alt = "m_generic"
-sound_fight   = "f_nuclear"
-sound_fight_alt = "f_generic"
-build_cost    = 160
-pop_cost      = 0
-attack        = 99
-defense       = 0
-hitpoints     = 10
-firepower     = 1
-move_rate     = 0
-vision_radius_sq = 0
-transport_cap = 0
-fuel          = 1
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 0
-uk_gold       = 5
-flags         = "FieldUnit", "OneAttack", "Nuclear", "AirAttacker"
-; No veteran levels (level name is never displayed)
-veteran_names = _("green")
-veteran_raise_chance = 0
-veteran_work_raise_chance = 0
-veteran_power_fact = 100
-veteran_move_bonus = 0
-roles         = ""
-helptext      = _("\
-You can build Nuclear units when you have the required advance, and\
- the Manhattan Project wonder has been built by any player.\
- However, without further technology they cannot move on their own.\
-"), _("\
-With Advanced Flight, all Nuclear units (including those already\
- built) gain a range of 8 movement points, and Rocketry increases\
- this to 16.\
-"), _("\
-On impact, the blast will destroy any unit in an area 3 tiles wide\
- (3x3 squares for rectangular grids), including friendly units.\
- Any city within the blast area loses half its population, and\
- land tiles within the blast area are subject to nuclear fallout.\
-"), _("\
-Similar to pollution and global warming, the risk of global nuclear\
- winter increases with fallout. If nuclear winter occurs, terrain\
- across the globe changes into desert, tundra, and ice. Settlers,\
- Migrants, Workers, and Engineers and (for fallout on water)\
- Transports can clean up nuclear fallout.\
-"), _("\
-TIP:  You may be involved in a situation where you've invaded an\
- enemy country en masse, but the enemy cities are too strong.\
- Before using a Nuclear unit, assemble a gang of cleanup units\
- next to the city and have them ready to fix the fallout on the\
- same turn it occurs! This minimizes the chance of nuclear winter.\
- Eco-friendly nukes!\
-")
-
-[unit_diplomat1]
-name          = _("Diplomat I")
-class         = "Non Military"
-tech_req      = "Alphabet"
-obsolete_by   = "Diplomat II"
-graphic       = "u.diplomat"
-graphic_alt   = "-"
-sound_move    = "m_diplomat"
-sound_move_alt = "m_generic"
-sound_fight   = "f_diplomat"
-sound_fight_alt = "f_generic"
-build_cost    = 10
-pop_cost      = 0
-attack        = 0
-defense       = 0
-hitpoints     = 10
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 0
-uk_food       = 0
-uk_gold       = 2
-flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil"
-veteran_names =
-; /* TRANS: diplomatic rank. */
-; /* TRANS: Unless translated, the last character in "attache" should be */
-; /* TRANS: U+00E9 LATIN SMALL LETTER E WITH ACUTE if available in your */
-; /* TRANS: charset. In ISO-8859-1 (ISO Latin 1) this is 233. */
-  _("?diplomatic_rank:attache"),
-; /* TRANS: diplomatic rank */
-  _("?diplomatic_rank:secretary"),
-; /* TRANS: diplomatic rank */
-  _("?diplomatic_rank:envoy"),
-; /* TRANS: diplomatic rank */
-  _("?diplomatic_rank:ambassador")
-veteran_raise_chance = 50, 33, 20, 0
-veteran_work_raise_chance = 0, 0, 0, 0
-veteran_power_fact = 100, 105, 110, 115
-veteran_move_bonus = 0, 0, 0, 0
-roles         = "Diplomat"
-helptext      = _("\
-A Diplomat is an official that carries your dispatches and\
- is authorized to deal with foreign dignitaries. He may\
- also undertake various covert operations with the intent of\
- harming your opponents; Diplomats in your own cities defend\
- them against such actions.\
-"), _("\
-Many covert actions may be attempted even in peacetime, but the more\
- aggressive actions will be discovered and cause diplomatic incidents,\
- giving an excuse for the breaking of treaties by a Federation or\
- Democracy, or a nuclear-armed regime otherwise restrained by the\
- United Nations.\
-"), _("\
-If a foreign unit is alone on a tile, you may attempt to bribe it\
- with your Diplomat. By paying a sum of gold the unit will immediately\
- become yours; the exact sum depends on the status of the unit and\
- that of the civilization owning it. However, units belonging to\
- Republican or Democratic governments cannot be bribed. Bribery when\
- not at war will cause a diplomatic incident.\
-"), _("\
-Diplomats can also perform a number of actions in another player's\
- city, although each Diplomat may attempt only one action. Most of\
- these actions have a chance of failure. Also, any enemy Diplomats or\
- Spies in the city will oppose hostile actions; in this case, either\
- your unit or the defending unit will die. If the defending unit dies,\
- you lose one movement point and may try again.\
-"), _("\
-The actions available to Diplomats in a city are:\
-"), _("\
- - \"Establish Embassy\": This action always succeeds, and gives\
- permanent contact with the city's owner, as well as intelligence\
- on their tax rates and technology. Each player you have an embassy\
- with that knows a technology reduces that technology's research\
- cost to you.\
-"), _("\
- - \"Investigate City\": Your unit attempts to report detailed\
- information about the city: its status, what buildings and units are\
- within, and what it is currently producing.\
-"), _("\
- - \"Sabotage City\": Your unit attempts either to disrupt all the\
- city's work so far towards its current project, or to destroy an\
- existing building in the city, at random. Once built, Palaces and\
- Wonders cannot be sabotaged, and attempts to sabotage City Walls\
- or any building in a capital each halve the chance of success.\
- Sabotage may only be attempted when openly at war.\
-"), _("\
- - \"Steal Technology\": Your unit attempts to learn the secrets of a\
- random technology known to the city's owner but not to you. Technology\
- may only be stolen once from a given enemy city by Diplomats. This\
- action may be attempted even when not at war, but will cause a\
- diplomatic incident.\
-"), _("\
- - \"Incite a Revolt\": In return for gold a foreign city will change\
- allegiance and join your empire, bringing along all nearby units that\
- call it home, but reducing its size by 1. Units in other cities\
- remain in the enemy's control, but units outside cities are lost to\
- both players. The exact sum depends on the status of the city and\
- that of the civilization that owns it. It is not possible to incite\
- a rebellion in a capital, or in any city governed by a Federation or\
- Democracy. Incitement may be attempted in peacetime, but will cause a\
- diplomatic incident.\
-"), _("\
-In some game strategies, hordes of Diplomats can be used to wreak\
- havoc on the enemy.  Little wonder that Diplomats are often\
- viewed with suspicion and fear!\
-"), _("\
-Diplomats built under Communist or Federation governments will\
- start at the first veteran level (secretary).\
-")
-
-[unit_diplomat2]
-name          = _("Diplomat II")
-class         = "Non Military"
-tech_req      = "Monarchy"
-obsolete_by   = "Diplomat III"
-graphic       = "u.diplomat"
-graphic_alt   = "-"
-sound_move    = "m_diplomat"
-sound_move_alt = "m_generic"
-sound_fight   = "f_diplomat"
-sound_fight_alt = "f_generic"
-build_cost    = 20
-pop_cost      = 0
-attack        = 0
-defense       = 0
-hitpoints     = 10
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 0
-uk_food       = 0
-uk_gold       = 4
-flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil"
-veteran_names =
-; /* TRANS: diplomatic rank. */
-; /* TRANS: Unless translated, the last character in "attache" should be */
-; /* TRANS: U+00E9 LATIN SMALL LETTER E WITH ACUTE if available in your */
-; /* TRANS: charset. In ISO-8859-1 (ISO Latin 1) this is 233. */
-  _("?diplomatic_rank:attache"),
-; /* TRANS: diplomatic rank */
-  _("?diplomatic_rank:secretary"),
-; /* TRANS: diplomatic rank */
-  _("?diplomatic_rank:envoy"),
-; /* TRANS: diplomatic rank */
-  _("?diplomatic_rank:ambassador")
-veteran_raise_chance = 50, 33, 20, 0
-veteran_work_raise_chance = 0, 0, 0, 0
-veteran_power_fact = 100, 105, 110, 115
-veteran_move_bonus = 0, 0, 0, 0
-roles         = "Diplomat"
-helptext      = _("\
-A Diplomat is an official that carries your dispatches and\
- is authorized to deal with foreign dignitaries. He may\
- also undertake various covert operations with the intent of\
- harming your opponents; Diplomats in your own cities defend\
- them against such actions.\
-"), _("\
-Many covert actions may be attempted even in peacetime, but the more\
- aggressive actions will be discovered and cause diplomatic incidents,\
- giving an excuse for the breaking of treaties by a Federation or\
- Democracy, or a nuclear-armed regime otherwise restrained by the\
- United Nations.\
-"), _("\
-If a foreign unit is alone on a tile, you may attempt to bribe it\
- with your Diplomat. By paying a sum of gold the unit will immediately\
- become yours; the exact sum depends on the status of the unit and\
- that of the civilization owning it. However, units belonging to\
- Republican or Democratic governments cannot be bribed. Bribery when\
- not at war will cause a diplomatic incident.\
-"), _("\
-Diplomats can also perform a number of actions in another player's\
- city, although each Diplomat may attempt only one action. Most of\
- these actions have a chance of failure. Also, any enemy Diplomats or\
- Spies in the city will oppose hostile actions; in this case, either\
- your unit or the defending unit will die. If the defending unit dies,\
- you lose one movement point and may try again.\
-"), _("\
-The actions available to Diplomats in a city are:\
-"), _("\
- - \"Establish Embassy\": This action always succeeds, and gives\
- permanent contact with the city's owner, as well as intelligence\
- on their tax rates and technology. Each player you have an embassy\
- with that knows a technology reduces that technology's research\
- cost to you.\
-"), _("\
- - \"Investigate City\": Your unit attempts to report detailed\
- information about the city: its status, what buildings and units are\
- within, and what it is currently producing.\
-"), _("\
- - \"Sabotage City\": Your unit attempts either to disrupt all the\
- city's work so far towards its current project, or to destroy an\
- existing building in the city, at random. Once built, Palaces and\
- Wonders cannot be sabotaged, and attempts to sabotage City Walls\
- or any building in a capital each halve the chance of success.\
- Sabotage may only be attempted when openly at war.\
-"), _("\
- - \"Steal Technology\": Your unit attempts to learn the secrets of a\
- random technology known to the city's owner but not to you. Technology\
- may only be stolen once from a given enemy city by Diplomats. This\
- action may be attempted even when not at war, but will cause a\
- diplomatic incident.\
-"), _("\
- - \"Incite a Revolt\": In return for gold a foreign city will change\
- allegiance and join your empire, bringing along all nearby units that\
- call it home, but reducing its size by 1. Units in other cities\
- remain in the enemy's control, but units outside cities are lost to\
- both players. The exact sum depends on the status of the city and\
- that of the civilization that owns it. It is not possible to incite\
- a rebellion in a capital, or in any city governed by a Federation or\
- Democracy. Incitement may be attempted in peacetime, but will cause a\
- diplomatic incident.\
-"), _("\
-In some game strategies, hordes of Diplomats can be used to wreak\
- havoc on the enemy.  Little wonder that Diplomats are often\
- viewed with suspicion and fear!\
-"), _("\
-Diplomats built under Communist or Federation governments will\
- start at the first veteran level (secretary).\
-")
-
-[unit_diplomat3]
-name          = _("Diplomat III")
-class         = "Non Military"
-tech_req      = "The Republic"
-obsolete_by   = "Diplomat IV"
-graphic       = "u.diplomat"
-graphic_alt   = "-"
-sound_move    = "m_diplomat"
-sound_move_alt = "m_generic"
-sound_fight   = "f_diplomat"
-sound_fight_alt = "f_generic"
-build_cost    = 30
-
-pop_cost      = 0
-attack        = 0
-defense       = 0
-hitpoints     = 10
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 0
-uk_food       = 0
-uk_gold       = 6
-flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil"
-veteran_names =
-; /* TRANS: diplomatic rank. */
-; /* TRANS: Unless translated, the last character in "attache" should be */
-; /* TRANS: U+00E9 LATIN SMALL LETTER E WITH ACUTE if available in your */
-; /* TRANS: charset. In ISO-8859-1 (ISO Latin 1) this is 233. */
-  _("?diplomatic_rank:attache"),
-; /* TRANS: diplomatic rank */
-  _("?diplomatic_rank:secretary"),
-; /* TRANS: diplomatic rank */
-  _("?diplomatic_rank:envoy"),
-; /* TRANS: diplomatic rank */
-  _("?diplomatic_rank:ambassador")
-veteran_raise_chance = 50, 33, 20, 0
-veteran_work_raise_chance = 0, 0, 0, 0
-veteran_power_fact = 100, 105, 110, 115
-veteran_move_bonus = 0, 0, 0, 0
-roles         = "Diplomat"
-helptext      = _("\
-A Diplomat is an official that carries your dispatches and\
- is authorized to deal with foreign dignitaries. He may\
- also undertake various covert operations with the intent of\
- harming your opponents; Diplomats in your own cities defend\
- them against such actions.\
-"), _("\
-Many covert actions may be attempted even in peacetime, but the more\
- aggressive actions will be discovered and cause diplomatic incidents,\
- giving an excuse for the breaking of treaties by a Federation or\
- Democracy, or a nuclear-armed regime otherwise restrained by the\
- United Nations.\
-"), _("\
-If a foreign unit is alone on a tile, you may attempt to bribe it\
- with your Diplomat. By paying a sum of gold the unit will immediately\
- become yours; the exact sum depends on the status of the unit and\
- that of the civilization owning it. However, units belonging to\
- Republican or Democratic governments cannot be bribed. Bribery when\
- not at war will cause a diplomatic incident.\
-"), _("\
-Diplomats can also perform a number of actions in another player's\
- city, although each Diplomat may attempt only one action. Most of\
- these actions have a chance of failure. Also, any enemy Diplomats or\
- Spies in the city will oppose hostile actions; in this case, either\
- your unit or the defending unit will die. If the defending unit dies,\
- you lose one movement point and may try again.\
-"), _("\
-The actions available to Diplomats in a city are:\
-"), _("\
- - \"Establish Embassy\": This action always succeeds, and gives\
- permanent contact with the city's owner, as well as intelligence\
- on their tax rates and technology. Each player you have an embassy\
- with that knows a technology reduces that technology's research\
- cost to you.\
-"), _("\
- - \"Investigate City\": Your unit attempts to report detailed\
- information about the city: its status, what buildings and units are\
- within, and what it is currently producing.\
-"), _("\
- - \"Sabotage City\": Your unit attempts either to disrupt all the\
- city's work so far towards its current project, or to destroy an\
- existing building in the city, at random. Once built, Palaces and\
- Wonders cannot be sabotaged, and attempts to sabotage City Walls\
- or any building in a capital each halve the chance of success.\
- Sabotage may only be attempted when openly at war.\
-"), _("\
- - \"Steal Technology\": Your unit attempts to learn the secrets of a\
- random technology known to the city's owner but not to you. Technology\
- may only be stolen once from a given enemy city by Diplomats. This\
- action may be attempted even when not at war, but will cause a\
- diplomatic incident.\
-"), _("\
- - \"Incite a Revolt\": In return for gold a foreign city will change\
- allegiance and join your empire, bringing along all nearby units that\
- call it home, but reducing its size by 1. Units in other cities\
- remain in the enemy's control, but units outside cities are lost to\
- both players. The exact sum depends on the status of the city and\
- that of the civilization that owns it. It is not possible to incite\
- a rebellion in a capital, or in any city governed by a Federation or\
- Democracy. Incitement may be attempted in peacetime, but will cause a\
- diplomatic incident.\
-"), _("\
-In some game strategies, hordes of Diplomats can be used to wreak\
- havoc on the enemy.  Little wonder that Diplomats are often\
- viewed with suspicion and fear!\
-"), _("\
-Diplomats built under Communist or Federation governments will\
- start at the first veteran level (secretary).\
-")
-
-[unit_diplomat4]
-name          = _("Diplomat IV")
-class         = "Non Military"
-tech_req      = "Democracy"
-obsolete_by   = "Spy"
-graphic       = "u.diplomat"
-graphic_alt   = "-"
-sound_move    = "m_diplomat"
-sound_move_alt = "m_generic"
-sound_fight   = "f_diplomat"
-sound_fight_alt = "f_generic"
-build_cost    = 40
-pop_cost      = 0
-attack        = 0
-defense       = 0
-hitpoints     = 10
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 0
-uk_food       = 0
-uk_gold       = 8
-flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil"
-veteran_names =
-; /* TRANS: diplomatic rank. */
-; /* TRANS: Unless translated, the last character in "attache" should be */
-; /* TRANS: U+00E9 LATIN SMALL LETTER E WITH ACUTE if available in your */
-; /* TRANS: charset. In ISO-8859-1 (ISO Latin 1) this is 233. */
-  _("?diplomatic_rank:attache"),
-; /* TRANS: diplomatic rank */
-  _("?diplomatic_rank:secretary"),
-; /* TRANS: diplomatic rank */
-  _("?diplomatic_rank:envoy"),
-; /* TRANS: diplomatic rank */
-  _("?diplomatic_rank:ambassador")
-veteran_raise_chance = 50, 33, 20, 0
-veteran_work_raise_chance = 0, 0, 0, 0
-veteran_power_fact = 100, 105, 110, 115
-veteran_move_bonus = 0, 0, 0, 0
-roles         = "Diplomat"
-helptext      = _("\
-A Diplomat is an official that carries your dispatches and\
- is authorized to deal with foreign dignitaries. He may\
- also undertake various covert operations with the intent of\
- harming your opponents; Diplomats in your own cities defend\
- them against such actions.\
-"), _("\
-Many covert actions may be attempted even in peacetime, but the more\
- aggressive actions will be discovered and cause diplomatic incidents,\
- giving an excuse for the breaking of treaties by a Federation or\
- Democracy, or a nuclear-armed regime otherwise restrained by the\
- United Nations.\
-"), _("\
-If a foreign unit is alone on a tile, you may attempt to bribe it\
- with your Diplomat. By paying a sum of gold the unit will immediately\
- become yours; the exact sum depends on the status of the unit and\
- that of the civilization owning it. However, units belonging to\
- Republican or Democratic governments cannot be bribed. Bribery when\
- not at war will cause a diplomatic incident.\
-"), _("\
-Diplomats can also perform a number of actions in another player's\
- city, although each Diplomat may attempt only one action. Most of\
- these actions have a chance of failure. Also, any enemy Diplomats or\
- Spies in the city will oppose hostile actions; in this case, either\
- your unit or the defending unit will die. If the defending unit dies,\
- you lose one movement point and may try again.\
-"), _("\
-The actions available to Diplomats in a city are:\
-"), _("\
- - \"Establish Embassy\": This action always succeeds, and gives\
- permanent contact with the city's owner, as well as intelligence\
- on their tax rates and technology. Each player you have an embassy\
- with that knows a technology reduces that technology's research\
- cost to you.\
-"), _("\
- - \"Investigate City\": Your unit attempts to report detailed\
- information about the city: its status, what buildings and units are\
- within, and what it is currently producing.\
-"), _("\
- - \"Sabotage City\": Your unit attempts either to disrupt all the\
- city's work so far towards its current project, or to destroy an\
- existing building in the city, at random. Once built, Palaces and\
- Wonders cannot be sabotaged, and attempts to sabotage City Walls\
- or any building in a capital each halve the chance of success.\
- Sabotage may only be attempted when openly at war.\
-"), _("\
- - \"Steal Technology\": Your unit attempts to learn the secrets of a\
- random technology known to the city's owner but not to you. Technology\
- may only be stolen once from a given enemy city by Diplomats. This\
- action may be attempted even when not at war, but will cause a\
- diplomatic incident.\
-"), _("\
- - \"Incite a Revolt\": In return for gold a foreign city will change\
- allegiance and join your empire, bringing along all nearby units that\
- call it home, but reducing its size by 1. Units in other cities\
- remain in the enemy's control, but units outside cities are lost to\
- both players. The exact sum depends on the status of the city and\
- that of the civilization that owns it. It is not possible to incite\
- a rebellion in a capital, or in any city governed by a Federation or\
- Democracy. Incitement may be attempted in peacetime, but will cause a\
- diplomatic incident.\
-"), _("\
-In some game strategies, hordes of Diplomats can be used to wreak\
- havoc on the enemy.  Little wonder that Diplomats are often\
- viewed with suspicion and fear!\
-"), _("\
-Diplomats built under Communist or Federation governments will\
- start at the first veteran level (secretary).\
-")
-
-[unit_spy]
-name          = _("Spy")
-class         = "Non Military"
-tech_req      = "Espionage"
-obsolete_by   = "None"
-graphic       = "u.spy"
-graphic_alt   = "-"
-sound_move    = "m_spy"
-sound_move_alt = "m_generic"
-sound_fight   = "f_spy"
-sound_fight_alt = "f_generic"
-build_cost    = 40
-pop_cost      = 0
-attack        = 0
-defense       = 0
-hitpoints     = 10
-firepower     = 1
-move_rate     = 6
-vision_radius_sq = 5
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 0
-uk_food       = 0
-uk_gold       = 10
-flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil", "Spy"
-veteran_names =
-; /* TRANS: Spy veteran level */
-  _("?spy_level:informant"),
-; /* TRANS: Spy veteran level */
-  _("?spy_level:handler"),
-; /* TRANS: Spy veteran level */
-  _("?spy_level:agent"),
-; /* TRANS: Spy veteran level */
-  _("?spy_level:spymaster")
-veteran_raise_chance = 50, 33, 20, 0
-veteran_work_raise_chance = 0, 0, 0, 0
-veteran_power_fact = 100, 105, 110, 115
-veteran_move_bonus = 0, 0, 0, 0
-roles         = "Diplomat"
-helptext      = _("\
-A Spy is more skilled in the arts of espionage than her Diplomat predecessor.\
-"), _("\
-She can perform all the functions of the Diplomat; refer to the Diplomat\
- entry for more details. Unlike a Diplomat, a Spy may also survive an\
- operation in a foreign city and become more experienced as a result.\
- Spies are also more effective than Diplomats at defending cities\
- against foreign Diplomats and Spies.\
-"), _("\
-A Spy can also be used to:\n\
- - sabotage an enemy unit (reducing its hit points to half), if it is\
- alone on a tile and the players are at war;\n\
- - poison the water supply of an enemy city (reducing the population\
- by one and emptying the granary);\n\
- - steal specific technology (with a reduced chance of success);\n\
- - steal further technologies from a city which has already been\
- stolen from (although cities become more resistant each time they\
- are stolen from);\n\
- - sabotage predetermined city targets (with a reduced chance of\
- success).\
-"), _("\
-A Spy that survives the more aggressive actions (sabotage, theft,\
- inciting rebellion, and poisoning) escapes to the safety of the\
- nearest friendly city.\
-"), _("\
-Spies built under Communist or Federation governments will start\
- at the first veteran level (handler).\
-")
-
-[unit_caravan]
-name          = _("Caravan")
-class         = "Merchant"
-tech_req      = "Trade"
-obsolete_by   = "Freight"
-graphic       = "u.caravan"
-graphic_alt   = "-"
-sound_move    = "m_caravan"
-sound_move_alt = "m_generic"
-sound_fight   = "f_caravan"
-sound_fight_alt = "f_generic"
-build_cost    = 50
-pop_cost      = 0
-attack        = 0
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 1
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 1
-uk_food       = 0
-uk_gold       = 1
-flags         = "TradeRoute", "HelpWonder", "NonMil", "Capturable"
-roles         = ""
-helptext      = _("\
-A Caravan carries goods or material for trading with foreign countries,\
- or to help build wonders in your own cities.\
-"), _("\
-Caravans can only travel on roads, railroads, rivers or ships, and\
- are not affected by movement modifiers.\
-"), _("\
-Caravans can establish trade routes with the cities of other nations\
- (even your enemies). A trade route's ongoing revenue is doubled if the\
- two cities involved are on different continents. Each city can support a\
- maximum of two trade routes.\
-"), _("\
-Every Caravan that is used to build a wonder will add 50 shields\
- towards the production of the wonder.\
-"), _("\
-TIP:  You can stockpile a stack of Caravans in advance and bring\
- them all into a city where you have started to build a wonder,\
- and finish it in only one turn!\
-")
-
-[unit_freight]
-name          = _("Freight")
-class         = "Merchant"
-tech_req      = "The Corporation"
-obsolete_by   = "None"
-graphic       = "u.freight"
-graphic_alt   = "-"
-sound_move    = "m_freight"
-sound_move_alt = "m_generic"
-sound_fight   = "f_freight"
-sound_fight_alt = "f_generic"
-build_cost    = 50
-pop_cost      = 0
-attack        = 0
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 1
-uk_food       = 0
-uk_gold       = 1
-flags         = "TradeRoute", "HelpWonder", "NonMil", "Capturable"
-roles         = ""
-helptext      = _("\
-The Freight unit replaces the Caravan, and moves at twice the speed.\
-")
-
-[unit_explorer]
-name          = _("Explorer")
-class         = "Non Military"
-tech_req      = "Seafaring"
-obsolete_by   = "Partisan"
-graphic       = "u.explorer"
-graphic_alt   = "-"
-sound_move    = "m_explorer"
-sound_move_alt = "m_generic"
-sound_fight   = "f_explorer"
-sound_fight_alt = "f_generic"
-build_cost    = 20
-pop_cost      = 0
-attack        = 0
-defense       = 1
-hitpoints     = 10
-firepower     = 1
-move_rate     = 2
-vision_radius_sq = 6
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 1
-uk_food       = 0
-uk_gold       = 1
-flags         = "IgTer", "IgZOC", "NonMil"
-roles         = "Explorer"
-helptext      = _("\
-Explorers are brave individuals that are very useful for\
- mapping unknown territory.\
-")
-
-[unit_leader]
-name          = _("?unit:Leader")
-class         = "Land"
-tech_req      = "None"
-obsolete_by   = "None"
-graphic       = "u.leader"
-graphic_alt   = "u.explorer"
-sound_move    = "m_leader"
-sound_move_alt = "m_generic"
-sound_fight   = "f_leader"
-sound_fight_alt = "f_generic"
-build_cost    = 10
-pop_cost      = 0
-attack        = 0
-defense       = 2
-hitpoints     = 20
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 8
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 0
-uk_food       = 0
-uk_gold       = 0
-flags         = "IgZOC", "NonMil", "NoBuild", "NoHome", "SuperSpy", 
-                "Undisbandable", "Unbribable", "GameLoss", "Unique"
-; No veteran levels (level name is never displayed)
-veteran_names = _("green")
-veteran_raise_chance = 0
-veteran_work_raise_chance = 0
-veteran_power_fact = 100
-veteran_move_bonus = 0
-roles         = "GameLoss"
-helptext      = _("\
-This is you. If you lose this unit, you lose the game. So don't.\
-")
-
-[unit_barbarian_leader]
-name          = _("Barbarian Leader")
-class         = "Land"
-tech_req      = "None"
-obsolete_by   = "None"
-graphic       = "u.barbarian_leader"
-graphic_alt   = "u.diplomat"
-sound_move    = "m_barbarian_leader"
-sound_move_alt = "m_generic"
-sound_fight   = "f_barbarian_leader"
-sound_fight_alt = "f_generic"
-build_cost    = 40
-pop_cost      = 0
-attack        = 0
-defense       = 0
-hitpoints     = 10
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 2
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 0
-uk_food       = 0
-uk_gold       = 0
-flags         = "IgZOC", "NonMil", "Unbribable",
-                "Undisbandable", "SuperSpy", "NoHome", "NoBuild"
-; No veteran levels (level name is never displayed)
-veteran_names = _("green")
-veteran_raise_chance = 0
-veteran_work_raise_chance = 0
-veteran_power_fact = 100
-veteran_move_bonus = 0
-roles         = "BarbarianLeader"
-helptext      = _("\
-One Barbarian Leader appears every time there is a barbarian uprising\
- somewhere in the world.\
-"), _("\
-When a Barbarian Leader is killed on a tile without any defending units,\
- the 100 gold ransom is paid, but only to land units and helicopters.\
-")
-
-[unit_awacs]
-name          = _("AWACS")
-class         = "Air"
-tech_req      = "Advanced Flight"
-obsolete_by   = "None"
-graphic       = "u.awacs"
-graphic_alt   = "u.bomber"  ; backwards compatibility
-sound_move    = "m_awacs"
-sound_move_alt = "m_generic"
-sound_fight   = "f_awacs"
-sound_fight_alt = "f_generic"
-build_cost    = 600
-pop_cost      = 0
-attack        = 0
-defense       = 1
-hitpoints     = 20
-firepower     = 1
-move_rate     = 16
-vision_radius_sq = 26
-transport_cap = 0
-fuel          = 4
-uk_happy      = 0
-uk_shield     = 5
-uk_food       = 1
-uk_gold       = 8
-flags         = ""
-roles         = ""
-helptext      = _("\
-The AWACS (Airborne Warning and Control System) is an airplane with an \
-advanced radar that can determine the location of enemy units over a \
-wide area.\
+[building_Maro_Polo]
+name		= _("Marco Polo's Embassy")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Banking", "Player"
+    }
+graphic	= "b.university"
+graphic_alt	= "-"
+obsolete_by	= "None"
+build_cost	= 100
+upkeep		= 0
+sabotage	= 0
+sound		= "w_marco_polos_embassy"
+sound_alt	= "w_generic"
+helptext	= _("\
+Player building it gets an embassy with all players.\
 ")
