@@ -1181,7 +1181,7 @@ paratroopers_mr_sub = 0
 
 [unit_mech_inf]
 name          = _("Mech. Inf.")
-class         = "Big Land"
+class         = "Land"
 tech_req      = "Labor Union"
 obsolete_by   = "None"
 graphic       = "u.mech_inf"
@@ -1250,7 +1250,7 @@ Horsemen are mounted warriors and an early\
 
 [unit_chariot]
 name          = _("Chariot")
-class         = "Big Land"
+class         = "Land"
 tech_req      = "The Wheel"
 graphic       = "u.chariot"
 graphic_alt   = "-"
@@ -1285,7 +1285,7 @@ without roads, and they cannot be transported by sea using early ships \
 
 [unit_elephants]
 name          = _("Elephants")
-class         = "Big Land"
+class         = "Land"
 tech_req      = "Polytheism"
 graphic       = "u.elephants"
 graphic_alt   = "u.chariot"
@@ -1316,7 +1316,7 @@ Elephants are towering animals trained for war that are often used as\
 
 ;[unit_crusaders]
 ;name          = _("Crusaders")
-;class         = "Big Land"
+;class         = "Land"
 ;tech_req      = "Monotheism"
 ;obsolete_by   = "Dragoons"
 ;graphic       = "u.crusaders"
@@ -1348,7 +1348,7 @@ Elephants are towering animals trained for war that are often used as\
 
 [unit_knights]
 name          = _("Knights")
-class         = "Big Land"
+class         = "Land"
 tech_req      = "Chivalry"
 obsolete_by   = "Dragoons"
 graphic       = "u.knights"
@@ -1380,7 +1380,7 @@ Knights are mounted and heavily armored warriors.\
 
 [unit_dragoons]
 name          = _("Dragoons")
-class         = "Big Land"
+class         = "Land"
 tech_req      = "Leadership"
 obsolete_by   = "Cavalry"
 graphic       = "u.dragoons"
@@ -1441,7 +1441,7 @@ Cavalry are mounted and highly trained soldiers.\
 
 [unit_armor]
 name          = _("Armor")
-class         = "Big Land"
+class         = "Land"
 tech_req      = "Mobile Warfare"
 obsolete_by   = "None"
 graphic       = "u.armor"
