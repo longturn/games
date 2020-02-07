@@ -1040,7 +1040,7 @@ Riflemen are World War-era infantry, very good\
 ")
 
 [unit_alpine_troops]
-name          = _("Alpine Troops")
+name          = _("Commandos")
 class         = "Land"
 tech_req      = "Tactics"
 obsolete_by   = "None"
@@ -1050,7 +1050,7 @@ sound_move    = "m_alpine_troops"
 sound_move_alt = "m_generic"
 sound_fight   = "f_alpine_troops"
 sound_fight_alt = "f_generic"
-build_cost    = 20
+build_cost    = 30
 pop_cost      = 0
 attack        = 7
 defense       = 4
@@ -1324,12 +1324,7 @@ uk_gold       = 2
 flags         = "Capturer"
 roles         = "AttackFast"
 helptext      = _("\
-Chariots are horse-pulled war wagons. They have a stronger attack than \
-Horsemen, but their speed comes at a cost: they are more expensive \
-to build, they cannot take advantage of terrain to defend themselves, \
-they cannot move in rough terrain (mountains, swamps, and jungles) \
-without roads, and they cannot be transported by sea using early ships \
-(Triremes and Caravels).\
+
 ")
 
 [unit_elephants]
@@ -1692,7 +1687,7 @@ uk_shield     = 2
 uk_food       = 1
 uk_gold       = 4
 targets       = "Air", "Missile", "Helicopter"
-flags         = "AirAttacker", "Bombarder"
+flags         = "AirAttacker", "Bombarder", "Unbribable"
 roles         = "DefendOk"
 helptext      = _("\
 Fighters are your first airborne units. They can\
@@ -1726,7 +1721,7 @@ uk_food       = 1
 uk_gold       = 6
 bombard_rate  = 5
 hp_loss_pct   = 20
-flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder"
+flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "Unbribable"
 roles         = ""
 helptext      = _("\
 Bombers are specialized airborne units that may\
@@ -1763,7 +1758,7 @@ uk_shield     = 4
 uk_food       = 1
 uk_gold       = 6
 cargo         = "Land", "Non Military"
-flags         = "AirAttacker"
+flags         = "AirAttacker", "Unbribable"
 roles         = ""
 helptext      = _("\
 Helicopters can transport one unit of infantry; while most troops \
@@ -1801,7 +1796,7 @@ uk_shield     = 4
 uk_food       = 1
 uk_gold       = 6
 targets       = "Air", "Missile", "Helicopter"
-flags         = "Partial_Invis", "AirAttacker"
+flags         = "Partial_Invis", "AirAttacker", "Unbribable"
 roles         = "DefendGood"
 helptext      = _("\
 An improved Fighter, with improved attack and a higher movement\
@@ -1833,7 +1828,7 @@ uk_happy      = 1
 uk_shield     = 6
 uk_food       = 1
 uk_gold       = 10
-flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder"
+flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "Unbribable"
 roles         = "DefendOk"
 helptext      = _("\
 An improved Bomber, with improved attack and a higher movement\
@@ -1862,7 +1857,7 @@ move_rate     = 6
 vision_radius_sq = 2
 transport_cap = 2
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
@@ -1906,10 +1901,7 @@ cargo         = "Land", "Small Land", "Merchant", "Non Military"
 flags         = "BadCityDefender"
 roles         = "Ferryboat"
 helptext      = _("\
-The Trireme is your first boat unit. It can act\
- as a transport ship and has rudimentary offensive\
- capabilities, and unlike later boats can travel on\
- rivers, but it may not enter deep ocean tiles.\
+
 ")
 
 
@@ -1934,7 +1926,7 @@ move_rate     = 6
 vision_radius_sq = 2
 transport_cap = 3
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
@@ -1967,7 +1959,7 @@ move_rate     = 8
 vision_radius_sq = 2
 transport_cap = 4
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
@@ -1984,7 +1976,7 @@ The Galleon is a pure transport ship, the first which can\
 name          = _("Frigate")
 class         = "Sea"
 tech_req      = "Navigation"
-obsolete_by   = "Ironclad"
+obsolete_by   = "Destroyer"
 graphic       = "u.frigate"
 graphic_alt   = "-"
 sound_move    = "m_frigate"
@@ -2001,7 +1993,7 @@ move_rate     = 8
 vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
@@ -2023,17 +2015,17 @@ sound_move    = "m_ironclad"
 sound_move_alt = "m_generic"
 sound_fight   = "f_ironclad"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 30
 pop_cost      = 0
 attack        = 4
 defense       = 3
 hitpoints     = 20
 firepower     = 1
-move_rate     = 8
+move_rate     = 6
 vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 3
 uk_food       = 1
 uk_gold       = 2
@@ -2065,7 +2057,7 @@ move_rate     = 12
 vision_radius_sq = 8
 transport_cap = 0
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 5
 uk_food       = 1
 uk_gold       = 3
@@ -2104,7 +2096,7 @@ move_rate     = 10
 vision_radius_sq = 8
 transport_cap = 0
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 6
 uk_food       = 1
 uk_gold       = 4
@@ -2135,7 +2127,7 @@ move_rate     = 10
 vision_radius_sq = 8
 transport_cap = 0
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 6
 uk_food       = 1
 uk_gold       = 4
@@ -2171,7 +2163,7 @@ move_rate     = 8
 vision_radius_sq = 8
 transport_cap = 0
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 8
 uk_food       = 1
 uk_gold       = 6
@@ -2239,7 +2231,7 @@ move_rate     = 8
 vision_radius_sq = 8
 transport_cap = 8
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 10
 uk_food       = 1
 uk_gold       = 8
@@ -2275,7 +2267,7 @@ move_rate     = 8
 vision_radius_sq = 8
 transport_cap = 8
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 3
@@ -2317,7 +2309,7 @@ move_rate     = 12
 vision_radius_sq = 0
 transport_cap = 0
 fuel          = 1
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 5
@@ -2925,7 +2917,7 @@ sound_move    = "m_caravan"
 sound_move_alt = "m_generic"
 sound_fight   = "f_caravan"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 30
 pop_cost      = 0
 attack        = 0
 defense       = 1
@@ -2938,7 +2930,7 @@ fuel          = 0
 uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
-uk_gold       = 1
+uk_gold       = 3
 flags         = "TradeRoute", "HelpWonder", "NonMil"
 roles         = ""
 helptext      = _("\
