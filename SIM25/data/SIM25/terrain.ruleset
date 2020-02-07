@@ -1057,7 +1057,7 @@ build_time     = 3
 border_sq      = -1
 conflicts      = "Airbase"
 native_to      = "Land", "Small Land", "Big Land"
-flags          = "NoStackDeath", "DiplomatDefense", "NativeTile"
+flags          = "DiplomatDefense", "NativeTile"
 helptext       = _("\
 Units in a fortress receive double defense against land units and boats. \
 Any kind of land unit remaining in a fortress for a whole turn without \
