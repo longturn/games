@@ -3660,7 +3660,7 @@ type    = "Have_Embassies"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Building", "Atlantic Telegraph Company", "Team"
+      "Building", "Atlantic Telegraph Company", "Player"
     }
 	
 [effect_atlantic_telegraph_company_2]
