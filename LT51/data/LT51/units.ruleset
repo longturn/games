@@ -2616,12 +2616,12 @@ Spies built under Communist or Federation governments will start\
 ")
 
 
-[unit_agent]
-name          = _("Agent")
+[unit_operative]
+name          = _("Operative")
 class         = "Small Land"
 tech_req      = "Advanced Espionage"
 obsolete_by   = "None"
-graphic       = "u.agent"
+graphic       = "u.operative"
 graphic_alt   = "u.spy"
 sound_move    = "m_spy"
 sound_move_alt = "m_generic"
@@ -2657,22 +2657,22 @@ veteran_power_fact = 100, 110, 125, 140
 veteran_move_bonus = 0, 9, 18, 27
 roles         = "Diplomat"
 helptext      = _("\
-An Agent is more skilled in the arts of espionage than her Diplomat predecessor or the Spy.\
+An Operative is more skilled in the arts of espionage than her Diplomat predecessor or the Spy.\
 "), _("\
-Agents will be able to use many means for trasportation and \
+Operatives will be able to use many means for trasportation and \
 will ignore terrain when moving. \
 She can perform all the functions of the Spy; refer to the Diplomat\
- entry for more details. Unlike a Diplomat, an Agent may also survive an\
+ entry for more details. Unlike a Diplomat, an Operative may also survive an\
  operation in a foreign city and become more experienced as a result.\
- Agents are also more effective than Diplomats at defending cities\
- against foreign Diplomats, Spies and Agents. If you steal a random tech, the\
+ Operatives are also more effective than Diplomats at defending cities\
+ against foreign Diplomats, Spies and Operatives. If you steal a random tech, the\
  probability for succeeding is a probability between 0-1 and it's\
  typically something like 0.08- 0.12. However if you choose a tech to be stolen\
  the chance to succeed is much lower and is n*n instead of n. With the \
  probability of 0.08 the chance to succeed to steal a specific tech would be \
  a very low 0.0064 = one successful attempt out of every 156 attempts.\
 "), _("\
-An Agent can also be used to:\n\
+An Operative can also be used to:\n\
  - sabotage an enemy unit (reducing its hit points to half), if it is\
  alone on a tile and the players are at war;\n\
  - poison the water supply of an enemy city (reducing the population\
@@ -2684,11 +2684,11 @@ An Agent can also be used to:\n\
  - sabotage predetermined city targets (with a reduced chance of\
  success).\
 "), _("\
-An Agent that survives the more aggressive actions (sabotage, theft,\
+An Operative that survives the more aggressive actions (sabotage, theft,\
  inciting rebellion, and poisoning) escapes to the safety of the\
  nearest friendly city.\
 "), _("\
-Agents built under Communist or Federation governments will start\
+Operatives built under Communist or Federation governments will start\
  at the first veteran level (handler).\
 ")
 
@@ -2771,7 +2771,7 @@ The Freight unit replaces the Caravan, and moves at twice the speed.\
 name          = _("Explorer")
 class         = "Small Land"
 tech_req      = "Seafaring"
-obsolete_by   = "Agent"
+obsolete_by   = "Operative"
 graphic       = "u.explorer"
 graphic_alt   = "-"
 sound_move    = "m_explorer"
