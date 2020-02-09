@@ -237,6 +237,8 @@ With a Barracks, each new land unit built in a city will\
  automatically have three additional Veteran levels.\
  Also, damaged land units which stay in town for one full \
  turn without moving are completely restored.\
+ \
+ Barracks have no effect under Tribal government.\
 ")
 
 [building_barracks_ii]
@@ -325,7 +327,7 @@ reqs	=
 graphic		= "b.city_hall"
 graphic_alt	= "b.police_station"
 obsolete_by	= "None"
-build_cost	= 50
+build_cost	= 40
 upkeep		= 1
 sabotage	= 100
 sound		= "b_city_hall"
@@ -427,9 +429,6 @@ sound		= "b_courthouse"
 sound_alt	= "b_generic"
 helptext	= _("\
 Reduces corruption in a city, amount depending on government. \
-In your capital, corruption and production waste is \
-eliminated. A Granary together with a Courthouse in a city will \
-eliminate food waste.\
 "), _("\
 Also makes one unhappy citizen content (unless that citizen is unhappy \
 about military activity), and makes the revolt cost of the city 4 times \
@@ -442,7 +441,6 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range", "negated"
       "Tech", "Industrialization", "Player", FALSE
-      "Building", "Manufaktur", "City", TRUE
     }
 graphic	= "b.factory"
 graphic_alt	= "-"
@@ -454,8 +452,7 @@ sound		= "b_factory"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the shield production in a city by 25%, or 50% with an \
-electrical plant of any kind in the same city.\
+Increases the shield production in a city by 50%.\
 "), _("\
 This increase in production may contribute significantly to \
 pollution; a Factory also increases the pollution caused by the \
@@ -474,7 +471,7 @@ reqs	=
 graphic	= "b.granary"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 30
+build_cost	= 20
 upkeep		= 1
 sabotage	= 100
 sound		= "b_granary"
@@ -485,7 +482,8 @@ helps cities to grow faster and more easily withstand famine. With a \
 Granary this is extended to cities of size 4 and above. \
 "), _("\
 A Granary also halves the food wasted in cities far from your capital. \
-Together with a Courthouse it eliminates food waste.\
+"), _("\
+Granary decreases the chance that population will migrate to bigger cities.\
 "), _("\
 TIP: to maximise the speed with which a city grows, you should build a \
 Granary before it grows larger than size 4.\
@@ -723,26 +721,19 @@ can lead to fallout and reduce the city's population.\
 [building_palace]
 name		= _("Palace")
 genus		= "SmallWonder"
-flags		= "SaveSmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Masonry", "Player"
     }
 graphic	= "b.palace"
 graphic_alt	= "-"
 obsolete_by	= "None"
-build_cost	= 50
+build_cost	= 20
 upkeep		= 0
 sabotage	= 0
 sound		= "b_palace"
 sound_alt	= "b_generic"
 helptext	= _("\
-Makes a city the capital and the center of your government. \
-Waste in other cities (corruption, production waste, and food waste) \
-is often related to how far away from the capital they are. On top of \
-this, corruption and production waste in your capital itself is half \
-of what it would otherwise be (and a Courthouse will eliminate it \
-entirely).\
+Makes a city the capital and the center of your government. \Corruption in other cities is often related to how far away from the capital they are. \
 "), _("\
 The cost to enemy Diplomats and Spies of inciting a revolt in a \
 city also depends upon the city's distance from the capital \
@@ -751,8 +742,8 @@ be incited to revolt, and enjoys a bonus when enemy agents try \
 to evade your own agents stationed in the city, or sabotage your \
 buildings.\
 "), _("\
-Take good care of your capital, as its loss may result in your \
-empire plunging into civil war. Losing your current palace also \
+Take good care of your capital, as its loss will result in the loss of \
+all centrally collected trade until you rebuild the palace. Losing it also \
 results in losing whatever spaceship you might have.\
 "),
 ; /* xgettext:no-c-format */
@@ -798,8 +789,9 @@ sound		= "b_police_station"
 sound_alt	= "b_generic"
 helptext	= _("\
 A Police Station neutralizes any unhappiness caused by one military \
-unit in its city. It also makes up to 2 more unhappy citizens content \
-provided they are not unhappy about aggression.\
+unit in its city. It makes up to 2 more unhappy citizens content \
+provided they are not unhappy about aggression. Also, helps defend \
+against aggressive diplomatic action. \
 \
 Decreases corruption by a small amount, depending on government.\
 ")
@@ -1780,7 +1772,7 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Each tile around the city where this wonder is built that is already \
 generating some shield output produces one extra shield resource. \
-Under Despotism or Tribal governments, the Pyramids cancel the penalty \
+Under Despotic government, the Pyramids cancel the penalty \
 to worked tiles with output greater than 2 (for all kinds of output), \
 as if all your cities were always celebrating.\
 ")
@@ -1810,29 +1802,29 @@ Completion of this wonder permanently doubles the effect of \
 Research Labs for every player.\
 ")
 
-[building_shakespeares_theatre]
-name		= _("Shakespeare's Theater")
-rule_name	= "Shakespeare's Theatre"  ; en_GB spelling used originally
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Sanitation", "Player"
-    }
-graphic	= "b.shakespeares_theatre"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 300
-upkeep		= 0
-sabotage	= 0
-sound		= "w_shakespeares_theatre"
-sound_alt	= "w_generic"
-helptext	= _("\
-Gives 1 additional luxury to every city, and 6 luxuries to the city \
-where it is located.\
-"), _("\
-Upon completion of this wonder, entertainer specialists' luxury \
-output increases to 3 permanently for every nation.\
-")
+;[building_shakespeares_theatre]
+;name		= _("Shakespeare's Theater")
+;rule_name	= "Shakespeare's Theatre"  ; en_GB spelling used originally
+;genus		= "GreatWonder"
+;reqs	=
+;    { "type", "name", "range"
+;     "Tech", "Sanitation", "Player"
+;    }
+;graphic	= "b.shakespeares_theatre"
+;graphic_alt	= "-"
+;obsolete_by	= "None"
+;build_cost	= 300
+;upkeep		= 0
+;sabotage	= 0
+;sound		= "w_shakespeares_theatre"
+;sound_alt	= "w_generic"
+;helptext	= _("\
+;Gives 1 additional luxury to every city, and 6 luxuries to the city \
+;where it is located.\
+;"), _("\
+;Upon completion of this wonder, entertainer specialists' luxury \
+;output increases to 3 permanently for every nation.\
+;")
 
 ;[building_statue_of_liberty]
 ;name		= _("Statue of Liberty")
@@ -1942,7 +1934,7 @@ reqs   =
 graphic   = "b.manufaktur"
 graphic_alt   = "b.barracks_i"
 obsolete_by   = "None"
-build_cost   = 40
+build_cost   = 30
 upkeep      = 1
 sabotage   = 100
 sound      = "b_generic"
@@ -1950,11 +1942,11 @@ sound_alt   = "b_generic"
 ; /* xgettext:no-c-format */
 helptext   = _("\
 Increases production in the city by 2 Shields.\
-With the onset of Industrialization, it becomes\
-a museum and produces 2 Trade instead. \
+With the onset of industrial revolution it represents \
+tradition of manufacturing in that city and, if it is \
+not present in the city at that time, it cannot be \
+built/established anymore.\ 
 \
-If a Factory is built in a city with Manufaktur,\
-its cost is decreased.\
 ")
 
 
@@ -2140,4 +2132,47 @@ helptext	= _("\
 Player building it gets an embassy with all players.\
 ")
 
+[building_governor]
+name		= _("Governor's Office")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Monarchy", "Player"
+    }
+graphic		= "b.governor_office"
+graphic_alt	= "b.police_station"
+obsolete_by	= "None"
+build_cost	= 20
+upkeep		= 5
+sabotage	= 100
+sound		= "b_city_hall"
+sound_alt	= "b_generic"
+helptext	= _("\
+This Office helps money from the city reach the rightful ruler of the kingdom, \
+reducing corruption by 80%. It is best used in smaller cities that don't \
+have other corruption-reduction buildings. It is only usable under Monarchy and, \
+when a different goverment is in place, it is best to dismantle it because of high upkeep . \
+")
+
+[building_tax_office]
+name		= _("Tax Office")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Monarchy", "Player"
+    }
+graphic		= "b.tax_office"
+graphic_alt	= "b.police_station"
+obsolete_by	= "None"
+build_cost	= 20
+upkeep		= 5
+sabotage	= 100
+sound		= "b_city_hall"
+sound_alt	= "b_generic"
+helptext	= _("\
+This Office helps money from the city reach the Government, \
+reducing corruption by 90%. It is best used in smaller cities that don't \
+have other corruption-reduction buildings. It is only usable under Democracy or Republic and, \
+when a different goverment is in place, it is best to dismantle it because of high upkeep . \
+")
 

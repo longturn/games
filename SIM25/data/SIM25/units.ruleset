@@ -159,7 +159,7 @@ name          = _("?unitclass:Big Land")
 min_speed     = 1
 hp_loss_pct   = 0
 flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
-                "CollectRansom","ZOC", "CanFortify", "KillCitizen", "AttackNonNative"
+                "CollectRansom","ZOC", "CanFortify", "AttackNonNative"
 
 [unitclass_merchant]
 ; /* TRANS: Unit class: used adjectivally */
@@ -410,7 +410,7 @@ flags         = "Unreachable", "DoesntOccupyTile", "CanPillage"
 name          = _("Settlers")
 class         = "Small Land"
 tech_req      = "None"
-obsolete_by   = "None"
+obsolete_by   = "Tribe"
 graphic       = "u.settlers"
 graphic_alt   = "-"
 sound_move    = "m_settlers"
@@ -449,6 +449,52 @@ Workers.\
 TIP: optimal production of Settlers occurs in cities of at most \
 size 4, or cities with a Granary of at most size 6.\
 ")
+
+[unit_tribe]
+name          = _("Tribe")
+class         = "Small Land"
+tech_req      = "None"
+gov_req       = "Tribal"
+obsolete_by   = "None"
+graphic       = "u.tribe"
+graphic_alt   = "u.settlers"
+sound_move    = "m_settlers"
+sound_move_alt = "m_generic"
+sound_fight   = "f_settlers"
+sound_fight_alt = "f_generic"
+build_cost    = 10
+pop_cost      = 1
+attack        = 0
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 5
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 0
+uk_food       = 0
+uk_gold       = 0
+flags         = "Settlers", "NonMil", "Cities"
+; No veteran levels (level name is never displayed)
+veteran_names = _("green")
+veteran_raise_chance = 0
+veteran_work_raise_chance = 0
+veteran_power_fact = 100
+veteran_move_bonus = 0
+roles         = "Cities"
+helptext      = _("\
+In the early stages of civilization, expansion was a constant. \
+People simply moved from one place to another and settled in  \
+new locations, carrying only basic stuff, because that was all \
+they had. \
+"), _("\
+Tribe is a predecessor of Settlers and is used for founding new 
+cities. Tribe can also perform some of the same terrain alterations
+as Workers.\
+")
+
 
 [unit_migrants]
 name          = _("Migrants")
@@ -594,7 +640,7 @@ for more details.\
 name          = _("Warriors")
 class         = "Land"
 tech_req      = "None"
-obsolete_by   = "Militia"
+obsolete_by   = "Raiders"
 graphic       = "u.warriors"
 graphic_alt   = "-"
 sound_move    = "m_warriors"
@@ -622,12 +668,13 @@ This unit may be built from the start of the game.  It is the\
  weakest offensive unit.\
 ")
 
+
 [unit_raiders]
 name          = _("Raiders")
 class         = "Land"
 tech_req      = "None"
 gov_req       = "Tribal"
-obsolete_by   = "Arquebusiers"
+obsolete_by   = "Militia"
 graphic       = "u.raiders"
 graphic_alt   = "u.warriors"
 sound_move    = "m_warriors"
@@ -660,8 +707,7 @@ This unit may be built from the start of the game.  It is the\
 name          = _("Phalanx")
 class         = "Land"
 tech_req      = "Bronze Working"
-gov_req       = "Despotism"
-obsolete_by   = "Arquebusiers"
+obsolete_by   = "Raiders"
 graphic       = "u.phalanx"
 graphic_alt   = "-"
 sound_move    = "m_phalanx"
@@ -691,6 +737,7 @@ The Phalanx is armored infantry, suitable for defending your cities.\
 [unit_Bowmen]
 name          = _("Bowmen")
 class         = "Land"
+tech_req      = "None"
 gov_req       = "Tribal"
 obsolete_by   = "Skirmishers"
 graphic       = "u.bowmen"
@@ -766,7 +813,7 @@ sound_move    = "m_legion"
 sound_move_alt = "m_generic"
 sound_fight   = "f_legion"
 sound_fight_alt = "f_generic"
-build_cost    = 14
+build_cost    = 15
 pop_cost      = 0
 attack        = 4
 defense       = 2
@@ -851,7 +898,8 @@ roles         = "DefendGood", "FirstBuild", "HutTech",
 helptext      = _("\
 Militia is the first unit equipped with \
 Gunpowder technology, but represents hastily \
-and not too well organised units. Best used \
+and not too well organised units consisting of \
+citizens and requires no gold upkeep. Best used \
 in case of emergency. \
 ")
 
@@ -949,9 +997,10 @@ uk_happy      = 1
 uk_shield     = 0
 uk_food       = 1
 uk_gold       = 3
-flags         = "Capturer", "Marines"
+flags         = "Capturer", "Marines", "Bombarder"
 roles         = "DefendGood", "FirstBuild", "HutTech",
                 "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
+bombard_rate  = 5
 helptext      = _("\
 Skirmishers are hit-and-run unit designated \
 to harrass enemy units from distance, stall \
@@ -991,7 +1040,7 @@ Riflemen are World War-era infantry, very good\
 ")
 
 [unit_alpine_troops]
-name          = _("Alpine Troops")
+name          = _("Commandos")
 class         = "Land"
 tech_req      = "Tactics"
 obsolete_by   = "None"
@@ -1001,7 +1050,7 @@ sound_move    = "m_alpine_troops"
 sound_move_alt = "m_generic"
 sound_fight   = "f_alpine_troops"
 sound_fight_alt = "f_generic"
-build_cost    = 20
+build_cost    = 30
 pop_cost      = 0
 attack        = 7
 defense       = 4
@@ -1181,7 +1230,7 @@ paratroopers_mr_sub = 0
 
 [unit_mech_inf]
 name          = _("Mech. Inf.")
-class         = "Big Land"
+class         = "Land"
 tech_req      = "Labor Union"
 obsolete_by   = "None"
 graphic       = "u.mech_inf"
@@ -1250,7 +1299,7 @@ Horsemen are mounted warriors and an early\
 
 [unit_chariot]
 name          = _("Chariot")
-class         = "Big Land"
+class         = "Land"
 tech_req      = "The Wheel"
 graphic       = "u.chariot"
 graphic_alt   = "-"
@@ -1275,17 +1324,12 @@ uk_gold       = 2
 flags         = "Capturer"
 roles         = "AttackFast"
 helptext      = _("\
-Chariots are horse-pulled war wagons. They have a stronger attack than \
-Horsemen, but their speed comes at a cost: they are more expensive \
-to build, they cannot take advantage of terrain to defend themselves, \
-they cannot move in rough terrain (mountains, swamps, and jungles) \
-without roads, and they cannot be transported by sea using early ships \
-(Triremes and Caravels).\
+
 ")
 
 [unit_elephants]
 name          = _("Elephants")
-class         = "Big Land"
+class         = "Land"
 tech_req      = "Polytheism"
 graphic       = "u.elephants"
 graphic_alt   = "u.chariot"
@@ -1316,7 +1360,7 @@ Elephants are towering animals trained for war that are often used as\
 
 ;[unit_crusaders]
 ;name          = _("Crusaders")
-;class         = "Big Land"
+;class         = "Land"
 ;tech_req      = "Monotheism"
 ;obsolete_by   = "Dragoons"
 ;graphic       = "u.crusaders"
@@ -1348,7 +1392,7 @@ Elephants are towering animals trained for war that are often used as\
 
 [unit_knights]
 name          = _("Knights")
-class         = "Big Land"
+class         = "Land"
 tech_req      = "Chivalry"
 obsolete_by   = "Dragoons"
 graphic       = "u.knights"
@@ -1380,7 +1424,7 @@ Knights are mounted and heavily armored warriors.\
 
 [unit_dragoons]
 name          = _("Dragoons")
-class         = "Big Land"
+class         = "Land"
 tech_req      = "Leadership"
 obsolete_by   = "Cavalry"
 graphic       = "u.dragoons"
@@ -1441,7 +1485,7 @@ Cavalry are mounted and highly trained soldiers.\
 
 [unit_armor]
 name          = _("Armor")
-class         = "Big Land"
+class         = "Land"
 tech_req      = "Mobile Warfare"
 obsolete_by   = "None"
 graphic       = "u.armor"
@@ -1643,7 +1687,7 @@ uk_shield     = 2
 uk_food       = 1
 uk_gold       = 4
 targets       = "Air", "Missile", "Helicopter"
-flags         = "AirAttacker", "Bombarder"
+flags         = "AirAttacker", "Bombarder", "Unbribable"
 roles         = "DefendOk"
 helptext      = _("\
 Fighters are your first airborne units. They can\
@@ -1676,7 +1720,8 @@ uk_shield     = 4
 uk_food       = 1
 uk_gold       = 6
 bombard_rate  = 5
-flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder"
+hp_loss_pct   = 20
+flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "Unbribable"
 roles         = ""
 helptext      = _("\
 Bombers are specialized airborne units that may\
@@ -1713,13 +1758,10 @@ uk_shield     = 4
 uk_food       = 1
 uk_gold       = 6
 cargo         = "Land", "Non Military"
-flags         = "OneAttack", "AirAttacker", "Bombarder"
+flags         = "AirAttacker", "Unbribable"
 roles         = ""
 helptext      = _("\
-A Helicopter's attack against units on land is a bombard attack; against \
-units on water it has a regular attack.\
-"), _("\
-Helicopters can also transport one unit of infantry; while most troops \
+Helicopters can transport one unit of infantry; while most troops \
 must load or unload in a city or airbase units specializing in mobility \
 (Paratroopers, Alpine Troops, Marines, Partisans, and Fanatics) can \
 embark or disembark at any time.\
@@ -1727,7 +1769,6 @@ embark or disembark at any time.\
 Care must be exercised, because Helicopters lose a small amount of health \
 for every turn not spent in a city or airbase or on a Carrier.\
 ")
-bombard_rate = 5
 
 [unit_stealth_fighter]
 name          = _("Stealth Fighter")
@@ -1755,7 +1796,7 @@ uk_shield     = 4
 uk_food       = 1
 uk_gold       = 6
 targets       = "Air", "Missile", "Helicopter"
-flags         = "Partial_Invis", "AirAttacker"
+flags         = "Partial_Invis", "AirAttacker", "Unbribable"
 roles         = "DefendGood"
 helptext      = _("\
 An improved Fighter, with improved attack and a higher movement\
@@ -1787,7 +1828,7 @@ uk_happy      = 1
 uk_shield     = 6
 uk_food       = 1
 uk_gold       = 10
-flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder"
+flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "Unbribable"
 roles         = "DefendOk"
 helptext      = _("\
 An improved Bomber, with improved attack and a higher movement\
@@ -1816,7 +1857,7 @@ move_rate     = 6
 vision_radius_sq = 2
 transport_cap = 2
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
@@ -1833,7 +1874,7 @@ The Trireme is your first boat unit. It can act\
 [unit_boat]
 name          = _("Boat")
 class         = "Trireme"
-tech_req      = "Map Making"
+tech_req      = "None"
 gov_req       = "Tribal"
 obsolete_by   = "Caravel"
 graphic       = "u.boat"
@@ -1860,10 +1901,7 @@ cargo         = "Land", "Small Land", "Merchant", "Non Military"
 flags         = "BadCityDefender"
 roles         = "Ferryboat"
 helptext      = _("\
-The Trireme is your first boat unit. It can act\
- as a transport ship and has rudimentary offensive\
- capabilities, and unlike later boats can travel on\
- rivers, but it may not enter deep ocean tiles.\
+
 ")
 
 
@@ -1888,7 +1926,7 @@ move_rate     = 6
 vision_radius_sq = 2
 transport_cap = 3
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
@@ -1921,7 +1959,7 @@ move_rate     = 8
 vision_radius_sq = 2
 transport_cap = 4
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
@@ -1938,7 +1976,7 @@ The Galleon is a pure transport ship, the first which can\
 name          = _("Frigate")
 class         = "Sea"
 tech_req      = "Navigation"
-obsolete_by   = "Ironclad"
+obsolete_by   = "Destroyer"
 graphic       = "u.frigate"
 graphic_alt   = "-"
 sound_move    = "m_frigate"
@@ -1955,7 +1993,7 @@ move_rate     = 8
 vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
@@ -1977,17 +2015,17 @@ sound_move    = "m_ironclad"
 sound_move_alt = "m_generic"
 sound_fight   = "f_ironclad"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 30
 pop_cost      = 0
 attack        = 4
 defense       = 3
 hitpoints     = 20
 firepower     = 1
-move_rate     = 8
+move_rate     = 6
 vision_radius_sq = 2
 transport_cap = 0
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 3
 uk_food       = 1
 uk_gold       = 2
@@ -2019,7 +2057,7 @@ move_rate     = 12
 vision_radius_sq = 8
 transport_cap = 0
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 5
 uk_food       = 1
 uk_gold       = 3
@@ -2058,7 +2096,7 @@ move_rate     = 10
 vision_radius_sq = 8
 transport_cap = 0
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 6
 uk_food       = 1
 uk_gold       = 4
@@ -2089,7 +2127,7 @@ move_rate     = 10
 vision_radius_sq = 8
 transport_cap = 0
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 6
 uk_food       = 1
 uk_gold       = 4
@@ -2125,7 +2163,7 @@ move_rate     = 8
 vision_radius_sq = 8
 transport_cap = 0
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 8
 uk_food       = 1
 uk_gold       = 6
@@ -2193,7 +2231,7 @@ move_rate     = 8
 vision_radius_sq = 8
 transport_cap = 8
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 10
 uk_food       = 1
 uk_gold       = 8
@@ -2229,7 +2267,7 @@ move_rate     = 8
 vision_radius_sq = 8
 transport_cap = 8
 fuel          = 0
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 3
@@ -2271,7 +2309,7 @@ move_rate     = 12
 vision_radius_sq = 0
 transport_cap = 0
 fuel          = 1
-uk_happy      = 1
+uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 5
@@ -2879,7 +2917,7 @@ sound_move    = "m_caravan"
 sound_move_alt = "m_generic"
 sound_fight   = "f_caravan"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 30
 pop_cost      = 0
 attack        = 0
 defense       = 1
@@ -2892,8 +2930,8 @@ fuel          = 0
 uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
-uk_gold       = 1
-flags         = "TradeRoute", "HelpWonder", "NonMil", "Capturable"
+uk_gold       = 3
+flags         = "TradeRoute", "HelpWonder", "NonMil"
 roles         = ""
 helptext      = _("\
 A Caravan carries goods or material for trading with foreign countries,\
@@ -2934,13 +2972,14 @@ hitpoints     = 10
 firepower     = 1
 move_rate     = 4
 vision_radius_sq = 2
-transport_cap = 0
+transport_cap = 2
+cargo         = "Missile"
 fuel          = 0
 uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "TradeRoute", "HelpWonder", "NonMil", "Capturable"
+flags         = "TradeRoute", "HelpWonder", "NonMil"
 roles         = ""
 helptext      = _("\
 The Freight unit replaces the Caravan, and moves at twice the speed.\
@@ -3069,7 +3108,7 @@ sound_move    = "m_awacs"
 sound_move_alt = "m_generic"
 sound_fight   = "f_awacs"
 sound_fight_alt = "f_generic"
-build_cost    = 600
+build_cost    = 60
 pop_cost      = 0
 attack        = 0
 defense       = 1

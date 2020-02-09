@@ -5608,3 +5608,60 @@ reqs    =
       "Gov", "Monarchy", "Player"
       "Building", "Palace", "City"
 }
+
+[effect_city_build_slots_default]
+type    = "City_Build_Slots"
+value   = 2
+reqs    =
+    { "type", "name", "range", "negated"
+      "Building", "City Hall", "City", TRUE
+    }
+    
+[effect_city_build_slots_city_hall]
+type    = "City_Build_Slots"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "City Hall", "City"
+    }
+    
+[effect_corruption_governers_office]
+type    = "Output_Waste_Pct"
+value   = 80
+reqs    =
+    { "type", "name", "range"
+      "Building", "Governer's Office", "City"
+      "Gov", "Monarchy", "Player"
+      "OutputType", "Trade", "Local"
+    }
+
+[effect_corruption_tax_office_republic]
+type    = "Output_Waste_Pct"
+value   = 90
+reqs    =
+    { "type", "name", "range"
+      "Building", "Tax Office", "City"
+      "Gov", "Republic", "Player"
+      "OutputType", "Trade", "Local"
+    }
+
+[effect_corruption_tax_office_democracy]
+type    = "Output_Waste_Pct"
+value   = 90
+reqs    =
+    { "type", "name", "range"
+      "Building", "Tax Office", "City"
+      "Gov", "Democracy", "Player"
+      "OutputType", "Trade", "Local"
+    }
+
+[effect_corruption_commissars_office]
+type    = "Output_Waste_Pct"
+value   = 100
+reqs    =
+    { "type", "name", "range"
+      "Building", "Commissar's Office", "City"
+      "Gov", "Communism", "Player"
+      "OutputType", "Trade", "Local"
+    }
+
