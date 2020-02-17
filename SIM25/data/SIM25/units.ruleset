@@ -36,11 +36,11 @@ flags =
 veteran_names = _("cannon fodder"), _("drafted"), _("recruits"), _("novice"), _("green"), _("regular"), _("disciplined"), _("seasoned"), _("experienced"), _("expert"), _("master"), _("veteran"), _("hardened"), _("guards"), _("special"), _("commando"), _("elite")
 
 ; The percentage chance of increasing level through combat  
-veteran_raise_chance = 100, 95, 90, 75, 60, 50, 45, 40, 35, 30, 25, 20, 15, 10, 5, 5, 0
+veteran_raise_chance = 100, 90, 80, 65, 50, 40, 30, 20, 15, 12, 10, 8, 6, 4, 2, 1, 0
 
 ; The percentage chance of a settler/engineer increasing level through
 ; performing useful work (per turn)
-veteran_work_raise_chance = 50, 20, 15, 10, 8, 6, 5, 4, 3, 3, 2, 2, 2, 1, 1, 1, 0
+veteran_work_raise_chance = 50, 20, 10, 5, 4, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 0
 
 ; Power factors are as a percentage.
 ; +50% is represented by 150
@@ -49,7 +49,7 @@ veteran_power_fact = 100, 110, 120, 140, 150, 160, 170, 180, 200, 220, 240, 260,
 ; The additional number of movement points granted for different veteran
 ; levels. These are fractional move points as defined by move_fragments in
 ; terrain.ruleset.
-veteran_move_bonus = 0, 0, 0, 2, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+veteran_move_bonus = 0, 0, 0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 29, 30, 31, 32, 33
 
 ; /* <-- avoid gettext warnings
 ;
