@@ -1069,14 +1069,14 @@ disembarks    = "Helicopter"
 flags         = "IgTer", "Capturer", "CityBuster"
 roles         = "DefendOk"
 helptext      = _("\
-Alpine Troops are highly mobile units as well as\
+Commandos are highly mobile units as well as\
  excellent defenders.\
 ")
 
 [unit_partisan]
 name          = _("Partisan")
 class         = "Land"
-tech_req      = "Guerilla Warfare"
+tech_req      = "Communism"
 obsolete_by   = "None"
 graphic       = "u.partisan"
 graphic_alt   = "-"
@@ -1118,7 +1118,7 @@ A number of Partisans are granted free when an enemy conquers your\
 [unit_fanatics]
 name          = _("Fanatics")
 class         = "Land"
-tech_req      = "Guerilla Warfare"
+tech_req      = "Communism"
 gov_req       = "Fundamentalism"
 obsolete_by   = "None"
 graphic       = "u.fanatics"
@@ -1189,7 +1189,7 @@ Marines are infantry who are experts at marine warfare.\
 [unit_paratroopers]
 name          = _("Paratroopers")
 class         = "Land"
-tech_req      = "Combined Arms"
+tech_req      = "Advanced Flight"
 obsolete_by   = "None"
 graphic       = "u.paratroopers"
 graphic_alt   = "-"
@@ -1231,7 +1231,7 @@ paratroopers_mr_sub = 0
 [unit_mech_inf]
 name          = _("Mech. Inf.")
 class         = "Land"
-tech_req      = "Labor Union"
+tech_req      = "Combined Arms"
 obsolete_by   = "None"
 graphic       = "u.mech_inf"
 graphic_alt   = "-"
@@ -1763,7 +1763,7 @@ roles         = ""
 helptext      = _("\
 Helicopters can transport one unit of infantry; while most troops \
 must load or unload in a city or airbase units specializing in mobility \
-(Paratroopers, Alpine Troops, Marines, Partisans, and Fanatics) can \
+(Paratroopers, Commandos, Marines, Partisans, and Fanatics) can \
 embark or disembark at any time.\
 "), _("\
 Care must be exercised, because Helicopters lose a small amount of health \
@@ -1908,7 +1908,7 @@ helptext      = _("\
 [unit_caravel]
 name          = _("Caravel")
 class         = "Sea"
-tech_req      = "Magnetism"
+tech_req      = "Navigation"
 obsolete_by   = "Galleon"
 graphic       = "u.caravel"
 graphic_alt   = "-"
@@ -1941,7 +1941,7 @@ The Caravel is a sailing ship that can enter\
 [unit_galleon]
 name          = _("Galleon")
 class         = "Sea"
-tech_req      = "Navigation"
+tech_req      = "Advanced Navigation"
 obsolete_by   = "Transport"
 graphic       = "u.galleon"
 graphic_alt   = "-"
@@ -1975,7 +1975,7 @@ The Galleon is a pure transport ship, the first which can\
 [unit_frigate]
 name          = _("Frigate")
 class         = "Sea"
-tech_req      = "Navigation"
+tech_req      = "Advanced Navigation"
 obsolete_by   = "Destroyer"
 graphic       = "u.frigate"
 graphic_alt   = "-"
@@ -2039,7 +2039,7 @@ The Ironclad is an armored ship,\
 [unit_destroyer]
 name          = _("Destroyer")
 class         = "Sea"
-tech_req      = "Engineering"
+tech_req      = "Steel"
 obsolete_by   = "None"
 graphic       = "u.destroyer"
 graphic_alt   = "-"
@@ -2078,7 +2078,7 @@ TIP:  A very fast unit, which is very useful for hunting down enemy\
 [unit_cruiser]
 name          = _("Cruiser")
 class         = "Sea"
-tech_req      = "Steel"
+tech_req      = "Combustion"
 obsolete_by   = "AEGIS Cruiser"
 graphic       = "u.cruiser"
 graphic_alt   = "-"
