@@ -119,7 +119,7 @@ cost     = 370
 [advance_automobile]
 name     = _("Automobile")
 req1     = "Combustion"
-req2     = "Steel"
+req2     = "Mass Production"
 flags    = ""
 graphic     = "a.automobile"
 graphic_alt = "-"
@@ -308,7 +308,7 @@ cost     = 370
 [advance_environmentalism]
 name     = _("Environmentalism")
 req1     = "Recycling"
-req2     = "Space Flight"
+req2     = "Labour Union"
 flags    = ""
 graphic     = "a.environmentalism"
 graphic_alt = "-"
@@ -343,8 +343,8 @@ cost     = 80
 
 [advance_flight]
 name     = _("Flight")
-req1     = "Combustion"
-req2     = "Tactics"
+req1     = "Machine Tools"
+req2     = "Mass Production"
 flags    = "Build_Airborne"
 graphic     = "a.flight"
 graphic_alt = "-"
@@ -369,14 +369,14 @@ graphic     = "a.genetic_engineering"
 graphic_alt = "-"
 cost     = 450
 
-[advance_guerilla_warfare]
-name     = _("Guerilla Warfare")
-req1     = "Communism"
-req2     = "Tactics"
-flags    = ""
-graphic     = "a.guerilla_warfare"
-graphic_alt = "-"
-cost     = 480
+;[advance_guerilla_warfare]
+;name     = _("Guerilla Warfare")
+;req1     = "Communism"
+;req2     = "Tactics"
+;flags    = ""
+;graphic     = "a.guerilla_warfare"
+;graphic_alt = "-"
+;cost     = 480
 
 [advance_gunpowder]
 name     = _("Gunpowder")
@@ -397,7 +397,7 @@ cost     = 10
 
 [advance_industrialization]
 name     = _("Industrialization")
-req1     = "Railroad"
+req1     = "Engineering"
 req2     = "Banking"
 flags    = "Population_Pollution_Inc"
 graphic     = "a.industrialization"
@@ -469,7 +469,7 @@ graphic_alt = "-"
 cost     = 480
 
 [advance_magnetism]
-name     = _("Magnetism")
+name     = _("Navigation")
 req1     = "Seafaring"
 req2     = "Astronomy"
 flags    = ""
@@ -497,7 +497,7 @@ cost     = 10
 
 [advance_mass_production]
 name     = _("Mass Production")
-req1     = "Automobile"
+req1     = "Machine Tools"
 req2     = "The Corporation"
 flags    = ""
 graphic     = "a.mass_production"
@@ -583,9 +583,9 @@ helptext = _("Improves the effect of Temples.")
 cost     = 20
 
 [advance_navigation]
-name     = _("Navigation")
+name     = _("Advanced Navigation")
 req1     = "Invention"
-req2     = "Physics"
+req2     = "Navigation"
 flags    = ""
 graphic     = "a.navigation"
 graphic_alt = "-"
@@ -623,8 +623,8 @@ cost     = 70
 
 [advance_physics]
 name     = _("Physics")
-req1     = "The Wheel"
-req2     = "Magnetism"
+req1     = "Philosophy"
+req2     = "Astronomy"
 flags    = ""
 graphic     = "a.physics"
 graphic_alt = "-"
@@ -771,7 +771,7 @@ cost     = 670
 [advance_steam_engine]
 name     = _("Steam Engine")
 req1     = "Chemistry"
-req2     = "Navigation"
+req2     = "Advanced Navigation"
 flags    = ""
 graphic     = "a.steam_engine"
 graphic_alt = "-"
@@ -860,7 +860,7 @@ req1     = "Pottery"
 req2     = "Bronze Working"
 flags    = ""
 helptext = _("\
-Cancels the penalty to worked tiles with output greater than 2. \
+Cancels the penalty to worked tiles with output greater than 2, except under Tribal government. \
 ")
 
 [advance_trade]
