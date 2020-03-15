@@ -1089,14 +1089,14 @@ Horsemen are mounted warriors and an early\
 name          = _("Chariot")
 class         = "Big Land"
 tech_req      = "The Wheel"
-obsolete_by   = "Dragoons"
+obsolete_by   = "Knights"
 graphic       = "u.chariot"
 graphic_alt   = "-"
 sound_move    = "m_chariot"
 sound_move_alt = "m_generic"
 sound_fight   = "f_chariot"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 28
 pop_cost      = 0
 attack        = 4
 defense       = 1
