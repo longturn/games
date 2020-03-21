@@ -357,7 +357,7 @@ colorlist =
 ;
 names =
  _("Privateers"),
- _("Corsairs"),
+ _("Freebooters"),
  _("Blue"),
  _("White"),
  _("Black")
