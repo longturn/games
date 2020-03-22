@@ -1,0 +1,4176 @@
+
+; Modifying this file:
+; You should not modify this file except to make bugfixes or
+; for other "maintenance".  If you want to make custom changes,
+; you should create a new datadir subdirectory and copy this file
+; into that directory, and then modify that copy.  Then use the
+; command "rulesetdir <mysubdir>" in the server to have freeciv
+; use your new customized file.
+
+; Note that the freeciv AI may not cope well with anything more
+; than minor changes.
+
+[datafile]
+description="Augmented2 longturn - buildings data for Freeciv"
+options="+Freeciv-2.6-ruleset"
+
+; /* <-- avoid gettext warnings
+;
+; Below: The individual buildings, one per section.
+; (Buildings = City Improvements and Wonders)
+;
+; The actual tag used (the * in [building_*]) does not matter, except 
+; it must be unique within this file, and it may be used in debug 
+; output when reading this file.
+;
+; Notes:
+;
+; name          = translatable name as seen by user
+; rule_name     = (optional) internal name for savegames, rulesets etc; if
+;                 not present, "name" is used for this purpose too. Since
+;                 the name used in savegames must not change, if you want
+;                 to rename an item after a ruleset has been released, you
+;                 should set "rule_name" to the original value of "name".
+; genus	        = genus; one of:
+;                 "GreatWonder", "SmallWonder", "Improvement", "Special".
+; reqs		= requirements to build the building (see effects.ruleset
+;		  and README.effects for help on requirements)
+; graphic	= icon of improvement (used in city dialog)
+; graphic_alt	= alternate icon of improvement
+; obsolete_by	= requirements for the building to become obsolete
+; build_cost	= production shields required to build
+; upkeep	= monetary upkeep value
+; sabotage	= percent chance of diplomat sabotage being successful
+; flags         = special flag strings
+;
+; ** Building flags **
+; "VisibleByOthers"  = Anyone who can see your city knows whether it has
+;                      this improvement. (Great and small wonders are
+;                      always visible.)
+; "SaveSmallWonder"  = If you lose the city with this building in, and the
+;                      "savepalace" server setting is enabled, another will
+;                      be built for free in a random city.
+;                      Should only be used with genus "SmallWonder".
+; "Gold"             = Not a real building; production turned into gold
+;                      indefinitely (capitalization/coinage).
+;                      Genus should be "Special".
+;
+; */ <-- avoid gettext warnings
+
+[building_tribe_hut]
+name		= _("Tribe Hut")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "City Hall", "City", FALSE
+    }
+graphic	= "b.tribe_hut"
+graphic_alt	= "tx.village"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Bronze Working", "Player"
+      "Building", "City Hall", "City"
+    }
+build_cost	= 10
+upkeep		= 0
+sabotage	= 100
+sound		= "b_palace"
+sound_alt	= "b_generic"
+helptext	= _("\
+New settlements that build the Tribe Hut can produce Tribe units.\
+ The Tribe Hut gives improved tile production when in Tribalism\
+ goverment (no tile penalty). You can replace Tribe Hut with City Hall\
+ to increase town influence/vision radius, but at the expense of Tribe\
+ Hut bonus.\
+")
+
+[building_amusement_park]
+name            = _("Amusement Park")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Mass Entertainment", "Player"
+	 "MinCulture", "3800", "Player"
+    }
+graphic	= "b.amusement_park"
+graphic_alt	= "b.palace"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 100
+upkeep		= 4
+sabotage	= 100
+sound		= "b_colosseum"
+sound_alt	= "b_generic"
+helptext	= _("\
+Increase luxury output of a city by 50% \
+"), _("\
++1 Culture Point/turn.\
+")
+
+[building_amphitheater]
+name        = _("Amphitheater")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Drama", "Player"
+      "MinCulture", "500", "Player"
+    }
+graphic	= "b.amphitheater"
+graphic_alt	= "b.colosseum"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 3
+sabotage	= 100
+sound		= "b_colosseum"
+sound_alt	= "b_generic"
+helptext	= _("\
+Entertains the citizens of a city by adding 3 luxury points.\
+ The discovery of Cinematography reduces the luxury bonus to 2 points.
+"), _("\
++1Culture Point/turn (additional one if Shakespeare's Theatre exists)\
+")
+
+[building_airport]
+name		= _("Airport")
+genus		= "Improvement"
+flags		= "VisibleByOthers"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Radar", "Player"
+    }
+graphic	= "b.airport"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 120
+upkeep		= 3
+sabotage	= 100
+sound		= "b_airport"
+sound_alt	= "b_generic"
+helptext	= _("\
+Airports allow a city to produce veteran air units (including helicopters\
+ and missiles). Damaged air units which stay in town for one full turn\
+ without moving are completely restored.\
+"), _("\
+Two cities with Airports can airlift one unit per turn (including aircraft).\
+ Airlifting instantly transports the unit from one city to another and will\
+ use all of the unit's movement points. A unit must have some movement points\
+ left to be airlifted, and cannot carry cargo.\
+"), _("\
+Airport increases the city vision radius.\
+")
+
+[building_aqueduct]
+name		= _("Aqueduct")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Construction", "Player", TRUE
+      "Extra", "Irrigation", "Adjacent", TRUE
+      "Extra", "River", "Adjacent", FALSE
+      "Terrain", "Lake", "Adjacent", FALSE
+    }
+graphic	= "b.aqueduct"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 1
+sabotage	= 100
+sound		= "b_aqueduct"
+sound_alt	= "b_generic"
+helptext	= _("\
+Allows a city to grow larger than size 8.  See Sewer System.\
+"), _("\
+These larger cities enjoy increased defense (+50%) against both land\
+ and sea units, however such large settlements have a small risk of\
+ fire, which can destroy buildings in the city.\
+"), _("\
+Starting at size 5, growing cities incur an increasing risk of plague due\
+ to overcrowding. An Aqueduct reduces that base chance by 10%.\
+"), _("\
+Building an Aqueduct in a city without adjancent tile access to a lake or\
+ river requires knowledge of Construction and at least one irrigated tile within city radius. \
+These Aqueducts cost more to build and maintain.\
+")
+
+[building_aqueduct_lake]
+name		= _("Aqueduct, Lake")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Terrain", "Lake", "Adjacent"
+      "Tech", "Carpentry", "Player"
+    }
+graphic	= "b.aqueduct"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 20
+upkeep		= 0
+sabotage	= 100
+sound		= "b_aqueduct"
+sound_alt	= "b_generic"
+helptext	= _("\
+Allows a city to grow larger than size 8.  See Sewer System.\
+"), _("\
+These larger cities enjoy increased defense (+50%) against both land\
+ and sea units, however such large settlements have a small risk of\
+ fire, which can destroy buildings in the city.\
+"), _("\
+Starting at size 5, growing cities incur an increasing risk of plague due\
+ to overcrowding. An Aqueduct reduces that base chance by 10%.\
+"), _("\
+Aqueducts in cities with adjacent tile access to a lake require no special\
+ technology and are cheap to build and maintain.\
+")
+
+[building_aqueduct_river]
+name		= _("Aqueduct, River")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Extra", "River", "Adjacent", TRUE
+      "Terrain", "Lake", "Adjacent", FALSE
+      "Tech", "Carpentry", "Player", TRUE
+    }
+graphic	= "b.aqueduct"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 20
+upkeep		= 0
+sabotage	= 100
+sound		= "b_aqueduct"
+sound_alt	= "b_generic"
+helptext	= _("\
+Allows a city to grow larger than size 8.  See Sewer System.\
+"), _("\
+These larger cities enjoy increased defense (+50%) against both land\
+ and sea units, however such large settlements have a small risk of\
+ fire, which can destroy buildings in the city.\
+"), _("\
+Starting at size 5, growing cities incur an increasing risk of plague due\
+ to overcrowding. An Aqueduct reduces that base chance by 10%.\
+"), _("\
+Aqueducts in cities with adjacent tile access to a river require no special\
+ technology and are cheap to build and maintain.\
+")
+
+[building_bank]
+name		= _("Bank")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Banking", "Player"
+      "Building", "Marketplace", "City"
+    }
+graphic	= "b.bank"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 80
+upkeep		= 2
+sabotage	= 100
+sound		= "b_bank"
+sound_alt	= "b_generic"
+helptext	= _("\
+A Bank increases the tax output in a city by an additional 50%.\
+")
+
+[building_infantry_barracks1]
+name		= _("Infantry Barracks I")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Leather Tanning", "Player"
+    }
+graphic	= "b.infantry_barracks1"
+graphic_alt	= "b.barracks_i"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Metallurgy", "Player"
+      "Building", "Infantry Barracks II", "City"
+    }
+build_cost	= 25
+upkeep		= 1
+sabotage	= 100
+sound		= "b_barracks_i"
+sound_alt	= "b_generic"
+helptext	= _("\
+With an Infantry Barracks I, each new melee Infantry unit built in a city will\
+ automatically have Veteran status, which means that its attack and\
+ defense strengths are increased by 50%. Damaged infantry units\
+ which stay in town for one full turn without moving are completely restored.\
+"), _("\
+New reconnaissance (small land) units will have Recruit status, which gives\
+ an attack and defense bonus of 25%.\
+")
+
+[building_infantry_barracks2]
+name		= _("Infantry Barracks II")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Gunpowder", "Player"
+    }
+graphic	= "b.infantry_barracks2"
+graphic_alt	= "b.barracks_i"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 40
+upkeep		= 2
+sabotage	= 100
+sound		= "b_barracks_ii"
+sound_alt	= "b_generic"
+helptext	= _("\
+With an Infantry Barracks II, each new Infantry unit built in a city will\
+ automatically have Veteran status, which means that its attack and\
+ defense strengths are increased by 50%. Damaged infantry and recon. units\
+ which stay in town for one full turn without moving are completely restored.\
+"), _("\
+New reconnaissance (small land) units will have Recruit status, which gives\
+ an attack and defense bonus of 25%.\
+"), _("\
+If the Saltpeter strategic resource is located within range of the city's\
+ vision radius, the construction of Infantry Barracks II gives an additional\
+ 2 trade income.\
+")
+
+[building_stables_barracks]
+name		= _("Stables Barracks")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Saddle Stirrup", "Player"
+    }
+graphic	= "b.stables_barracks"
+graphic_alt	= "b.barracks_i"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Mobile Warfare", "Player"
+      "Building", "Workshop Barracks", "City"
+    }
+build_cost	= 40
+upkeep		= 2
+sabotage	= 100
+sound		= "b_barracks_ii"
+sound_alt	= "b_generic"
+helptext	= _("\
+With a Stables Barracks, each new cavalry (horse based) unit built in a\
+ city will automatically have Veteran status, which means that its attack\
+ and defense strengths are increased by 50%. Damaged cavalry units which\
+ stay in town for one full turn without moving are completely restored.\
+"), _("\
+If the Horse strategic resource is located within range of the city's\
+ working radius, the construction of Stables Barracks gives an additional\
+ 2 trade income.\
+"), _("\
+In case of Absolutism, also Chariots built in Stables Barracks would gain Veteran status.\
+")
+
+[building_workshop_barracks]
+name		= _("Workshop Barracks")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Mobile Warfare", "Player"
+      "Building", "Oil Refinery", "City"
+    }
+graphic	= "b.workshop_barracks"
+graphic_alt	= "b.barracks_i"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 3
+sabotage	= 100
+sound		= "b_barracks_iii"
+sound_alt	= "b_generic"
+helptext	= _("\
+With a Workshop Barracks, each new motorized/wheeled unit built in a\
+ city will automatically have Recruit status, which means that its attack\
+ and defense strengths are increased by 25% (this effect is cumulative with Ecole Speciale Militaire or DARPA bonus)\
+ Damaged Cavalry, Wheeled or Big Land units which stay in town for one full turn without moving are completely restored.\
+")
+
+[building_mahout_barracks]
+name		= _("Mahout Barracks")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Jainism", "Player"
+      "Terrain", "Jungle", "City"
+    }
+graphic	= "b.mahout_barracks"
+graphic_alt	= "b.barracks_i"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Tactics", "Player"
+      "Building", "Workshop Barracks", "City"
+    }
+build_cost	= 30
+upkeep		= 2
+sabotage	= 100
+sound		= "b_barracks_ii"
+sound_alt	= "b_generic"
+helptext	= _("\
+With this improvement, mahouts (kornaks) can train elephants to be more efficient in combat.\
+ Each new Elephant unit built in a city with Mahout Barracks and at least one Jungle tile around,\
+ will automatically have Veteran status, which means that its attack\
+ and defense strengths are increased by 50%. Damaged Elephant units which\
+ stay in town for one full turn without moving are completely restored.\
+"), _("\
+If the Elephant strategic resource is located within range of the city's\
+ work radius, the construction of Mahout Barracks gives an additional\
+ 2 trade points from this tile.\
+")
+
+[building_bunkers]
+name		= _("Bunkers")
+genus		= "Improvement"
+flags		= "VisibleByOthers"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Concrete", "Player", TRUE
+;      "Building", "City Walls", "City", FALSE
+    }
+graphic	= "b.bunkers"
+graphic_alt	= "b.city_walls"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 80
+upkeep		= 2
+sabotage	= 50
+sound		= "b_city_walls"
+sound_alt	= "b_generic"
+helptext	= _("\
+The Bunkers fortification makes it easier to defend a city. They add a 100%\
+ bonus to the intrinsic defense strength of units within the city against\
+ bombs, missiles and land units (including plunging fire artillery), but are ineffective against\
+ airborne and sea units. Bunkers also prevent the loss of population which\
+ occurs when a defending unit is defeated, except of attack performed by Air units.\
+ Unlike City Walls, Bunkers do not restrict city growth.\
+")
+
+[building_cathedral]
+name		= _("Cathedral")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Theology", "Player", TRUE
+      "Building", "Church", "City", TRUE
+	 "MinCulture", "2900", "Player", TRUE
+      "Building", "Temple", "City", FALSE
+	 "Building", "Mosque", "City", FALSE
+    }
+graphic	= "b.cathedral"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 80
+upkeep		= 3
+sabotage	= 100
+sound		= "b_cathedral"
+sound_alt	= "b_generic"
+helptext	= _("\
+A Cathedral makes 3 unhappy citizens content in a city. The addition of\
+ Michelangelo's Chapel (ally great wonder) increases the number of unhappy to\
+ content citizens to 6 (e.g. doubles the effect of Cathedral). This makes\
+ it easier to maintain order in that city, however it does not affect\
+ citizens made unhappy by aggression.  The addition of J.S. Bach's Cathedral\
+ (small wonder) brings 2 additional luxury points, except when in Communism\
+ government.\
+"), _("\
++2 Culture Points/turn (additional one if Michelangelo's Chapel exists).\
+")
+
+[building_cement_plant]
+name		= _("Cement Plant")
+genus		= "Improvement"
+flags		= "VisibleByOthers"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Concrete", "Player", TRUE
+      "Building", "Railway Station", "City", TRUE
+      "Building", "Factory", "City", TRUE
+      "Terrain", "Mountains", "City", TRUE
+      "Building", "Research Lab", "City", FALSE
+    }
+graphic	= "b.cement_plant"
+graphic_alt	= "b.factory"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 120
+upkeep	= 3
+sabotage	= 100
+sound		= "b_factory"
+sound_alt	= "b_generic"
+helptext	= _("\
+With a Railway Station present, the Cement Plant increases overall city\
+ production by 50%, adds an extra 2 trade points for each coal mine, and\
+ 2 shield points for each mine in mountains or desert without resources.\
+"), _("\
+ This facility increases significantly the rate of pollution caused by production.\
+"), _("\
+With sufficient shield production, cities with a Cement Plant can produce\
+ up to two units each turn, but only a single unit of types which cost\
+ population.\
+"), _("\
+Note: Cement Plant requires mountains within city range and cannot\
+ be built in a city, where the Research Lab is located.\
+")
+
+[building_city_hall]
+name		= _("City Hall")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Agricultural Farming", "Player"
+    }
+graphic	= "b.city_hall"
+graphic_alt	= "b.courthouse"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 30
+upkeep		= 0
+sabotage	= 20
+sound		= "b_palace"
+sound_alt	= "b_generic"
+helptext	= _("\
+Small towns that build a City Hall start acting like a city and\
+ gain a larger vision radius when the city grows to size 5 or above.\
+ See Airport.\
+")
+
+[building_church]
+name		= _("Church")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Christianity", "Player", TRUE
+	  "MinCulture", "1000", "Player", TRUE
+;obsolete      "Building", "Temple", "City", FALSE
+	  "Building", "Mosque", "City", FALSE
+	  "Building", "Monk Monastery", "City", FALSE
+	  "Building", "Temple of City God", "City", FALSE
+    }
+graphic	= "b.church"
+graphic_alt	= "b.cathedral"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 40
+upkeep		= 2
+sabotage	= 100
+sound		= "b_temple"
+sound_alt	= "b_generic"
+helptext	= _("\
+Makes 2 unhappy citizens content. Does not affect citizens made unhappy\
+ by aggression. Knowledge of Theology increases the effect of a Church,\
+ making an additional unhappy citizen content, except under Communism.
+"), _("\
++1 Culture Point/turn.\
+")
+
+[building_city_walls]
+name		= _("City Walls")
+genus		= "Improvement"
+flags		= "VisibleByOthers"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Masonry", "Player", TRUE
+;      "Building", "Palisade", "City", FALSE
+      "Building", "Bunkers", "City", FALSE
+    }
+graphic	= "b.city_walls"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+      "Building", "Bunkers", "City"
+    }
+build_cost	= 60
+upkeep		= 0
+sabotage	= 50
+sound		= "b_city_walls"
+sound_alt	= "b_generic"
+helptext	= _("\
+City Walls make it easier to defend a city. They add a 100% bonus to\
+ the intrinsic defense strength of units within the city against land\
+ units (that is a two-thirds increase for small cities, or a one-half\
+ increase for cities larger than size 8), but are ineffective against\
+ airborne, sea units or plunging fire artillery. City Walls also prevent\
+ the loss of population which occurs when a defending unit is defeated,\
+ except of attacks performed by Air units or plunging fire artillery.\
+"), _("\
+City Walls need to be dismantled to allow city growth beyond size of 48.\
+ For larger cities use Bunkers.\
+"), _("\
+Increases the vision range of the occupied city.\
+")
+
+[building_coastal_defense]
+name		= _("Coastal Defense")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Metallurgy", "Player"
+      "TerrainClass", "Oceanic", "Adjacent"
+    }
+graphic	= "b.coastal_defense"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 1
+sabotage	= 100
+sound		= "b_coastal_defense"
+sound_alt	= "b_generic"
+helptext	= _("\
+Coastal Defense gives a 100% bonus to the intrinsic defense strength\
+ of units within a city when defending against enemy ships or turrets. For small\
+ cities the defense strength is doubled by this improvement and for\
+ cities larger than size 8 it is increased by two-thirds.\
+")
+
+[building_courthouse]
+name		= _("Courthouse")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Code of Laws", "Player"
+	 "MinCulture", "200", "Player"
+    }
+graphic	= "b.courthouse"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 1
+sabotage	= 100
+sound		= "b_courthouse"
+sound_alt	= "b_generic"
+helptext	= _("\
+The Courthouse halves corruption and production waste\
+ in a city. In your capital or second capital, together with\
+ Post Office, corruption and waste is eliminated.\
+"), _("\
+Courthouse makes one unhappy citizen content (unless that citizen\
+ is unhappy about military activity), and makes the revolt cost\
+ of the city 4 times larger.\
+"),_("\
+Additional unhappy citizen content with Slavery Abolition for city\
+ ruled by Republic, Federation or Democracy.\
+"),_("\
+Food waste is halved in city ruled by Despotism (and eliminated entirely with\
+ Granary and Windmill/Watermill/Supermarket).\
+")
+
+[building_factory]
+name		= _("Factory")
+genus		= "Improvement"
+flags		= "VisibleByOthers"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Industrialization", "Player"
+    }
+graphic	= "b.factory"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 140
+upkeep		= 3
+sabotage	= 100
+sound		= "b_factory"
+sound_alt	= "b_generic"
+helptext	= _("\
+A Factory increases the shield production in a city by 25%.\
+ With the addition of an electrical plant (of any kind) the\
+ shield production increases an additional 25% (for a total\
+ of 50% improvement).\
+"), _("\
+This increase in production may contribute significantly to pollution.\
+"), _("\
+The health of Turrets is instantly regenerated in a city with Factory\
+ or Port Facility.\
+")
+
+[building_fire_station]
+name		= _("Fire Station")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Electricity", "Player"
+      "Building", "Water Treatment", "City"
+    }
+graphic	= "b.fire_station"
+graphic_alt	= "b.police_station"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 40
+upkeep		= 1
+sabotage	= 20
+sound		= "b_police_station"
+sound_alt	= "b_generic"
+helptext	= _("\
+Fire Station reduce risk and results of Fire and Industrial Accident disasters.\n\
+This improvement is mandatory for cities above size 48.\ 
+")
+
+[building_granary]
+name		= _("Granary")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Pottery", "Player"
+    }
+graphic	= "b.granary"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 40
+upkeep		= 1
+sabotage	= 100
+sound		= "b_granary"
+sound_alt	= "b_generic"
+helptext	= _("\
+The Granary decreases food waste in the city as it grows. When any\
+ small city grows or shrinks, 10 food points are saved instead of wasted.\
+ This helps cities to grow faster and more easily withstand famine. With\
+ a Granary this benefit is extended to cities of size 4 and above. Ten\
+ food points is half of what a small city needs to grow, but more points\
+ are needed for later growth steps.\
+"), _("\
+A Granary also halves the food wasted in cities far from your capital.\
+ Together with a Windmill/Watermill/Supermarket it eliminates food waste,\
+ except of Despotism where Courthouse is also required.\
+"), _("\
+TIP1: To maximize the speed with which a city grows, you should build\
+ a Granary before it grows larger than size 4.\
+"), _("\
+TIP2: Granary is mandatory for Rapture growth under First Republic,\
+ Direct Democracy or Legalism governments.\
+")
+
+[building_harbour]
+name        = _("Harbor")
+rule_name   = "Harbour"     ; en_GB spelling used originally
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Seafaring", "Player", TRUE
+      "TerrainFlag", "Sea", "Adjacent", TRUE
+      "Building", "Port Facility", "City", FALSE
+    }
+graphic	= "b.harbour"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+      "Building", "Port Facility", "City"
+    }
+build_cost	= 40
+upkeep		= 1
+sabotage	= 100
+sound		= "b_harbour"
+sound_alt	= "b_generic"
+helptext	= _("\
+Building a Harbor gives one extra food resource on shallow Ocean\
+ tiles, but not Lakes. The city needs to be coastal\
+ (e.g. adjacent to Ocean tiles) to build this improvement.\
+ City with Lighthouse gain extra food also from Deep Ocean tiles.\
+"), _("\
+All ships are repaired 50% faster in a city where Harbor exits.\
+"), _("\
+In case of Thalassocracy goverment, any new Sea unit built in a city with Harbor \
+have Veteran status.\
+"), _("\
+Tip: Port Facility is an improved version of the Harbor.\
+")
+
+[building_hospital]
+name		= _("Hospital")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Biotechnology", "Player"
+    }
+graphic	= "b.hospital"
+graphic_alt	= "b.courthouse"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 90
+upkeep	= 2
+sabotage	= 100
+sound		= "b_bank"
+sound_alt	= "b_generic"
+helptext	= _("\
+A Hospital reduces the chance of plaque in the city by 30%. The effect\
+ increases an additional 10-20% (depend on Welfare Policy) if Pasteur Institute (small wonder) exists.\n\
+Damaged Infantry and Small Land units recover 50% faster (not cumulative with Barracks).\
+")
+
+[building_hydro_plant]
+name		= _("Hydro Plant")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Turbine", "Player"
+      "Building", "Factory", "City"
+      "Extra", "River", "Adjacent"
+    }
+graphic	= "b.hydro_plant"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 180
+upkeep		= 4
+sabotage	= 100
+sound		= "b_hydro_plant"
+sound_alt	= "b_generic"
+helptext	= _("\
+Any kind of electrical plant increases the shield production effect of\
+ any Factory or Mfg. Plant in its city by 25% each. Thus, an electrical\
+ plant in combination with either a Factory or a Mfg. Plant gives a 50%\
+ production bonus over the level without any of these improvements. An\
+ electrical plant, Factory, and Mfg. Plant together give a 100% production\
+ bonus. The extra production will lead to the city generating more pollution.\
+"), _("\
+However, a Hydro Plant also reduces the pollution associated with shield\
+ production to 50% of its normal value, or 25% in combination with a Recycling\
+ Center. Pollution is reduced further for the player who owns the Hoover Dam\
+ (small wonder).  A Hydro Plant's effect is the same as that of a Nuclear\
+ Plant; with the Hoover Dam, its effect is increased to that of a Solar Plant.\
+"), _("\
+In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or Solar Plant\
+ can take effect at any one time.\
+")
+
+[building_lazaretto]
+name		= _("Lazaretto")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Medicine", "Player"
+    }
+graphic	= "b.lazaretto"
+graphic_alt	= "b.courthouse"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Genetic Engineering", "Player"
+      "Building", "Hospital", "City"
+    }
+build_cost	= 60
+upkeep	= 1
+sabotage	= 100
+sound		= "b_aqueduct"
+sound_alt	= "b_generic"
+helptext	= _("\
+The Lazaretto isolates ill people and therefore reduces chance of plaque by 20% \
+(30% if player have Thermal Bath small wonder).\
+")
+
+[building_library]
+name		= _("Library")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Writing", "Player"
+      "MinCulture", "100", "Player"
+    }
+graphic	= "b.library"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 2
+sabotage	= 100
+sound		= "b_library"
+sound_alt	= "b_generic"
+helptext	= _("\
+Increases the science output in a city by 75%, or 150% once the\
+ Great Library (great wonder) has been built by any player.\
+"), _("\
++1Culture Point/turn (additional one with player's Atlantic Telegraph Company).\
+")
+
+[building_madrasa]
+name		= _("Madrasa")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Fundamentalism", "Player"
+      "Building", "Mosque", "City"
+      "Building", "City Hall", "City"
+	 "MinCulture", "2400", "Player"
+    }
+graphic	= "b.madrasa"
+graphic_alt	= "b.library"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 90
+upkeep		= 2
+sabotage	= 100
+sound		= "b_university"
+sound_alt	= "b_generic"
+helptext	= _("\
+Increases the science output in a city by an additional 25%, regardless of government form.\
+"), _("\
+The total bonus is 100% if a Library is present.\
+"), _("\
+If Taj Mahal (great wonder) was build by allied player, each Madrasa makes one unhappy citizen content \
+(does not affect citizens made unhappy by aggression)\
+"), _("\
++1 Culture Point/turn.\
+")
+
+[building_manufacture]
+name		= _("Manufacture")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Craft Guilds", "Player"
+    }
+graphic	= "b.manufacture"
+graphic_alt	= "b.factory"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "The Corporation", "Player"
+      "Building", "Power Plant", "City"
+    }
+build_cost	= 80
+upkeep	= 1
+sabotage	= 100
+sound		= "b_factory"
+sound_alt	= "b_generic"
+helptext	= _("\
+The Manufacture is an early age form of a factory and increases the\
+ shield production in a city by 25%. With a desert mine (without\
+ resources) the shield increase is 50% and add an additional trade\
+ point for each coal mine within city's vision radius.\
+"), _("\
+This increase in production may slightly contribute to pollution.\
+ A Manufacture also increases the pollution caused by the\
+ population of the city.\
+")
+
+[building_marketplace]
+name		= _("Marketplace")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Currency", "Player"
+    }
+graphic	= "b.marketplace"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 0
+sabotage	= 100
+sound		= "b_marketplace"
+sound_alt	= "b_generic"
+helptext	= _("\
+A Marketplace increases the trade output in a city by 50%.\
+")
+
+[building_mass_transit]
+name		= _("Mass Transit")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Mass Production", "Player"
+      "Building", "Railway Station", "City"
+    }
+graphic	= "b.mass_transit"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 120
+upkeep		= 2
+sabotage	= 100
+sound		= "b_mass_transit"
+sound_alt	= "b_generic"
+helptext	= _("\
+A Mass Transit reduces the pollution generated by the population in a\
+ city by 50%. This city improvement counteracts the additional\
+ pollution associated with any two other buildings.\
+"), _("\
+Mass Transit, together with Railway Station, increases\
+ city workable and vision radius.\
+")
+
+[building_mfg_plant]
+name		= _("Mfg. Plant")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Plastics", "Player"
+      "Building", "Factory", "City"
+    }
+graphic	= "b.mfg_plant"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 220
+upkeep		= 4
+sabotage	= 100
+sound		= "b_mfg_plant"
+sound_alt	= "b_generic"
+helptext	= _("\
+The Manufacturing Plant increases the shield production in a city by an\
+ additional 25%, or 50% with an electrical plant of any kind in the same\
+ city. This effect is cumulative with that of a Factory.\
+"), _("\
+With sufficient shield production, cities with a Mfg. Plant can produce\
+ up to two units each turn, but only a single unit of types which cost\
+ population.\
+"), _("\
+This increase in shield production will contribute significantly to pollution\
+"), _("\
+A Manufacturing Plant also has a small risk of suffering an industrial\
+ accident, which can lead to pollution and reduce the city's population.\
+")
+
+[building_mosque]
+name		= _("Mosque")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Islam", "Player", TRUE
+	 "MinCulture", "1600", "Player", TRUE
+;obsolete	 "Building", "Temple", "City", FALSE
+	 "Building", "Church", "City", FALSE
+	  "Building", "Monk Monastery", "City", FALSE
+	  "Building", "Temple of City God", "City", FALSE
+    }
+graphic	= "b.mosque"
+graphic_alt	= "b.temple"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 40
+upkeep		= 1
+sabotage	= 100
+sound		= "b_temple"
+sound_alt	= "b_generic"
+helptext	= _("\
+A Mosque makes 2 unhappy citizen content (3 with Madrasa and allied Taj Mahal wonder). \
+Together with allied Kaaba, Mosque makes also content 0...2 citizen unhappy due to aggression, \
+depending on Religious Orthodoxy policy settings.\
+"), _("\
++1 Culture Point/turn.\
+")
+
+
+[building_nuclear_plant]
+name		= _("Nuclear Plant")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Nuclear Power", "Player"
+      "Building", "Factory", "City"
+    }
+graphic	= "b.nuclear_plant"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 240
+upkeep		= 3
+sabotage	= 100
+sound		= "b_nuclear_plant"
+sound_alt	= "b_generic"
+helptext	= _("\
+Any kind of electrical plant increases the shield production effect of\
+ any Factory or Mfg. Plant in its city by 25% each. Thus, an electrical\
+ plant in combination with either a Factory or a Mfg. Plant gives a 50%\
+ production bonus over the level without any of these improvements. An\
+ electrical plant, Factory, and Mfg. Plant together give a 100% production\
+ bonus. The extra production will lead to the city generating more pollution.\
+"), _("\
+However, a Nuclear Plant also reduces the pollution associated with shield\
+ production to 50% of its normal value, or 25% in combination with a Recycling\
+ Center. See Hydro Plant.\
+"), _("\
+A Nuclear Plant has a small risk of suffering a nuclear accident, which\
+ can lead to fallout and reduce the city's population.\
+"), _("\
+In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or\
+ Solar Plant can take effect at any one time.\
+"), _("\
+Nuclear Plant is required to produce nuclear units. Any tile with\
+ Uranium strategic resource within city's radius with Nuclear\
+ Plant would yields an additional 2 trade points.\
+")
+
+[building_offshore_platform]
+name		= _("Offshore Platform")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Offshore Exploration", "Player"
+      "Building", "Oil Refinery", "City"
+      "TerrainClass", "Oceanic", "Adjacent"
+    }
+graphic	= "b.offshore_platform"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 120
+upkeep		= 3
+sabotage	= 100
+sound		= "b_offshore_platform"
+sound_alt	= "b_generic"
+helptext	= _("\
+With an Offshore Platform every Ocean, Deep Ocean (with Oil Platform), or Lake tile\
+ (except those with Fish/Whale resources) worked by the city yields one extra shield resource. \
+ The city needs to be next to a water tile and have Oil Refinery in order\
+ to build this improvement.\
+"), _("\
+Offshore Platforms also increase the pollution caused by the\
+ population of the city.\
+")
+
+[building_oil_refinery]
+name		= _("Oil Refinery")
+genus		= "Improvement"
+flags		= "VisibleByOthers"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Refining", "Player"
+    }
+graphic	= "b.oil_refinery"
+graphic_alt	= "b.power_plant"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 190
+upkeep	= 4
+sabotage	= 100
+sound		= "b_factory"
+sound_alt	= "b_generic"
+helptext	= _("\
+Oil Refinery increases the overall city production by 25%; doubles\
+ production from oil wells and adds an extra 4 trade points for each\
+ oil field with oil well (providing cheap upkeep). An Oil Refinery is\
+ also required for building of the Offshore Platform and gain additional production from Oil Wells.\
+"), _("\
+There is a small additional risk of pollution.\
+")
+
+
+[building_palisade]
+name		= _("Palisade")
+genus		= "Improvement"
+flags		= "VisibleByOthers"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Forestry", "Player", TRUE
+      "Building", "City Walls", "City", FALSE
+      "Building", "Bunkers", "City", FALSE
+    }
+graphic	= "b.palisade"
+graphic_alt	= "b.city_walls"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Concrete", "Player"
+      "Building", "City Walls", "City"
+    }
+build_cost	= 30
+upkeep		= 1
+sabotage	= 50
+sound		= "b_city_walls"
+sound_alt	= "b_generic"
+helptext	= _("\
+Palisade adds a +50% bonus to the intrinsic defense strength of units\
+ within the city against land units (and additional 50% in case of Horse units),\
+ but is ineffective against airborne, sea units, turrets or plunging fire artillery. \
+ Unlike City Walls, Palisade does not prevent the loss of population which occurs when a defending unit\
+ is defeated by a land unit. Wooden Palisades need upkeep to be renovated\
+ or rebuilt, but unlike City Walls, doesn't constrain city growth.
+")
+
+[building_police_station]
+name		= _("Police Station")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Socialism", "Player"
+    }
+graphic	= "b.police_station"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 50
+upkeep		= 2
+sabotage	= 100
+sound		= "b_police_station"
+sound_alt	= "b_generic"
+helptext	= _("\
+In case of Democracy, Republic or Federation, a Police Station neutralizes any unhappiness caused by \
+one military unit in its city. For all governments, it also makes 1 unhappy citizen content \
+provided they are not unhappy about aggression. \
+Celebrating cities ruled by Fascism get additional shield production from each tile already producing shields.\
+")
+
+[building_port_facility]
+name		= _("Port Facility")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Offshore Exploration", "Player"
+      "TerrainClass", "Oceanic", "Adjacent"
+    }
+graphic	= "b.port_facility"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 2
+sabotage	= 100
+sound		= "b_port_facility"
+sound_alt	= "b_generic"
+helptext	= _("\
+Port Facility gives one extra food resource on all Ocean or\
+ Deep Ocean tiles, but not Lakes. The city needs to be coastal\
+ (e.g. adjacent to Ocean or Deep Ocean tiles) to build this improvement.\
+"), _("\
+Port Facility allows a city to build veteran navy units.  Also, damaged sea units\
+ and turets which stay in town for one full turn without moving are completely\
+ restored.\
+"), _("\
+Together with supermarket, increases the tax output in a city by 25%\ 
+(not cumulative with Railway Station).\
+"), _("\
+Increase city workable radius (not cumulative with Mass Transit or Eiffel Tower)\
+")
+
+
+[building_power_plant]
+name		= _("Power Plant")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Electricity", "Player"
+      "Building", "Factory", "City"
+    }
+graphic	= "b.power_plant"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 130
+upkeep		= 4
+sabotage	= 100
+sound		= "b_power_plant"
+sound_alt	= "b_generic"
+helptext	= _("\
+Any kind of electrical plant increases the shield production effect of\
+ any Factory or Mfg. Plant in its city by 25% each. Thus, an electrical\
+ plant in combination with either a Factory or a Mfg. Plant gives a 50%\
+ production bonus over the level without any of these improvements. An\
+ electrical plant, Factory, and Mfg. Plant together give a 100% production\
+ bonus. The extra production will lead to the city generating more pollution.\
+"), _("\
+Power plant adds 2 trade points for each coal mine within city radius.\
+"), _("\
+In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or\
+ Solar Plant can take effect at any one time.\
+")
+
+[building_post_office]
+name		= _("Post Office")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Electromagnetism", "Player"
+    }
+graphic	= "b.post_office"
+graphic_alt	= "b.police_station"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 40
+upkeep		= 0
+sabotage	= 10
+sound		= "b_police_station"
+sound_alt	= "b_generic"
+helptext	= _("\
+Post Office allow additional traderoute to this city, if Logistics advance is known to the player.\n\
+This improvement decrease production waste by 20% by istelf, and together with Courthouse, \
+decrease both trade corruption and waste by 70%.\ 
+")
+
+[building_recycling_center]
+name		= _("Recycling Center")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Recycling", "Player"
+    }
+graphic	= "b.recycling_center"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 140
+upkeep		= 2
+sabotage	= 100
+sound		= "b_recycling_center"
+sound_alt	= "b_generic"
+helptext	= _("\
+Building a Recycling Center reduces the amount of pollution generated\
+ by shield production in a city by 50%. With the addition of either\
+ a Nuclear Plant, Hydro Plant, or Solar Plant the pollution is reduced\
+ by an additional 25%.\
+"), _("\
+Together with Sewer System, Recycling Center reduces also amount of pollution\
+ generated by the population in the city by 20%\
+")
+
+[building_railway_station]
+name		= _("Railway Station")
+genus		= "Improvement"
+flags		= "VisibleByOthers"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Railroad", "Player"
+    }
+graphic	= "b.station"
+graphic_alt	= "b.mass_transit"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 120
+upkeep	= 2
+sabotage	= 100
+sound		= "b_factory"
+sound_alt	= "b_generic"
+helptext	= _("\
+Railway Station, together with a railroaded tile, is required\
+- to increase food productivity of tiles with special resources,\
+which already produce food (wheat, bison, rice, fruit etc., without mine)\n\
+ - to increase productivity and additional trade from coal mines\
+ and iron mines (together with Steel Mill, Cement or Power Plant).\
+"), _("\
+Together with Supermarket, increases the tax output in a city by 25%.\
+"), _("\
+Required to produce any trains units and provide fast regeneration of train units.\
+")
+
+[building_research_lab]
+name		= _("Research Lab")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Miniaturization", "Player", TRUE
+      "Building", "University", "City", TRUE
+      "Building", "Steel Mill", "City", FALSE
+      "Building", "Cement Plant", "City", FALSE
+	 "MinCulture", "5500", "Player", TRUE
+    }
+graphic	= "b.research_lab"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 120
+upkeep		= 4
+sabotage	= 100
+sound		= "b_research_lab"
+sound_alt	= "b_generic"
+helptext	= _("\
+Increases the science output in a city by an additional 75%,\
+ or by 150% once the Internet great wonder has been built by\
+ any player and Computers advance is known by player.\
+"), _("\
+The total bonus is 225% if a Library, a University and a Research\
+ Lab are all present in the same city, increasing to 400% once the\
+ Isaac Newton's College (great wonder), Massachusetts Institute of\
+ Technology (small wonder) and the Internet (great wonder) have all\
+ been built.\
+"), _("\
+Research Lab requires a clean environment and cannot be established\
+ in a city, where Steel Mill or Cement Plant is working.\
+"), _("\
++2 Culture Points/turn (additional one with player's Large Hadron Collider).\
+")
+
+[building_river_embankments]
+name		= _("River Embankments")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Concrete", "Player"
+      "Extra", "River", "Adjacent"
+      "Building", "Sewer System", "City"
+    }
+graphic	= "b.river_embankments"
+graphic_alt	= "b.city_walls"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 50
+upkeep		= 1
+sabotage	= 20
+sound		= "b_city_walls"
+sound_alt	= "b_generic"
+helptext	= _("\
+River embankments eliminate totally any risk of the Flood disaster in city \
+adjacent to tile with river, also in case of coastal city with river, \
+risk and results of Tsunami disasters are substancially reduced.\n\
+Additionally, riverside boulevard make one unhappy citizen content \
+(except of unhappiness caused by militry units), if there is no pollution around city.\
+")
+
+[building_sacred_cairn]
+name		= _("Sacred Cairn")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Shamanism", "Player", TRUE
+;      "Terrain", "Tundra", "Local", TRUE
+    }
+graphic	= "b.sacred_cairn"
+graphic_alt	= "b.temple"
+obsolete_by	=
+    { "type", "name", "range"
+      "Building", "Temple", "City"
+      "Building", "Church", "City"
+      "Building", "Mosque", "City"
+      "Tech", "Theology", "Player"
+    }
+build_cost	= 15
+upkeep		= 0
+sabotage	= 100
+sound		= "b_temple"
+sound_alt	= "b_generic"
+helptext	= _("\
+Shamanistic rituals around Sacred Cairn encourage local society to live in harsh conditions. \
+Any Tundra tile will give additional food, and one unhappy citizens would become content.\
+")
+
+[building_sam_battery]
+name		= _("SAM Battery")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Rocketry", "Player"
+    }
+graphic	= "b.sam_battery"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 90
+upkeep		= 3
+sabotage	= 100
+sound		= "b_sam_battery"
+sound_alt	= "b_generic"
+helptext	= _("\
+Doubles the intrinsic defense strength of units within a city\
+ when defending against aircraft (including helicopters).\
+"), _("\
+Also protect against the loss of population which occurs \
+when a defending unit is defeated by an airborne unit (except of Missiles)
+")
+
+[building_sdi_defense]
+name		= _("SDI Defense")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Laser", "Player"
+    }
+graphic	= "b.sdi_defense"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 180
+upkeep		= 4
+sabotage	= 100
+sound		= "b_sdi_defense"
+sound_alt	= "b_generic"
+helptext	= _("\
+Protects a city and its environs (up to 2 tiles away) from attacks\
+ by other nations' Nuclear units. A Nuclear unit not owned by you\
+ or a teammate which attacks a city with SDI Defense, or attacks a\
+ unit (or is deliberately exploded) within range, has a 75% chance to\
+ be shot down. Also, doubles the intrinsic defense strength of units\
+ in the city when defending against conventional missiles.\
+")
+
+[building_sewer_system]
+name		= _("Sewer System")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Sanitation", "Player"
+      "MinSize", "9", "City"
+    }
+graphic	= "b.sewer_system"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 80
+upkeep		= 2
+sabotage	= 100
+sound		= "b_sewer_system"
+sound_alt	= "b_generic"
+helptext	= _("\
+Together with an Aqueducts (or Water Treatment), allows a city to grow larger than size 16,\
+ (Water Treatment required to grow beyond 24) and further reduces the chance of a plague\
+ (by 20% of the base chance).\
+"), _("\
+Together with Recycling Center reduces amount of pollution\
+ generated by the population in the city by 20%\
+")
+
+[building_shrine_torii]
+name		= _("Shrine Torii")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Shinto", "Player", TRUE
+	 "Building", "Temple", "City", TRUE
+	 "MinCulture", "1300", "Player", TRUE
+	 "Building", "Church", "City", FALSE
+	 "Building", "Mosque", "City", FALSE
+    }
+graphic	= "b.shrine_torii"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 15
+upkeep		= 0
+sabotage	= 100
+sound		= "b_temple"
+sound_alt	= "b_generic"
+helptext	= _("\
+Temple improvement: make additional 1 unhappy citizen content. Not \
+cumulative with Temple of Artemis (small wonder) or Temple of City \
+God (small wonder), but cumulative with Golden Temple (great wonder). \
+If allied player founded Kyoto Fushimi Inari (great wonder), up to two additional content citizens are happy, \
+depending on Religious Orthodoxy policy settings, and 1 Culture Point is earned each turn.\
+")
+
+[building_solar_plant]
+name		= _("Solar Plant")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Environmentalism", "Player"
+      "Building", "Factory", "City"
+    }
+graphic	= "b.solar_plant"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 320
+upkeep		= 4
+sabotage	= 100
+sound		= "b_solar_plant"
+sound_alt	= "b_generic"
+helptext	= _("\
+Any kind of electrical plant increases the shield production effect of\
+ any Factory or Mfg. Plant in its city by 25% each. Thus, an electrical\
+ plant in combination with either a Factory or a Mfg. Plant gives a 50%\
+ production bonus over the level without any of these improvements. An\
+ electrical plant, Factory, and Mfg. Plant together give a 100% production\
+ bonus. The extra production will lead to the city generating more pollution.\
+"), _("\
+A Solar Plant also reduces the pollution associated with shield\
+ production to 25% of its normal value, or eliminates it entirely in\
+ combination with a Recycling Center.\
+"), _("\
+In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or\
+ Solar Plant can take effect at any one time.\
+")
+
+[building_space_component]
+name		= _("Space Component")
+genus		= "Special"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Fusion Power", "Player"
+      "Building", "Factory", "City"
+      "Building", "University", "City"
+      "Building", "Research Lab", "City"
+      "Building", "Space Lift", "City"
+    }
+graphic	= "b.space_component"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 350
+upkeep		= 0
+sabotage	= 100
+sound		= "b_space_component"
+sound_alt	= "b_generic"
+helptext	= _("\
+Space Components can be differentiated into Propulsion and Fuel\
+ Components.  Each pair of them reduces your spaceship's travel\
+ time.  You can build up to 8 pairs.\
+"), _("\
+Before you can build any spaceship parts, the Apollo Program wonder\
+ must have been built by any player.\
+")
+
+[building_space_module]
+name		= _("Space Module")
+genus		= "Special"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Environmentalism", "Player"
+      "Building", "Factory", "City"
+      "Building", "University", "City"
+      "Building", "Research Lab", "City"
+      "Building", "Space Lift", "City"
+    }
+graphic	= "b.space_modules"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 700
+upkeep		= 0
+sabotage	= 100
+sound		= "b_space_module"
+sound_alt	= "b_generic"
+helptext	= _("\
+Space Modules are the most expensive parts of spaceships. There\
+ are three different types of Space Module:\
+"), _("\
+- Habitation Module: provides living space for 10,000 people.\
+"), _("\
+- Life Support Module: provides food and water for the population of\
+ one Habitation Module.\
+"), _("\
+- Solar Panels: provides the energy needed for any two of the other\
+ Modules.\
+"), _("\
+You can build up to 4 Space Modules of each kind.\
+"), _("\
+Before you can build any spaceship parts, the Apollo Program wonder\
+ must have been built by any player.\
+")
+
+[building_space_structural]
+name		= _("Space Structural")
+genus		= "Special"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Nanotechnology", "Player"
+      "Building", "Factory", "City"
+      "Building", "University", "City"
+      "Building", "Research Lab", "City"
+      "Building", "Space Lift", "City"
+    }
+graphic	= "b.space_structural"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 200
+upkeep		= 0
+sabotage	= 100
+sound		= "b_space_structural"
+sound_alt	= "b_generic"
+helptext	= _("\
+Space Structurals form the base of your spaceship.  All other\
+ spaceship parts need to be connected to Structurals in order to\
+ function.  You can build up to 32 Space Structurals.\
+"), _("\
+Before you can build any spaceship parts, the Apollo Program wonder\
+ must have been built by any player and Space Lift must to be built in your city.\
+")
+
+[building_steel_mill]
+name		= _("Steel Mill")
+genus		= "Improvement"
+flags		= "VisibleByOthers"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Steel", "Player", TRUE
+      "Building", "Railway Station", "City", TRUE
+      "Building", "Factory", "City", TRUE
+      "Resource", "Coal", "City", TRUE
+      "Building", "Research Lab", "City", FALSE
+    }
+graphic	= "b.steel_mill"
+graphic_alt	= "b.power_plant"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 190
+upkeep	= 4
+sabotage	= 100
+sound		= "b_factory"
+sound_alt	= "b_generic"
+helptext	= _("\
+Steel Mill increases overall city production twice, production from iron mines by 50%\
+and add extra 4 trade point for each coal mine (i.e. cheap upkeep).\n\
+Railway station in city and railroads on mine tiles are necessary to gain above effects.\n\
+This facility increase substantially rate of pollution caused by production.
+"), _("\
+With sufficient shield production, cities with a Steel Mill \
+can produce up to two units each turn (but only single units of types \
+which cost population).\
+"), _("\
+Note: Steel Mill require Iron resource within city range and cannot be built in a city, where Research Lab is located.\
+")
+
+[building_stock_exchange]
+name		= _("Stock Exchange")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Economics", "Player"
+      "Building", "Bank", "City"
+      "Building", "City Hall", "City"
+    }
+graphic	= "b.stock_exchange"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 120
+upkeep		= 3
+sabotage	= 100
+sound		= "b_stock_exchange"
+sound_alt	= "b_generic"
+helptext	= _("\
+Increases tax output in a city by an additional 50%, \
+100% total with Bank (except under a Communist government). \n\
+Additionally, together with Super Highways, increase city trade by 25% (regardless of government). \
+")
+
+[building_super_highways]
+name		= _("Super Highways")
+genus		= "Improvement"
+flags		= "VisibleByOthers"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Logistics", "Player"
+    }
+graphic	= "b.super_highways"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 120
+upkeep		= 3
+sabotage	= 100
+sound		= "b_super_highways"
+sound_alt	= "b_generic"
+helptext	= _("\
+Each tile around the city with highways and without farmland, that\
+ is already generating some trade, produces one extra trade resource.\
+ The same applies to the city center tile (even if it is receiving a\
+ farmland bonus).\
+"), _("\
+Together with the Stock Exchange, also increase overall city Trade by an additional 25%.\
+"), _("\
+Super Highways also increase the pollution caused by the population\
+ of the city.\
+")
+
+[building_supermarket]
+name		= _("Supermarket")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Refrigeration", "Player"
+      "Building", "Marketplace", "City"
+    }
+graphic	= "b.supermarket"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 80
+upkeep		= 3
+sabotage	= 100
+sound		= "b_supermarket"
+sound_alt	= "b_generic"
+helptext	= _("\
+Halves food waste in the city and add \
+1 food and 1 shield to the city center.\
+"),
+_("\
+Together with Railway Station or Port Facility, \
+increases the tax output in a city by 25%.\
+")
+
+[building_temple]
+name		= _("Temple")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Ceremonial Burial", "Player", TRUE
+;	 "MinCulture", "100", "Player", TRUE
+	 "Building", "Church", "City", FALSE
+	 "Building", "Mosque", "City", FALSE
+    }
+graphic	= "b.temple"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+;      "Building", "Church", "City"
+      "Building", "Mosque", "City"
+    }
+build_cost	= 30
+upkeep		= 1
+sabotage	= 100
+sound		= "b_temple"
+sound_alt	= "b_generic"
+helptext	= _("\
+Makes one unhappy citizen content. The Mysticism advance doubles \
+this effect (except under a Communist government). With both Mysticism \
+and the Temple of Artemis, 4 citizens are made content (3 under \
+Communism). Does not affect citizens made unhappy by aggression.\
+"),
+_("\
+Shrine Torii, Temple of City God or Golden Temple also make additional unhappy citizen content, \
+but not cumulative with Temple of Artemis.\
+"), _("\
++1 Culture Point/turn.\
+")
+
+[building_textille_mill]
+name		= _("Textille Mill")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Machinery", "Player"
+      "Extra", "River", "Adjacent"
+    }
+graphic	= "b.textille_mill"
+graphic_alt	= "b.factory"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Plastics", "Player"
+      "Building", "Mfg. Plant", "City"
+    }
+build_cost	= 100
+upkeep	= 2
+sabotage	= 100
+sound		= "b_factory"
+sound_alt	= "b_generic"
+helptext	= _("\
+Increase the shield production from forests by 50%, \
+additionally generate additional revenue from tiles with Silk resources (i.e. cheap upkeep). \n \
+"), _("\
+This increase in production may contribute slightly to pollution.\
+"), _("\
+Textille Mill use water power, therefore can't be built in a city \
+without access to a river. \
+")
+
+[building_theatre]
+name            = _("Theatre Stage")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Theatre", "Player"
+	 "MinCulture", "3900", "Player"
+    }
+graphic	= "b.theatre"
+graphic_alt	= "b.colosseum"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 80
+upkeep		= 4
+sabotage	= 100
+sound		= "b_colosseum"
+sound_alt	= "b_generic"
+helptext	= _("\
+Entertains the citizens of a city, adding 2 luxury points. \
+ (4 after the discovery of Cinematography.) 
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_water_treatment]
+name		= _("Water Treatment")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Industrialization", "Player"
+    }
+graphic	= "b.water_treatment"
+graphic_alt	= "b.sewer_system"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 1
+sabotage	= 50
+sound		= "b_sewer_system"
+sound_alt	= "b_generic"
+helptext	= _("\
+Water treatment facilities allows a city to grow larger than size 8 (can be used instead of aqueduct) \
+and is required for growth beyond size 24, \
+further reduces the chance of a plague (by 20% of the base chance).\
+")
+
+[building_watchtower]
+name		= _("Watchtower")
+genus		= "Improvement"
+flags		= "VisibleByOthers"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Glass Working", "Player"
+    }
+graphic	= "b.watchtower"
+graphic_alt	= "b.city_walls"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 20
+upkeep		= 0
+sabotage	= 50
+sound		= "b_sewer_system"
+sound_alt	= "b_generic"
+helptext	= _("\
+Increase vision range of the city.\
+")
+
+[building_watermill]
+name		= _("Watermill")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "The Wheel", "Player", TRUE
+      "Extra", "River", "Adjacent", TRUE
+      "Building", "Windmill", "City", FALSE
+    }
+graphic	= "b.watermill"
+graphic_alt	= "b.factory"
+obsolete_by	=
+    { "type", "name", "range"
+      "Building", "Supermarket", "City"
+    }
+build_cost	= 20
+upkeep	= 1
+sabotage	= 100
+sound		= "b_factory"
+sound_alt	= "b_generic"
+helptext	= _("\
+Water wheel can drive machinery or millstones. Such improvement add 1 food and 1 shield \
+to the city center and halves food waste.\
+"), _("\
+Watermill use water power, therefore can't be built in a city \
+without access to a river. \
+")
+
+[building_windmill]
+name		= _("Windmill")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "The Wheel", "Player", TRUE
+      "Building", "Watermill", "City", FALSE
+    }
+graphic	= "b.windmill"
+graphic_alt	= "a.environmentalism"
+obsolete_by	=
+    { "type", "name", "range"
+      "Building", "Supermarket", "City"
+    }
+build_cost	= 15
+upkeep	= 1
+sabotage	= 100
+sound		= "b_factory"
+sound_alt	= "b_generic"
+helptext	= _("\
+Windmill uses power of wind to grind grains. Such improvement halves food waste \
+(entirely eliminates food waste together with Granary).\
+")
+
+[building_university]
+name		= _("University")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "University", "Player"
+      "Building", "Library", "City"
+      "Building", "City Hall", "City"
+	 "MinCulture", "3400", "Player"
+    }
+graphic	= "b.university"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 120
+upkeep		= 3
+sabotage	= 100
+sound		= "b_university"
+sound_alt	= "b_generic"
+helptext	= _("\
+Increases the science output in a city by an additional 75%, or \
+by 150% once Isaac Newton's College has been built by any player.\
+"), _("\
+Notice: under Fundamentalism government, University output is dimnished to 25% (or 100% with Isaac Newton College).\
+"), _("\
++2 Culture Points/turn (additional one with player's Pasteur Institute).\
+")
+
+[building_yasir]
+name		= _("Yasir")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Slave Trade", "Player", TRUE
+      "Building", "Marketplace", "City", TRUE
+    }
+graphic	= "b.yasir"
+graphic_alt	= "b.marketplace"
+obsolete_by	=
+    { "type", "name", "range"
+      "Building", "Slavery Abolition", "Player"
+      "Building", "United Nations", "World"
+      "Tech", "Engineering", "Player"
+    }
+build_cost	= 90
+upkeep		= 1
+sabotage	= 20
+sound		= "b_palace"
+sound_alt	= "b_generic"
+helptext	= _("\
+Yasir was a name of a place, where slaves were bought or sold.\n\
+With this building, cheap slave labor can be obtained and used as workers or migrants.\n\
+Additionally, city where Yasir is located, would get 25% more gold (not valid for Republic or Democracy), but additional unhapinnes would be generated for city with Yasir.\n\
+Slavery Abolition wonder builded by owner, or United Nation wonder builded by any player, will obsolete this building.\
+")
+
+;small wonders
+
+[building_atlantic_telegraph_company]
+name		= _("Atlantic Telegraph Company")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Radio", "Player"
+      "Building", "Post Office", "City"
+    }
+graphic	= "b.atlantic_telegraph_company"
+graphic_alt	= "b.university"
+obsolete_by	= 
+    { "type", "name", "range"
+    }
+build_cost	= 1300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_marco_polos_embassy"
+sound_alt	= "w_generic"
+helptext	= _("\
+Player building it gets an embassy with all players.\
+"), _("\
++1 Culture Point/turn, and any player's city with Library will gain additional culture point per turn.\
+")
+
+[building_colosseum]
+name            = _("Colosseum")
+; rule_name	= "Colosseum"
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Martial Games", "Player"
+	 "MinCulture", "850", "Player"
+    }
+graphic	= "b.colosseum_wonder"
+graphic_alt	= "b.colosseum"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Mass Entertainment", "Player"
+    }
+build_cost	= 200
+upkeep		= 3
+sabotage	= 100
+sound		= "b_colosseum"
+sound_alt	= "b_generic"
+helptext	= _("\
+Increase luxury output of a city by 50%, \
+additionally in case of First Republic, \
+add one veteran level to  any Legion or Swordsmen unit.\
+"), _("\
+Unlike most other wonders, entertainment wonders need gold upkeep.\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_copernicus_observatory]
+name		= _("Copernicus' Observatory")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Astronomy", "Player"	 
+	 "MinCulture", "3500", "Player"
+    }
+graphic	= "b.copernicus_observatory"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Great Unification Theory", "Player", FALSE
+    }
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_copernicus_observatory"
+sound_alt	= "w_generic"
+helptext	= _("\
+Each tile worked by the city where this wonder is built produces \
+one extra research point.\
+"), _("\
++4 Culture Points/turn.\
+")
+
+[building_DARPA]
+name		= _("DARPA")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Computers", "Player"
+      "Building", "Research Lab", "City"
+	 "MinCulture", "8500", "Player"
+    }
+graphic	= "b.DARPA"
+graphic_alt	= "b.research_lab"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 800
+upkeep	= 0
+sabotage	= 0
+sound		= "w_internet"
+sound_alt	= "w_generic"
+helptext	= _("\
+Defense Advanced Research Projects Agency upgrades additionally second obsolete unit per game turn, on cost of its veteran level\
+ (Warfrare Museum prohibit any autoupgrades).\n\
+Big Land military units have Veteran level instead of Recruits, if builded in Workshop Barracks.\n\
+DARPA is also required to build Internet.\
+"), _("\
++5 Culture Points/turn.\
+")
+
+[building_palace]
+name		= _("Palace")
+genus		= "SmallWonder"
+;flags		= "SaveSmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Carpentry", "Player"
+;      "Building", "City Hall", "City"
+	 "MinCulture", "10", "Player"
+    }
+graphic	= "b.palace"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 70
+upkeep		= 0
+sabotage	= 0
+sound		= "b_palace"
+sound_alt	= "b_generic"
+helptext	= _("\
+Construction of a Palace makes a city the capital and the center of\
+ your government. Waste in other cities (corruption, production waste,\
+ and food waste) is often related to how far away from the capital they\
+ are. On top of this, corruption and production waste in your capital is\
+ 30% of what it would otherwise be. A Courthouse with Post Office will eliminate it\
+ entirely.\
+"), _("\
+The cost to enemy Diplomats and Spies of inciting a revolt in a city\
+ also depends upon the city's distance from the capital (under all\
+ forms of government). Your capital city itself cannot be incited to\
+ revolt and enjoys a bonus when enemy agents try to evade your own agents\
+ stationed in the city, or sabotage your buildings.\
+"), _("\
+Take good care of your capital, as its loss may result in your empire\
+ plunging into civil war. Losing your current palace also results in\
+ losing whatever spaceship you might have. See Ecclesiastical Palace.\
+"), _("\
+If the capital is in a dangerous location, or a more central capital\
+ would give a better corruption distribution, you can move your palace\
+ by building it in another city.\
+"), _("\
+Under Despotism the city containing the palace gains a +75% gold bonus,\
+ and under Monarchy a +50% gold bonus.\
+"), _("\
+Palace is required for any centralized government! Start building it before\
+ conversion from Tribalism to Despotism or Monarchy. You need some Culture\
+ Points, which can be gainded from Temples, or by achievements (conquering\
+ other cultures, revealing some unknown islands).\
+"), _("\
+Capital city with a Palace gains an additional 4 luxury points (except for\
+ Communism). There is no science penalty for city with Palace in case of\
+ Tribal or Despotism governments.\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_ecclesiastical_palace]
+name		= _("Ecclesiastical Palace")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Theology", "Player", TRUE
+      "Building", "Church", "City", TRUE
+      "Building", "Cathedral", "City", TRUE
+      "MinCulture", "3200", "Player", TRUE
+      "Building", "Angkor Wat", "Player", FALSE
+      "Building", "Forbidden City", "Player", FALSE
+      "Building", "Sultan Palace", "Player", FALSE
+      "Building", "Osaka Castle", "Player", FALSE
+      "Building", "Palace", "City", FALSE
+    }
+graphic	= "b.ecclesiastical_palace"
+graphic_alt	= "b.palace"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 140
+upkeep		= 0
+sabotage	= 0
+sound		= "b_palace"
+sound_alt	= "b_generic"
+helptext	= _("\
+Makes a city the ecclesiastical capital, that acts as a second center\
+ of government.\
+"), _("\
+Waste in other cities (corruption, production waste, and food waste) is\
+ often related to how far away from the capital they are. On top of this,\
+ corruption and production waste in your capital is 30% of what it would\
+ otherwise be.\
+"), _("\
+The city where this palace is located cannot be incited to revolt,\
+ and enjoys a bonus when enemy agents try to evade your own agents\
+ stationed in the city, or sabotage your buildings.\
+"), _("\
+Under Despotism the city containing the palace gains a +75% gold bonus,\
+ and under Monarchy a +50% gold bonus.\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_forbidden_city]
+name		= _("Forbidden City")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Confucianism", "Player", TRUE
+      "Building", "Temple", "City", TRUE
+      "Building", "City Walls", "City", TRUE
+      "MinCulture", "3400", "Player", TRUE
+      "Building", "Ecclesiastical Palace", "Player", FALSE
+      "Building", "Angkor Wat", "Player", FALSE
+      "Building", "Sultan Palace", "Player", FALSE
+      "Building", "Osaka Castle", "Player", FALSE
+      "Building", "Palace", "City", FALSE
+    }
+graphic	= "b.forbidden_city"
+graphic_alt	= "b.palace"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 200
+upkeep		= 0
+sabotage	= 0
+sound		= "b_palace"
+sound_alt	= "b_generic"
+helptext	= _("\
+Giant palace complex, which makes a city a second center \
+of government and is required for Legalism.\n\
+Additionally, under Legalism government, extra 4 luxury points are generated in this city.\
+"), _("\
+Waste in other cities (corruption, production waste, and food waste) \
+is related to how far away from the nearest capital they are. On top of \
+this, corruption and production waste in the capital itself is 30% \
+of what it would otherwise be (and a Courthouse with Post Office will eliminate it \
+entirely).\
+"), _("\
+The city where this palace is located cannot be incited to revolt, \
+and enjoys a bonus when enemy agents try to evade your own agents \
+stationed in the city, or sabotage your buildings.\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_sultan_palace]
+name		= _("Sultan Palace")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Sunnism", "Player", TRUE
+      "Building", "Mosque", "City", TRUE
+      "Building", "Madrasa", "City", TRUE
+      "MinCulture", "3900", "Player", TRUE
+      "Building", "Ecclesiastical Palace", "Player", FALSE
+      "Building", "Angkor Wat", "Player", FALSE
+      "Building", "Forbidden City", "Player", FALSE
+      "Building", "Osaka Castle", "Player", FALSE
+      "Building", "Palace", "City", FALSE
+    }
+graphic	= "b.sultan_palace"
+graphic_alt	= "b.palace"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 250
+upkeep		= 0
+sabotage	= 0
+sound		= "b_palace"
+sound_alt	= "b_generic"
+helptext	= _("\
+Sultan Palace is a second center of Islamic government.\n\
+Additionally, it produces extra 4 luxury points in this city.\
+"), _("\
+Waste in other cities (corruption, production waste, and food waste) \
+is related to how far away from the nearest capital they are. On top of \
+this, corruption and production waste in the capital itself is 30% \
+of what it would otherwise be (and a Courthouse with Post Office will eliminate it \
+entirely).\
+"), _("\
+The city where this palace is located cannot be incited to revolt, \
+and enjoys a bonus when enemy agents try to evade your own agents \
+stationed in the city, or sabotage your buildings.\
+"), _("\
+Sultan Palace is a prerequisite to get Fundamentalism effect of `tithes` (gold) from sacral buildings.\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_ecole_speciale_militaire]
+name		= _("Ecole Speciale Militaire")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Tactics", "Player"
+	 "MinCulture", "5800", "Player"
+    }
+graphic	= "b.ecole_speciale_militaire"
+graphic_alt	= "b.university"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 600
+upkeep		= 0
+sabotage	= 0
+sound		= "b_university"
+sound_alt	= "w_generic"
+helptext	= _("\
+Ecole speciale militaire de Saint-Cyr was founded by Napoleon Bonaparte, with given motto: 'study to win'.\n\
+All your new infantry, cavalry, reconnaissance or wheeled units start with an additional veteran level \
+(this is cumulative with any Barracks/Stables veteran effect).\
+"), _("\
++3 Culture Points/turn.\
+")
+
+[building_eiffel_tower]
+name		= _("Eiffel Tower")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Industrialization", "Player"
+	 "MinCulture", "4500", "Player"
+    }
+graphic	= "b.eiffel_tower"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 500
+upkeep		= 0
+sabotage	= 0
+sound		= "w_eiffel_tower"
+sound_alt	= "w_generic"
+helptext	= _("\
+Each tile around the city where this wonder is built, that have railroad and is already\
+ generating some trade, produces one extra trade resource.\
+"), _("\
+It also increase radius of your city vision (with Electricity advance) and workable radius, \
+if this building is located together with Railway Station (not cumulative with Mass Transit or Port Facility effect).\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_fusion_plant]
+name		= _("Fusion Plant")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Fusion Power", "Player"
+      "Building", "Research Lab", "City"
+    }
+graphic	= "b.fusion_plant"
+graphic_alt	= "a.fusion_power"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 4000
+upkeep		= 0
+sabotage	= 0
+sound		= "w_hoover_dam"
+sound_alt	= "w_generic"
+helptext	= _("\
+Increase city production by 25% (50% with Mfg Plant), and reduces \
+pollution from shield production or population by a further 25% in all cities \
+with Solar Plant or Recycling Center accordingly, on same continent.\
+"), _("\
++4 Culture Points/turn.\
+")
+
+[building_geoglyph]
+name        = _("Geoglyph")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Creative Art", "Player"
+    }
+graphic	= "b.geoglyph"
+graphic_alt	= "a.alphabet"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Monotheism", "Player"
+      "Building", "City Hall", "City"
+    }
+build_cost	= 30
+upkeep		= 0
+sabotage	= 100
+sound		= "w_copernicus_observatory"
+sound_alt	= "w_generic"
+helptext	= _("\
+Giant geoglyph add 2 luxury points to the city where it is located.\
+"), _("\
++1 Culture Point/turn.\
+")
+
+[building_global_positioning_system]
+name		= _("Global Positioning System")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Satellite System", "Player"
+      "Building", "Apollo Program", "World"
+      "Building", "Research Lab", "City"
+	 "MinCulture", "9500", "Player"
+    }
+graphic	= "b.global_positioning_system"
+graphic_alt	= "b.seti_program"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 1400
+upkeep		= 0
+sabotage	= 0
+sound		= "w_apollo_program"
+sound_alt	= "w_generic"
+helptext	= _("\
+Reveal all map.\
+"), _("\
++6 Culture Points/turn.\
+")
+
+[building_hanging_gardens]
+name		= _("Hanging Gardens")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Pottery", "Player"
+    }
+graphic	= "b.hanging_gardens"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Electricity", "Player", FALSE
+    }
+build_cost	= 200
+upkeep		= 0
+sabotage	= 0
+sound		= "w_hanging_gardens"
+sound_alt	= "w_generic"
+helptext	= _("\
+Makes one unhappy citizen content in every city of the player that \
+owns it (not including citizens unhappy about aggression). This wonder \
+also makes two content citizens happy in the city where it is located \
+(4 extra luxury points).\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_hollywood]
+name		= _("Hollywood")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Cinematography", "Player"
+      "Building", "Women's Suffrage", "Player"
+	 "MinCulture", "15500", "Player"
+    }
+graphic	= "b.hollywood"
+graphic_alt	= "a.radio"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 4500
+upkeep	= 10
+sabotage	= 0
+sound		= "b_colosseum"
+sound_alt	= "w_generic"
+helptext	= _("\
+Neutralizes the unhappiness caused by one aggressively \
+deployed military unit per city (not cummulative with Police Station). \
+Under Democracy or Thalassocracy, it additionally decrease the unhappiness caused by military units \
+(in case of Democracy, reducing it to the same level as a Republic).\n\
+"), _("\
+With Television advance, entertainer specialists' luxury \
+output increases by 1 for player's nation.\
+"), _("\
+Unlike most other wonders, entertainment wonders need gold upkeep.\
+"), _("\
++10 Culture Points/turn.\
+")
+
+[building_js_bachs_cathedral]
+name		= _("J.S. Bach's Cathedral")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Theology", "Player", TRUE
+      "Building", "Cathedral", "City", TRUE
+	 "MinCulture", "4800", "Player", TRUE
+      "Building", "Temple", "City", FALSE
+	 "Building", "Mosque", "City", FALSE
+	 "Building", "Kaaba", "Player", FALSE
+	 "Building", "Leshan Buddha Statue", "Player", FALSE
+	 "Building", "Golden Temple", "Player", FALSE
+	 "Building", "Temple of City God", "Player", FALSE
+	 "Building", "Kyoto Fushimi Inari", "Player", FALSE
+    }
+graphic	= "b.js_bachs_cathedral"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 400
+upkeep		= 0
+sabotage	= 0
+sound		= "w_js_bachs_cathedral"
+sound_alt	= "w_generic"
+helptext	= _("\
+Makes 0...2 (depending on Religious Othodoxy policy setting) additional \
+content citizen happy for every player's Church \
+and 2 extra luxury points per city with Cathedral (not under Communism gov.) \
+"), _("\
++6 Culture Points/turn.\
+")
+
+[building_jousting_tiltyard]
+name            = _("Jousting Tiltyard")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Hastilude", "Player"
+      "Building", "Palace", "City"
+      "MinCulture", "1650", "Player"
+    }
+graphic	= "b.jousting_tiltyard"
+graphic_alt	= "b.colosseum"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Communism", "Player"
+      "Building", "Internet", "World"
+    }
+build_cost	= 180
+upkeep		= 2
+sabotage	= 100
+sound		= "b_colosseum"
+sound_alt	= "b_generic"
+helptext	= _("\
+Add 2 luxury points to your capital and allow building Crusaders here. \
+Additionally in case of Monarchy, increase luxury output of a capital city by 50% \
+"), _("\
+Unlike most other wonders, entertainment wonders need gold upkeep.\
+"), _("\
++1 Culture Point/turn.\
+")
+
+[building_khajuraho_temple]
+name		= _("Khajuraho Temple")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Jainism", "Player", TRUE
+      "Building", "Temple", "City", TRUE
+      "MinCulture", "3100", "Player", TRUE
+      "Building", "Kaaba", "Player", FALSE
+;      "Building", "King Richard's Crusade", "Player", FALSE
+      "Building", "Michelangelo's Chapel", "Player", FALSE
+      "Building", "J.S. Bach's Cathedral", "Player", FALSE
+    }
+graphic	= "b.khajuraho_temple"
+graphic_alt	= "b.oracle"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 440
+upkeep		= 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
+helptext	= _("\
+This building keep effect of Rapture Growth in the city where it is founded\
+ (together with Granary and Temple, under any government except of Democracy, Communism or Fascism),\
+ even if Monotheism advance is already known to the player.\
+"), _("\
++3 Culture Points/turn.\
+")
+
+[building_king_richards_crusade]
+name		= _("King Richard's Crusade")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Chivalry", "Player", TRUE
+	 "MinCulture", "1800", "Player", TRUE
+	 "Building", "Temple", "City", FALSE
+	 "Building", "Mosque", "City", FALSE
+	 "Building", "Kaaba", "Player", FALSE
+	 "Building", "Taj Mahal", "Player", FALSE
+;	 "Building", "Mausoleum of Mausolos", "Player", FALSE
+	 "Building", "Kyoto Fushimi Inari", "Player", FALSE
+;	 "Building", "Statue of Zeus", "Player", FALSE
+    }
+graphic	= "b.king_richards_crusade"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Communism", "Player", FALSE
+      "Building", "United Nations", "World", FALSE
+    }
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_king_richards_crusade"
+sound_alt	= "w_generic"
+helptext	= _("\
+Reduces the unhappiness caused by aggressively deployed military \
+units owned by the city with Church by 1 -- in other words, it neutralizes the \
+unhappiness caused by a single military unit (except under Democracy, \
+where a single unit makes two citizens unhappy). Under governments \
+where unit upkeep is paid in gold, it gives two free gold per city \
+towards upkeep every turn.\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_leonardos_workshop]
+name		= _("Leonardo's Workshop")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Invention", "Player"
+	 "MinCulture", "2800", "Player"
+    }
+graphic	= "b.leonardos_workshop"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Combustion", "Player", FALSE
+    }
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_leonardos_workshop"
+sound_alt	= "w_generic"
+helptext	= _("\
+Upgrades 1 obsolete units per game turn (+1 with Metallurgy technology) on cost of 1 veteran level.\n\
+Warfrare Museum prohibit any autoupgrades.
+"),
+_("\
+Additional veteran level for any Wheeled Unit.\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_lighthouse]
+name		= _("Lighthouse")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Map Making", "Player"
+      "TerrainFlag", "Sea", "Adjacent"
+    }
+graphic	= "b.lighthouse"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Amphibious Warfare", "Player", FALSE
+    }
+build_cost	= 200
+upkeep		= 0
+sabotage	= 0
+sound		= "w_lighthouse"
+sound_alt	= "w_generic"
+helptext	= _("\
+Gives all your sea units 1 additional movement point (except Coasters \
+while moving on rivers). Makes all your new Coaster units veterans (for all \
+your cities).\
+"), _("\
+Harbor food production in the city with Lighthouse \
+is increased also for Deep Ocean tiles (similar to Port Facility effect).
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_magellans_expedition]
+name		= _("Magellan's Expedition")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Navigation", "Player"
+      "TerrainFlag", "Sea", "Adjacent"
+	 "MinCulture", "2800", "Player"
+    }
+graphic	= "b.magellans_expedition"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Nuclear Power", "Player", FALSE
+    }
+build_cost	= 400
+upkeep		= 0
+sabotage	= 0
+sound		= "w_magellans_expedition"
+sound_alt	= "w_generic"
+helptext	= _("\
+Gives all your sea units 1 additional movement point. The chance\
+ of a sea unit getting the next veteran level after a battle\
+ increases by half.\
+"), _("\
++4 Culture Points/turn.\
+")
+
+[building_massachusetts_institute_of_technology]
+name		= _("Massachusetts Institute of Technology")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Electronics", "Player"
+      "Building", "Factory", "City"
+      "Building", "Library", "City"
+	 "MinCulture", "6300", "Player"
+    }
+graphic	= "b.massachusetts_institute_of_technology"
+graphic_alt	= "b.university"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 650
+upkeep	= 0
+sabotage	= 0
+sound		= "w_copernicus_observatory"
+sound_alt	= "w_generic"
+helptext	= _("\
+Gives 4 extra research points every turn to its city. \n\
+Increase science bonus from player's Research Labs by 25% \
+"), _("\
++6 Culture Points/turn.\
+")
+
+[building_moai_statues]
+name		= _("Moai Statues")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Stone Knapping", "Player", TRUE
+      "TerrainFlag", "Sea", "Adjacent", TRUE
+	 "MinCulture", "10", "Player", TRUE
+    }
+graphic	= "b.moai_statues"
+graphic_alt	= "b.oracle"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Overseas Trade", "Player"
+      "Tech", "Steam Engine", "World"
+    }
+build_cost	= 150
+upkeep	= 0
+sabotage	= 0
+sound		= "w_copernicus_observatory"
+sound_alt	= "w_generic"
+helptext	= _("\
+These giant stone statues give your citizens courage to explore unknown lands. \
+They are able to build unique Kon-Tiki raft, the first vessel capable to to enter Deep Ocean.\n\
+Additionally, gives all your Coasters units 1 additional movement point \
+(except while moving on rivers, not cumulative with Lighthouse).\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_monk_monastery]
+name		= _("Monk Monastery")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Vedism", "Player", TRUE
+      "Building", "Temple", "City", TRUE
+	 "MinCulture", "1800", "Player", TRUE
+      "Building", "Church", "City", FALSE
+	 "Building", "Mosque", "City", FALSE
+    }
+graphic	= "b.monk_monastery"
+graphic_alt	= "b.temple"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Nuclear Power", "Player"
+      "Building", "University", "City"
+    }
+build_cost	= 90
+upkeep	= 0
+sabotage	= 0
+sound		= "w_copernicus_observatory"
+sound_alt	= "w_generic"
+helptext	= _("\
+Gives 4 extra research points every turn to its city if there is no University. \n\
+If Leshan Buddha Statue was built on same continent, \
+additional one unhappy citizen become content \
+(does not affect citizens made unhappy by aggression)\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_mobile-x-ray]
+name		= _("Mobile X-ray")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Radioactivity", "Player"
+      "Building", "Hospital", "City"
+	 "MinCulture", "4200", "Player"
+    }
+graphic	= "b.mobile-x-ray"
+graphic_alt	= "b.barracks_iii"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 300
+upkeep	= 0
+sabotage	= 0
+sound		= "w_cure_for_cancer"
+sound_alt	= "w_generic"
+helptext	= _("\
+Increase healing of small land or infantry units by 50%, including those not fortified.\
+"), _("\
++4 Culture Points/turn.\
+")
+
+[building_pyramids]
+name		= _("Pyramids")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Masonry", "Player"
+	 "MinCulture", "150", "Player"
+    }
+graphic	= "b.pyramids"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Railroad", "Player", FALSE
+    }
+build_cost	= 180
+upkeep		= 0
+sabotage	= 0
+sound		= "w_pyramids"
+sound_alt	= "w_generic"
+helptext	= _("\
+Under Despotism or Tribal governments, the Pyramids cancel the penalty \
+to worked tiles with output greater than 2 (for all kinds of output), \
+as if all your cities were always celebrating.\n\
+In above case, celebrating cities with Granary and size 3 or above will be subject of Rapture Growth \
+(this effect is cancelled by Monotheism).\
+"), _("\
+Additionally, 1 extra luxury point is added to the city with Pyramids.\
+"), _("\
++3 Culture Points/turn.\
+")
+
+[building_slavery_abolition]
+name		= _("Slavery Abolition")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Egalitarianism", "Player"
+      "Building", "Courthouse", "City"
+	 "MinCulture", "3500", "Player"
+    }
+graphic	= "b.slavery_abolition"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 350
+upkeep	= 0
+sabotage	= 0
+sound		= "w_womens_suffrage"
+sound_alt	= "w_generic"
+helptext	= _("\
+Makes 2 unhappy citizens content in a city were Slavery Abolition was founded, \
+and additional unhappy citizen content for each player's city with courthouse \
+in case of Republic, Democracy or Federation government. \
+Also inctite cost in case of Democracy and bribing cost in case of Republic is increased x5. \
+"), _("\
+Side effect: decreased gold income from gold and diamond mines. 
+"), _("\
+Note: Slavery Abolition is a prerequisite for Women's Suffrage.\
+"), _("\
++6 Culture Points/turn.\
+")
+
+[building_space_lift]
+name		= _("Space Lift")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Nanotechnology", "Player"
+      "Building", "Research Lab", "City"
+      "Building", "Apollo Program", "World"
+	 "MinCulture", "18500", "Player"
+    }
+graphic	= "b.space_lift"
+graphic_alt	= "b.space_component"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 2200
+upkeep		= 1
+sabotage	= 0
+sound		= "w_apollo_program"
+sound_alt	= "w_generic"
+helptext	= _("\
+Space lift allow to cheap transport of heavy components from Earth to geostationary orbit. \n\
+This facility is required to produce space ship structural components.\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_statue_of_zeus]
+name		= _("Statue of Zeus")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Polytheism", "Player", TRUE
+      "MinCulture", "900", "Player"
+	 "Building", "Church", "City", FALSE
+	 "Building", "Cathedral", "City", FALSE
+	 "Building", "Mosque", "City", FALSE
+	 "Building", "Kaaba", "Player", FALSE
+;	 "Building", "King Richard's Crusade", "Player", FALSE
+    }
+graphic         = "b.statue_of_zeus"
+graphic_alt     = "b.oracle"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Conscription", "Player", FALSE
+      "Tech", "Automobile", "World", FALSE
+      "Building", "King Richard's Crusade", "Player", FALSE
+      "Building", "Kaaba", "Player", FALSE
+    }
+build_cost	= 250
+upkeep		= 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
+helptext	= _("\
+Reduces the unhappiness caused by aggressively deployed military \
+units owned by the city by 1 -- in other words, it neutralizes the \
+unhappiness caused by a single military unit (except under Democracy, \
+where a single unit makes two citizens unhappy). Each city also avoids \
+one shield of upkeep for units.\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_sun_tzus_war_academy]
+name		= _("Sun Tzu's War Academy")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Confucianism", "Player"
+	 "MinCulture", "2800", "Player"
+    }
+graphic	= "b.sun_tzus_war_academy"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Tactics", "Player", FALSE
+      "Tech", "Mobile Warfare", "World", FALSE
+    }
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_sun_tzus_war_academy"
+sound_alt	= "w_generic"
+helptext	= _("\
+All your new infantry, cavalry or reconnaissance units start with an additional veteran level \
+(this is cumulative with any Barracks building in a city; with both, units \
+are created as Hardened).\
+"), _("\
++3 Culture Points/turn.\
+")
+
+[building_temple_of_artemis]
+name		= _("Temple of Artemis")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Mysticism", "Player"
+      "Building", "Temple", "City"
+	 "MinCulture", "180", "Player"
+    }
+graphic         = "b.temple_of_artemis"
+graphic_alt     = "b.oracle"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Theology", "Player", FALSE
+      "Building", "Temple of City God", "Player", FALSE
+      "Building", "Kyoto Fushimi Inari", "Player", FALSE
+      "Building", "Golden Temple", "World", FALSE
+    }
+build_cost	= 200
+upkeep		= 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
+helptext	= _("\
+Makes 0...2 additional unhappy citizens content in every city with \
+a Temple, depending on Religious Othodoxy policy setting, and additionally one content citizen in city where is located. \
+Does not affect citizens made unhappy by aggression.\
+"), _("\
++3 Culture Points/turn.\
+")
+
+[building_temple_of_city_god]
+name		= _("Temple of City God")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Legalism", "Player"
+      "Building", "Temple", "City"
+      "MinCulture", "2700", "Player"
+;      "Building", "Temple of Artemis", "Player", FALSE
+    }
+graphic         = "b.temple_of_city_god"
+graphic_alt     = "b.oracle"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 250
+upkeep		= 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
+helptext	= _("\
+Makes 0..2 (depending on Religious Othodoxy policy setting) unhappy citizens content in every city with \
+a Temple without Shrine Torii. Does not affect citizens made unhappy by aggression.\n\
+In a city with this building, tax collector specialists' gold output \
+increases by 1.\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_thermal_bath]
+name		= _("Thermal Bath")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Sunnism", "Player"
+    }
+graphic	= "b.thermal_bath"
+graphic_alt	= "b.aqueduct"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 400
+upkeep		= 0
+sabotage	= 0
+sound		= "w_hanging_gardens"
+sound_alt	= "w_generic"
+helptext	= _("\
+Add 1 luxury point to the city where is located and each river tile within city radius.\n\
+Thermal Bath reduces chance of plaque in any player's city with Lazaretto improvement by additional 10%.\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_warfare_museum]
+name		= _("Warfare Museum")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "University", "Player"
+      "Building", "City Hall", "City"
+	 "MinCulture", "4000", "Player"
+    }
+graphic	= "b.warfare_museum"
+graphic_alt	= "b.colossus"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 140
+upkeep		= 0
+sabotage	= 0
+sound		= "b_university"
+sound_alt	= "b_generic"
+helptext	= _("\
+This building prevent autoupgrade with cost of veteran level \
+- keep obsoleted units even if Leonardo Workshop or DARPA is builded. \n\
+You can still upgrade units manually with cost of gold.\
+"), _("\
++3 Culture Points/turn.\
+")
+
+[building_western_wall]
+name		= _("Western Wall")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Monotheism", "Player", TRUE
+      "Building", "City Walls", "City", TRUE
+      "Building", "Colossus", "City", FALSE
+      "Building", "Kaaba", "City", FALSE
+    }
+graphic	= "b.western_wall"
+graphic_alt	= "b.city_walls"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Guerilla Warfare", "Player", FALSE
+    }
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_city_walls"
+sound_alt	= "w_generic"
+helptext	= _("\
+Add 50% defense for city, where it is builded (cumulative with City Walls, not cumulative with Great Wall), \
+against any Land unit (except those with indirect fire).\n\
+Additionally, prayers going to the sacred site would generate extra trade from each tile around the city that is already \
+generating some trade.\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_womens_suffrage]
+name		= _("Women's Suffrage")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Conscription", "Player"
+      "Building", "Slavery Abolition", "Player"
+	 "MinCulture", "7400", "Player"
+    }
+graphic	= "b.womens_suffrage"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 600
+upkeep		= 0
+sabotage	= 0
+sound		= "w_womens_suffrage"
+sound_alt	= "w_generic"
+helptext	= _("\
+Women have right to vote and work equal to men.\n\ 
+With Women's Suffrage and Democracy, celebrating cities produce an extra trade point for every worked land tile that is\
+ already producing trade.\n\
+Similar effect for shields production occurs in case of Republic.\n\
+Beside this, regardless of government type, Women's Suffrage make 1 unhappy citizens content in each player's city.\
+"), _("\
++8 Culture Points/turn.\
+")
+
+; great wonders:
+; secondary palaces
+
+[building_angkor_wat]
+name		= _("Angkor Wat")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Hinduism", "Player", TRUE
+      "Building", "Temple", "City", TRUE
+      "MinCulture", "2800", "Player", TRUE
+      "Building", "Ecclesiastical Palace", "Player", FALSE
+      "Building", "Forbidden City", "Player", FALSE
+      "Building", "Sultan Palace", "Player", FALSE
+      "Building", "Osaka Castle", "Player", FALSE
+      "Building", "Palace", "City", FALSE
+    }
+graphic	= "b.angkor_wat"
+graphic_alt	= "b.palace"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 250
+upkeep		= 0
+sabotage	= 0
+sound		= "b_palace"
+sound_alt	= "b_generic"
+helptext	= _("\
+Giant complex of temples, which makes a city a second center \
+of government.\n\
+Additionally, produces extra 4 luxury points in this city.\
+"), _("\
+Waste in other cities (corruption, production waste, and food waste) \
+is related to how far away from the nearest capital they are. On top of \
+this, corruption and production waste in the capital itself 30% \
+of what it would otherwise be.\
+"), _("\
+The city where this palace is located cannot be incited to revolt, \
+and enjoys a bonus when enemy agents try to evade your own agents \
+stationed in the city, or sabotage your buildings.\
+"), _("\
+Under Despotism the city containing the palace gains a +75% \
+gold bonus, and under Monarchy a +50% gold bonus.\
+"), _("\
++3 Culture Points/turn.\
+")
+
+[building_osaka_castle]
+name		= _("Osaka Castle")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Shogunate", "Player", TRUE
+      "Building", "Temple", "City", TRUE
+      "Building", "Shrine Torii", "City", TRUE
+      "MinCulture", "2800", "Player", TRUE
+      "Building", "Ecclesiastical Palace", "Player", FALSE
+      "Building", "Angkor Wat", "Player", FALSE
+      "Building", "Forbidden City", "Player", FALSE
+      "Building", "Sultan Palace", "Player", FALSE
+      "Building", "Palace", "City", FALSE
+    }
+graphic	= "b.osaka_castle"
+graphic_alt	= "b.palace"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "b_palace"
+sound_alt	= "b_generic"
+helptext	= _("\
+Giant temple, which makes a city a second center \
+of government.\n\
+Additionally, produces extra 4 luxury points in this city.\
+"), _("\
+Waste in other cities (corruption, production waste, and food waste) \
+is related to how far away from the nearest capital they are. On top of \
+this, corruption and production waste in the capital itself is 30% \
+of what it would otherwise be.\
+"), _("\
+The city where this palace is located cannot be incited to revolt, \
+and enjoys a bonus when enemy agents try to evade your own agents \
+stationed in the city, or sabotage your buildings.\
+"), _("\
+Osaka Castle will also make content two citizens unhappy due to aggression
+in the city where is founded.\
+"), _("\
++3 Culture Points/turn.\
+")
+
+;only for owner
+
+[building_statue_of_liberty]
+name		= _("Statue of Liberty")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Democracy", "Player"
+	 "MinCulture", "7800", "Player"
+    }
+graphic	= "b.statue_of_liberty"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 2200
+upkeep		= 0
+sabotage	= 0
+sound		= "w_statue_of_liberty"
+sound_alt	= "w_generic"
+helptext	= _("\
+Allows you to choose any government, including those that have not yet \
+been researched by your civilization, and without the transition \
+period of Anarchy. It also allows unprovoked declaration of war \
+regardless of any senate instituted by a Democracy or Federation \
+government or by the United Nations.\
+"),
+_("\
+The side effect of this wonder is, that inciting revolts is possible under Fascism.\
+"), _("\
++4 Culture Points/turn.\
+")
+
+[building_united_nations]
+name		= _("United Nations")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Communism", "Player"
+	 "MinCulture", "12500", "Player"
+    }
+graphic	= "b.united_nations"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 2000
+upkeep		= 0
+sabotage	= 0
+sound		= "w_united_nations"
+sound_alt	= "w_generic"
+helptext	= _("\
+Creates a world senate.\
+United Nations quadruple cost of inciting revolt in any cities belonging to that player, \
+or for any player's cities ruled by a communistic system.\
+"), _("\
+Also, for all players, if any city is in disorder for more than two turns in \
+a row, that player's government falls (even for governments other than \
+Republic and Democracy). On the other hand, chance of Civil War is 4x less \
+in case of Republic, Democracy or Federation. \
+"), _("\
++8 Culture Points/turn.\
+")
+
+; for all nations
+
+[building_apollo_program]
+name		= _("Apollo Program")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Space Flight", "Player"
+      "Building", "Research Lab", "City"
+	 "MinCulture", "12000", "Player"
+    }
+graphic	= "b.apollo_program"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 6000
+upkeep		= 0
+sabotage	= 0
+sound		= "w_apollo_program"
+sound_alt	= "w_generic"
+helptext	= _("\
+Apollo Program allows all players to \
+start building spaceship parts (assuming they have researched the \
+necessary technologies and have Space Lift small wonder finished).\n\
+Existing of Apollo Program is also necessary to build Global Positioning System.\
+"), _("\
++5 Culture Points/turn.\
+")
+
+[building_asmiths_trading_co]
+name		= _("A.Smith's Trading Co.")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Economics", "Player"
+      "Building", "Stock Exchange", "City"
+	 "MinCulture", "4500", "Player"
+    }
+graphic	= "b.asmiths_trading_co"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 750
+upkeep		= 0
+sabotage	= 0
+sound		= "w_asmiths_trading_co"
+sound_alt	= "w_generic"
+helptext	= _("\
+In every city with a Stock Exchange, city improvements which would \
+normally have an upkeep of 1 become free of upkeep. (Communist \
+governments inherently give this benefit, so there is no bonus under \
+Communism.)\
+"), _("\
+Upon completion of this wonder, tax collector specialists' gold output \
+increases by 1 permanently for every nation.\
+"), _("\
++2 Culture Points/turn.\
+")
+
+
+[building_cure_for_cancer]
+name		= _("Cure For Cancer")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Genetic Engineering", "Player"
+	 "MinCulture", "19000", "Player"
+    }
+graphic	= "b.cure_for_cancer"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 2500
+upkeep		= 0
+sabotage	= 0
+sound		= "w_cure_for_cancer"
+sound_alt	= "w_generic"
+helptext	= _("\
+This stunning technological achievement makes one content citizen \
+happy in each of cities of any player who knows Genetic Engineering (2 extra luxury per city).\n\
+Together with an Aqueduct, a Sewer System, Hospital, Pasteur Institute and maximum of Welfare Policy, \
+it entirely eliminates the risk of plague.\
+"), _("\
++4 Culture Points/turn.\
+")
+
+[building_darwins_voyage]
+name		= _("Darwin's Voyage")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Steam Engine", "Player"
+	 "MinCulture", "4500", "Player"
+    }
+graphic	= "b.darwins_voyage"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 950
+upkeep		= 0
+sabotage	= 0
+sound		= "w_darwins_voyage"
+sound_alt	= "w_generic"
+helptext	= _("\
+Charles Darwin's voyage sparked the discovery of the evolution \
+of the species, which inspired greater confidence in science. \
+All your cities generate 1 extra science bulb and immediate technology advance is achieved.\
+"), _("\
+Upon completion of this wonder, scientist specialists' research output \
+increases by 1 permanently for every nation.\
+"), _("\
++5 Culture Points/turn.\
+")
+
+[building_great_library]
+name		= _("Great Library")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Paper Making", "Player"
+      "Building", "Library", "City"
+	 "MinCulture", "1550", "Player"
+    }
+graphic	= "b.great_library"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Computers", "World", FALSE
+    }
+build_cost	= 550
+upkeep		= 0
+sabotage	= 0
+sound		= "w_great_library"
+sound_alt	= "w_generic"
+helptext	= _("\
+Gives an immediate technology advance to the player that builds it, \
+and thereafter 4 extra research points every turn to its city.\
+"), _("\
+Completion of this wonder doubles the effect of Libraries \
+for every player.\
+"), _("\
++4 Culture Points/turn.\
+")
+
+[building_internet]
+name		= _("Internet")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Robotics", "Player"
+      "Building", "Research Lab", "City"
+      "Building", "DARPA", "Player"
+	 "MinCulture", "10500", "Player"
+    }
+graphic		= "b.internet"
+graphic_alt	= "b.seti_program"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 1200
+upkeep		= 0
+sabotage	= 0
+sound		= "w_seti_program"
+sound_alt	= "w_generic"
+helptext	= _("\
+All cities on the map are continuously visible to its \
+owner despite fog-of-war.\
+"), 
+_("\
+Upon completion of this wonder, for each nation which know Computers advance,
+entertainer specialists' luxury output increases by 1.\
+"),
+_("\
+Completion of this wonder permanently doubles the effect of \
+Universities for allied players.\
+"), _("\
++4 Culture Points/turn if Computers tech is known.\
+")
+
+[building_isaac_newtons_college]
+name		= _("Isaac Newton's College")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Theory of Gravity", "Player"
+      "Building", "University", "City"
+	 "MinCulture", "5700", "Player"
+    }
+graphic	= "b.isaac_newtons_college"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 1200
+upkeep		= 0
+sabotage	= 0
+sound		= "w_isaac_newtons_college"
+sound_alt	= "w_generic"
+helptext	= _("\
+Gives an immediate technology advance to the player that builds it, \
+and thereafter 6 extra research points every turn to its city.\
+"), _("\
+Completion of this wonder permanently doubles the effect of \
+Universities for every player as well as add 1 culture point to any city with University.
+")
+
+[building_b_large_hadron_collider]
+name		= _("Large Hadron Collider")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Superconductors", "Player"
+	 "MinCulture", "25000", "Player"
+    }
+graphic	= "b.large_hadron_collider"
+graphic_alt	= "b.research_lab"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 9000
+upkeep		= 1
+sabotage	= 0
+sound		= "b_nuclear_plant"
+sound_alt	= "w_generic"
+helptext	= _("\
+ Large Hadron Collider reveal two new advances, when finished.\
+ It is the best way to gain Great Unification Theory.\n\
+Upon completion of this wonder, scientist specialists' research output \
+increases by 1 for every nation \
+(except those ruled by Anarchy or Fundamental government).\n\
+Each player's city with Research Center would gain 1 culture point.
+")
+
+[building_manhattan_project]
+name		= _("Manhattan Project")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Nuclear Fission", "Player"
+	 "MinCulture", "9800", "Player"
+      "Resource", "Uranium", "City"
+    }
+graphic	= "b.manhattan_project"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 6000
+upkeep		= 0
+sabotage	= 0
+sound		= "w_manhattan_project"
+sound_alt	= "w_generic"
+;helptext is set in client/helpdata.c:helptext_wonder()
+;helptext	=
+
+[building_b_pasteur_institute]
+name		= _("Pasteur Institute")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Biology", "Player"
+      "Building", "University", "City"
+	 "MinCulture", "4300", "Player"
+    }
+graphic	= "b.pasteur_institute"
+graphic_alt	= "b.university"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 400
+upkeep		= 0
+sabotage	= 0
+sound		= "w_copernicus_observatory"
+sound_alt	= "w_generic"
+helptext	= _("\
+Pasteur Institute reduce risk of plaque in all player's cities with Hospital by additional 10%-20% \
+depending on Welfare Policy settings. \n\
+It would also reveal one new advance, once completed.\n\
+On each turn, 1 culture point is added to each player's city with University, instead of just this city.\
+")
+
+[building_shakespeares_theatre]
+name		= _("Shakespeare's Theater")
+rule_name	= "Shakespeare's Theatre"  ; en_GB spelling used originally
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Theatre", "Player"
+	 "MinCulture", "4900", "Player"
+    }
+graphic	= "b.shakespeares_theatre"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Computers", "Player"
+    }
+build_cost	= 450
+upkeep		= 6
+sabotage	= 0
+sound		= "w_shakespeares_theatre"
+sound_alt	= "w_generic"
+helptext	= _("\
+Gives 1 additional luxury to every player's city, and 6 luxuries to the city \
+where it is located.\
+"), _("\
+Upon completion of this wonder, entertainer specialists' luxury \
+output increases by 1 for every nation.\
+"), _("\
+Any city with Amphitheater gain additional Culture Point.\
+"), _("\
+Unlike most other wonders, entertainment wonders need gold upkeep.\
+")
+
+
+;for allied nations
+
+[building_golden_temple]
+name		= _("Golden Temple")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Sikhism", "Player"
+      "Building", "Temple", "City"
+	 "MinCulture", "4500", "Player"
+    }
+graphic	= "b.golden_temple"
+graphic_alt	= "b.palace"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 700
+upkeep		= 0
+sabotage	= 0
+sound		= "b_palace"
+sound_alt	= "b_generic"
+helptext	= _("\
+Golden Temple is the important Sikhism pilgrimage site.\n\
+Thanks to the ecumenic spirit of Golden Temple, any city with Temple, Church or Mosque, \
+which belong to the players allied with owner of this building,\
+would additionaly make 1 unhappy citizens content.\
+"), _("\
++3 Culture Points/turn.\
+")
+
+[building_great_wall]
+name		= _("Great Wall")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Legalism", "Player"
+	 "MinCulture", "1500", "Player"
+    }
+graphic	= "b.great_wall"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Mobile Warfare", "Player", FALSE
+      "Tech", "Rocketry", "World", FALSE
+    }
+build_cost	= 2000
+upkeep		= 0
+sabotage	= 0
+sound		= "w_great_wall"
+sound_alt	= "w_generic"
+helptext	= _("\
+Increases the defense of all your cities by adding a +50% bonus to \
+its units' intrinsic defense strength against straight attacking land units (this is cumulative \
+with any City Walls), and any allied city is protected against the loss of population which occurs \
+when a defending unit is defeated by a land unit.\
+"),
+_("\
+Great Wall increases also defense of any allied land units in Fortress (but not in Fort) by 50%.\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_kaaba]
+name		= _("Kaaba")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Islam", "Player", TRUE
+      "Building", "Mosque", "City", TRUE
+      "Terrain", "Desert", "Adjacent", TRUE
+	 "Building", "Temple", "City", FALSE
+	 "Building", "Church", "City", FALSE
+	 "Building", "Cathedral", "City", FALSE
+	 "Building", "Michelangelo's Chapel", "Player", FALSE
+	 "Building", "J.S. Bach's Cathedral", "Player", FALSE
+	 "Building", "King Richard's Crusade", "Player", FALSE
+	 "Building", "Kyoto Fushimi Inari", "Player", FALSE
+;	 "Building", "Statue of Zeus", "Player", FALSE
+	 "Building", "Colossus", "City", FALSE
+	 "Building", "Western Wall", "City", FALSE
+    }
+graphic	= "b.kaaba"
+graphic_alt	= "b.oracle"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+    }
+build_cost	= 550
+upkeep		= 0
+sabotage	= 0
+sound		= "w_temple"
+sound_alt	= "w_generic"
+helptext	= _("\
+This sacred site is a focal point of the pilgrimages. It can be founded if there is desert adjacent to the city.\n\
+Each tile with (paved) road around the city produce additional trade point.\n\
+Additionally, each Mosque which belongs to any allied player, neutralizes unhappiness caused by 0...2 military units \
+(depending on Religious Orthodoxy policy settings). \
+"), _("\
++3 Culture Points/turn.\
+")
+
+[building_kyoto_fushimi_inari]
+name		= _("Kyoto Fushimi Inari")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Bushido", "Player", TRUE
+         "Building", "Temple", "City", TRUE
+         "Building", "Shrine Torii", "City", TRUE
+	 "MinCulture", "3800", "Player", TRUE
+         "Building", "Church", "City", FALSE
+         "Building", "Cathedral", "City", FALSE
+	 "Building", "Mosque", "City", FALSE
+	 "Building", "Kaaba", "Player", FALSE
+	 "Building", "King Richard's Crusade", "Player", FALSE
+	 "Building", "Michelangelo's Chapel", "Player", FALSE
+	 "Building", "J.S. Bach's Cathedral", "Player", FALSE
+	 "Building", "Temple of City God", "Player", FALSE
+	 "Building", "Taj Mahal", "Player", FALSE
+    }
+graphic	= "b.fushimi_inari"
+graphic_alt	= "b.temple"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 500
+upkeep		= 0
+sabotage	= 0
+sound		= "b_temple"
+sound_alt	= "w_generic"
+helptext	= _("\
+Pilgrimages to this giant Shrine makes additional 0..2 (depending on Religious Orthodoxy policy settings) \
+content citizens happy for every allied player's Temple with Shrine Torii \
+and 4 extra luxury points for city with Fushimi Inari wonder.\n\
+Each player's city with Shrine Torii and Temple gain 1 culture point.
+")
+
+[building_mausoleum_of_mausolos]
+name		= _("Mausoleum of Mausolos")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Ceremonial Burial", "Player", TRUE
+	 "Building", "Temple", "City", TRUE
+	 "Building", "Church", "City", FALSE
+	 "Building", "Cathedral", "City", FALSE
+	 "Building", "Mosque", "City", FALSE
+    }
+graphic         = "b.mausoleum"
+graphic_alt     = "b.oracle"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Socialism", "Player", FALSE
+      "Building", "King Richard's Crusade", "Player", FALSE
+    }
+build_cost	= 250
+upkeep		= 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
+helptext	= _("\
+If allied player posses this wonder, City Walls and Courthouses each make one unhappy \
+citizen content in their city, unless that citizen is unhappy about \
+aggression. Also, city where Mausoleum of Mausolos is founded can't be incited to revolt.\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_michelangelos_chapel]
+name		= _("Michelangelo's Chapel")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Christianity", "Player", TRUE
+      "Building", "Church", "City", TRUE
+	 "MinCulture", "3800", "Player", TRUE
+	 "Building", "Temple", "City", FALSE
+	 "Building", "Mosque", "City", FALSE
+	 "Building", "Kaaba", "Player", FALSE
+	 "Building", "Leshan Buddha Statue", "Player", FALSE
+	 "Building", "Golden Temple", "Player", FALSE
+	 "Building", "Temple of City God", "Player", FALSE
+	 "Building", "Taj Mahal", "Player", FALSE
+	 "Building", "Kyoto Fushimi Inari", "Player", FALSE
+    }
+graphic	= "b.michelangelos_chapel"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 650
+upkeep		= 0
+sabotage	= 0
+sound		= "w_michelangelos_chapel"
+sound_alt	= "w_generic"
+helptext	= _("\
+Doubles the base effect of Cathedrals which belong to the players allied with owner of this building. \n\
+This makes 3 additional unhappy citizens content in each allied city with a Cathedral; however, it does \
+not affect citizens made unhappy by aggression.\n\
+Any city with Cathedral would also gain 1 additional culture point.
+")
+
+[building_taj_mahal]
+name		= _("Taj Mahal")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range", "present"
+      "Tech", "Shiism", "Player", TRUE
+	 "Building", "Mosque", "City", TRUE
+	 "MinCulture", "2800", "Player", TRUE
+	 "Building", "Temple", "City", FALSE
+         "Building", "Church", "City", FALSE
+	 "Building", "Michelangelo's Chapel", "Player", FALSE
+	 "Building", "King Richard's Crusade", "Player", FALSE
+	 "Building", "Temple of City God", "Player", FALSE
+    }
+graphic	= "b.taj_mahal"
+graphic_alt	= "b.palace"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 550
+upkeep		= 4
+sabotage	= 0
+sound		= "b_palace"
+sound_alt	= "w_generic"
+helptext	= _("\
+Increase luxury output of a city by 50%, additionally each Madrasa \
+will make one unhappy citizen content in any city which belong to allied players.
+"), _("\
+Unlike most other wonders, entertainment wonders need gold upkeep.\
+"), _("\
++3 Culture Points/turn.\
+")
+
+
+;for continent
+
+[building_colossus]
+name		= _("Colossus")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Bronze Working", "Player"
+    }
+graphic	= "b.colossus"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Railroad", "Player", FALSE
+    }
+build_cost	= 250
+upkeep		= 0
+sabotage	= 0
+sound		= "w_colossus"
+sound_alt	= "w_generic"
+helptext	= _("\
+Each tile around the city where this wonder is built that is already\
+ generating some trade produces one extra trade resource.\
+"), _("\
+Moreover, tax collector specialists' gold output in cities on continent with Colossus \
+is increased by 1 for any nation. \
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_hoover_dam]
+name		= _("Hoover Dam")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Offshore Exploration", "Player"
+      "Extra", "River", "Adjacent"
+      "Building", "Factory", "City"
+    }
+graphic	= "b.hoover_dam"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 2000
+upkeep		= 0
+sabotage	= 0
+sound		= "w_hoover_dam"
+sound_alt	= "w_generic"
+helptext	= _("\
+Acts as a Hydro Plant in the city where it is built, and reduces \
+pollution from shield production by a further 25% in all cities \
+with Hydro Plants on same continent, making them equivalent to Solar Plants.\
+"), _("\
++2 Culture Points/turn.\
+")
+
+[building_leshan_buddha_statue]
+name		= _("Leshan Buddha Statue")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Buddhism", "Player"
+      "Building", "Temple", "City"
+	 "MinCulture", "2200", "Player"
+    }
+graphic	= "b.leshan_buddha_statue"
+graphic_alt	= "b.colossus"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+    }
+build_cost	= 800
+upkeep		= 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
+helptext	= _("\
+There is belief, that this giant statue calm turbulent river waters. \
+City with this Wonder would gain additional food from each river tile.\n\
+Additionally, thanks to the Buddha The Wise ideas, any Monk Monastery \
+would make 1 unhappy citizen content, for any city on same continent.\
+"), _("\
++3 Culture Points/turn.\
+")
+
+[building_marco_polos_embassy]
+name		= _("Marco Polo's Embassy")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Trade", "Player"
+	 "MinCulture", "1900", "Player"
+    }
+graphic	= "b.marco_polos_embassy"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Radio", "Player", FALSE
+    }
+build_cost	= 300
+upkeep		= 0
+sabotage	= 0
+sound		= "w_marco_polos_embassy"
+sound_alt	= "w_generic"
+helptext	= _("\
+The player who owns it gets an embassy with all players.\
+"), _("\
+TIP: if you're behind in research, this can help you catch up, by \
+reducing the cost of technologies that other players already know.\
+"),
+_("\
+In case of Thalassocracy government system, celebration would give boost of shield production, \
+if Marco Polo Embassy exist on the same continent.\
+"), _("\
++6 Culture Points/turn.\
+")
+
+[building_stonehenge]
+name		= _("Stonehenge")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Alphabet", "Player"
+    }
+graphic	= "b.stonehenge"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Christianity", "Player"
+      "Building", "Isaac Newton's College", "World"
+    }
+build_cost	= 150
+upkeep	= 0
+sabotage	= 0
+sound		= "w_copernicus_observatory"
+sound_alt	= "w_generic"
+helptext	= _("\
+This megalithic structure act like giant astronomical calendar.
+Each tile worked by the city where this wonder is built produces \
+one extra research point.\
+"), _("\
+Additionally, each city on the continent where Stonehenge is located is not affected by Tribal government science penalty, \
+if Palace is not present in such city.\
+"), _("\
++2 Culture Points/turn.\
+")
+
+;special improvements
+
+[building_5_years_plan]
+name		= _("5 Years Plan")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Communism", "Player"
+      "Building", "Factory", "City"
+      "MinCulture", "5200", "Player"
+    }
+graphic	= "b.5_years_plan"
+graphic_alt	= "gov.communism"
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Imperialism", "Player"
+    }
+build_cost	= 80
+upkeep		= 2
+sabotage	= 100
+sound		= "b_university"
+sound_alt	= "b_generic"
+helptext	= _("\
+The main point of Planned Economy, the Five Year Plan is \
+aimed at increasing the nation's production by concentrated \
+effort of the People.\n\
+So called 'Udarniks' (shock labour team) while celebrating the anniversary of the Revolution would be superproductive.
+"),_("\
+5 Years plan under Communism government would yield in additional shield production \
+from any tile, which already produce shields, if city is already celebrating \ 
+(Trade Union is also recommended to gain city celebration status)\
+"), _("\
++1 Culture Point/turn.\
+")
+
+[building_trade_union]
+name		= _("Trade Union")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Labor Union", "Player"
+      "Building", "Factory", "City"
+      "MinCulture", "4100", "Player"
+    }
+graphic	= "b.trade_union"
+graphic_alt	= "a.labor_union"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 2
+sabotage	= 100
+sound		= "b_university"
+sound_alt	= "b_generic"
+helptext	= _("\
+Workers syndicate for collective bargaining better wages and working conditions. \
+Luxury is increased with Welfare Policy settings. \
+"),_("\
+Additionally this improvement halves down city luxury penalty in case of Communism government,
+on the expense of lack of buildings free upkeep.
+")
+
+[building_capitalization]
+name		= _("Coinage")
+genus		= "Special"
+flags		= "Gold"
+reqs	=
+    { "type", "name", "range"
+
+    }
+graphic	= "b.capitalization"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 999
+upkeep		= 0
+sabotage	= 0
+; FIXME: this is the real helptext; restore when have a subordnate analogue
+; /* (ignore for gettext until fixed)
+;helptext	= _("\
+;This is not a normal improvement.  Instead, setting a city's\
+; production to Capitalization means its shield production is\
+; converted to tax output (money).\
+;")
+; */
+helptext	= _("\
+This is not a normal improvement.  Instead, setting a city's\
+ production to Coinage means its shield production is\
+ converted to tax output (money, coins!).\
+")

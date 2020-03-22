@@ -1,0 +1,349 @@
+=================================
+Augmented2 Ruleset for Freeciv v2.6
+=================================
+
+2.6.lt18
+Watermill and Windmill building added
+Cart unit added
+The Harness tech added.
+doc cleanup.
+bugs fixed
+No martial law for Tribal
+Food waste reduced by Watermill, Windmill, Supermarket and Granary (and Courthouse in case of Despotism)
+Scout vision fixed
+
+2.6.lt17
+sanity check
+usuned entries fixed
+Yougoslavia custom flag removed due to warnings
+Partisans can attack Helicopters.
+Modpack index file corrected
+Engineers fp3
+Floating Bridge unit added
+Optics, Command and Control, Logistics tech added, costs adjusted
+Logistics req. for second traderoute
+
+2.6.lt16
+new units: Wagenburg, Scout.
+diplomatic actions fixed.
+no embarking for Bombs, Missiles etc
+no veteran bombs :)
+Fortress, Airbase - claim tiles
+Inciting factors for units and buildings x2 and x4 respectively
+Yugoslavia flag overriden
+Partisan FP 2
+
+2.6.lt15
+Tokamak wonder
+Geoglyph wonder
+Tech tree reworked, Copper Working added
+Warriors added, sprites changed
+Supermarket as granary bonus
+Custom max rates for AI
+Ships are unreachable, load/unload of artillery/tanks only in cities
+building order fix
+swamp self irrigate
+
+2.6.lt14
+Terrain transform locked if Wind Turbine or Waterlock present
+Capturable civilian transport ships/barges
+Conversion of pop-cost units to migrants
+Spacerace+Allied+Cultural victory criteria, 50000 culture points required
+Helicopters can target helicopters
+Fusion Plant wonder
+Fixed marine diplo actions
+
+2.6.lt12
+Tribal description and veterancy fixed
+Legions and Swordsmen in Firt Republic get +v if Colosseum was built.
+Crusaders req. Jousting Tiltyard.
+Terrain transform pattern improved.
+
+2.6.lt11
+Pikemen tweaked
+All barges have Trireme flag (only safe coast)
+Land bombarders tweaked
+Unit_No_Lose_Pop fixed
+Barrack HP regen fixed
+Veteran system: 7 lvls.
+Galley etc coaasters: 1 cap.
+Trireme successor: Aak.
+Mahout barracks - vv for elephants.
+Elephant resource (+1 trade for Mahout b.)
+Mining forest make Taiga
+Enlightement and Liberal policy fixed
+
+2.6.lt10
+No SavePalace
+IgZOC with own ZOC for Corsairs, Ninja, Navy Seals.
+IgTer x2 instead of x3
+Improved road/rail graphics for augmentedis.
+No bribing/sabotaging unrechable units.
+
+2.6.lt9
+Railroads sprite shifted, highways/road sprites centered, for augmentedi tileset.
+Railroads are parallel to roads, they do not hide roads.
+Fixed Train movement cost.
+New units: Streltsy, Hovercraft. Crusaders and Streltsy exclusive for Monarchy.
+Enginners are no longer units carriers.
+
+2.6.lt8
+
+Tribe hut and Monitor new gfx
+Policy multipliers: Liberal Economy, Collective Economy, Welfare Policy, Enlightening Policy, Religious Orthodoxy, National Pride
+
+2.6.lt7
+Unpaved roads
+
+2.6.lt6
+Tribal cheats for AI
+
+2.6.lt5
+SAM battery protect population against Air raids.
+Population protection by City Walls and Bunkers fixed.
+Tactical ABM unit.
+
+2.6.lt4
+Janissaries and Fanatics obsolete fixed
+Gov. empire step size aprox :2
+Tribe unbribable
+Civil war chance :4 with UN for Federation, Republic, Democracy
+City Walls upkeep 1, Bunkers 2.
+
+2.6.lt3
+unit movement points extended ~x2
+Pasteur institute is Great Wonder - global 20% plaque reduction for each Hospital.
+Give Immediate Tech effect only for Great Wonders: Great Library, Isaac Newton's College, Darwin's Voyage, Pasteur Institute, Internet, LHC.
+no Inspire_Partisans effect
+terrain work time x2
+removed AI-love effects
+
+2.6.lt2
+Vision from Glass Working, Radar
+Mountain vision for Small Land, Infantry, Cavalry
+Unit vision radius fixed according to units.xls chart
+Partisant generation removed.
+
+2.6.lt1
+longurn branch
+
+
+2.6.28
+Arbalest is now Small Land bombard unit
+All recon units can shoot aboard ,except of hunters.
+Higher communism waste/corruption
+Stables barracks only for horses.
+Fixed early ship stats.
+Moai statues only on coast
+Jungle bonus from RR+RS
+Forestry not req for forest road shield bonus (ambigous hoover txt)
+
+2.6.27
+Scientist produce only 1 bulb in case of Anarchy or Fundamental gov.
+Taxman produce only 1 gold in case of Anarchy.
+Rare tile Volcano added (by Lua script or global warming) - roll back, Lua tile edit not working for 2.6
+Sacred Cairn can be founded enywhere.
+Waterlocks for amplio imported from ampliohexbig
+Tribe more expensive, more hp, to survive killunhomed
+Hills and forest give (additional) shields with road or river.
+New tile: Taiga +gfx for both tilesets
+Improved jungle gfx for augmentedis
+
+2.6.26
+Smooth transition from Temple to Church or Mosque
+and from early temple wonders to advanced far-east temple wonders
+Trireme class renamed to Coaster class.
+Thalassocracy martial law fixed
+upgraded sprites 
+New buildings: sacred Cairn, Moai Statues
+new unit: Kon-tiki raft
+new techs: Sailing, Shamanism
+
+2.6.25
+galley/monitor capacity 2
+terrain transform tweaked
+thalassocracy and federation luxury changed
+all spaceship parts req. Space Lift
+pyramids tweaked.
+units transport description corrected.
+
+2.6.24
+Colosseum obsoleted
+Teh tree tweaks
+Flag ship trident gfx added
+Post Office added
+caravan-like units: Junk, Cog, Clipper, Freighter, Jetliner
+Caravel: transport ship
+Brig: navy ship
+Pirates Brig, new units exclusive for Barbarians (Barbarians, Pirates, Little Green Men)
+Revised effects and buildings constrictions/obsoleting.
+Port Facility is now an improved version of Harbour.
+Pollution decrease empire size step
+Fixed Slavery Abolition effecs
+Democracy and Republic tile bonus only for Celebrating
+
+2.6.23
+Rapture growth with Pyramids for Tribal and Despotism
+New disasters: Tsunami for coastial towns and Fire caused by Fallout 
+No incite Fascism except if target have Statue of Libery
+New improvments: River Embankments and Fire Station
+Pollution tweaked
+Artillery tweaked
+
+2.6.22
+Several bugfixes and description corrections.
+Horse unit attack halved against Palisade.
+Bunkers protection againt Bombs.
+Culture pts fixed and tweaked
+
+2.6.21
+AI gains trade from Palace under Tribal
+Migrants no longer Unique
+OneAttack for all Air and for direct fire artillery
+Weak units hp/cost tweaked
+Veteran bonus for govs: 
+Despotism+Stable Barracks: Chariot, Direct Democracy: Phalanx, Archers, First Republic: Legion, Swordsmen, Monarchy: Pikemen, Arbalest, 
+Thalassocracy: Sea units, Legalism: Halberdiers, Democracy: Riflemen, Sniper, Republic: Builders, Train
+Communism: Partisan, Federation: Diplomat, Spy, Fascism: Paratroopers 
+
+2.6.20
+Luxury from Amphitheater, Theatre Stage and Thermal Bath fixed
+Add to city size limit = 7
+Rice (2f) on Swamp, Deer (2f) in Forest, Pheasant (1f) also on Grassland
+Western Wall obsoleted by Guerilla Warfare
+2 traderoutes, +1 with automobile
+
+2.6.19
+GreatWonders range fixed
+Bombard rate of ships adjusted
+Oil Wells tweaked
+City styles improved
+New wonders: Taj Mahal, Osaka Castle, Kyoto Fushimi Inari, Jousting Tiltyard
+New buildings/improvements: Madrasa, Amusement Park, Trade Union
+Yasir as improvement building instead of small wonder.
+New techs: Shiism, Hastilude, Mass Entertainment (old renamed to Martial Games), Welding Technology, reworked tech tree
+
+2.6.18
+Modpack Installer file fixed
+Merge with jwrober's string fixture branch
+
+2.6.17
+Tweaked Temple output and Tribal/Anarchy emipre step.
+Improved gfx of amplio Hunters and small HWroads
+Culture pts req. adjusted
+Longboat small sprite added
+Monarchy: added 25% sci penalty
+Forbidden City - second gov. center for Temple oriented nation
+Sultan Palace - second gov. center for Mosque oriented nation
+Sultan Palace as req. for tithies under Funda.
+Legalism req. Forbidden City
+Tech costs fixed
+New Techs: Jainism, Sunnism
+Leonardo Workshop - 1 unit upgrade, Wheeled unit v+
+
+2.6.16
+Slavery abolition - increased empire unhapiness threshold step.
+Fixed empire step for Tribal, Anarchy.
+Workshop Barrack add veterean also for Enginners
+Port Facility increase city radius
+
+2.6.15
+Cultured nation score fixed
+Railway station required to make trains
+Factory and Workshop Barracks yield train veteran lvl up
+Monitor and Patrol Boat also have bombarder flag.
+Improved farmland gfx.
+New unit: Builders. Engineers moved to Corporation.
+Zeppelins is an early Helicopter.
+Oil Refinery tweaked
+Bugfix: No distance corruption for govs without capital req.
+
+2.6.14
+ATV infantry unit added
+small bugfixes and tweaks
+history pts thresholds tweaks
+
+2.6.13
+Wind turbine added
+some units gfx improved
+
+2.6.12
+Khajuraho temple added
+tech icons added
+
+2.6.11
+Watchtower added, tech tree tweaks
+Tech icons added
+Road bridges removed
+
+2.6.10
+Thalassocracy tweaks
+Highway fix - need automobile
+Suspension "Bridge Road" over Sea or Lake
+
+2.6.9
+Temple of city god - small wonder
+Tech tree tweaks
+New units: Missile, Armored Car
+Nuclear units require Nuclear Plant
+Uranium strategic resource required for Manhattan Project, and add bonus trade to Nuclear Power.
+Libraries output increased to 75%, to balance worse science unders ome govs.
+Celebrating cause: 
+ Rapture under First Republic, Democracy or Legalism (Granary req.), 
+ Trade bonus under Republic, Democracy, Federation (Women suffrage req.)
+ Shield bonus under Fascism (Police Station req.), Communism (5-year Plan req,), Thalassocracy (Marco Polo's Embassy req.),
+ Food bonus under Monarchy (Palace req.)
+Metallurgy enable autoupgrade (on cost of v-level).
+Warfare Museum prevent autoupgrades from Metallurgy, Leonardo or DARPA.
+Bunkers: palisade replacement 
+General Staff tech.
+
+2.6.8
+Air units ignore walls and kill citizens.
+Gov. upkeep tweaks, new icons
+Added Ecole speciale militaire de Saint-Cyr small wnder, replacement of Sun Tzu Academy. DARPA add veterancy to Big Land.
+Engineers capable to build Highways 
+
+2.6.7
+City Walls prohibit city growth above 46.
+Alternatively - Palisade - upkeep fee and less defense, but no growth restrictions.
+Water Treatment Plant - required for growth above 24 (can be also used instead Aqueduct, give higher plaque protection).
+Stable Barracks have cheaper upkeep with Horses on tile, Infantry Barracks II - with Saltpeter.
+New base: Water Lock - can be locatd on the coast, allows ships to enter one tile inland.
+
+2.6.6
+ISO HEX tilesets with amplio and small version
+Reworked Land unit class, splitted to Infantry, Light Cavalry, Heavy Cavalry
+Separate barracks for infantry/firearms infantry and cavalry/tanks.
+Cheaper unit production, higher shield upkeep.
+Temple add culture points.
+Adjusted tech costs.
+
+2.6.5
+Fixed swamp irrig.
+Reworked tile transform path.
+revolen 2
+Rapture celeb. growth in First Republic or Direct Democracy (disabled by Monotheism), Tile Trade Bonus for celeb. in Republic, Democracy.
+Simplified city radius/vision rules.
+
+2.6.4
+Added effects to Yasir, Amphitheater, Theatre.
+Buildings/Wonders/Units Sprites for owerhead tileset.
+Default tileset/geometry changed to HEX no ISO
+
+2.6.3
+Additional advance path for entertainment.
+Science cheat for AI.
+
+2.6.2
+Terrain production tweaks
+Corrected Swordsmen and Crusaders sprites
+
+2.6.1
+New tech: Leather Tanning
+New units: Hunters, Canoes.
+Decreased maximal possible city radius to maintain city properties window height.
+Fixed Eiffel Tower.
+
+2.6.0 
+Initial release

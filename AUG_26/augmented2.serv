@@ -1,0 +1,39 @@
+rulesetdir augmented2
+set techlevel=0
+
+;set aifill=0  ;uncomment for multiplayer
+set aifill=12 ;comment out for multiplayer
+
+; cmdlevel info   ;uncomment for multiplayer
+cmdlevel hack  ;comment out for multiplayer
+
+set allowtake="aA1"
+set ec_chat=enabled
+set ec_info=enabled 
+set ec_max_size=5000
+set ec_turns=12
+set saveturns=1
+;set timeout=72000
+set timeout=0
+;set unitwaittime=7260
+set fixedlength 0
+
+set alltemperate=disabled
+set temperature=50
+set flatpoles 80
+set tilesperplayer=500
+
+set specials=300
+set huts=10
+
+;keep barbarians enabled in multiplayer game to tamper culture points farmers
+set barbarians=enabled
+
+;set revealmap=START  #uncomment this for revealing the map for test games
+
+set minplayers 1
+set maxplayers 12
+set nationset all
+metamessage AUGMENTED2.6.lt18 ruleset, modpack installer http://149.156.194.203/~mczapkie/fc/augmented/augmented2.modpack discord:Wahazar#3898 
+;connectmsg This server has augmented2 ruleset with additional graphics, which can be automatically installed by Modpack Installer,\n URL for Installer - http://149.156.194.203/~mczapkie/fc/augmented/augmented2.modpack
+
