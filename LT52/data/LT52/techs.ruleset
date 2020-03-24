@@ -313,7 +313,7 @@ req2     = "Space Flight"
 flags    = ""
 graphic     = "a.environmentalism"
 graphic_alt = "-"
-cost     = 1200
+cost     = 3600
 
 [advance_espionage]
 name     = _("Espionage")
@@ -359,7 +359,7 @@ flags    = ""
 graphic     = "a.fusion_power"
 graphic_alt = "-"
 helptext = _("Gives sea units nine extra moves.")
-cost     = 5700
+cost     = 17000
 
 [advance_advanced_espionage]
 name     = _("Advanced Espionage")
@@ -369,7 +369,7 @@ flags    = ""
 graphic     = "a.advanced_espionage"
 graphic_alt = "a.flight"
 helptext = _("In the digital age espionage becomes even more powerful.")
-cost     = 6000
+cost     = 18000
 
 [advance_aviation_endurance]
 name     = _("Aviation Endurance")
@@ -379,7 +379,7 @@ flags    = ""
 graphic     = "a.flightendurance"
 graphic_alt = "a.flight"
 helptext = _("Allows the construction of unit cargo planes.")
-cost     = 6650
+cost     = 20000
 
 [advance_genetic_engineering]
 name     = _("Genetic Engineering")
@@ -787,7 +787,7 @@ req2     = "Space Flight"
 flags    = ""
 graphic     = "a.stealth"
 graphic_alt = "-"
-cost     = 1200
+cost     = 3600
 
 [advance_steam_engine]
 name     = _("Steam Engine")
@@ -814,7 +814,7 @@ req2     = "Laser"
 flags    = ""
 graphic     = "a.superconductors"
 graphic_alt = "-"
-cost     = 1260
+cost     = 3800
 
 [advance_tactics]
 name     = _("Tactics")
