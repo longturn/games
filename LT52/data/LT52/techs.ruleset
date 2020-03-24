@@ -170,7 +170,7 @@ req2     = "Medicine"
 flags    = ""
 graphic     = "a.chemistry"
 graphic_alt = "-"
-cost     = 200
+cost     = 280
 
 [advance_chivalry]
 name     = _("Chivalry")
@@ -264,7 +264,7 @@ req2     = "Invention"
 flags    = ""
 graphic     = "a.democracy"
 graphic_alt = "-"
-cost     = 212
+cost     = 296
 
 [advance_economics]
 name     = _("Economics")
@@ -273,7 +273,7 @@ req2     = "University"
 flags    = ""
 graphic     = "a.economics"
 graphic_alt = "-"
-cost     = 212
+cost     = 296
 
 [advance_electricity]
 name     = _("Electricity")
@@ -405,7 +405,7 @@ req1     = "Invention"
 req2     = "Feudalism"
 graphic     = "a.gunpowder"
 graphic_alt = "-"
-cost     = 325
+cost     = 455
 
 [advance_horseback_riding]
 name     = _("Horseback Riding")
@@ -610,7 +610,7 @@ req2     = "Physics"
 flags    = ""
 graphic     = "a.navigation"
 graphic_alt = "-"
-cost     = 275
+cost     = 385
 
 [advance_nuclear_fission]
 name     = _("Nuclear Fission")
@@ -760,7 +760,7 @@ req2     = "Medicine"
 flags    = ""
 graphic     = "a.sanitation"
 graphic_alt = "-"
-cost     = 225
+cost     = 315
 
 [advance_seafaring]
 name     = _("Seafaring")
@@ -873,7 +873,7 @@ req2     = "University"
 flags    = ""
 graphic     = "a.theory_of_gravity"
 graphic_alt = "-"
-cost     = 238
+cost     = 333
 
 [advance_trade]
 name     = _("Trade")
