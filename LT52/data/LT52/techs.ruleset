@@ -234,7 +234,7 @@ req2     = "Metallurgy"
 flags    = ""
 graphic     = "a.conscription"
 graphic_alt = "-"
-cost     = 350
+cost     = 630
 
 [advance_construction]
 name     = _("Construction")
@@ -286,7 +286,7 @@ helptext = _("\
 Allows irrigation without an adjacent water source, improves the \
 effect of Amphitheaters, and increases city vision radius.\
 ")
-cost     = 420
+cost     = 750
 
 [advance_electronics]
 name     = _("Electronics")
@@ -705,7 +705,7 @@ For Despotism or Tribal governments, cancels the penalty to worked \
 tiles with output greater than 2 (as if all your cities were always \
 celebrating).\
 ")
-cost     = 473
+cost     = 850
 
 [advance_recycling]
 name     = _("Recycling")
