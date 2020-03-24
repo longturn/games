@@ -197,7 +197,7 @@ req2     = "Advanced Flight"
 flags    = ""
 graphic     = "a.combined_arms"
 graphic_alt = "-"
-cost     = 1020
+cost     = 2652
 
 [advance_combustion]
 name     = _("Combustion")
@@ -619,7 +619,7 @@ req2     = "Atomic Theory"
 flags    = ""
 graphic     = "a.nuclear_fission"
 graphic_alt = "-"
-cost     = 5000
+cost     = 3000
 
 [advance_nuclear_power]
 name     = _("Nuclear Power")
@@ -629,7 +629,7 @@ flags    = ""
 graphic     = "a.nuclear_power"
 graphic_alt = "-"
 helptext = _("Gives sea units three extra moves.")
-cost     = 560
+cost     = 1450
 
 [advance_philosophy]
 name     = _("Philosophy")
@@ -741,7 +741,7 @@ req2     = "Computers"
 flags    = ""
 graphic     = "a.robotics"
 graphic_alt = "-"
-cost     = 1040
+cost     = 2700
 
 [advance_rocketry]
 name     = _("Rocketry")
@@ -751,7 +751,7 @@ flags    = ""
 graphic     = "a.rocketry"
 graphic_alt = "-"
 helptext = _("Doubles movement of nuclear units.")
-cost     = 1700
+cost     = 4400
 
 [advance_sanitation]
 name     = _("Sanitation")
