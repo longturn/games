@@ -698,6 +698,7 @@ sound		= "b_palace"
 sound_alt	= "b_generic"
 helptext	= _("\
 Makes a city the capital and the center of your government. \
+Palace makes your city special with the extended city working area. \
 Waste in other cities (corruption, production waste, and food waste) \
 is often related to how far away from the capital they are. On top of \
 this, corruption and production waste in your capital itself is half \
