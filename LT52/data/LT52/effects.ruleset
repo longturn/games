@@ -1334,7 +1334,7 @@ reqs    =
 
 [effect_empire_size_base_democracy]
 type    = "Empire_Size_Base"
-value   = 32
+value   = 16
 reqs    =
     { "type", "name", "range"
       "Gov", "Democracy", "Player"
@@ -1398,7 +1398,7 @@ reqs    =
 
 [effect_empire_size_step_democracy]
 type    = "Empire_Size_Step"
-value   = 32
+value   = 16
 reqs    =
     { "type", "name", "range"
       "Gov", "Democracy", "Player"
