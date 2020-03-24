@@ -523,7 +523,7 @@ req2     = "The Corporation"
 flags    = ""
 graphic     = "a.mass_production"
 graphic_alt = "-"
-cost     = 780
+cost     = 1870
 
 [advance_mathematics]
 name     = _("Mathematics")
@@ -573,7 +573,7 @@ req2     = "Machine Tools"
 flags    = ""
 graphic     = "a.mobile_warfare"
 graphic_alt = "-"
-cost     = 850
+cost     = 2040
 
 [advance_monarchy]
 name     = _("Monarchy")
@@ -686,7 +686,7 @@ flags    = ""
 graphic     = "a.radio"
 graphic_alt = "-"
 helptext = _("Allows Workers and Engineers to build airbases and buoys.")
-cost     = 860
+cost     = 2060
 
 [advance_railroad]
 name     = _("?tech:Railroad")
