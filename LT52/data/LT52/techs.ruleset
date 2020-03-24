@@ -460,7 +460,7 @@ req2     = "Nuclear Power"
 flags    = ""
 graphic     = "a.laser"
 graphic_alt = "-"
-cost     = 1500
+cost     = 4000
 
 [advance_leadership]
 name     = _("Leadership")
@@ -658,7 +658,7 @@ req2     = "Robotics"
 flags    = ""
 graphic     = "a.plastics"
 graphic_alt = "-"
-cost     = 1100
+cost     = 3000
 
 [advance_polytheism]
 name     = _("Polytheism")
@@ -778,7 +778,7 @@ req2     = "Rocketry"
 flags    = ""
 graphic     = "a.space_flight"
 graphic_alt = "-"
-cost     = 2460
+cost     = 6600
 
 [advance_stealth]
 name     = _("Stealth")
