@@ -361,10 +361,20 @@ graphic_alt = "-"
 helptext = _("Gives sea units nine extra moves.")
 cost     = 5700
 
+[advance_advanced_espionage]
+name     = _("Advanced Espionage")
+req1     = "Stealth"
+req2     = ""
+flags    = ""
+graphic     = "a.advanced_espionage"
+graphic_alt = "a.flight"
+helptext = _("In the digital age espionage becomes even more powerful.")
+cost     = 6000
+
 [advance_aviation_endurance]
 name     = _("Aviation Endurance")
-req1     = "Fusion Power"
-req2     = "Stealth"
+req1     = "Advanced Espionage"
+req2     = "Fusion Power"
 flags    = ""
 graphic     = "a.flightendurance"
 graphic_alt = "a.flight"
