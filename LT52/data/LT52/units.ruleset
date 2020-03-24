@@ -1832,7 +1832,7 @@ The Caravel is a sailing ship that can enter\
 name          = _("Square-Rigged Caravel")
 class         = "Sea"
 tech_req      = "Magnetism"
-obsolete_by   = "Transport"
+obsolete_by   = "Galleon"
 graphic       = "u.srcaravel"
 graphic_alt   = "u.caravel"
 sound_move    = "m_caravel"
