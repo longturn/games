@@ -115,7 +115,7 @@ req2     = "Refrigeration"
 flags    = ""
 graphic     = "a.atomic_theory"
 graphic_alt = "-"
-cost     = 540
+cost     = 1080
 
 [advance_automobile]
 name     = _("Automobile")
@@ -304,7 +304,7 @@ req2     = "Steam Engine"
 flags    = ""
 graphic     = "a.engineering"
 graphic_alt = "-"
-cost     = 520
+cost     = 1040
 
 [advance_environmentalism]
 name     = _("Environmentalism")
@@ -423,7 +423,7 @@ req2     = "Banking"
 flags    = "Population_Pollution_Inc"
 graphic     = "a.industrialization"
 graphic_alt = "-"
-cost     = 530
+cost     = 1060
 
 [advance_invention]
 name     = _("Invention")
@@ -732,7 +732,7 @@ req2     = "Electricity"
 flags    = "Farmland"
 graphic     = "a.refrigeration"
 graphic_alt = "-"
-cost     = 500
+cost     = 1000
 
 [advance_robotics]
 name     = _("Robotics")
@@ -823,7 +823,7 @@ req2     = "Leadership"
 flags    = ""
 graphic     = "a.tactics"
 graphic_alt = "-"
-cost     = 400
+cost     = 800
 
 [advance_the_corporation]
 name     = _("The Corporation")
