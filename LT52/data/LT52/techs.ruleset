@@ -78,7 +78,7 @@ flags    = ""
 graphic     = "a.advanced_flight"
 graphic_alt = "-"
 helptext = _("Enables movement of nuclear units.")
-cost     = 940
+cost     = 2350
 
 [advance_alphabet]
 name     = _("Alphabet")
@@ -225,7 +225,7 @@ req2     = "Radio"
 flags    = ""
 graphic     = "a.computers"
 graphic_alt = "-"
-cost     = 920
+cost     = 2300
 
 [advance_conscription]
 name     = _("Conscription")
@@ -451,7 +451,7 @@ req2     = "Mobile Warfare"
 flags    = ""
 graphic     = "a.labor_union"
 graphic_alt = "-"
-cost     = 950
+cost     = 2375
 
 [advance_laser]
 name     = _("Laser")
@@ -619,7 +619,7 @@ req2     = "Atomic Theory"
 flags    = ""
 graphic     = "a.nuclear_fission"
 graphic_alt = "-"
-cost     = 2000
+cost     = 5000
 
 [advance_nuclear_power]
 name     = _("Nuclear Power")
@@ -714,7 +714,7 @@ req2     = "Sanitation"
 flags    = ""
 graphic     = "a.recycling"
 graphic_alt = "-"
-cost     = 840
+cost     = 2100
 
 [advance_refining]
 name     = _("Refining")
