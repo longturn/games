@@ -124,7 +124,7 @@ req2     = "Steel"
 flags    = ""
 graphic     = "a.automobile"
 graphic_alt = "-"
-cost     = 710
+cost     = 1630
 
 [advance_banking]
 name     = _("Banking")
@@ -564,7 +564,7 @@ req2     = "Electronics"
 flags    = ""
 graphic     = "a.miniaturization"
 graphic_alt = "-"
-cost     = 750
+cost     = 1725
 
 [advance_mobile_warfare]
 name     = _("Mobile Warfare")
@@ -778,7 +778,7 @@ req2     = "Rocketry"
 flags    = ""
 graphic     = "a.space_flight"
 graphic_alt = "-"
-cost     = 1070
+cost     = 2460
 
 [advance_stealth]
 name     = _("Stealth")
