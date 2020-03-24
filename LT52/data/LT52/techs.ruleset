@@ -364,7 +364,7 @@ cost     = 17000
 [advance_advanced_espionage]
 name     = _("Advanced Espionage")
 req1     = "Stealth"
-req2     = ""
+req2     = "None"
 flags    = ""
 graphic     = "a.advanced_espionage"
 graphic_alt = "a.flight"
