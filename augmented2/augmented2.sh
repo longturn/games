@@ -3,4 +3,4 @@
 GAMENAME="augmented2"
 PORT=5098
 
-. ../rc.subr
+. ../rc.subr.2.6

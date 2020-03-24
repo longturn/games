@@ -1,0 +1,30 @@
+#
+# common code to start a freeciv server, sourced by individual games.
+# valid for Freeciv 2.6
+#
+
+FC_VERSION=${FC_VERSION:-"26"}
+GAMEDIR=${GAMEDIR:-"$HOME/server/$GAMENAME"}
+INSTALL=${INSTALL:-"$HOME/fc${FC_VERSION}"}
+SERVER=${SERVER:-"$GAMEDIR/freeciv-server"}
+SAVEDIR=${SAVEDIR:-"$GAMEDIR/save"}
+FCDBCONF=${FCDBCONF:-"$HOME/server/lt-database-${FC_VERSION}.conf"}
+
+OPTIONS="-A none -p $PORT --saves $SAVEDIR --log $SAVEDIR/freeciv.log -r $GAMENAME.serv --meta -e -a -D $FCDBCONF"
+
+if [ "$1" ]; then
+	SAVE="$SAVEDIR/$1"
+elif [ -f "$SAVEDIR/lastsave.sav.bz2" ]; then
+	SAVE="$SAVEDIR/lastsave.sav.bz2"
+fi
+
+if [ "$SAVE" ]; then
+	OPTIONS="$OPTIONS -f $SAVE"
+fi
+
+test ! -d $SAVEDIR && mkdir $SAVEDIR
+
+export FREECIV_DATA_PATH="$GAMEDIR/data:$INSTALL/share/freeciv"
+printenv
+
+$SERVER $OPTIONS
