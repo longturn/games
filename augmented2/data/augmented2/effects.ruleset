@@ -141,6 +141,70 @@ reqs    =
       "AI", "Cheating", "Player"
     }
 
+[effect_empire_size_step_cheating]
+type    = "Empire_Size_Step"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "AI", "Cheating", "Player"
+    }
+
+[effect_empire_size_step_hard]
+type    = "Empire_Size_Step"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "AI", "Hard", "Player"
+    }
+
+[effect_empire_size_step_normal]
+type    = "Empire_Size_Step"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "AI", "Normal", "Player"
+    }
+
+[effect_upkeep_free_units_cheating_g]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 8
+reqs    =
+    { "type", "name", "range", "present", "quiet"
+      "Gov", "Tribal", "Player", FALSE, TRUE
+      "OutputType", "Gold", "Local", TRUE, FALSE
+      "AI", "Cheating", "Player", TRUE, TRUE
+    }
+
+[effect_upkeep_free_units_hard_g]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 4
+reqs    =
+    { "type", "name", "range", "present", "quiet"
+      "Gov", "Tribal", "Player", FALSE, TRUE
+      "OutputType", "Gold", "Local", TRUE, FALSE
+      "AI", "Hard", "Player", TRUE, TRUE
+    }
+
+[effect_upkeep_free_units_normal_g]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 2
+reqs    =
+    { "type", "name", "range", "present", "quiet"
+      "Gov", "Tribal", "Player", FALSE, TRUE
+      "OutputType", "Gold", "Local", TRUE, FALSE
+      "AI", "Normal", "Player", TRUE, TRUE
+    }
+
+[effect_upkeep_free_units_easy_g]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present", "quiet"
+      "Gov", "Tribal", "Player", FALSE, TRUE
+      "OutputType", "Gold", "Local", TRUE, FALSE
+      "AI", "Easy", "Player", TRUE, TRUE
+    }
+
 [effect_ai_easy_palace]
 type    = "Output_Inc_Tile"
 value   = 1

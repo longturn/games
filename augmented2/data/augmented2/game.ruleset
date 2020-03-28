@@ -994,38 +994,38 @@ colorlist =
 
 [settings]
 ; freeciv game settings for augmented ruleset
-;
+; moved to augmented2.serv file
 set =
     { "name", "value"
-      "aifill", 12
-      "generator", "RANDOM"
-      "topology", "WRAPX|HEX|ISO"
-      "mapsize", "PLAYER"
-      "tilesperplayer", 250
-      "killunhomed", 1
-      "dispersion", 5
+;      "aifill", 12
+;      "generator", "RANDOM"
+;      "topology", "WRAPX|HEX|ISO"
+;      "mapsize", "PLAYER"
+;      "tilesperplayer", 250
+;      "killunhomed", 1
+;      "dispersion", 5
 ;      "startpos", "2or3"
-      "landmass", 40
-      "specials", 400
-      "tinyisles", "DISABLED"
+;      "landmass", 40
+;      "specials", 400
+;      "tinyisles", "DISABLED"
 ;      "temperature", 70
 ;      "flatpoles", 0
-      "startunits", "cccccf"
-      "citymindist", 3
-      "techlevel", 0
-      "borders", "ENABLED"
-      "foggedborders", "ENABLED"
-      "restrictinfra", "ENABLED"
-      "unreachableprotects", "DISABLED"
-      "onsetbarbs", 120
-      "occupychance", 100
-      "razechance", 10
+;      "startunits", "cccccf"
+;      "citymindist", 3
+;      "techlevel", 0
+;      "borders", "ENABLED"
+;      "foggedborders", "ENABLED"
+;      "restrictinfra", "ENABLED"
+;      "unreachableprotects", "DISABLED"
+;      "onsetbarbs", 120
+;      "occupychance", 100
+;      "razechance", 10
       "savepalace", FALSE
-      "techlossforgiveness", 10
-      "techlossrestore", 10
-      "sciencebox", 160
-      "revolen", 2
-      "revolentype", "RANDQUICK"
+;      "techlossforgiveness", 10
+;      "techlossrestore", 10
+;      "sciencebox", 160
+;      "revolen", 2
+;      "revolentype", "RANDQUICK"
 ;      "scorelog", "ENABLED"
       "victories", "SPACERACE|ALLIED|CULTURE"
     }

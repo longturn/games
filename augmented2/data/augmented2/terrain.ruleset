@@ -1916,7 +1916,8 @@ removal_time   = 0
 flags          = "TerrChangeRemoves"
 helptext       = _("\
 Ruins mark the former site of a city that was destroyed or abandoned.\
- They have no effect on gameplay.\
+ They have no significant effect on gameplay\
+ (except of small defense bonus for military Small Land units).\
 ")
 
 [extra_dirt_road]
