@@ -10,7 +10,7 @@ SERVER=${SERVER:-"$GAMEDIR/freeciv-server"}
 SAVEDIR=${SAVEDIR:-"$GAMEDIR/save"}
 FCDBCONF=${FCDBCONF:-"$HOME/server/lt-database-${FC_VERSION}.conf"}
 
-OPTIONS="-A none -p $PORT --saves $SAVEDIR --log $SAVEDIR/freeciv.log -r $GAMENAME.serv --meta -e -a -D $FCDBCONF"
+OPTIONS="-A none -p $PORT --saves $SAVEDIR --log $SAVEDIR/freeciv.log -r $GAMENAME.serv --meta -e -a -D $FCDBCONF -S $GAMEID"
 
 if [ "$1" ]; then
 	SAVE="$SAVEDIR/$1"
