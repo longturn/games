@@ -64,8 +64,8 @@ set techlossforgiveness 10
 set techlossrestore 10
 
 # technical
-set aifill=10
-set allowtake="aA1"
+set aifill=0
+set allowtake="Hh"
 cmdlevel info
 set compresstype plain
 set ec_chat=enabled
