@@ -878,6 +878,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
+targets       = "Coaster"
 embarks       = "Sea", "Coaster"
 disembarks    = "Sea", "Coaster"
 flags         = "Capturer", "Only_Native_Attack"
@@ -948,9 +949,10 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
+targets       = "Coaster"
 embarks       = "Sea", "Coaster"
 disembarks    = "Sea", "Coaster"
-flags         = "Capturer", "Bombarder"
+flags         = "Capturer", "Bombarder", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "HutTech"
 helptext      = _("\
 Archers use bows to fire several rounds of arrows, thus can be used to wound enemy units.\
@@ -986,9 +988,10 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
+targets       = "Coaster"
 embarks       = "Sea", "Coaster"
 disembarks    = "Sea", "Coaster"
-flags         = "Capturer", "Bombarder", "Marines"
+flags         = "Capturer", "Bombarder", "Marines", "Only_Native_Attack"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
 The Arbalest equipped with powerful crosbows can be used to the range attack on enemy units.\
@@ -1022,9 +1025,10 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
+targets       = "Coaster"
 embarks       = "Sea", "Coaster"
 disembarks    = "Sea", "Coaster"
-flags         = "Capturer", "IgTer", "Bombarder", "Light Shells", "Marines", "IgZOC", "HasNoZOC"
+flags         = "Capturer", "IgTer", "Bombarder", "Light Shells", "Marines", "IgZOC", "HasNoZOC", "Only_Native_Attack"
 roles         = "DefendOkStartUnit", "BarbarianTech"
 helptext      = _("\
 Marksmen squads skilled in precision shooting, can be used to wound enemy units or for reconnaissance.\
@@ -1056,9 +1060,10 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 3
+targets       = "Coaster"
 embarks       = "Helicopter", "Sea", "Coaster"
 disembarks    = "Helicopter", "Sea", "Coaster"
-flags         = "Capturer", "Partial_Invis", "IgTer", "Bombarder", "Light Shells", "IgZOC", "HasNoZOC", "Marines"
+flags         = "Capturer", "Partial_Invis", "IgTer", "Bombarder", "Light Shells", "IgZOC", "HasNoZOC", "Marines", "Only_Native_Attack"
 roles         = "DefendOkStartUnit"
 helptext      = _("\
 Sniper sharpshooter squads can be used to wound enemy units or for reconnaissance.\
@@ -1569,6 +1574,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 2
+targets       = "Coaster"
 embarks       = "Helicopter", "Sea", "Coaster"
 disembarks    = "Helicopter", "Sea", "Coaster"
 flags         = "IgTer", "Capturer", "Light Shells", "Only_Native_Attack"
@@ -1652,6 +1658,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+targets       = "Coaster"
 embarks       = "Sea", "Coaster"
 disembarks    = "Sea", "Coaster"
 flags         = "Capturer", "Only_Native_Attack"
@@ -1688,6 +1695,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+targets       = "Coaster"
 embarks       = "Sea", "Coaster"
 disembarks    = "Sea", "Coaster"
 flags         = "Capturer", "Only_Native_Attack"
@@ -1726,6 +1734,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
+targets       = "Coaster"
 embarks       = "Sea", "Coaster"
 disembarks    = "Sea", "Coaster"
 flags         = "Capturer", "Only_Native_Attack"
@@ -1762,6 +1771,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
+targets       = "Coaster"
 embarks       = "Sea", "Coaster"
 disembarks    = "Sea", "Coaster"
 flags         = "Capturer", "Light Shells"
@@ -1878,6 +1888,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+targets       = "Coaster"
 embarks       = "Sea", "Coaster"
 disembarks    = "Sea", "Coaster"
 flags         = "Capturer", "Only_Native_Attack"
@@ -1911,6 +1922,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+targets       = "Coaster"
 embarks       = "Sea", "Coaster"
 disembarks    = "Sea", "Coaster"
 flags         = "Capturer", "Only_Native_Attack"
@@ -1944,6 +1956,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 2
+targets       = "Coaster"
 embarks       = "Sea", "Coaster"
 disembarks    = "Sea", "Coaster"
 flags         = "Capturer", "Only_Native_Attack"
@@ -1980,6 +1993,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 2
+targets       = "Coaster"
 embarks       = "Sea", "Coaster"
 disembarks    = "Sea", "Coaster"
 flags         = "Capturer", "Only_Native_Attack"
@@ -2016,6 +2030,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 2
+targets       = "Coaster"
 embarks       = "Sea", "Coaster"
 disembarks    = "Sea", "Coaster"
 flags         = "Capturer", "Only_Native_Attack"
@@ -2049,6 +2064,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
+targets       = "Coaster"
 embarks       = "Sea", "Coaster"
 disembarks    = "Sea", "Coaster"
 flags         = "Capturer", "Light Shells", "Only_Native_Attack"
@@ -2084,6 +2100,7 @@ uk_happy      = 1
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
+targets       = "Coaster"
 embarks       = "Sea", "Coaster"
 disembarks    = "Sea", "Coaster"
 flags         = "Capturer", "Light Shells", "Only_Native_Attack"
@@ -2236,7 +2253,7 @@ Paratroopers are experts at airborne attacks. From a friendly city,\
 Fascism grant Veteran level for the Paratroopers (Elite with Infantry Barracks II)\
 ")
 paratroopers_range = 10
-paratroopers_mr_req = 1
+paratroopers_mr_req = 2
 paratroopers_mr_sub = 0
 
 ;exclusive units
@@ -2562,11 +2579,12 @@ disembarks    = "Helicopter", "Sea", "Coaster"
 flags         = "Capturer", "Paratroopers", "Light Shells"
 roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
-Infantry equipped with light all-terrain vehicles is a fast scout unit which can be paradropped.\
+Infantry equipped with light all-terrain vehicles is a fast scout unit which can be paradropped\
+ 8 tiles away from city or air base, at the expense of 1 movement point.\
 ")
 paratroopers_range = 8
 paratroopers_mr_req = 1
-paratroopers_mr_sub = 0
+paratroopers_mr_sub = 1
 
 [unit_horsemen]
 name          = _("Horsemen")
@@ -3517,7 +3535,7 @@ uk_shield     = 3
 uk_food       = 0
 uk_gold       = 3
 flags         = "Bombarder", "Light Shells"
-targets       = "Air", "Missile", "Helicopter", "Sea", "Coaster"
+targets       = "Air", "Helicopter", "Sea", "Coaster"
 roles         = "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Anti-Aircraft Gun is a mobile unit equipped with radar and two autocannons,\
@@ -3689,7 +3707,7 @@ move_rate     = 2
 vision_radius_sq = 14
 transport_cap = 0
 fuel          = 0
-uk_happy      = 0
+uk_happy      = 1
 uk_shield     = 4
 uk_food       = 0
 uk_gold       = 3
@@ -5911,10 +5929,10 @@ sound_fight_alt = "f_generic"
 build_cost    = 30
 pop_cost      = 0
 attack        = 16
-defense       = 0
+defense       = 16
 hitpoints     = 2
 firepower     = 3
-move_rate     = 16
+move_rate     = 2  ;+15
 vision_radius_sq = 2
 transport_cap = 0
 fuel          = 1
@@ -5924,13 +5942,19 @@ uk_food       = 0
 uk_gold       = 1
 ; embarks       = "Sea", "Train", "Air"
 disembarks    = "Sea", "Train", "Air"
-targets       = "Air", "Missile", "Helicopter", "Sea", "Coaster"
-flags         = "OneAttack", "AirAttacker", "CityBuster", "HasNoZOC", "IgWall"
+targets       = "Air", "Helicopter", "Sea", "Coaster"
+flags         = "OneAttack", "AirAttacker", "CityBuster", "HasNoZOC", "IgWall", "Paratroopers"
 roles         = ""
 helptext      = _("\
 Medium-distance Missile can devastate enemy units, especially is capable\
- to shoot down enemy aircraft or missiles.\
+ to shoot down enemy aircraft.\n\
+Paradrop action can launch this missile 16 tiles away from city or air base\
+ and then remaining movement point can be used to attack.\
 ")
+paratroopers_range = 16
+paratroopers_mr_req = 2
+paratroopers_mr_sub = 1
+
 
 [unit_cruise_missile]
 name          = _("Cruise Missile")
@@ -5974,7 +5998,6 @@ TIP:  A handful of these can successfully keep the waters around\
 name          = _("Atomic Bomb")
 class         = "Missile"
 tech_req      = "Nuclear Fission"
-impr_req      = "Nuclear Plant"
 obsolete_by   = "None"
 graphic       = "u.Abomb"
 graphic_alt   = "u.nuclear"
@@ -5992,14 +6015,14 @@ move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 0
 fuel          = 1
-uk_happy      = 3
+uk_happy      = 1
 uk_shield     = 2
 uk_food       = 0
 uk_gold       = 3
 ; embarks       = "Air"
 disembarks    = "Air"
 targets       = "Sea", "Coaster"
-flags         = "FieldUnit", "OneAttack", "Nuclear", "HasNoZOC", "Capturable", "NoVeteran", "IgWall"
+flags         = "FieldUnit", "OneAttack", "Nuclear", "HasNoZOC", "Unique", "Unbribable", "NoVeteran", "IgWall"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
@@ -6022,13 +6045,6 @@ Similar to pollution and global warming, the risk of global nuclear\
  across the globe changes into desert, tundra, and ice. Settlers,\
  Migrants, Workers, and Engineers and (for fallout on water)\
  Transports can clean up nuclear fallout.\
-"), _("\
-TIP:  You may be involved in a situation where you've invaded an\
- enemy country en masse, but the enemy cities are too strong.\
- Before using a Nuclear unit, assemble a gang of cleanup units\
- next to the city and have them ready to fix the fallout on the\
- same turn it occurs! This minimizes the chance of nuclear winter.\
- Eco-friendly nukes!\
 ")
 
 [unit_nuclear]
@@ -6046,10 +6062,10 @@ sound_fight_alt = "f_generic"
 build_cost    = 220
 pop_cost      = 0
 attack        = 99
-defense       = 0
+defense       = 15
 hitpoints     = 10
 firepower     = 4
-move_rate     = 24
+move_rate     = 16
 vision_radius_sq = 2
 transport_cap = 0
 fuel          = 1
@@ -6060,7 +6076,7 @@ uk_gold       = 3
 ; embarks       = "Sea", "Train"
 disembarks    = "Sea", "Train"
 targets       = "Sea", "Coaster"
-flags         = "FieldUnit", "OneAttack", "Nuclear", "HasNoZOC", "NoVeteran", "IgWall"
+flags         = "FieldUnit", "OneAttack", "Nuclear", "HasNoZOC", "NoVeteran", "IgWall", "Paratroopers"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
@@ -6071,6 +6087,9 @@ roles         = ""
 helptext      = _("\
 You can build Nuclear units when you have the required advance, and\
  the Manhattan Project wonder has been built by any player.\
+"), _("\
+Paradrop action can launch this missile 1024 tiles away from city or air base\
+ but only one movement points will remain for final strike.\
 "), _("\
 On impact, the blast will destroy any unit in an area 3 tiles wide\
  (3x3 squares for rectangular grids), including friendly units.\
@@ -6087,6 +6106,10 @@ TIP:  You may be involved in a situation where you've invaded an\
  same turn it occurs! This minimizes the chance of nuclear winter.\
  Eco-friendly nukes!\
 ")
+paratroopers_range = 1024
+paratroopers_mr_req = 16
+paratroopers_mr_sub = 15
+
 
 [unit_torpedo]
 name          = _("Torpedo")

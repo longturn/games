@@ -13,10 +13,10 @@ set landmass=40
 set separatepoles=enabled
 set flatpoles 80
 set tinyisles="DISABLED"
-set specials=300
+set specials=200
 set steepness=40
 set temperature=50
-set tilesperplayer=300
+set tilesperplayer=200
 set topology="WRAPX|HEX|ISO"
 set wetness=40
 set alltemperate=disabled
