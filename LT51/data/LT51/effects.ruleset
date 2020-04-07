@@ -130,25 +130,8 @@ nreqs    =
 type    = "City_Unhappy_Size"
 value   = 4
 
-; Barbarian effects
+; Barbarian effects removed
 
-[effect_barb1]
-type    = "No_Diplomacy"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Nation", "Barbarian", "Player"
-    }
-
-
-; Barbarian no waste by distance
-[effect_barb3]
-type    = "Output_Waste_By_Distance"
-value   = -2
-reqs    =
-    { "type", "name", "range"
-      "Nation", "Barbarian", "Player"
-    }
 
 
 ; Specialist output bonuses
