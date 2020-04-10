@@ -1,0 +1,814 @@
+
+; Modifying this file:
+; You should not modify this file except to make bugfixes or
+; for other "maintenance".  If you want to make custom changes
+; you should create a new datadir subdirectory and copy this file
+; into that directory, and then modify that copy.  Then use the
+; command "rulesetdir <mysubdir>" in the server to have freeciv
+; use your new customized file.
+
+; Note that the freeciv AI may not cope well with anything more
+; than minor changes.
+
+[datafile]
+description="Civ2Civ3 governments data for Freeciv"
+options="+Freeciv-2.6-ruleset"
+
+[governments]
+during_revolution="Anarchy"
+
+; /* <-- avoid gettext warnings
+;
+; Below: The individual government types, one per section.
+;
+; The actual tag used (the * in [government_*]) does not matter, except 
+; it must be unique within this file, and it may be used in debug 
+; output when reading this file.
+;
+; For the "official" rulesets, the order of these sections should not
+; be changed because that would break backward compatability with 
+; savegames.  (In particular, if Fundamentalism is added to default
+; ruleset, should be added at end.)
+;
+; Notes on fields:
+;
+; name         = translatable name as seen by user
+; rule_name    = (optional) internal name for savegames, rulesets etc; if
+;                not present, "name" is used for this purpose too. Since
+;                the name used in savegames must not change, if you want
+;                to rename an item after a ruleset has been released, you
+;                should set "rule_name" to the original value of "name".
+; reqs         = requirements for this government (see README.effects)
+; graphic      = tag specifing preferred graphic
+; graphic_alt  = alternate graphics tag if preferred is not found;
+;                should be a standard tag if preferred is not;
+;                otherwise may be "-"
+; ai_better    = AI will not consider this government for use if the
+;                government listed here is available
+; ruler_titles = ruler titles by nation, "-" is default, and non-matched
+;                nations are ignored
+; helptext     = optional help text string; should escape all raw newlines
+;                so that xgettext parsing works
+;
+; */ <-- avoid gettext warnings
+
+;------------------------------------------------------------------------
+[government_anarchy]
+
+name        = _("Anarchy")
+; No reqs
+graphic     = "gov.anarchy"
+graphic_alt = "-"
+ai_better   = "Tribal"
+
+ruler_male_title = _("Warlord %s")
+ruler_female_title = _("Warlady %s")
+
+helptext = _("\
+Anarchy is simply the absence of any recognizable government.\
+ Citizens are disorganized and unproductive, and will spend all\
+ income as quickly as possible, rather than paying taxes or\
+ conducting research.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Buildings and technologies do not require any upkeep.\n\
+* Without Pyramids, each worked tile that gives more than 2 Food, Shield, or Trade will\
+ suffer a -1 penalty, unless the city working it is celebrating.\
+ (Cities below size 3 will not celebrate.)\n\
+* Each city can support up to 2 shield unit payment for free; further units each cost\
+ 1 (or more, in case of upgrade) shield per turn.\n\
+* Military units do not cause unhappiness even when deployed aggressively.\n\
+* Military units impose martial law. Up to 3 military units inside a city\
+ will each force 1 unhappy citizen to become content.\n\
+* You have no control over tax rates. Half of the trade income is\
+ simply lost to your economy (less if you have luxury-promoting buildings),\
+ and the remainder all goes to luxuries.\
+* Base production and food waste is 30%.\n\
+* Luxury science outcome are halved, tax and science specialists'\
+ output is halved.\
+* The only Policy setting, which is taken into account is National Pride. \
+")
+
+;------------------------------------------------------------------------
+[government_tribal]
+
+name        = _("Tribal")
+; No reqs
+graphic     = "gov.tribal"
+graphic_alt = "s.tax_luxury"
+ai_better   = "Despotism"
+
+ruler_male_title = _("Warlord %s")
+ruler_female_title = _("Warlady %s")
+
+helptext = _("\
+Under a Tribal government, you are part ruler of your people. Your\
+ control over your citizens is maintained largely by spiritual counsel.\
+"), _("\
+Compared to Despotism, a Tribal economy is more shield-oriented, without government centre. Its\
+ bonuses to veterancy can be an advantage in wartime, but it lacks the\
+ martial law of other early governments.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Increases by half the chance of small land, infantry and cavalry units getting the next veteran level\
+ after a battle.\n\
+* Without Pyramids, each worked tile that gives more than 2 Food, Shield, or Trade will\
+ suffer a -1 penalty, unless the city working it is celebrating or Tribe Hut exist.\
+ (Cities below size 3 will not celebrate.)\n\
+* With Pyramids, celebrating cities with Granary and size 3 or above are subject of Rapture Growth \
+ (this effect is cancelled by Monotheism)\n\
+* Each city can support up to 2 units shield payment for free; further units each cost\
+  shields per turn (more than 6, also food).\n\
+* Unlike later governments, military units do not cause unhappiness even\
+ when deployed aggressively.\n\
+* Base corruption and waste is 30% (the highest under any government)\
+ (half of base corruption with knowledge of Trade).\n\
+* Base food waste is 10% for all cities.\n\
+* Tribe loyality make inciting revolt 2x more expensive than Despotism or Monarchy.\n\
+* Science and gold outcome is decreased 25%, tax specialists' output is halved\n\
+* Policies settings, which are taken into account: Welfare Policy, Religious Orthodoxy, National Pride. \
+")
+
+;------------------------------------------------------------------------
+[government_thalassocracy]
+
+name        = _("Thalassocracy")
+reqs = { "type", "name", "range"
+         "tech", "Thalassocracy", "Player"
+;         "Building", "Palace", "Player"
+       }
+graphic     = "gov.thalassocracy"
+graphic_alt = "s.tax_gold"
+ai_better   = "Federation"
+
+ruler_male_title = _("Council %s")
+ruler_female_title = _("?female:Council %s")
+
+helptext = _("\
+Thalassocracy is a system of 'empire at sea', which gain power\
+ from naval and sea trade supremacy. \n\
+ This decentralised state of selfdom cities have moderate corruption\
+ and increased money income from sea,\
+ albeit decreased inland productivity. \n\
+ Due to long traditions of its maritime supremacy, all new sea warships have already deckhand level \
+(veteran with Harbour). \
+"),
+; /* xgettext:no-c-format */
+_("\
+* Each city gets extra 2 luxury points.\n\
+* Each city can support up to 1 gold and 4 shield unit payments for free; \n\
+* Martial law is limited to 2 units.\n\
+* Each city tolerates up to 1 peacemaker unit outside of state boundaries;\
+  each further unit causes 1..3 unhappy citizens (depend on Enlightening Policy, decreased with Hollywood).\n\
+* There is 10% base level of corruption, not affected by distance to the capital.\n\
+* Base production waste is 20%, \
+  and is not affected by distance to the capital.\n\
+* Production penalty is applied for inland tiles, except \
+ if Marco Polo Embassy is on the same continent.\n\
+* Additional trade point from each Lake, Ocean or Deep Ocean tile for celebrating cities.\n\
+* City with the Lighthouse and Harbor harvest additional food from Deep Ocean tiles.\n\
+* Low chance of Civil War, however citizens are happy, when limited number of cities\
+ participate within this sea-trade federation.\n\
+* Thalassocracy is very tolerant of mixed nationalities in your cities.\n\
+* Science outcome depend on Enlightening Policy.
+* Policies settings, which are taken into account: Liberal Economy, Enlightening Policy, Welfare Policy, Religious Orthodoxy, National Pride. \
+")
+
+;------------------------------------------------------------------------
+[government_federation]
+
+name        = _("Federation")
+reqs = { "type", "name", "range"
+         "tech", "Federation", "Player"
+       }
+graphic     = "gov.federation"
+graphic_alt = "s.tax_gold"
+
+ruler_male_title = _("Consul %s")
+ruler_female_title = _("?female:Consul %s")
+
+helptext = _("\
+Federalism is a system in which the power to govern is shared between\
+ national and provincial governments. \
+ This decentralization minimizes the corruption and waste caused by distance\
+ to capital, and avoids separatist movements.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Each city gets 2 extra luxury points.\n\
+* Cities which belong to the nation with Women Suffrage small wonder,\
+ produce one extra trade point for every tile which is\
+ already producing trade. (Cities below size 3 will not celebrate.)\n\
+* Each city can support up to 2 gold/shield unit payment for free; gold payment is doubled).\n\
+* Each city tolerates one aggressively deployed military unit;\
+ each further unit causes 1..3 unhappy citizens (depend on Enlightening Policy).\n\
+* There is no base level of corruption, but an increasing amount\
+ with distance from the capital (half as much as with most other\
+ governments). Knowledge of The Corporation eliminates this corruption.\n\
+* Base production waste is 30%, but is not affected by distance to the\
+ capital.\n\
+* Base food waste is 30% for all cities.\n\
+* Has a senate that may prevent declaration of war.\n\
+* Federation is relatively tolerant of cosmopolitan cities.\n\
+* Diplomats and Spies gain additional veterancy level (secretary).\n\
+* Inciting revolt is 2x more expensive than Despotism or Monarchy.\n\
+* Gold outcome is increased 25%, science outcome increase depend on Enlightening Policy.\n\
+* Policies settings, which are taken into account: Liberal Economy, Enlightening Policy, Welfare Policy, Religious Orthodoxy, National Pride. \
+")
+
+;------------------------------------------------------------------------
+[government_communism]
+
+name        = _("Communism")
+reqs = { "type", "name", "range"
+         "tech", "Communism", "Player"
+       }
+graphic     = "gov.communism"
+graphic_alt = "-"
+
+ruler_male_title = _("Comrade %s")
+ruler_female_title = _("?female:Comrade %s")
+
+helptext = _("\
+A Communist government is based on the ideal that all people are\
+ equal.  All goods are owned by the state, rather than by private\
+ citizens.  Communism gives a balance between military and commercial\
+ styles of government.\
+"), _("\
+Communism is a good government for maximizing shield production, and\
+ for large empires.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Celebrating cities produce a further shield point for every worked tile\
+ (land or water) which is already producing shields. (Cities below size 3\
+ will not celebrate). 5 Year Plan required.\n\
+* City improvements which would normally have an upkeep of 1 gold are\
+ free of upkeep (except of cities with Trade Union).\n\
+* Each city can support up to 3 shield and 8 gold/food unit payments for free;\
+ food payment is doubled.\n\
+* Each city tolerates up to 3 aggressively deployed military units (cities size 8 or above support more of them);\
+ each further unit causes 1 unhappy citizen.\n\
+* Military units impose martial law. Up to 3 military units inside a city\
+ will each force 2 unhappy citizens to become content (the maximum\
+ possible).\n\
+* Base corruption is 30%, but is not affected by distance to the capital.\n\
+* There is small 10% production waste.\
+* Base food waste is 20% for all cities and increase with Collective Economy policy settings.\n\
+* Communism is relatively tolerant of cosmopolitan cities.\n\
+* Partisans gain additional veterancy level (recruits without Barracks, hardened with Barracks).\n\
+* If United Nation wonder was built by any player, inciting communistic cities is 4x more expensive.\n\
+* Gold outcome is decreased twice, luxury outcome is substantially supressed by 60%\
+ (except for cities with Trade Union improvement: 30%).\n\
+* Policies settings, which are taken into account: Collective Economy, Welfare Policy, National Pride. \
+")
+
+;------------------------------------------------------------------------
+[government_despotism]
+
+name        = _("Despotism")
+reqs = { "type", "name", "range"
+         "tech", "Absolutism", "Player"
+         "Building", "Palace", "Player"
+       }
+graphic     = "gov.despotism"
+graphic_alt = "-"
+ai_better   = "Monarchy"
+
+ruler_male_title = _("Chief %s")
+ruler_female_title = _("?female:Chief %s")
+
+helptext = _("\
+Under Despotism, you are the absolute ruler of your people.  Your\
+ control over your citizens is maintained largely by martial law.\
+"), _("\
+Compared to Tribalism, a Despotic economy is more trade-oriented.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Your centers of government (cities with Palace and Ecclesiastical\
+ Palace) get a +75% bonus to gold production.\n\
+* Without Pyramids, each worked tile that gives more than 2 Food, Shield, or Trade will\
+ suffer a -1 penalty, unless the city working it is celebrating.\
+ (Cities below size 3 will not celebrate.)\n\
+* With Pyramids, celebrating cities with Granary and size 3 or above are subject of Rapture Growth \
+ (this effect is cancelled by Monotheism)\n\
+* Each city can support up to 2 gold and 4 shield unit payments for free.\n\
+* Unlike later governments, military units do not cause unhappiness even\
+ when deployed aggressively.\n\
+* Military units impose martial law. Up to 3 military units inside a city\
+ will each force 1 unhappy citizen to become content.\n\
+* Base corruption is 20%. This increases with distance from the capital\
+ (half as fast with knowledge of The Corporation).\n\
+* Base production waste is 10%. This increases with distance from the\
+ capital (half as fast with knowledge of Trade).\n\
+* Chariots gain Veteran level if built in city with Stable Barracks), all other Wheeled Units recruit level\
+ (not cumulaltive with Leonardo Workshop or Ecole Speciale Militaire). \n\
+* Science outcome is decreased twice.\n\
+* Policies settings, which are taken into account: Welfare Policy, Religious Orthodoxy, National Pride. \
+")
+
+;------------------------------------------------------------------------
+[government_monarchy]
+
+name        = _("Monarchy")
+reqs = { "type", "name", "range"
+         "tech", "Monarchy", "Player"
+         "Building", "Palace", "Player"
+       }
+graphic     = "gov.monarchy"
+graphic_alt = "-"
+
+ruler_male_title = _("King %s")
+ruler_female_title = _("Queen %s")
+
+helptext = _("\
+Under Monarchy, a king or queen serves as a hereditary figurehead\
+ for your government.\
+"), _("\
+Monarchy gives low unit upkeep costs.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Your centers of government (cities with Palace and Ecclesiastical\
+ Palace) get a +50% bonus to gold production.\n\
+* Celebrating capital produce one extra food for every tile which is\
+ already producing food. (Capital below size 3 will not celebrate, celebration in other cities has no effects.)\n\
+* Each city can support up to 3 gold payments for units for free,\
+ and 5 shield payments (additional payment free for city size 8 and above)\n\
+* Each city tolerates up to 3 aggressively deployed military units;\
+ each further unit causes 1 unhappy citizen.\n\
+* Military units impose martial law. Up to 2 military units inside a city\
+ will each force 1 unhappy citizen to become content.\n\
+* Base corruption is 10%. This increases with distance from the capital\
+ (half as fast with knowledge of The Corporation).\n\
+* Base production waste is 20%. This increases with distance from the\
+ capital (half as fast with knowledge of Trade).\n\
+* Pikemen and Arbalests gain additional veterancy level (recruits without Barracks, hardened with Barracks).\n\
+* Science and luxury outcome are decreased by 25%\n\
+* Policies settings, which are taken into account: Liberal Economy, Welfare Policy, Religious Orthodoxy, National Pride. \
+")
+
+;------------------------------------------------------------------------
+[government_legalism]
+
+name        = _("Legalism")
+reqs = { "type", "name", "range"
+         "tech", "Legalism", "Player"
+         "Building", "Forbidden City", "Player"
+       }
+graphic     = "gov.legalism"
+graphic_alt = "gov.communism"
+ai_better   = "Communism"
+
+ruler_male_title = _("Emperor %s")
+ruler_female_title = _("?female:Empress %s")
+
+helptext = _("\
+ Legalism is a political philosophy based on the idea,\
+ that a highly efficient and powerful government is the key to social order.\
+ Army of skilled officials is able to maintain even huge empire, but such highly bureaucratized state\
+ is affected by relatively high corruption.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Celebrating cities with granary, temple and size 3 or above are subject of Rapture Growth \
+ (this effect is cancelled by Monotheism)\n\
+* Each city can support 1 gold and 5 shield unit payment for free.\n\
+* Each city tolerates a single aggressively deployed military unit;\
+ each further unit causes unhappy citizens.\n\
+* Military units impose limited martial law: 1 military unit inside a city\
+ will force 2 unhappy citizen to become content.\n\
+* Base corruption is 20%. This increases slowly with distance from the capital\n\
+* Base production waste is 30%, regardless of distance from capital.\n\
+* Base food waste is 20% for all cities.\n\
+* Halberdiers gain additional veterancy level (recruits without Barracks, hardened with Barracks).\n\
+* Science outcome is decreased 25%\n\
+* Policies settings, which are taken into account: Liberal Economy, Welfare Policy, Religious Orthodoxy, National Pride. \
+")
+
+;------------------------------------------------------------------------
+[government_fundamentalism]
+
+name        = _("Fundamentalism")
+reqs = { "type", "name", "range"
+         "tech", "Fundamentalism", "Player"
+         "Building", "Palace", "Player"
+       }
+graphic     = "gov.fundamentalism"
+graphic_alt = "-"
+
+ruler_male_title = _("High Priest %s")
+ruler_female_title = _("High Priestess %s")
+
+helptext = _("\
+Fundamentalism is a form of government organized around a central\
+ set of beliefs. The beliefs, usually religious in nature, form\
+ a rigid guideline for actions and reactions of both the rulers\
+ and the people.\
+"), _("\
+In a fundamentalist society, the people and the rulers are entirely\
+ devoted to their beliefs, and are usually willing to die to\
+ preserve them.\
+"), _("\
+If Sultan Palace is founded, improvements that normally convert unhappy citizens to content\
+ citizens, produce `tithes` (gold) equivalent to the number\
+ of people they would convert, and require no maintenance.\
+"), _("\
+Fundamentalism is a good government for maximizing gold, and its Fanatics\
+ are useful in wartime, but it has a heavy penalty to technological\
+ progress.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Base science production is half that of other governments. (A\
+ Fundamentalist city with a Library produces as much science as a\
+ city under another government does alone.)\n\
+* Each city can support up to 4 gold and 6 shield unit payments for free; \n\
+* Each city tolerates up to 2 aggressively deployed military units;\
+ each further unit causes 1 unhappy citizen.\n\
+* Base corruption is 15%. This increases with distance from the capital\
+ (half as fast with knowledge of The Corporation).\n\
+* Base production waste is 15%. This increases with distance from the\
+ capital (half as fast with knowledge of Trade).\n\
+* Due to high loyality of indoctrinated warriors, inciting revolt is very expensive.\n\
+* Science outcome is decreased twice.\n\
+* Universities outcome is is one third of normal yield, but Madrasa increase science by 25%\n\
+* Policies settings, which are taken into account: Religious Orthodoxy, National Pride. \
+")
+
+;------------------------------------------------------------------------
+[government_fascism]
+
+name        = _("Fascism")
+reqs = { "type", "name", "range"
+         "tech", "Imperialism", "Player"
+         "Building", "Palace", "Player"
+       }
+graphic     = "gov.fascism"
+graphic_alt = "f.shield.kuna_yala"
+
+ruler_male_title = _("Leader %s")
+ruler_female_title = _("?female:Leader %s")
+
+helptext = _("\
+Fascism is an authoritarian goverment based on totalitarian one-party state \
+ controlling industry and commerce. Fascism allow private property but suppress it by state interventionist policies. \
+ However socialism was a root of this goverment system, Fascism is focused on militarism and nationalism. 
+ Due to pervasive power of the secret police, opposition usually have no chance to incite revolt. 
+ Beside of the additional veteran levels of Small Land units, fascist regime support veteran paratroopers.\
+"), _("\
+Fascism is a government suitable for maximizing shield production and military power,\
+ but rather for medium size empires.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Each city can support up to 4 shield and 6 gold unit payment for free (shield payment are doubled);\
+ further units each cost 2 shields per turn (more than 6, also gold).\n\
+* Celebrating cities produce a further shield point for every worked tile\
+ (land or water) which is already producing shield. (Cities below size 3\
+ will not celebrate). Police Station required.\n\
+* Base corruption is 20%, this increases with distance from the capital.\n\
+* There is no base production waste, but this increase with distance from the capital.\n\
+* Each factory production is increased twice.\
+* Newly produced Paratroopers are already elite if Barracks tier 3 are present.\n\
+* Military units impose martial law. Up to 2 military units inside a city\
+ will each force 2 unhappy citizen to become content.\n\
+* It is not possible to incite revolt, if fascist ruled nation *doesn't* posses Statue of Liberty.\n\
+* Fascism is not tolerant of another nationality of citisens - they unlikely will be angry.\n\
+* Luxury and science outcome are decreased 25%\n\
+* Policies settings, which are taken into account: Welfare Policy, Religious Orthodoxy, National Pride. \
+")
+
+;------------------------------------------------------------------------
+[government_first_republic]
+
+name        = _("First Republic")
+reqs = { "type", "name", "range"
+         "tech", "First Republic", "Player"
+         "Building", "Palace", "Player"
+       }
+graphic     = "gov.first_republic"
+graphic_alt = "gov.republic"
+ai_better   = "Republic"
+
+ruler_male_title = _("Consul %s")
+ruler_female_title = _("?female:Consul %s")
+
+helptext = _("\
+Under a Ancient Republican government, citizens hold an election to select a\
+ members of Senate, who will govern them; since elected Senators must\
+ remain popular to remain in control, citizens are given a greater\
+ degree of freedom.  Citizens under the First Republic become unhappy\
+ easily, but the self-sufficiency of your citizens allows high levels\
+ of trade.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Celebrating cities with granary and size 3 or above are subject of Rapture Growth \
+ (this effect is cancelled by Monotheism)\n\
+* Each city can support 1 shield and 6 gold unit payment for free.\n\
+* Each city tolerates two aggressively deployed military units;\
+ each further unit causes 1 unhappy citizen.\n\
+* Military units impose limited martial law: 1 military unit inside a city\
+ will force 1 unhappy citizen to become content.\n\
+* Base corruption is 20%. This increases with distance from the capital\
+ (half as fast with knowledge of The Corporation).\n\
+* Base production waste is 10%. This increases with distance from the\
+ capital (half as fast with knowledge of Trade).\n\
+* If Colosseum was build by player, Legions or Swordsmen gain additional veterancy level\
+ (recruits without Barracks, hardened with Barracks).\n\
+* Inciting revolt is 2x more expensive than Despotism or Monarchy.\n\
+* Luxury outcome is increased 25%\n\
+* Policies settings, which are taken into account: Liberal Economy, Welfare Policy, Religious Orthodoxy, National Pride. \
+")
+
+;------------------------------------------------------------------------
+[government_direct_democracy]
+
+name        = _("Direct Democracy")
+reqs = { "type", "name", "range"
+         "tech", "Direct Democracy", "Player"
+         "Building", "Palace", "Player"
+       }
+graphic     = "gov.direct_democracy"
+graphic_alt = "gov.democracy"
+ai_better   = "Democracy"
+
+ruler_male_title = _("Archon %s")
+ruler_female_title = _("?female:Nymph %s")
+
+helptext = _("\
+Under Direct Democracy, citizens govern directly by voting on issues.\
+ Direct Democracy offers high boost of science, but also\
+ offers the most potential for unhappiness; citizens become very\
+ upset during wars. Limited possibility of tax rates change.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Celebrating cities with granary and size 3 or above are subject of Rapture Growth \
+ (this effect is cancelled by Monotheism)\n\
+* Each city can support 4 gold and 5 shield unit payment for free; gold payment is doubled.\n\
+* Each city tolerates a single aggressively deployed military unit;\
+ each further unit causes 2 unhappy citizens.\n\
+* Base corruption is 10%. This increases with distance from the capital\
+ (half as fast with knowledge of The Corporation).\n\
+* Base production waste is 20%. This increases with distance from the\
+ capital.\n\
+* Base food waste is 10% and increase slowly with the distance to the capital.\n\
+* Has a senate that may prevent declaration of war.\
+* Direct Democracy is relatively tolerant of foreginers metics in cities.\
+* Phalanx and Archers gain additional veterancy level (cumulative with Barracks).\n\
+* Inciting revolt is 3x more expensive than Despotism or Monarchy.\n\
+* Science outcome is increased 20%\n\
+* Policies settings, which are taken into account: Liberal Economy, Welfare Policy, Religious Orthodoxy, National Pride. \
+")
+
+;------------------------------------------------------------------------
+[government_republic]
+
+name        = _("Republic")
+reqs = { "type", "name", "range"
+         "tech", "The Republic", "Player"
+         "Building", "Palace", "Player"
+       }
+graphic     = "gov.republic"
+graphic_alt = "-"
+
+ruler_male_title = _("President %s")
+ruler_female_title = _("?female:President %s")
+
+helptext = _("\
+Under a Republican government, citizens hold an election to select a\
+ representative who will govern them; since elected leaders must\
+ remain popular to remain in control, citizens are given a greater\
+ degree of freedom.  Citizens under the Republic become unhappy\
+ easily, but the self-sufficiency of your citizens allows high levels\
+ of trade.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Celebrating cities which belong to the nation with Women Suffrage small wonder,\
+ produce an extra shield point for every worked land tile that is\
+ already producing shields (Cities below size 3 will not celebrate).\n\
+* Each city with size 8 and above can support one shield unit payment for free; additionally 6 gold unit payment are free.\n\
+* Each city tolerates one aggressively deployed military unit;\
+ each further unit causes 1..3 unhappy citizens (depend on Enlightening Policy).\n\
+* Base corruption is 25%. This increases with distance from the capital\
+ (half as fast with knowledge of The Corporation).\n\
+* Base production waste is 5%. This increases slowly with distance from the\
+ capital.\
+* Republic is relatively tolerant of cosmopolitan cities.\n\
+* Builders and freight Trains gain additional veterancy level.\n\
+* Bribing units is possible, but with Slavery Abolition wonder, is very expensive.\n\
+* Inciting revolt is 2x more expensive than Despotism or Monarchy.\n\
+* Gold and luxury outcome are increased 25%, science outcome increase depend on Enlightening Policy.\n\
+* Policies settings, which are taken into account: Liberal Economy, Enlightening Policy, Welfare Policy, Religious Orthodoxy, National Pride. \
+")
+
+;------------------------------------------------------------------------
+[government_democracy]
+
+name        = _("Democracy")
+reqs = { "type", "name", "range"
+         "tech", "Democracy", "Player"
+         "Building", "Palace", "Player"
+       }
+graphic     = "gov.democracy"
+graphic_alt = "-"
+
+ruler_male_title = _("Prime Minister %s")
+ruler_female_title = _("?female:Prime Minister %s")
+
+helptext = _("\
+Under Democracy, citizens govern indirectly by electing representatives.\
+ Democracy offers the high level of trade and science boost, but also\
+ offers the most potential for unhappiness; citizens become very\
+ upset during wars. Tax rates must please most of voters, thus can't be changed freely.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Celebrating cities which belong to the nation with Women Suffrage small wonder,\
+ produce an extra trade point for every worked land tile that is\
+ already producing trade. (Cities below size 3 will not celebrate)\n\
+* Each city with size 8 and above can support 2 gold unit payments for free; gold payments are doubled. \
+  Additionally 3 shield payments are free.\n\
+* Each city tolerates a single aggressively deployed military unit;\
+ each further unit causes 1 unhappy citizens.\n\
+* Old units far from city center have 10% chance to be retired.\n\
+* Base corruption is 5%. This increases with distance from the capital\
+ (half as fast with knowledge of The Corporation).\n\
+* Base production waste is 25%. This increases slightly with distance from the\
+ capital.\n\
+* Base food waste is 20% for all cities.\n\
+* Has a senate that may prevent declaration of war.\n\
+* Democracy is very tolerant of multicultural cities.\n\
+* Riflemen and Snipers gain additional veterancy level (cumulative with Barracks).\n\
+* Revolt inciting is possible, but with Slavery Abolition wonder, is very expensive.\n\
+* Science and luxury outcome are increased by 30% and 25% respectively.\n\
+* Policies settings, which are taken into account: Liberal Economy, Welfare Policy, Religious Orthodoxy, National Pride. \
+")
+
+
+
+
+; /* <-- avoid gettext warnings
+;
+; Multipliers (aka policies)
+;
+; name                    = translatable name as seen by user
+; rule_name               = (optional) internal name for savegames, rulesets
+;                           etc; if not present, "name" is used for this
+;                           purpose too. Since the name used in savegames must
+;                           not change, if you want to rename an item after a
+;                           ruleset has been released, you should set
+;                           "rule_name" to the original value of "name".
+; default                 = default value (as presented in UI)
+; start                   = minimum value (as presented in UI)
+; stop                    = maximum value (as presented in UI)
+; step                    = minimum increase/decrease (as presented in UI)
+; offset                  = offset/factor control how UI values are turned
+; factor                  =  into effect values for use in effects.ruleset.
+;                            effect_value = (ui_value + offset) * (factor/100)
+;                            Optional; by default offset=0, factor=100, so
+;                            that UI values are used as-is.
+; helptext                = optional help text string; should escape all raw 
+;                           newlines so that xgettext parsing works
+;
+; */ <-- avoid gettext warnings
+
+[multiplier_liberal]
+name      = _("Liberal Economy")
+;reqs = { "type", "name", "range"
+;         "Tech", "Economy", "Player"
+;         "Building", "Slavery Abolition", "Player"
+;       }
+;graphic     = "gov.republic"
+;graphic_alt = "-"
+start     = 0
+stop      = 2
+step      = 1
+default   = 0
+offset    = 1
+; /* xgettext:no-c-format */
+helptext  = _("\
+Each step of Liberal Economy increase traderoute bonus by 30%, \
+but also increase base corruption level by 20%. \
+Available for any government except of Anarchy, Tribal, Despotism, Communism, Fundamentalism and Fascism.\
+")
+
+;[multiplier_protectionist]
+;name      = _("Protectionist Economy")
+;reqs = { "type", "name", "range"
+;         "Tech", "Economy", "Player"
+;       }
+;start     = 0
+;stop      = 2
+;step      = 1
+;default   = 0
+; /* xgettext:no-c-format */
+;helptext  = _("\
+;Each step of Protectionist Economy increase gold income by 10%, \
+;but also decrease traderoute bonus by 20% \
+;Available for any government except of Anarchy, if Liberal Economy policy is set to its minimal value.\
+;")
+
+[multiplier_collectivism]
+name      = _("Collective Economy")
+;reqs = { "type", "name", "range"
+;         "Tech", "Communism", "Player"
+;       }
+;graphic     = "gov.communism"
+;graphic_alt = "-"
+start     = 0
+stop      = 2
+step      = 1
+default   = 0
+; /* xgettext:no-c-format */
+helptext  = _("\
+Each step of Collective Economy increase shield production by 10% for each city, \
+where 5 Years Plan is founded, but also increase industrial pollution and food base waste level. \
+Available only for Communism.\
+")
+
+[multiplier_welfare]
+name      = _("Welfare Policy")
+;reqs = { "type", "name", "range"
+;         "Tech", "Socialism", "Player"
+;       }
+;graphic     = "gov.democracy"
+;graphic_alt = "-"
+start     = 0
+stop      = 2
+step      = 1
+default   = 0
+; /* xgettext:no-c-format */
+helptext  = _("\
+Each step (above 0) of Welfare Policy increase luxury by 10% for cities with Trade Union \
+(and decrease shield production by 10% in any city, once Socialism is invented by player), \
+and decrease risk of plague in cities with Hospital, if Pasteur Institute exist \
+(and decrease gold income by 10%). \
+Available for any government except of Anarchy and Fundamentalism.\
+")
+
+[multiplier_enlightening]
+name      = _("Enlightening Policy")
+;reqs = { "type", "name", "range"
+;         "Tech", "University", "Player"
+;       }
+;graphic     = "gov.federation"
+;graphic_alt = "gov.democracy"
+start     = 0
+stop      = 2
+step      = 1
+default   = 0
+; /* xgettext:no-c-format */
+helptext  = _("\
+Each step of Enlightening Policy allow your citizens yields a 10% \
+increase in science output, but makes an additional citizen unhappy \
+for every aggressively deployed military unit. \
+Any University gain additional Culture Point for each Enlightening Policy step.\
+Aditionally each step add 5% chance of retirement any military units which are far from a city center. \
+Available for Monarchy, Republic, Thalassocracy and Federation (Democracy already have maximal effort of this policy included).\
+")
+
+[multiplier_orthodoxy]
+name      = _("Religious Orthodoxy")
+;reqs = { "type", "name", "range"
+;         "Tech", "Mysticism", "Player"
+;       }
+;graphic     = "gov.fundamentalism"
+;graphic_alt = "gov.despotism"
+start     = 0
+stop      = 2
+step      = 1
+default   = 0
+; /* xgettext:no-c-format */
+helptext  = _("\
+Each step of Religious Orthodoxy increase content/happy citizen for: \
+any Temple with Temple of Artemis, or Temple with Temple of City God, or Mosque with Kaaba, \
+or Shrine Torii with Fushimi Inari, or Church with J.S. Bach's Cathedral.\
+On the other hand, science output is decreased by 20%. \
+Available for any government except of Anarchy and Communism.\
+")
+
+[multiplier_national]
+name      = _("National Pride")
+;reqs = { "type", "name", "range"
+;         "Tech", "Feudalism", "Player"
+;       }
+;graphic     = "gov.despotism"
+;graphic_alt = "-"
+start     = 0
+stop      = 2
+step      = 1
+default   = 0
+; /* xgettext:no-c-format */
+helptext  = _("\
+Each step of National Pride increase bribe cost and incite revolt cost twice, \
+but also increase unhapiness caused by mixed nationality by 50% and decrease luxury output by 20%. \
+Available for any government, in case of Fascism any Small Land military unit gain additional veterancy level.\
+")
+

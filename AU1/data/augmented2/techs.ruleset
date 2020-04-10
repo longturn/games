@@ -1,0 +1,1759 @@
+
+[datafile]
+description="Augmented technology data for Freeciv"
+options="+Freeciv-2.6-ruleset"
+
+[control]
+; Names for custom tech flags. There can be up to 8 of these.
+; name          = rule name; In some circumstances user may see this
+;                 as part of some sentences, so try to make it descriptive
+;                 and sensible.
+; helptxt       = displayed in the help for advances with this flag (optional)
+;flags =
+;  { "name", "helptxt"
+;  }
+
+; /* <-- avoid gettext warnings
+;
+; Below: The individual advances, one per section.
+; The number can be variable, up to 196.
+;
+; The actual tag used (the * in [advance_*]) does not matter, except 
+; it must be unique within this file, and it may be used in debug 
+; output when reading this file.
+;
+; Notes:
+;
+; name          = translatable name as seen by user
+; rule_name     = (optional) internal name for savegames, rulesets etc; if
+;                 not present, "name" is used for this purpose too. Since
+;                 the name used in savegames must not change, if you want
+;                 to rename an item after a ruleset has been released, you
+;                 should set "rule_name" to the original value of "name".
+; req1, req2    = advances required before researching this one
+; root_req      = tech required before acquiring this tech, by any means.
+;                 All techs with any direct or indirect dependency on this
+;                 one will *also* have this root_req, as well as their own
+;                 and any others they inherit.
+;                 Giving "None" explicitly here prevents a tech from
+;                 inheriting root_reqs in this way, and stops root_req
+;                 inheritance through that tech.
+;                 Specifying a tech's root_req as itself means that the tech
+;                 can only be acquired by special means (nation's init_techs,
+;                 scripting, etc).
+; flags         = special flag strings
+; graphic       = icon for technology
+; graphic_alt   = alternate icon
+; helptext      = optional help text string (set units ruleset for examples)
+; bonus_message = text seen when a player is the first to discover
+;                 an bonus tech. Must contain '%s' to mark place of the tech
+;                 gained.
+; cost          = if tech_cost_style is set to "Classic+" or "Experimental+",
+;                 this field is read for information on how much a tech
+;                 costs.
+;
+; Special values for req1 and req2 are "None" (first section below) 
+; and "Never" (never available).  If only one tech is required, 
+; it should be listed as req1.
+;
+; As well as custom flags defined above, the following flag strings are
+; possible:
+;
+; "Bonus_Tech" = player gets extra tech if reached first
+; "Bridge"   = "Settler" unit types can build roads with "RequiresBridge" flag
+;              over roads with "PreventsOtherRoads" flag (rivers)
+; "Build_Airborne" = from now on can build air units (for use by AI)
+; "Claim_Ocean"         = Player claims ocean tiles even if they are not
+;                         adjacent to border source
+; "Claim_Ocean_Limited" = Oceanic border sources claim ocean tiles even if
+;                         they are not adjacent to border source
+;
+; */ <-- avoid gettext warnings
+
+[advance_absolutism]
+name     = _("Absolutism")
+req1     = "Agricultural Farming"
+req2     = "Carpentry"
+flags    = ""
+graphic     = "a.absolutism"
+graphic_alt = "-"
+cost     = 22
+ 
+[advance_advanced_flight]
+name     = _("Advanced Flight")
+req1     = "Radio"
+req2     = "Flight"
+flags    = ""
+graphic     = "a.advanced_flight"
+graphic_alt = "-"
+; helptext = _("Enables movement of nuclear units.")
+cost     = 1100
+
+[advance_advanced_rocketry]
+name     = _("Advanced Rocketry")
+req1     = "Space Flight"
+req2     = "Nuclear Power"
+root_req = "Nuclear Fission"
+flags    = ""
+graphic     = "a.advanced_rocketry"
+graphic_alt = "a.rocketry"
+cost     = 3800
+
+[advance_agricultural_farming]
+name     = _("Agricultural Farming")
+req1     = "Animal Husbandry"
+req2     = "Pottery"
+flags    = ""
+graphic     = "a.agricultural_farming"
+graphic_alt = "-"
+helptext = _("\
+Allows irrigation if tile adjacent to fresh water (river, lake, swamp or other irrigation).\
+")
+cost     = 15
+
+[advance_alchemy]
+name     = _("Alchemy")
+req1     = "Craft Guilds"
+req2     = "Astrology"
+root_req = "Mysticism"
+flags    = ""
+graphic     = "a.alchemy"
+graphic_alt = "-"
+cost     = 170
+
+[advance_alphabet]
+name     = _("Alphabet")
+req1     = "Creative Art"
+req2     = "Stone Knapping"
+flags    = ""
+graphic     = "a.alphabet"
+graphic_alt = "-"
+cost     = 10
+
+[advance_amphibious_warfare]
+name     = _("Amphibious Warfare")
+req1     = "Mobile Warfare"
+req2     = "Offshore Exploration"
+flags    = ""
+graphic     = "a.amphibious_warfare"
+graphic_alt = "-"
+cost     = 1750
+
+[advance_animal_husbandry]
+name     = _("Animal Husbandry")
+req1     = "Fire Making"
+req2     = "Stone Knapping"
+flags    = ""
+graphic     = "a.animal_husbandry"
+graphic_alt = "-"
+cost     = 6
+
+[advance_antimatter_propulsion]
+name     = _("Antimatter Propulsion")
+req1     = "Great Unification Theory"
+req2     = "Stealth"
+root_req = "Great Unification Theory"
+flags    = ""
+graphic     = "a.antimatter_propulsion"
+graphic_alt = "-"
+cost     = 9800
+
+[advance_artificial_intelligence]
+name     = _("Artificial Intelligence")
+req1     = "Environmentalism"
+req2     = "Nanotechnology"
+root_req = "Computers"
+flags    = ""
+graphic     = "a.artificial_intelligence"
+graphic_alt = "-"
+cost     = 6800
+
+[advance_astrology]
+name     = _("Astrology")
+req1     = "Mysticism"
+req2     = "Mathematics"
+flags    = ""
+graphic     = "a.astrology"
+graphic_alt = "-"
+cost     = 130
+
+[advance_astronomy]
+name     = _("Astronomy")
+req1     = "Astrology"
+req2     = "Glass Working"
+flags    = ""
+graphic     = "a.astronomy"
+graphic_alt = "-"
+cost     = 180
+
+[advance_atomic_theory]
+name     = _("Atomic Theory")
+req1     = "Chemistry"
+req2     = "Physics"
+flags    = ""
+graphic     = "a.atomic_theory"
+graphic_alt = "-"
+cost     = 470
+
+[advance_automobile]
+name     = _("Automobile")
+req1     = "Combustion"
+req2     = "Machine Tools"
+flags    = ""
+graphic     = "a.automobile"
+graphic_alt = "-"
+helptext = _("TIP: Allow Engineers and Trains to upgrade Paved Road to Highway.")
+cost     = 790
+
+[advance_banking]
+name     = _("Banking")
+req1     = "Trade"
+req2     = "First Republic"
+flags    = ""
+graphic     = "a.banking"
+graphic_alt = "-"
+cost     = 130
+
+[advance_biology]
+name     = _("Biology")
+req1     = "Sanitation"
+req2     = "Chemistry"
+root_req = "University"
+flags    = ""
+graphic     = "a.biology"
+graphic_alt = "-"
+cost     = 420
+
+[advance_biotechnology]
+name     = _("Biotechnology")
+req1     = "Radioactivity"
+req2     = "Refrigeration"
+flags    = ""
+graphic     = "a.biotechnology"
+graphic_alt = "-"
+cost     = 890
+
+[advance_bridge_building]
+name     = _("Bridge Building")
+req1     = "Simple Machines"
+req2     = "Construction"
+flags    = "Bridge"
+graphic     = "a.bridge_building"
+graphic_alt = "-"
+cost     = 110
+helptext = _("Allows roads to be built on river tiles.")
+
+[advance_bronze_working]
+name     = _("Bronze Working")
+req1     = "Copper Working"
+req2     = "Carpentry"
+flags    = ""
+graphic     = "a.bronze_working"
+graphic_alt = "-"
+helptext = _("\
+Enable mine production, obsoletes Tribe Hut. \
+")
+cost     = 28
+
+[advance_buddhism]
+name     = _("Buddhism")
+req1     = "Vedism"
+req2     = "The Wheel"
+root_req = "Vedism"
+flags    = ""
+graphic     = "a.buddhism"
+graphic_alt = "a.the_wheel"
+cost     = 80
+
+[advance_bushido]
+name     = _("Bushido")
+req1     = "Martial Arts"
+req2     = "Chivalry"
+root_req = "Martial Arts"
+flags    = ""
+graphic     = "a.bushido"
+graphic_alt = "-"
+cost     = 260
+
+[advance_carpentry]
+name     = _("Carpentry")
+req1     = "Forestry"
+req2     = "Creative Art"
+flags    = ""
+graphic     = "a.carpentry"
+graphic_alt = "-"
+helptext = _("\
+Allows Settlers, Migrants, Slaves, Workers and Engineers to build Forts.\
+")
+cost     = 15
+
+[advance_ceremonial_burial]
+name     = _("Ceremonial Burial")
+req1     = "Shamanism"
+req2     = "Alphabet"
+flags    = ""
+graphic     = "a.ceremonial_burial"
+graphic_alt = "-"
+cost     = 15
+
+[advance_chemical_synthesis]
+name     = _("Chemical Synthesis")
+req1     = "Electricity"
+req2     = "Tactics"
+; flags    = "Farmland"
+graphic     = "a.chemical_synthesis"
+graphic_alt = "-"
+helptext = _("TIP: Enables farm fields - second irrigation.")
+cost     = 670
+
+[advance_chemistry]
+name     = _("Chemistry")
+req1     = "University"
+req2     = "Alchemy"
+flags    = ""
+graphic     = "a.chemistry"
+graphic_alt = "-"
+cost     = 300
+
+[advance_chivalry]
+name     = _("Chivalry")
+req1     = "Feudalism"
+req2     = "Saddle Stirrup"
+flags    = ""
+graphic     = "a.chivalry"
+graphic_alt = "-"
+cost     = 110
+
+[advance_christianity]
+name     = _("Christianity")
+req1     = "Monotheism"
+req2     = "First Republic"
+root_req = "Monotheism"
+flags    = ""
+graphic     = "a.christianity"
+graphic_alt = "a.monotheism"
+cost     = 120
+
+[advance_cinematography]
+name     = _("Cinematography")
+req1     = "Theatre"
+req2     = "Electricity"
+flags    = ""
+graphic     = "a.cinematography"
+graphic_alt = "-"
+cost     = 640
+
+[advance_code_of_laws]
+name     = _("Code of Laws")
+req1     = "Alphabet"
+req2     = "Absolutism"
+flags    = ""
+graphic     = "a.code_of_laws"
+graphic_alt = "-"
+cost     = 30
+
+[advance_combined_arms]
+name     = _("Combined Arms")
+req1     = "Amphibious Warfare"
+req2     = "Radar"
+flags    = ""
+graphic     = "a.combined_arms"
+graphic_alt = "-"
+cost     = 2450
+
+[advance_combustion]
+name     = _("Combustion")
+req1     = "Refining"
+req2     = "Turbine"
+flags    = ""
+graphic     = "a.combustion_eng"
+graphic_alt = "a.combustion"
+helptext = _("Makes it possible for Engineers to transform terrains.")
+cost     = 740
+
+[advance_command_and_control]
+name     = _("Command and Control")
+req1     = "Combined Arms"
+req2     = "Computers"
+flags    = ""
+graphic     = "a.command_and_control"
+graphic_alt = "a.computers"
+cost     = 3550
+
+[advance_communism]
+name     = _("Communism")
+req1     = "Guerilla Warfare"
+req2     = "The Corporation"
+flags    = ""
+graphic     = "a.communism_sov"
+graphic_alt = "a.communism"
+helptext = _("Reduces the effect of Cathedrals and Mysticism.")
+cost     = 990
+
+[advance_computers]
+name     = _("Computers")
+req1     = "Miniaturization"
+req2     = "Television"
+root_req = "Electronics"
+flags    = ""
+graphic     = "a.computers"
+graphic_alt = "-"
+cost     = 1780
+
+[advance_concrete]
+name     = _("Concrete")
+req1     = "Steel"
+req2     = "Labor Union"
+flags    = ""
+graphic     = "a.concrete"
+graphic_alt = "-"
+cost     = 770
+
+[advance_confucianism]
+name     = _("Confucianism")
+req1     = "Taoism"
+req2     = "Buddhism"
+root_req = "Taoism"
+flags    = ""
+graphic     = "a.confucianism"
+graphic_alt = "-"
+cost     = 160
+
+[advance_conscription]
+name     = _("Conscription")
+req1     = "Democracy"
+req2     = "Explosives"
+flags    = ""
+graphic     = "a.conscription"
+graphic_alt = "-"
+cost     = 450
+
+[advance_construction]
+name     = _("Construction")
+req1     = "The Harness"
+req2     = "Iron Working"
+flags    = ""
+graphic     = "a.construction"
+graphic_alt = "-"
+helptext = _("\
+Allows Settlers, Migrants, Slaves, Workers and Engineers to build fortresses.\
+")
+cost     = 75
+
+[advance_copper_working]
+name     = _("Copper Working")
+req1     = "Agricultural Farming"
+req2     = "Warrior Code"
+flags    = ""
+graphic     = "a.copper_working"
+graphic_alt = "a.bronze_working"
+helptext = _("\
+Allows making mines (Bronze Working required to yield mine production) \
+")
+cost     = 20
+
+[advance_craft_guilds]
+name     = _("Craft Guilds")
+req1     = "Glass Working"
+req2     = "Feudalism"
+flags    = ""
+graphic     = "a.craft_guilds"
+graphic_alt = "-"
+cost     = 140
+
+[advance_currency]
+name     = _("Currency")
+req1     = "Copper Working"
+req2     = "Writing"
+flags    = ""
+graphic     = "a.currency"
+graphic_alt = "-"
+cost     = 35
+
+[advance_creative_art]
+name     = _("Creative Art")
+req1     = "None"
+req2     = "None"
+flags    = ""
+graphic     = "a.creative_art"
+graphic_alt = "-"
+cost     = 3
+
+[advance_democracy]
+name     = _("Democracy")
+req1     = "Economics"
+req2     = "Egalitarianism"
+root_req = "Egalitarianism"
+flags    = ""
+graphic     = "a.democracy"
+graphic_alt = "-"
+cost     = 390
+
+[advance_desert_code]
+name     = _("Desert Code")
+req1     = "Slave Trade"
+req2     = "Feudalism"
+flags    = ""
+graphic     = "a.desert_code"
+graphic_alt = "-"
+cost     = 120
+
+[advance_direct_democracy]
+name     = _("Direct Democracy")
+req1     = "Polytheism"
+req2     = "Seafaring"
+root_req = "Polytheism"
+flags    = ""
+graphic     = "a.direct_democracy"
+graphic_alt = "-"
+cost     = 60
+
+[advance_drama]
+name     = _("Drama")
+req1     = "Writing"
+req2     = "Masonry"
+flags    = ""
+graphic     = "a.drama"
+graphic_alt = "-"
+helptext = _("Additional culture point to each city, if Shakespeare's Theater exist")
+cost     = 55
+
+[advance_economics]
+name     = _("Economics")
+req1     = "Banking"
+req2     = "University"
+flags    = ""
+graphic     = "a.economics"
+graphic_alt = "-"
+cost     = 310
+
+[advance_egalitarianism]
+name     = _("Egalitarianism")
+req1     = "Theology"
+req2     = "Printing Press"
+root_req = "Theology"
+flags    = ""
+graphic     = "a.egalitarianism"
+graphic_alt = "-"
+cost     = 210
+
+[advance_electricity]
+name     = _("Electricity")
+req1     = "Industrialization"
+req2     = "Physics"
+flags    = ""
+graphic     = "a.electricity"
+graphic_alt = "-"
+helptext = _("\
+Allows irrigation tiles adjacent only to Sea.\n \
+Together with Railway Station and Eiffel Tower, increase radius of cities.\
+")
+cost     = 600
+
+[advance_electromagnetism]
+name     = _("Electromagnetism")
+req1     = "Electricity"
+req2     = "Atomic Theory"
+flags    = ""
+graphic     = "a.electromagnetism"
+graphic_alt = "-"
+cost     = 670
+
+[advance_electronics]
+name     = _("Electronics")
+req1     = "Optics"
+req2     = "Radio"
+flags    = ""
+graphic     = "a.electronics"
+graphic_alt = "-"
+cost     = 1090
+
+[advance_engineering]
+name     = _("Engineering")
+req1     = "Industrialization"
+req2     = "Explosives"
+flags    = ""
+graphic     = "a.engineering"
+graphic_alt = "-"
+cost     = 610
+
+[advance_environmentalism]
+name     = _("Environmentalism")
+req1     = "Recycling"
+req2     = "Space Flight"
+flags    = ""
+graphic     = "a.environmentalism"
+graphic_alt = "-"
+helptext = _("TIP: Enables wind turbines - on hills with irrigation.")
+cost     = 2960
+
+[advance_espionage]
+name     = _("Espionage")
+req1     = "Communism"
+req2     = "Radio"
+root_req = "Communism"
+flags    = ""
+graphic     = "a.espionage"
+graphic_alt = "-"
+cost     = 1180
+
+[advance_exploration]
+name     = _("Exploration")
+req1     = "Pastoralism"
+req2     = "Sailing"
+flags    = ""
+graphic     = "a.exploration"
+graphic_alt = "-"
+cost     = 35
+
+[advance_explosives]
+name     = _("Explosives")
+req1     = "Metallurgy"
+req2     = "Chemistry"
+flags    = ""
+graphic     = "a.explosives"
+graphic_alt = "-"
+cost     = 390
+
+[advance_federation]
+name     = _("Federation")
+req1     = "Industrialization"
+req2     = "Democracy"
+flags    = ""
+graphic     = "a.federation"
+graphic_alt = "-"
+cost     = 580
+
+[advance_feudalism]
+name     = _("Feudalism")
+req1     = "Iron Working"
+req2     = "Monarchy"
+flags    = ""
+graphic     = "a.feudalism"
+graphic_alt = "-"
+cost     = 85
+
+[advance_fire_making]
+name     = _("Fire Making")
+req1     = "None"
+req2     = "None"
+flags    = ""
+graphic     = "a.fire_making"
+graphic_alt = "-"
+cost     = 4
+
+[advance_first_republic]
+name     = _("First Republic")
+req1     = "Literacy"
+req2     = "Currency"
+root_req = "Code of Laws"
+flags    = ""
+graphic     = "a.first_republic"
+graphic_alt = "-"
+cost     = 70
+
+[advance_flight]
+name     = _("Flight")
+req1     = "Combustion"
+req2     = "Screw Propeller"
+flags    = "Build_Airborne"
+graphic     = "a.flight"
+graphic_alt = "-"
+cost     = 810
+
+[advance_forestry]
+name     = _("Forestry")
+req1     = "Stone Knapping"
+req2     = "Fire Making"
+flags    = ""
+graphic     = "a.forestry"
+graphic_alt = "-"
+helptext = _("\
+Allows planting forests/deforestration.\
+")
+cost     = 6
+
+[advance_fundamentalism]
+name     = _("Fundamentalism")
+req1     = "Theology"
+req2     = "Islam"
+root_req = "Islam"
+flags    = ""
+graphic     = "a.fundamentalism"
+graphic_alt = "-"
+cost     = 200
+
+[advance_fusion_power]
+name     = _("Fusion Power")
+req1     = "Laser"
+req2     = "Superconductors"
+flags    = ""
+graphic     = "a.fusion_power"
+graphic_alt = "-"
+cost     = 4970
+
+[advance_general_staff]
+name     = _("General Staff")
+req1     = "Leadership"
+req2     = "Metallurgy"
+flags    = ""
+graphic     = "a.general_staff"
+graphic_alt = "-"
+cost     = 330
+
+[advance_genetic_engineering]
+name     = _("Genetic Engineering")
+req1     = "Biotechnology"
+req2     = "Nanotechnology"
+flags    = ""
+graphic     = "a.genetic_engineering"
+graphic_alt = "-"
+cost     = 6200
+
+[advance_glass_working]
+name     = _("Glass Working")
+req1     = "Direct Democracy"
+req2     = "Trade"
+flags    = ""
+graphic     = "a.glass_working"
+graphic_alt = "a.espionage"
+helptext = _("Increases fortress vision and Sea units vision radius.")
+cost     = 100
+
+[advance_great_unification_theory]
+name     = _("Great Unification Theory")
+req1     = "Superconductors"
+req2     = "Theory of Relativity"
+flags    = ""
+graphic     = "a.great_unification_theory"
+graphic_alt = "-"
+helptext = _("\
+This advance can be given, when Large Hadron Collider is build.\
+")
+cost     = 7500
+
+[advance_guerilla_warfare]
+name     = _("Guerilla Warfare")
+req1     = "Labor Union"
+req2     = "Tactics"
+flags    = ""
+graphic     = "a.guerilla_warfare"
+graphic_alt = "-"
+cost     = 700
+
+[advance_gunpowder]
+name     = _("Gunpowder")
+req1     = "Invention"
+req2     = "Alchemy"
+root_req = "Iron Working"
+graphic     = "a.gunpowder"
+graphic_alt = "-"
+cost     = 200
+
+[advance_hastilude]
+name     = _("Hastilude")
+req1     = "Chivalry"
+req2     = "Martial Games"
+flags    = ""
+root_req = "Martial Games"
+graphic     = "a.hastilude"
+graphic_alt = "-"
+cost     = 180
+
+[advance_hinduism]
+name     = _("Hinduism")
+req1     = "Vedism"
+req2     = "Mysticism"
+root_req = "Vedism"
+flags    = ""
+graphic     = "a.hinduism"
+graphic_alt = "a.polytheism"
+cost     = 80
+
+[advance_horseback_riding]
+name     = _("Horseback Riding")
+req1     = "Animal Husbandry"
+req2     = "Leather Tanning"
+flags    = ""
+graphic     = "a.horseback_riding"
+graphic_alt = "-"
+cost     = 14
+
+[advance_imperialism]
+name     = _("Imperialism")
+req1     = "Advanced Flight"
+req2     = "Zaibatsu"
+flags    = ""
+graphic     = "a.imperialism"
+graphic_alt = "-"
+cost     = 1320
+
+[advance_industrialization]
+name     = _("Industrialization")
+req1     = "Railroad"
+req2     = "The Republic"
+;flags    = "Population_Pollution_Inc"
+graphic     = "a.industrialization"
+graphic_alt = "-"
+cost     = 520
+
+[advance_invention]
+name     = _("Invention")
+req1     = "Bridge Building"
+req2     = "First Republic"
+root_req = "The Wheel"
+flags    = ""
+graphic     = "a.invention"
+graphic_alt = "-"
+helptext = _("Halves the upgrade cost of your units.")
+cost     = 140
+
+[advance_iron_working]
+name     = _("Iron Working")
+req1     = "Bronze Working"
+req2     = "Masonry"
+flags    = ""
+graphic     = "a.iron_working"
+graphic_alt = "-"
+cost     = 55
+
+[advance_islam]
+name     = _("Islam")
+req1     = "Desert Code"
+req2     = "Monotheism"
+root_req = "Monotheism"
+flags    = ""
+graphic     = "a.islam"
+graphic_alt = "-"
+cost     = 160
+
+[advance_jainism]
+name     = _("Jainism")
+req1     = "Hinduism"
+req2     = "Astrology"
+flags    = ""
+graphic     = "a.jainism"
+graphic_alt = "-"
+cost     = 160
+
+[advance_jet_propulsion]
+name     = _("Jet Propulsion")
+req1     = "Radar"
+req2     = "Mobile Warfare"
+flags    = ""
+graphic     = "a.jet_propulsion"
+graphic_alt = "-"
+;helptext = _("Enables movement of nuclear units.")
+cost     = 2150
+
+[advance_labor_union]
+name     = _("Labor Union")
+req1     = "Socialism"
+req2     = "Industrialization"
+flags    = ""
+graphic     = "a.labor_union"
+graphic_alt = "-"
+helptext = _("Warning: Labor Union cancel Zaibatsu effect.")
+cost     = 580
+
+[advance_laser]
+name     = _("Laser")
+req1     = "Computers"
+req2     = "Nuclear Power"
+flags    = ""
+graphic     = "a.laser"
+graphic_alt = "-"
+cost     = 2950
+
+[advance_leadership]
+name     = _("Leadership")
+req1     = "Hastilude"
+req2     = "Gunpowder"
+flags    = ""
+graphic     = "a.leadership"
+graphic_alt = "-"
+cost     = 250
+
+[advance_leather_tanning]
+name     = _("Leather Tanning")
+req1     = "Fire Making"
+req2     = "Stone Knapping"
+flags    = ""
+graphic     = "a.leather_tanning"
+graphic_alt = "-"
+cost     = 6
+
+[advance_legalism]
+name     = _("Legalism")
+req1     = "Confucianism"
+req2     = "Bridge Building"
+root_req = "Confucianism"
+flags    = ""
+graphic     = "a.legalism"
+graphic_alt = "-"
+cost     = 220
+
+[advance_literacy]
+name     = _("Literacy")
+req1     = "Writing"
+req2     = "Code of Laws"
+flags    = ""
+graphic     = "a.literacy"
+graphic_alt = "-"
+cost     = 45
+
+[advance_logistics]
+name     = _("Logistics")
+req1     = "The Corporation"
+req2     = "Automobile"
+flags    = ""
+graphic     = "a.logistics"
+graphic_alt = "a.corporation"
+helptext = _("TIP: Enables second trade route with Post Office.")
+cost     = 1100
+
+[advance_machinery]
+name     = _("Machinery")
+req1     = "Theory of Gravity"
+req2     = "Overseas Trade"
+flags    = ""
+graphic     = "a.machinery"
+graphic_alt = "-"
+cost     = 390
+
+[advance_machine_tools]
+name     = _("Machine Tools")
+req1     = "Steel"
+req2     = "Chemical Synthesis"
+flags    = ""
+graphic     = "a.machine_tools"
+graphic_alt = "-"
+cost     = 720
+
+[advance_magnetism]
+name     = _("Magnetism")
+req1     = "Navigation"
+req2     = "Thalassocracy"
+flags    = ""
+graphic     = "a.magnetism"
+graphic_alt = "-"
+cost     = 260
+
+[advance_map_making]
+name     = _("Map Making")
+req1     = "Alphabet"
+req2     = "Sailing"
+flags    = ""
+graphic     = "a.map_making"
+graphic_alt = "-"
+cost     = 20
+
+[advance_martial_arts]
+name     = _("Martial Arts")
+req1     = "Shogunate"
+req2     = "Confucianism"
+root_req = "Confucianism"
+flags    = ""
+graphic     = "a.martial_arts"
+graphic_alt = "-"
+cost     = 230
+
+[advance_martial_games]
+name     = _("Martial Games")
+req1     = "Drama"
+req2     = "Construction"
+flags    = ""
+graphic     = "a.martial_games"
+graphic_alt = "-"
+cost     = 95
+
+[advance_masonry]
+name     = _("Masonry")
+req1     = "Absolutism"
+req2     = "Copper Working"
+flags    = ""
+graphic     = "a.masonry"
+graphic_alt = "-"
+helptext = _("TIP: allow to upgrade Dirt Roads to Paved Roads.")
+cost     = 36
+
+[advance_mass_entertainment]
+name     = _("Mass Entertainment")
+req1     = "Cinematography"
+req2     = "The Corporation"
+flags    = ""
+graphic     = "a.mass_entertainment"
+graphic_alt = "-"
+cost     = 980
+
+[advance_mass_production]
+name     = _("Mass Production")
+req1     = "Welding Technology"
+req2     = "Logistics"
+flags    = ""
+graphic     = "a.mass_production"
+graphic_alt = "-"
+cost     = 1150
+
+[advance_mathematics]
+name     = _("Mathematics")
+req1     = "Construction"
+req2     = "Simple Machines"
+flags    = ""
+graphic     = "a.mathematics"
+graphic_alt = "-"
+cost     = 100
+
+[advance_medicine]
+name     = _("Medicine")
+req1     = "Philosophy"
+req2     = "Glass Working"
+flags    = ""
+graphic     = "a.medicine"
+graphic_alt = "-"
+cost     = 180
+
+[advance_metallurgy]
+name     = _("Metallurgy")
+req1     = "Gunpowder"
+req2     = "University"
+flags    = ""
+graphic     = "a.metallurgy"
+graphic_alt = "-"
+helptext = _("TIP: upgrade one obsolete unit per turn on cost of 1 veteran level (Warfare Museum will prevent this).")
+cost     = 290
+
+[advance_miniaturization]
+name     = _("Miniaturization")
+req1     = "Mass Production"
+req2     = "Electronics"
+flags    = ""
+graphic     = "a.miniaturization"
+graphic_alt = "-"
+cost     = 1450
+
+[advance_mobile_warfare]
+name     = _("Mobile Warfare")
+req1     = "Espionage"
+req2     = "Welding Technology"
+flags    = ""
+root_req = "Combustion"
+graphic     = "a.mobile_warfare"
+graphic_alt = "-"
+cost     = 1450
+
+[advance_theatre]
+name     = _("Theatre")
+req1     = "Hastilude"
+req2     = "Printing Press"
+root_req = "Literacy"
+flags    = ""
+graphic     = "a.theatre"
+graphic_alt = "-"
+cost     = 240
+
+[advance_modern_warfare]
+name     = _("Modern Warfare")
+req1     = "Command and Control"
+req2     = "Satellite System"
+flags    = ""
+graphic     = "a.modern_warfare"
+graphic_alt = "-"
+cost     = 4650
+
+[advance_monarchy]
+name     = _("Monarchy")
+req1     = "Ceremonial Burial"
+req2     = "Code of Laws"
+root_req = "Agricultural Farming"
+flags    = ""
+graphic     = "a.monarchy"
+graphic_alt = "-"
+cost     = 50
+
+[advance_monotheism]
+name     = _("Monotheism")
+req1     = "Vedism"
+req2     = "Absolutism"
+flags    = ""
+graphic     = "a.monotheism_jud"
+graphic_alt = "a.monotheism"
+helptext = _("Warning: Disables Rapture Growth (except of the city with Khajuraho wonder).")
+cost     = 90
+
+[advance_mysticism]
+name     = _("Mysticism")
+req1     = "Ceremonial Burial"
+req2     = "Pastoralism"
+flags    = ""
+graphic     = "a.mysticism"
+graphic_alt = "-"
+helptext = _("Improves the effect of Temples.")
+cost     = 30
+
+[advance_nanotechnology]
+name     = _("Nanotechnology")
+req1     = "Robotics"
+req2     = "Advanced Rocketry"
+flags    = ""
+graphic     = "a.nanotechnology"
+graphic_alt = "-"
+cost     = 4900
+
+[advance_navigation]
+name     = _("Navigation")
+req1     = "Invention"
+req2     = "Astronomy"
+flags    = ""
+graphic     = "a.navigation"
+graphic_alt = "-"
+cost     = 220
+
+[advance_nuclear_fission]
+name     = _("Nuclear Fission")
+req1     = "Theory of Relativity"
+req2     = "Quantum Theory"
+root_req = "Theory of Relativity" 
+flags    = ""
+graphic     = "a.nuclear_fission"
+graphic_alt = "-"
+cost     = 2140
+
+[advance_nuclear_power]
+name     = _("Nuclear Power")
+req1     = "Nuclear Fission"
+req2     = "Recycling"
+flags    = ""
+graphic     = "a.nuclear_power"
+graphic_alt = "-"
+helptext = _("Gives sea units one extra move.")
+cost     = 2590
+
+[advance_offshore_exploration]
+name     = _("Offshore Exploration")
+req1     = "Concrete"
+req2     = "Turbine"
+flags    = ""
+graphic     = "a.offshore_exploration"
+graphic_alt = "-"
+cost     = 830
+helptext = _("\
+Allows embarked Settlers, Migrants, Workers, Engineers or Transports and Barges to build \
+oil platforms on Deep Ocean, required to get the bonus from \
+Offshore Platforms.\
+") 
+
+[advance_optics]
+name     = _("Optics")
+req1     = "Engineering"
+req2     = "Physics"
+flags    = ""
+graphic     = "a.optics"
+graphic_alt = "-"
+cost     = 750
+
+[advance_overseas_trade]
+name     = _("Overseas Trade")
+req1     = "Gunpowder"
+req2     = "Magnetism"
+root_req = "Seafaring"
+flags    = "Claim_Ocean_Limited"
+graphic     = "a.physics"
+graphic_alt = "-"
+cost     = 320
+helptext = _("\
+Enhanced range of territoral waters. \
+") 
+
+[advance_paper_making]
+name     = _("Paper Making")
+req1     = "Literacy"
+req2     = "Monarchy"
+flags    = ""
+graphic     = "a.paper_making"
+graphic_alt = "-"
+cost     = 80
+
+[advance_pastoralism]
+name     = _("Pastoralism")
+req1     = "Horseback Riding"
+req2     = "Pottery"
+flags    = ""
+graphic     = "a.pastoralism"
+graphic_alt = "-"
+cost     = 20
+
+[advance_philosophy]
+name     = _("Philosophy")
+req1     = "Direct Democracy"
+req2     = "Literacy"
+root_req = "Writing"
+flags    = "Bonus_Tech"
+bonus_message = _("Great philosophers from all the world join \
+your civilization: you learn %s immediately.")
+graphic     = "a.philosophy_gr"
+graphic_alt = "a.philosophy"
+cost     = 100
+
+[advance_physics]
+name     = _("Physics")
+req1     = "Theory of Gravity"
+req2     = "Magnetism"
+root_req = "Mathematics"
+flags    = "Bonus_Tech"
+bonus_message = _("Knowledge of physics allows you to predict other natural phenomena: you learn %s immediately..") 
+graphic     = "a.physics"
+graphic_alt = "-"
+cost     = 390
+
+[advance_plastics]
+name     = _("Plastics")
+req1     = "Miniaturization"
+req2     = "Advanced Flight"
+flags    = ""
+graphic     = "a.plastics"
+graphic_alt = "-"
+cost     = 1780
+
+[advance_polytheism]
+name     = _("Polytheism")
+req1     = "Agricultural Farming"
+req2     = "Ceremonial Burial"
+flags    = ""
+graphic     = "a.polytheism_sun"
+graphic_alt = "a.polytheism"
+cost     = 30
+
+[advance_pottery]
+name     = _("Pottery")
+req1     = "Forestry"
+req2     = "None"
+flags    = ""
+graphic     = "a.pottery"
+graphic_alt = "-"
+cost     = 12
+
+[advance_printing_press]
+name     = _("Printing Press")
+req1     = "Paper Making"
+req2     = "Invention"
+flags    = ""
+graphic     = "a.printing_press"
+graphic_alt = "-"
+cost     = 170
+
+[advance_quantum_theory]
+name     = _("Quantum Theory")
+req1     = "Radioactivity"
+req2     = "Miniaturization"
+flags    = ""
+graphic     = "a.quantum_theory"
+graphic_alt = "-"
+cost     = 1520
+
+[advance_radar]
+name     = _("Radar")
+req1     = "Television"
+req2     = "Advanced Flight"
+root_req = "Electronics"
+flags    = ""
+graphic     = "a.radar"
+graphic_alt = "-"
+helptext = _("Increases vision radius of Sea and Air units.")
+cost     = 1670
+
+[advance_radio]
+name     = _("Radio")
+req1     = "Engineering"
+req2     = "Electromagnetism"
+flags    = ""
+graphic     = "a.radio"
+graphic_alt = "-"
+helptext = _("Allows Workers and Engineers to build airbases and buoys.")
+cost     = 780
+
+[advance_radioactivity]
+name     = _("Radioactivity")
+req1     = "Atomic Theory"
+req2     = "Chemical Synthesis"
+flags    = ""
+graphic     = "a.radioactivity"
+graphic_alt = "-"
+cost     = 690
+
+[advance_railroad]
+name     = _("?tech:Railroad")
+req1     = "Steam Engine"
+req2     = "Metallurgy"
+flags    = ""
+graphic     = "a.railroad"
+graphic_alt = "-"
+helptext = _("\
+Allows Engineers, Builders and other Worker-type units to upgrade roads to \
+Railroads.\
+"), _("\
+For Despotism or Tribal governments, cancels the penalty to worked \
+tiles with output greater than 2 (as if all your cities were always \
+celebrating).\
+")
+cost     = 470
+
+[advance_recycling]
+name     = _("Recycling")
+req1     = "Offshore Exploration"
+req2     = "Biotechnology"
+flags    = ""
+graphic     = "a.recycling"
+graphic_alt = "-"
+helptext = _("\
+Allows irrigation tiles not adjacent to any water source.\
+")
+cost     = 990
+
+[advance_refining]
+name     = _("Refining")
+req1     = "Chemical Synthesis"
+req2     = "Steel"
+flags    = ""
+graphic     = "a.refining_oil"
+graphic_alt = "a.refining"
+cost     = 700
+helptext = _("\
+Allows any Worker-type units to upgrade \
+mines to oil wells on Desert and Glacier tiles, for an extra production \
+point.\
+") 
+
+[advance_refrigeration]
+name     = _("Refrigeration")
+req1     = "Biology"
+req2     = "Refining"
+graphic     = "a.refrigeration"
+graphic_alt = "-"
+cost     = 790
+
+[advance_robotics]
+name     = _("Robotics")
+req1     = "Mobile Warfare"
+req2     = "Computers"
+root_req = "Miniaturization"
+flags    = ""
+graphic     = "a.robotics"
+graphic_alt = "-"
+cost     = 1980
+
+[advance_rocketry]
+name     = _("Rocketry")
+req1     = "Jet Propulsion"
+req2     = "Miniaturization"
+root_req = "Flight"
+flags    = ""
+graphic     = "a.rocketry"
+graphic_alt = "-"
+;helptext = _("Doubles movement of nuclear units.")
+cost     = 2350
+
+[advance_saddle_stirrup]
+name     = _("Saddle Stirrup")
+req1     = "The Harness"
+req2     = "Copper Working"
+flags    = ""
+graphic     = "a.saddle_stirrup"
+graphic_alt = "-"
+cost     = 45
+
+[advance_sailing]
+name     = _("Sailing")
+req1     = "Forestry"
+req2     = "Leather Tanning"
+flags    = ""
+graphic     = "a.sailing"
+graphic_alt = "-"
+cost     = 12
+
+[advance_sanitation]
+name     = _("Sanitation")
+req1     = "Bridge Building"
+req2     = "Medicine"
+flags    = ""
+graphic     = "a.sanitation"
+graphic_alt = "-"
+cost     = 200
+
+[advance_satellite_system]
+name     = _("Satellite System")
+req1     = "Space Flight"
+req2     = "Theory of Relativity"
+flags    = ""
+graphic     = "a.satellite_system"
+graphic_alt = "-"
+helptext = _("\
+Increases unit vision radius, except of Air and Sea units.\
+")
+cost     = 3770
+
+[advance_screw_propeller]
+name     = _("Screw Propeller")
+req1     = "Steam Engine"
+req2     = "Physics"
+flags    = ""
+graphic     = "a.screw_propeller"
+graphic_alt = "-"
+cost     = 500
+
+[advance_seafaring]
+name     = _("Seafaring")
+req1     = "Exploration"
+req2     = "Map Making"
+flags    = ""
+graphic     = "a.seafaring"
+graphic_alt = "-"
+cost     = 45
+
+
+[advance_shamanism]
+name     = _("Shamanism")
+req1     = "Fire Making"
+req2     = "Creative Art"
+flags    = ""
+graphic     = "a.shamanism"
+graphic_alt = "a.ceremonial_burial"
+cost     = 8
+
+[advance_shiism]
+name     = _("Shiism")
+req1     = "Islam"
+req2     = "Philosophy"
+root_req = "Islam"
+flags    = ""
+graphic     = "a.shiism"
+graphic_alt = "-"
+cost     = 210
+
+[advance_shinto]
+name     = _("Shinto")
+req1     = "Seafaring"
+req2     = "Buddhism"
+flags    = ""
+graphic     = "a.shinto"
+graphic_alt = "-"
+cost     = 120
+
+[advance_shogunate]
+name     = _("Shogunate")
+req1     = "Shinto"
+req2     = "Feudalism"
+flags    = ""
+graphic     = "a.shogunate"
+graphic_alt = "-"
+cost     = 170
+
+[advance_sikhism]
+name     = _("Sikhism")
+req1     = "Jainism"
+req2     = "Shiism"
+root_req = "Monotheism"
+flags    = ""
+graphic     = "a.sikhism"
+graphic_alt = "-"
+cost     = 290
+
+[advance_simple_machines]
+name     = _("Simple Machines")
+req1     = "The Wheel"
+req2     = "Iron Working"
+flags    = ""
+graphic     = "a.simple_machines"
+graphic_alt = "-"
+cost     = 65
+
+[advance_slave_trade]
+name     = _("Slave Trade")
+req1     = "Saddle Stirrup"
+req2     = "Trade"
+flags    = ""
+graphic     = "a.slave_trade"
+graphic_alt = "-"
+cost     = 85
+
+[advance_socialism]
+name     = _("Socialism")
+req1     = "Egalitarianism"
+req2     = "Machinery"
+flags    = ""
+graphic     = "a.socialism"
+graphic_alt = "a.communism"
+cost     = 450
+
+[advance_space_flight]
+name     = _("Space Flight")
+req1     = "Computers"
+req2     = "Rocketry"
+flags    = ""
+graphic     = "a.space_flight"
+graphic_alt = "-"
+cost     = 2780
+
+[advance_stealth]
+name     = _("Stealth")
+req1     = "Plastics"
+req2     = "Space Flight"
+flags    = ""
+graphic     = "a.stealth"
+graphic_alt = "-"
+cost     = 3260
+
+[advance_steam_engine]
+name     = _("Steam Engine")
+req1     = "Chemistry"
+req2     = "Machinery"
+flags    = ""
+graphic     = "a.steam_engine"
+graphic_alt = "-"
+helptext = _("\
+Allows Settlers, Migrants, Workers and Engineers to build Water Locks.\
+")
+cost     = 440
+
+[advance_steel]
+name     = _("Steel")
+req1     = "Engineering"
+req2     = "Electricity"
+root_req = "Metallurgy"
+flags    = ""
+graphic     = "a.steel"
+graphic_alt = "-"
+cost     = 660
+helptext = _("\
+Allows Engineers and barges to build Road Bridges \
+over Lakes or Ocean (bridge need to be adjancent to coast) \
+") 
+
+[advance_stone_knapping]
+name     = _("Stone Knapping")
+req1     = "None"
+req2     = "None"
+flags    = ""
+graphic     = "a.stone_knapping"
+graphic_alt = "-"
+cost     = 3
+
+[advance_sunnism]
+name     = _("Sunnism")
+req1     = "Fundamentalism"
+req2     = "Gunpowder"
+root_req = "Islam"
+flags    = ""
+graphic     = "a.sunnism"
+graphic_alt = "-"
+cost     = 280
+
+[advance_superconductors]
+name     = _("Superconductors")
+req1     = "Quantum Theory"
+req2     = "Plastics"
+flags    = ""
+graphic     = "a.superconductors"
+graphic_alt = "-"
+cost     = 2950
+helptext = _("\
+Allows Settlers, Migrants, Workers and Engineers to upgrade railroads \
+with maglev.\
+") 
+
+[advance_super_soldiers]
+name     = _("Super Soldiers")
+req1     = "Genetic Engineering"
+req2     = "Modern Warfare"
+root_req = "Amphibious Warfare"
+flags    = ""
+graphic     = "a.super_soldiers"
+graphic_alt = "-"
+cost     = 7900
+
+[advance_tactics]
+name     = _("Tactics")
+req1     = "Conscription"
+req2     = "General Staff"
+flags    = ""
+graphic     = "a.tactics"
+graphic_alt = "-"
+cost     = 560
+
+[advance_television]
+name     = _("Television")
+req1     = "Mass Entertainment"
+req2     = "Electronics"
+root_req = "Electricity"
+flags    = ""
+graphic     = "a.television"
+graphic_alt = "-"
+helptext = _("TIP: Together with Hollywood wonder, 3 additional entertainer specialists for each city. ")
+cost     = 1250
+
+[advance_taoism]
+name     = _("Taoism")
+req1     = "Paper Making"
+req2     = "Philosophy"
+root_req = "Literacy"
+flags    = ""
+graphic     = "a.taoism"
+graphic_alt = "-"
+cost     = 130
+
+[advance_thalassocracy]
+name     = _("Thalassocracy")
+req1     = "Glass Working"
+req2     = "First Republic"
+flags    = ""
+graphic     = "a.thalassocracy"
+graphic_alt = "-"
+cost     = 150
+
+[advance_the_corporation]
+name     = _("The Corporation")
+req1     = "Federation"
+req2     = "Refining"
+flags    = ""
+graphic     = "a.the_corporation"
+graphic_alt = "-"
+helptext = _("\
+Halves the corruption of trade related to distance from the capital \
+(or eliminates it for Federation governments).\
+")
+cost     = 880
+
+[advance_the_harness]
+name     = _("The Harness")
+req1     = "Horseback Riding"
+req2     = "The Wheel"
+flags    = ""
+graphic     = "a.harness"
+graphic_alt = "a.the_wheel"
+cost     = 32
+
+[advance_the_republic]
+name     = _("The Republic")
+req1     = "Banking"
+req2     = "Egalitarianism"
+root_req = "First Republic"
+flags    = ""
+graphic     = "a.the_republic"
+graphic_alt = "-"
+cost     = 280
+
+[advance_the_wheel]
+name     = _("The Wheel")
+req1     = "Carpentry"
+req2     = "Pottery"
+flags    = ""
+graphic     = "a.wheel"
+graphic_alt = "a.the_wheel"
+cost     = 25
+
+[advance_theology]
+name     = _("Theology")
+req1     = "Philosophy"
+req2     = "Christianity"
+flags    = ""
+graphic     = "a.theology"
+graphic_alt = "-"
+helptext = _("Improves the effect of Churches.")
+cost     = 160
+
+[advance_theory_of_gravity]
+name     = _("Theory of Gravity")
+req1     = "Astronomy"
+req2     = "University"
+flags    = ""
+graphic     = "a.theory_of_gravity"
+graphic_alt = "-"
+cost     = 320
+
+[advance_theory_of_relativity]
+name     = _("Theory of Relativity")
+req1     = "Optics"
+req2     = "Radio"
+flags    = ""
+graphic     = "a.theory_of_relativity"
+graphic_alt = "-"
+cost     = 1190
+
+[advance_trade]
+name     = _("Trade")
+req1     = "Currency"
+req2     = "Exploration"
+flags    = ""
+graphic     = "a.trade"
+graphic_alt = "-"
+helptext = _("\
+Halves the waste of production related to distance from the capital.\
+")
+cost     = 55
+
+[advance_turbine]
+name     = _("Turbine")
+req1     = "Steel"
+req2     = "Screw Propeller"
+flags    = ""
+graphic     = "a.turbine"
+graphic_alt = "-"
+cost     = 690
+
+[advance_university]
+name     = _("University")
+req1     = "Mathematics"
+req2     = "Medicine"
+flags    = ""
+graphic     = "a.university"
+graphic_alt = "-"
+cost     = 240
+
+[advance_vedism]
+name     = _("Vedism")
+req1     = "Polytheism"
+req2     = "Writing"
+flags    = ""
+graphic     = "a.vedism"
+graphic_alt = "a.polytheism"
+cost     = 50
+
+[advance_warrior_code]
+name     = _("Warrior Code")
+req1     = "Creative Art"
+req2     = "Leather Tanning"
+flags    = ""
+graphic     = "a.warrior_code"
+graphic_alt = "-"
+cost     = 12
+
+[advance_welding_technology]
+name     = _("Welding Technology")
+req1     = "Automobile"
+req2     = "Electromagnetism"
+root_req = "Steel"
+flags    = ""
+graphic     = "a.welding_technology"
+graphic_alt = "-"
+cost     = 950
+
+[advance_writing]
+name     = _("Writing")
+req1     = "Alphabet"
+req2     = "Pottery"
+flags    = ""
+graphic     = "a.writing"
+graphic_alt = "-"
+cost     = 20
+
+[advance_zaibatsu]
+name     = _("Zaibatsu")
+req1     = "Bushido"
+req2     = "Industrialization"
+root_req = "Shogunate"
+flags    = ""
+graphic     = "a.zaibatsu"
+graphic_alt = "-"
+helptext = _("TIP: Increase factory production by 25% (this effect is cancelled by Labor Union).")
+cost     = 590
+

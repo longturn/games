@@ -1,0 +1,299 @@
+
+[tilespec]
+
+; Format and options of this tilespec file:
+options = "+Freeciv-2.6-tilespec"
+
+; A simple name for the tileset specified by this file:
+name = "augmentedis"
+priority = 3
+
+; There`s no separate versioning in tilesets part of main freeciv distribution
+;version = ""
+
+; Summary and full description of the tileset.
+summary = _("Isometric small hex tiles for augmented2 modpack.")
+;description = ""
+
+; TODO: add more overall information fields on tiles, 
+; eg, authors, colors, etc.
+
+; Basic tile sizes:
+normal_tile_width  = 64
+normal_tile_height = 32
+small_tile_width   = 15
+small_tile_height  = 20
+
+; Basic tile style.
+type = "isometric"
+hex_side = 16
+is_hex = TRUE
+
+; Use old iso style
+fog_style      = "Auto"
+
+; Was darkness style "IsoRect" (single-sprite)
+darkness_style = "CardinalSingle"
+; Which terrain layer darkness is drawn top of (0-2)
+darkness_layer = 0
+ 
+; offset the flags by this amount when drawing units
+unit_flag_offset_x = 17
+unit_flag_offset_y = 11
+city_flag_offset_x = 17
+city_flag_offset_y = 11
+
+; offset the city occupied sprite by this amount
+occupied_offset_x = 0
+occupied_offset_y = 0
+
+; offset the units by this amount
+unit_offset_x = 21
+unit_offset_y = 13
+
+; offset of the normal activity icons
+activity_offset_x = 0
+activity_offset_y = 0
+
+; offset the cities by this amount
+city_offset_x = 0
+city_offset_y = 0
+
+; offset the city bar text by this amount (from the city tile origin)
+citybar_offset_y = 20
+
+; offset the tile label text by this amount
+tilelabel_offset_y = 10
+
+; offset the upkeep icons by this amount from the top of the unit itself.
+; The default is the normal tile height, which means that the upkeep icons
+; appear below the unit icon if the unit icons are equal to tile height
+; (typical in overhead tileset), or overlay lower part of the unit icon,
+; if unit icon is higher than tiles (typical in iso tilesets)
+;unit_upkeep_offset_y = 0
+
+; Like unit_upkeep_offset_y, but to be used in case there`s only small
+; space for the overall icon produced. Defaults to unit_upkeep_offset_y -
+; not having alternative layout.
+;unit_upkeep_small_offset_y = 0
+
+; Font size (points) to use to draw city names and productions.
+; (Deprecated, and ignored by many clients.)
+city_names_font_size = 10
+city_productions_font_size = 10
+
+; These are special because they get freed and reloaded
+; as required:
+main_intro_file    = "misc/intro"
+minimap_intro_file = "misc/radar"
+
+; Below, the graphics spec files; must be somewhere (anywhere) in 
+; the data path. Order may be important for color allocation on 
+; low-color systems, and if there are any duplicate tags (lattermost
+; tag is used).
+files =
+  "misc/overlays.spec",
+  "misc/citybar.spec",
+;  "isophex/terrain1.spec",
+  "isophex/terrain2.spec",
+  "isophex/darkness.spec",
+  "isotrident/tiles.spec",
+  "isotrident/unitcost.spec",
+  "isophex/grid.spec",
+  "isophex/rivers.spec",
+  "misc/small.spec",
+  "misc/events.spec",
+  "misc/governments.spec",
+  "misc/specialists.spec",
+  "misc/buildings.spec",
+;  "trident/units.spec",
+  "isotrident/unitextras.spec",
+  "misc/flags.spec",
+;  "augmented2/misc/flags.spec",
+  "misc/shields.spec",
+;  "augmented2/misc/shields.spec",
+  "misc/cursors.spec",
+  "misc/space.spec",
+  "misc/techs.spec",
+  "misc/treaty.spec",
+  "misc/icons.spec",
+  "misc/editor.spec",
+  "isotrident/nuke.spec",
+  "isotrident/cities.spec",
+  "isotrident/morecities.spec",
+  "augmented2/small_units/units.spec",
+  "augmented2/buildings_small/buildings-small.spec",
+  "augmented2/wonders_small/wonders-small.spec",
+  "augmented2/misc/governments.spec",
+  "augmented2/terrain_small/terrain-small.spec",
+  "augmented2/terrain_small/roads_unpaved.spec",
+  "augmented2/terrain_small/roads.spec",
+  "augmented2/terrain_small/roads-rails.spec",
+  "augmented2/terrain_small/roads-hwys.spec",
+  "augmented2/terrain_small/waterlocks.spec",
+  "augmented2/terrain_small/road_bridges.spec",
+  "augmented2/terrain_small/forest2.spec",
+  "augmented2/misc/techs.spec"
+
+; Include color definitions
+*include "misc/colors.tilespec"
+
+; Terrain info - see README.graphics
+
+[layer0]
+match_types = "land", "water"
+
+[layer1]
+match_types = "forest", "hills", "mountains", "ridge", "trench"
+
+; Water graphics referenced by terrain.ruleset
+;
+[tile_lake]
+tag = "lake"
+blend_layer = 1
+num_layers = 1
+layer0_match_type = "water"
+layer0_match_with = "water"
+layer0_sprite_type = "corner"
+
+[tile_coast]
+tag = "coast"
+blend_layer = 1
+num_layers = 1
+layer0_match_type = "water"
+layer0_match_with = "water"
+layer0_sprite_type = "corner"
+
+[tile_floor]
+tag = "floor"
+blend_layer = 1
+num_layers = 1
+layer0_match_type = "water"
+layer0_match_with = "water"
+layer0_sprite_type = "corner"
+
+; Land graphics referenced by terrain.ruleset
+;
+[tile_inaccessible]
+tag = "inaccessible"
+blend_layer = 0
+num_layers = 1
+layer0_match_type = "land"
+
+[tile_arctic]
+tag = "arctic"
+blend_layer = 1
+num_layers = 1
+layer0_match_type = "land"
+
+[tile_desert]
+tag = "desert"
+blend_layer = 1
+num_layers = 1
+layer0_match_type = "land"
+
+[tile_forest]
+tag = "forest"
+blend_layer = 1
+num_layers = 2
+layer0_match_type = "land"
+layer1_match_type = "forest"
+layer1_match_with = "forest"
+
+[tile_grassland]
+tag = "grassland"
+blend_layer = 1
+num_layers = 1
+layer0_match_type = "land"
+
+[tile_hills]
+tag = "hills"
+blend_layer = 1
+num_layers = 2
+layer0_match_type = "land"
+layer1_match_type = "hills"
+layer1_match_with = "hills"
+
+;ugly and misleading swamp-like img
+;[tile_jungle]
+;tag = "jungle"
+;blend_layer = 1
+;num_layers = 1
+;layer0_match_type = "land"
+
+[tile_jungle]
+tag = "jungle"
+blend_layer = 1
+num_layers = 2
+layer0_match_type = "land"
+layer1_match_type = "forest"
+layer1_match_with = "forest"
+
+[tile_taiga]
+tag = "taiga"
+blend_layer = 1
+num_layers = 2
+layer0_match_type = "land"
+layer1_match_type = "forest"
+layer1_match_with = "forest"
+
+[tile_mountains]
+tag = "mountains"
+blend_layer = 1
+num_layers = 2
+layer0_match_type = "land"
+layer1_match_type = "mountains"
+layer1_match_with = "mountains"
+
+[tile_plains]
+tag = "plains"
+blend_layer = 1
+num_layers = 1
+layer0_match_type = "land"
+
+[tile_swamp]
+tag = "swamp"
+blend_layer = 1
+num_layers = 1
+layer0_match_type = "land"
+
+[tile_tundra]
+tag = "tundra"
+blend_layer = 1
+num_layers = 1
+layer0_match_type = "land"
+
+[tile_volcano]
+tag = "volcano"
+blend_layer = 1
+num_layers = 3
+layer0_match_type = "land"
+layer1_match_type = "mountains"
+layer1_match_with = "mountains"
+
+[extras]
+styles =
+    { "name",          "style"
+      "road.road_unpaved",     "RoadAllSeparate"
+      "road.road",     "RoadAllSeparate"
+      "road.rail",     "RoadAllCombined"
+      "road.maglev",   "RoadAllSeparate"
+      "road.hwy",      "RoadAllSeparate"
+      "road.river",    "River"
+      "tx.irrigation", "Cardinals"
+      "tx.farmland",   "Cardinals"
+      "tx.mine",       "Single1"
+      "tx.oil_mine",   "Single1"
+      "tx.oil_rig",    "Single1"
+      "tx.pollution",  "Single2"
+      "tx.fallout",    "Single2"
+      "tx.village",    "Single1"
+      "base.outpost",  "3Layer"
+      "base.fortress", "3Layer"
+      "base.airstrip", "3Layer"
+      "base.airbase",  "3Layer"
+      "base.buoy",     "3Layer"
+      "base.ruins",    "3Layer"
+      "road.waterlock","River"
+      "road.road_bridge","RoadAllCombined"
+    }
