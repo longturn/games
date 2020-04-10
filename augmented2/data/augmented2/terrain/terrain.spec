@@ -13,19 +13,35 @@ artists = "
 "
 ; Augmented2 modpack
 
-;[file]
-;gfx = "augmented2/terrain/waterlock_a"
-;[grid_main]
-;x_top_left = 0
-;y_top_left = 0
-;dx = 126
-;dy = 64
-;pixel_border = 0
-;tiles = { "row", "column","tag"
-;  0,    0,  "base.waterlock_fg"
-;  1,    0,  "base.waterlock_bg"
-;}
+[file]
+gfx = "hexemplio/terrain"
 
+[grid_main]
+
+x_top_left = 1
+y_top_left = 1
+dx = 126
+dy = 64
+pixel_border = 1
+
+tiles = { "row", "column","tag"
+
+; terrain - layer 0
+  0,    2,  "t.l0.wooded_hills1"			
+
+  0,    3,  "t.l0.taiga1"			;[PA]
+ 
+  0,    5,  "t.l0.mangrove1"			;{PA}
+
+
+; terrain - layer 1
+  5,    0,  "t.l1.wooded_hills1"
+
+  5,    0,  "t.l1.taiga1"
+
+;  5,    0,  "t.l1.mangrove1"
+
+}
 
 [extra]
 

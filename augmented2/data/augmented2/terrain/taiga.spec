@@ -10,15 +10,12 @@ artists = "
 		GriffonSpade
 "
 
-[extra]
-
-sprites =
-	{	"tag", "file"
-
-"t.l0.taiga1", "augmented2/terrain/tundra_base"
-"t.l1.taiga1", "augmented2/terrain/blank"
-
-}
+;[extra]
+;sprites =
+;	{	"tag", "file"
+;"t.l0.taiga1", "augmented2/terrain/tundra_base"
+;"t.l1.taiga1", "augmented2/terrain/blank"
+;}
 
 [file]
 gfx = "augmented2/terrain/forests2"

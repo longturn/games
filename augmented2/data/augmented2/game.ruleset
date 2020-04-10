@@ -199,6 +199,9 @@ slow_invasions = TRUE
 ; If this is set to FALSE units will attack with full strength even if they
 ; have only fractional moves left.
 tired_attack = TRUE
+;nuke patch:
+nuke_defender_survival_chance_pct=20
+nuke_pop_loss_pct=70
 
 [actions]
 ; If force_trade_route is set to TRUE it is illegal for an actor unit to

@@ -125,6 +125,8 @@ tiles = { "row", "column","tag"
   0,    2,  "t.l0.mountains1"
   0,   10,  "t.l0.inaccessible1"
   0,    1,  "t.l0.volcano1"
+  0,    3,  "t.l0.taiga1"
+  0,    2,  "t.l0.wooded_hills1"
 
 ; Terrain special resources:
 
