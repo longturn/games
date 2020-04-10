@@ -5519,7 +5519,7 @@ reqs    =
     }
 
 [effect_apollo_program_culture]
-type    = "History"
+type    = "National_History"
 value	= 5
 reqs	=
     { "type", "name", "range"
@@ -5548,7 +5548,7 @@ reqs    =
     }
 
 [effect_asmiths_trading_co_culture]
-type    = "History"
+type    = "National_History"
 value	= 2
 reqs	=
     { "type", "name", "range"
@@ -5575,7 +5575,7 @@ reqs    =
     }
 
 [effect_colossus_culture]
-type    = "History"
+type    = "National_History"
 value	= 2
 reqs	=
     { "type", "name", "range"
@@ -5619,7 +5619,7 @@ reqs    =
     }
 
 [effect_cure_for_cancer_culture]
-type    = "History"
+type    = "National_History"
 value	= 4
 reqs	=
     { "type", "name", "range"
@@ -5656,7 +5656,7 @@ reqs    =
     }
 
 [effect_darwins_voyage_culture]
-type    = "History"
+type    = "National_History"
 value	= 5
 reqs	=
     { "type", "name", "range"
@@ -5728,7 +5728,7 @@ reqs    =
     }
 
 [effect_great_library_culture]
-type    = "History"
+type    = "National_History"
 value	= 4
 reqs	=
     { "type", "name", "range"
@@ -5804,7 +5804,7 @@ reqs    =
     }
 
 [effect_great_wall_culture]
-type    = "History"
+type    = "National_History"
 value	= 2
 reqs	=
     { "type", "name", "range"
@@ -5878,7 +5878,7 @@ reqs    =
     }
 
 [effect_hoover_dam_culture]
-type    = "History"
+type    = "National_History"
 value	= 2
 reqs	=
     { "type", "name", "range"
@@ -6127,7 +6127,7 @@ reqs    =
     }
 
 [effect_marco_polos_embassy_culture]
-type    = "History"
+type    = "National_History"
 value	= 6
 reqs	=
     { "type", "name", "range"
@@ -6188,7 +6188,7 @@ reqs    =
     }
 
 [effect_mausoleum_of_mausolos_culture]
-type    = "History"
+type    = "National_History"
 value	= 2
 reqs	=
     { "type", "name", "range"
@@ -6316,11 +6316,11 @@ reqs    =
 ;    }
 
 [effect_internet_culture]
-type    = "History"
-value	= 4
+type    = "National_History"
+value	= 1
 reqs	=
     { "type", "name", "range"
-      "Building", "Internet", "City"
+      "Building", "Internet", "Player"
       "Tech", "Computers", "Player"
     }
 
@@ -6387,7 +6387,7 @@ reqs    =
     }
 
 [effect_statue_of_liberty_culture]
-type    = "History"
+type    = "National_History"
 value	= 4
 reqs	=
     { "type", "name", "range"
@@ -6479,7 +6479,7 @@ reqs    =
 ;    }
 
 [effect_united_nations_culture]
-type    = "History"
+type    = "National_History"
 value	= 8
 reqs	=
     { "type", "name", "range"
@@ -8203,7 +8203,7 @@ reqs	=
     }
 
 [effect_stonehenge_culture]
-type    = "History"
+type    = "National_History"
 value	= 2
 reqs	=
     { "type", "name", "range"
@@ -8288,7 +8288,7 @@ reqs    =
     }
 
 [effect_leshan_buddha_statue_culture]
-type    = "History"
+type    = "National_History"
 value	= 3
 reqs    =
     { "type", "name", "range"
@@ -8320,7 +8320,7 @@ reqs    =
     }
 
 [effect_kaaba_culture]
-type    = "History"
+type    = "National_History"
 value	= 3
 reqs    =
     { "type", "name", "range", "present"
@@ -8470,7 +8470,7 @@ reqs    =
     }
 
 [effect_angkor_wat_culture]
-type    = "History"
+type    = "National_History"
 value	= 3
 reqs	=
     { "type", "name", "range", "present"
@@ -8715,7 +8715,7 @@ reqs    =
     }
 
 [effect_osaka_castle_culture]
-type    = "History"
+type    = "National_History"
 value	= 3
 reqs	=
     { "type", "name", "range", "present"
@@ -8766,7 +8766,7 @@ reqs    =
     }
 
 [effect_golden_temple_culture]
-type    = "History"
+type    = "National_History"
 value	= 3
 reqs    =
     { "type", "name", "range", "present"
@@ -9195,7 +9195,7 @@ reqs    =
     }
 
 [effect_taj_mahal_culture]
-type    = "History"
+type    = "National_History"
 value	= 3
 reqs	=
     { "type", "name", "range"

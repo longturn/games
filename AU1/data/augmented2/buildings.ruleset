@@ -1094,6 +1094,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Nuclear Power", "Player"
       "Building", "Factory", "City"
+      "MinCulture", "13000", "Player"
     }
 graphic	= "b.nuclear_plant"
 graphic_alt	= "-"
@@ -1395,7 +1396,7 @@ reqs	=
       "Building", "University", "City", TRUE
       "Building", "Steel Mill", "City", FALSE
       "Building", "Cement Plant", "City", FALSE
-	 "MinCulture", "5500", "Player", TRUE
+	 "MinCulture", "6500", "Player", TRUE
     }
 graphic	= "b.research_lab"
 graphic_alt	= "-"
@@ -2168,7 +2169,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Computers", "Player"
       "Building", "Research Lab", "City"
-	 "MinCulture", "8500", "Player"
+	 "MinCulture", "14500", "Player"
     }
 graphic	= "b.DARPA"
 graphic_alt	= "b.research_lab"
@@ -2383,7 +2384,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Tactics", "Player"
-	 "MinCulture", "5800", "Player"
+	 "MinCulture", "6800", "Player"
     }
 graphic	= "b.ecole_speciale_militaire"
 graphic_alt	= "b.university"
@@ -2409,7 +2410,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Industrialization", "Player"
-	 "MinCulture", "4500", "Player"
+	 "MinCulture", "5500", "Player"
     }
 graphic	= "b.eiffel_tower"
 graphic_alt	= "-"
@@ -2490,7 +2491,7 @@ reqs	=
       "Tech", "Satellite System", "Player"
       "Building", "Apollo Program", "World"
       "Building", "Research Lab", "City"
-	 "MinCulture", "9500", "Player"
+	 "MinCulture", "16500", "Player"
     }
 graphic	= "b.global_positioning_system"
 graphic_alt	= "b.seti_program"
@@ -2707,7 +2708,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Invention", "Player"
-	 "MinCulture", "2800", "Player"
+	 "MinCulture", "3000", "Player"
     }
 graphic	= "b.leonardos_workshop"
 graphic_alt	= "-"
@@ -2796,7 +2797,7 @@ reqs	=
       "Tech", "Electronics", "Player"
       "Building", "Factory", "City"
       "Building", "Library", "City"
-	 "MinCulture", "6300", "Player"
+	 "MinCulture", "8300", "Player"
     }
 graphic	= "b.massachusetts_institute_of_technology"
 graphic_alt	= "b.university"
@@ -2884,7 +2885,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Radioactivity", "Player"
       "Building", "Hospital", "City"
-	 "MinCulture", "4200", "Player"
+	 "MinCulture", "6200", "Player"
     }
 graphic	= "b.mobile-x-ray"
 graphic_alt	= "b.barracks_iii"
@@ -3205,7 +3206,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Conscription", "Player"
       "Building", "Slavery Abolition", "Player"
-	 "MinCulture", "7400", "Player"
+	 "MinCulture", "8400", "Player"
     }
 graphic	= "b.womens_suffrage"
 graphic_alt	= "-"
@@ -3271,7 +3272,7 @@ stationed in the city, or sabotage your buildings.\
 Under Despotism the city containing the palace gains a +75% \
 gold bonus, and under Monarchy a +50% gold bonus.\
 "), _("\
-+3 Culture Points/turn.\
++3 National Culture Points/turn.\
 ")
 
 [building_osaka_castle]
@@ -3282,7 +3283,7 @@ reqs	=
       "Tech", "Shogunate", "Player", TRUE
       "Building", "Temple", "City", TRUE
       "Building", "Shrine Torii", "City", TRUE
-      "MinCulture", "2800", "Player", TRUE
+      "MinCulture", "2900", "Player", TRUE
       "Building", "Ecclesiastical Palace", "Player", FALSE
       "Building", "Angkor Wat", "Player", FALSE
       "Building", "Forbidden City", "Player", FALSE
@@ -3316,7 +3317,7 @@ stationed in the city, or sabotage your buildings.\
 Osaka Castle will also make content two citizens unhappy due to aggression
 in the city where is founded.\
 "), _("\
-+3 Culture Points/turn.\
++3 National Culture Points/turn.\
 ")
 
 ;only for owner
@@ -3327,14 +3328,14 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Democracy", "Player"
-	 "MinCulture", "7800", "Player"
+	 "MinCulture", "9800", "Player"
     }
 graphic	= "b.statue_of_liberty"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 2200
+build_cost	= 1500
 upkeep		= 0
 sabotage	= 0
 sound		= "w_statue_of_liberty"
@@ -3349,7 +3350,7 @@ government or by the United Nations.\
 _("\
 The side effect of this wonder is, that inciting revolts is possible under Fascism.\
 "), _("\
-+4 Culture Points/turn.\
++4 National Culture Points/turn.\
 ")
 
 [building_united_nations]
@@ -3380,7 +3381,7 @@ a row, that player's government falls (even for governments other than \
 Republic and Democracy). On the other hand, chance of Civil War is 4x less \
 in case of Republic, Democracy or Federation. \
 "), _("\
-+8 Culture Points/turn.\
++8 National Culture Points/turn.\
 ")
 
 ; for all nations
@@ -3410,7 +3411,7 @@ start building spaceship parts (assuming they have researched the \
 necessary technologies and have Space Lift small wonder finished).\n\
 Existing of Apollo Program is also necessary to build Global Positioning System.\
 "), _("\
-+5 Culture Points/turn.\
++5 National Culture Points/turn.\
 ")
 
 [building_asmiths_trading_co]
@@ -3420,7 +3421,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Economics", "Player"
       "Building", "Stock Exchange", "City"
-	 "MinCulture", "4500", "Player"
+	 "MinCulture", "5000", "Player"
     }
 graphic	= "b.asmiths_trading_co"
 graphic_alt	= "-"
@@ -3441,7 +3442,7 @@ Communism.)\
 Upon completion of this wonder, tax collector specialists' gold output \
 increases by 1 permanently for every nation.\
 "), _("\
-+2 Culture Points/turn.\
++2 National Culture Points/turn.\
 ")
 
 
@@ -3469,7 +3470,7 @@ happy in each of cities of any player who knows Genetic Engineering (2 extra lux
 Together with an Aqueduct, a Sewer System, Hospital, Pasteur Institute and maximum of Welfare Policy, \
 it entirely eliminates the risk of plague.\
 "), _("\
-+4 Culture Points/turn.\
++4 National Culture Points/turn.\
 ")
 
 [building_darwins_voyage]
@@ -3478,7 +3479,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Steam Engine", "Player"
-	 "MinCulture", "4500", "Player"
+	 "MinCulture", "7800", "Player"
     }
 graphic	= "b.darwins_voyage"
 graphic_alt	= "-"
@@ -3498,7 +3499,7 @@ All your cities generate 1 extra science bulb and immediate technology advance i
 Upon completion of this wonder, scientist specialists' research output \
 increases by 1 permanently for every nation.\
 "), _("\
-+5 Culture Points/turn.\
++5 National Culture Points/turn.\
 ")
 
 [building_great_library]
@@ -3508,7 +3509,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Paper Making", "Player"
       "Building", "Library", "City"
-	 "MinCulture", "1550", "Player"
+	 "MinCulture", "2500", "Player"
     }
 graphic	= "b.great_library"
 graphic_alt	= "-"
@@ -3528,7 +3529,7 @@ and thereafter 4 extra research points every turn to its city.\
 Completion of this wonder doubles the effect of Libraries \
 for every player.\
 "), _("\
-+4 Culture Points/turn.\
++4 National Culture Points/turn.\
 ")
 
 [building_internet]
@@ -3539,7 +3540,7 @@ reqs	=
       "Tech", "Robotics", "Player"
       "Building", "Research Lab", "City"
       "Building", "DARPA", "Player"
-	 "MinCulture", "10500", "Player"
+	 "MinCulture", "13500", "Player"
     }
 graphic		= "b.internet"
 graphic_alt	= "b.seti_program"
@@ -3563,7 +3564,7 @@ _("\
 Completion of this wonder permanently doubles the effect of \
 Universities for allied players.\
 "), _("\
-+4 Culture Points/turn if Computers tech is known.\
++1 National Culture Points/turn/city if Computers tech is known.\
 ")
 
 [building_isaac_newtons_college]
@@ -3573,7 +3574,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Theory of Gravity", "Player"
       "Building", "University", "City"
-	 "MinCulture", "5700", "Player"
+	 "MinCulture", "6700", "Player"
     }
 graphic	= "b.isaac_newtons_college"
 graphic_alt	= "-"
@@ -3626,7 +3627,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Nuclear Fission", "Player"
-	 "MinCulture", "9800", "Player"
+	 "MinCulture", "11800", "Player"
       "Resource", "Uranium", "City"
     }
 graphic	= "b.manhattan_project"
@@ -3649,7 +3650,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Biology", "Player"
       "Building", "University", "City"
-	 "MinCulture", "4300", "Player"
+	 "MinCulture", "5300", "Player"
     }
 graphic	= "b.pasteur_institute"
 graphic_alt	= "b.university"
@@ -3675,7 +3676,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Theatre", "Player"
-	 "MinCulture", "4900", "Player"
+	 "MinCulture", "7500", "Player"
     }
 graphic	= "b.shakespeares_theatre"
 graphic_alt	= "-"
@@ -3728,7 +3729,7 @@ Thanks to the ecumenic spirit of Golden Temple, any city with Temple, Church or 
 which belong to the players allied with owner of this building,\
 would additionaly make 1 unhappy citizens content.\
 "), _("\
-+3 Culture Points/turn.\
++3 National Culture Points/turn.\
 ")
 
 [building_great_wall]
@@ -3760,7 +3761,7 @@ when a defending unit is defeated by a land unit.\
 _("\
 Great Wall increases also defense of any allied land units in Fortress (but not in Fort) by 50%.\
 "), _("\
-+2 Culture Points/turn.\
++2 National Culture Points/turn.\
 ")
 
 [building_kaaba]
@@ -3798,7 +3799,7 @@ Each tile with (paved) road around the city produce additional trade point.\n\
 Additionally, each Mosque which belongs to any allied player, neutralizes unhappiness caused by 0...2 military units \
 (depending on Religious Orthodoxy policy settings). \
 "), _("\
-+3 Culture Points/turn.\
++3 National Culture Points/turn.\
 ")
 
 [building_kyoto_fushimi_inari]
@@ -3865,7 +3866,7 @@ If allied player posses this wonder, City Walls and Courthouses each make one un
 citizen content in their city, unless that citizen is unhappy about \
 aggression. Also, city where Mausoleum of Mausolos is founded can't be incited to revolt.\
 "), _("\
-+2 Culture Points/turn.\
++2 National Culture Points/turn.\
 ")
 
 [building_michelangelos_chapel]
@@ -3932,7 +3933,7 @@ will make one unhappy citizen content in any city which belong to allied players
 "), _("\
 Unlike most other wonders, entertainment wonders need gold upkeep.\
 "), _("\
-+3 Culture Points/turn.\
++3 National Culture Points/turn.\
 ")
 
 
@@ -3963,7 +3964,7 @@ Each tile around the city where this wonder is built that is already\
 Moreover, tax collector specialists' gold output in cities on continent with Colossus \
 is increased by 1 for any nation. \
 "), _("\
-+2 Culture Points/turn.\
++2 National Culture Points/turn.\
 ")
 
 [building_hoover_dam]
@@ -3990,7 +3991,7 @@ Acts as a Hydro Plant in the city where it is built, and reduces \
 pollution from shield production by a further 25% in all cities \
 with Hydro Plants on same continent, making them equivalent to Solar Plants.\
 "), _("\
-+2 Culture Points/turn.\
++2 National Culture Points/turn.\
 ")
 
 [building_leshan_buddha_statue]
@@ -4018,7 +4019,7 @@ City with this Wonder would gain additional food from each river tile.\n\
 Additionally, thanks to the Buddha The Wise ideas, any Monk Monastery \
 would make 1 unhappy citizen content, for any city on same continent.\
 "), _("\
-+3 Culture Points/turn.\
++3 National Culture Points/turn.\
 ")
 
 [building_marco_polos_embassy]
@@ -4050,7 +4051,7 @@ _("\
 In case of Thalassocracy government system, celebration would give boost of shield production, \
 if Marco Polo Embassy exist on the same continent.\
 "), _("\
-+6 Culture Points/turn.\
++6 National Culture Points/turn.\
 ")
 
 [building_stonehenge]
@@ -4080,7 +4081,7 @@ one extra research point.\
 Additionally, each city on the continent where Stonehenge is located is not affected by Tribal government science penalty, \
 if Palace is not present in such city.\
 "), _("\
-+2 Culture Points/turn.\
++2 National Culture Points/turn.\
 ")
 
 ;special improvements

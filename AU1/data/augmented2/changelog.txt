@@ -2,6 +2,10 @@
 Augmented2 Ruleset for Freeciv v2.6
 =================================
 
+2.6.lt19
+New terrain tiles: Mangrove and Wooded Hills, Road Bridge extra
+Great Wonders earn National History, not a local city History
+
 2.6.lt18
 Watermill and Windmill building added
 Cart unit added

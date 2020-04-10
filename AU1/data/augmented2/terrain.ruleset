@@ -321,50 +321,6 @@ Shallow oceans are mostly found near coastlines, and are often rich\
  sources of food and other resources.\
 ")
 
-;[terrain_mangrove]
-;name                 = _("Mangrove")
-;graphic              = "mangrove"
-;graphic_alt          = "coast"
-;identifier           = "o"
-;class                = "Oceanic"
-;movement_cost        = 1
-;defense_bonus        = 25
-;food                 = 1
-;shield               = 0
-;trade                = 0
-;resources            = "Fish", "Oil"
-;road_food_incr_pct   = 0
-;road_shield_incr_pct = 0
-;road_trade_incr_pct  = 0
-;base_time            = 4
-;road_time            = 16
-;irrigation_result    = "no"
-;irrigation_food_incr = 0
-;irrigation_time      = 0
-;mining_result        = "yes"
-;mining_shield_incr   = 0
-;mining_time          = 0
-;transform_result     = "Swamp"
-;transform_time       = 48
-;pillage_time         = 2
-;clean_pollution_time = 6
-;clean_fallout_time   = 6
-;animal               = "None"
-;warmer_wetter_result = "Ocean"
-;warmer_drier_result  = "Jungle"
-;cooler_wetter_result = "Ocean"
-;cooler_drier_result  = "Swamp"
-;native_to            = "Air", "Bomb", "Missile", "Helicopter", "Coaster", "Riverboat", "Hovercraft"
-;flags                = "NoCities", "NoFortify", "Sea"
-;property_ocean_depth = 15
-;property_tropical    = 60
-;color.r              = 0
-;color.g              = 56
-;color.b              = 55
-;helptext             = _("\
-;Mangrove are small trees that grows in coastal saline, it is hard accessible area. \
-;")
-
 [terrain_deep_ocean]
 name                 = _("Deep Ocean")
 graphic              = "floor"
@@ -529,7 +485,7 @@ irrigation_time      = 36
 mining_result        = "Taiga"
 mining_shield_incr   = 0
 mining_time          = 28
-transform_result     = "Jungle"
+transform_result     = "Grassland"
 transform_time       = 48
 pillage_time         = 2
 clean_pollution_time = 6
@@ -537,8 +493,8 @@ clean_fallout_time   = 6
 animal               = "None"
 warmer_wetter_result = "Jungle"
 warmer_drier_result  = "Plains"
-cooler_wetter_result = "no"
-cooler_drier_result  = "Taiga"
+cooler_wetter_result = "Taiga"
+cooler_drier_result  = "Tundra"
 native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Air", "Bomb", "Missile", "Helicopter"
 flags                = "Starter", "CanHaveRiver"
 ;property_cold        = 10
@@ -593,6 +549,7 @@ native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land
 flags                = "Starter", "CanHaveRiver"
 property_cold        = 40
 property_foliage     = 50
+;property_temperate   = 10
 color.r              = 43
 color.g              = 107
 color.b              = 19
@@ -623,10 +580,10 @@ road_time            = 4
 irrigation_result    = "yes"
 irrigation_food_incr = 1
 irrigation_time      = 10
-mining_result        = "Jungle"
+mining_result        = "Forest"
 mining_shield_incr   = 0
 mining_time          = 30
-transform_result     = "Swamp"
+transform_result     = "Plains"
 transform_time       = 72
 pillage_time         = 2
 clean_pollution_time = 6
@@ -676,7 +633,7 @@ pillage_time         = 2
 clean_pollution_time = 6
 clean_fallout_time   = 6
 animal               = "None"
-warmer_wetter_result = "no"
+warmer_wetter_result = "Wooded Hills"
 warmer_drier_result  = "no"
 cooler_wetter_result = "no"
 cooler_drier_result  = "no"
@@ -722,16 +679,16 @@ irrigation_time      = 32
 mining_result        = "Forest"
 mining_shield_incr   = 0
 mining_time          = 48
-transform_result     = "Swamp"
+transform_result     = "Mangrove"
 transform_time       = 48
 pillage_time         = 2
 clean_pollution_time = 6
 clean_fallout_time   = 6
 animal               = "None"
-warmer_wetter_result = "Swamp" ;"Mangrove"
+warmer_wetter_result = "Mangrove"
 warmer_drier_result  = "no"
-cooler_wetter_result = "Forest"
-cooler_drier_result  = "Tundra"
+cooler_wetter_result = "Swamp"
+cooler_drier_result  = "Forest"
 native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Air", "Bomb", "Missile", "Helicopter"
 flags                = "CanHaveRiver"
 property_foliage     = 50
@@ -750,6 +707,53 @@ Road or river required to get shield production, \
 Railroad and Railway Station for additional shield production.\
 "), _("\
 Elephants add extra 2 trade points to Mahout Barracks.\
+")
+
+[terrain_mangrove]
+name                 = _("Mangrove")
+graphic              = "mangrove"
+graphic_alt          = "swamp"
+identifier           = "o"
+class                = "Land"
+movement_cost        = 3
+defense_bonus        = 25
+food                 = 1
+shield               = 0
+trade                = 0
+resources            = "Fish", "Oil"
+road_food_incr_pct   = 0
+road_shield_incr_pct = 0
+road_trade_incr_pct  = 0
+base_time            = 16
+road_time            = 16
+irrigation_result    = "Swamp"
+irrigation_food_incr = 0
+irrigation_time      = 0
+mining_result        = "Jungle"
+mining_shield_incr   = 0
+mining_time          = 16
+transform_result     = "Grassland"
+transform_time       = 48
+pillage_time         = 2
+clean_pollution_time = 6
+clean_fallout_time   = 6
+animal               = "None"
+warmer_wetter_result = "Ocean"
+warmer_drier_result  = "Jungle"
+cooler_wetter_result = "Swamp"
+cooler_drier_result  = "Forest"
+native_to            = "Small Land", "Air", "Bomb", "Missile", "Helicopter", "Coaster", "Riverboat", "Hovercraft"
+flags                = "NoCities", "NoFortify", "Sea", "CanHaveRiver"
+property_foliage = 60
+property_wet = 60
+property_tropical    = 60
+color.r              = 0
+color.g              = 56
+color.b              = 55
+helptext             = _("\
+Mangrove are small trees that grows partially submerged by water, it is hard accessible area,\
+ only Small Land units, Hovercraft or some ships (Coasters, Riverboats) can pass trough Mangrove.\n\
+ It is not possible to build advanced roads on Mangrove, only Dirt Road or Railway is available.\
 ")
 
 [terrain_mountains]
@@ -783,7 +787,7 @@ clean_fallout_time   = 6
 animal               = "None"
 warmer_wetter_result = "no"
 ;warmer_drier_result  = "no"
-warmer_drier_result  = "volcano"
+warmer_drier_result  = "Volcano"
 cooler_wetter_result = "no"
 cooler_drier_result  = "no"
 native_to            = "Small Land", "Air", "Bomb", "Missile", "Helicopter"
@@ -916,7 +920,7 @@ road_time            = 8
 irrigation_result    = "yes"
 irrigation_food_incr = 1
 irrigation_time      = 24
-mining_result        = "Jungle"
+mining_result        = "Forest"
 mining_shield_incr   = 0
 mining_time          = 32
 transform_result     = "Lake"
@@ -925,9 +929,9 @@ pillage_time         = 2
 clean_pollution_time = 6
 clean_fallout_time   = 6
 animal               = "None"
-warmer_wetter_result = "no"
-warmer_drier_result  = "Desert"
-cooler_wetter_result = "no"
+warmer_wetter_result = "Ocean"
+warmer_drier_result  = "Grassland"
+cooler_wetter_result = "Glacier"
 cooler_drier_result  = "Tundra"
 native_to            = "Infantry", "Light Cavalry", "Small Land", "Air", "Bomb", "Missile", "Helicopter", "Hovercraft"
 flags                = "CanHaveRiver"
@@ -992,52 +996,53 @@ Tundra are broad, cold regions, fit for some agriculture and little\
 ")
 
 
-;[terrain_wooded_hills]
-;name                 = _("Wooded Hills")
-;graphic              = "wooded_hills"
-;graphic_alt          = "hills"
-;identifier           = "w"
-;class                = "Land"
-;movement_cost        = 3
-;defense_bonus        = 75
-;food                 = 1
-;shield               = 2 ;+1 with road
-;trade                = 0
-;resources            = "Forest Game", "Furs"
-;road_food_incr_pct   = 0
-;road_shield_incr_pct = 100
-;road_trade_incr_pct  = 0
-;base_time            = 2
-;road_time            = 8
-;irrigation_result    = "Hills"
-;irrigation_food_incr = 0
-;irrigation_time      = 12
-;mining_result        = "no"
-;mining_shield_incr   = 0
-;mining_time          = 10
-;transform_result     = "Plains"
-;transform_time       = 48
-;pillage_time         = 2
-;clean_pollution_time = 6
-;clean_fallout_time   = 6
-;animal               = "None"
-;warmer_wetter_result = "no"
-;warmer_drier_result  = "no"
-;cooler_wetter_result = "no"
-;cooler_drier_result  = "Hills"
-;native_to            = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Air", "Bomb", "Missile", "Helicopter"
-;flags                = "Starter", "CanHaveRiver"
-;property_foliage       = 40
-;property_mountainous = 30
-;property_temperate   = 30
-;color.r              = 54
-;color.g              = 110
-;color.b              = 15
-;helptext             = _("\
-;Wooded hills are good initial shield source.\
-;"), _("\
-;Road or river required to get additional production.\
-;")
+[terrain_wooded_hills]
+name                 = _("Wooded Hills")
+graphic              = "wooded_hills"
+graphic_alt          = "hills"
+identifier           = "w"
+class                = "Land"
+movement_cost        = 3
+defense_bonus        = 75
+food                 = 1
+shield               = 2 ;+1 with road
+trade                = 0
+resources            = "Coal", "Furs", "Saltpeter"
+road_food_incr_pct   = 0
+road_shield_incr_pct = 100
+road_trade_incr_pct  = 0
+base_time            = 2
+road_time            = 8
+irrigation_result    = "Hills"
+irrigation_food_incr = 0
+irrigation_time      = 16
+mining_result        = "no"
+mining_shield_incr   = 0
+mining_time          = 10
+transform_result     = "Plains"
+transform_time       = 48
+pillage_time         = 2
+clean_pollution_time = 6
+clean_fallout_time   = 6
+animal               = "None"
+warmer_wetter_result = "no"
+warmer_drier_result  = "no"
+cooler_wetter_result = "no"
+cooler_drier_result  = "Hills"
+native_to            = "Infantry", "Light Cavalry", "Small Land", "Air", "Bomb", "Missile", "Helicopter"
+flags                = "Starter", "CanHaveRiver"
+property_foliage     = 50
+property_mountainous = 30
+property_temperate   = 40
+property_wet   = 20
+color.r              = 54
+color.g              = 110
+color.b              = 15
+helptext             = _("\
+Wooded hills provide significant defense bonus, but can't be improved by mining - primeval forest need to be grubbed up first.\
+"), _("\
+Road is required to get additional production.\
+")
 
 
 ; The individual resource types, one per section.
@@ -1730,6 +1735,7 @@ reqs           =
     { "type", "name", "range", "present", "quiet"
       "Tech", "Carpentry", "Player", TRUE, FALSE
       "TerrainClass", "Land", "Local", TRUE, FALSE
+      "Terrain", "Mangrove", "Local", FALSE, FALSE
       "UnitFlag", "Settlers", "Local", TRUE, FALSE
       "UnitClass", "Sea", "Local", FALSE, TRUE
       "CityTile", "Center", "Local", FALSE, TRUE
@@ -1764,6 +1770,7 @@ reqs           =
       "Extra", "Fort", "Local", TRUE, FALSE
       "Tech", "Construction", "Player", TRUE, FALSE
       "TerrainClass", "Land", "Local", TRUE, FALSE
+      "Terrain", "Mangrove", "Local", FALSE, FALSE
       "UnitFlag", "Settlers", "Local", TRUE, FALSE
       "UnitClass", "Sea", "Local", FALSE, TRUE
       "CityTile", "Center", "Local", FALSE, TRUE
@@ -1805,6 +1812,8 @@ reqs           =
     { "type", "name", "range", "present", "quiet"
       "Tech", "Radio", "Player", TRUE, FALSE
       "TerrainClass", "Land", "Local", TRUE, FALSE
+      "Terrain", "Mountains", "Local", FALSE, FALSE
+      "Terrain", "Mangrove", "Local", FALSE, FALSE
       "UnitFlag", "Airbase", "Local", TRUE, FALSE
       "CityTile", "Center", "Local", FALSE, TRUE
     }
@@ -1845,6 +1854,7 @@ reqs           =
       "Tech", "Radar", "Player", TRUE, FALSE
       "TerrainClass", "Land", "Local", TRUE, FALSE
       "Terrain", "Mountains", "Local", FALSE, FALSE
+      "Terrain", "Mangrove", "Local", FALSE, FALSE
       "UnitFlag", "Airbase", "Local", TRUE, FALSE
       "CityTile", "Center", "Local", FALSE, TRUE
       "Extra", "River", "Local", FALSE, FALSE
@@ -1937,6 +1947,7 @@ reqs           =
       "UnitFlag", "Settlers", "Local", TRUE, FALSE
       "UnitClass", "Sea", "Local", FALSE, TRUE
       "TerrainClass", "Land", "Local", TRUE, FALSE
+;      "Terrain", "Mangrove", "Local", FALSE, FALSE
     }
 build_time     = 0
 removal_time   = 0
@@ -1972,6 +1983,7 @@ reqs           =
       "TerrainClass", "Land", "Local", TRUE, FALSE
       "Extra", "Dirt Road", "Local", TRUE, FALSE
       "Tech", "Masonry", "Player", TRUE, TRUE
+      "Terrain", "Mangrove", "Local", FALSE, FALSE
     }
 build_time     = 0
 removal_time   = 0
@@ -2008,6 +2020,7 @@ reqs           =
       "Extra", "Paved Road", "Local", TRUE, FALSE
       "UnitClass", "Sea", "Local", FALSE, TRUE
       "TerrainClass", "Land", "Local", TRUE, FALSE
+      "Terrain", "Mangrove", "Local", FALSE, FALSE
     }
 build_time     = 10
 removal_time   = 0
@@ -2046,6 +2059,7 @@ reqs           =
       "UnitFlag", "Settlers", "Local", TRUE, FALSE
       "UnitClass", "Sea", "Local", FALSE, TRUE
       "TerrainClass", "Land", "Local", TRUE, FALSE
+;      "Terrain", "Mangrove", "Local", FALSE, FALSE
     }
 build_time     = 8
 removal_time   = 0
@@ -2157,6 +2171,8 @@ reqs           =
       "CityTile", "Center", "Local", FALSE, TRUE
       "Terrain", "Mountains", "Local", FALSE, FALSE
       "Terrain", "Hills", "Local", FALSE, FALSE
+      "Terrain", "Wooded Hills", "Local", FALSE, FALSE
+      "Terrain", "Mangrove", "Local", FALSE, FALSE
     }
 build_time     = 24
 removal_time   = 4
@@ -2170,8 +2186,8 @@ Building Water Lock requires ocean tile adjacent to this facility.\
 ")
 
 
-;[extra_road_bridge]
-;name           = _("Road Bridge")
+;[extra_bridge]
+;name           = _("Bridge")
 ;category       = "Infra"
 ;causes         = "Road"
 ;rmcauses       = "Pillage"
@@ -2185,7 +2201,8 @@ Building Water Lock requires ocean tile adjacent to this facility.\
 ;reqs           =
 ;    { "type", "name", "range", "present", "quiet"
 ;      "UnitFlag", "Transform", "Local", TRUE, FALSE
-;      "TerrainClass", "Oceanic", "Local", TRUE, FALSE
+;      "Terrain", "Mangrove", "Local", TRUE, FALSE
+;      "TerrainClass", "Land", "Local", TRUE, FALSE
 ;      "TerrainClass", "Land", "CAdjacent", TRUE, FALSE
 ;      "Tech", "Steel", "Player", TRUE, FALSE
 ;      "CityTile", "Center", "Local", FALSE, TRUE
@@ -2194,12 +2211,12 @@ Building Water Lock requires ocean tile adjacent to this facility.\
 ;build_time     = 8
 ;removal_time   = 2
 ;conflicts      = "Oil Platform", "Buoy"
-;native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Wheeled Unit", "Suicidal"
-;flags          = "NativeTile", "ConnectLand"
+;native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Big Land", "Merchant", "Wheeled Unit", "Suicidal", "Train"
+;flags          = "NativeTile";, "ConnectLand"
 ;helptext       = _("\
-;Allow land units to pass Ocean or Lake.\
+;Allow land units to pass Mangrove tiles.\
 ;"), _("\
-;Engineers or Barge is required to build Road Bridge, land tile need to be adjacent to this facility.\
+;Engineers or/and Barge unit is required to build Road Bridge, another land tile need to be adjacent to this facility.\
 ;")
 
 
@@ -2370,12 +2387,12 @@ trade_bonus    = 0
 ;compat_special = "Road"
 flags          = "RequiresBridge"
 
-;[road_road_bridge]
-;extra          = "Road Bridge"
+;[road_bridge]
+;extra          = "Bridge"
 ;move_cost      = 1
 ;food_incr      = 0
 ;shield_incr    = 0
-;trade_incr     = 0
+;trade_incr     = 1
 ;food_bonus     = 0
 ;shield_bonus   = 0
 ;trade_bonus    = 0

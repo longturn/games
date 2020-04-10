@@ -8,15 +8,14 @@ artists = "
 		GriffonSpade
 "
 
-[extra]
-
-sprites =
-	{	"tag", "file"
-
-"t.l0.wooded_hills1", "augmented2/terrain/volcano_base"
-"t.l1.wooded_hills1", "augmented2/terrain/volcano_base"
-
-}
+;in terrain.spec
+;[extra]
+;sprites =
+;	{	"tag", "file"
+;
+;"t.l0.wooded_hills1", "augmented2/terrain/volcano_base"
+;"t.l1.wooded_hills1", "augmented2/terrain/volcano_base"
+;}
 
 [file]
 gfx = "augmented2/terrain/wooded_hills"
