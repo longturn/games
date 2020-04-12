@@ -3,8 +3,7 @@ rulesetdir augmented2
 # map
 set mapsize="PLAYER"
 set generator="RANDOM"
-;keep barbarians enabled in multiplayer game to tamper culture points farmers
-set barbarians=enabled
+set barbarians=disabled
 set onsetbarbs=150
 set startpos="VARIABLE"
 ; approx 1 hut per player
