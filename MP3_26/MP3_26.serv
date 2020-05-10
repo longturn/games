@@ -6,9 +6,9 @@ rulesetdir MP3_26
 
 # map
 set mapsize="PLAYER"
-set generator="ISLAND"
+set generator="FAIR"
 set barbarians=disabled
-set startpos="ALL"
+set startpos="SINGLE"
 set huts=0
 set landmass=40
 set separatepoles=enabled
@@ -19,7 +19,7 @@ set tilesperplayer=118
 set topology="WRAPX|WRAPY"
 set wetness=40
 set alltemperate=disabled
-#set revealmap=START  #uncomment this for revealing the map for test games
+set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
 set nationset=all
@@ -72,6 +72,7 @@ set ec_max_size=5000
 set ec_turns=9
 set maxplayers=126
 set saveturns=1
+set autosave=GAMEOVER|QUITIDLE|INTERRUPT # Set this to disable most saves for autogames
 set scorelog=enabled
 set timeout=82800
 set unitwaittime=36000
