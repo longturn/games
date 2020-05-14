@@ -2292,16 +2292,6 @@ type    = "Mining_Possible"
 value   = 1
 reqs    =
     { "type", "name", "range", "present"
-      "TerrainFlag", "Oil", "Local", FALSE
-    }
-
-[effect_desert_oil]
-type    = "Mining_Possible"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Terrain", "Desert", "Local"
-      "Tech", "Construction", "Player"
     }
 
 [effect_glacier_oil]
