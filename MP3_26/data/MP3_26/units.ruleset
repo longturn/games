@@ -1567,7 +1567,8 @@ roles         = "Ferryboat", "FerryStartUnit"
 helptext      = _("\
 The Trireme is your first boat unit. It can act\
  as a transport ship and has rudimentary offensive\
- capabilities, but may not enter deep ocean tiles.\
+ capabilities, but may not end its turn more than 3\
+ tiles away from the shore.\
 ")
 
 [unit_caravel]
@@ -1600,7 +1601,7 @@ flags         = "BadCityDefender"
 roles         = "Ferryboat", "FerryStartUnit", "BarbarianBoat"
 helptext      = _("\
 The Caravel replaces the Trireme and can enter\
- any ocean tile.\
+ any ocean tile without risk.\
 ")
 
 [unit_galleon]
