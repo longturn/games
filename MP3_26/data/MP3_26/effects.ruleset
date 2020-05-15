@@ -873,7 +873,6 @@ value	= 3
 reqs	=
     { "type", "name", "range", "present"
       "Building", "Cathedral", "City", TRUE
-      "Building", "Michelangelo's Chapel", "Continent", FALSE
     }
 
 [effect_cathedral_1]
@@ -883,7 +882,6 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Theology", "Player", TRUE
       "Building", "Cathedral", "City", TRUE
-      "Building", "Michelangelo's Chapel", "Continent", FALSE
     }
 
 [effect_cathedral_2]
@@ -893,7 +891,6 @@ reqs	=
     { "type", "name", "range", "present"
       "Tech", "Communism", "Player", TRUE
       "Building", "Cathedral", "City", TRUE
-      "Building", "Michelangelo's Chapel", "Continent", FALSE
     }
 
 [effect_city_walls]
@@ -903,7 +900,6 @@ reqs	=
     { "type", "name", "range", "present"
       "Building", "City Walls", "City", TRUE
       "UnitClass", "Land", "Local", TRUE
-      "Building", "Great Wall", "Continent", FALSE
       "UnitType", "Howitzer", "Local", FALSE
     }
 
@@ -914,7 +910,6 @@ reqs	=
     { "type", "name", "range", "present"
       "Building", "City Walls", "City", TRUE
       "UnitClass", "Helicopter", "Local", TRUE
-      "Building", "Great Wall", "Continent", FALSE
     }
 
 [effect_city_walls_1]
@@ -1108,7 +1103,6 @@ reqs	=
       "Building", "Factory", "City", TRUE
       "Building", "Hydro Plant", "City", TRUE
       "OutputType", "Shield", "Local", TRUE
-      "Building", "Hoover Dam", "Continent", FALSE
       "Building", "Nuclear Plant", "City", FALSE
       "Building", "Solar Plant", "City", FALSE
     }
@@ -1121,7 +1115,6 @@ reqs	=
       "Building", "Mfg. Plant", "City", TRUE
       "Building", "Hydro Plant", "City", TRUE
       "OutputType", "Shield", "Local", TRUE
-      "Building", "Hoover Dam", "Continent", FALSE
       "Building", "Nuclear Plant", "City", FALSE
       "Building", "Solar Plant", "City", FALSE
     }
@@ -1134,7 +1127,6 @@ reqs	=
       "Building", "Factory", "City", TRUE
       "Building", "Hydro Plant", "City", TRUE
       "Building", "Recycling Center", "City", FALSE
-      "Building", "Hoover Dam", "Continent", FALSE
       "Building", "Nuclear Plant", "City", FALSE
       "Building", "Solar Plant", "City", FALSE
     }
@@ -1147,7 +1139,6 @@ reqs	=
       "Building", "Mfg. Plant", "City", TRUE
       "Building", "Hydro Plant", "City", TRUE
       "Building", "Recycling Center", "City", FALSE
-      "Building", "Hoover Dam", "Continent", FALSE
       "Building", "Nuclear Plant", "City", FALSE
       "Building", "Solar Plant", "City", FALSE
     }
@@ -1241,7 +1232,6 @@ reqs	=
       "Building", "Factory", "City", TRUE
       "Building", "Nuclear Plant", "City", TRUE
       "OutputType", "Shield", "Local", TRUE
-      "Building", "Hoover Dam", "Continent", FALSE
       "Building", "Solar Plant", "City", FALSE
     }
 
@@ -1253,7 +1243,6 @@ reqs	=
       "Building", "Mfg. Plant", "City", TRUE
       "Building", "Nuclear Plant", "City", TRUE
       "OutputType", "Shield", "Local", TRUE
-      "Building", "Hoover Dam", "Continent", FALSE
       "Building", "Solar Plant", "City", FALSE
     }
 
@@ -1265,7 +1254,6 @@ reqs	=
       "Building", "Factory", "City", TRUE
       "Building", "Nuclear Plant", "City", TRUE
       "Building", "Recycling Center", "City", FALSE
-      "Building", "Hoover Dam", "Continent", FALSE
       "Building", "Solar Plant", "City", FALSE
     }
 
@@ -1277,7 +1265,6 @@ reqs	=
       "Building", "Mfg. Plant", "City", TRUE
       "Building", "Nuclear Plant", "City", TRUE
       "Building", "Recycling Center", "City", FALSE
-      "Building", "Hoover Dam", "Continent", FALSE
       "Building", "Solar Plant", "City", FALSE
     }
 
@@ -1350,7 +1337,6 @@ reqs	=
     { "type", "name", "range", "present"
       "Gov", "Republic", "Player", TRUE
       "Building", "Police Station", "City", TRUE
-      "Building", "Women's Suffrage", "Continent", FALSE
     }
 
 [effect_police_station_1]
@@ -1360,7 +1346,6 @@ reqs	=
     { "type", "name", "range", "present"
       "Gov", "Democracy", "Player", TRUE
       "Building", "Police Station", "City", TRUE
-      "Building", "Women's Suffrage", "Continent", FALSE
     }
 
 [effect_port_facility]
@@ -1411,7 +1396,6 @@ reqs	=
       "Building", "Factory", "City", TRUE
       "Building", "Power Plant", "City", TRUE
       "OutputType", "Shield", "Local", TRUE
-      "Building", "Hoover Dam", "Continent", FALSE
       "Building", "Nuclear Plant", "City", FALSE
       "Building", "Hydro Plant", "City", FALSE
       "Building", "Solar Plant", "City", FALSE
@@ -1425,7 +1409,6 @@ reqs	=
       "Building", "Mfg. Plant", "City", TRUE
       "Building", "Power Plant", "City", TRUE
       "OutputType", "Shield", "Local", TRUE
-      "Building", "Hoover Dam", "Continent", FALSE
       "Building", "Nuclear Plant", "City", FALSE
       "Building", "Hydro Plant", "City", FALSE
       "Building", "Solar Plant", "City", FALSE
@@ -1749,325 +1732,6 @@ reqs	=
       "Building", "Library", "City"
       "Building", "University", "City"
       "OutputType", "Science", "Local"
-    }
-
-[effect_apollo_program]
-type    = "Enable_Space"
-value	= 1
-reqs	=
-    { "type", "name", "range", "survives"
-      "Building", "Apollo Program", "Player", TRUE
-    }
-
-[effect_asmiths_trading_co]
-type    = "Upkeep_Free"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "A.Smith's Trading Co.", "Continent"
-    }
-
-[effect_colossus]
-type    = "Output_Inc_Tile"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "Colossus", "City"
-      "OutputType", "Trade", "Local"
-    }
-
-[effect_copernicus_observatory]
-type    = "Output_Bonus"
-value	= 100
-reqs	=
-    { "type", "name", "range"
-      "Building", "Copernicus' Observatory", "City"
-      "OutputType", "Science", "Local"
-    }
-
-[effect_cure_for_cancer]
-type    = "Make_Happy"
-value	= 2
- reqs	=
-     { "type", "name", "range"
-      "Building", "Cure For Cancer", "World"
-      "Tech", "Genetic Engineering", "Player"
-     }
-
-[effect_eiffel_tower]
-type    = "Unit_Upkeep_Free_Per_City"
-value	= 1
- reqs	=
-    { "type", "name", "range"
-      "Building", "Eiffel Tower", "Continent"
-      "OutputType", "Shield", "Local"
-    }
-
-[effect_great_library]
-type    = "Output_Waste_Pct"
-value	= 50
- reqs	=
-    { "type", "name", "range"
-      "Building", "Great Library", "Continent"
-      "OutputType", "Trade", "Local"
-    }
-
-[effect_great_wall]
-type    = "Defend_Bonus"
-value	= 200
-reqs	=
-    { "type", "name", "range", "present"
-      "Building", "Great Wall", "Continent", TRUE
-      "UnitClass", "Land", "Local", TRUE
-      "CityTile", "Center", "Local", TRUE
-      "UnitType", "Howitzer", "Local", FALSE
-    }
-
-[effect_great_wall_0]
-type    = "Defend_Bonus"
-value	= 200
-reqs	=
-    { "type", "name", "range"
-      "Building", "Great Wall", "Continent"
-      "UnitClass", "Helicopter", "Local"
-      "CityTile", "Center", "Local"
-    }
-
-[effect_great_wall_1]
-type    = "Unit_No_Lose_Pop"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "Great Wall", "Continent"
-    }
-
-[effect_great_wall_visible]
-type    = "Visible_Walls"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "Great Wall", "Continent"
-    }
-
-[effect_hanging_gardens]
-type    = "Make_Happy"
-value	= 2
-reqs	=
-    { "type", "name", "range"
-      "Building", "Hanging Gardens", "Continent"
-    }
-
-[effect_hoover_dam]
-type    = "Output_Bonus"
-value	= 25
-reqs	=
-    { "type", "name", "range", "present"
-      "Building", "Factory", "City", TRUE
-      "Building", "Hoover Dam", "Continent", TRUE
-      "OutputType", "Shield", "Local", TRUE
-      "Building", "Solar Plant", "City", FALSE
-    }
-
-[effect_hoover_dam_1]
-type    = "Output_Bonus"
-value	= 25
-reqs	=
-    { "type", "name", "range", "present"
-      "Building", "Mfg. Plant", "City", TRUE
-      "Building", "Hoover Dam", "Continent", TRUE
-      "OutputType", "Shield", "Local", TRUE
-      "Building", "Solar Plant", "City", FALSE
-    }
-
-[effect_hoover_dam_2]
-type    = "Pollu_Prod_Pct"
-value	= -25
-reqs	=
-    { "type", "name", "range", "present"
-      "Building", "Factory", "City", TRUE
-      "Building", "Hoover Dam", "Continent", TRUE
-      "Building", "Recycling Center", "City", FALSE
-      "Building", "Solar Plant", "City", FALSE
-    }
-
-[effect_hoover_dam_3]
-type    = "Pollu_Prod_Pct"
-value	= -25
-reqs	=
-    { "type", "name", "range", "present"
-      "Building", "Mfg. Plant", "City", TRUE
-      "Building", "Hoover Dam", "Continent", TRUE
-      "Building", "Recycling Center", "City", FALSE
-      "Building", "Solar Plant", "City", FALSE
-    }
-
-[effect_js_bachs_cathedral]
-type    = "Force_Content"
-value	= 2
-reqs	=
-    { "type", "name", "range"
-      "Building", "J.S. Bach's Cathedral", "Continent"
-    }
-
-[effect_king_richards_crusade]
-type    = "Output_Add_Tile"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "King Richard's Crusade", "City"
-      "OutputType", "Shield", "Local"
-    }
-
-[effect_leonardos_workshop]
-type    = "Upgrade_Unit"
-value	= 2
-reqs	=
-    { "type", "name", "range"
-      "Building", "Leonardo's Workshop", "Player"
-    }
-
-[effect_lighthouse]
-type    = "Move_Bonus"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "Lighthouse", "Player"
-      "UnitClass", "Sea", "Local"
-    }
-
-[effect_lighthouse_1]
-type    = "Move_Bonus"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "Lighthouse", "Player"
-      "UnitClass", "Trireme", "Local"
-    }
-
-[effect_magellans_expedition]
-type    = "Veteran_Build"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "Magellan's Expedition", "Continent"
-      "UnitClass", "Sea", "Local"
-    }
-
-; Should be quite useless, just in case:
-[effect_magellans_expedition_1]
-type    = "Veteran_Build"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "Magellan's Expedition", "Continent"
-      "UnitClass", "Trireme", "Local"
-    }
-
-[effect_manhattan_project]
-type    = "Enable_Nuke"
-value	= 1
-reqs	=
-    { "type", "name", "range", "survives"
-      "Building", "Manhattan Project", "World", TRUE
-    }
-
-[effect_michelangelos_chapel]
-type    = "Make_Content"
-value	= 3
-reqs	=
-    { "type", "name", "range"
-      "Building", "Michelangelo's Chapel", "Continent"
-    }
-
-[effect_michelangelos_chapel_1]
-type    = "Make_Content"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Theology", "Player"
-      "Building", "Michelangelo's Chapel", "Continent"
-    }
-
-[effect_michelangelos_chapel_2]
-type    = "Make_Content"
-value	= -1
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Communism", "Player"
-      "Building", "Michelangelo's Chapel", "Continent"
-    }
-
-[effect_oracle]
-type    = "Make_Content"
-value	= 2
-reqs	=
-    { "type", "name", "range"
-      "Building", "Temple", "City"
-      "Building", "Oracle", "Continent"
-    }
-
-[effect_pyramids]
-type    = "Rapture_Grow"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "Pyramids", "City"
-    }
-
-[effect_shakespeares_theatre]
-type    = "No_Unhappy"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "Shakespeare's Theatre", "City"
-    }
-
-[effect_sun_tzus_war_academy]
-type    = "Veteran_Build"
-value	= 1
-reqs	=
-    { "type", "name", "range", "present"
-      "Building", "Sun Tzu's War Academy", "Continent", TRUE
-      "UnitClass", "Land", "Local", TRUE
-      "UnitFlag", "NonMil", "Local", FALSE
-      "UnitFlag", "NoVeteran", "Local", FALSE
-    }
-
-[effect_united_nations]
-type    = "Has_Senate"
-value	= 1
-reqs	=
-    { "type", "name", "range"
-      "Building", "United Nations", "World"
-    }
-
-[effect_united_nations_1]
-type    = "Revolution_Unhappiness"
-value	= 2
-reqs	=
-    { "type", "name", "range", "present"
-      "Building", "United Nations", "World", TRUE
-; Without !present UN would make revolution less likely instead
-; of enabling it with Democracy (value 2 -> 4 instead of 0 -> 2)
-      "Gov", "Democracy", "Player", FALSE
-    }
-
-[effect_womens_suffrage]
-type    = "Make_Content_Mil"
-value	= 2
-reqs	=
-    { "type", "name", "range"
-      "Gov", "Republic", "Player"
-      "Building", "Women's Suffrage", "Continent"
-    }
-
-[effect_womens_suffrage_1]
-type    = "Make_Content_Mil"
-value	= 4
-reqs	=
-    { "type", "name", "range"
-      "Gov", "Democracy", "Player"
-      "Building", "Women's Suffrage", "Continent"
     }
 
 [effect_no_unhappy_fundamentalism]
