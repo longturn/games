@@ -598,6 +598,46 @@ reqs	=
       "UnitFlag", "Diplomat", "Local"
     }
 
+[effect_plains_silk_is_wheat_food]
+type    = "Output_Add_Tile"
+value   = 2
+reqs    =
+    { "type",       "name",      "range"
+      "Terrain",    "Plains",    "Local"
+      "Resource",   "Silk",      "Local"
+      "OutputType", "Food",      "Local"
+    }
+
+[effect_plains_silk_is_wheat_trade]
+type    = "Output_Add_Tile"
+value   = -3
+reqs    =
+    { "type",       "name",      "range"
+      "Terrain",    "Plains",    "Local"
+      "Resource",   "Silk",      "Local"
+      "OutputType", "Trade",     "Local"
+    }
+
+[effect_plains_pheasan_is_buffalo_food]
+type    = "Output_Add_Tile"
+value   = -2
+reqs    =
+    { "type",       "name",      "range"
+      "Terrain",    "Plains",    "Local"
+      "Resource",   "Pheasant",  "Local"
+      "OutputType", "Food",      "Local"
+    }
+
+[effect_plains_pheasan_is_buffalo_trade]
+type    = "Output_Add_Tile"
+value   = 2
+reqs    =
+    { "type",       "name",      "range"
+      "Terrain",    "Plains",    "Local"
+      "Resource",   "Pheasant",  "Local"
+      "OutputType", "Shield",    "Local"
+    }
+
 [effect_gov_tile_bonus_0]
 type    = "Output_Penalty_Tile"
 value   = 2
