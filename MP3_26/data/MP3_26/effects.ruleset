@@ -136,6 +136,26 @@ reqs    =
 type    = "City_Vision_Radius_Sq"
 value   = 5
 
+; Increased vision for Explorers on T0
+[effect_explorer_vision_t0]
+type    = "Unit_Vision_Radius_Sq"
+value   = 7
+reqs    =
+    { "type",     "name",     "range", "present"
+      "UnitType", "Explorer", "Local", TRUE
+      "MinYear",  "-3999",    "World", FALSE
+    }
+
+; Increased vision for Explorers from T1 to T10
+[effect_explorer_vision_t1]
+type    = "Unit_Vision_Radius_Sq"
+value   = 6
+reqs    =
+    { "type",     "name",     "range", "present"
+      "UnitType", "Explorer", "Local", TRUE
+      "MinYear",  "-3499",    "World", FALSE
+    }
+
 ; Nuclear power gives +1 moves to sea units
 [effect_nuclear_powered_boats]
 type    = "Move_Bonus"
