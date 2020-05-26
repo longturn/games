@@ -52,7 +52,7 @@ set diplomacy=HUMAN
 set sciencebox=100
 set techlost_donor=0
 set techlost_recv=0
-set techpenalty=10
+set techpenalty=0
 set caravan_bonus_style LOGARITHMIC
 set trade_revenue_style SIMPLE
 set trademindist=8
