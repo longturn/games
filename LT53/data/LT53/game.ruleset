@@ -652,13 +652,13 @@ names =
 ; /* TRANS: With this and other color team names, uniqueness is more */
 ; /* TRANS: important than precise translation. To see the colors, start a */
 ; /* TRANS: multiplayer game with 32 players and look at the Nations report. */
- _("?team name:Red"),
+ _("?team name:Fire"),
 ; /* TRANS: Name of a color; used as unique identifier for a team */
- _("?team name:Yellow"),
+ _("?team name:Water"),
 ; /* TRANS: Name of a color; used as unique identifier for a team */
- _("?team name:Blue"),
+ _("?team name:Earth"),
 ; /* TRANS: Name of a color; used as unique identifier for a team */
- _("?team name:Purple"),
+ _("?team name:Air"),
 ; /* TRANS: Name of a color; used as unique identifier for a team */
  _("?team name:Orange"),
 ; /* TRANS: Name of a color; used as unique identifier for a team */
