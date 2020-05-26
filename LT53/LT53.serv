@@ -72,7 +72,8 @@ set ec_max_size=5000
 set ec_turns=9
 set maxplayers=126
 set saveturns=1
-set autosave=GAMEOVER|QUITIDLE|INTERRUPT # Set this to disable most saves for autogames
+set autosave=TIMER|GAMEOVER|QUITIDLE|INTERRUPT # Set this to disable most saves for autogames
+set savefrequency 1  # 1 is for testing now. 60 is for the real game
 set scorelog=enabled
 set timeout=82800
 set unitwaittime=36000
