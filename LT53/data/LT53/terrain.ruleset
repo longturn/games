@@ -264,7 +264,7 @@ animal               = "None"
 warmer_wetter_result = "no"
 warmer_drier_result  = "Swamp"
 cooler_wetter_result = "Glacier"
-cooler_drier_result  = "Tundra"
+cooler_drier_result  = "no"
 native_to            = "Sea", "Air", "Missile", "Helicopter", "Trireme"
 flags                = "NoCities", "NoBarbs", "NoPollution", "FreshWater", "NoZoc", "NoFortify"
 property_ocean_depth = 0
@@ -348,7 +348,7 @@ warmer_wetter_result = "no"
 warmer_drier_result  = "no"
 cooler_wetter_result = "no"
 cooler_drier_result  = "no"
-native_to            = "Sea", "Air", "Missile", "Helicopter"
+native_to            = "Sea", "Air", "Missile", "Helicopter", "Trireme"
 flags                = "NoCities", "NoPollution", "UnsafeCoast", "NoZoc", "NoFortify"
 property_ocean_depth = 87
 color.r              = 0
@@ -356,7 +356,7 @@ color.g              = 33
 color.b              = 129
 helptext             = _("\
 Deep oceans cover much of the world away from coastlines, and only\
- seaworthy units (not including Triremes) can travel on them.\
+ seaworthy units can travel on them.\
 ")
 
 [terrain_glacier]
@@ -380,14 +380,14 @@ irrigation_time      = 0
 mining_result        = "yes"
 mining_shield_incr   = 1
 mining_time          = 10
-transform_result     = "Tundra"
+transform_result     = "no"
 transform_time       = 24
 pillage_time         = 1
 clean_pollution_time = 3
 clean_fallout_time   = 3
 animal               = "None"
-warmer_wetter_result = "Tundra"
-warmer_drier_result  = "Tundra"
+warmer_wetter_result = "no"
+warmer_drier_result  = "no"
 cooler_wetter_result = "no"
 cooler_drier_result  = "no"
 native_to            = "Land", "Air", "Missile", "Helicopter"
@@ -434,7 +434,7 @@ animal               = "None"
 warmer_wetter_result = "Grassland"
 warmer_drier_result  = "no"
 cooler_wetter_result = "Plains"
-cooler_drier_result  = "Tundra"
+cooler_drier_result  = "no"
 native_to            = "Land", "Air", "Missile", "Helicopter"
 flags                = "CanHaveRiver", "Oil"
 property_dry         = 100
@@ -480,7 +480,7 @@ animal               = "None"
 warmer_wetter_result = "Jungle"
 warmer_drier_result  = "Plains"
 cooler_wetter_result = "Swamp"
-cooler_drier_result  = "Tundra"
+cooler_drier_result  = "no"
 native_to            = "Land", "Air", "Missile", "Helicopter"
 flags                = "Starter", "CanHaveRiver"
 property_cold        = 20
@@ -525,7 +525,7 @@ animal               = "None"
 warmer_wetter_result = "Lake"
 warmer_drier_result  = "Desert"
 cooler_wetter_result = "Glacier"
-cooler_drier_result  = "Tundra"
+cooler_drier_result  = "no"
 native_to            = "Land", "Air", "Missile", "Helicopter"
 flags                = "Starter", "CanHaveRiver"
 property_green       = 50
@@ -610,7 +610,7 @@ animal               = "None"
 warmer_wetter_result = "Lake"
 warmer_drier_result  = "Desert"
 cooler_wetter_result = "Swamp"
-cooler_drier_result  = "Tundra"
+cooler_drier_result  = "no"
 native_to            = "Land", "Air", "Missile", "Helicopter"
 flags                = "CanHaveRiver"
 property_foliage     = 50
@@ -677,7 +677,7 @@ defense_bonus        = 0
 food                 = 1
 shield               = 1
 trade                = 0
-resources            = "Buffalo", "Wheat"
+resources            = "Buffalo", "Wheat", "Silk", "Pheasant"
 road_trade_incr_pct  = 100
 base_time            = 1
 road_time            = 2
@@ -696,7 +696,7 @@ animal               = "None"
 warmer_wetter_result = "Lake"
 warmer_drier_result  = "Desert"
 cooler_wetter_result = "Glacier"
-cooler_drier_result  = "Tundra"
+cooler_drier_result  = "no"
 native_to            = "Land", "Air", "Missile", "Helicopter"
 flags                = "Starter", "CanHaveRiver"
 property_green       = 50
@@ -739,7 +739,7 @@ animal               = "None"
 warmer_wetter_result = "Lake"
 warmer_drier_result  = "Desert"
 cooler_wetter_result = "Glacier"
-cooler_drier_result  = "Tundra"
+cooler_drier_result  = "no"
 native_to            = "Land", "Air", "Missile", "Helicopter"
 flags                = "CanHaveRiver"
 property_wet         = 100
@@ -752,48 +752,6 @@ color.b              = 97
 helptext             = _("\
 Swamps suffer from an over-abundance of water, making agriculture\
  somewhat problematic.\
-")
-
-[terrain_tundra]
-name                 = _("Tundra")
-graphic              = "tundra"
-graphic_alt          = "-"
-identifier           = "t"
-class                = "Land"
-movement_cost        = 1
-defense_bonus        = 0
-food                 = 1
-shield               = 0
-trade                = 0
-resources            = "Game", "Furs"
-road_trade_incr_pct  = 0
-base_time            = 1
-road_time            = 2
-irrigation_result    = "yes"
-irrigation_food_incr = 1
-irrigation_time      = 5
-mining_result        = "no"
-mining_shield_incr   = 0
-mining_time          = 0
-transform_result     = "Desert"
-transform_time       = 24
-pillage_time         = 1
-clean_pollution_time = 3
-clean_fallout_time   = 3
-animal               = "None"
-warmer_wetter_result = "Lake"
-warmer_drier_result  = "Desert"
-cooler_wetter_result = "Glacier"
-cooler_drier_result  = "no"
-native_to            = "Land", "Air", "Missile", "Helicopter"
-flags                = "Starter", "NoBarbs", "CanHaveRiver"
-property_cold        = 50
-color.r              = 188
-color.g              = 188
-color.b              = 188
-helptext             = _("\
-Tundra are broad, cold regions, fit for some agriculture and little\
- else.\
 ")
 
 ; The individual resource types, one per section.

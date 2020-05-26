@@ -10,7 +10,7 @@ set generator="FAIR"
 set barbarians=disabled
 set startpos="SINGLE"
 set huts=0
-set landmass=40
+set landmass=17
 set separatepoles=enabled
 set specials=350
 set steepness=20
@@ -25,7 +25,7 @@ set revealmap=START  #uncomment this for revealing the map for test games
 set nationset=all
 set citymindist=2
 set contactturns=0
-set dispersion=4
+set dispersion=0
 set foggedborders=enabled
 set restrictinfra=enabled
 set revolen=2
@@ -39,9 +39,10 @@ set airliftingstyle="FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
 set razechance=10
 set happyborders=enabled
 set occupychance=0
-set globalwarming=enabled
+set globalwarming=disabled
+set nuclearwinter=disabled
 #set globalwarming_percent=30
-set borders 0
+set borders DISABLED
 
 # diplomacy, technology
 set diplchance=40
@@ -72,7 +73,7 @@ set ec_max_size=5000
 set ec_turns=9
 set maxplayers=126
 set saveturns=1
-set autosave=TIMER|GAMEOVER|QUITIDLE|INTERRUPT # Set this to disable most saves for autogames
+set autosave=GAMEOVER|QUITIDLE|INTERRUPT|TIMER # Set this to disable most saves for autogames
 set savefrequency 1  # 1 is for testing now. 60 is for the real game
 set scorelog=enabled
 set timeout=82800
