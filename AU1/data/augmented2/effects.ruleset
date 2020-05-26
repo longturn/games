@@ -8172,7 +8172,7 @@ reqs    =
       "Gov", "Fundamentalism", "Player", FALSE
     }
 
-[effect_large_hardon_collider]
+[effect_large_hadron_collider]
 type    = "Give_Imm_Tech"
 value   = 2
 reqs    =
@@ -8181,7 +8181,7 @@ reqs    =
       "Tech", "Theory of Relativity", "Player"
     }
 
-[effect_large_hardon_collider_1]
+[effect_large_hadron_collider_1]
 type    = "Specialist_Output"
 value   = 1
 reqs    =
@@ -8207,7 +8207,7 @@ type    = "National_History"
 value	= 2
 reqs	=
     { "type", "name", "range"
-      "Building", "Stonehenge", "City"
+      "Building", "Stonehenge", "Player"
     }
 
 [effect_mobile_x-ray_culture]
@@ -8474,12 +8474,12 @@ type    = "National_History"
 value	= 3
 reqs	=
     { "type", "name", "range", "present"
-      "Building", "Angkor Wat", "City", TRUE
-      "Building", "Palace", "City", FALSE
-      "Building", "Forbidden City", "City", FALSE
-      "Building", "Ecclesiastical Palace", "City", FALSE
-      "Building", "Osaka Castle", "City", FALSE
-      "Building", "Sultan Palace", "City", FALSE
+      "Building", "Angkor Wat", "Player", TRUE
+;      "Building", "Palace", "City", FALSE
+      "Building", "Forbidden City", "Player", FALSE
+      "Building", "Ecclesiastical Palace", "Player", FALSE
+      "Building", "Osaka Castle", "Player", FALSE
+      "Building", "Sultan Palace", "Player", FALSE
     }
 
 [effect_angkor_wat_luxury]
