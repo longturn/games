@@ -1993,7 +1993,7 @@ sound		= "b_factory"
 sound_alt	= "b_generic"
 helptext	= _("\
 Water wheel can drive machinery or millstones. Such improvement add 1 food and 1 shield \
-to the city center and halves food waste.\
+to the city center and halves food waste (except of Despotism, where food waste is onbly 25% less).\
 "), _("\
 Watermill use water power, therefore can't be built in a city \
 without access to a river. \
@@ -2020,7 +2020,7 @@ sound		= "b_factory"
 sound_alt	= "b_generic"
 helptext	= _("\
 Windmill uses power of wind to grind grains. Such improvement halves food waste \
-(entirely eliminates food waste together with Granary).\
+(entirely eliminates food waste together with Granary, except of Despotism where Courthouse is also needed).\
 ")
 
 [building_university]

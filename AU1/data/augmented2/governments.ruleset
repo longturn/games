@@ -124,7 +124,7 @@ _("\
 * Unlike later governments, military units do not cause unhappiness even\
  when deployed aggressively.\n\
 * Base corruption and waste is 30% (the highest under any government)\
- (half of base corruption with knowledge of Trade).\n\
+ (half of base corruption with knowledge of Banking).\n\
 * Base food waste is 10% for all cities.\n\
 * Tribe loyality make inciting revolt 2x more expensive than Despotism or Monarchy.\n\
 * Science and gold outcome is decreased 25%, tax specialists' output is halved\n\
@@ -303,7 +303,7 @@ _("\
 * Base corruption is 20%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 10%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\n\
+ capital (half as fast with knowledge of Banking).\n\
 * Chariots gain Veteran level if built in city with Stable Barracks), all other Wheeled Units recruit level\
  (not cumulaltive with Leonardo Workshop or Ecole Speciale Militaire). \n\
 * Science outcome is decreased twice.\n\
@@ -345,7 +345,7 @@ _("\
 * Base corruption is 10%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 20%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\n\
+ capital (half as fast with knowledge of Banking).\n\
 * Pikemen and Arbalests gain additional veterancy level (recruits without Barracks, hardened with Barracks).\n\
 * Science and luxury outcome are decreased by 25%\n\
 * Policies settings, which are taken into account: Liberal Economy, Welfare Policy, Religious Orthodoxy, National Pride. \
@@ -432,7 +432,7 @@ _("\
 * Base corruption is 15%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 15%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\n\
+ capital (half as fast with knowledge of Banking).\n\
 * Due to high loyality of indoctrinated warriors, inciting revolt is very expensive.\n\
 * Science outcome is decreased twice.\n\
 * Universities outcome is is one third of normal yield, but Madrasa increase science by 25%\n\
@@ -517,7 +517,7 @@ _("\
 * Base corruption is 20%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 10%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\n\
+ capital (half as fast with knowledge of Banking).\n\
 * If Colosseum was build by player, Legions or Swordsmen gain additional veterancy level\
  (recruits without Barracks, hardened with Barracks).\n\
 * Inciting revolt is 2x more expensive than Despotism or Monarchy.\n\
@@ -559,7 +559,7 @@ _("\
  capital.\n\
 * Base food waste is 10% and increase slowly with the distance to the capital.\n\
 * Has a senate that may prevent declaration of war.\
-* Direct Democracy is relatively tolerant of foreginers metics in cities.\
+* Direct Democracy is relatively tolerant of foreigners metics in cities.\
 * Phalanx and Archers gain additional veterancy level (cumulative with Barracks).\n\
 * Inciting revolt is 3x more expensive than Despotism or Monarchy.\n\
 * Science outcome is increased 20%\n\
@@ -807,7 +807,7 @@ step      = 1
 default   = 0
 ; /* xgettext:no-c-format */
 helptext  = _("\
-Each step of National Pride increase bribe cost and incite revolt cost twice, \
+Each step of National Pride increase bribe cost and incite revolt cost twice, if Feudalism is know to Player nation, \
 but also increase unhapiness caused by mixed nationality by 50% and decrease luxury output by 20%. \
 Available for any government, in case of Fascism any Small Land military unit gain additional veterancy level.\
 ")

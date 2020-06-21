@@ -9735,16 +9735,30 @@ reqs    =
 type = "Incite_Cost_Pct"
 value = 100
 multiplier = "National Pride"
+reqs    =
+    { "type", "name", "range", "present"
+      "Tech", "Feudalism", "Player", TRUE
+    }
+
 
 [effect_national_bribe_cost_multiplier]
 type    = "Unit_Bribe_Cost_Pct"
 value   = 100
 multiplier = "National Pride"
+reqs    =
+    { "type", "name", "range", "present"
+      "Tech", "Feudalism", "Player", TRUE
+    }
+
 
 [effect_national_enemy_unhappiness_multiplier]
 type    = "Enemy_Citizen_Unhappy_Pct"
 value   = 50
 multiplier = "National Pride"
+reqs    =
+    { "type", "name", "range", "present"
+      "Tech", "Feudalism", "Player", TRUE
+    }
 
 [effect_national_luxury_multiplier]
 type    = "Output_Bonus"
