@@ -1780,7 +1780,7 @@ build_time     = 4
 removal_time   = 0
 native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Merchant", "Big Land", "Torpedeos", "Wheeled Unit", "Suicidal", "Turrets"
 conflicts      = "Airstrip", "Airbase", "Water Lock"
-flags          = "NativeTile"
+flags          = "NativeTile", "Refuel"
 helptext       = _("\
 Fortresses are more permanent forts; construction on them can only begin\
  once the underlying fort is complete. Forts on River tiles cannot be\
@@ -1822,7 +1822,7 @@ removal_time   = 0
 native_to      = "Air", "Bomb", "Helicopter", "Missile", "Torpedeos", "Turrets"
 conflicts      = "Fort", "Fortress", "Water Lock"
 hidden_by      = "Airbase"
-flags          = "Refuel"
+flags          = "NativeTile", "Refuel"
 helptext       = _("\
 Airstrips are rapidly-built runways allowing air units to land, refuel,\
  and recover outside cities; an aircraft remaining on an airstrip for a\
@@ -1863,7 +1863,7 @@ build_time     = 8
 removal_time   = 0
 native_to      = "Air", "Bomb", "Helicopter", "Missile", "Torpedeos", "Suicidal", "Wheeled Unit", "Turrets"
 conflicts      = "Fort", "Fortress", "Water Lock"
-flags          = "Refuel"
+flags          = "NativeTile", "Refuel"
 helptext       = _("\
 Airbases are more permanent airstrips; construction on them can only\
  begin once the underlying airstrip is complete. Airstrips on River tiles\
