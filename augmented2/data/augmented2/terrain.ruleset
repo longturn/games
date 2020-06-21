@@ -701,7 +701,7 @@ helptext             = _("\
 Jungles are densely overgrown, making agriculture somewhat\
  problematic, but substantially increase defense strength.\
  Big Land and Wheeled Units may not move into jungle without\
- a paved road.\
+ a Paved Road.\
 "), _("\
 Road or river required to get shield production, \
 Railroad and Railway Station for additional shield production.\
@@ -933,7 +933,7 @@ warmer_wetter_result = "Ocean"
 warmer_drier_result  = "Grassland"
 cooler_wetter_result = "Glacier"
 cooler_drier_result  = "Tundra"
-native_to            = "Infantry", "Light Cavalry", "Small Land", "Air", "Bomb", "Missile", "Helicopter", "Hovercraft"
+native_to            = "Infantry", "Light Cavalry", "Small Land", "Merchant", "Air", "Bomb", "Missile", "Helicopter", "Hovercraft"
 flags                = "CanHaveRiver"
 property_wet         = 100
 property_tropical    = 10
@@ -1041,7 +1041,7 @@ color.b              = 15
 helptext             = _("\
 Wooded hills provide significant defense bonus, but can't be improved by mining - primeval forest need to be grubbed up first.\
 "), _("\
-Road is required to get additional production.\
+Road or river is required to get additional production. Paved Road required for Big Land or Wheeled Units to move. \
 ")
 
 
@@ -1956,12 +1956,12 @@ hidden_by      = "Paved Road"
 flags          = "NativeTile", "AlwaysOnCityCenter"
 helptext       = _("\
 Dirt Roads allow accesibility of your infantry or cavalry units to move into mountains or swamps,\
- but travel speed is only slightly increased (for full cunctionality, they need to be upgraded to the Paved Roads).\
+ but travel speed is only slightly increased (for full functionality, they need to be upgraded to the Paved Roads).\
 "), _("\
 On some terrains, Dirt Roads also provide a trade bonus.\
 "), _("\
 Building any roads on river tiles requires knowledge of Bridge Building.\
- City center tiles automatically get roads (even on a river tile, if Bridge Building is know).\
+ City center tiles automatically get roads (even on a river tile).\
 ")
 
 [extra_paved_road]
@@ -1991,14 +1991,14 @@ native_to      = "Infantry", "Light Cavalry", "Heavy Cavalry", "Small Land", "Bi
 hidden_by      = "HighWay"
 flags          = "NativeTile", "AlwaysOnCityCenter"
 helptext       = _("\
-Once you learn knowledge of Masonry, you can to upgrade Dirt Roads to regular Paved Roads.\ 
+Once you learn knowledge of Masonry, you can to upgrade Dirt Roads to regular Paved Roads (except of Mangrove).\ 
 "), _("\
 Roads allow your land units to move more quickly, and allow\
- regular Land units to travel through\
+ Wheeled Units to travel through\
  otherwise difficult terrain (Mountains, Glacier, Swamp etc).\
 "), _("\
-Building roads on river tiles requires knowledge of Bridge Building.\
- City center tiles automatically get roads (even on a river tile, if Bridge Building is know).\
+Building any roads on river tiles requires knowledge of Bridge Building.\
+ City center tiles automatically get roads (even on a river tile).\
 ")
 
 [extra_hwy]
@@ -2259,7 +2259,7 @@ flags          = "DiplomatDefense"
 extra          = "Fortress"
 gui_type       = "Fortress"
 border_sq      = 0
-flags          = "NoAggressive", "DiplomatDefense"
+flags          = "NoAggressive", "DiplomatDefense", "NoStackDeath"
 
 [base_airstrip]
 extra          = "Airstrip"

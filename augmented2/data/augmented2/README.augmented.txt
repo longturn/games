@@ -506,5 +506,19 @@ Following military unit groups:
 
 Units reference table: see doc/units.xls or refer to wiki page
 
+TODO:
+-----
+Stonehenge as cheap small wonder - just +2 science added to city center
+Shamanism: Black Monolith small wonder: +2 trade to city center, req for Kaaba.
+Copper Working: some copper small wonder as fail safe for Colossus.
+Seeker - initial unit for exploring
+Polytheism: need Absolutism, not Agriculture
+Monotheism: need Code of Laws, not Absolutism
+Irrigation possible with Forestry, but works with Agricultural Farming
+Add Senate bldg. Has senate govs req. Senate
+Windmill: no gold cost
+fresh city: some free granary for start
+heavy cavalry: terrain defense
+
 
 Author: Wahazar
