@@ -1433,7 +1433,7 @@ effective, and have limited mobility.\
 
 [unit_artillery]
 name          = _("Artillery")
-class         = "Big Land"
+class         = "Big Siege"
 tech_req      = "Machine Tools"
 obsolete_by   = "Howitzer"
 graphic       = "u.artillery"
@@ -1448,20 +1448,21 @@ attack        = 10
 defense       = 2
 hitpoints     = 20
 firepower     = 1
-move_rate     = 1
-vision_radius_sq = 2
+move_rate     = 4
+vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "CityBuster"
+flags         = "CityBuster", "Capturable"
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
 The artillery is an upgraded cannon. As with its predecessors, it is a \
-very strong attacker but equally weak defender and will need an escort \
+very strong attacker - and even more powerful against cities - but equally weak defender and will need an escort \
 to be effective, and has limited mobility.\
+ Unescorted artilleries may be captured by the enemy. \
 ")
 
 [unit_howitzer]
