@@ -1398,7 +1398,7 @@ jungles), are difficult to defend, and are too big for early ships \
 
 [unit_cannon]
 name          = _("Cannon")
-class         = "Big Land"
+class         = "Big Siege"
 tech_req      = "Metallurgy"
 obsolete_by   = "Artillery"
 graphic       = "u.cannon"
@@ -1413,21 +1413,22 @@ attack        = 8
 defense       = 1
 hitpoints     = 20
 firepower     = 1
-move_rate     = 1
-vision_radius_sq = 2
+move_rate     = 3
+vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = ""
+flags         = "CityBuster", "Capturable"
 roles         = "AttackStrongStartUnit", "BarbarianTech", "BarbarianBuildTech"
 helptext      = _("\
 Cannons are large firearms that can fire heavy projectiles over long \
 distances. As with the catapults they replace, they are very strong \
-attackers but equally weak defenders and will need an escort to be \
+attackers - and even more powerful against cities - but equally weak defenders and will need an escort to be \
 effective, and have limited mobility.\
+ Unescorted cannons may be captured by the enemy. \
 ")
 
 [unit_artillery]
