@@ -918,14 +918,14 @@ sound_move    = "m_partisan"
 sound_move_alt = "m_generic"
 sound_fight   = "f_partisan"
 sound_fight_alt = "f_generic"
-build_cost    = 60
-pop_cost      = 0
+build_cost    = 80
+pop_cost      = 1
 attack        = 4
 defense       = 5
 hitpoints     = 20
 firepower     = 1
-move_rate     = 1
-vision_radius_sq = 6
+move_rate     = 2
+vision_radius_sq = 25
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
@@ -934,20 +934,20 @@ uk_food       = 1
 uk_gold       = 1
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
-flags         = "IgTer", "IgZOC", "Capturer"
+flags         = "IgTer", "IgZOC", "Capturer", "NoHome", "AddToCity", "Partial_Invis"
 roles         = "DefendGood", "DefendGoodStartUnit", "Partisan", "BarbarianTech"
 helptext      = _("\
 Partisans are guerilla fighters who are experts\
- at using the terrain to their advantage.\
-"), _("\
-A number of Partisans are granted free when an enemy conquers your\
- city -- they automatically assume defensive positions in the\
- surrounding countryside -- but only under these conditions:\n\
- - Guerilla Warfare must be known by at least one player.\n\
- - At least three quarters of the citizens must have your nationality.\n\
- - You must know about Communism and Gunpowder.\n\
- - You must run either a Democracy or a Communist government.\
+ at using the terrain to their advantage. Partisans\
+ have no home city and units outside cities won't be\
+ killed if the city building them is lost. Since partisans\
+ are citizens trained to fight the oppressor they can\
+ once again become part of the normal population when\
+ the war is over. The partisans are almost invisible to\
+ the enemy but this comes with a cost. The partisans are\
+ not that fast when moving to a new loaction.\
 ")
+
 
 [unit_fanatics]
 name          = _("Fanatics")
