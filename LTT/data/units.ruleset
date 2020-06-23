@@ -3004,3 +3004,42 @@ helptext      = _("\
 An improved Stealth Fighter, with a higher movement\
  radius.\
 ")
+
+
+
+[unit_fusion_bomber]
+name          = _("Fusion Bomber")
+class         = "Air"
+tech_req      = "Fusion Power", "Stealth"
+obsolete_by   = "None"
+graphic       = "u.fusion_bomber"
+graphic_alt   = "u.stealth_bomber"
+sound_move    = "m_stealth_bomber"
+sound_move_alt = "m_generic"
+sound_fight   = "f_stealth_bomber"
+sound_fight_alt = "f_generic"
+build_cost    = 240
+pop_cost      = 0
+attack        = 9
+defense       = 3
+hitpoints     = 30
+firepower     = 1
+move_rate     = 35
+vision_radius_sq = 144
+transport_cap = 0
+fuel          = 3
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder"
+roles         = "DefendOk"
+helptext      = _("\
+An improved Stealth Bomber, with a higher movement\
+ radius.\
+")
+bombard_rate = 4
+
+
+
+
