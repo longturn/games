@@ -2306,21 +2306,21 @@ sound_move    = "m_cruise_missile"
 sound_move_alt = "m_generic"
 sound_fight   = "f_cruise_missile"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 45
 pop_cost      = 0
-attack        = 18
+attack        = 10
 defense       = 0
-hitpoints     = 10
-firepower     = 1
-move_rate     = 16
-vision_radius_sq = 2
+hitpoints     = 5
+firepower     = 3
+move_rate     = 18
+vision_radius_sq = 1
 transport_cap = 0
 fuel          = 1
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-targets       = "Air", "Missile", "Helicopter"
+targets       = "Helicopter"
 flags         = "OneAttack", "AirAttacker", "CityBuster", "HasNoZOC"
 roles         = ""
 helptext      = _("\
@@ -2330,6 +2330,7 @@ The Cruise Missile is a long-distance missile\
 TIP:  A handful of these can successfully keep the waters around\
  your treasured homeland free of enemy ships.\
 ")
+
 
 [unit_nuclear]
 name          = _("Nuclear")
