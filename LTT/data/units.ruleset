@@ -578,8 +578,8 @@ attack        = 0
 defense       = 1
 hitpoints     = 10
 firepower     = 1
-move_rate     = 1
-vision_radius_sq = 2
+move_rate     = 3
+vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
@@ -588,11 +588,11 @@ uk_food       = 0
 uk_gold       = 1
 flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Airbase"
 ; No veteran levels (level name is never displayed)
-veteran_names = _("green")
-veteran_raise_chance = 0
-veteran_work_raise_chance = 0
-veteran_power_fact = 100
-veteran_move_bonus = 0
+;veteran_names = _("green")
+;veteran_raise_chance = 0
+;veteran_work_raise_chance = 0
+;veteran_power_fact = 100
+;veteran_move_bonus = 0
 roles         = "Settlers", "WorkerStartUnit"
 helptext      = _("\
 Workers have the ability to improve terrain tiles. See the help on \
