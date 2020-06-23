@@ -2965,3 +2965,42 @@ The AWACS (Airborne Warning and Control System) is an airplane with an \
 advanced radar that can determine the location of enemy units over a \
 wide area.\
 ")
+
+
+
+[unit_fusion_fighter]
+name          = _("Fusion Fighter")
+class         = "Air"
+tech_req      = "Fusion Power", "Stealth"
+obsolete_by   = "None"
+graphic       = "u.fusion_fighter"
+graphic_alt   = "u.stealth_fighter"
+sound_move    = "m_stealth_fighter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_stealth_fighter"
+sound_fight_alt = "f_generic"
+build_cost    = 200
+pop_cost      = 0
+attack        = 8
+defense       = 7
+hitpoints     = 20
+firepower     = 1
+move_rate     = 28
+vision_radius_sq = 72
+transport_cap = 0
+fuel          = 3
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+targets       = "Air", "Missile", "Helicopter"
+bonuses       =
+   { "flag", "type", "value"
+     "Helicopter", "DefenseDivider", 1
+   }
+flags         = "Partial_Invis", "AirAttacker"
+roles         = "DefendGood"
+helptext      = _("\
+An improved Stealth Fighter, with a higher movement\
+ radius.\
+")
