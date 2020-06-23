@@ -2622,13 +2622,18 @@ She can perform all the functions of the Diplomat; refer to the Diplomat\
  entry for more details. Unlike a Diplomat, a Spy may also survive an\
  operation in a foreign city and become more experienced as a result.\
  Spies are also more effective than Diplomats at defending cities\
- against foreign Diplomats and Spies.\
+ against foreign Diplomats and Spies. If you steal a random tech, the\
+ probability for succeeding is a probability between 0-1 and it's\
+ typically something loike 0.08. However if you choose a tech to be stolen\
+ the chance to succeed is much lower and is n*n instead of n. With the \
+ probability of 0.08 the chance to succeed to steal a specific tech would be \
+ a very low 0.0064 = one successful attempt out of every 156 attempts.\
 "), _("\
 A Spy can also be used to:\n\
  - sabotage an enemy unit (reducing its hit points to half), if it is\
  alone on a tile and the players are at war;\n\
  - poison the water supply of an enemy city (reducing the population\
- by one);\n\
+ by one and emptying the granary);\n\
  - steal specific technology (with a reduced chance of success);\n\
  - steal further technologies from a city which has already been\
  stolen from (although cities become more resistant each time they\
