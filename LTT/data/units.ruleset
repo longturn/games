@@ -2295,6 +2295,43 @@ tiles (for use by Offshore Platforms).\
 ; FIXME: also cleans pollution/fallout in coastal cities (and faster
 ; than Engineers)
 
+
+[unit_missile]
+name          = _("Missile")
+class         = "Missile"
+tech_req      = "Flight"
+obsolete_by   = "None"
+graphic       = "u.cruise_missile"
+graphic_alt   = "-"
+sound_move    = "m_cruise_missile"
+sound_move_alt = "m_generic"
+sound_fight   = "f_cruise_missile"
+sound_fight_alt = "f_generic"
+build_cost    = 45
+pop_cost      = 0
+attack        = 15
+defense       = 0
+hitpoints     = 2
+firepower     = 2
+move_rate     = 9
+vision_radius_sq = 1
+transport_cap = 0
+fuel          = 1
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+targets       = "Air", "Missile", "Helicopter"
+flags         = "OneAttack", "AirAttacker", "HasNoZOC"
+roles         = ""
+helptext      = _("\
+The Missile is a missile unit able to shoot down enemy air units.\
+"), _("\
+TIP:  A handful of these may successfully keep the air around\
+ your treasured homeland free of enemy air units.\
+")
+
+
 [unit_cruise_missile]
 name          = _("Cruise Missile")
 class         = "Missile"
@@ -2330,6 +2367,8 @@ The Cruise Missile is a long-distance missile\
 TIP:  A handful of these can successfully keep the waters around\
  your treasured homeland free of enemy ships.\
 ")
+
+
 
 
 [unit_nuclear]
