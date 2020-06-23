@@ -2424,14 +2424,14 @@ defense       = 0
 hitpoints     = 10
 firepower     = 1
 move_rate     = 0
-vision_radius_sq = 2
+vision_radius_sq = 1
 transport_cap = 0
 fuel          = 1
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "FieldUnit", "OneAttack", "Nuclear", "HasNoZOC"
+flags         = "FieldUnit", "OneAttack", "Nuclear", "HasNoZOC", "NoVeteran"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
