@@ -1755,6 +1755,47 @@ The Barge can travel on ocean (but not deep ocean) and it can\
  move on rivers.\
 ")
 
+
+[unit_longboat]
+name          = _("Longboat")
+class         = "Sea"
+tech_req      = "Map Making
+obsolete_by   = "Caravel"
+graphic       = "u.longboat"
+graphic_alt   = "u.trireme"
+sound_move    = "m_caravel"
+sound_move_alt = "m_generic"
+sound_fight   = "f_caravel"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 0
+attack        = 1
+defense       = 2
+hitpoints     = 4
+firepower     = 1
+move_rate     = 8
+vision_radius_sq = 18
+transport_cap = 1
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Small Land", "Merchant"
+flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC", "Unique", "Unbribable"
+roles         = "Ferryboat", "FerryStartUnit", "BarbarianBoat"
+helptext      = _("\
+The Longboat is your first deep ocean capable boat unit\
+ that only can carry one Merchant or Small Land unit. It can act\
+ as a transport ship and has rudimentary defensive\
+ and offensive capabilities.\
+ It's also unique and you can only have one Longboat\
+ at a time. The Longboat is heavier than the \
+ trireme and this allows it to travel on deep ocean but \
+ not on rivers.\
+")
+
+
 [unit_caravel]
 name          = _("Caravel")
 class         = "Sea"
