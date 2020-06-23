@@ -1509,14 +1509,14 @@ sound_move    = "m_fighter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_fighter"
 sound_fight_alt = "f_generic"
-build_cost    = 60
+build_cost    = 40
 pop_cost      = 0
 attack        = 4
 defense       = 4
 hitpoints     = 20
 firepower     = 1
-move_rate     = 10
-vision_radius_sq = 8
+move_rate     = 12
+vision_radius_sq = 72
 transport_cap = 0
 fuel          = 2
 uk_happy      = 0
@@ -1524,11 +1524,11 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 targets       = "Air", "Missile", "Helicopter"
-flags         = "AirAttacker", "HasNoZOC"
+flags         = "AirAttacker", "HasNoZOC", "OneAttack"
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
 Fighters are your first airborne units. They can\
- move anywhere and attack any unit.\
+ move anywhere and attack any unit. The fighter will lose all moves when attacking another unit.\
 "),
 ; /* xgettext:no-c-format */
 _("\
