@@ -3042,4 +3042,38 @@ bombard_rate = 4
 
 
 
+[unit_fusion_battleship]
+name          = _("Fusion Battleship")
+class         = "Sea"
+tech_req      = "Fusion Power", "Mass Production"
+obsolete_by   = "None"
+graphic       = "u.fusion_battleship"
+graphic_alt   = "u.battleship"
+sound_move    = "m_battleship"
+sound_move_alt = "m_generic"
+sound_fight   = "f_battleship"
+sound_fight_alt = "f_generic"
+build_cost    = 300
+pop_cost      = 0
+attack        = 24
+defense       = 12
+hitpoints     = 30
+firepower     = 3
+move_rate     = 16
+vision_radius_sq = 72
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "BadCityDefender"
+roles         = "DefendOk"
+helptext      = _("\
+A battleship powered by fusion power \
+that attacks with triple firepower.\
+")
+
+
+
 
