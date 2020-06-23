@@ -2369,6 +2369,41 @@ TIP:  A handful of these can successfully keep the waters around\
 ")
 
 
+[unit_fusion_missile]
+name          = _("Fusion Missile")
+class         = "Missile"
+tech_req      = "Aviation Endurance"
+obsolete_by   = "None"
+graphic       = "u.fusion_missile"
+graphic_alt   = "u.cruise_missile"
+sound_move    = "m_cruise_missile"
+sound_move_alt = "m_generic"
+sound_fight   = "f_cruise_missile"
+sound_fight_alt = "f_generic"
+build_cost    = 90
+pop_cost      = 0
+attack        = 25
+defense       = 0
+hitpoints     = 5
+firepower     = 3
+move_rate     = 35
+vision_radius_sq = 1
+transport_cap = 0
+fuel          = 3
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+targets       = "Helicopter"
+flags         = "OneAttack", "AirAttacker", "HasNoZOC"
+roles         = ""
+helptext      = _("\
+The Fusion Missile is an ultra long-distance missile\
+ that can strike extremely deep into enemy territory.\
+"), _("\
+TIP:  These extremely powerful missiles can\
+ reach almost any place on the map.\
+")
 
 
 [unit_nuclear]
