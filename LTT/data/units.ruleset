@@ -163,6 +163,14 @@ hp_loss_pct   = 0
 flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
                 "CollectRansom","ZOC", "CanFortify", "KillCitizen", "Airliftable"
 
+[unitclass_land_siege]
+; /* TRANS: Unit class: used adjectivally */
+name          = _("?unitclass:Big Siege")
+min_speed     = 1
+hp_loss_pct   = 0
+flags         = "TerrainSpeed", "DamageSlows", "BuildAnywhere",
+                "CollectRansom","ZOC", "CanFortify", "KillCitizen", "TerrainDefense", "AttackNonNative"
+
 [unitclass_merchant]
 ; /* TRANS: Unit class: used adjectivally */
 name          = _("?unitclass:Merchant")
