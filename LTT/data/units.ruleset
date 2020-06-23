@@ -2481,15 +2481,15 @@ attack        = 0
 defense       = 0
 hitpoints     = 10
 firepower     = 1
-move_rate     = 2
-vision_radius_sq = 2
+move_rate     = 5
+vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil", "HasNoZOC"
+flags         = "Diplomat", "IgZOC", "NonMil", "HasNoZOC"
 veteran_names =
 ; /* TRANS: diplomatic rank. */
   _("?diplomatic_rank:attaché"),
@@ -2499,10 +2499,10 @@ veteran_names =
   _("?diplomatic_rank:envoy"),
 ; /* TRANS: diplomatic rank */
   _("?diplomatic_rank:ambassador")
-veteran_raise_chance = 50, 33, 20, 0
+veteran_raise_chance = 80, 50, 33, 0
 veteran_work_raise_chance = 0, 0, 0, 0
-veteran_power_fact = 100, 105, 110, 115
-veteran_move_bonus = 0, 0, 0, 0
+veteran_power_fact = 100, 110, 125, 140
+veteran_move_bonus = 0, 9, 18, 27
 roles         = "DiplomatStartUnit"
 helptext      = _("\
 A Diplomat is an official that carries your dispatches and\
