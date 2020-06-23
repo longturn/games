@@ -2175,6 +2175,42 @@ Traveling under the surface of the ocean, Submarines have\
  off guard.\
 ")
 
+
+
+[unit_nuclear_submarine]
+name          = _("Nuclear Submarine")
+class         = "Sea"
+tech_req      = "Combustion"
+obsolete_by   = "None"
+graphic       = "u.nsubmarine"
+graphic_alt   = "u.submarine"
+sound_move    = "m_submarine"
+sound_move_alt = "m_generic"
+sound_fight   = "f_submarine"
+sound_fight_alt = "f_generic"
+build_cost    = 80
+pop_cost      = 0
+attack        = 12
+defense       = 4
+hitpoints     = 20
+firepower     = 1
+move_rate     = 14
+vision_radius_sq = 28
+transport_cap = 4
+fuel          = 8
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Missile"
+flags         = "Partial_Invis", "BadCityDefender", "Only_Native_Attack", "Submarine"
+roles         = "Hunter"
+helptext      = _("\
+Traveling under the surface of the ocean, Submarines have\
+ a very high strategic value, but a weak defense if caught\
+ off guard. The nuclear submarine is also able to carry missiles.\
+")
+
 [unit_carrier]
 name          = _("Carrier")
 class         = "Sea"
