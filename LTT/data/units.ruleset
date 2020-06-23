@@ -1467,7 +1467,7 @@ to be effective, and has limited mobility.\
 
 [unit_howitzer]
 name          = _("Howitzer")
-class         = "Big Land"
+class         = "Big Siege"
 tech_req      = "Robotics"
 obsolete_by   = "None"
 graphic       = "u.howitzer"
@@ -1476,14 +1476,14 @@ sound_move    = "m_howitzer"
 sound_move_alt = "m_generic"
 sound_fight   = "f_howitzer"
 sound_fight_alt = "f_generic"
-build_cost    = 80
+build_cost    = 70
 pop_cost      = 0
 attack        = 12
 defense       = 2
 hitpoints     = 30
 firepower     = 1
-move_rate     = 1
-vision_radius_sq = 2
+move_rate     = 9
+vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
