@@ -961,20 +961,20 @@ sound_move    = "m_fanatics"
 sound_move_alt = "m_generic"
 sound_fight   = "f_fanatics"
 sound_fight_alt = "f_generic"
-build_cost    = 20
-pop_cost      = 1
-attack        = 5
-defense       = 5
+build_cost    = 35
+pop_cost      = 0
+attack        = 3
+defense       = 4
 hitpoints     = 20
 firepower     = 1
-move_rate     = 1
-vision_radius_sq = 2
+move_rate     = 3
+vision_radius_sq = 25
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
-uk_shield     = 0
+uk_shield     = 1
 uk_food       = 1
-uk_gold       = 0
+uk_gold       = 1
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
 flags         = "Fanatic", "AddToCity", "Capturer"
@@ -984,7 +984,6 @@ Fanatics are warriors extremely devoted to a higher cause.\
 "), _("\
 Fundamentalist nations can maintain Fanatic units without\
  having to pay any upkeep nor causing military unhappiness. \
- Instead, each unit reduces the population by 1.\
 ")
 
 [unit_marines]
