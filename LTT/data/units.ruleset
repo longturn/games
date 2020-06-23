@@ -1036,8 +1036,8 @@ attack        = 6
 defense       = 4
 hitpoints     = 20
 firepower     = 1
-move_rate     = 1
-vision_radius_sq = 2
+move_rate     = 3
+vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
@@ -1056,7 +1056,7 @@ immediately ready to act there. (Beware dropping into unseen territory, \
 as Paratroopers landing on a tile occupied by enemy units are easy \
 targets!)\
 ")
-paratroopers_range = 10
+paratroopers_range = 15
 paratroopers_mr_req = 1
 paratroopers_mr_sub = 0
 
