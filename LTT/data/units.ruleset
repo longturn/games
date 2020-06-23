@@ -518,6 +518,49 @@ TIP: Migrants can be a good alternative to Workers in overpopulated \
 cities, as they benefit from free food upkeep.\
 ")
 
+
+[unit_immigrants]
+name          = _("Immigrants")
+class         = "Small Land"
+tech_req      = "Railroad"
+obsolete_by   = "Immigrants"
+graphic       = "u.immigrant"
+graphic_alt   = "u.worker"
+sound_move    = "m_worker"
+sound_move_alt = "m_generic"
+sound_fight   = "f_worker"
+sound_fight_alt = "f_generic"
+build_cost    = 20
+pop_cost      = 1
+attack        = 0
+defense       = 1
+hitpoints     = 20
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "AddToCity", "Capturable"
+; No veteran levels (level name is never displayed)
+veteran_names = _("green")
+veteran_raise_chance = 0
+veteran_work_raise_chance = 0
+veteran_power_fact = 100
+veteran_move_bonus = 0
+roles         = "Settlers"
+helptext      = _("\
+Immigrants can be used to transfer population to other cities, but \
+may not found new cities. They can also perform some of the same \
+terrain alterations as Workers.\
+"), _("\
+TIP: Immigrants can be a good alternative to Workers in overpopulated \
+cities, as they benefit from free food upkeep.\
+")
+
 [unit_worker]
 name          = _("?unit:Workers")
 class         = "Small Land"
