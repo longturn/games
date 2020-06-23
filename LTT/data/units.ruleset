@@ -824,16 +824,16 @@ attack        = 3
 defense       = 3
 hitpoints     = 20
 firepower     = 1
-move_rate     = 1
-vision_radius_sq = 2
+move_rate     = 3
+vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Marines", "Capturer"
-roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "HutTech",
+flags         = "Capturer"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild",
                 "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
 helptext      = _("\
 Musketeers are infantry equipped with early\
