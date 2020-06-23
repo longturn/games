@@ -1359,7 +1359,7 @@ defense.\
 
 [unit_catapult]
 name          = _("Catapult")
-class         = "Big Land"
+class         = "Big Siege"
 tech_req      = "Mathematics"
 obsolete_by   = "Cannon"
 graphic       = "u.catapult"
@@ -1368,26 +1368,27 @@ sound_move    = "m_catapult"
 sound_move_alt = "m_generic"
 sound_fight   = "f_catapult"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 30
 pop_cost      = 0
-attack        = 6
+attack        = 5
 defense       = 1
 hitpoints     = 10
 firepower     = 1
-move_rate     = 1
-vision_radius_sq = 2
+move_rate     = 3
+vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = ""
+flags         = "CityBuster", "Capturable"
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
 Catapults are large rock-throwing machines of war.\
- They are very strong attackers but equally weak\
+ They are very strong attackers - and even more powerful against cities - but equally weak\
  defenders and will need an escort to be effective.\
+  Unescorted catapults may be captured by the enemy. \
 "), _("\
 While powerful, Catapults (and their successors) are bulky and awkward; \
 they require roads to move in rough terrain (mountains, swamps, and \
