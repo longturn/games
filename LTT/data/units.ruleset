@@ -2644,6 +2644,83 @@ Spies built under Communist or Federation governments will start\
  at the first veteran level (handler).\
 ")
 
+
+[unit_operative]
+name          = _("Operative")
+class         = "Small Land"
+tech_req      = "Advanced Espionage"
+obsolete_by   = "None"
+graphic       = "u.operative"
+graphic_alt   = "u.spy"
+sound_move    = "m_spy"
+sound_move_alt = "m_generic"
+sound_fight   = "f_spy"
+sound_fight_alt = "f_generic"
+build_cost    = 120
+pop_cost      = 0
+attack        = 0
+defense       = 0
+hitpoints     = 10
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+flags         = "Diplomat", "IgZOC", "NonMil", "HasNoZOC", "Spy", "IgTer", "Partial_Invis"
+veteran_names =
+; /* TRANS: Spy veteran level */
+  _("?spy_level:informant"),
+; /* TRANS: Spy veteran level */
+  _("?spy_level:handler"),
+; /* TRANS: Spy veteran level */
+  _("?spy_level:agent"),
+; /* TRANS: Spy veteran level */
+  _("?spy_level:spymaster")
+veteran_raise_chance = 80, 50, 33, 0
+veteran_work_raise_chance = 0, 0, 0, 0
+veteran_power_fact = 100, 110, 125, 140
+veteran_move_bonus = 0, 9, 18, 27
+roles         = "DiplomatStartUnit"
+helptext      = _("\
+An Operative is more skilled in the arts of espionage than her Diplomat predecessor or the Spy.\
+"), _("\
+Operatives will be able to use many means for trasportation and \
+will ignore terrain when moving. \
+She can perform all the functions of the Spy; refer to the Diplomat\
+ entry for more details. Unlike a Diplomat, an Operative may also survive an\
+ operation in a foreign city and become more experienced as a result.\
+ Operatives are also more effective than Diplomats at defending cities\
+ against foreign Diplomats, Spies and Operatives. If you steal a random tech, the\
+ probability for succeeding is a probability between 0-1 and it's\
+ typically something like 0.08- 0.12. However if you choose a tech to be stolen\
+ the chance to succeed is much lower and is n*n instead of n. With the \
+ probability of 0.08 the chance to succeed to steal a specific tech would be \
+ a very low 0.0064 = one successful attempt out of every 156 attempts.\
+"), _("\
+An Operative can also be used to:\n\
+ - sabotage an enemy unit (reducing its hit points to half), if it is\
+ alone on a tile and the players are at war;\n\
+ - poison the water supply of an enemy city (reducing the population\
+ by one and emptying the granary);\n\
+ - steal specific technology (with a reduced chance of success);\n\
+ - steal further technologies from a city which has already been\
+ stolen from (although cities become more resistant each time they\
+ are stolen from);\n\
+ - sabotage predetermined city targets (with a reduced chance of\
+ success).\
+"), _("\
+An Operative that survives the more aggressive actions (sabotage, theft,\
+ inciting rebellion, and poisoning) escapes to the safety of the\
+ nearest friendly city.\
+"), _("\
+Operatives built under Communist or Federation governments will start\
+ at the first veteran level (handler).\
+")
+
 [unit_caravan]
 name          = _("Caravan")
 class         = "Merchant"
