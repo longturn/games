@@ -243,15 +243,15 @@ Improvements that normally convert unhappy citizens to content\
  citizens, produce `tithes' (gold) equivalent to the number\
  of people they would convert, and require no maintenance.\
 "), _("\
-Fundamentalism is a good government for maximizing gold, and its Fanatics\
+Fundamentalism is a good government for maximizing gold, and its Crusaders and Fanatics\
  are useful in wartime, but it has a heavy penalty to technological\
  progress.\
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Science production is 75% that of other governments.\n\
+* Science production is 60% that of other governments.\n\
 * Each city can support up to 2 units for free; further units each cost\
- 2 gold per turn (except for Fanatics).\n\
+ 2 gold per turn (except for Fanatics and Crusaders).\n\
 * Each city tolerates up to 2 aggressively deployed military units;\
  each further unit causes 1 unhappy citizen.\n\
 * Base corruption is 15%. This increases with distance from the capital\
