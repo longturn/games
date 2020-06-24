@@ -31,15 +31,15 @@ name = _("Civ2Civ3 ruleset")
 ; /* TRANS: In the client, this is displayed alongside the contents of
 ;    README.civ2civ3, which are not localized. */
 summary = _("\
-You are playing Freeciv with civ2civ3 rules:\
+You are playing Freeciv with Longturn Tranditional ruleset based on civ2civ3 rules:\
 \n\n\
 Gameplay more similar to civ3, keeping the combat system from civ2.\
 \n\n\
 Adapted for single player, with AI less aggressive at start,\
  but more challenging at the end.\
 \n\n\
-The differences from the classic ruleset are listed in full in\
- README.civ2civ3.\
+The Longturn Traditional ruleset is designed to be played without AI players\
+ and it's balanced to make the game interesting bost both beginners and experienced players.\
 ")
 
 ; Detailed description
@@ -81,18 +81,19 @@ food_cost        = 2
 ;   if city_size > num_inis;
 ;     city_granary_size = (granary_food_ini[num_inis] +
 ;        granary_food_inc * (city_size - num_inis)) * foodbox / 100
-granary_food_ini = 20, 20, 20, 20, 20, 30, 30, 40
+granary_food_ini = 12, 14, 16, 20, 24, 28, 34, 40
 granary_food_inc = 0
 
 ; City center minimum outputs
-min_city_center_food    = 0
+min_city_center_food    = 1
 min_city_center_shield  = 0
 min_city_center_trade   = 0
 
 ; Square of initial city radius
-init_city_radius_sq     = 5
+init_city_radius_sq     = 15
 
 ; Square of initially visible radius (true distance).
+; the visible radius is smaller than the initial city radius. Units are needed for more vision.
 init_vis_radius_sq      = 5
 
 ; A base bribe cost, modified heavily by other factors
@@ -105,7 +106,7 @@ ransom_gold      = 100
 upgrade_veteran_loss     = 1
 
 ; Number of veteran levels lost when auto-upgrading a unit
-autoupgrade_veteran_loss = 1
+autoupgrade_veteran_loss = 0
 
 ; Whether player gets to select which terrain improvement to pillage.
 pillage_select           = TRUE
@@ -308,20 +309,8 @@ actor_reqs    =
     }
 target_reqs  =
     { "type",   "name", "range", "present"
-      "NationGroup", "Barbarian", "Player", FALSE
     }
 
-[actionenabler_establish_embassy_explorer]
-action       = "Establish Embassy"
-actor_reqs    =
-    { "type",   "name", "range"
-      "UnitType", "Explorer", "Local"
-      "MinMoveFrags", "1", "Local"
-    }
-target_reqs  =
-    { "type",   "name", "range", "present"
-      "NationGroup", "Barbarian", "Player", FALSE
-    }
 
 [actionenabler_investigate_city]
 action       = "Investigate City"
@@ -349,7 +338,6 @@ actor_reqs    =
     }
 target_reqs  =
     { "type",   "name", "range", "present"
-      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [actionenabler_steal_tech_target]
@@ -394,7 +382,7 @@ target_reqs  =
       "Gov", "Federation", "Player", FALSE
       "Gov", "Democracy", "Player", FALSE
       "Building", "Palace", "City", FALSE
-      "Building", "Ecclesiastical Palace", "City", FALSE
+      "Building", "2nd Palace", "City", FALSE
       "Building", "Mausoleum of Mausolos", "Player", FALSE
     }
 
@@ -455,7 +443,7 @@ actor_reqs    =
 
 [borders]
 ; Base border radius from city.
-radius_sq_city = 5
+radius_sq_city = 15
 
 ; Border radius square increased by this amount / point of city size
 size_effect    = 1
@@ -505,7 +493,7 @@ base_tech_cost   = 20
 ; "Normal Players" - Technology cost is reduced depending on the number of
 ;                    normal players (human and AI) which already know the
 ;                    tech.
-tech_leakage = "Embassies"
+tech_leakage = "All Players"
 
 ; Method of paying tech upkeep
 ; "None"   - no upkeep
@@ -525,7 +513,7 @@ free_tech_method = "Cheapest"
 
 [culture]
 ; Minimum culture points for cultural domination victory
-victory_min_points = 18000
+victory_min_points = 1800000
 
 ; How big lead relative to second best player is needed for victory
 victory_lead_pct   = 200
@@ -813,27 +801,27 @@ colorlist =
 [settings]
 ; freeciv game settings for civ2civ3 ruleset
 ;
-set =
-    { "name", "value"
-      "aifill", 6
-      "generator", "FRACTAL"
-      "topology", "WRAPX|WRAPY|ISO"
-      "mapsize", "PLAYER"
-      "tilesperplayer", 100
-      "tinyisles", "ENABLED"
-      "temperature", 60
-      "flatpoles", 0
-      "startunits", "cwsx"
-      "citymindist", 3
-      "techlevel", 1
-      "borders", "ENABLED"
-      "foggedborders", "ENABLED"
-      "restrictinfra", "ENABLED"
-      "unreachableprotects", "DISABLED"
-      "onsetbarbs", 120
-      "occupychance", 100
-      "razechance", 10
-      "techlossforgiveness", 0
-      "techlossrestore", 50
-      "revolentype", "RANDQUICK"
+;set =
+;    { "name", "value"
+;     "aifill", 6
+;      "generator", "FRACTAL"
+;      "topology", "WRAPX|WRAPY|ISO"
+;      "mapsize", "PLAYER"
+;      "tilesperplayer", 100
+;      "tinyisles", "ENABLED"
+;      "temperature", 60
+;      "flatpoles", 0
+;      "startunits", "cwsx"
+;      "citymindist", 3
+;      "techlevel", 1
+;      "borders", "ENABLED"
+;      "foggedborders", "ENABLED"
+;      "restrictinfra", "ENABLED"
+;      "unreachableprotects", "DISABLED"
+;      "onsetbarbs", 120
+;      "occupychance", 100
+;      "razechance", 10
+;      "techlossforgiveness", 0
+;      "techlossrestore", 50
+;      "revolentype", "RANDQUICK"
     }
