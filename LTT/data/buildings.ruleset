@@ -84,7 +84,7 @@ Two cities with Airports can airlift one unit per turn (including\
  aircraft). Airlifting instantly transports the unit from one city\
  to another and will use all of the unit's movement points. A unit\
  must have some movement points left to be airlifted, and cannot\
- carry cargo.\
+ carry cargo. However the servers ettings may define that airports may work differently.\
 ")
 
 [building_aqueduct]
