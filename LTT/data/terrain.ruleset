@@ -55,10 +55,10 @@ min_start_native_area = 0
 
 ; How many fragments each movement point has.
 ; For example road movement costs are relative to this.
-move_fragments = 6
+move_fragments = 9
 
 ; How many move_fragments IgTer unit movement costs
-igter_cost = 2
+igter_cost = 3
 
 ; Whether diagonal movement has increased cost (no effect with hex topology)
 ; The cost increase is more accurate with larger values for move_fragments
@@ -258,7 +258,7 @@ irrigation_time      = 0
 mining_result        = "no"
 mining_shield_incr   = 0
 mining_time          = 0
-transform_result     = "Grassland"
+transform_result     = "Swamp"
 transform_time       = 36
 pillage_time         = 1
 clean_pollution_time = 3
@@ -267,7 +267,7 @@ animal               = "None"
 warmer_wetter_result = "Swamp"
 warmer_drier_result  = "no"
 cooler_wetter_result = "Glacier"
-cooler_drier_result  = "no"
+cooler_drier_result  = "Tundra"
 native_to            = "Sea", "Air", "Missile", "Helicopter", "Trireme"
 flags                = "NoCities", "NoBarbs", "NoPollution", "FreshWater", "NoZoc", "NoFortify"
 property_ocean_depth = 0
@@ -301,16 +301,16 @@ irrigation_time      = 0
 mining_result        = "no"
 mining_shield_incr   = 0
 mining_time          = 0
-transform_result     = "Grassland"
+transform_result     = "Swamp"
 transform_time       = 36
 pillage_time         = 1
 clean_pollution_time = 3
 clean_fallout_time   = 3
 animal               = "None"
 warmer_wetter_result = "no"
-warmer_drier_result  = "no"
+warmer_drier_result  = "Swamp"
 cooler_wetter_result = "Glacier"
-cooler_drier_result  = "no"
+cooler_drier_result  = "Glacier"
 native_to            = "Sea", "Air", "Missile", "Helicopter", "Trireme"
 flags                = "NoCities", "UnsafeCoast", "NoZoc", "NoFortify", "Sea"
 property_ocean_depth = 35
@@ -389,17 +389,17 @@ irrigation_time      = 0
 mining_result        = "yes"
 mining_shield_incr   = 1
 mining_time          = 10
-transform_result     = "Lake"
+transform_result     = "Tundra"
 transform_time       = 24
 pillage_time         = 1
 clean_pollution_time = 3
 clean_fallout_time   = 3
 animal               = "None"
-warmer_wetter_result = "Lake"
+warmer_wetter_result = "Tundra"
 warmer_drier_result  = "Tundra"
 cooler_wetter_result = "no"
 cooler_drier_result  = "no"
-native_to            = "Land", "Small Land", "Merchant", "Big Land", "Air", "Missile", "Helicopter"
+native_to            = "Land", "Small Land", "Merchant", "Big Land", "Air", "Missile", "Helicopter", "Big Siege"
 flags                = "NoBarbs", "NoCities", "CanHaveRiver", "Oil", "Frozen"
 property_frozen      = 100
 color.r              = 232
@@ -440,11 +440,11 @@ pillage_time         = 1
 clean_pollution_time = 3
 clean_fallout_time   = 3
 animal               = "None"
-warmer_wetter_result = "Swamp"
+warmer_wetter_result = "Grassland"
 warmer_drier_result  = "no"
-cooler_wetter_result = "Tundra"
+cooler_wetter_result = "Plains"
 cooler_drier_result  = "Tundra"
-native_to            = "Land", "Small Land", "Merchant", "Big Land", "Air", "Missile", "Helicopter"
+native_to            = "Land", "Small Land", "Merchant", "Big Land", "Air", "Missile", "Helicopter", "Big Siege"
 flags                = "CanHaveRiver", "Oil"
 property_dry         = 100
 property_tropical    = 50
@@ -481,20 +481,20 @@ road_time            = 4
 irrigation_result    = "Plains"
 irrigation_food_incr = 0
 irrigation_time      = 10
-mining_result        = "Grassland"
+mining_result        = "Swamp"
 mining_shield_incr   = 0
 mining_time          = 15
-transform_result     = "Hills"
+transform_result     = "Grassland"
 transform_time       = 24
 pillage_time         = 1
 clean_pollution_time = 3
 clean_fallout_time   = 3
 animal               = "None"
 warmer_wetter_result = "Jungle"
-warmer_drier_result  = "no"
-cooler_wetter_result = "no"
-cooler_drier_result  = "no"
-native_to            = "Land", "Small Land", "Merchant", "Big Land", "Air", "Missile", "Helicopter"
+warmer_drier_result  = "Plains"
+cooler_wetter_result = "Swamp"
+cooler_drier_result  = "Tundra"
+native_to            = "Land", "Small Land", "Merchant", "Big Land", "Air", "Missile", "Helicopter", "Big Siege"
 flags                = "Starter", "CanHaveRiver"
 property_cold        = 20
 property_wet         = 20
@@ -531,17 +531,17 @@ irrigation_time      = 5
 mining_result        = "Forest"
 mining_shield_incr   = 0
 mining_time          = 15
-transform_result     = "Lake"
-transform_time       = 36
+transform_result     = "Hills"
+transform_time       = 96
 pillage_time         = 1
 clean_pollution_time = 3
 clean_fallout_time   = 3
 animal               = "None"
 warmer_wetter_result = "Swamp"
-warmer_drier_result  = "Swamp"
-cooler_wetter_result = "Swamp"
+warmer_drier_result  = "Desert"
+cooler_wetter_result = "Tundra"
 cooler_drier_result  = "Tundra"
-native_to            = "Land", "Small Land", "Merchant", "Big Land", "Air", "Missile", "Helicopter"
+native_to            = "Land", "Small Land", "Merchant", "Big Land", "Air", "Missile", "Helicopter", "Big Siege"
 flags                = "Starter", "CanHaveRiver"
 property_green       = 50
 property_temperate   = 50
@@ -585,7 +585,7 @@ warmer_wetter_result = "no"
 warmer_drier_result  = "no"
 cooler_wetter_result = "no"
 cooler_drier_result  = "no"
-native_to            = "Land", "Small Land", "Merchant", "Big Land", "Air", "Missile", "Helicopter"
+native_to            = "Land", "Small Land", "Merchant", "Big Land", "Air", "Missile", "Helicopter", "Big Siege"
 flags                = "Starter", "CanHaveRiver"
 property_green       = 50
 property_mountainous = 30
@@ -617,7 +617,7 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
-irrigation_result    = "Swamp"
+irrigation_result    = "Grassland"
 irrigation_food_incr = 0
 irrigation_time      = 10
 mining_result        = "no"
@@ -629,11 +629,11 @@ pillage_time         = 1
 clean_pollution_time = 3
 clean_fallout_time   = 3
 animal               = "None"
-warmer_wetter_result = "no"
-warmer_drier_result  = "no"
-cooler_wetter_result = "no"
-cooler_drier_result  = "Forest"
-native_to            = "Land", "Small Land", "Merchant", "Air", "Missile", "Helicopter"
+warmer_wetter_result = "Swamp"
+warmer_drier_result  = "Desert"
+cooler_wetter_result = "Swamp"
+cooler_drier_result  = "Tundra"
+native_to            = "Land", "Small Land", "Merchant", "Air", "Missile", "Helicopter", "Big Siege"
 flags                = "CanHaveRiver"
 property_foliage     = 50
 property_tropical    = 50
@@ -671,7 +671,7 @@ mining_result        = "yes"
 mining_shield_incr   = 2
 mining_time          = 10
 transform_result     = "Hills"
-transform_time       = 36
+transform_time       = 192
 pillage_time         = 1
 clean_pollution_time = 3
 clean_fallout_time   = 3
@@ -719,7 +719,7 @@ irrigation_time      = 5
 mining_result        = "Forest"
 mining_shield_incr   = 0
 mining_time          = 10
-transform_result     = "Lake"
+transform_result     = "Grassland"
 transform_time       = 36
 pillage_time         = 1
 clean_pollution_time = 3
@@ -727,9 +727,9 @@ clean_fallout_time   = 3
 animal               = "None"
 warmer_wetter_result = "Swamp"
 warmer_drier_result  = "Desert"
-cooler_wetter_result = "Desert"
+cooler_wetter_result = "Tundra"
 cooler_drier_result  = "Desert"
-native_to            = "Land", "Small Land", "Merchant", "Big Land", "Air", "Missile", "Helicopter"
+native_to            = "Land", "Small Land", "Merchant", "Big Land", "Air", "Missile", "Helicopter", "Big Siege"
 flags                = "Starter", "CanHaveRiver"
 property_green       = 50
 property_temperate   = 50
@@ -758,23 +758,23 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
-irrigation_result    = "yes"
+irrigation_result    = "Grassland"
 irrigation_food_incr = 1
 irrigation_time      = 5
-mining_result        = "no"
+mining_result        = "Forest"
 mining_shield_incr   = 0
 mining_time          = 0
-transform_result     = "Grassland"
+transform_result     = "Ocean"
 transform_time       = 24
 pillage_time         = 1
 clean_pollution_time = 3
 clean_fallout_time   = 3
 animal               = "None"
-warmer_wetter_result = "Desert"
-warmer_drier_result  = "no"
-cooler_wetter_result = "Tundra"
-cooler_drier_result  = "Desert"
-native_to            = "Land", "Small Land", "Merchant", "Air", "Missile", "Helicopter"
+warmer_wetter_result = "Ocean"
+warmer_drier_result  = "Desert"
+cooler_wetter_result = "Glacier"
+cooler_drier_result  = "Tundra"
+native_to            = "Land", "Small Land", "Merchant", "Air", "Missile", "Helicopter", "Big Siege"
 flags                = "CanHaveRiver"
 property_wet         = 100
 property_tropical    = 10
@@ -800,7 +800,7 @@ defense_bonus        = 0
 food                 = 1
 shield               = 0
 trade                = 0
-resources            = "Game", "Furs"
+resources            = "Game", "Furs", "Gold"
 road_food_incr_pct   = 0
 road_shield_incr_pct = 0
 road_trade_incr_pct  = 100
@@ -819,10 +819,10 @@ clean_pollution_time = 3
 clean_fallout_time   = 3
 animal               = "None"
 warmer_wetter_result = "Swamp"
-warmer_drier_result  = "Swamp"
+warmer_drier_result  = "Plains"
 cooler_wetter_result = "Glacier"
 cooler_drier_result  = "Desert"
-native_to            = "Land", "Small Land", "Merchant", "Big Land", "Air", "Missile", "Helicopter"
+native_to            = "Land", "Small Land", "Merchant", "Big Land", "Air", "Missile", "Helicopter", "Big Siege"
 flags                = "NoBarbs", "CanHaveRiver"
 property_cold        = 50
 color.r              = 188
@@ -866,7 +866,7 @@ name        = _("Iron")
 graphic     = "ts.iron"
 graphic_alt = "-"
 identifier  = "/"
-shield      = 3
+shield      = 4
 # mountains.
 
 [resource_game]
@@ -874,8 +874,9 @@ name        = _("?animals:Game")
 graphic     = "ts.tundra_game"
 graphic_alt = "-"
 identifier  = "e"
-food        = 2
+food        = 3
 shield      = 1
+trade		= 2
 # tundra.
 
 [resource_furs]
@@ -884,7 +885,8 @@ graphic     = "ts.furs"
 graphic_alt = "-"
 identifier  = "u"
 food        = 1
-trade       = 3
+shield      = 1
+trade       = 4
 # tundra-only (beaver pelts).
 
 [resource_coal]
@@ -950,6 +952,7 @@ graphic     = "ts.oasis"
 graphic_alt = "-"
 identifier  = "o"
 food        = 3
+trade       = 4
 # desert.
 
 [resource_peat]
@@ -1001,7 +1004,7 @@ name        = _("Spice")
 graphic     = "ts.spice"
 graphic_alt = "-"
 identifier  = "t"
-food        = 1
+food        = 2
 trade       = 4
 # swamp-only.
 
@@ -1417,38 +1420,33 @@ Settlers, Workers, Migrants, Engineers, and Transport units can all \
 clean up nuclear fallout.\
 ")
 
-[extra_fort]
-name           = _("Fort")
-category       = "Infra"
-causes         = "Base"
-rmcauses       = "Pillage"
+
+[base_prefortress]
+name           = _("Pre-Fortress")
 graphic        = "base.outpost"
 graphic_alt    = "base.fortress"
-activity_gfx   = "unit.outpost"
-act_gfx_alt    = "unit.fortress"
-act_gfx_alt2   = "-"
-rmact_gfx      = "None"
-rmact_gfx_alt  = "-"
+activity_gfx   = "unit.fortress"
+act_gfx_alt    = "-"
 reqs           =
-    { "type", "name", "range", "present", "quiet"
-      "Tech", "Construction", "Player", TRUE, FALSE
-      "TerrainClass", "Land", "Local", TRUE, FALSE
-      "UnitFlag", "Settlers", "Local", TRUE, FALSE
-      "UnitClass", "Sea", "Local", FALSE, TRUE
-      "CityTile", "Center", "Local", FALSE, TRUE
+    { "type", "name", "range", "negated"
+      "Tech", "Construction", "Player", FALSE
+      "TerrainClass", "Land", "Local", FALSE
+      "UnitFlag", "Settlers", "Local", FALSE
+      "UnitClass", "Sea", "Local", TRUE
+      "CityTile", "Center", "Local", TRUE
     }
-build_time     = 2
-removal_time   = 0
-native_to      = "Land", "Small Land", "Merchant", "Big Land"
-conflicts      = "Airstrip", "Airbase"
-hidden_by      = "Fortress"
+gui_type       = "Fortress"
+build_time     = 3
+border_sq      = -1
+conflicts      = "Airbase"
+native_to      = "Land", "Small Land", "Big Land", "Big Siege"
 flags          = "NativeTile"
-; /* xgettext:no-c-format */
 helptext       = _("\
-Forts are rapidly-built fortifications providing some defense (+50%) \
-against land units and boats. A fort is also necessary to start building \
-a fortress.\
+Units in a pre-fortress receive no defense against units. \
+A pre-fort is needed for building an actual Fortress. \
 ")
+
+
 
 [extra_fortress]
 name           = _("Fortress")
@@ -1464,7 +1462,7 @@ rmact_gfx      = "None"
 rmact_gfx_alt  = "-"
 reqs           =
     { "type", "name", "range", "present", "quiet"
-      "Extra", "Fort", "Local", TRUE, FALSE
+      "Extra", "Pre-Fortress", "Local", TRUE, FALSE
       "Tech", "Construction", "Player", TRUE, FALSE
       "TerrainClass", "Land", "Local", TRUE, FALSE
       "UnitFlag", "Settlers", "Local", TRUE, FALSE
@@ -1474,7 +1472,7 @@ reqs           =
     }
 build_time     = 2
 removal_time   = 0
-native_to      = "Land", "Small Land", "Merchant", "Big Land"
+native_to      = "Land", "Small Land", "Merchant", "Big Land", "Big Siege"
 conflicts      = "Airstrip", "Airbase"
 flags          = "NativeTile"
 helptext       = _("\
@@ -1647,7 +1645,7 @@ reqs           =
     }
 build_time     = 0
 removal_time   = 0
-native_to      = "Land", "Small Land", "Big Land", "Merchant"
+native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege"
 hidden_by      = "Railroad", "Maglev"
 flags          = "NativeTile", "AlwaysOnCityCenter"
 helptext       = _("\
@@ -1683,7 +1681,7 @@ reqs           =
     }
 build_time     = 3
 removal_time   = 0
-native_to      = "Land", "Small Land", "Big Land", "Merchant"
+native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege"
 flags          = "NativeTile", "AutoOnCityCenter"
 hidden_by      = "Maglev"
 helptext       = _("\
@@ -1721,11 +1719,11 @@ reqs           =
     }
 build_time     = 3
 removal_time   = 0
-native_to      = "Land", "Small Land"
+native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege"
 flags          = "NativeTile", "AutoOnCityCenter"
 helptext       = _("\
 With sufficient technology, you may build magnetic levitation systems\
- along your railroad routes. Land and Small Land units expend no\
+ along your railroad routes. Land units expend no\
  movement points when riding a maglev; you may ride indefinitely.\
  (As may your enemies!)\
 "), _("\
@@ -1750,7 +1748,7 @@ act_gfx_alt2   = "-"
 rmact_gfx      = "None"
 rmact_gfx_alt  = "-"
 buildable      = FALSE
-native_to      = "Land", "Small Land", "Merchant", "Trireme"
+native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege", "Trireme"
 defense_bonus  = 25
 flags          = "NativeTile"
 ; /* xgettext:no-c-format */
@@ -1895,7 +1893,7 @@ gui_type       = "Other"
 
 [road_road]
 extra          = "Road"
-move_cost      = 2
+move_cost      = 3
 food_incr      = 0
 shield_incr    = 0
 trade_incr     = 1
@@ -1930,7 +1928,7 @@ flags          = "RequiresBridge"
 
 [road_river]
 extra          = "River"
-move_cost      = 2
+move_cost      = 3
 move_mode      = "Cardinal"
 trade_incr_const = 1
 compat_special = "River"
