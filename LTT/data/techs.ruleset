@@ -441,7 +441,7 @@ req2     = "Literacy"
 flags    = ""
 graphic     = "a.invention"
 graphic_alt = "-"
-helptext = _("Halves the upgrade cost of your units.")
+helptext = _("Makes the upgrade cost of your units 20% less expensive. Robotics makes the upgrade cost 30% less expensive.")
 cost     = 144
 
 [advance_iron_working]
