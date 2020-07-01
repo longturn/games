@@ -1421,31 +1421,38 @@ clean up nuclear fallout.\
 ")
 
 
-[base_prefortress]
-name           = _("Pre-Fortress")
+[extra_fort]
+name           = _("Fort")
+category       = "Infra"
+causes         = "Base"
+rmcauses       = "Pillage"
 graphic        = "base.outpost"
 graphic_alt    = "base.fortress"
-activity_gfx   = "unit.fortress"
-act_gfx_alt    = "-"
+activity_gfx   = "unit.outpost"
+act_gfx_alt    = "unit.fortress"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
 reqs           =
-    { "type", "name", "range", "negated"
-      "Tech", "Construction", "Player", FALSE
-      "TerrainClass", "Land", "Local", FALSE
-      "UnitFlag", "Settlers", "Local", FALSE
-      "UnitClass", "Sea", "Local", TRUE
-      "CityTile", "Center", "Local", TRUE
+    { "type", "name", "range", "present", "quiet"
+      "Tech", "Construction", "Player", TRUE, FALSE
+      "TerrainClass", "Land", "Local", TRUE, FALSE
+      "UnitFlag", "Settlers", "Local", TRUE, FALSE
+      "UnitClass", "Sea", "Local", FALSE, TRUE
+      "CityTile", "Center", "Local", FALSE, TRUE
     }
-gui_type       = "Fortress"
-build_time     = 3
-border_sq      = -1
-conflicts      = "Airbase"
-native_to      = "Land", "Small Land", "Big Land", "Big Siege"
+build_time     = 2
+removal_time   = 0
+native_to      = "Land", "Small Land", "Merchant", "Big Land"
+conflicts      = "Airstrip", "Airbase"
+hidden_by      = "Fortress"
 flags          = "NativeTile"
+; /* xgettext:no-c-format */
 helptext       = _("\
-Units in a pre-fortress receive no defense against units. \
-A pre-fort is needed for building an actual Fortress. \
+Forts are rapidly-built fortifications providing some defense (+50%) \
+against land units and boats. A fort is also necessary to start building \
+a fortress.\
 ")
-
 
 
 [extra_fortress]
@@ -1462,7 +1469,7 @@ rmact_gfx      = "None"
 rmact_gfx_alt  = "-"
 reqs           =
     { "type", "name", "range", "present", "quiet"
-      "Extra", "Pre-Fortress", "Local", TRUE, FALSE
+      "Extra", "Fort", "Local", TRUE, FALSE
       "Tech", "Construction", "Player", TRUE, FALSE
       "TerrainClass", "Land", "Local", TRUE, FALSE
       "UnitFlag", "Settlers", "Local", TRUE, FALSE

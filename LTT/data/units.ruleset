@@ -1759,7 +1759,7 @@ The Barge can travel on ocean (but not deep ocean) and it can\
 [unit_longboat]
 name          = _("Longboat")
 class         = "Sea"
-tech_req      = "Map Making
+tech_req      = "Map Making"
 obsolete_by   = "Caravel"
 graphic       = "u.longboat"
 graphic_alt   = "u.trireme"
@@ -2994,10 +2994,6 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 targets       = "Air", "Missile", "Helicopter"
-bonuses       =
-   { "flag", "type", "value"
-     "Helicopter", "DefenseDivider", 1
-   }
 flags         = "Partial_Invis", "AirAttacker"
 roles         = "DefendGood"
 helptext      = _("\
@@ -3102,7 +3098,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = ""
-roles         = "DefendOk", "AttackFast", "Hunter"
+roles         = "DefendOk", "Hunter"
 helptext      = _("\
 A fusion powered Armor attacking \
 with double firepower.\

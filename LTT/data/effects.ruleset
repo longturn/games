@@ -424,7 +424,7 @@ reqs    =
     }
 
 ; Robotics makes unit upgrade prices 30% less expensive
-[effect_upgrade_price_halfed]
+[effect_upgrade_price_halfed_2]
 type    = "Upgrade_Price_Pct"
 value   = -30
 reqs    =
@@ -2549,14 +2549,6 @@ reqs	=
       "Building", "Palace", "City", FALSE
     }
 	
-	
-[effect_3_second_gov_center]
-type    = "No_Incite"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Second Palace", "City"
-    }
 
 
 [effect_2nd_palace_despotism]
@@ -4180,22 +4172,17 @@ reqs	=
       "Extra", "Pollution", "Local"
     }
 	
-	
-	
+
 [effect_hal_salflieni_hypogeum]
 type    = "Output_Add_Tile"
 value   = 6
 reqs    =
     { "type", "name", "range"
-      "Building", "Ħal Saflieni Hypogeum", "City"
-	  "CityTile", "Center", "Local"
+      "Building", "Hal Saflieni Hypogeum", "City"
+      "CityTile", "Center", "Local"
       "OutputType", "Luxury", "Local"
-    }	
-nreqs   =
-    { "type", "name", "range"
-      "Tech", "Bronze Working", "Player"
-    }	
-	
+    }
+
 	
 [effect_trade_company]
 name    = "Output_Bonus"

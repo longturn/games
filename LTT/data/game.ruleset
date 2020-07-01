@@ -382,7 +382,7 @@ target_reqs  =
       "Gov", "Federation", "Player", FALSE
       "Gov", "Democracy", "Player", FALSE
       "Building", "Palace", "City", FALSE
-      "Building", "2nd Palace", "City", FALSE
+      "Building", "Second Palace", "City", FALSE
       "Building", "Mausoleum of Mausolos", "Player", FALSE
     }
 
@@ -801,27 +801,27 @@ colorlist =
 [settings]
 ; freeciv game settings for civ2civ3 ruleset
 ;
-;set =
-;    { "name", "value"
-;     "aifill", 6
-;      "generator", "FRACTAL"
-;      "topology", "WRAPX|WRAPY|ISO"
-;      "mapsize", "PLAYER"
-;      "tilesperplayer", 100
-;      "tinyisles", "ENABLED"
-;      "temperature", 60
-;      "flatpoles", 0
-;      "startunits", "cwsx"
-;      "citymindist", 3
-;      "techlevel", 1
-;      "borders", "ENABLED"
-;      "foggedborders", "ENABLED"
-;      "restrictinfra", "ENABLED"
-;      "unreachableprotects", "DISABLED"
-;      "onsetbarbs", 120
-;      "occupychance", 100
-;      "razechance", 10
-;      "techlossforgiveness", 0
-;      "techlossrestore", 50
-;      "revolentype", "RANDQUICK"
+set =
+    { "name", "value"
+     "aifill", 6
+      "generator", "FRACTAL"
+      "topology", "WRAPX|WRAPY|ISO"
+      "mapsize", "PLAYER"
+      "tilesperplayer", 100
+      "tinyisles", "ENABLED"
+      "temperature", 60
+      "flatpoles", 0
+      "startunits", "cwsx"
+      "citymindist", 3
+      "techlevel", 1
+      "borders", "ENABLED"
+      "foggedborders", "ENABLED"
+      "restrictinfra", "ENABLED"
+      "unreachableprotects", "DISABLED"
+      "onsetbarbs", 120
+      "occupychance", 100
+      "razechance", 10
+      "techlossforgiveness", 0
+      "techlossrestore", 50
+      "revolentype", "RANDQUICK"
     }
