@@ -523,7 +523,7 @@ cities, as they benefit from free food upkeep.\
 name          = _("Immigrants")
 class         = "Small Land"
 tech_req      = "Railroad"
-obsolete_by   = "Immigrants"
+obsolete_by   = "None"
 graphic       = "u.immigrant"
 graphic_alt   = "u.worker"
 sound_move    = "m_worker"
@@ -1783,7 +1783,7 @@ uk_food       = 1
 uk_gold       = 1
 cargo         = "Small Land", "Merchant"
 flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC", "Unique", "Unbribable"
-roles         = "Ferryboat", "FerryStartUnit", "BarbarianBoat"
+roles         = "Ferryboat"
 helptext      = _("\
 The Longboat is your first deep ocean capable boat unit\
  that only can carry one Merchant or Small Land unit. It can act\
@@ -1823,7 +1823,7 @@ uk_food       = 1
 uk_gold       = 1
 cargo         = "Land", "Small Land", "Big Land", "Merchant"
 flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC", "Unique", "Unbribable"
-roles         = "Ferryboat", "FerryStartUnit", "BarbarianBoat"
+roles         = "Ferryboat"
 helptext      = _("\
  A much larger version of the caravel, it is most notorious \
 because of heavy offensive capabilities. Much of the focus \
