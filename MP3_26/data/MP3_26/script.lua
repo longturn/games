@@ -49,7 +49,7 @@ function kill_triremes(turn, year)
 	  end
 	  -- too far, sorry...
 	  if not at_coast then
-	    notify.event(player, tile, E.UNIT_LOST_MISC,
+	    notify.event(unit.owner, tile, E.UNIT_LOST_MISC,
 	                 messages[random(1, #messages)])
 	    unit:kill('fuel')
 	  end
