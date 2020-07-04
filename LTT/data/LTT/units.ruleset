@@ -845,7 +845,7 @@ Musketeers are infantry equipped with early\
 name          = _("Riflemen")
 class         = "Land"
 tech_req      = "Conscription"
-obsolete_by   = "Marines"
+obsolete_by   = "Infantry"
 graphic       = "u.riflemen"
 graphic_alt   = "-"
 sound_move    = "m_riflemen"
@@ -872,6 +872,40 @@ helptext      = _("\
 Riflemen are World War-era infantry, very good\
  at defending your cities.\
 ")
+
+
+[unit_infantry]
+name          = _("Infantry")
+class         = "Land"
+tech_req      = "Machine Tools"
+obsolete_by   = "None"
+graphic       = "u.infantry"
+graphic_alt   = "u.riflemen"
+sound_move    = "m_riflemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_riflemen"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 0
+attack        = 5
+defense       = 6
+hitpoints     = 20
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
+helptext      = _("\
+Infantry are modern version of infantry, relatively good\
+ at defending your cities.\
+")
+
 
 [unit_alpine_troops]
 name          = _("Alpine Troops")
