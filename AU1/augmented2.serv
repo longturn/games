@@ -57,7 +57,7 @@ set techlost_donor=0
 set techlost_recv=0
 set techpenalty=10
 set trademindist=10
-set trading_city=enabled
+set trading_city=disabled
 set team_pooled_research=disabled
 set techlevel=0
 set techlossforgiveness 10
