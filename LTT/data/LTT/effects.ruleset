@@ -3641,7 +3641,7 @@ reqs	=
 
 [effect_internet]
 type    = "Output_Bonus"
-value   = 50
+value   = 25
 reqs    =
     { "type", "name", "range", "survives"
       "Building", "Internet", "World", TRUE

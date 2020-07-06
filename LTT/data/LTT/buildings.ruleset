@@ -1977,7 +1977,7 @@ Gives an immediate technology advance to the player that builds it, \
 and thereafter all cities on the map are continuously visible to its \
 owner despite fog-of-war.\
 "), _("\
-Completion of this wonder permanently doubles the effect of \
+Completion of this wonder permanently adds 50% to the effect of \
 Research Labs for every player.\
 ")
 
