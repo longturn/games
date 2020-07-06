@@ -211,16 +211,17 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 80
+build_cost	= 60
 upkeep		= 1
 sabotage	= 100
 sound		= "b_bank"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the luxury and tax output in a city by an additional 50%. \
-With both a Bank and a Marketplace in a city, the total bonus is 100%.\
+Increases the luxury and tax output in a city by an additional 25%. \
+With both a Bank and a Marketplace in a city, the total bonus is 75%.\
 ")
+
 
 [building_barracks]
 name		= _("Barracks")

@@ -1829,7 +1829,7 @@ reqs    =
 
 [effect_bank]
 type    = "Output_Bonus"
-value   = 50
+value   = 25
 reqs    =
     { "type", "name", "range"
       "Building", "Bank", "City"
