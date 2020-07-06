@@ -1173,7 +1173,7 @@ name		= _("Stock Exchange")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Economics", "Player"
+      "Tech", "The Corporation", "Player"
       "Building", "Bank", "City"
     }
 graphic	= "b.stock_exchange"
