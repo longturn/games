@@ -1609,7 +1609,7 @@ helptext	= _("\
 Gives an immediate technology advance to the player that builds it, \
 and thereafter 6 extra research points every turn to its city.\
 "), _("\
-Completion of this wonder permanently doubles the effect of \
+Completion of this wonder permanently adds 50% to the effect of \
 Universities for every player.\
 ")
 
