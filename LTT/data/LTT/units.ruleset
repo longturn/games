@@ -1133,7 +1133,7 @@ of the technology tree.\
 name          = _("Horsemen")
 class         = "Land"
 tech_req      = "Horseback Riding"
-obsolete_by   = "Knights"
+obsolete_by   = "Chariot"
 graphic       = "u.horsemen"
 graphic_alt   = "-"
 sound_move    = "m_horsemen"
