@@ -1827,7 +1827,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 1500
+build_cost	= 2500
 upkeep		= 0
 sabotage	= 0
 sound		= "w_manhattan_project"
