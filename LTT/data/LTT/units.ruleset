@@ -1973,7 +1973,7 @@ The Frigate is a specialized ship with a strong offensive value,\
 name          = _("Flagship Frigate")
 class         = "Sea"
 tech_req      = "Navigation"
-obsolete_by   = "Ironclad"
+obsolete_by   = "Destroyer"
 graphic       = "u.frigate"
 graphic_alt   = "-"
 sound_move    = "m_frigate"
