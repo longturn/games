@@ -2748,7 +2748,7 @@ type    = "Nuke_Proof"
 value   = 30
 reqs    =
     { "type", "name", "range", "present"
-      "Building", "SDI Defense", "City", TRUE
+      "Building", "SDI Defense I", "City", TRUE
       "DiplRel", "Is foreign", "Local", TRUE
       "DiplRel", "Team", "Local", FALSE
     }
@@ -2759,7 +2759,7 @@ type    = "Nuke_Proof"
 value   = 70
 reqs    =
     { "type", "name", "range"
-      "Building", "SDI Defense", "City"
+      "Building", "SDI Defense I", "City"
 	  "Building", "Palace", "City"
     }
 
@@ -2769,7 +2769,7 @@ type    = "Defend_Bonus"
 value   = 30
 reqs    =
     { "type", "name", "range"
-      "Building", "SDI Defense", "City"
+      "Building", "SDI Defense I", "City"
       "UnitClass", "Missile", "Local"
     }
 	
@@ -2779,7 +2779,7 @@ type    = "Defend_Bonus"
 value   = 70
 reqs    =
     { "type", "name", "range"
-      "Building", "SDI Defense", "City"
+      "Building", "SDI Defense I", "City"
 	  "Building", "Palace", "City"
       "UnitClass", "Missile", "Local"
     }
@@ -2791,7 +2791,7 @@ type    = "Nuke_Proof"
 value   = 30
 reqs    =
     { "type", "name", "range", "present"
-      "Building", "SDI Defense", "City", TRUE
+      "Building", "SDI Defense II", "City", TRUE
 	  "Building", "Palace", "City", FALSE
       "DiplRel", "Is foreign", "Local", TRUE
       "DiplRel", "Team", "Local", FALSE
@@ -2803,7 +2803,7 @@ type    = "Defend_Bonus"
 value   = 30
 reqs    =
     { "type", "name", "range"
-      "Building", "SDI Defense", "City"
+      "Building", "SDI Defense II", "City"
 	  "Building", "Palace", "City", FALSE
       "UnitClass", "Missile", "Local"
     }
@@ -2814,7 +2814,7 @@ type    = "Nuke_Proof"
 value   = 30
 reqs    =
     { "type", "name", "range", "present"
-      "Building", "SDI Defense", "City", TRUE
+      "Building", "SDI Defense III", "City", TRUE
 	  "Building", "Palace", "City", FALSE
       "DiplRel", "Is foreign", "Local", TRUE
       "DiplRel", "Team", "Local", FALSE
@@ -2826,7 +2826,7 @@ type    = "Defend_Bonus"
 value   = 40
 reqs    =
     { "type", "name", "range"
-      "Building", "SDI Defense", "City"
+      "Building", "SDI Defense III", "City"
 	  "Building", "Palace", "City", FALSE
       "UnitClass", "Missile", "Local"
     }
