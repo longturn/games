@@ -2214,7 +2214,7 @@ Traveling under the surface of the ocean, Submarines have\
 [unit_nuclear_submarine]
 name          = _("Nuclear Submarine")
 class         = "Sea"
-tech_req      = "Combustion"
+tech_req      = "Nuclear Power"
 obsolete_by   = "None"
 graphic       = "u.nsubmarine"
 graphic_alt   = "u.submarine"
@@ -2231,7 +2231,7 @@ firepower     = 1
 move_rate     = 14
 vision_radius_sq = 28
 transport_cap = 4
-fuel          = 8
+fuel          = 10
 uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
