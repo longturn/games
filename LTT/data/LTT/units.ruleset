@@ -2498,6 +2498,70 @@ TIP:  You may be involved in a situation where you've invaded an\
  Eco-friendly nukes!\
 ")
 
+
+[unit_nuclear]
+name          = _("Nuclear")
+class         = "Missile"
+tech_req      = "Robotics"
+obsolete_by   = "None"
+graphic       = "u.nuclear"
+graphic_alt   = "-"
+sound_move    = "m_nuclear"
+sound_move_alt = "m_generic"
+sound_fight   = "f_nuclear"
+sound_fight_alt = "f_generic"
+build_cost    = 200
+pop_cost      = 0
+attack        = 99
+defense       = 0
+hitpoints     = 10
+firepower     = 1
+move_rate     = 0
+vision_radius_sq = 1
+transport_cap = 0
+fuel          = 1
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+flags         = "FieldUnit", "OneAttack", "Nuclear", "AirAttacker", "NoVeteran"
+; No veteran levels (level name is never displayed)
+veteran_names = _("green")
+veteran_raise_chance = 0
+veteran_work_raise_chance = 0
+veteran_power_fact = 100
+veteran_move_bonus = 0
+roles         = ""
+helptext      = _("\
+You can build Nuclear units when you have the required advance, and\
+ the Manhattan Project wonder has been built by any player.\
+ However, without further technology they cannot move on their own.\
+"), _("\
+With Advanced Flight, all Nuclear units (including those already\
+ built) gain a range of 9 movement points, and Rocketry increases\
+ this to 18.\
+"), _("\
+On impact, the blast will destroy any unit in an area 3 tiles wide\
+ (3x3 squares for rectangular grids), including friendly units.\
+ Any city within the blast area loses half its population, and\
+ land tiles within the blast area are subject to nuclear fallout.\
+"), _("\
+Similar to pollution and global warming, the risk of global nuclear\
+ winter increases with fallout. If nuclear winter occurs, terrain\
+ across the globe changes into desert, tundra, and ice. Settlers,\
+ Migrants, Workers, and Engineers and (for fallout on water)\
+ Transports can clean up nuclear fallout.\
+"), _("\
+TIP:  You may be involved in a situation where you've invaded an\
+ enemy country en masse, but the enemy cities are too strong.\
+ Before using a Nuclear unit, assemble a gang of cleanup units\
+ next to the city and have them ready to fix the fallout on the\
+ same turn it occurs! This minimizes the chance of nuclear winter.\
+ Eco-friendly nukes!\
+")
+
+
+
 [unit_diplomat]
 name          = _("Diplomat")
 class         = "Small Land"
