@@ -1834,18 +1834,18 @@ The Longboat is your first deep ocean capable boat unit\
 name          = _("Square-Rigged Caravel")
 class         = "Sea"
 tech_req      = "Magnetism"
-obsolete_by   = "Galleon"
+obsolete_by   = "Transport"
 graphic       = "u.caravel"
 graphic_alt   = "-"
 sound_move    = "m_caravel"
 sound_move_alt = "m_generic"
 sound_fight   = "f_caravel"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 55
 pop_cost      = 0
 attack        = 3
 defense       = 2
-hitpoints     = 10
+hitpoints     = 8
 firepower     = 1
 move_rate     = 9
 vision_radius_sq = 40
@@ -1855,7 +1855,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Land", "Small Land", "Big Land", "Merchant"
+cargo         = "Land", "Small Land", "Big Land", "Big Siege", "Merchant"
 flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC", "Unique", "Unbribable"
 roles         = "Ferryboat"
 helptext      = _("\
@@ -1863,7 +1863,7 @@ helptext      = _("\
 because of heavy offensive capabilities. Much of the focus \
 on the design is on combat and because of that it \
 only has limited transport capacity even while it can also carry \
-big land units the regular caravel can't. This ship needs to return to \
+those land units the regular caravel can't. This ship needs to return to \
 port for support and maintenance and it can't survive on it's own \
 for too long. In the early ages of exploration it's great for \
 keeping your coastals free of enemy ships.\
