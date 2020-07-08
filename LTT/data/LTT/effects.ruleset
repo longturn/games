@@ -2743,9 +2743,9 @@ reqs    =
       "UnitClass", "Helicopter", "Local"
     }
 
-[effect_sdi_defense]
+[effect_sdi_i_defense_1]
 type    = "Nuke_Proof"
-value   = 90
+value   = 30
 reqs    =
     { "type", "name", "range", "present"
       "Building", "SDI Defense", "City", TRUE
@@ -2754,9 +2754,9 @@ reqs    =
     }
 	
 	
-[effect_sdi_defense_2]
+[effect_sdi_i_defense_2]
 type    = "Nuke_Proof"
-value   = 10
+value   = 70
 reqs    =
     { "type", "name", "range"
       "Building", "SDI Defense", "City"
@@ -2764,14 +2764,74 @@ reqs    =
     }
 
 
-[effect_sdi_defense_1]
+[effect_sdi_i_defense_3]
 type    = "Defend_Bonus"
-value   = 100
+value   = 30
 reqs    =
     { "type", "name", "range"
       "Building", "SDI Defense", "City"
       "UnitClass", "Missile", "Local"
     }
+	
+	
+[effect_sdi_i_defense_4]
+type    = "Defend_Bonus"
+value   = 70
+reqs    =
+    { "type", "name", "range"
+      "Building", "SDI Defense", "City"
+	  "Building", "Palace", "City"
+      "UnitClass", "Missile", "Local"
+    }
+	
+
+	
+[effect_sdi_ii_defense_1]
+type    = "Nuke_Proof"
+value   = 30
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "SDI Defense", "City", TRUE
+	  "Building", "Palace", "City", FALSE
+      "DiplRel", "Is foreign", "Local", TRUE
+      "DiplRel", "Team", "Local", FALSE
+    }
+	
+
+[effect_sdi_ii_defense_2]
+type    = "Defend_Bonus"
+value   = 30
+reqs    =
+    { "type", "name", "range"
+      "Building", "SDI Defense", "City"
+	  "Building", "Palace", "City", FALSE
+      "UnitClass", "Missile", "Local"
+    }
+	
+	
+[effect_sdi_iii_defense_1]
+type    = "Nuke_Proof"
+value   = 30
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "SDI Defense", "City", TRUE
+	  "Building", "Palace", "City", FALSE
+      "DiplRel", "Is foreign", "Local", TRUE
+      "DiplRel", "Team", "Local", FALSE
+    }
+	
+
+[effect_sdi_iii_defense_2]
+type    = "Defend_Bonus"
+value   = 40
+reqs    =
+    { "type", "name", "range"
+      "Building", "SDI Defense", "City"
+	  "Building", "Palace", "City", FALSE
+      "UnitClass", "Missile", "Local"
+    }
+	
+
 
 [effect_sewer_system]
 type    = "Size_Unlimit"
