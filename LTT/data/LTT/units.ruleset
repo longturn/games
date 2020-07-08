@@ -2440,8 +2440,8 @@ TIP:  These extremely powerful missiles can\
 ")
 
 
-[unit_nuclear]
-name          = _("Nuclear")
+[unit_nuclear_bomb]
+name          = _("Nuclear Bomb")
 class         = "Missile"
 tech_req      = "Nuclear Fission"
 obsolete_by   = "None"
@@ -2465,7 +2465,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "FieldUnit", "OneAttack", "Nuclear", "HasNoZOC", "NoVeteran",  "NoHome"
+flags         = "FieldUnit", "OneAttack", "Nuclear", "HasNoZOC", "NoVeteran",  "NoHome", "Unique"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
