@@ -2445,13 +2445,13 @@ name          = _("Nuclear Bomb")
 class         = "Missile"
 tech_req      = "Nuclear Fission"
 obsolete_by   = "None"
-graphic       = "u.nuclear"
-graphic_alt   = "-"
+graphic       = "u.nuclearbomb"
+graphic_alt   = "u.nuclear"
 sound_move    = "m_nuclear"
 sound_move_alt = "m_generic"
 sound_fight   = "f_nuclear"
 sound_fight_alt = "f_generic"
-build_cost    = 160
+build_cost    = 320
 pop_cost      = 0
 attack        = 99
 defense       = 0
@@ -2474,9 +2474,10 @@ veteran_power_fact = 100
 veteran_move_bonus = 0
 roles         = ""
 helptext      = _("\
-You can build Nuclear units when you have the required advance, and\
+You can build the Nuclear Bomb unit when you have the required advance, and\
  the Manhattan Project wonder has been built by any player.\
- However, without further technology they cannot move on their own.\
+ However, without further technology the nuclear units cannot move on their own. \
+ The Nuclear Bomb is unique and each nation can have only one at a time.\
 "), _("\
 With Advanced Flight, all Nuclear units (including those already\
  built) gain a range of 8 movement points, and Rocketry increases\
