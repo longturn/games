@@ -332,7 +332,7 @@ actor_reqs    =
 action = "Steal Tech"
 actor_reqs    =
     { "type",   "name", "range", "present"
-      "UnitFlag", "Scholar", "Local"
+      "UnitType", "Scholar", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
     }
@@ -344,7 +344,7 @@ target_reqs  =
 action = "Targeted Steal Tech"
 actor_reqs    =
     { "type",   "name", "range"
-      "UnitFlag", "Scholar", "Local"
+      "UnitType", "Scholar", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
     }
