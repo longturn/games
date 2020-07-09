@@ -284,7 +284,7 @@ ui_name_help_wonder = _("Help %sbuild Wonder%s")
 action = "Sabotage City"
 actor_reqs    =
     { "type",   "name", "range"
-      "UnitFlag", "Diplomat", "Local"
+      "UnitFlag", "RealDiplomat", "Local"
       "DiplRel", "War", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
@@ -295,7 +295,7 @@ action = "Targeted Sabotage City"
 actor_reqs    =
     { "type",   "name", "range"
       "DiplRel", "War", "Local"
-      "UnitFlag", "Spy", "Local"
+      "UnitFlag", "RealSpy", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
     }
@@ -304,7 +304,7 @@ actor_reqs    =
 action       = "Establish Embassy"
 actor_reqs    =
     { "type",   "name", "range"
-      "UnitFlag", "Diplomat", "Local"
+      "UnitFlag", "RealDiplomat", "Local"
       "MinMoveFrags", "1", "Local"
     }
 target_reqs  =
@@ -316,7 +316,7 @@ target_reqs  =
 action       = "Investigate City"
 actor_reqs    =
     { "type",   "name", "range"
-      "UnitFlag", "Diplomat", "Local"
+      "UnitFlag", "RealDiplomat", "Local"
       "MinMoveFrags", "1", "Local"
     }
 
@@ -332,7 +332,7 @@ actor_reqs    =
 action = "Steal Tech"
 actor_reqs    =
     { "type",   "name", "range", "present"
-      "UnitFlag", "Diplomat", "Local"
+      "UnitFlag", "Scholar", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
     }
@@ -344,7 +344,7 @@ target_reqs  =
 action = "Targeted Steal Tech"
 actor_reqs    =
     { "type",   "name", "range"
-      "UnitFlag", "Spy", "Local"
+      "UnitFlag", "Scholar", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
     }
@@ -357,7 +357,7 @@ target_reqs  =
 action = "Poison City"
 actor_reqs    =
     { "type",   "name", "range"
-      "UnitFlag", "Spy", "Local"
+      "UnitFlag", "RealSpy", "Local"
       "DiplRel", "War", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
@@ -371,7 +371,7 @@ target_reqs    =
 action = "Incite City"
 actor_reqs    =
     { "type",   "name", "range", "present"
-      "UnitFlag", "Diplomat", "Local", TRUE
+      "UnitFlag", "RealDiplomat", "Local", TRUE
       "DiplRel", "Alliance", "Local", FALSE
       "DiplRel", "Team", "Local", FALSE
       "UnitState", "OnLivableTile", "Local", TRUE
@@ -390,7 +390,7 @@ target_reqs  =
 action = "Bribe Unit"
 actor_reqs    =
     { "type",   "name", "range", "present"
-      "UnitFlag", "Diplomat", "Local", TRUE
+      "UnitFlag", "RealDiplomat", "Local", TRUE
       "DiplRel", "Alliance", "Local", FALSE
       "DiplRel", "Team", "Local", FALSE
       "UnitState", "OnLivableTile", "Local", TRUE
@@ -409,7 +409,7 @@ target_reqs    =
 action = "Sabotage Unit"
 actor_reqs    =
     { "type",   "name", "range"
-      "UnitFlag", "Spy", "Local"
+      "UnitFlag", "RealSpy", "Local"
       "DiplRel", "War", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"

@@ -33,6 +33,8 @@ flags =
     _("Unbribable")
     _("TradeRoute"), _("Can establish trade routes (must travel to target city).")
     _("HelpWonder")
+    _("RealSpy"), _("Can do real spy actions, unlike Scholars.")
+    _("RealDiplomat"), _("Can do real diplomat actions, unlike Scholars.")
   }
 
 [veteran_system]
@@ -2588,7 +2590,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Diplomat", "IgZOC", "NonMil", "HasNoZOC"
+flags         = "Diplomat", "IgZOC", "NonMil", "HasNoZOC", "RealDiplomat"
 veteran_names =
 ; /* TRANS: diplomatic rank. */
   _("?diplomatic_rank:attaché"),
@@ -2699,7 +2701,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Diplomat", "IgZOC", "NonMil", "HasNoZOC", "Spy"
+flags         = "Diplomat", "RealDiplomat","IgZOC", "NonMil", "HasNoZOC", "Spy", "RealSpy"
 veteran_names =
 ; /* TRANS: Spy veteran level */
   _("?spy_level:informant"),
@@ -2774,7 +2776,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Diplomat", "IgZOC", "NonMil", "HasNoZOC", "Spy", "IgTer", "Partial_Invis"
+flags         = "Diplomat", "RealDiplomat", "IgZOC", "NonMil", "HasNoZOC", "Spy", "IgTer", "Partial_Invis", "RealSpy"
 veteran_names =
 ; /* TRANS: Spy veteran level */
   _("?spy_level:informant"),
@@ -2824,6 +2826,58 @@ An Operative that survives the more aggressive actions (sabotage, theft,\
 Operatives built under Communist or Federation governments will start\
  at the first veteran level (handler).\
 ")
+
+
+
+
+[unit_scholar]
+name          = _("Scholar")
+class         = "Small Land"
+tech_req      = "Literacy"
+obsolete_by   = "None"
+graphic       = "u.scholar"
+graphic_alt   = "u.diplomat"
+sound_move    = "m_diplomat"
+sound_move_alt = "m_generic"
+sound_fight   = "f_diplomat"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 0
+attack        = 0
+defense       = 0
+hitpoints     = 10
+firepower     = 1
+move_rate     = 4
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+flags         = "IgZOC", "NonMil", "HasNoZOC", "Unique", "Diplomat", "Spy", "Scholar"
+; No veteran levels (level name is never displayed)
+veteran_names = _("green")
+veteran_raise_chance = 0
+veteran_work_raise_chance = 0
+veteran_power_fact = 100
+veteran_move_bonus = 0
+roles         = ""
+helptext      = _("\
+The Scholar wanders foreign lands seeking new knowledge to share in his native country.\
+"), _("\
+The actions available to Scholars in a foreign city are:\
+"), _("\
+ - \"Steal Technology\": Your unit attempts to learn the secrets of a\
+ random technology known to the city's owner but not to you. Technology\
+ may only be stolen once from a given enemy city by Diplomats. This\
+ action may be attempted even when not at war, but will cause a\
+ diplomatic incident.\
+")
+
+
+
+
 
 [unit_caravan]
 name          = _("Caravan")
