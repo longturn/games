@@ -93,13 +93,14 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range", "present"
       "Tech", "Construction", "Player", TRUE
-      "Extra", "River", "Adjacent", FALSE
-      "Terrain", "Lake", "Adjacent", FALSE
     }
 graphic	= "b.aqueduct"
 graphic_alt	= "-"
 obsolete_by	=
-    { "type", "name", "range"
+    {
+	  "type", "name", "range", "present"
+      "Extra", "River", "Adjacent", TRUE
+      "Terrain", "Lake", "Adjacent", TRUE
     }
 build_cost	= 40
 upkeep		= 1
