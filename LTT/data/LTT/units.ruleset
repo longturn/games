@@ -1429,7 +1429,8 @@ Catapults are large rock-throwing machines of war.\
 While powerful, Catapults (and their successors) are bulky and awkward; \
 they require roads to move in rough terrain (mountains, swamps, and \
 jungles), are difficult to defend, and are too big for early ships \
-(Triremes and Caravels).\
+(Triremes and Caravels). Catapults and later siege units \ 
+do not gain benefits from Barracks. \
 ")
 
 [unit_cannon]
@@ -1463,7 +1464,7 @@ helptext      = _("\
 Cannons are large firearms that can fire heavy projectiles over long \
 distances. As with the catapults they replace, they are very strong \
 attackers - and even more powerful against cities - but equally weak defenders and will need an escort to be \
-effective, and have limited mobility.\
+effective, and have limited mobility. Cannon and other siege units do not gain benefits from Barracks. \
  Unescorted cannons may be captured by the enemy. \
 ")
 
@@ -1497,7 +1498,7 @@ roles         = "AttackStrongStartUnit"
 helptext      = _("\
 The artillery is an upgraded cannon. As with its predecessors, it is a \
 very strong attacker - and even more powerful against cities - but equally weak defender and will need an escort \
-to be effective, and has limited mobility.\
+to be effective, and has limited mobility. Artillery and other siege units do not gain benefits from Barracks. \
  Unescorted artilleries may be captured by the enemy. \
 ")
 
@@ -1531,7 +1532,7 @@ roles         = "AttackStrongStartUnit"
 helptext      = _("\
 Howitzers are upgraded artillery with improved defensive as well as \
 offensive capabilities. However, they still have the limited mobility \
-of their predecessors.\
+of their predecessors. Like earlier siege units, Howitzers do not gain benefits from Barracks. \
 ")
 
 [unit_fighter]
