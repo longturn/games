@@ -274,7 +274,7 @@ sound		= "b_barracks_i"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-With a Barracks, each new land unit built in a city will\
+With a Barracks, each new land (except siege units like Catapults) unit built in a city will\
  automatically have Veteran status, which means that its attack and\
  defense strengths are increased by 50%.\
 "), _("\
@@ -303,7 +303,7 @@ sound		= "b_barracks_ii"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-With a Barracks, each new land unit built in a city will\
+With a Barracks, each new land unit (except siege units like Cannon and Artillery) built in a city will\
  automatically have Veteran status, which means that its attack and\
  defense strengths are increased by 50%.\
 "), _("\
@@ -330,7 +330,7 @@ sound		= "b_barracks_iii"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-With a Barracks, each new land unit built in a city will\
+With a Barracks, each new land unit (except siege units like Artillery and Howitzer) built in a city will\
  automatically have Veteran status, which means that its attack and\
  defense strengths are increased by 50%.\
 "), _("\
@@ -515,11 +515,9 @@ sabotage	= 100
 sound		= "b_granary"
 sound_alt	= "b_generic"
 helptext	= _("\
-When any small city grows or shrinks, 10 food points are saved; this \
+When any small city grows or shrinks, 50 % of food points are saved; this \
 helps cities to grow faster and more easily withstand famine. With a \
-Granary this is extended to cities of size 4 and above. (10 food points \
-is half what a small city needs to grow, but more points are needed \
-for later growth steps.)\
+Granary this is extended to cities of size 4 and above. \
 "), _("\
 A Granary also halves the food wasted in cities far from your capital. \
 Together with a Courthouse it eliminates food waste.\
