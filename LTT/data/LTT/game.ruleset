@@ -500,7 +500,7 @@ tech_leakage = "All Players"
 ; "Basic"  - upkeep is calculated as:
 ;     <Cost of technology> / tech_upkeep_divider - tech_upkeep_free
 ; "Cities" - upkeep is calculated like "Basic", but multiplied by number of cities
-tech_upkeep_style = "Cities"
+tech_upkeep_style = "None"
 
 ; upkeep cost is divided by this value
 tech_upkeep_divider = 6000
