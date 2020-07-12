@@ -2215,7 +2215,10 @@ reqs	=
     }
 graphic         = "b.mausoleum"
 graphic_alt     = "b.oracle"
-obsolete_by	= "Bronze Working"
+obsolete_by	=
+    { "type", "name", "range"
+	  "Tech", "Bronze Working", "Player"
+    }
 build_cost	= 20
 upkeep		= 0
 sabotage	= 0
