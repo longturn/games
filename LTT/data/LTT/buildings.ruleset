@@ -130,13 +130,15 @@ knowledge of Construction, and it costs more to build and maintain.\
 name		= _("Aqueduct, Lake")
 genus		= "Improvement"
 reqs	=
-    { "type", "name", "range"
-      "Terrain", "Lake", "Adjacent"
+    { 
+		"type", "name", "range"
     }
 graphic	= "b.aqueduct"
 graphic_alt	= "-"
 obsolete_by	=
-    { "type", "name", "range"
+    { 
+	  "type", "name", "range", "present"
+      "Terrain", "Lake", "Adjacent", FALSE
     }
 build_cost	= 20
 upkeep		= 0
@@ -166,14 +168,16 @@ are cheap to build and maintain.\
 name		= _("Aqueduct, River")
 genus		= "Improvement"
 reqs	=
-    { "type", "name", "range", "present"
-      "Extra", "River", "Adjacent", TRUE
-      "Terrain", "Lake", "Adjacent", FALSE
+    { 
+		"type", "name", "range", "present"
     }
 graphic	= "b.aqueduct"
 graphic_alt	= "-"
 obsolete_by	=
-    { "type", "name", "range"
+    {
+	  "type", "name", "range", "present"
+      "Extra", "River", "Adjacent", FALSE
+      "Terrain", "Lake", "Adjacent", TRUE
     }
 build_cost	= 20
 upkeep		= 0
