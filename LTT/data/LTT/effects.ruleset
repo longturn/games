@@ -4220,7 +4220,7 @@ type    = "Transform_Possible"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Tech", "Fusion Power", "Player"
+      "Tech", "Electricity", "Player"
       "UnitFlag", "Transform", "Local"
     }
 
