@@ -538,7 +538,9 @@ reqs	=
 graphic	= "b.harbour"
 graphic_alt	= "-"
 obsolete_by	=
-    { "type", "name", "range"
+    { 
+	  "type", "name", "range", "present"
+      "TerrainFlag", "Sea", "City", FALSE
     }
 build_cost	= 40
 upkeep		= 1
@@ -2182,7 +2184,7 @@ Republic and Democracy).\
 name		= _("Women's Suffrage")
 genus		= "SmallWonder"
 reqs	=
-    { "type", "name", "range"
+    { "type", "name", "range", "survives"
       "Tech", "Conscription", "Player"
     }
 graphic	= "b.womens_suffrage"
