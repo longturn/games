@@ -228,8 +228,8 @@ With both a Bank and a Marketplace in a city, the total bonus is 75%.\
 ")
 
 
-[building_trade_center]
-name		= _("Trade Center")
+[building_mercantile_exchange]
+name		= _("Mercantile Exchange")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
@@ -249,7 +249,7 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Increases the luxury and tax output in a city by an additional 25%. \
-With a Trade Center, a Bank and a Marketplace in a city, the total bonus is 100%.\
+With a Mercantile Exchange, a Bank and a Marketplace in a city, the total bonus is 100%.\
 ")
 
 [building_barracks]
@@ -1260,7 +1260,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "The Corporation", "Player"
-      "Building", "Trade Center", "City"
+      "Building", "Mercantile Exchange", "City"
     }
 graphic	= "b.stock_exchange"
 graphic_alt	= "-"
@@ -1276,7 +1276,7 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Increases the luxury and tax output in a city by an additional 50%, \
 or 100% if Super Highways are also in the city. A Marketplace, Bank, \
-Trade Center and Stock Exchange together in a city yield a total bonus of 150%; \
+Mercantile Exchange and Stock Exchange together in a city yield a total bonus of 150%; \
 adding Super Highways yields a total of 200%.\
 ")
 
