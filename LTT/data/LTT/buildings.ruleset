@@ -1797,7 +1797,7 @@ your cities).\
 
 [building_magellans_expedition]
 name		= _("Magellan's Expedition")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Magnetism", "Player"
