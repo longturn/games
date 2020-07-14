@@ -1926,7 +1926,7 @@ tile already producing trade.\
 
 [building_michelangelos_chapel]
 name		= _("Michelangelo's Chapel")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Monotheism", "Player"
