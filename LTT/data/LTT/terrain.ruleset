@@ -1814,7 +1814,7 @@ flags          = "DiplomatDefense"
 [base_fortress]
 extra          = "Fortress"
 gui_type       = "Fortress"
-border_sq      = -1
+border_sq      = 5
 flags          = "NoAggressive", "DiplomatDefense"
 
 [base_airstrip]
