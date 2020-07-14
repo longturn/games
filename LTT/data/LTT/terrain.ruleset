@@ -1481,7 +1481,7 @@ build_time     = 2
 removal_time   = 0
 native_to      = "Land", "Small Land", "Merchant", "Big Land", "Big Siege"
 conflicts      = "Airstrip", "Airbase"
-flags          = "NativeTile"
+flags          = "NativeTile", "NoStackDeath"
 helptext       = _("\
 Fortresses are more permanent forts; construction on them can only begin \
 once the underlying fort is complete. Forts on River tiles cannot be \
@@ -1564,7 +1564,7 @@ build_time     = 2
 removal_time   = 0
 native_to      = "Air", "Helicopter", "Missile"
 conflicts      = "Fort", "Fortress"
-flags          = "Refuel"
+flags          = "Refuel", "NoStackDeath"
 helptext       = _("\
 Airbases are more permanent airstrips; construction on them can only \
 begin once the underlying airstrip is complete. Airstrips on River tiles \
