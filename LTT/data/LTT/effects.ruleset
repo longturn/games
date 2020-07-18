@@ -294,15 +294,7 @@ reqs    =
 ;      "UnitClass", "Missile", "Local", FALSE
     }
 
-; Cumulative with airstrip
-; 50 + 50 = 100
-[effect_airbase_defense]
-type    = "Defend_Bonus"
-value   = 50
-reqs    =
-    { "type", "name", "range", "present"
-      "Extra", "Airbase", "Local", TRUE
-    }
+
 
 [effect_trade_routes]
 type    = "Max_Trade_Routes"
