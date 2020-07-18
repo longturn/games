@@ -2841,7 +2841,7 @@ defense       = 0
 hitpoints     = 10
 firepower     = 1
 move_rate     = 4
-vision_radius_sq = 2
+vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
 uk_happy      = 0
@@ -2861,14 +2861,17 @@ The Scholar wanders foreign lands seeking new knowledge to share in his native c
 "), _("\
 The actions available to Scholars in a foreign city are:\
 "), _("\
- - \"Steal Technology\": Your unit attempts to learn the secrets of a\
- random technology known to the city's owner but not to you. Technology\
- may only be stolen once from a given enemy city by Diplomats. This\
+  - \"Steal Technology\" / \"Industrial Espionage\": Your unit attempts to learn the secrets of a\
+ random or chosen technology known to the city's owner but not to you. Trying to steal a \
+ particular technology is much less likely to succeed than trying to steal a random \
+ technology (\"At Scholar\'s discretion\"). Also, every time technology is stolen from a city, \
+ the chances of further espionage attempts succeeding at that particular city go down. This\
  action may be attempted even when not at war, but will cause a\
  diplomatic incident.\
+"), _("\
+Like Spies, Scholars have small chance of returning after a successful mission, but are often \
+lost after a mission. Foreign Diplomats and Spies will defend against the Scholar as against other Spy actions.\
 ")
-
-
 
 
 
