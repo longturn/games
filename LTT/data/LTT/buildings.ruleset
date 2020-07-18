@@ -1609,7 +1609,7 @@ graphic	= "b.great_wall"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range", "survives"
-      "Tech", "Construction", "Player", FALSE
+      "Tech", "Gunpowder", "Player", FALSE
     }
 build_cost	= 150
 upkeep		= 0
@@ -1618,7 +1618,7 @@ sound		= "w_great_wall"
 sound_alt	= "w_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the defense of all your cities by adding a +50% bonus to \
+Increases the defense of all your cities by adding a +25% bonus to \
 its units' intrinsic defense strength against land units (this is cumulative \
 with any City Walls), and preventing the loss of population which occurs \
 when a defending unit is defeated by a land unit.\
