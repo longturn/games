@@ -163,7 +163,7 @@ name          = _("?unitclass:Big Land")
 min_speed     = 1
 hp_loss_pct   = 0
 flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
-                "CollectRansom","ZOC", "CanFortify", "KillCitizen", "Airliftable"
+                "CollectRansom","ZOC", "CanFortify", "KillCitizen", "Airliftable", "CanPillage"
 
 [unitclass_land_siege]
 ; /* TRANS: Unit class: used adjectivally */
@@ -171,7 +171,7 @@ name          = _("?unitclass:Big Siege")
 min_speed     = 1
 hp_loss_pct   = 0
 flags         = "TerrainSpeed", "DamageSlows", "BuildAnywhere",
-                "CollectRansom","ZOC", "CanFortify", "KillCitizen", "TerrainDefense", "AttackNonNative"
+                "CollectRansom","ZOC", "CanFortify", "KillCitizen", "Airliftable", "AttackNonNative"
 
 [unitclass_merchant]
 ; /* TRANS: Unit class: used adjectivally */
