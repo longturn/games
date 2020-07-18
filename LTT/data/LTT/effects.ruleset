@@ -3274,7 +3274,7 @@ reqs    =
 
 [effect_great_library_1]
 type    = "Output_Add_Tile"
-value   = 4
+value   = 10
 reqs    =
     { "type", "name", "range"
       "Building", "Great Library", "City"
@@ -3417,7 +3417,7 @@ reqs    =
 
 [effect_isaac_newtons_college_1]
 type    = "Output_Add_Tile"
-value   = 6
+value   = 12
 reqs    =
     { "type", "name", "range"
       "Building", "Isaac Newton's College", "City"
@@ -3996,16 +3996,16 @@ reqs    =
 ; each city has at least one slot to build units
 [effect_city_build_slots_basic]
 type    = "City_Build_Slots"
-value   = 1
+value   = 3
 reqs   =
     { "type", "name", "range", "present"
       "Building", "Mfg. Plant", "City", FALSE
     }
 
-; Mfg. Plant => 2 slots total
+; Mfg. Plant => 4 slots total
 [effect_city_build_slots_mfg_plant]
 type    = "City_Build_Slots"
-value   = 2
+value   = 4
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
