@@ -29,6 +29,7 @@ set foggedborders=enabled
 set rapturedelay=3
 set restrictinfra=enabled
 set revolen=2
+set revolentype = FIXED
 set spacerace=enabled
 set startunits=cccccwwwwwwwxxd
 set techlevel=0

@@ -823,5 +823,5 @@ set =
       "razechance", 10
       "techlossforgiveness", 0
       "techlossrestore", 50
-      "revolentype", "RANDQUICK"
+      "revolentype", "FIXED"
     }
