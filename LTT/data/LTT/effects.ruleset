@@ -4279,4 +4279,11 @@ reqs    =
       "OutputType", "Trade", "Local"
     }
 
+[effect_city_work]
+type    = "City_Radius_Sq"
+value   = 10
+reqs    =
+    { "type", "name", "range", "present"
+      "MaxUnitsOnTile", "0", "Local", FALSE
+    }
 
