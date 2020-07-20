@@ -41,7 +41,7 @@ set razechance=10
 set happyborders=enabled
 set occupychance=0
 set globalwarming=enabled
-set globalwarming_percent=30
+set globalwarming_percent=300
 
 # diplomacy, technology
 set diplchance=40
