@@ -75,7 +75,7 @@ set scorelog=enabled
 set timeout=82800
 set unitwaittime=36000
 set fixedlength 1
-metamessage "Longturn Traditional for multiplayer games | More info: http://longturn.net"
+metamessage "Longturn Traditional for multiplayer games - LT54 | More info: http://longturn.net"
 metapatches longturn
 
 
