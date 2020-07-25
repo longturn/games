@@ -2218,7 +2218,7 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Ceremonial Burial", "Player"
     }
-graphic         = "b.mausoleum"
+graphic         = "b.hypogeum"
 graphic_alt     = "b.oracle"
 obsolete_by	=
     { "type", "name", "range"
