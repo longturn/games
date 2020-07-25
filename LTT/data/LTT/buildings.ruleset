@@ -1843,9 +1843,11 @@ sound		= "w_manhattan_project"
 sound_alt	= "w_generic"
 ;helptext is set in client/helpdata.c:helptext_wonder()
 helptext	= _("\
-The Manhattan Project will make it possible to build the first nuclear weapons. \
-Anyone with the Nuclear Fission technology will be able to build the nuclear bomb. \
-The first nuclear bomb is unique and the it's possible to own only one of them at a time.\
+The Manhattan Project will make it possible to build nuclear weapons. After it is built, \
+anyone with the necessary technological advances can build nuclear weapons. The Nuclear \
+Fission advance is required to build the early Nuclear Bomb, which is unique to a nation: \
+each nation can have only one at a time. The Robotics advance is required to build the \
+later Nuclear units, which are not limited in number.
 ")
 
 
