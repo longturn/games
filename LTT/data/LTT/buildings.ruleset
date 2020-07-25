@@ -237,8 +237,8 @@ reqs	=
       "Tech", "Economics", "Player"
       "Building", "Bank", "City"
     }
-graphic	= "b.bank"
-graphic_alt	= "-"
+graphic    = "b.mercantile_exchange"
+graphic_alt    = "b.bank"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -1019,8 +1019,8 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Radio", "Player"
     }
-graphic	= "b.sdi_defense"
-graphic_alt	= "-"
+graphic	= "b.sdi_defense_1"
+graphic_alt	= "b.sdi_defense"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -1048,8 +1048,8 @@ reqs	=
       "Tech", "Laser", "Player"
 	  "Building", "SDI Defense I", "City"
     }
-graphic	= "b.sdi_defense"
-graphic_alt	= "-"
+graphic	= "b.sdi_defense_2"
+graphic_alt	= "b.sdi_defense"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -1076,8 +1076,8 @@ reqs	=
       "Tech", "Space Flight", "Player"
 	  "Building", "SDI Defense II", "City"
     }
-graphic	= "b.sdi_defense"
-graphic_alt	= "-"
+graphic	= "b.sdi_defense_3"
+graphic_alt	= "b.sdi_defense"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -1911,8 +1911,8 @@ reqs	=
       "Tech", "Espionage", "Player"
       "Building", "University", "City"
     }
-graphic	= "b.university"
-graphic_alt	= "-"
+graphic	= "b.atlantic_telegraph_company"
+graphic_alt	= "b.university"
 obsolete_by	= "None"
 build_cost	= 250
 upkeep		= 0
