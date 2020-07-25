@@ -563,6 +563,53 @@ TIP: Immigrants can be a good alternative to Workers in overpopulated \
 cities, as they benefit from free food upkeep.\
 ")
 
+
+[unit_original_worker]
+name          = _("?unit:Original Workers")
+class         = "Small Land"
+tech_req      = "None"
+obsolete_by   = "Workers"
+graphic       = "u.worker"
+graphic_alt   = "u.engineers" ; for compatibility
+sound_move    = "m_worker"
+sound_move_alt = "m_generic"
+sound_fight   = "f_worker"
+sound_fight_alt = "f_generic"
+build_cost    = 20
+pop_cost      = 0
+attack        = 0
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Airbase"
+; No veteran levels (level name is never displayed)
+;veteran_names = _("green")
+;veteran_raise_chance = 0
+;veteran_work_raise_chance = 0
+;veteran_power_fact = 100
+;veteran_move_bonus = 0
+roles         = "Settlers", "WorkerStartUnit"
+helptext      = _("\
+The original workers are those you start the game with. \
+You can't build original workers. While the original workers have less moves compared \
+to the workers the original workers have one major advantage. The enemy is not able to \
+capture the original workers. Only the workers you can build can be captured. \
+Workers have the ability to improve terrain tiles. See the help on \
+Terrain and Terrain Alterations for the effects of their actions.\
+"), _("\
+Workers can build airstrips, airbases, and buoys, which Settlers \
+and Migrants cannot. Workers must be on board a ship to build buoys.\
+")
+
+
 [unit_worker]
 name          = _("?unit:Workers")
 class         = "Small Land"
@@ -588,14 +635,14 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Airbase"
+flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Airbase", "Capturable"
 ; No veteran levels (level name is never displayed)
 ;veteran_names = _("green")
 ;veteran_raise_chance = 0
 ;veteran_work_raise_chance = 0
 ;veteran_power_fact = 100
 ;veteran_move_bonus = 0
-roles         = "Settlers", "WorkerStartUnit"
+roles         = "Settlers"
 helptext      = _("\
 Workers have the ability to improve terrain tiles. See the help on \
 Terrain and Terrain Alterations for the effects of their actions.\
