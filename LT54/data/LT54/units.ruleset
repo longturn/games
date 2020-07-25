@@ -564,12 +564,12 @@ cities, as they benefit from free food upkeep.\
 ")
 
 
-[unit_original_worker]
-name          = _("?unit:Original Workers")
+[unit_tribal_worker]
+name          = _("?unit:Tribal Workers")
 class         = "Small Land"
 tech_req      = "None"
 obsolete_by   = "Workers"
-graphic       = "u.original_worker"
+graphic       = "u.tribal_worker"
 graphic_alt   = "u.worker" ; for compatibility
 sound_move    = "m_worker"
 sound_move_alt = "m_generic"
