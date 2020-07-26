@@ -3033,11 +3033,7 @@ Explorers are brave individuals that are very useful for\
 Explorers can also perform some actions in another player's city, although\
  the unit disappears after the action is complete.\
 "), _("\
- - \"Establish Embassy\": This action always succeeds, and gives\
- permanent contact with the city's owner, as well as intelligence\
- on their tax rates and technology. Each player you have an embassy\
- with that knows a technology reduces that technology's research\
- cost to you.\
+ - \"Establish Embassy\": This action is not enabled in this game.\
 "), _("\
  - \"Investigate City\": Your unit attempts to report detailed\
  information about the city: its status, what buildings and units are\
