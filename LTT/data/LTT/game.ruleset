@@ -320,13 +320,6 @@ actor_reqs    =
       "MinMoveFrags", "1", "Local"
     }
 
-[actionenabler_investigate_city_explorer]
-action       = "Investigate City"
-actor_reqs    =
-    { "type",   "name", "range"
-      "UnitType", "Explorer", "Local"
-      "MinMoveFrags", "1", "Local"
-    }
 
 [actionenabler_steal_tech_random]
 action = "Steal Tech"
