@@ -81,11 +81,12 @@ Allows a city to produce veteran air units (including helicopters and\
  Also, damaged air units (again, including helicopters) which stay in\
  town for one full turn without moving are completely restored.\
 "), _("\
-Two cities with Airports can airlift one unit per turn (including\
+A city with Airport can airlift one unit per turn (including\
  aircraft). Airlifting instantly transports the unit from one city\
  to another and will use all of the unit's movement points. A unit\
  must have some movement points left to be airlifted, and cannot\
- carry cargo. However the servers ettings may define that airports may work differently.\
+ carry cargo. The current setting (unlimited to destination) means that\
+ the destination city doesn't need to have an airport.\
 ")
 
 [building_aqueduct]
