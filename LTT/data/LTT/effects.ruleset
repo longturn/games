@@ -314,24 +314,6 @@ reqs    =
       "Tech", "Electricity", "Player"
     }
 
-[effect_city_work_palace]
-type    = "City_Radius_Sq"
-value   = 10
-reqs    =
-    { "type", "name", "range", "present"
-      "MaxUnitsOnTile", "0", "Local", FALSE
-      "Building", "Palace", "City", TRUE
-    }
-
-[effect_city_work_courthouse]
-type    = "City_Radius_Sq"
-value   = 10
-reqs    =
-    { "type", "name", "range", "present"
-      "MaxUnitsOnTile", "0", "Local", FALSE
-      "Building", "Courthouse", "City", TRUE
-    }
-
 ; Vision benefit from mountains (for every land unit)
 [effect_mountains_vision]
 type    = "Unit_Vision_Radius_Sq"
