@@ -446,8 +446,6 @@ color.b              = 106
 helptext             = _("\
 Deserts are regions of extreme dryness, making agriculture and\
  trade very difficult.\
-"), _("\
-Oil wells can be built when Construction is known.\
 ")
 
 [terrain_forest]
@@ -1134,8 +1132,7 @@ removal_time   = 0
 conflicts      = "Irrigation", "Farmland"
 helptext       = _("\
 Oil wells behave like mines (giving an extra production point), but \
-require more technology. Oil wells can be built on Desert with knowledge \
-of Construction, and on Glacier with knowledge of Refining.\
+require more technology. Oil wells can be built on Desert and on Glacier.\
 "), _("\
 Building an oil well on an irrigated tile will destroy the irrigation.\
 ")
