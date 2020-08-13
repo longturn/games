@@ -1,0 +1,5 @@
+/autocreate players
+/set autosaves GAMEOVER
+/set unitwaittime 0
+/set timeout 120
+/start
