@@ -508,17 +508,40 @@ Units reference table: see doc/units.xls or refer to wiki page
 
 TODO:
 -----
+1. Game dynamics:
+fresh city - some free granary for start
+Science box x1 until -3000, x2 until -1000, x3 (current setting) until 0, x4 until 1000, x5 until 1500, x6 until 1750
+2. Wonders.
 Stonehenge as cheap small wonder - just +2 science added to city center
-Shamanism: Black Monolith small wonder: +2 trade to city center, req for Kaaba.
-Copper Working: some copper small wonder as fail safe for Colossus.
-Seeker - initial unit for exploring
-Polytheism: need Absolutism, not Agriculture
-Monotheism: need Code of Laws, not Absolutism
-Irrigation possible with Forestry, but works with Agricultural Farming
-Add Senate bldg. Has senate govs req. Senate
+Shamanism - Black Monolith relatively cheap small wonder: +2 trade to city center, req for Kaaba.
+Copper Working: some copper small wonder as a fail safe for Colossus race?
+3. Buildings:
+Add Senate bldg (req. Rhetorics). Has Senate govs req. Senate
 Windmill: no gold cost
-fresh city: some free granary for start
-heavy cavalry: terrain defense
+4. Units:
+Seeker - initial unit for exploring: 2HP, IgTer (1x3 movement), Scout 4HP
+heavy cavalry - add terrain defense
+Tech trade off, new units for tech trade (only between allied players):
+Philosopher - req. Philosophy, can steal random science without dying
+Scientist - req. Physcis, can steal chosen science without dying
+5. Tech tree:
+Rhetorics - need Polytheism and Code of Laws 
+Drama - need Rhetorics (not Polytheism)
+Literacy - need Rhetorics (not Code of Laws)
+First Republic - need Rhetorics (not Literacy)
+Direct Democracy - need Rhetorics (not Polytheism) 
+Monotheism - need Code of Laws (not Absolutism)
+Absolutism - need Ceremonial Burial (not Agriculture, so can be prepared without poisonous tech)
+6. Govs:
+Revolution_Unhappiness = 3 for First Republic
+Less Corruption for Tribal
+Science penalty for Despo = Tribal (25%, not 50%)
+Food waste for Despo similar to toher govs
+7. Other:
+Irrigation possible with Forestry, but works with Agricultural Farming
+Shield waste by distance decreased by Craft Guilds, not Banking
+Corruption by distance decreased by Economics, not Corporation
+Tundra to Swamp transform too fast.
 
 
 Author: Wahazar
