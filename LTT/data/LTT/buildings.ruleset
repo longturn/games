@@ -1875,8 +1875,8 @@ helptext	= _("\
 Increases trade output by 30% in all cities for all the\
  players. The player owning this wonder is the only one able to build the Trade Company. \
 "), _("\
-TIP: if you're behind in research, this can help you catch up, by \
-reducing the cost of technologies that other players already know.\
+TIP: it may make sense to let someone else to build this wonder. Everyone gets the effect \
+and the Trade Conpany can't usually be instantly built after Marco Polo is finished.\
 ")
 
 
