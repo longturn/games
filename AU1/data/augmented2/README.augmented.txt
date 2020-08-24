@@ -511,19 +511,36 @@ TODO:
 1. Game dynamics:
 fresh city - some free granary for start
 Science box x1 until -3000, x2 until -1000, x3 (current setting) until 0, x4 until 1000, x5 until 1500, x6 until 1750
+More culture point achievements: city size 10 (200), 20 (1000), 40 (5000), cultured city 500 (100), 1000 (400) - but only unique,
+cultured nation (need to be set between wonders thresholds), Not illiterate - 50% (200), 100% (1000)
+
 2. Wonders.
 Stonehenge as cheap small wonder - just +2 science added to city center
 Shamanism - Black Monolith relatively cheap small wonder: +2 trade to city center, req for Kaaba.
 Copper Working: some copper small wonder as a fail safe for Colossus race?
+Tweak culture req for buildings
+Hanging Gardens, Temple of Artemis price: 180, Statue of Zeus: 200.
+
 3. Buildings:
 Add Senate bldg (req. Rhetorics). Has Senate govs req. Senate
 Windmill: no gold cost
+Palisade: no upkeep
+Decrease City Wall price to 40 shields
+Increase Bunkers defense bonus to 150% 
+50% bonus against turrets for small city, 100% for city>8
+Trade Company small wonder: 50% more trade for its city
+
 4. Units:
 Seeker - initial unit for exploring: 2HP, IgTer (1x3 movement), Scout 4HP
 heavy cavalry - add terrain defense
 Tech trade off, new units for tech trade (only between allied players):
 Philosopher - req. Philosophy, can steal random science without dying
 Scientist - req. Physcis, can steal chosen science without dying
+All Small Land can attack Coasters on river, no non-native attack.
+Samurai D=3 instead of 4
+Upgrade price halved later (need small wonder?)
+heavy cavalry: add terrain defense
+
 5. Tech tree:
 Rhetorics - need Polytheism and Code of Laws 
 Drama - need Rhetorics (not Polytheism)
@@ -532,11 +549,20 @@ First Republic - need Rhetorics (not Literacy)
 Direct Democracy - need Rhetorics (not Polytheism) 
 Monotheism - need Code of Laws (not Absolutism)
 Absolutism - need Ceremonial Burial (not Agriculture, so can be prepared without poisonous tech)
+Inf. Barracks I obsoleted by General Staff, not Metallurgy
+Navigation need Thalassocracy
+Sea Exploration need Navigation+Invention, req for Maggellan Exp. and Trade Company 
+Magnetism need Sea Exploration+Metallurgy
+Overseas Trade need Magnetism+Economics
+Capitalism need Economics+The Republic, req. for Stock Market
+Industrialization need Capitalism and Railroads
+
 6. Govs:
 Revolution_Unhappiness = 3 for First Republic
 Less Corruption for Tribal
 Science penalty for Despo = Tribal (25%, not 50%)
-Food waste for Despo similar to toher govs
+Food waste for Despo similar to other govs
+
 7. Other:
 Irrigation possible with Forestry, but works with Agricultural Farming
 Shield waste by distance decreased by Craft Guilds, not Banking
