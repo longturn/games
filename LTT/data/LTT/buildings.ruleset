@@ -2232,7 +2232,7 @@ sound		= "w_oracle"
 sound_alt	= "w_generic"
 helptext	= _("\
 Ħal Saflieni Hypogeum is thought to have been a sanctuary and necropolis. \
-It pre-dates broze age and was one of the first, if not the first, shrines built. \
+It pre-dates bronze age and was one of the first, if not the first, shrines built. \
 With this wonder, the city having it will get +6 additional lux. The effect \
 of this very early wonder ends with the invention of bronze. \
 ")
