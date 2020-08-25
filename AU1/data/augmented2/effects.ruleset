@@ -5523,7 +5523,7 @@ type    = "National_History"
 value	= 5
 reqs	=
     { "type", "name", "range"
-      "Building", "Apollo Program", "City"
+      "Building", "Apollo Program", "Player"
     }
 
 [effect_asmiths_trading_co]
@@ -5552,7 +5552,7 @@ type    = "National_History"
 value	= 2
 reqs	=
     { "type", "name", "range"
-      "Building", "A.Smith's Trading Co.", "City"
+      "Building", "A.Smith's Trading Co.", "Player"
     }
 
 [effect_colossus]
@@ -5579,7 +5579,7 @@ type    = "National_History"
 value	= 2
 reqs	=
     { "type", "name", "range"
-      "Building", "Colossus", "City"
+      "Building", "Colossus", "Player"
     }
 
 [effect_copernicus_observatory]
@@ -5623,7 +5623,7 @@ type    = "National_History"
 value	= 4
 reqs	=
     { "type", "name", "range"
-      "Building", "Cure For Cancer", "City"
+      "Building", "Cure For Cancer", "Player"
     }
 
 [effect_darwins_voyage]
@@ -5660,7 +5660,7 @@ type    = "National_History"
 value	= 5
 reqs	=
     { "type", "name", "range"
-      "Building", "Darwin's Voyage", "City"
+      "Building", "Darwin's Voyage", "Player"
     }
 
 ;[effect_eiffel_tower]
@@ -5732,7 +5732,7 @@ type    = "National_History"
 value	= 4
 reqs	=
     { "type", "name", "range"
-      "Building", "Great Library", "City"
+      "Building", "Great Library", "Player"
     }
 
 ; Every Land unit except of IgWall
@@ -5808,7 +5808,7 @@ type    = "National_History"
 value	= 2
 reqs	=
     { "type", "name", "range"
-      "Building", "Great Wall", "City"
+      "Building", "Great Wall", "Player"
     }
 
 [effect_hanging_gardens]
@@ -5882,7 +5882,7 @@ type    = "National_History"
 value	= 2
 reqs	=
     { "type", "name", "range"
-      "Building", "Hoover Dam", "City"
+      "Building", "Hoover Dam", "Player"
     }
 
 [effect_isaac_newtons_college]
@@ -6131,7 +6131,7 @@ type    = "National_History"
 value	= 6
 reqs	=
     { "type", "name", "range"
-      "Building", "Marco Polo's Embassy", "City"
+      "Building", "Marco Polo's Embassy", "Player"
     }
 
 [effect_atlantic_telegraph_company]
@@ -6192,7 +6192,7 @@ type    = "National_History"
 value	= 2
 reqs	=
     { "type", "name", "range"
-      "Building", "Mausoleum of Mausolos", "City"
+      "Building", "Mausoleum of Mausolos", "Player"
     }
 
 ; Note that this doesn't cancel a whole unit's unhappiness in Democracy
@@ -6391,7 +6391,7 @@ type    = "National_History"
 value	= 4
 reqs	=
     { "type", "name", "range"
-      "Building", "Statue of Liberty", "City"
+      "Building", "Statue of Liberty", "Player"
     }
 
 [effect_sun_tzus_war_academy]
@@ -6483,7 +6483,7 @@ type    = "National_History"
 value	= 8
 reqs	=
     { "type", "name", "range"
-      "Building", "United Nations", "City"
+      "Building", "United Nations", "Player"
     }
 
 [effect_hollywood]
@@ -8292,7 +8292,7 @@ type    = "National_History"
 value	= 3
 reqs    =
     { "type", "name", "range"
-      "Building", "Leshan Buddha Statue", "City"
+      "Building", "Leshan Buddha Statue", "Player"
     }
 
 [effect_kaaba_gold]
@@ -8324,7 +8324,7 @@ type    = "National_History"
 value	= 3
 reqs    =
     { "type", "name", "range", "present"
-      "Building", "Kaaba", "City", TRUE
+      "Building", "Kaaba", "Player", TRUE
     }
 
 [effect_mosque]
@@ -8719,7 +8719,7 @@ type    = "National_History"
 value	= 3
 reqs	=
     { "type", "name", "range", "present"
-      "Building", "Osaka Castle", "City", TRUE
+      "Building", "Osaka Castle", "Player", TRUE
       "Building", "Palace", "City", FALSE
       "Building", "Forbidden City", "City", FALSE
       "Building", "Ecclesiastical Palace", "City", FALSE
@@ -8770,7 +8770,7 @@ type    = "National_History"
 value	= 3
 reqs    =
     { "type", "name", "range", "present"
-      "Building", "Golden Temple", "City", TRUE
+      "Building", "Golden Temple", "Player", TRUE
     }
 
 [effect_js_bachs_cathedral]
@@ -9199,7 +9199,7 @@ type    = "National_History"
 value	= 3
 reqs	=
     { "type", "name", "range"
-      "Building", "Taj Mahal", "City"
+      "Building", "Taj Mahal", "Player"
     }
 
 [effect_madrasa]
