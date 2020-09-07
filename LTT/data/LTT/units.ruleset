@@ -2423,6 +2423,13 @@ The Missile is a missile unit able to shoot down enemy air units.\
 "), _("\
 TIP:  A handful of these may successfully keep the air around\
  your treasured homeland free of enemy air units.\
+"), _("\
+GUIDE: The missile units have poor vision so you may want to use fighters or other air units for scouting the area \
+before attacking. Few missile units can be used as the backbone of your air defense strategy before you get better \
+fighters. The enemy fighters and bombers will lose all moves when attacking so they will remain at the same place \
+until the next turn. This is when you can use the missiles for shooting down the sirplanes attacking you. \
+The nuclear submarines and carriers can also move the missile units. Use this to your advantage and you may need \
+less missiles to cover your air defense needs with the short range missile units. \
 ")
 
 
