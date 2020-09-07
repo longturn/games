@@ -2504,6 +2504,13 @@ The Intercontinental Missile is an ultra long-distance missile\
 "), _("\
 TIP:  These extremely powerful missiles can\
  reach almost any place on the map.\
+"), _("\
+GUIDE: The missile units have poor vision so you may want to use fighters or other air units for scouting the area \
+before attacking. The intercontinental missiles can remain on air for several turns. Together with AWACS planes or maybe \
+hidden submarines (for vision) on the enemy coastal areas it is possible to launch a devastating attack virtually anywhere on \
+the map. Since the intercontinental missile can be killed by a missile unit, you may want to launch several of them at once \
+so that the enemy is not able to kill them all if the attack is noticed. This late game unit is also very good at sinking \
+the enemy ships. This is why extra caution is needed if your enemy is able to build these beasts.\
 ")
 
 
