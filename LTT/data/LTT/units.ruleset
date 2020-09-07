@@ -2303,6 +2303,11 @@ helptext      = _("\
 Traveling under the surface of the ocean, Submarines have\
  a very high strategic value, but a weak defense if caught\
  off guard. The nuclear submarine is also able to carry missiles.\
+"), _("\
+GUIDE:  The nuclear submarine is able to carry missile units. A chain of several nuclear submarines can be used to transport \
+nuclear missiles almost anywhere really fast. This makes them extremely dangerous. Like the non nuclear submarines these units use fuel and need refueling. \
+This is why you may need allies for refueling the submarines if they are far from home. Another option is to get remote colony cities you \
+can use as submarine bases. Since the nuclear submarines have no home city they can retaliate even if you lose all your coastal cities supporting your other naval units. \
 ")
 
 [unit_carrier]
