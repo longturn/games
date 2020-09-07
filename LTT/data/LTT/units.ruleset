@@ -1802,6 +1802,12 @@ The Trireme is your first boat unit. It can act\
  as a transport ship and has rudimentary offensive\
  capabilities, and unlike later boats can travel on\
  rivers, but it may not enter deep ocean tiles.\
+"), _("\
+GUIDE: Since the triremes are able to travel on rivers, the players are able to use them for transporting military units \
+for attacking riverside cities deep inside homeland. The trireme can only transport smaller units but the barge (obsoleting the trireme) is able to move big siege units. \
+Because of the river travelling ability it is important to guard the coastal tiles with rivers on them. The units loaded on triremes \
+can't (only marines can) attack from the ship if the ship is on an ocean tile but if the ship moves on a river tile the land units will be able to attack and also \
+move without losing all of the move points when unloading from the trireme. The same thing applies to the barge unit.\
 ")
 
 
