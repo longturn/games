@@ -1877,6 +1877,12 @@ The Longboat is your first deep ocean capable boat unit\
  at a time. The Longboat is heavier than the \
  trireme and this allows it to travel on deep ocean but \
  not on rivers.\
+"), _("\
+GUIDE: The longboat is very useful for exploring the oceans and since it is able to carry settlers, it can be used for \
+establishing early colonies far away from home. You can only have one longboat at a time but this is not as limiting as you may think. \
+The longboat can take a settler to a far away land, unload the settler, build a city with it and then you can disband the longboat \
+in the new city. This way you can build a new longboat at home and will also get half of the shields back. Those can be used for \
+building a defensive unit or maybe a worker for the new colony city.\
 ")
 
 
