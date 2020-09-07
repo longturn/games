@@ -1921,6 +1921,12 @@ on the design is on combat and because of that it \
 only has limited transport capacity even while it can also carry \
 those land units the regular caravel can't. In the early ages of exploration it's great for \
 keeping your coastals free of enemy ships.\
+"), _("\
+GUIDE: The Square-Rigged Caravel is able to carry only one unit but the unit can be one of the heavy ones. This allows \
+small and middle scale military operations that may surprise your enemy. A fleet of these ships is expensive to build but  \
+the surprise attack may cripple an unprepared nation. This is why a single ship loaded with a puny warrior may devastate the enemy economy. \
+The enemy can't see what is loaded on the ship and this is why bluffing with a this ship loaded with a weak unit may \
+make your enemy afraid and wasting resources on building defenses. \
 ")
 
 [unit_caravel]
