@@ -1965,7 +1965,7 @@ graphic         = "b.mausoleum"
 graphic_alt     = "b.oracle"
 obsolete_by	=
     { "type", "name", "range", "survives"
-      "Tech", "Astronomy", "Player", FALSE
+      "Tech", "The Republic", "Player", FALSE
     }
 build_cost	= 80
 upkeep		= 0
