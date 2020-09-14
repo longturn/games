@@ -1989,7 +1989,7 @@ graphic         = "b.statue_of_zeus"
 graphic_alt     = "b.oracle"
 obsolete_by	=
     { "type", "name", "range", "survives"
-      "Tech", "Construction", "Player", FALSE
+      "Tech", "Gunpowder", "Player", FALSE
     }
 build_cost	= 70
 upkeep		= 0
