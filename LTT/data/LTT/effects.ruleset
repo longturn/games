@@ -1448,6 +1448,15 @@ reqs    =
       "Gov", "Anarchy", "Player", TRUE
     }
 
+[effect_martial_law_each_tribalism]
+type    = "Martial_Law_Each"
+value   = 1
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Tribal", "Player", TRUE
+    }
+
+
 [effect_martial_law_each_despotism]
 type    = "Martial_Law_Each"
 value   = 1
