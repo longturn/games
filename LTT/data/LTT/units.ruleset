@@ -2918,7 +2918,7 @@ sound_move    = "m_diplomat"
 sound_move_alt = "m_generic"
 sound_fight   = "f_diplomat"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 40
 pop_cost      = 0
 attack        = 0
 defense       = 0
@@ -2932,7 +2932,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "IgZOC", "NonMil", "HasNoZOC", "Unique", "Diplomat", "Spy"
+flags         = "IgZOC", "NonMil", "HasNoZOC", "Diplomat", "Spy"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
