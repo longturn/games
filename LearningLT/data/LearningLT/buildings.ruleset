@@ -11,8 +11,8 @@
 ; than minor changes.
 
 [datafile]
-description="LT50 (modified Civ2Civ3/LT39/LT417LT43/LT47/LT50 - longturn traditional 2.5 ruleset) buildings data for Freeciv"
-options="+Freeciv-2.5-ruleset"
+description="Longturn Traditional based on Civ2Civ3 buildings data for Freeciv"
+options="+Freeciv-2.6-ruleset"
 
 ; /* <-- avoid gettext warnings
 ;
@@ -26,18 +26,18 @@ options="+Freeciv-2.5-ruleset"
 ; Notes:
 ;
 ; name          = translatable name as seen by user
-; rule_name     = (optional) name for savegames, rulesets etc; if not
-;                 present, 'name' is used. Since the name used in savegames
-;                 must not change, use this when renaming a building after a
-;                 ruleset has been released.
+; rule_name     = (optional) internal name for savegames, rulesets etc; if
+;                 not present, "name" is used for this purpose too. Since
+;                 the name used in savegames must not change, if you want
+;                 to rename an item after a ruleset has been released, you
+;                 should set "rule_name" to the original value of "name".
 ; genus	        = genus; one of:
 ;                 "GreatWonder", "SmallWonder", "Improvement", "Special".
 ; reqs		= requirements to build the building (see effects.ruleset
 ;		  and README.effects for help on requirements)
 ; graphic	= icon of improvement (used in city dialog)
 ; graphic_alt	= alternate icon of improvement
-; obsolete_by	= advance which makes building obsolete; special
-;		  value "None" means does not become obsolete
+; obsolete_by	= requirements for the building to become obsolete
 ; build_cost	= production shields required to build
 ; upkeep	= monetary upkeep value
 ; sabotage	= percent chance of diplomat sabotage being successful
@@ -67,35 +67,43 @@ reqs	=
     }
 graphic	= "b.airport"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 120
 upkeep		= 3
 sabotage	= 100
 sound		= "b_airport"
 sound_alt	= "b_generic"
 helptext	= _("\
-Allows a city to produce veteran air units (including helicopters). \
+Allows a city to produce veteran air units (including helicopters and\
+ missiles).\
  Also, damaged air units (again, including helicopters) which stay in\
  town for one full turn without moving are completely restored.\
 "), _("\
-Two cities with Airports can airlift one unit per turn. \
- Airlifting instantly transports the unit from one city to another\
- and will use all of the unit's movement points.  A unit must have\
- some movement points left to be airlifted.\
+A city with Airport can airlift one unit per turn (including\
+ aircraft). Airlifting instantly transports the unit from one city\
+ to another and will use all of the unit's movement points. A unit\
+ must have some movement points left to be airlifted, and cannot\
+ carry cargo. The current setting (unlimited to destination) means that\
+ the destination city doesn't need to have an airport.\
 ")
 
 [building_aqueduct]
 name		= _("Aqueduct")
 genus		= "Improvement"
 reqs	=
-    { "type", "name", "range", "negated"
-      "Tech", "Construction", "Player", FALSE
-      "Road", "River", "Adjacent", TRUE
-      "Terrain", "Lake", "Adjacent", TRUE
+    { "type", "name", "range", "present"
+      "Tech", "Construction", "Player", TRUE
     }
 graphic	= "b.aqueduct"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    {
+	  "type", "name", "range", "present"
+      "Extra", "River", "Adjacent", TRUE
+      "Terrain", "Lake", "Adjacent", TRUE
+    }
 build_cost	= 40
 upkeep		= 1
 sabotage	= 100
@@ -124,12 +132,16 @@ knowledge of Construction, and it costs more to build and maintain.\
 name		= _("Aqueduct, Lake")
 genus		= "Improvement"
 reqs	=
-    { "type", "name", "range", "negated"
-      "Terrain", "Lake", "Adjacent", FALSE
+    { 
+		"type", "name", "range"
     }
 graphic	= "b.aqueduct"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { 
+	  "type", "name", "range", "present"
+      "Terrain", "Lake", "Adjacent", FALSE
+    }
 build_cost	= 20
 upkeep		= 0
 sabotage	= 100
@@ -158,13 +170,17 @@ are cheap to build and maintain.\
 name		= _("Aqueduct, River")
 genus		= "Improvement"
 reqs	=
-    { "type", "name", "range", "negated"
-      "Road", "River", "Adjacent", FALSE
-      "Terrain", "Lake", "Adjacent", TRUE
+    { 
+		"type", "name", "range", "present"
     }
 graphic	= "b.aqueduct"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    {
+	  "type", "name", "range", "present"
+      "Extra", "River", "Adjacent", FALSE
+      "Terrain", "Lake", "Adjacent", TRUE
+    }
 build_cost	= 20
 upkeep		= 0
 sabotage	= 100
@@ -199,16 +215,43 @@ reqs	=
     }
 graphic	= "b.bank"
 graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 80
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
 upkeep		= 1
 sabotage	= 100
 sound		= "b_bank"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the luxury and tax output in a city by an additional 50%. \
-With both a Bank and a Marketplace in a city, the total bonus is 100%.\
+Increases the luxury and tax output in a city by an additional 30%. \
+With both a Bank and a Marketplace in a city, the total bonus is 80%.\
+")
+
+
+[building_mercantile_exchange]
+name		= _("Mercantile Exchange")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Economics", "Player"
+      "Building", "Bank", "City"
+    }
+graphic    = "b.mercantile_exchange"
+graphic_alt    = "b.bank"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 1
+sabotage	= 100
+sound		= "b_bank"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases the luxury and tax output in a city by an additional 30%. \
+With a Mercantile Exchange, a Bank and a Marketplace in a city, the total bonus is 110%.\
 ")
 
 [building_barracks]
@@ -220,20 +263,25 @@ reqs	=
     }
 graphic	= "b.barracks_i"
 graphic_alt	= "-"
-obsolete_by	= "Gunpowder"
-replaced_by	= "Barracks II"
-build_cost	= 50
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Gunpowder", "Player"
+      "Building", "Barracks II", "City"
+      "Building", "Barracks III", "City"
+    }
+build_cost	= 30
 upkeep		= 1
 sabotage	= 100
 sound		= "b_barracks_i"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-With a Barracks, each new land unit built in a city will\
+With a Barracks, each new land (except siege units like Catapults) unit built in a city will\
  automatically have Veteran status, which means that its attack and\
- defense strengths are increased by 50%.  Also, damaged land units\
- which stay in town for one full turn without moving are completely\
- restored.\
+ defense strengths are increased by 50%.\
+"), _("\
+Also, damaged land units which stay in town for one full turn\
+ without moving are completely restored.\
 ")
 
 [building_barracks_ii]
@@ -245,20 +293,24 @@ reqs	=
     }
 graphic	= "b.barracks_ii"
 graphic_alt	= "b.barracks_i"
-obsolete_by	= "Mobile Warfare"
-replaced_by	= "Barracks III"
-build_cost	= 40
+obsolete_by	=
+    { "type", "name", "range"
+      "Tech", "Mobile Warfare", "Player"
+      "Building", "Barracks III", "City"
+    }
+build_cost	= 30
 upkeep		= 1
 sabotage	= 100
 sound		= "b_barracks_ii"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-With a Barracks, each new land unit built in a city will\
+With a Barracks, each new land unit (except siege units like Cannon and Artillery) built in a city will\
  automatically have Veteran status, which means that its attack and\
- defense strengths are increased by 50%.  Also, damaged land units\
- which stay in town for one full turn without moving are completely\
- restored.\
+ defense strengths are increased by 50%.\
+"), _("\
+Also, damaged land units which stay in town for one full turn\
+ without moving are completely restored.\
 ")
 
 [building_barracks_iii]
@@ -270,7 +322,9 @@ reqs	=
     }
 graphic	= "b.barracks_iii"
 graphic_alt	= "b.barracks_i"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 30
 upkeep		= 1
 sabotage	= 100
@@ -278,11 +332,12 @@ sound		= "b_barracks_iii"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-With a Barracks, each new land unit built in a city will\
+With a Barracks, each new land unit (except siege units like Artillery and Howitzer) built in a city will\
  automatically have Veteran status, which means that its attack and\
- defense strengths are increased by 50%.  Also, damaged land units\
- which stay in town for one full turn without moving are completely\
- restored.\
+ defense strengths are increased by 50%.\
+"), _("\
+Also, damaged land units which stay in town for one full turn\
+ without moving are completely restored.\
 ")
 
 [building_cathedral]
@@ -295,7 +350,9 @@ reqs	=
     }
 graphic	= "b.cathedral"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 80
 upkeep		= 3
 sabotage	= 100
@@ -319,7 +376,9 @@ reqs	=
     }
 graphic	= "b.city_walls"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 30
 upkeep		= 1
 sabotage	= 50
@@ -341,12 +400,14 @@ genus		= "Improvement"
 flags		= "VisibleByOthers"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Gunpowder", "Player"
+      "Tech", "Navigation", "Player"
       "TerrainClass", "Oceanic", "Adjacent"
     }
 graphic	= "b.coastal_defense"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 30
 upkeep		= 1
 sabotage	= 100
@@ -370,7 +431,9 @@ reqs	=
     }
 graphic	= "b.colosseum"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 50
 upkeep		= 2
 sabotage	= 100
@@ -391,7 +454,9 @@ reqs	=
     }
 graphic	= "b.courthouse"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 45
 upkeep		= 1
 sabotage	= 100
@@ -417,7 +482,9 @@ reqs	=
     }
 graphic	= "b.factory"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 100
 upkeep		= 3
 sabotage	= 100
@@ -425,7 +492,7 @@ sound		= "b_factory"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the shield production in a city by 50%, or 100% with an \
+Increases the shield production in a city by 25%, or 50% with an \
 electrical plant of any kind in the same city.\
 "), _("\
 This increase in production may contribute significantly to \
@@ -442,15 +509,18 @@ reqs	=
     }
 graphic	= "b.granary"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 40
 upkeep		= 1
 sabotage	= 100
 sound		= "b_granary"
 sound_alt	= "b_generic"
 helptext	= _("\
-When any small city grows or shrinks, 50% of food points are saved; this \
-helps cities to grow faster and more easily withstand famine. \
+When any small city grows or shrinks, 50 % of food points are saved; this \
+helps cities to grow faster and more easily withstand famine. With a \
+Granary this is extended to cities of size 4 and above. \
 "), _("\
 A Granary also halves the food wasted in cities far from your capital. \
 Together with a Courthouse it eliminates food waste.\
@@ -466,11 +536,15 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Seafaring", "Player"
-      "TerrainClass", "Oceanic", "Adjacent"
+      "TerrainFlag", "Sea", "Adjacent"
     }
 graphic	= "b.harbour"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { 
+	  "type", "name", "range", "present"
+      "TerrainFlag", "Sea", "City", FALSE
+    }
 build_cost	= 40
 upkeep		= 1
 sabotage	= 100
@@ -478,7 +552,8 @@ sound		= "b_harbour"
 sound_alt	= "b_generic"
 helptext	= _("\
 Gives one extra food resource on all Ocean or Deep Ocean tiles (but \
-not Lakes). The city needs to be coastal to build this improvement.\
+not Lakes). The city needs to be coastal (next to one of these tiles) \
+to build this improvement.\
 ")
 
 [building_hydro_plant]
@@ -488,24 +563,26 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Electronics", "Player"
       "Building", "Factory", "City"
-      "Road", "River", "Adjacent"
+      "Extra", "River", "Adjacent"
     }
 graphic	= "b.hydro_plant"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 120
-upkeep		= 1
+upkeep		= 4
 sabotage	= 100
 sound		= "b_hydro_plant"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Any kind of electrical plant increases the shield production \
-effects of any Factory or Mfg. Plant in its city by 50% each. \
+effects of any Factory or Mfg. Plant in its city by 25% each. \
 Thus, an electrical plant in combination with either a Factory \
-or Mfg. Plant gives a 100% production bonus over \
+or Mfg. Plant gives a 50% production bonus over \
 the level without any of these improvements; an electrical plant, \
-Factory, and Mfg. Plant together give a 200% production bonus. \
+Factory, and Mfg. Plant together give a 100% production bonus. \
 The extra production may lead to the city generating more \
 pollution.\
 "),
@@ -531,7 +608,9 @@ reqs	=
     }
 graphic	= "b.library"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 60
 upkeep		= 1
 sabotage	= 100
@@ -539,7 +618,7 @@ sound		= "b_library"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the science output in a city by 50%, or by 100% once the \
+Increases the science output in a city by 50%, or by 75% once the \
 Great Library has been built by any player.\
 ")
 
@@ -552,7 +631,9 @@ reqs	=
     }
 graphic	= "b.marketplace"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 50
 upkeep		= 0
 sabotage	= 100
@@ -572,7 +653,9 @@ reqs	=
     }
 graphic	= "b.mass_transit"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 50
 upkeep		= 1
 sabotage	= 100
@@ -581,7 +664,8 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Reduces the pollution generated by the population in a city; this \
 building counteracts the additional pollution associated with any \
-two other buildings.\
+two other buildings. It also increases the working area of the city \
+if the city has a unit inside.\
 ")
 
 [building_mfg_plant]
@@ -594,7 +678,9 @@ reqs	=
     }
 graphic	= "b.mfg_plant"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 180
 upkeep		= 4
 sabotage	= 100
@@ -602,8 +688,8 @@ sound		= "b_mfg_plant"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the shield production in a city by an additional 50%, or \
-100% with an electrical plant of any kind in the same city; this \
+Increases the shield production in a city by an additional 25%, or \
+50% with an electrical plant of any kind in the same city; this \
 effect is cumulative with that of a Factory.\
 "), _("\
 With sufficient shield production, cities with a Manufacturing Plant \
@@ -613,6 +699,9 @@ which cost population).\
 This increase in shield production may contribute significantly to \
 pollution; a Manufacturing Plant also increases the pollution caused \
 by the population of the city.\
+"), _("\
+A Manufacturing Plant also has a small risk of suffering an industrial \
+accident, which can lead to pollution and reduce the city's population.\
 ")
 
 [building_nuclear_plant]
@@ -625,7 +714,9 @@ reqs	=
     }
 graphic	= "b.nuclear_plant"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 135
 upkeep		= 2
 sabotage	= 40
@@ -634,11 +725,11 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Any kind of electrical plant increases the shield production \
-effects of any Factory or Mfg. Plant in its city by 50% each. \
+effects of any Factory or Mfg. Plant in its city by 25% each. \
 Thus, an electrical plant in combination with either a Factory \
-or Mfg. Plant gives a 100% production bonus over \
+or Mfg. Plant gives a 50% production bonus over \
 the level without any of these improvements; an electrical plant, \
-Factory, and Mfg. Plant together give a 200% production bonus. \
+Factory, and Mfg. Plant together give a 100% production bonus. \
 The extra production may lead to the city generating more \
 pollution.\
 "),
@@ -665,16 +756,18 @@ reqs	=
     }
 graphic	= "b.offshore_platform"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 120
 upkeep		= 3
 sabotage	= 100
 sound		= "b_offshore_platform"
 sound_alt	= "b_generic"
 helptext	= _("\
-Every Ocean tile worked by the city yields one extra shield resource, \
-as well as any Deep Ocean tile containing a Buoy. The city needs to be \
-coastal to build this improvement.\
+Every Ocean or Lake tile worked by the city yields one extra shield resource, \
+as well as any Deep Ocean tile containing an oil platform. The city needs \
+to be next to a water tile to build this improvement.\
 "), _("\
 Offshore Platforms also increase the pollution caused by the population \
 of the city.\
@@ -684,13 +777,11 @@ of the city.\
 name		= _("Palace")
 genus		= "SmallWonder"
 flags		= "SaveSmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Masonry", "Player"
-    }
 graphic	= "b.palace"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 70
 upkeep		= 0
 sabotage	= 0
@@ -725,6 +816,43 @@ Under Despotism the city containing the palace gains a +75% \
 gold bonus, and under Monarchy a +50% gold bonus.\
 ")
 
+[building_second_palace]
+name		= _("Second Palace")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Theology", "Player"
+    }
+graphic	= "b.ecclesiastical_palace"
+graphic_alt	= "b.palace"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 150
+upkeep		= 0
+sabotage	= 0
+sound		= "b_palace"
+sound_alt	= "b_generic"
+helptext	= _("\
+Makes a city the 2nd capital, that acts as a second center \
+of government.\
+"), _("\
+Waste in other cities (corruption, production waste, and food waste) \
+is related to how far away from the nearest capital they are. On top of \
+this, corruption and production waste in the capital itself is half \
+of what it would otherwise be (and a Courthouse will eliminate it \
+entirely).\
+"), _("\
+The city where this palace is located cannot be incited to revolt, \
+and enjoys a bonus when enemy agents try to evade your own agents \
+stationed in the city, or sabotage your buildings.\
+"),
+; /* xgettext:no-c-format */
+_("\
+Under Despotism the city containing the palace gains a +75% \
+gold bonus, and under Monarchy a +50% gold bonus.\
+")
+
 [building_police_station]
 name		= _("Police Station")
 genus		= "Improvement"
@@ -734,7 +862,9 @@ reqs	=
     }
 graphic	= "b.police_station"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 50
 upkeep		= 2
 sabotage	= 100
@@ -756,7 +886,9 @@ reqs	=
     }
 graphic	= "b.port_facility"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 60
 upkeep		= 2
 sabotage	= 100
@@ -780,7 +912,9 @@ reqs	=
     }
 graphic	= "b.power_plant"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 130
 upkeep		= 4
 sabotage	= 100
@@ -789,11 +923,11 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Any kind of electrical plant increases the shield production \
-effects of any Factory or Mfg. Plant in its city by 50% each. \
+effects of any Factory or Mfg. Plant in its city by 25% each. \
 Thus, an electrical plant in combination with either a Factory \
-or Mfg. Plant gives a 100% production bonus over \
+or Mfg. Plant gives a 50% production bonus over \
 the level without any of these improvements; an electrical plant, \
-Factory, and Mfg. Plant together give a 200% production bonus. \
+Factory, and Mfg. Plant together give a 100% production bonus. \
 The extra production may lead to the city generating more \
 pollution.\
 "), _("\
@@ -810,7 +944,9 @@ reqs	=
     }
 graphic	= "b.recycling_center"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 60
 upkeep		= 2
 sabotage	= 100
@@ -834,7 +970,9 @@ reqs	=
     }
 graphic	= "b.research_lab"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 120
 upkeep		= 3
 sabotage	= 100
@@ -843,12 +981,12 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Increases the science output in a city by an additional 50%, or \
-by 100% once the Internet wonder has been built by any player.\
+by 75% once the Internet wonder has been built by any player.\
 "),
 ; /* xgettext:no-c-format */
 _("\
 The total bonus is 150% if a Library, a University and a \
-Research Lab are all present in the same city, increasing to 300% \
+Research Lab are all present in the same city, increasing to 225% \
 once the Great Library, Isaac Newton's College, and the Internet have \
 all been built.\
 ")
@@ -862,7 +1000,9 @@ reqs	=
     }
 graphic	= "b.sam_battery"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 70
 upkeep		= 2
 sabotage	= 100
@@ -873,29 +1013,87 @@ Doubles the intrinsic defense strength of units within a city \
 when defending against aircraft (including helicopters).\
 ")
 
-[building_sdi_defense]
-name		= _("SDI Defense")
+[building_sdi_defense_1]
+name		= _("SDI Defense I")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Laser", "Player"
+      "Tech", "Radio", "Player"
     }
-graphic	= "b.sdi_defense"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 240
+graphic	= "b.sdi_defense_1"
+graphic_alt	= "b.sdi_defense"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
 upkeep		= 3
 sabotage	= 50
 sound		= "b_sdi_defense"
 sound_alt	= "b_generic"
 helptext	= _("\
 Protects a city and its environs (up to 2 tiles away) from attacks \
-by enemy Nuclear units. A Nuclear unit not owned by you or an ally \
-which attacks a city with SDI Defense, or attacks a unit (or is \
-deliberately exploded) within range, is shot down and simply has no effect. \
-Also, doubles the intrinsic defense strength of units in the city when \
-defending against conventional missiles. The sabotage chance for this \
-improvement is 50% when it's usually 100% fost most buildings.\
+by other nations' Nuclear units. A Nuclear unit not owned by you or a \
+teammate which attacks a city with SDI Defense, or attacks a unit (or is \
+deliberately exploded) within range, may be shot down and simply has no effect. \
+Also, adds 30% to the intrinsic defense strength of units in the city when \
+defending against conventional missiles. SDI I + capital protects against 100% of the nuclear attacks while \
+SDI I only defends against 30% of the attacks. SDI I + Palace adds 100% to the defense against missiles.\
+")
+
+
+[building_sdi_defense_2]
+name		= _("SDI Defense II")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Laser", "Player"
+	  "Building", "SDI Defense I", "City"
+    }
+graphic	= "b.sdi_defense_2"
+graphic_alt	= "b.sdi_defense"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 3
+sabotage	= 50
+sound		= "b_sdi_defense"
+sound_alt	= "b_generic"
+helptext	= _("\
+Protects a city and its environs (up to 2 tiles away) from attacks \
+by other nations' Nuclear units. A Nuclear unit not owned by you or a \
+teammate which attacks a city with SDI Defense, or attacks a unit (or is \
+deliberately exploded) within range, may be shot down and simply has no effect. \
+Also, adds 30% to the intrinsic defense strength of units in the city when \
+defending against conventional missiles. SDI II adds another 30% against the nuclear attacks.\
+")
+
+
+[building_sdi_defense_3]
+name		= _("SDI Defense III")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Space Flight", "Player"
+	  "Building", "SDI Defense II", "City"
+    }
+graphic	= "b.sdi_defense_3"
+graphic_alt	= "b.sdi_defense"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 3
+sabotage	= 50
+sound		= "b_sdi_defense"
+sound_alt	= "b_generic"
+helptext	= _("\
+Protects a city and its environs (up to 2 tiles away) from attacks \
+by other nations' Nuclear units. A Nuclear unit not owned by you or a \
+teammate which attacks a city with SDI Defense, or attacks a unit (or is \
+deliberately exploded) within range, may be shot down and simply has no effect. \
+Also, adds 40% to the intrinsic defense strength of units in the city when \
+defending against conventional missiles. SDI III adds another 30% against the nuclear attacks.\
 ")
 
 [building_sewer_system]
@@ -908,7 +1106,9 @@ reqs	=
     }
 graphic	= "b.sewer_system"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 80
 upkeep		= 2
 sabotage	= 100
@@ -930,7 +1130,9 @@ reqs	=
     }
 graphic	= "b.solar_plant"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 80
 upkeep		= 4
 sabotage	= 100
@@ -939,11 +1141,11 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Any kind of electrical plant increases the shield production \
-effects of any Factory or Mfg. Plant in its city by 50% each. \
+effects of any Factory or Mfg. Plant in its city by 25% each. \
 Thus, an electrical plant in combination with either a Factory \
-or Mfg. Plant gives a 100% production bonus over \
+or Mfg. Plant gives a 50% production bonus over \
 the level without any of these improvements; an electrical plant, \
-Factory, and Mfg. Plant together give a 200% production bonus. \
+Factory, and Mfg. Plant together give a 100% production bonus. \
 The extra production may lead to the city generating more \
 pollution.\
 "),
@@ -970,7 +1172,9 @@ reqs	=
     }
 graphic	= "b.space_component"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 480
 upkeep		= 0
 sabotage	= 100
@@ -998,7 +1202,9 @@ reqs	=
     }
 graphic	= "b.space_modules"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 960
 upkeep		= 0
 sabotage	= 100
@@ -1035,7 +1241,9 @@ reqs	=
     }
 graphic	= "b.space_structural"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 240
 upkeep		= 0
 sabotage	= 100
@@ -1055,12 +1263,14 @@ name		= _("Stock Exchange")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Economics", "Player"
-      "Building", "Bank", "City"
+      "Tech", "The Corporation", "Player"
+      "Building", "Mercantile Exchange", "City"
     }
 graphic	= "b.stock_exchange"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 120
 upkeep		= 2
 sabotage	= 100
@@ -1068,10 +1278,10 @@ sound		= "b_stock_exchange"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the luxury and tax output in a city by an additional 50%, \
+Increases the luxury and tax output in a city by an additional 40%, \
 or 100% if Super Highways are also in the city. A Marketplace, Bank, \
-and Stock Exchange together in a city yield a total bonus of 150%; \
-adding Super Highways yields a total of 200%.\
+Mercantile Exchange and Stock Exchange together in a city yield a total bonus of 150%; \
+adding Super Highways yields a total of 175%.\
 ")
 
 [building_super_highways]
@@ -1083,20 +1293,24 @@ reqs	=
     }
 graphic	= "b.super_highways"
 graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 100
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 120
 upkeep		= 3
 sabotage	= 100
 sound		= "b_super_highways"
 sound_alt	= "b_generic"
 helptext	= _("\
-Each tile around the city with roads, and without farmlands, that\
+Each tile around the city with roads and without farmland, that\
  is already generating some trade, produces one extra trade resource.\
+ The same applies to the city center tile (even if it is receiving a\
+ farmland bonus).\
 "),
 ; /* xgettext:no-c-format */
 _("\
-Also increases the effect of any Stock Exchange in the city (increasing\
- luxury and tax output by an additional 25%).\
+Also doubles the effect of any Stock Exchange in the city (increasing\
+ luxury and tax output by an additional 50%).\
 "), _("\
 Super Highways also increase the pollution caused by the population\
  of the city.\
@@ -1111,7 +1325,9 @@ reqs	=
     }
 graphic	= "b.supermarket"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 80
 upkeep		= 3
 sabotage	= 100
@@ -1133,7 +1349,9 @@ reqs	=
     }
 graphic	= "b.temple"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 30
 upkeep		= 1
 sabotage	= 100
@@ -1156,7 +1374,9 @@ reqs	=
     }
 graphic	= "b.university"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 100
 upkeep		= 2
 sabotage	= 100
@@ -1165,12 +1385,12 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Increases the science output in a city by an additional 50%, or \
-by 100% once Isaac Newton's College has been built by any player.\
+by 75% once Isaac Newton's College has been built by any player.\
 "),
 ; /* xgettext:no-c-format */
 _("\
 The total bonus is 100% if a Library and a University are present \
-together in the same city, increasing to 200% once the Great Library and \
+together in the same city, increasing to 150% once the Great Library and \
 Isaac Newton's College have both been built.\
 ")
 
@@ -1183,7 +1403,9 @@ reqs	=
     }
 graphic	= "b.apollo_program"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 600
 upkeep		= 0
 sabotage	= 0
@@ -1207,12 +1429,14 @@ name		= _("A.Smith's Trading Co.")
 genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Economics", "Player"
+      "Tech", "The Corporation", "Player"
       "Building", "Stock Exchange", "City"
     }
 graphic	= "b.asmiths_trading_co"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 700
 upkeep		= 0
 sabotage	= 0
@@ -1237,8 +1461,11 @@ reqs	=
     }
 graphic	= "b.colossus"
 graphic_alt	= "-"
-obsolete_by	= "Automobile"
-build_cost	= 80
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Invention", "Player", FALSE
+    }
+build_cost	= 50
 upkeep		= 0
 sabotage	= 0
 sound		= "w_colossus"
@@ -1257,8 +1484,11 @@ reqs	=
     }
 graphic	= "b.copernicus_observatory"
 graphic_alt	= "-"
-obsolete_by	= "Computers"
-build_cost	= 100
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "University", "Player", FALSE
+    }
+build_cost	= 60
 upkeep		= 0
 sabotage	= 0
 sound		= "w_copernicus_observatory"
@@ -1277,8 +1507,10 @@ reqs	=
     }
 graphic	= "b.cure_for_cancer"
 graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 1000
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 600
 upkeep		= 0
 sabotage	= 0
 sound		= "w_cure_for_cancer"
@@ -1287,9 +1519,9 @@ sound_alt	= "w_generic"
 helptext	= _("\
 This stunning technological achievement makes one content citizen \
 happy in each of your cities (2 extra luxury per city). It further \
-reduces the risk of plague in the city (by 10% of the base chance); \
-together with an Aqueduct, a Sewer System, and knowledge of Medicine, \
-it entirely eliminates the risk of plague.\
+reduces your risk of plague (by 10% of the base chance); with \
+knowledge of Medicine, any of your cities with an Aqueduct and a \
+Sewer System will be entirely free of plague.\
 ")
 
 [building_darwins_voyage]
@@ -1301,7 +1533,9 @@ reqs	=
     }
 graphic	= "b.darwins_voyage"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 300
 upkeep		= 0
 sabotage	= 0
@@ -1325,7 +1559,9 @@ reqs	=
     }
 graphic	= "b.eiffel_tower"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 300
 upkeep		= 0
 sabotage	= 0
@@ -1348,7 +1584,9 @@ reqs	=
     }
 graphic	= "b.great_library"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 400
 upkeep		= 0
 sabotage	= 0
@@ -1358,21 +1596,23 @@ helptext	= _("\
 Gives an immediate technology advance to the player that builds it, \
 and thereafter 4 extra research points every turn to its city.\
 "), _("\
-Completion of this wonder permanently doubles the effect of Libraries \
+Completion of this wonder permanently adds 25% to the effect of Libraries \
 for every player.\
 ")
 
 [building_great_wall]
 name		= _("Great Wall")
 genus		= "SmallWonder"
-flags		= "SaveSmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Construction", "Player"
     }
 graphic	= "b.great_wall"
 graphic_alt	= "-"
-obsolete_by	= "Gunpowder"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Gunpowder", "Player", FALSE
+    }
 build_cost	= 150
 upkeep		= 0
 sabotage	= 0
@@ -1383,8 +1623,7 @@ helptext	= _("\
 Increases the defense of all your cities by adding a +25% bonus to \
 its units' intrinsic defense strength against land units (this is cumulative \
 with any City Walls), and preventing the loss of population which occurs \
-when a defending unit is defeated by a land unit. If you lose the city with \
-the great wall small wonder a new great wall small wonder is built in a random city.\
+when a defending unit is defeated by a land unit.\
 ")
 
 [building_hanging_gardens]
@@ -1396,7 +1635,10 @@ reqs	=
     }
 graphic	= "b.hanging_gardens"
 graphic_alt	= "-"
-obsolete_by	= "Electricity"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Explosives", "Player", FALSE
+    }
 build_cost	= 90
 upkeep		= 0
 sabotage	= 0
@@ -1415,12 +1657,14 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Electronics", "Player"
-      "Road", "River", "Adjacent"
+      "Extra", "River", "Adjacent"
       "Building", "Factory", "City"
     }
 graphic	= "b.hoover_dam"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 6000
 upkeep		= 0
 sabotage	= 0
@@ -1443,7 +1687,9 @@ reqs	=
     }
 graphic	= "b.isaac_newtons_college"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 400
 upkeep		= 0
 sabotage	= 0
@@ -1453,7 +1699,7 @@ helptext	= _("\
 Gives an immediate technology advance to the player that builds it, \
 and thereafter 6 extra research points every turn to its city.\
 "), _("\
-Completion of this wonder permanently doubles the effect of \
+Completion of this wonder permanently adds 25% to the effect of \
 Universities for every player.\
 ")
 
@@ -1466,7 +1712,9 @@ reqs	=
     }
 graphic	= "b.js_bachs_cathedral"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 300
 upkeep		= 0
 sabotage	= 0
@@ -1486,8 +1734,11 @@ reqs	=
     }
 graphic	= "b.king_richards_crusade"
 graphic_alt	= "-"
-obsolete_by	= "Communism"
-build_cost	= 200
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Navigation", "Player", FALSE
+    }
+build_cost	= 50
 upkeep		= 0
 sabotage	= 0
 sound		= "w_king_richards_crusade"
@@ -1497,7 +1748,7 @@ Reduces the unhappiness caused by aggressively deployed military \
 units owned by the city by 1 -- in other words, it neutralizes the \
 unhappiness caused by a single military unit (except under Democracy, \
 where a single unit makes two citizens unhappy). Under governments \
-where unit upkeep is paid in gold, it gives one free gold per city \
+where unit upkeep is paid in gold, it gives two free gold per city \
 towards upkeep every turn.\
 ")
 
@@ -1510,14 +1761,17 @@ reqs	=
     }
 graphic	= "b.leonardos_workshop"
 graphic_alt	= "-"
-obsolete_by	= "Combustion"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Combustion", "Player", FALSE
+    }
 build_cost	= 200
 upkeep		= 0
 sabotage	= 0
 sound		= "w_leonardos_workshop"
 sound_alt	= "w_generic"
 helptext	= _("\
-Upgrades two obsolete units per game turn. \
+Upgrades one obsolete unit per game turn.\
 ")
 
 [building_lighthouse]
@@ -1526,19 +1780,22 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Map Making", "Player"
-      "Terrain", "Ocean", "Adjacent"
+      "TerrainFlag", "Sea", "Adjacent"
     }
 graphic	= "b.lighthouse"
 graphic_alt	= "-"
-obsolete_by	= "Engineering"
-build_cost	= 200
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Engineering", "Player", FALSE
+    }
+build_cost	= 100
 upkeep		= 0
 sabotage	= 0
 sound		= "w_lighthouse"
 sound_alt	= "w_generic"
 helptext	= _("\
-Gives all your sea units 2 additional movement points (except Triremes \
-while moving on rivers). Makes all your new triremes veterans (for all \
+Gives all your sea units 1 additional movement point (except Triremes \
+while moving on rivers). Makes all your new sea units veterans (for all \
 your cities).\
 ")
 
@@ -1547,22 +1804,27 @@ name		= _("Magellan's Expedition")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Navigation", "Player"
-      "Terrain", "Ocean", "Adjacent"
+      "Tech", "Magnetism", "Player"
+      "TerrainFlag", "Sea", "Adjacent"
     }
 graphic	= "b.magellans_expedition"
 graphic_alt	= "-"
-obsolete_by	= "Nuclear Power"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Nuclear Power", "Player", FALSE
+    }
 build_cost	= 200
 upkeep		= 0
 sabotage	= 0
 sound		= "w_magellans_expedition"
 sound_alt	= "w_generic"
 helptext	= _("\
-Gives all your sea units 3 additional movement points. The chance\
+Gives all your sea units 1 additional movement point. The chance\
  of a sea unit getting the next veteran level after a battle\
  increases by half.\
 ")
+
+
 
 [building_manhattan_project]
 name		= _("Manhattan Project")
@@ -1573,14 +1835,24 @@ reqs	=
     }
 graphic	= "b.manhattan_project"
 graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 1500
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 2500
 upkeep		= 0
 sabotage	= 0
 sound		= "w_manhattan_project"
 sound_alt	= "w_generic"
 ;helptext is set in client/helpdata.c:helptext_wonder()
-;helptext	=
+helptext	= _("\
+The Manhattan Project will make it possible to build nuclear weapons. After it is built, \
+anyone with the necessary technological advances can build nuclear weapons. The Nuclear \
+Fission advance is required to build the early Nuclear Bomb, which is unique to a nation: \
+each nation can have only one at a time. The Robotics advance is required to build the \
+later Nuclear units, which are not limited in number.
+")
+
+
 
 [building_marco_polos_embassy]
 name		= _("Marco Polo's Embassy")
@@ -1591,7 +1863,9 @@ reqs	=
     }
 graphic	= "b.marco_polos_embassy"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+    }
 build_cost	= 600
 upkeep		= 0
 sabotage	= 0
@@ -1599,8 +1873,12 @@ sound		= "w_marco_polos_embassy"
 sound_alt	= "w_generic"
 helptext	= _("\
 Increases trade output by 30% in all cities for all the\
- players.\
+ players. The player owning this wonder is the only one able to build the Trade Company. \
+"), _("\
+TIP: it may make sense to let someone else to build this wonder. Everyone gets the effect \
+and the Trade Conpany can't usually be instantly built after Marco Polo is finished.\
 ")
+
 
 [building_trade_company]
 name		= _("Trade Company")
@@ -1619,10 +1897,12 @@ sabotage	= 0
 sound		= "w_marco_polos_embassy"
 sound_alt	= "w_generic"
 helptext	= _("\
-This wonder gives the player a monopoly on trade with \
+This wonder gives the player extra trade with \
 far away countries. Increases trade output by 10% in \
 all cities owned by the player.\
 ")
+
+
 
 [building_atlantic_telegraph_company]
 name		= _("Atlantic Telegraph Company")
@@ -1632,8 +1912,8 @@ reqs	=
       "Tech", "Espionage", "Player"
       "Building", "University", "City"
     }
-graphic	= "b.university"
-graphic_alt	= "-"
+graphic	= "b.atlantic_telegraph_company"
+graphic_alt	= "b.university"
 obsolete_by	= "None"
 build_cost	= 250
 upkeep		= 0
@@ -1648,6 +1928,8 @@ The city where the wonder is located gets extra trade for each \
 tile already producing trade.\
 ")
 
+
+
 [building_michelangelos_chapel]
 name		= _("Michelangelo's Chapel")
 genus		= "SmallWonder"
@@ -1658,8 +1940,10 @@ reqs	=
     }
 graphic	= "b.michelangelos_chapel"
 graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 600
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 400
 upkeep		= 0
 sabotage	= 0
 sound		= "w_michelangelos_chapel"
@@ -1670,9 +1954,8 @@ citizens content in each city with a Cathedral; however, it does \
 not affect citizens made unhappy by aggression.\
 ")
 
-
-[building_hal_salflieni_hypogeum]
-name		= _("Ħal Saflieni Hypogeum")
+[building_mausoleum_of_mausolos]
+name		= _("Mausoleum of Mausolos")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
@@ -1680,19 +1963,46 @@ reqs	=
     }
 graphic         = "b.mausoleum"
 graphic_alt     = "b.oracle"
-obsolete_by	= "Bronze Working"
-build_cost	= 20
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "The Republic", "Player", FALSE
+    }
+build_cost	= 80
 upkeep		= 0
 sabotage	= 0
 sound		= "w_oracle"
 sound_alt	= "w_generic"
 helptext	= _("\
-Ħal Saflieni Hypogeum is thought to have been a sanctuary and necropolis. \
-It pre-dates broze age and was one of the first, if not the first, shrines built. \
-With this wonder, the city having it will get +6 additional lux. The effect \
-of this very early wonder ends with the invention of bronze. \
+With this wonder, City Walls and Courthouses each make one unhappy \
+citizen content in their city, unless that citizen is unhappy about \
+aggression. Also, none of the owner's cities can be incited to revolt.\
 ")
 
+[building_statue_of_zeus]
+name		= _("Statue of Zeus")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Polytheism", "Player"
+    }
+graphic         = "b.statue_of_zeus"
+graphic_alt     = "b.oracle"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Gunpowder", "Player", FALSE
+    }
+build_cost	= 70
+upkeep		= 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
+helptext	= _("\
+Reduces the unhappiness caused by aggressively deployed military \
+units owned by the city by 1 -- in other words, it neutralizes the \
+unhappiness caused by a single military unit (except under Democracy, \
+where a single unit makes two citizens unhappy). Each city also avoids \
+one shield of upkeep for units.\
+")
 
 [building_temple_of_artemis]
 name		= _("Temple of Artemis")
@@ -1704,7 +2014,10 @@ reqs	=
     }
 graphic         = "b.temple_of_artemis"
 graphic_alt     = "b.oracle"
-obsolete_by	= "Theology"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Theology", "Player", FALSE
+    }
 build_cost	= 90
 upkeep		= 0
 sabotage	= 0
@@ -1724,8 +2037,11 @@ reqs	=
     }
 graphic	= "b.pyramids"
 graphic_alt	= "-"
-obsolete_by	= "Railroad"
-build_cost	= 140
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Chemistry", "Player", FALSE
+    }
+build_cost	= 70
 upkeep		= 0
 sabotage	= 0
 sound		= "w_pyramids"
@@ -1748,7 +2064,9 @@ reqs	=
     }
 graphic		= "b.internet"
 graphic_alt	= "b.seti_program"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 3200
 upkeep		= 0
 sabotage	= 0
@@ -1759,7 +2077,7 @@ Gives an immediate technology advance to the player that builds it, \
 and thereafter all cities on the map are continuously visible to its \
 owner despite fog-of-war.\
 "), _("\
-Completion of this wonder permanently doubles the effect of \
+Completion of this wonder permanently adds 25% to the effect of \
 Research Labs for every player.\
 ")
 
@@ -1773,7 +2091,9 @@ reqs	=
     }
 graphic	= "b.shakespeares_theatre"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 300
 upkeep		= 0
 sabotage	= 0
@@ -1789,15 +2109,17 @@ output increases to 3 permanently for every nation.\
 
 [building_statue_of_liberty]
 name		= _("Statue of Liberty")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Democracy", "Player"
     }
 graphic	= "b.statue_of_liberty"
 graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 8000
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 2000
 upkeep		= 0
 sabotage	= 0
 sound		= "w_statue_of_liberty"
@@ -1815,12 +2137,15 @@ name		= _("Sun Tzu's War Academy")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "University", "Player"
+      "Tech", "Feudalism", "Player"
     }
 graphic	= "b.sun_tzus_war_academy"
 graphic_alt	= "-"
-obsolete_by	= "Conscription"
-build_cost	= 150
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Gunpowder", "Player", FALSE
+    }
+build_cost	= 100
 upkeep		= 0
 sabotage	= 0
 sound		= "w_sun_tzus_war_academy"
@@ -1828,7 +2153,7 @@ sound_alt	= "w_generic"
 helptext	= _("\
 All your new military land units start with an additional veteran level \
 (this is cumulative with any Barracks building in a city; with both, units \
-are created as Veteran 2).\
+are created as Hardened).\
 ")
 
 [building_united_nations]
@@ -1840,7 +2165,9 @@ reqs	=
     }
 graphic	= "b.united_nations"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 6000
 upkeep		= 0
 sabotage	= 0
@@ -1863,13 +2190,16 @@ Republic and Democracy).\
 name		= _("Women's Suffrage")
 genus		= "SmallWonder"
 reqs	=
-    { "type", "name", "range"
+    { "type", "name", "range", "survives"
       "Tech", "Conscription", "Player"
     }
 graphic	= "b.womens_suffrage"
 graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 1200
+obsolete_by	=
+    { "type", "name", "range"
+	  "Tech", "Tactics", "Player", FALSE
+    }
+build_cost	= 600
 upkeep		= 0
 sabotage	= 0
 sound		= "w_womens_suffrage"
@@ -1881,25 +2211,30 @@ halves the unhappiness caused by military units (reducing it to the \
 same level as a Republic).\
 ")
 
-[building_second_palace]
-name		= _("Second Palace")
+
+[building_hal_salflieni_hypogeum]
+name		= _("Hal Saflieni Hypogeum")
 genus		= "SmallWonder"
-flags		= "SaveSmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Theology", "Player"
+      "Tech", "Ceremonial Burial", "Player"
     }
-graphic	= "b.courthouse"
-graphic_alt	= "-"
-obsolete_by	= "None"
-build_cost	= 150
-upkeep		= 1
-sabotage	= 100
-sound		= "b_courthouse"
-sound_alt	= "b_generic"
-; /* xgettext:no-c-format */
+graphic         = "b.hypogeum"
+graphic_alt     = "b.oracle"
+obsolete_by	=
+    { "type", "name", "range"
+	  "Tech", "Bronze Working", "Player"
+    }
+build_cost	= 20
+upkeep		= 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
 helptext	= _("\
-Creates a government center to combat waste and corrupton (similar to Palace).\
+Ħal Saflieni Hypogeum is thought to have been a sanctuary and necropolis. \
+It pre-dates bronze age and was one of the first, if not the first, shrines built. \
+With this wonder, the city having it will get +6 additional lux. The effect \
+of this very early wonder ends with the invention of bronze. \
 ")
 
 [building_capitalization]
@@ -1912,7 +2247,9 @@ reqs	=
     }
 graphic	= "b.capitalization"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 999
 upkeep		= 0
 sabotage	= 0

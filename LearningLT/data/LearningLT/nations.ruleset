@@ -9,7 +9,19 @@
 
 [datafile]
 description="Default nations data for Freeciv"
-options="+Freeciv-2.5-ruleset"
+options="+Freeciv-2.6-ruleset"
+
+; This section contains meta information for freeciv-ruledit to recreate the ruleset
+; file in a form wanted. These have no in-game effect whatsoever
+[ruledit]
+
+; Nationlist to add include statement for. If this entry is omitted, all the nations
+; will be saved to nations.ruleset itself.
+nationlist = "default/nationlist.ruleset"
+
+; List of nations to embed to main nations.ruleset despite separate nationlist
+; being used for other nations.
+embedded_nations = "barbarian", "pirate"
 
 [compatibility]
 ; Initial government for all the nations that do not
@@ -20,15 +32,30 @@ default_government = "Despotism"
 ; Default values for the AI traits. These are used if nation specific
 ; value for some trait has not been used. If these default too are
 ; not defined, the ultimate default is 50.
+; <trait>_min and <trait>_max give the range from which the trait value
+; is randomly chosen for a given AI player unless 'traitdistribution'
+; server setting is 'FIXED'
+; <trait>_default is the exaxt trait value used when 'traitdistribution'
+; is 'FIXED'. If <trait>_default has not been given, it's set to the
+; midpoint between <trait>_min and <trait>_max.
 
 ; Value of trait "expansionist" defines how much AI wants to settle new territory.
-;expansionist = 50
+expansionist_min = 30
+expansionist_max = 90
+expansionist_default = 50
 
 ; Value of trait "trader" defines how much AI wants to establish trade routes.
-;trader = 50
+trader_min = 30
+trader_max = 90
+trader_default = 50
 
 ; Value of trait "aggressive" defines how easily AI declares war.
-;aggressive = 50
+aggressive_min = 30
+aggressive_max = 90
+aggressive_default = 50
 
-
+; Please keep [ruledit] section in sync with these includes
 *include "default/nationlist.ruleset"
+; Two barbarian nations, Land and Sea barbarians, needed
+*include "nation/barbarian.ruleset"
+*include "nation/pirate.ruleset"
