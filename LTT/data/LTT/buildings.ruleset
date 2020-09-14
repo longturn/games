@@ -1429,7 +1429,7 @@ name		= _("A.Smith's Trading Co.")
 genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Economics", "Player"
+      "Tech", "The Corporation", "Player"
       "Building", "Stock Exchange", "City"
     }
 graphic	= "b.asmiths_trading_co"
