@@ -2957,16 +2957,10 @@ Like Spies, Scholars have small chance of returning after a successful mission, 
 lost after a mission. Foreign Diplomats and Spies will defend against the Scholar as against other Spy actions.\
 "), _("\
 GUIDE: With no traditional tech trading the only way to get techs from other players is using the scholar unit. \
-Instead trading through diplomacy the players can trade or "trade" techs by using the scholar unit. This unit is unique \
-and one player can have only one such unit at a time. Because of this it's often a good idea to use the unit as soon as possible. \
-Instead of building it in a far away city (far away from where you plan on using it) build it close to the play you need it for. \
-This way you can use scholars more often instead of wasting time for moving the unit. Diplomats, spies and operatives can't steal techs \
+Instead trading through diplomacy the players can trade or steal techs by using the scholar unit. \
+Diplomats, spies and operatives can't steal techs \
 but they can defend the cities against scholars trying to steal techs. This is why it's best to use those units for investigating the city \
-and also for killing the defending diplomats, spies and operatives. Only the unique scholar unit is able to steal techs. This unit usually \
-has a 70% chance of succeeding in stealing techs and roughly 50% (0.7 * 0.7 = 0.49) chance is some specific tech is chosen. This may however change between games \
-so always remember to check how the stealing is defined for the particular game. Since you can steal/get techs from friends and enemies, remember to ask friendly \
-nations to remove the defending spies/diplomats/operatives before using the scholar units. It is terrible waste to use the scholar for accidentally killing \
-friendly units or maybe getting the scholar unit killed.\
+and also for killing the defending diplomats, spies and operatives. Only the scholar unit is able to steal techs. 
 ")
 
 
