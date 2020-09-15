@@ -1279,7 +1279,7 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Increases the luxury and tax output in a city by an additional 40%, \
-or 100% if Super Highways are also in the city. A Marketplace, Bank, \
+or 65% if Super Highways are also in the city. A Marketplace, Bank, \
 Mercantile Exchange and Stock Exchange together in a city yield a total bonus of 150%; \
 adding Super Highways yields a total of 175%.\
 ")
