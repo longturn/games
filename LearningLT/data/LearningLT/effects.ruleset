@@ -4249,6 +4249,7 @@ reqs	=
       "Extra", "Pollution", "Local"
     }
 	
+	
 
 [effect_hal_salflieni_hypogeum]
 type    = "Output_Add_Tile"
@@ -4261,6 +4262,15 @@ reqs    =
     }
 
 	
+[effect_marco_polos_embassy]
+name    = "Output_Bonus"
+value   = 30
+reqs    =
+    { "type", "name", "range"
+      "Building", "Marco Polo's Embassy", "World"
+      "OutputType", "Trade", "Local"
+    }
+
 [effect_trade_company]
 name    = "Output_Bonus"
 value   = 10
