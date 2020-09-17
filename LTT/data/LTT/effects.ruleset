@@ -4261,6 +4261,17 @@ reqs    =
     }
 
 	
+	
+	
+[effect_marco_polos_embassy]
+name    = "Output_Bonus"
+value   = 30
+reqs    =
+    { "type", "name", "range"
+      "Building", "Marco Polo's Embassy", "World"
+      "OutputType", "Trade", "Local"
+    }
+
 [effect_trade_company]
 name    = "Output_Bonus"
 value   = 10
@@ -4270,6 +4281,9 @@ reqs    =
       "Building", "Marco Polo's Embassy", "Player"
       "OutputType", "Trade", "Local"
     }
+
+	
+
 
 [effect_atlantic_telegraph_company]
 type    = "Have_Embassies"
