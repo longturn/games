@@ -4344,7 +4344,7 @@ value   = 5
 reqs    =
     { "type", "name", "range", "present"
       "MaxUnitsOnTile", "0", "Local", FALSE
-      "OutputType", "Trade", "Local", FALSE
+      "OutputType", "Trade", "Local", TRUE
     }
 
 	
