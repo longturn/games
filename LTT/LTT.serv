@@ -42,13 +42,13 @@ set razechance=10
 set happyborders=enabled
 set occupychance=0
 set globalwarming=enabled
-set globalwarming_percent=300
+
 
 # diplomacy, technology
 set diplchance=40
 set diplgoldcost=20
 set diplbulbcost=20
-set diplchance_steal=8
+
 set diplomacy=HUMAN
 set sciencebox=100
 set techlost_donor=0
@@ -76,6 +76,23 @@ set scorelog=enabled
 set timeout=82800
 set unitwaittime=36000
 set fixedlength 1
+
+# new longturn.net specific patches. this section added in September 2020. you may need to remove these if you play a local game with the standard 2.6 freeciv version
+set diplchance_steal=8
+set globalwarming_percent=300
+set nuclear_winter_percent = 100
+set contact_intel = disabled	# no info about the other nations if contatturns = 1
+set default_diplstate_is_peace = enabled
+set nuke_infra = 20		# chance of destroying the infra on tiles when nuked
+set nuke_infra_save_lowest = enabled   # if enabled nuking does not destroy basic roads under rails
+set demography = ncARPEmOCqrb
+set nuke_improvements = 20		# 20% chance for destroying city improvements. never destroyed if the sabotage chance is less than 100%
+set incite_gold_loss_chance = 20
+set incite_gold_capt_chance = 20
+set timeoutmask = 30
+set nuke_pop_loss_pct = 30    # percentage of population loss after nuke, instead of hard-coded 50%
+set nuke_defender_survival_chance_pct = 20     # percentage chance of a unit inside the city to survive a nuke, does not affect units in open
+
 metamessage "Longturn Traditional for multiplayer games | More info: http://longturn.net"
 metapatches longturn
 
