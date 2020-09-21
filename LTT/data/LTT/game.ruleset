@@ -200,6 +200,16 @@ total_factor = 100
 slow_invasions = TRUE
 
 [combat_rules]
+
+
+incite_gold_loss_chance = 20
+incite_gold_capt_chance = 20
+timeoutmask = 30
+nuke_pop_loss_pct = 30    ; percentage of population loss after nuke, instead of hard-coded 50%
+nuke_defender_survival_chance_pct = 20     ; percentage chance of a unit inside the city to survive a nuke, does not affect units in open
+
+
+
 ; If tired_attack is set to TRUE, units that attack with less than a single
 ; move point (per move_fragments in terrain.ruleset) will have their attack
 ; power reduced accordingly. For instance, if move_fragments=3, a unit with
