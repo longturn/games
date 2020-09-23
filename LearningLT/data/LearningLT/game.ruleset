@@ -90,7 +90,7 @@ min_city_center_shield  = 0
 min_city_center_trade   = 0
 
 ; Square of initial city radius
-init_city_radius_sq     = 5
+init_city_radius_sq     = 15
 
 ; Square of initially visible radius (true distance).
 ; the visible radius is smaller than the initial city radius. Units are needed for more vision.

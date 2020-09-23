@@ -4301,32 +4301,7 @@ reqs    =
       "OutputType", "Trade", "Local"
     }
 
-[effect_city_work]
-type    = "City_Radius_Sq"
-value   = 10
-reqs    =
-    { "type", "name", "range", "present"
-      "MaxUnitsOnTile", "0", "Local", FALSE
-	  "Gov", "Communism", "Player", FALSE
-	  "Gov", "Democracy", "Player", FALSE
-	  "Gov", "Fundamentalism", "Player", FALSE
-	  "Gov", "Republic", "Player", FALSE
-	  "Gov", "Monarchy", "Player", FALSE
-	  "Gov", "Federation", "Player", FALSE
-    }
 	
-	
-	
-[effect_city_work_2]
-type    = "City_Radius_Sq"
-value   = 10
-reqs    =
-    { "type", "name", "range", "present"
-	  "Gov", "Anarchy", "Player", FALSE
-	  "Gov", "Despotism", "Player", FALSE
-	  "Gov", "Tribal", "Player", FALSE
-    }
-
 
 ; City radius increased with Mass Transit
 [effect_mass_transit_2]
