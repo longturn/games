@@ -19,7 +19,7 @@ set topology="WRAPX|WRAPY|ISO"
 set wetness=40
 set alltemperate=disabled
 set tinyisles 0
-set revealmap=START  #uncomment this for revealing the map for test games
+#set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
 set nationset=all
