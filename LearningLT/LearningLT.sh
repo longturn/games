@@ -2,6 +2,6 @@
 
 GAMENAME="LearningLT"
 GAMEID="LearningLT" # Name in the database
-PORT=5065
+PORT=5066
 
 . ../rc.subr.2.6
