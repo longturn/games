@@ -1771,7 +1771,7 @@ sabotage	= 0
 sound		= "w_leonardos_workshop"
 sound_alt	= "w_generic"
 helptext	= _("\
-Upgrades one obsolete unit per game turn.\
+Upgrades two obsolete units per game turn.\
 ")
 
 
