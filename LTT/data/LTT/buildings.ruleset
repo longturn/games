@@ -2109,7 +2109,7 @@ output increases to 3 permanently for every nation.\
 
 [building_statue_of_liberty]
 name		= _("Statue of Liberty")
-genus		= "SmallWonder"
+genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Democracy", "Player"
@@ -2119,7 +2119,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 2000
+build_cost	= 8000
 upkeep		= 0
 sabotage	= 0
 sound		= "w_statue_of_liberty"
