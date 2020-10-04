@@ -3485,6 +3485,24 @@ reqs	=
       "Building", "King Richard's Crusade", "City"
     }
 
+
+[effect_verrocchios_workshop]
+type    = "Upgrade_Unit"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Verrocchio's Workshop", "Player"
+    }
+
+[effect_leonardos_workshop_culture]
+type    = "History"
+value	= 4
+reqs	=
+    { "type", "name", "range"
+      "Building", "Leonardo's Workshop", "City"
+    }
+
+
 [effect_leonardos_workshop]
 type    = "Upgrade_Unit"
 value   = 2
