@@ -3494,7 +3494,7 @@ reqs    =
       "Building", "Verrocchio's Workshop", "Player"
     }
 
-[effect_leonardos_workshop_culture]
+[effect_verrocchios_workshop_culture]
 type    = "History"
 value	= 4
 reqs	=
