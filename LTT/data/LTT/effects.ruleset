@@ -1601,13 +1601,6 @@ reqs    =
 ;      "Gov", "Democracy", "Player", FALSE, FALSE
     }
 
-[effect_content_tribal]
-type    = "Make_Content"
-value   = 1
-reqs    =
-    { "type", "name", "range", "quiet"
-      "Gov", "Tribal", "Player", TRUE
-    }
 
 [effect_combat_tribal]
 type    = "Veteran_Combat"
