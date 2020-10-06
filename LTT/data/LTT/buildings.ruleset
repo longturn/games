@@ -2143,7 +2143,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 8000
+build_cost	= 20000
 upkeep		= 0
 sabotage	= 0
 sound		= "w_statue_of_liberty"
