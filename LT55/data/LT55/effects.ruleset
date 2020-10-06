@@ -1517,22 +1517,6 @@ reqs    =
 
 
 
-[effect_martial_law_max]
-type    = "Martial_Law_Max"
-value   = 3
-reqs    =
-    { "type", "name", "range", "present"
-;      "Gov", "Anarchy", "Player", FALSE
-      "Gov", "Tribal", "Player", FALSE
-;      "Gov", "Communism", "Player", FALSE
-;      "Gov", "Despotism", "Player", FALSE
-;      "Gov", "Monarchy", "Player", FALSE
-      "Gov", "Fundamentalism", "Player", FALSE
-      "Gov", "Federation", "Player", FALSE
-      "Gov", "Republic", "Player", FALSE
-      "Gov", "Democracy", "Player", FALSE
-    }
-
 ; Railroad because makes Pyramids obsolete
 [effect_gov_tile_penalty_anarchy]
 type    = "Output_Penalty_Tile"
