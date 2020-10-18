@@ -2698,12 +2698,6 @@ The actions available to Diplomats in a city are:\
  or any building in a capital each halve the chance of success.\
  Sabotage may only be attempted when openly at war.\
 "), _("\
- - \"Steal Technology\": Your unit attempts to learn the secrets of a\
- random technology known to the city's owner but not to you. Technology\
- may only be stolen once from a given enemy city by Diplomats. This\
- action may be attempted even when not at war, but will cause a\
- diplomatic incident.\
-"), _("\
  - \"Incite a Revolt\": In return for gold a foreign city will change\
  allegiance and join your empire, bringing along all nearby units that\
  call it home, but reducing its size by 1. Units in other cities\
@@ -2776,9 +2770,6 @@ A Spy can also be used to:\n\
  alone on a tile and the players are at war;\n\
  - poison the water supply of an enemy city (reducing the population\
  by one and emptying the granary);\n\
- - steal further technologies from a city which has already been\
- stolen from (although cities become more resistant each time they\
- are stolen from);\n\
  - sabotage predetermined city targets (with a reduced chance of\
  success).\
 "), _("\
@@ -2852,10 +2843,6 @@ An Operative can also be used to:\n\
  alone on a tile and the players are at war;\n\
  - poison the water supply of an enemy city (reducing the population\
  by one and emptying the granary);\n\
- - steal specific technology (with a reduced chance of success);\n\
- - steal further technologies from a city which has already been\
- stolen from (although cities become more resistant each time they\
- are stolen from);\n\
  - sabotage predetermined city targets (with a reduced chance of\
  success).\
 "), _("\
