@@ -4318,4 +4318,12 @@ reqs    =
       "OutputType", "Trade", "Local", TRUE
     }
 
-	
+
+[effect_ruins_trade]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Extra", "Ruins", "Local"
+      "OutputType", "Trade", "Local"
+    }

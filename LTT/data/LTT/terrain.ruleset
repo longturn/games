@@ -1587,7 +1587,7 @@ removal_time   = 0
 flags          = "TerrChangeRemoves"
 helptext       = _("\
 Ruins mark the former site of a city that was destroyed or abandoned. \
-They have no effect on gameplay.\
+They have no effect on gameplay other than giving +1 trade bonus for the tile with the ruins.\
 ")
 
 [extra_road]
