@@ -153,7 +153,7 @@ Compared to Tribalism, a Despotic economy is more trade-oriented.\
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Your centers of government (cities with Palace and Ecclesiastical\
+* Your centers of government (cities with Palace and 2nd\
  Palace) get a +75% bonus to gold production.\n\
 * Each worked tile that gives more than 2 Food, Shield, or Trade will\
  suffer a -1 penalty, unless the city working it is celebrating.\
@@ -191,7 +191,7 @@ Monarchy gives low unit upkeep costs.\
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Your centers of government (cities with Palace and Ecclesiastical\
+* Your centers of government (cities with Palace and 2nd\
  Palace) get a +50% bonus to gold production.\n\
 * Celebrating cities produce one extra trade point for every tile which is\
  already producing trade. (Cities below size 3 will not celebrate.)\n\
