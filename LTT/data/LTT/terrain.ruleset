@@ -1477,7 +1477,6 @@ reqs           =
       "Extra", "River", "Local", FALSE, FALSE
     }
 build_time     = 3
-border_sq      = 5
 removal_time   = 0
 native_to      = "Land", "Small Land", "Merchant", "Big Land", "Big Siege"
 conflicts      = "Airbase"

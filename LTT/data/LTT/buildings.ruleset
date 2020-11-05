@@ -1913,7 +1913,9 @@ reqs	=
     }
 graphic	= "b.marco_polos_embassy"
 graphic_alt	= "-"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+    }
 build_cost	= 120
 upkeep		= 0
 sabotage	= 0
@@ -1937,7 +1939,9 @@ reqs	=
     }
 graphic	= "b.atlantic_telegraph_company"
 graphic_alt	= "b.university"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+    }
 build_cost	= 250
 upkeep		= 0
 sabotage	= 0
