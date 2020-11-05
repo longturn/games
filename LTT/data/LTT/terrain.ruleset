@@ -1440,6 +1440,7 @@ reqs           =
       "UnitFlag", "Settlers", "Local", TRUE, FALSE
       "UnitClass", "Sea", "Local", FALSE, TRUE
       "CityTile", "Center", "Local", FALSE, TRUE
+	  "Extra", "River", "Local", FALSE, FALSE
     }
 build_time     = 3
 removal_time   = 0
