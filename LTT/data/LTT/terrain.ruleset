@@ -1443,7 +1443,6 @@ reqs           =
     }
 build_time     = 3
 removal_time   = 0
-native_to      = "Land", "Small Land", "Merchant"
 conflicts      = "Airbase"
 hidden_by      = "Fortress"
 flags          = "NativeTile"
@@ -1763,11 +1762,6 @@ Cities built on or next to rivers incur a small risk of flooding,\
 ;
 ; */ <-- avoid gettext warnings
 
-[base_fort]
-extra          = "Pre-Fortress"
-gui_type       = "Fortress"
-border_sq      = -1
-flags          = "DiplomatDefense"
 
 [base_fortress]
 extra          = "Fortress"
