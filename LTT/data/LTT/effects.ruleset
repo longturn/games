@@ -2769,10 +2769,10 @@ reqs    =
 type    = "Defend_Bonus"
 value   = 30
 reqs    =
-    { "type", "name", "range"
-      "Building", "SDI Defense II", "City"
-	  "Building", "Palace", "City", FALSE
-      "UnitClass", "Missile", "Local"
+    { "type", "name", "range", "present"
+      "Building", "SDI Defense II", "City", TRUE
+      "Building", "Palace", "City", FALSE
+      "UnitClass", "Missile", "Local", TRUE
     }
 	
 	
@@ -2782,7 +2782,7 @@ value   = 30
 reqs    =
     { "type", "name", "range", "present"
       "Building", "SDI Defense III", "City", TRUE
-	  "Building", "Palace", "City", FALSE
+      "Building", "Palace", "City", FALSE
       "DiplRel", "Is foreign", "Local", TRUE
       "DiplRel", "Team", "Local", FALSE
     }
@@ -2792,10 +2792,10 @@ reqs    =
 type    = "Defend_Bonus"
 value   = 40
 reqs    =
-    { "type", "name", "range"
-      "Building", "SDI Defense III", "City"
-	  "Building", "Palace", "City", FALSE
-      "UnitClass", "Missile", "Local"
+    { "type", "name", "range", "present"
+      "Building", "SDI Defense III", "City", TRUE
+      "Building", "Palace", "City", FALSE
+      "UnitClass", "Missile", "Local", TRUE
     }
 	
 

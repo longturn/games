@@ -2224,7 +2224,7 @@ graphic	= "b.womens_suffrage"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
-	  "Tech", "Tactics", "Player", FALSE
+      "Tech", "Tactics", "Player"
     }
 build_cost	= 600
 upkeep		= 0
