@@ -811,7 +811,7 @@ reqs   =
       "Gov", "Communism", "Player", FALSE
       "Gov", "Despotism", "Player", FALSE
       "Gov", "Monarchy", "Player", FALSE
-      "Gov", "Fundamentalism", "Player", FALSE
+;      "Gov", "Fundamentalism", "Player", FALSE
       "Gov", "Federation", "Player", FALSE
 ;      "Gov", "Republic", "Player", FALSE
       "Gov", "Democracy", "Player", FALSE
