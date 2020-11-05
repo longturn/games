@@ -1477,7 +1477,6 @@ reqs           =
       "Extra", "River", "Local", FALSE, FALSE
     }
 build_time     = 3
-border_sq      = 5
 removal_time   = 0
 native_to      = "Land", "Small Land", "Merchant", "Big Land", "Big Siege"
 conflicts      = "Airbase"
@@ -1763,6 +1762,11 @@ Cities built on or next to rivers incur a small risk of flooding,\
 ;
 ; */ <-- avoid gettext warnings
 
+[base_fort]
+extra          = "Pre-Fortress"
+gui_type       = "Fortress"
+border_sq      = -1
+; flags          =
 
 [base_fortress]
 extra          = "Fortress"

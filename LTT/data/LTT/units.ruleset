@@ -3195,7 +3195,7 @@ wide area.\
 [unit_fusion_fighter]
 name          = _("Fusion Fighter")
 class         = "Air"
-tech_req      = "Fusion Power", "Stealth"
+tech_req      = "Fusion Power"
 obsolete_by   = "None"
 graphic       = "u.fusion_fighter"
 graphic_alt   = "u.stealth_fighter"
@@ -3230,7 +3230,7 @@ An improved Stealth Fighter, with a higher movement\
 [unit_fusion_bomber]
 name          = _("Fusion Bomber")
 class         = "Air"
-tech_req      = "Fusion Power", "Stealth"
+tech_req      = "Fusion Power"
 obsolete_by   = "None"
 graphic       = "u.fusion_bomber"
 graphic_alt   = "u.stealth_bomber"
@@ -3265,7 +3265,7 @@ bombard_rate = 4
 [unit_fusion_battleship]
 name          = _("Fusion Battleship")
 class         = "Sea"
-tech_req      = "Fusion Power", "Mass Production"
+tech_req      = "Fusion Power"
 obsolete_by   = "None"
 graphic       = "u.fusion_battleship"
 graphic_alt   = "u.battleship"
@@ -3299,7 +3299,7 @@ that attacks with triple firepower.\
 [unit_fusion_armor]
 name          = _("Fusion Armor")
 class         = "Big Land"
-tech_req      = "Fusion Power", "Mobile Warfare"
+tech_req      = "Fusion Power"
 obsolete_by   = "None"
 graphic       = "u.fusion_armor"
 graphic_alt   = "u.armor"

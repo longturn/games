@@ -820,23 +820,20 @@ reqs   =
 	
 ; Doubled for city size >= 8
 [effect_upkeep_free_mil_city_1]
-name    = "Make_Content_Mil"
+type    = "Make_Content_Mil"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "MinSize", "8", "City"
-    }
-nreqs   =
-    { "type", "name", "range"
-      "Gov", "Anarchy", "Player"
-      "Gov", "Tribal", "Player"
-      "Gov", "Communism", "Player"
-      "Gov", "Despotism", "Player"
-      "Gov", "Monarchy", "Player"
-;      "Gov", "Fundamentalism", "Player"
-      "Gov", "Federation", "Player"
-;      "Gov", "Republic", "Player"
-      "Gov", "Democracy", "Player"
+    { "type", "name", "range", "present"
+      "MinSize", "8", "City", TRUE
+      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Tribal", "Player", FALSE
+      "Gov", "Communism", "Player", FALSE
+      "Gov", "Despotism", "Player", FALSE
+      "Gov", "Monarchy", "Player", FALSE
+;      "Gov", "Fundamentalism", "Player", FALSE
+      "Gov", "Federation", "Player", FALSE
+;      "Gov", "Republic", "Player", FALSE
+      "Gov", "Democracy", "Player", FALSE
     }
 	
 
@@ -861,23 +858,20 @@ reqs   =
 	
 ; Doubled for city size >= 8
 [effect_upkeep_free_mil_city_2]
-name    = "Make_Content_Mil"
+type    = "Make_Content_Mil"
 value   = 2
 reqs    =
-    { "type", "name", "range"
-      "MinSize", "8", "City"
-    }
-nreqs   =
-    { "type", "name", "range"
-;      "Gov", "Anarchy", "Player"
-;      "Gov", "Tribal", "Player"
-      "Gov", "Communism", "Player"
-;      "Gov", "Despotism", "Player"
-      "Gov", "Monarchy", "Player"
-      "Gov", "Fundamentalism", "Player"
-;      "Gov", "Federation", "Player"
-      "Gov", "Republic", "Player"
-;      "Gov", "Democracy", "Player"
+    { "type", "name", "range", "present"
+      "MinSize", "8", "City", TRUE
+;      "Gov", "Anarchy", "Player", FALSE
+;      "Gov", "Tribal", "Player", FALSE
+      "Gov", "Communism", "Player", FALSE
+;      "Gov", "Despotism", "Player", FALSE
+      "Gov", "Monarchy", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
+;      "Gov", "Federation", "Player", FALSE
+      "Gov", "Republic", "Player", FALSE
+;      "Gov", "Democracy", "Player", FALSE
     }
 
 ; Govs with 3 free units (exclusive with previous)
@@ -901,23 +895,19 @@ reqs   =
 
 ; Doubled for city size >= 8
 [effect_upkeep_free_mil_city_3]
-name    = "Make_Content_Mil"
+type    = "Make_Content_Mil"
 value   = 3
 reqs    =
-    { "type", "name", "range"
-      "MinSize", "8", "City"
-    }
-nreqs   =
-    { "type", "name", "range"
-      "Gov", "Anarchy", "Player"
-      "Gov", "Tribal", "Player"
-      "Gov", "Communism", "Player"
-      "Gov", "Despotism", "Player"
-;      "Gov", "Monarchy", "Player"
-      "Gov", "Fundamentalism", "Player"
-      "Gov", "Federation", "Player"
-      "Gov", "Republic", "Player"
-      "Gov", "Democracy", "Player"
+    { "type", "name", "range", "present"
+      "Gov", "Anarchy", "Player", FALSE
+      "Gov", "Tribal", "Player", FALSE
+      "Gov", "Communism", "Player", FALSE
+      "Gov", "Despotism", "Player", FALSE
+;      "Gov", "Monarchy", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
+      "Gov", "Federation", "Player", FALSE
+      "Gov", "Republic", "Player", FALSE
+      "Gov", "Democracy", "Player", FALSE
     }
 
 
@@ -2779,10 +2769,10 @@ reqs    =
 type    = "Defend_Bonus"
 value   = 30
 reqs    =
-    { "type", "name", "range"
-      "Building", "SDI Defense II", "City"
-	  "Building", "Palace", "City", FALSE
-      "UnitClass", "Missile", "Local"
+    { "type", "name", "range", "present"
+      "Building", "SDI Defense II", "City", TRUE
+      "Building", "Palace", "City", FALSE
+      "UnitClass", "Missile", "Local", TRUE
     }
 	
 	
@@ -2792,7 +2782,7 @@ value   = 30
 reqs    =
     { "type", "name", "range", "present"
       "Building", "SDI Defense III", "City", TRUE
-	  "Building", "Palace", "City", FALSE
+      "Building", "Palace", "City", FALSE
       "DiplRel", "Is foreign", "Local", TRUE
       "DiplRel", "Team", "Local", FALSE
     }
@@ -2802,10 +2792,10 @@ reqs    =
 type    = "Defend_Bonus"
 value   = 40
 reqs    =
-    { "type", "name", "range"
-      "Building", "SDI Defense III", "City"
-	  "Building", "Palace", "City", FALSE
-      "UnitClass", "Missile", "Local"
+    { "type", "name", "range", "present"
+      "Building", "SDI Defense III", "City", TRUE
+      "Building", "Palace", "City", FALSE
+      "UnitClass", "Missile", "Local", TRUE
     }
 	
 
@@ -4260,7 +4250,7 @@ reqs    =
 	
 	
 [effect_marco_polos_embassy]
-name    = "Output_Bonus"
+type    = "Output_Bonus"
 value   = 30
 reqs    =
     { "type", "name", "range"
@@ -4269,7 +4259,7 @@ reqs    =
     }
 
 [effect_trade_company]
-name    = "Output_Bonus"
+type    = "Output_Bonus"
 value   = 10
 reqs    =
     { "type", "name", "range"
@@ -4310,7 +4300,7 @@ reqs    =
 
 
 [effect_units_in_a_city_1]
-name    = "Output_Bonus"
+type    = "Output_Bonus"
 value   = 5
 reqs    =
     { "type", "name", "range", "present"
