@@ -811,14 +811,14 @@ reqs   =
       "Gov", "Communism", "Player", FALSE
       "Gov", "Despotism", "Player", FALSE
       "Gov", "Monarchy", "Player", FALSE
-;      "Gov", "Fundamentalism", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
       "Gov", "Federation", "Player", FALSE
 ;      "Gov", "Republic", "Player", FALSE
-      "Gov", "Democracy", "Player", FALSE
+;      "Gov", "Democracy", "Player", FALSE
     }
 	
 	
-; Doubled for city size >= 8
+; Doubled for city size >= 8 - democracy will not get an extra unit at any size 
 [effect_upkeep_free_mil_city_1]
 type    = "Make_Content_Mil"
 value   = 1
@@ -830,7 +830,7 @@ reqs    =
       "Gov", "Communism", "Player", FALSE
       "Gov", "Despotism", "Player", FALSE
       "Gov", "Monarchy", "Player", FALSE
-;      "Gov", "Fundamentalism", "Player", FALSE
+      "Gov", "Fundamentalism", "Player", FALSE
       "Gov", "Federation", "Player", FALSE
 ;      "Gov", "Republic", "Player", FALSE
       "Gov", "Democracy", "Player", FALSE
@@ -852,7 +852,7 @@ reqs   =
 ;      "Gov", "Fundamentalism", "Player", FALSE
 ;      "Gov", "Federation", "Player", FALSE
       "Gov", "Republic", "Player", FALSE
-;      "Gov", "Democracy", "Player", FALSE
+      "Gov", "Democracy", "Player", FALSE
     }
 	
 	
@@ -868,10 +868,10 @@ reqs    =
       "Gov", "Communism", "Player", FALSE
 ;      "Gov", "Despotism", "Player", FALSE
       "Gov", "Monarchy", "Player", FALSE
-      "Gov", "Fundamentalism", "Player", FALSE
+;      "Gov", "Fundamentalism", "Player", FALSE
 ;      "Gov", "Federation", "Player", FALSE
       "Gov", "Republic", "Player", FALSE
-;      "Gov", "Democracy", "Player", FALSE
+      "Gov", "Democracy", "Player", FALSE
     }
 
 ; Govs with 3 free units (exclusive with previous)
@@ -899,9 +899,10 @@ type    = "Make_Content_Mil"
 value   = 3
 reqs    =
     { "type", "name", "range", "present"
+	  "MinSize", "8", "City", TRUE
       "Gov", "Anarchy", "Player", FALSE
       "Gov", "Tribal", "Player", FALSE
-      "Gov", "Communism", "Player", FALSE
+;      "Gov", "Communism", "Player", FALSE
       "Gov", "Despotism", "Player", FALSE
 ;      "Gov", "Monarchy", "Player", FALSE
       "Gov", "Fundamentalism", "Player", FALSE
@@ -909,6 +910,7 @@ reqs    =
       "Gov", "Republic", "Player", FALSE
       "Gov", "Democracy", "Player", FALSE
     }
+
 
 
 ; normally 2 for Democracy, but 1 of these not needed with Women's Suffrage
