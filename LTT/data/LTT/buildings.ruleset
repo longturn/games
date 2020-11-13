@@ -2218,30 +2218,6 @@ a row, that player's government falls (even for governments other than \
 Republic and Democracy).\
 ")
 
-[building_womens_suffrage]
-name		= _("Women's Suffrage")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range", "survives"
-      "Tech", "Conscription", "Player"
-    }
-graphic	= "b.womens_suffrage"
-graphic_alt	= "-"
-obsolete_by	=
-    { "type", "name", "range"
-      "Tech", "Tactics", "Player"
-    }
-build_cost	= 600
-upkeep		= 0
-sabotage	= 0
-sound		= "w_womens_suffrage"
-sound_alt	= "w_generic"
-helptext	= _("\
-Neutralizes the unhappiness caused by one aggressively \
-deployed military unit per city. Under Democracy, it additionally \
-halves the unhappiness caused by military units (reducing it to the \
-same level as a Republic).\
-")
 
 
 [building_hal_salflieni_hypogeum]
