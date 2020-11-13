@@ -114,18 +114,6 @@ reqs    =
       "AI", "Cheating", "Player"
     }
 
-[effect_ai_cheat]
-type    = "Defend_Bonus"
-value   = 50
-reqs    =
-    { "type", "name", "range"
-      "AI", "Cheating", "Player"
-    }
-nreqs    =
-    { "type", "name", "range"
-      "CityTile", "Center", "Local"
-      "TerrainClass", "Oceanic", "Local"
-    }
 
 [effect_unhappysize]
 type    = "City_Unhappy_Size"
@@ -246,40 +234,34 @@ reqs    =
 type    = "HP_Regen"
 value   = 25
 reqs    =
-    { "type", "name", "range"
-      "Extra", "Fortress", "Local"
-    }
-nreqs   =
-    { "type", "name", "range"
-;      "UnitClass", "Land", "Local"
-;      "UnitClass", "Small Land", "Local"
-;      "UnitClass", "Big Land", "Local"
-;      "UnitClass", "Merchant", "Local"
-      "UnitClass", "Sea", "Local"
-      "UnitClass", "Trireme", "Local"
-      "UnitClass", "Helicopter", "Local"
-      "UnitClass", "Air", "Local"
-      "UnitClass", "Missile", "Local"
+    { "type", "name", "range", "present"
+      "Extra", "Fortress", "Local", TRUE
+;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Small Land", "Local", FALSE
+;      "UnitClass", "Big Land", "Local", FALSE
+;      "UnitClass", "Merchant", "Local", FALSE
+      "UnitClass", "Sea", "Local", FALSE
+      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Helicopter", "Local", FALSE
+      "UnitClass", "Air", "Local", FALSE
+      "UnitClass", "Missile", "Local", FALSE
     }
 
 [effect_fortress_defence_bonus]
 type    = "Defend_Bonus"
 value   = 100
 reqs    =
-    { "type", "name", "range"
-      "Extra", "Fortress", "Local"
-    }
-nreqs   =
-    { "type", "name", "range"
-;      "UnitClass", "Land", "Local"
-;      "UnitClass", "Small Land", "Local"
-;      "UnitClass", "Big Land", "Local"
-;      "UnitClass", "Merchant", "Local"
-;      "UnitClass", "Sea", "Local"
-;      "UnitClass", "Trireme", "Local"
-      "UnitClass", "Helicopter", "Local"
-      "UnitClass", "Air", "Local"
-      "UnitClass", "Missile", "Local"
+    { "type", "name", "range", "present"
+      "Extra", "Fortress", "Local", TRUE
+;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Small Land", "Local", FALSE
+;      "UnitClass", "Big Land", "Local", FALSE
+;      "UnitClass", "Merchant", "Local", FALSE
+;      "UnitClass", "Sea", "Local", FALSE
+;      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Helicopter", "Local", FALSE
+      "UnitClass", "Air", "Local", FALSE
+      "UnitClass", "Missile", "Local", FALSE
     }
 
 ; Airbase HP regen (Every Air units)
@@ -287,45 +269,44 @@ nreqs   =
 type    = "HP_Regen"
 value   = 25
 reqs    =
-    { "type", "name", "range"
-      "Extra", "Airbase", "Local"
-    }
-nreqs   =
-    { "type", "name", "range"
-      "UnitClass", "Land", "Local"
-      "UnitClass", "Small Land", "Local"
-      "UnitClass", "Big Land", "Local"
-      "UnitClass", "Merchant", "Local"
-      "UnitClass", "Sea", "Local"
-      "UnitClass", "Trireme", "Local"
-;      "UnitClass", "Helicopter", "Local"
-;      "UnitClass", "Air", "Local"
-      "UnitClass", "Missile", "Local"
+    { "type", "name", "range", "present"
+      "Extra", "Airbase", "Local", TRUE
+      "UnitClass", "Land", "Local", FALSE
+      "UnitClass", "Small Land", "Local", FALSE
+      "UnitClass", "Big Land", "Local", FALSE
+      "UnitClass", "Merchant", "Local", FALSE
+      "UnitClass", "Sea", "Local", FALSE
+      "UnitClass", "Trireme", "Local", FALSE
+;      "UnitClass", "Helicopter", "Local", FALSE
+;      "UnitClass", "Air", "Local", FALSE
+      "UnitClass", "Missile", "Local", FALSE
     }
 
 [effect_airbase_defense]
 type    = "Defend_Bonus"
 value   = 100
 reqs    =
-    { "type", "name", "range"
-      "Extra", "Airbase", "Local"
-    }
-nreqs   =
-    { "type", "name", "range"
-      "UnitClass", "Land", "Local"
-      "UnitClass", "Small Land", "Local"
-      "UnitClass", "Big Land", "Local"
-      "UnitClass", "Merchant", "Local"
-      "UnitClass", "Sea", "Local"
-      "UnitClass", "Trireme", "Local"
-;      "UnitClass", "Helicopter", "Local"
-;      "UnitClass", "Air", "Local"
-;      "UnitClass", "Missile", "Local"
+    { "type", "name", "range", "present"
+      "Extra", "Airbase", "Local", TRUE
+      "UnitClass", "Land", "Local", FALSE
+      "UnitClass", "Small Land", "Local", FALSE
+      "UnitClass", "Big Land", "Local", FALSE
+      "UnitClass", "Merchant", "Local", FALSE
+      "UnitClass", "Sea", "Local", FALSE
+      "UnitClass", "Trireme", "Local", FALSE
+;      "UnitClass", "Helicopter", "Local", FALSE
+;      "UnitClass", "Air", "Local", FALSE
+;      "UnitClass", "Missile", "Local", FALSE
     }
 
 [effect_trade_routes]
 type    = "Max_Trade_Routes"
-value   = 2
+value   = 99
+reqs	   =
+    { "type", "name", "range"
+	"Building", "Palace", "City"
+	}
+	
 
 ; Base vision range - radius of vision is sqrt(5) = 2.24
 [effect_city_vision]
@@ -346,20 +327,17 @@ reqs    =
 type    = "Unit_Vision_Radius_Sq"
 value   = 4
 reqs    =
-    { "type", "name", "range"
-      "Terrain", "Mountains", "Local"
-    }
-nreqs   =
-    { "type", "name", "range"
-;      "UnitClass", "Land", "Local"
-;      "UnitClass", "Small Land", "Local"
-;      "UnitClass", "Big Land", "Local"
-;      "UnitClass", "Merchant", "Local"
-      "UnitClass", "Sea", "Local"
-      "UnitClass", "Trireme", "Local"
-      "UnitClass", "Helicopter", "Local"
-      "UnitClass", "Air", "Local"
-      "UnitClass", "Missile", "Local"
+    { "type", "name", "range", "present"
+      "Terrain", "Mountains", "Local", TRUE
+;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Small Land", "Local", FALSE
+;      "UnitClass", "Big Land", "Local", FALSE
+;      "UnitClass", "Merchant", "Local", FALSE
+      "UnitClass", "Sea", "Local", FALSE
+      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Helicopter", "Local", FALSE
+      "UnitClass", "Air", "Local", FALSE
+      "UnitClass", "Missile", "Local", FALSE
     }
 
 ; Movement penalty if ended turn at mountains (for every land unit)
@@ -367,21 +345,18 @@ nreqs   =
 type    = "Move_Bonus"
 value   = -1
 reqs    =
-    { "type", "name", "range"
-      "Terrain", "Mountains", "Local"
-    }
-nreqs   =
-    { "type", "name", "range"
-;      "UnitClass", "Land", "Local"
-;      "UnitClass", "Small Land", "Local"
-;      "UnitClass", "Big Land", "Local"
-;      "UnitClass", "Merchant", "Local"
-      "UnitClass", "Sea", "Local"
-      "UnitClass", "Trireme", "Local"
-      "UnitClass", "Helicopter", "Local"
-      "UnitClass", "Air", "Local"
-      "UnitClass", "Missile", "Local"
-      "Extra", "Road", "Local"
+    { "type", "name", "range", "present"
+      "Terrain", "Mountains", "Local", TRUE
+;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Small Land", "Local", FALSE
+;      "UnitClass", "Big Land", "Local", FALSE
+;      "UnitClass", "Merchant", "Local", FALSE
+      "UnitClass", "Sea", "Local", FALSE
+      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Helicopter", "Local", FALSE
+      "UnitClass", "Air", "Local", FALSE
+      "UnitClass", "Missile", "Local", FALSE
+      "Extra", "Road", "Local", FALSE
     }
 
 ; Nuclear power gives +1 moves to sea units
@@ -688,7 +663,7 @@ reqs    =
     { "type", "name", "range"
       "OutputType", "Gold", "Local"
     }
-nreqs   =
+nreqss   =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
       "Gov", "Tribal", "Player"
@@ -1938,48 +1913,14 @@ nreqs   =
       "Gov", "Communism", "Player"
     }
 
-; Every Land
-;[effect_city_defense_0]
-;type    = "Defend_Bonus"
-;value   = 50
-;reqs    =
-;    { "type", "name", "range"
-;      "CityTile", "Center", "Local"
-;    }
-;nreqs   =
-;    { "type", "name", "range"
-;;      "UnitClass", "Land", "Local"
-;;      "UnitClass", "Small Land", "Local"
-;;      "UnitClass", "Big Land", "Local"
-;;      "UnitClass", "Merchant", "Local"
-;      "UnitClass", "Sea", "Local"
-;      "UnitClass", "Trireme", "Local"
-;      "UnitClass", "Helicopter", "Local"
-;      "UnitClass", "Air", "Local"
-;      "UnitClass", "Missile", "Local"
-;    }
 
-; Every Land, Sea, Trireme
-;[effect_city_defense_1]
-;type    = "Defend_Bonus"
-;value   = 50
-;reqs    =
-;    { "type", "name", "range"
-;      "MinSize", "9", "City"
-;      "CityTile", "Center", "Local"
-;    }
-;nreqs   =
-;    { "type", "name", "range"
-;;      "UnitClass", "Land", "Local"
-;;      "UnitClass", "Small Land", "Local"
-;;      "UnitClass", "Big Land", "Local"
-;;      "UnitClass", "Merchant", "Local"
-;;      "UnitClass", "Sea", "Local"
-;;      "UnitClass", "Trireme", "Local"
-;      "UnitClass", "Helicopter", "Local"
-;      "UnitClass", "Air", "Local"
-;      "UnitClass", "Missile", "Local"
-;    }
+[effect_palace_defense]
+type    = "Defend_Bonus"
+value   = 200
+reqs    =
+    { "type", "name", "range"
+      "Building", "Palace", "City"
+    }
 
 ; Every Land
 [effect_city_walls_0]
@@ -2000,6 +1941,7 @@ nreqs   =
       "UnitClass", "Helicopter", "Local"
       "UnitClass", "Air", "Local"
       "UnitClass", "Missile", "Local"
+	"UnitFlag", "IgWall", "Local"
     }
 
 [effect_city_walls_1]
@@ -3357,6 +3299,7 @@ nreqs   =
       "UnitClass", "Helicopter", "Local"
       "UnitClass", "Air", "Local"
       "UnitClass", "Missile", "Local"
+	"Unitflag", "IgWall", "Local"
     }
 
 [effect_great_wall_1]
@@ -4076,7 +4019,7 @@ reqs    =
       "MinSize", "17", "City"
     }
 
-; "Sea" nreq is for Transports, which are only supposed to clean pollution
+; "Sea" nreqs is for Transports, which are only supposed to clean pollution
 [effect_irrigate_src_tech]
 type    = "Irrig_Possible"
 value   = 1
@@ -5242,6 +5185,7 @@ nreqs   =
       "UnitClass", "Helicopter", "Local"
       "UnitClass", "Air", "Local"
       "UnitClass", "Missile", "Local"
+	"UnitFlag", "IgWall", "Local"
     }
 
 [effect_city_defense_2]
@@ -5263,7 +5207,8 @@ nreqs   =
       "UnitClass", "Helicopter", "Local"
       "UnitClass", "Air", "Local"
       "UnitClass", "Missile", "Local"
-    }
+ 	"UnitFlag", "IgWall", "Local"
+   }
 
 [effect_city_defense_3]
 type    = "Defend_Bonus"
@@ -5284,7 +5229,8 @@ nreqs   =
       "UnitClass", "Helicopter", "Local"
       "UnitClass", "Air", "Local"
       "UnitClass", "Missile", "Local"
-    }
+ 	"UnitFlag", "IgWall", "Local"
+   }
 
 [effect_city_defense_4]
 type    = "Defend_Bonus"
@@ -5305,7 +5251,8 @@ nreqs   =
       "UnitClass", "Helicopter", "Local"
       "UnitClass", "Air", "Local"
       "UnitClass", "Missile", "Local"
-    }
+ 	"UnitFlag", "IgWall", "Local"
+   }
 
 [effect_city_defense_5]
 type    = "Defend_Bonus"
@@ -5326,6 +5273,7 @@ nreqs   =
       "UnitClass", "Helicopter", "Local"
       "UnitClass", "Air", "Local"
       "UnitClass", "Missile", "Local"
+	"UnitFlag", "IgWall", "Local"
     }
 
 [effect_city_defense_6]
@@ -5347,6 +5295,7 @@ nreqs   =
       "UnitClass", "Helicopter", "Local"
       "UnitClass", "Air", "Local"
       "UnitClass", "Missile", "Local"
+	"UnitFlag", "IgWall", "Local"
     }
 
 [effect_city_defense_7]
@@ -5368,6 +5317,7 @@ nreqs   =
       "UnitClass", "Helicopter", "Local"
       "UnitClass", "Air", "Local"
       "UnitClass", "Missile", "Local"
+	"UnitFlag", "IgWall", "Local"
     }
 
 [effect_city_defense_8]
@@ -5389,6 +5339,7 @@ nreqs   =
       "UnitClass", "Helicopter", "Local"
       "UnitClass", "Air", "Local"
       "UnitClass", "Missile", "Local"
+	"UnitFlag", "IgWall", "Local"
     }
 
 [effect_city_defense_9]
@@ -5410,6 +5361,7 @@ nreqs   =
       "UnitClass", "Helicopter", "Local"
       "UnitClass", "Air", "Local"
       "UnitClass", "Missile", "Local"
+	"UnitFlag", "IgWall", "Local"
     }
 
 [effect_city_defense_10]
@@ -5431,7 +5383,8 @@ nreqs   =
       "UnitClass", "Helicopter", "Local"
       "UnitClass", "Air", "Local"
       "UnitClass", "Missile", "Local"
-    }
+ 	"UnitFlag", "IgWall", "Local"
+   }
 
 
 [effect_migration_size_1]
@@ -5783,9 +5736,10 @@ reqs   =
 type    = "Defend_Bonus"
 value   = 50
 reqs    =
-    { "type", "name", "range"
-      "Terrain", "Forest", "Local"
-      "UnitFlag", "fast", "Local"
+    { "type", "name", "range", "present"
+      "Terrain", "Forest", "Local", TRUE
+      "UnitFlag", "Fast", "Local", TRUE
+	"UnitFlag", "IgWall", "Local", FALSE
     }
 
 [effect_defense_jungle]
@@ -5794,7 +5748,9 @@ value   = 100
 reqs    =
     { "type", "name", "range"
       "Terrain", "Jungle", "Local"
-      "UnitFlag", "fast", "Local"
+      "UnitFlag", "Fast", "Local"
+	"UnitFlag", "IgWall", "Local", FALSE
+
     }
 [effect_defense_swamp]
 type    = "Defend_Bonus"
@@ -5802,7 +5758,9 @@ value   = 50
 reqs    =
     { "type", "name", "range"
       "Terrain", "Swamp", "Local"
-      "UnitFlag", "fast", "Local"
+      "UnitFlag", "Fast", "Local"
+	"UnitFlag", "IgWall", "Local", FALSE
+
     }
 [effect_defense_hills]
 type    = "Defend_Bonus"
@@ -5810,7 +5768,9 @@ value   = 50
 reqs    =
     { "type", "name", "range"
       "Terrain", "Hills", "Local"
-      "UnitFlag", "fast", "Local"
+      "UnitFlag", "Fast", "Local"
+	"UnitFlag", "IgWall", "Local", FALSE
+
     }
 
 [effect_defence_mountains]
@@ -5819,7 +5779,8 @@ value   = 200
 reqs    =
     { "type", "name", "range"
       "Terrain", "Mountains", "Local"
-      "UnitFlag", "fast", "Local"
+      "UnitFlag", "Fast", "Local"
+	"UnitFlag", "IgWall", "Local", FALSE
     }
 
 [effect_office_of_hansa]

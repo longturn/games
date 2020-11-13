@@ -129,8 +129,6 @@ _("\
 * Base corruption is 30% (the highest under any government). This\
  increases with distance from the capital (half as fast with knowledge\
  of The Corporation).\n\
-* There is no base level of production waste, but an increasing amount\
- with distance from the capital (half as fast with knowledge of Trade).\
 ")
 
 ;------------------------------------------------------------------------
@@ -166,8 +164,6 @@ _("\
  will each force 1 unhappy citizen to become content.\n\
 * Base corruption is 20%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
-* Base production waste is 10%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\
 ")
 
 ;------------------------------------------------------------------------
@@ -203,8 +199,7 @@ _("\
  will each force 1 unhappy citizen to become content.\n\
 * Base corruption is 10%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
-* Base production waste is 20%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\
+
 ")
 
 ;------------------------------------------------------------------------
@@ -241,7 +236,7 @@ _("\
  will each force 2 unhappy citizens to become content (the maximum\
  possible).\n\
 * Base corruption is 30%, but is not affected by distance to the capital.\n\
-* There is no production waste.\
+
 ")
 
 ;------------------------------------------------------------------------
@@ -286,8 +281,7 @@ _("\
  each further unit causes 1 unhappy citizen.\n\
 * Base corruption is 15%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
-* Base production waste is 15%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\
+
 ")
 
 ;------------------------------------------------------------------------
@@ -321,8 +315,7 @@ _("\
 * There is no base level of corruption, but an increasing amount\
  with distance from the capital (half as much as with most other\
  governments). Knowledge of The Corporation eliminates this corruption.\n\
-* Base production waste is 30%, but is not affected by distance to the\
- capital.\n\
+
 * Has a senate that may prevent declaration of war.\
 ")
 
@@ -360,8 +353,7 @@ _("\
  each further unit causes 1 unhappy citizen.\n\
 * Base corruption is 25%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
-* Base production waste is 5%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\
+
 ")
 
 ;------------------------------------------------------------------------
@@ -396,8 +388,7 @@ _("\
  each further unit causes 2 unhappy citizens.\n\
 * Base corruption is 5%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
-* Base production waste is 25%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\n\
+
 * Has a senate that may prevent declaration of war.\
 ")
 
