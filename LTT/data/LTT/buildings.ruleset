@@ -2071,7 +2071,7 @@ graphic	= "b.pyramids"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range", "survives"
-      "Tech", "Chemistry", "Player", FALSE
+      "Tech", "Railroad", "Player", FALSE
     }
 build_cost	= 70
 upkeep		= 0
