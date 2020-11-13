@@ -2139,30 +2139,7 @@ Upon completion of this wonder, entertainer specialists' luxury \
 output increases to 3 permanently for every nation.\
 ")
 
-[building_statue_of_liberty]
-name		= _("Statue of Liberty")
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Democracy", "Player"
-    }
-graphic	= "b.statue_of_liberty"
-graphic_alt	= "-"
-obsolete_by	=
-    { "type", "name", "range"
-    }
-build_cost	= 20000
-upkeep		= 0
-sabotage	= 0
-sound		= "w_statue_of_liberty"
-sound_alt	= "w_generic"
-helptext	= _("\
-Allows you to choose any government, including those that have not yet \
-been researched by your civilization, and without the transition \
-period of Anarchy. It also allows unprovoked declaration of war \
-regardless of any senate instituted by a Democracy or Federation \
-government or by the United Nations.\
-")
+
 
 [building_sun_tzus_war_academy]
 name		= _("Sun Tzu's War Academy")
