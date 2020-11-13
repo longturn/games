@@ -2175,7 +2175,7 @@ graphic	= "b.sun_tzus_war_academy"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range", "survives"
-      "Tech", "Gunpowder", "Player", FALSE
+      "Tech", "Metallurgy", "Player", FALSE
     }
 build_cost	= 100
 upkeep		= 0
