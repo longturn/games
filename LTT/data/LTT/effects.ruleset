@@ -818,13 +818,13 @@ reqs   =
     }
 	
 	
-; Doubled for city size >= 8 - democracy will not get an extra unit at any size 
+; Doubled for city size >= 9 - democracy will not get an extra unit at any size 
 [effect_upkeep_free_mil_city_1]
 type    = "Make_Content_Mil"
 value   = 1
 reqs    =
     { "type", "name", "range", "present"
-      "MinSize", "8", "City", TRUE
+      "MinSize", "9", "City", TRUE
       "Gov", "Anarchy", "Player", FALSE
       "Gov", "Tribal", "Player", FALSE
       "Gov", "Communism", "Player", FALSE
@@ -856,13 +856,13 @@ reqs   =
     }
 	
 	
-; Doubled for city size >= 8
+; Doubled for city size >= 9
 [effect_upkeep_free_mil_city_2]
 type    = "Make_Content_Mil"
 value   = 2
 reqs    =
     { "type", "name", "range", "present"
-      "MinSize", "8", "City", TRUE
+      "MinSize", "9", "City", TRUE
 ;      "Gov", "Anarchy", "Player", FALSE
 ;      "Gov", "Tribal", "Player", FALSE
       "Gov", "Communism", "Player", FALSE
@@ -893,13 +893,13 @@ reqs   =
 	
 	
 
-; Doubled for city size >= 8
+; Doubled for city size >= 9
 [effect_upkeep_free_mil_city_3]
 type    = "Make_Content_Mil"
 value   = 3
 reqs    =
     { "type", "name", "range", "present"
-	  "MinSize", "8", "City", TRUE
+      "MinSize", "9", "City", TRUE
       "Gov", "Anarchy", "Player", FALSE
       "Gov", "Tribal", "Player", FALSE
 ;      "Gov", "Communism", "Player", FALSE
