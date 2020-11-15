@@ -818,13 +818,13 @@ reqs   =
     }
 	
 	
-; Doubled for city size >= 8 - democracy will not get an extra unit at any size 
+; Doubled for city size >= 9 - democracy will not get an extra unit at any size 
 [effect_upkeep_free_mil_city_1]
 type    = "Make_Content_Mil"
 value   = 1
 reqs    =
     { "type", "name", "range", "present"
-      "MinSize", "8", "City", TRUE
+      "MinSize", "9", "City", TRUE
       "Gov", "Anarchy", "Player", FALSE
       "Gov", "Tribal", "Player", FALSE
       "Gov", "Communism", "Player", FALSE
@@ -856,13 +856,13 @@ reqs   =
     }
 	
 	
-; Doubled for city size >= 8
+; Doubled for city size >= 9
 [effect_upkeep_free_mil_city_2]
 type    = "Make_Content_Mil"
 value   = 2
 reqs    =
     { "type", "name", "range", "present"
-      "MinSize", "8", "City", TRUE
+      "MinSize", "9", "City", TRUE
 ;      "Gov", "Anarchy", "Player", FALSE
 ;      "Gov", "Tribal", "Player", FALSE
       "Gov", "Communism", "Player", FALSE
@@ -893,13 +893,13 @@ reqs   =
 	
 	
 
-; Doubled for city size >= 8
+; Doubled for city size >= 9
 [effect_upkeep_free_mil_city_3]
 type    = "Make_Content_Mil"
 value   = 3
 reqs    =
     { "type", "name", "range", "present"
-	  "MinSize", "8", "City", TRUE
+      "MinSize", "9", "City", TRUE
       "Gov", "Anarchy", "Player", FALSE
       "Gov", "Tribal", "Player", FALSE
 ;      "Gov", "Communism", "Player", FALSE
@@ -924,6 +924,8 @@ reqs    =
       "Gov", "Democracy", "Player"
     }
 
+
+; Free Gold/Shield unit upkeep for each city, depending on government
 [effect_upkeep_free_units_anarchy]
 type    = "Unit_Upkeep_Free_Per_City"
 value   = 2
@@ -960,6 +962,7 @@ reqs    =
       "OutputType", "Gold", "Local", FALSE
     }
 
+; 2 gold per unit, so 2 units free
 [effect_upkeep_free_units_fundamentalism]
 type    = "Unit_Upkeep_Free_Per_City"
 value   = 4
@@ -978,6 +981,7 @@ reqs    =
       "OutputType", "Shield", "Local", FALSE
     }
 
+; 2 gold per unit, so 1 unit free
 [effect_upkeep_free_units_democracy]
 type    = "Unit_Upkeep_Free_Per_City"
 value   = 2
@@ -987,6 +991,7 @@ reqs    =
       "OutputType", "Gold", "Local", FALSE
     }
 
+; 2 gold per unit, so 2 units free
 [effect_upkeep_free_units_federation]
 type    = "Unit_Upkeep_Free_Per_City"
 value   = 4
@@ -1005,6 +1010,104 @@ reqs    =
       "OutputType", "Shield", "Local", FALSE
     }
 
+
+; Free Gold/Shield unit upkeep -- doubled for big cities
+[effect_upkeep_free_units_anarchy_city]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 2
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Anarchy", "Player", TRUE
+      "OutputType", "Shield", "Local", FALSE
+      "MinSize", "9", "City", FALSE
+    }
+
+[effect_upkeep_free_units_tribal_city]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 2
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Tribal", "Player", TRUE
+      "OutputType", "Shield", "Local", FALSE
+      "MinSize", "9", "City", FALSE
+    }
+
+[effect_upkeep_free_units_despotism_city]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 2
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Despotism", "Player", TRUE
+      "OutputType", "Gold", "Local", FALSE
+      "MinSize", "9", "City", FALSE
+    }
+
+[effect_upkeep_free_units_monarchy_city]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 3
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Monarchy", "Player", TRUE
+      "OutputType", "Gold", "Local", FALSE
+      "MinSize", "9", "City", FALSE
+    }
+
+; 2 gold per unit, so 2 units free
+[effect_upkeep_free_units_fundamentalism_city]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 4
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Fundamentalism", "Player", TRUE
+      "OutputType", "Gold", "Local", FALSE
+      "MinSize", "9", "City", FALSE
+    }
+
+[effect_upkeep_free_units_republic_city]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Republic", "Player", TRUE
+      "OutputType", "Shield", "Local", FALSE
+      "MinSize", "9", "City", FALSE
+    }
+
+; 2 gold per unit, so 1 unit free
+[effect_upkeep_free_units_democracy_city]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 2
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Democracy", "Player", TRUE
+      "OutputType", "Gold", "Local", FALSE
+      "MinSize", "9", "City", FALSE
+    }
+
+; 2 gold per unit, so 2 units free
+[effect_upkeep_free_units_federation_city]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 4
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Federation", "Player", TRUE
+      "OutputType", "Gold", "Local", FALSE
+      "MinSize", "9", "City", FALSE
+    }
+
+[effect_upkeep_free_units_communism_city]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 3
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Communism", "Player", TRUE
+      "OutputType", "Shield", "Local", FALSE
+      "MinSize", "9", "City", FALSE
+    }
+
+
+
+; Food upkeep
 ; Any city can support up to four units...
 [effect_upkeep_free_units_food_base]
 type    = "Unit_Upkeep_Free_Per_City"
