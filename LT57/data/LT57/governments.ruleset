@@ -91,9 +91,9 @@ _("\
  Conventional corruption increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 30%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\
-* The big cities with size of 9 or more will get an extra 50% defense against miliary attacks. \
- The number of free units will be doubled for cities with size of 9 or more.\
+ capital (half as fast with knowledge of Trade).\n\
+* Big cities with size of 9 or more will get an extra 50 % defense against military attacks. \n\
+* The number of free units will be doubled for cities with size of 9 or more.\n\
 ")
 
 ;------------------------------------------------------------------------
@@ -132,9 +132,9 @@ _("\
  increases with distance from the capital (half as fast with knowledge\
  of The Corporation).\n\
 * There is no base level of production waste, but an increasing amount\
- with distance from the capital (half as fast with knowledge of Trade).\
- * The big cities with size of 9 or more will get an extra 50% defense against miliary attacks. \
- The number of free units will be doubled for cities with size of 9 or more.\
+ with distance from the capital (half as fast with knowledge of Trade).\n\
+* Big cities with size of 9 or more will get an extra 50 % defense against military attacks. \n\
+* The number of free units will be doubled for cities with size of 9 or more.\n\
 ")
 
 ;------------------------------------------------------------------------
@@ -171,9 +171,9 @@ _("\
 * Base corruption is 20%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 10%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\
- * The big cities with size of 9 or more will get an extra 50% defense against miliary attacks. \
- The number of free units will be doubled for cities with size of 9 or more.\
+ capital (half as fast with knowledge of Trade).\n\
+* Big cities with size of 9 or more will get an extra 50 % defense against military attacks. \n\
+* The number of free units will be doubled for cities with size of 9 or more.\n\
 ")
 
 ;------------------------------------------------------------------------
@@ -210,10 +210,10 @@ _("\
 * Base corruption is 10%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 20%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\
- * The big cities with size of 9 or more will get an extra 50% defense against miliary attacks.\
- The number of free units will be doubled for cities with size of 9 or more.\
- The number of units avoiding the military unhappiness will also double at this size.\
+ capital (half as fast with knowledge of Trade).\n\
+* Big cities with size of 9 or more will get an extra 50 % defense against military attacks. \n\
+* The number of free units will be doubled for cities with size of 9 or more.\
+  The number of units avoiding the military unhappiness will also double at this size.\n\
 ")
 
 ;------------------------------------------------------------------------
@@ -250,10 +250,10 @@ _("\
  will each force 2 unhappy citizens to become content (the maximum\
  possible).\n\
 * Base corruption is 30%, but is not affected by distance to the capital.\n\
-* There is no production waste.\
-* The big cities with size of 9 or more will get an extra 50% defense against miliary attacks.\
- The number of free units will be doubled for cities with size of 9 or more.\
- The number of units avoiding the military unhappiness will also double at this size.\
+* There is no production waste.\n\
+* Big cities with size of 9 or more will get an extra 50 % defense against military attacks. \n\
+* The number of free units will be doubled for cities with size of 9 or more.\
+  The number of units avoiding the military unhappiness will also double at this size.\n\
 ")
 
 ;------------------------------------------------------------------------
@@ -299,10 +299,10 @@ _("\
 * Base corruption is 15%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 15%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\
-* The big cities with size of 9 or more will get an extra 50% defense against miliary attacks.\
- The number of free units will be doubled for cities with size of 9 or more.\
- The number of units avoiding the military unhappiness will also double at this size.\
+ capital (half as fast with knowledge of Trade).\n\
+* Big cities with size of 9 or more will get an extra 50 % defense against military attacks. \n\
+* The number of free units will be doubled for cities with size of 9 or more.\
+  The number of units avoiding the military unhappiness will also double at this size.\n\
 ")
 
 ;------------------------------------------------------------------------
@@ -338,10 +338,10 @@ _("\
  governments). Knowledge of The Corporation eliminates this corruption.\n\
 * Base production waste is 30%, but is not affected by distance to the\
  capital.\n\
-* Has a senate that may prevent declaration of war.\
- * The big cities with size of 9 or more will get an extra 50% defense against miliary attacks.\
- The number of free units will be doubled for cities with size of 9 or more.\
- The number of units avoiding the military unhappiness will also double at this size.\
+* Has a senate that may prevent declaration of war.\n\
+* Big cities with size of 9 or more will get an extra 50 % defense against military attacks. \n\
+* The number of free units will be doubled for cities with size of 9 or more.\
+  The number of units avoiding the military unhappiness will also double at this size.\n\
 ")
 
 ;------------------------------------------------------------------------
@@ -379,10 +379,10 @@ _("\
 * Base corruption is 25%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 5%. This increases with distance from the\
- capital (half as fast with knowledge of Trade).\
- * The big cities with size of 9 or more will get an extra 50% defense against miliary attacks.\
- The number of free units will be doubled for cities with size of 9 or more.\
- The number of units avoiding the military unhappiness will also double at this size.\
+ capital (half as fast with knowledge of Trade).\n\
+* Big cities with size of 9 or more will get an extra 50 % defense against military attacks. \n\
+* The number of free units will be doubled for cities with size of 9 or more.\
+  The number of units avoiding the military unhappiness will also double at this size.\n\
 ")
 
 ;------------------------------------------------------------------------
@@ -419,11 +419,12 @@ _("\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 25%. This increases with distance from the\
  capital (half as fast with knowledge of Trade).\n\
-* Has a senate that may prevent declaration of war.\
-* The big cities with size of 9 or more will get an extra 50% defense against miliary attacks.\
- The number of free units will be doubled for cities with size of 9 or more.\
- Unlike with many other governments the number of units avoiding the military unhappiness will NOT be doubled at this size.\
-")
+* Has a senate that may prevent declaration of war.\n\
+* Big cities with size of 9 or more will get an extra 50 % defense against military attacks. \n\
+* The number of free units will be doubled for cities with size of 9 or more.\
+  Unlike with other governments, the number of units avoiding the military unhappiness will NOT be doubled at this size.\n\
+
+ ")
 
 ; /* <-- avoid gettext warnings
 ;
