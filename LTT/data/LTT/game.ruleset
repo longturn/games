@@ -103,7 +103,9 @@ base_bribe_cost  = 750
 ransom_gold      = 100
 
 ; Number of veteran levels lost when upgrading a unit
-upgrade_veteran_loss     = 1
+; here is a comment about losing the veteran levels. read it before changing this ever again. this has been tried several times.
+; "losing level is wrong. makes early barracks/battle less interesting. so we make the game simpler with less strategic choices."
+upgrade_veteran_loss     = 0
 
 ; Number of veteran levels lost when auto-upgrading a unit
 autoupgrade_veteran_loss = 0
