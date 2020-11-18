@@ -19,7 +19,7 @@ set tilesperplayer=108
 set topology="WRAPX|WRAPY|ISO"
 set wetness=40
 set alltemperate=disabled
-set revealmap=START  #uncomment this for revealing the map for test games
+#set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
 set nationset=all
@@ -52,7 +52,7 @@ set diplomacy=HUMAN
 set sciencebox=100
 set techlost_donor=0
 set techlost_recv=0
-set techpenalty=10
+set techpenalty=0
 set caravan_bonus_style LOGARITHMIC
 set trade_revenue_style SIMPLE
 set trademindist=8
