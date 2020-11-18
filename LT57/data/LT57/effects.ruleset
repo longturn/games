@@ -3572,7 +3572,7 @@ type    = "History"
 value	= 4
 reqs	=
     { "type", "name", "range"
-      "Building", "Leonardo's Workshop", "City"
+      "Building", "Verrocchio's Workshop", "City"
     }
 
 

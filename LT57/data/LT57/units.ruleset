@@ -2006,7 +2006,7 @@ The Galleon is a pure transport ship, the first which can\
 name          = _("Frigate")
 class         = "Sea"
 tech_req      = "Navigation"
-obsolete_by   = "Ironclad"
+obsolete_by   = "Destroyer"
 graphic       = "u.frigate"
 graphic_alt   = "-"
 sound_move    = "m_frigate"
@@ -2383,11 +2383,11 @@ uk_food       = 1
 uk_gold       = 1
 cargo         = "Land", "Small Land", "Big Land", "Merchant", "Big Siege"
 flags         = "Settlers", "BadCityDefender", "HasNoZOC"
-;veteran_names = _("green"), _("veteran"), _("hardened"), _("elite")
-;veteran_raise_chance      = 50, 33, 20, 0
-;veteran_work_raise_chance = 0, 0, 0, 0
-;veteran_power_fact        = 100, 150, 175, 200
-;veteran_move_bonus        = 0, 0, 0, 0
+veteran_names = _("green (100%)"), _("veteran 1 (150%)"), _("veteran 2 (175%)"), _("veteran 3 (200%)"), _("hardened 1 (225%)"), _("hardened 2 (250%)"), _("hardened 3 (275%)"), _("elite 1 (300%)"), _("elite 2 (325%)"), _("elite 3 (350%)")
+veteran_raise_chance = 50, 45, 40, 35, 30, 25, 20, 15, 10, 0
+veteran_work_raise_chance = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+veteran_power_fact = 100, 150, 175, 200, 225, 250, 275, 300, 325, 350
+veteran_move_bonus = 0, 3, 6, 9, 12, 15, 18, 21, 24, 27
 roles         = "Ferryboat", "FerryStartUnit"
 helptext      = _("\
 The Transport cannot attack on its own but\
