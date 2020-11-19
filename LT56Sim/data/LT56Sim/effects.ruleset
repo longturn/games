@@ -114,6 +114,25 @@ reqs    =
       "AI", "Cheating", "Player"
     }
 
+[effect_irrigation]
+type    = "Irrigation_Pct"
+value   = 100
+reqs    =
+    { "type", "name", "range"
+      "Extra", "Irrigation", "Local"
+    }
+
+[effect_irrigation_center]
+type    = "Irrigation_Pct"
+value	= 100
+reqs	=
+    { "type", "name", "range", "present"
+      "CityTile", "Center", "Local", TRUE
+      "Extra", "Irrigation", "Local", FALSE
+      "TerrainAlter", "CanIrrigate", "Local", TRUE
+      "Extra", "Mine", "Local", FALSE
+    }
+
 
 [effect_unhappysize]
 type    = "City_Unhappy_Size"
