@@ -790,15 +790,6 @@ reqs    =
       "Gov", "Democracy", "Player", TRUE
     }
 
-; ...except Women's Suffrage reduces it back to Republic levels
-[effect_womens_suffrage_1]
-type    = "Unhappy_Factor"
-value   = -1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Women's Suffrage", "Player"
-      "Gov", "Democracy", "Player"
-    }
 
 ; Govs with 1 free unit
 [effect_upkeep_free_mil_1]
@@ -911,18 +902,6 @@ reqs    =
       "Gov", "Democracy", "Player", FALSE
     }
 
-
-
-; normally 2 for Democracy, but 1 of these not needed with Women's Suffrage
-; due to reduced Unhappy_Factor
-[effect_womens_suffrage_2]
-type    = "Make_Content_Mil"
-value   = -1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Women's Suffrage", "Player"
-      "Gov", "Democracy", "Player"
-    }
 
 
 ; Free Gold/Shield unit upkeep for each city, depending on government
@@ -2696,7 +2675,6 @@ reqs    =
     { "type", "name", "range", "present"
       "Gov", "Democracy", "Player", TRUE
       "Building", "Police Station", "City", TRUE
-      "Building", "Women's Suffrage", "Player", FALSE
     }
 
 [effect_port_facility]
@@ -3966,22 +3944,8 @@ reqs	=
     { "type", "name", "range"
       "Building", "United Nations", "City"
     }
-
-[effect_womens_suffrage]
-type    = "Make_Content_Mil"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Women's Suffrage", "Player"
-    }
-
-[effect_womens_suffrage_culture]
-type    = "History"
-value	= 6
-reqs	=
-    { "type", "name", "range"
-      "Building", "Women's Suffrage", "City"
-    }
+	
+	
 ;pow(2, value/1000) -> Base = 50% 
 [effect_base_trade_revenue_reduce]
 type    = "Trade_Revenue_Bonus"
