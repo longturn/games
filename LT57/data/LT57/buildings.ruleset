@@ -2253,58 +2253,26 @@ This is not a normal improvement.  Instead, setting a city's\
 ")
 
 
-[building_womens_suffrage]
-name		= _("Women's Suffrage")
-genus		= "GreatWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Aviation Endurance", "Player"
-    }
-graphic	= "b.womens_suffrage"
-graphic_alt	= "-"
-obsolete_by	=
-    { "type", "name", "range"
-    }
-build_cost	= 100000
-upkeep		= 0
-sabotage	= 0
-sound		= "w_womens_suffrage"
-sound_alt	= "w_generic"
-helptext	= _("\
-In the advent of the future techs the humankind will be finally able to build some of the mysterious, \
-legendary wonders that were never before possible. New ways of transportation and materials together \
-with the infinite wisdowm of your people allows the production of this great wonder. \
-Neutralizes the unhappiness caused by one aggressively \
-deployed military unit per city. Under Democracy, it additionally \
-halves the unhappiness caused by military units (reducing it to the \
-same level as a Republic).\
-")
-
-
 [building_statue_of_liberty]
 name		= _("Statue of Liberty")
 genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Aviation Endurance", "Player"
+      "Tech", "Democracy", "Player"
     }
 graphic	= "b.statue_of_liberty"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 100000
+build_cost	= 500
 upkeep		= 0
 sabotage	= 0
 sound		= "w_statue_of_liberty"
 sound_alt	= "w_generic"
 helptext	= _("\
-In the advent of the future techs the humankind will be finally able to build some of the mysterious, \
-legendary wonders that were never before possible. New ways of transportation and materials together \
-with the infinite wisdowm of your people allows the production of this great wonder. \
 Allows you to choose any government, including those that have not yet \
-been researched by your civilization, and without the transition \
-period of Anarchy. It also allows unprovoked declaration of war \
+been researched by your civilization. It also allows unprovoked declaration of war \
 regardless of any senate instituted by a Democracy or Federation \
 government or by the United Nations.\
 ")
