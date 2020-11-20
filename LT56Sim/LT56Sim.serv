@@ -64,7 +64,8 @@ set techlossforgiveness=1
 set techlossrestore=50
 
 # technical
-set allowtake="h"
+set allowtake=""
+cmdlevel info
 set compresstype plain
 set ec_chat=enabled
 set ec_info=enabled 
@@ -86,5 +87,5 @@ set razechance=100
 
 set victories="SPACERACE|CULTURE"
 
-#cmdlevel hack
+
 
