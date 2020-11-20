@@ -3880,14 +3880,6 @@ reqs	=
       "Building", "Shakespeare's Theatre", "City"
     }
 
-; No_Anarchy includes no_senate effect
-[effect_statue_of_liberty]
-type    = "No_Anarchy"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Statue of Liberty", "Player"
-    }
 
 [effect_statue_of_liberty_1]
 type    = "Any_Government"
