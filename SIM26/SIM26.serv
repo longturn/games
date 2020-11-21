@@ -22,6 +22,7 @@ set topology="WRAPX"
 set wetness=60
 set alltemperate=enabled
 #set revealmap=START  #uncomment this for revealing the map for test games
+set disasters=0
 
 # general rules
 set aifill=0
