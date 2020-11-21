@@ -9,26 +9,27 @@ rulesetdir LT56Sim
 set alltemperate=disabled
 set barbarians=disabled
 set generator="FRACTAL"
-set huts=0
-set landmass=42
+set huts=1
+set landmass=40
 set mapsize="PLAYER"
 set separatepoles=disabled
 set specials=380
 set startpos="ALL"
-set steepness=40
+set steepness=32
 set temperature=50
-set tilesperplayer=150
+set tilesperplayer=160
 set topology="WRAPX"
 set wetness=60
-set alltemperate=enabled
+set alltemperate=disabled
 #set revealmap=START  #uncomment this for revealing the map for test games
 set disasters=0
+set singlepole=enabled
 
 # general rules
 set aifill=60
 set nationset=all
 set citymindist=1
-set dispersion=6
+set dispersion=3
 set foggedborders=enabled
 set rapturedelay=3
 set restrictinfra=enabled
@@ -48,7 +49,7 @@ set endturn=5000
 
 # diplomacy, technology
 set diplchance=50
-set diplomacy=HUMAN
+set diplomacy=ALL
 set sciencebox=30
 set techlost_donor=0
 set techlost_recv=0
@@ -70,13 +71,13 @@ cmdlevel info
 set compresstype plain
 set ec_chat=enabled
 set ec_info=enabled 
-set ec_max_size=5000
+set ec_max_size=10000
 set ec_turns=9
 set maxplayers=126
 set saveturns=1
 set scorelog=enabled
-set timeout=0
-set unitwaittime=1
+set timeout=82800
+set unitwaittime=36000
 set fixedlength=1
 metamessage "Longturn Sim Game"
 metapatches longturn
@@ -84,9 +85,10 @@ metapatches longturn
 set civilwarsize=1000
 set mgr_distance=1
 set mgr_worldchance=20
-set razechance=100
 
 set victories="SPACERACE|CULTURE"
+
+#cmdlevel hack
 
 set scorelog=enabled
 set timeout=82800
@@ -94,4 +96,3 @@ set unitwaittime=36000
 
 syncturn
 start
-

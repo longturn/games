@@ -467,7 +467,7 @@ uk_happy      = 0
 uk_shield     = 0
 uk_food       = 0
 uk_gold       = 0
-flags         = "Settlers", "NonMil", "Cities", "IgTer"
+flags         = "Settlers", "NonMil", "Cities", "IgTer", "HasNoZOC"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
@@ -511,7 +511,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 3
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "Cities"
+flags         = "Settlers", "NonMil", "Cities", "HasNoZOC"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
@@ -556,7 +556,7 @@ uk_happy      = 3
 uk_shield     = 1
 uk_food       = 3
 uk_gold       = 1
-flags         = "FieldUnit", "Settlers", "NonMil", "AddToCity", "Unique"
+flags         = "FieldUnit", "Settlers", "NonMil", "AddToCity", "Unique", "HasNoZOC"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
@@ -594,7 +594,7 @@ uk_happy      = 6
 uk_shield     = 1
 uk_food       = 4
 uk_gold       = 1
-flags         = "FieldUnit", "Settlers", "NonMil", "AddToCity", "Unique"
+flags         = "FieldUnit", "Settlers", "NonMil", "AddToCity", "Unique", "HasNoZOC"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
@@ -633,7 +633,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "Airbase"
+flags         = "Settlers", "NonMil", "Airbase", "HasNoZOC"
 
 roles         = "WorkerStartUnit"
 helptext      = _("\
@@ -692,8 +692,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "NonMil", "Airbase", "Transform"
-
+flags         = "Settlers", "NonMil", "Airbase", "Transform", "HasNoZOC"
 roles         = "Settlers"
 helptext      = _("\
 Engineers are similar to Workers, but they work twice as fast, \
@@ -713,7 +712,7 @@ for more details.\
 name          = _("Warriors")
 class         = "Land"
 tech_req      = "None"
-obsolete_by   = "Militia"
+obsolete_by   = "Raiders"
 graphic       = "u.warriors"
 graphic_alt   = "-"
 sound_move    = "m_warriors"
@@ -737,8 +736,7 @@ uk_gold       = 0
 flags         = "Capturer", "Marines"
 roles         = "DefendOk"
 helptext      = _("\
-This unit may be built from the start of the game.  It is the\
- weakest offensive unit.\
+This is the weakest offensive unit. It is the default unit except in Tribalism, where it is replaced by Tribal-only Raiders. Both Raiders and Warriors are obsoleted by Militia.\
 ")
 
 
@@ -876,15 +874,12 @@ Archers fight with bows and arrows from a distance and do not engage the enemy d
 When attacking, Archers perform a total of five combat rounds against their target.
 \
 Archers can't be built under Tribal government. As technology progresses, they are replaced by Skirmishers.\
-
 ")
-
-
 
 [unit_swordsmen]
 name          = _("Swordsmen")
 class         = "Land"
-tech_req      = "Warrior Code"
+tech_req      = "Iron Working"
 obsolete_by   = "Arquebusiers"
 graphic       = "u.legion"
 graphic_alt   = "-"
@@ -905,7 +900,7 @@ fuel          = 0
 uk_happy      = 1
 uk_shield     = 0
 uk_food       = 1
-uk_gold       = 2
+uk_gold       = 1
 flags         = "Capturer"
 roles         = "DefendOk", "BarbarianBuild", "BarbarianSea"
 helptext      = _("\
@@ -926,7 +921,7 @@ sound_fight   = "f_legion"
 sound_fight_alt = "f_generic"
 build_cost    = 15
 pop_cost      = 0
-attack        = 3
+attack        = 4
 defense       = 2
 hitpoints     = 10
 firepower     = 1
@@ -941,8 +936,7 @@ uk_gold       = 2
 flags         = "Capturer"
 roles         = "DefendOk", "BarbarianBuild", "BarbarianSea"
 helptext      = _("\
-Swordsmen are heavily armed and well disciplined infantry\
- units with an excellent offensive value.\
+Legion is an advanced attack unit used in intense warfare.\
 ")
 
 [unit_pikemen]
@@ -1195,7 +1189,7 @@ sound_fight_alt = "f_generic"
 build_cost    = 10
 pop_cost      = 0
 attack        = 1
-defense       = 1
+defense       = 2
 hitpoints     = 20
 firepower     = 1
 move_rate     = 2
@@ -2516,7 +2510,7 @@ uk_happy      = 0
 uk_shield     = 0
 uk_food       = 0
 uk_gold       = 2
-flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil"
+flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil", "HasNoZOC"
 veteran_names =
 ; /* TRANS: diplomatic rank. */
 ; /* TRANS: Unless translated, the last character in "attache" should be */
@@ -2629,7 +2623,7 @@ uk_happy      = 0
 uk_shield     = 0
 uk_food       = 0
 uk_gold       = 4
-flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil"
+flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil", "HasNoZOC"
 veteran_names =
 ; /* TRANS: diplomatic rank. */
 ; /* TRANS: Unless translated, the last character in "attache" should be */
@@ -2743,7 +2737,7 @@ uk_happy      = 0
 uk_shield     = 0
 uk_food       = 0
 uk_gold       = 6
-flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil"
+flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil", "HasNoZOC"
 veteran_names =
 ; /* TRANS: diplomatic rank. */
 ; /* TRANS: Unless translated, the last character in "attache" should be */
@@ -2856,7 +2850,7 @@ uk_happy      = 0
 uk_shield     = 0
 uk_food       = 0
 uk_gold       = 8
-flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil"
+flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil", "HasNoZOC"
 veteran_names =
 ; /* TRANS: diplomatic rank. */
 ; /* TRANS: Unless translated, the last character in "attache" should be */
@@ -2969,7 +2963,7 @@ uk_happy      = 0
 uk_shield     = 0
 uk_food       = 0
 uk_gold       = 10
-flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil", "Spy"
+flags         = "Partial_Invis", "Diplomat", "IgZOC", "NonMil", "Spy", "HasNoZOC"
 veteran_names =
 ; /* TRANS: Spy veteran level */
   _("?spy_level:informant"),
@@ -3038,7 +3032,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 3
-flags         = "TradeRoute", "HelpWonder", "NonMil"
+flags         = "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC"
 roles         = ""
 helptext      = _("\
 A Caravan carries goods or material for trading with foreign countries,\
@@ -3086,7 +3080,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 5
-flags         = "TradeRoute", "HelpWonder", "NonMil"
+flags         = "TradeRoute", "HelpWonder", "NonMil", "HasNoZOC"
 roles         = ""
 helptext      = _("\
 The Freight unit replaces the Caravan, and moves at twice the speed.\
@@ -3117,7 +3111,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "IgTer", "IgZOC", "NonMil"
+flags         = "IgTer", "IgZOC", "NonMil", "HasNoZOC"
 roles         = "ExplorerStartUnit"
 helptext      = _("\
 Explorers are brave individuals that are very useful for\
@@ -3150,7 +3144,7 @@ uk_shield     = 0
 uk_food       = 0
 uk_gold       = 0
 flags         = "IgZOC", "NonMil", "NoBuild", "NoHome", "SuperSpy", 
-                "Undisbandable", "Unbribable", "GameLoss", "Unique"
+                "Undisbandable", "Unbribable", "GameLoss", "Unique", "HasNoZOC"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
@@ -3188,7 +3182,7 @@ uk_shield     = 0
 uk_food       = 0
 uk_gold       = 0
 flags         = "IgZOC", "NonMil", "Unbribable",
-                "Undisbandable", "SuperSpy", "NoHome", "NoBuild"
+                "Undisbandable", "SuperSpy", "NoHome", "NoBuild", "HasNoZOC"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
@@ -3236,4 +3230,3 @@ The AWACS (Airborne Warning and Control System) is an airplane with an \
 advanced radar that can determine the location of enemy units over a \
 wide area.\
 ")
-

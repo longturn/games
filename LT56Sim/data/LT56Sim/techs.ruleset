@@ -90,7 +90,7 @@ cost     = 570
 
 [advance_alphabet]
 name     = _("Alphabet")
-req1     = "None"
+req1     = "Pictography"
 req2     = "None"
 flags    = ""
 graphic     = "a.alphabet"
@@ -497,7 +497,7 @@ cost     = 20
 
 [advance_masonry]
 name     = _("Masonry")
-req1     = "None"
+req1     = "Dried Brick"
 req2     = "None"
 flags    = ""
 graphic     = "a.masonry"
@@ -659,7 +659,7 @@ cost     = 30
 
 [advance_pottery]
 name     = _("Pottery")
-req1     = "None"
+req1     = "Fired Brick"
 req2     = "None"
 flags    = ""
 graphic     = "a.pottery"
@@ -886,7 +886,7 @@ cost     = 100
 
 [advance_warrior_code]
 name     = _("Warrior Code")
-req1     = "None"
+req1     = "Hierarchy"
 req2     = "None"
 flags    = ""
 graphic     = "a.warrior_code"
@@ -925,7 +925,42 @@ _(" ...\ "),
 _("'Shields on me! Get back in formation, you drunken fool!'\ "),
 _("- Lucius Vorenus, 'Rome' ")
 
+[advance_pictography]
+name     = _("Pictography")
+req1     = "None"
+req2     = "None"
+flags    = ""
+graphic     = "-"
+graphic_alt = "-"
+cost     = 10
 
+[advance_dbrick]
+name     = _("Dried Brick")
+req1     = "None"
+req2     = "None"
+flags    = ""
+graphic     = "-"
+graphic_alt = "-"
+cost     = 10
+
+[advance_fbrick]
+name     = _("Fired Brick")
+req1     = "Dried Brick"
+req2     = "None"
+flags    = ""
+graphic     = "-"
+graphic_alt = "-"
+cost     = 10
+
+
+[advance_hierarchy]
+name     = _("Hierarchy")
+req1     = "None"
+req2     = "None"
+flags    = ""
+graphic     = "-"
+graphic_alt = "-"
+cost     = 10
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Tech Upkeep goals:
