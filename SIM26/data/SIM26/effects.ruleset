@@ -682,7 +682,7 @@ reqs    =
     { "type", "name", "range"
       "OutputType", "Gold", "Local"
     }
-nreqss   =
+nreqs   =
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
       "Gov", "Tribal", "Player"
@@ -5765,9 +5765,9 @@ reqs    =
 type    = "Defend_Bonus"
 value   = 100
 reqs    =
-    { "type", "name", "range"
-      "Terrain", "Jungle", "Local"
-      "UnitFlag", "Fast", "Local"
+    { "type", "name", "range", "present"
+      "Terrain", "Jungle", "Local", TRUE
+      "UnitFlag", "Fast", "Local", TRUE
 	"UnitFlag", "IgWall", "Local", FALSE
 
     }
@@ -5775,9 +5775,9 @@ reqs    =
 type    = "Defend_Bonus"
 value   = 50
 reqs    =
-    { "type", "name", "range"
-      "Terrain", "Swamp", "Local"
-      "UnitFlag", "Fast", "Local"
+    { "type", "name", "range", "present"
+      "Terrain", "Swamp", "Local", TRUE
+      "UnitFlag", "Fast", "Local", TRUE
 	"UnitFlag", "IgWall", "Local", FALSE
 
     }
@@ -5785,9 +5785,9 @@ reqs    =
 type    = "Defend_Bonus"
 value   = 50
 reqs    =
-    { "type", "name", "range"
-      "Terrain", "Hills", "Local"
-      "UnitFlag", "Fast", "Local"
+    { "type", "name", "range", "present"
+      "Terrain", "Hills", "Local", TRUE
+      "UnitFlag", "Fast", "Local", TRUE
 	"UnitFlag", "IgWall", "Local", FALSE
 
     }
@@ -5796,9 +5796,9 @@ reqs    =
 type    = "Defend_Bonus"
 value   = 200
 reqs    =
-    { "type", "name", "range"
-      "Terrain", "Mountains", "Local"
-      "UnitFlag", "Fast", "Local"
+    { "type", "name", "range", "present"
+      "Terrain", "Mountains", "Local", TRUE
+      "UnitFlag", "Fast", "Local", TRUE
 	"UnitFlag", "IgWall", "Local", FALSE
     }
 
