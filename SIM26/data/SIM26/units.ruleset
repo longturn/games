@@ -693,7 +693,6 @@ uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
 flags         = "Settlers", "NonMil", "Airbase", "Transform", "HasNoZOC"
-
 roles         = "Settlers"
 helptext      = _("\
 Engineers are similar to Workers, but they work twice as fast, \
@@ -875,15 +874,12 @@ Archers fight with bows and arrows from a distance and do not engage the enemy d
 When attacking, Archers perform a total of five combat rounds against their target.
 \
 Archers can't be built under Tribal government. As technology progresses, they are replaced by Skirmishers.\
-
 ")
-
-
 
 [unit_swordsmen]
 name          = _("Swordsmen")
 class         = "Land"
-tech_req      = "Warrior Code"
+tech_req      = "Iron Working"
 obsolete_by   = "Arquebusiers"
 graphic       = "u.legion"
 graphic_alt   = "-"
@@ -904,7 +900,7 @@ fuel          = 0
 uk_happy      = 1
 uk_shield     = 0
 uk_food       = 1
-uk_gold       = 2
+uk_gold       = 1
 flags         = "Capturer"
 roles         = "DefendOk", "BarbarianBuild", "BarbarianSea"
 helptext      = _("\
@@ -925,7 +921,7 @@ sound_fight   = "f_legion"
 sound_fight_alt = "f_generic"
 build_cost    = 15
 pop_cost      = 0
-attack        = 3
+attack        = 4
 defense       = 2
 hitpoints     = 10
 firepower     = 1
@@ -940,8 +936,7 @@ uk_gold       = 2
 flags         = "Capturer"
 roles         = "DefendOk", "BarbarianBuild", "BarbarianSea"
 helptext      = _("\
-Swordsmen are heavily armed and well disciplined infantry\
- units with an excellent offensive value.\
+Legion is an advanced attack unit used in intense warfare.\
 ")
 
 [unit_pikemen]
@@ -1194,7 +1189,7 @@ sound_fight_alt = "f_generic"
 build_cost    = 10
 pop_cost      = 0
 attack        = 1
-defense       = 1
+defense       = 2
 hitpoints     = 20
 firepower     = 1
 move_rate     = 2
