@@ -25,7 +25,7 @@ set alltemperate=enabled
 set disasters=0
 
 # general rules
-set aifill=0
+set aifill=60
 set nationset=all
 set citymindist=1
 set dispersion=6
@@ -88,5 +88,10 @@ set razechance=100
 
 set victories="SPACERACE|CULTURE"
 
+set scorelog=enabled
+set timeout=82800
+set unitwaittime=36000
 
+syncturn
+start
 
