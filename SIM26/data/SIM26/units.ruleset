@@ -713,7 +713,7 @@ for more details.\
 name          = _("Warriors")
 class         = "Land"
 tech_req      = "None"
-obsolete_by   = "Militia"
+obsolete_by   = "Raiders"
 graphic       = "u.warriors"
 graphic_alt   = "-"
 sound_move    = "m_warriors"
@@ -737,8 +737,7 @@ uk_gold       = 0
 flags         = "Capturer", "Marines"
 roles         = "DefendOk"
 helptext      = _("\
-This unit may be built from the start of the game.  It is the\
- weakest offensive unit.\
+This is the weakest offensive unit. It is the default unit except in Tribalism, where it is replaced by Tribal-only Raiders. Both Raiders and Warriors are obsoleted by Militia.\
 ")
 
 
