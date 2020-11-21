@@ -116,7 +116,7 @@ reqs    =
 
 [effect_irrigation]
 type    = "Irrigation_Pct"
-value   = 100
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Extra", "Irrigation", "Local"
@@ -124,7 +124,7 @@ reqs    =
 
 [effect_irrigation_center]
 type    = "Irrigation_Pct"
-value	= 100
+value	= 50
 reqs	=
     { "type", "name", "range", "present"
       "CityTile", "Center", "Local", TRUE
