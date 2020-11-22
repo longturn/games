@@ -1724,6 +1724,15 @@ reqs    =
       "UnitFlag", "Diplomat", "Local"
     }
 
+[effect_lux_federation]
+type    = "Output_Add_Tile"
+value   = 2
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Federation", "Player", TRUE
+      "CityTile", "Center", "Local", FALSE
+      "OutputType", "Luxury", "Local", FALSE
+    }
 
 [effect_bad_lux_anarchy]
 type    = "Output_Bonus"
