@@ -155,7 +155,7 @@ flags         = "TerrainSpeed", "CanOccupyCity", "BuildAnywhere",
                 "TerrainDefense", "KillCitizen"
 
 
-[unitclass_land_small]
+[unitclass_small_land]
 ; /* TRANS: Unit class: used adjectivally */
 name          = _("?unitclass:Small Land")
 min_speed     = 1
@@ -170,9 +170,9 @@ min_speed     = 1
 hp_loss_pct   = 0
 flags         = "TerrainSpeed", "BuildAnywhere", "CollectRansom",
                 "ZOC", "TerrainDefense", "DoesntOccupyTile"
-move_type     = "Land"
 
-[unitclass_land_big]
+
+[unitclass_big_land]
 ; /* TRANS: Unit class: used adjectivally */
 name          = _("?unitclass:Big Land")
 min_speed     = 1
@@ -1852,7 +1852,7 @@ uk_happy      = 1
 uk_shield     = 4
 uk_food       = 1
 uk_gold       = 6
-cargo         = "Land", "Non Military"
+cargo         = "Land", "Non Military", "Raiders"
 flags         = "AirAttacker", "Unbribable"
 roles         = ""
 helptext      = _("\
@@ -1957,7 +1957,7 @@ uk_happy      = 0
 uk_shield     = 0
 uk_food       = 0
 uk_gold       = 0
-cargo         = "Land", "Small Land", "Merchant", "Non Military"
+cargo         = "Land", "Small Land", "Merchant", "Non Military", "Raiders"
 flags         = "BadCityDefender"
 roles         = "Ferryboat"
 helptext      = _("\
@@ -1991,7 +1991,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Land", "Small Land", "Merchant", "Non Military"
+cargo         = "Land", "Small Land", "Merchant", "Non Military", "Raiders"
 flags         = "BadCityDefender", "Capturable"
 roles         = "Ferryboat"
 helptext      = _("\
@@ -2028,7 +2028,7 @@ uk_happy      = 0
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Land", "Small Land", "Merchant", "Non Military"
+cargo         = "Land", "Small Land", "Merchant", "Non Military", "Raiders"
 flags         = "BadCityDefender", "Only_Native_Attack"
 roles         = "Ferryboat", "BarbarianBoat"
 helptext      = _("\
@@ -2061,7 +2061,7 @@ uk_happy      = 0
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Land", "Small Land", "Big Land", "Merchant", "Non Military"
+cargo         = "Land", "Small Land", "Big Land", "Merchant", "Non Military", "Raiders"
 flags         = "BadCityDefender"
 roles         = "Ferryboat", "BarbarianBoat"
 helptext      = _("\
@@ -2299,7 +2299,7 @@ uk_happy      = 0
 uk_shield     = 5
 uk_food       = 1
 uk_gold       = 4
-cargo         = "Missile", "Non Military"
+cargo         = "Missile", "Non Military", "Raiders"
 flags         = "Partial_Invis", "BadCityDefender", "Only_Native_Attack", "Submarine", "Bombarder"
 bombard_rate  = 8
 roles         = "Hunter"
@@ -2336,7 +2336,7 @@ uk_happy      = 0
 uk_shield     = 10
 uk_food       = 1
 uk_gold       = 8
-cargo         = "Air", "Missile", "Helicopter", "Non Military"
+cargo         = "Air", "Missile", "Helicopter", "Non Military", "Raiders"
 flags         = "BadCityDefender"
 roles         = "DefendGood"
 helptext      = _("\
@@ -2372,7 +2372,7 @@ uk_happy      = 0
 uk_shield     = 2
 uk_food       = 1
 uk_gold       = 3
-cargo         = "Land", "Small Land", "Big Land", "Merchant", "Non Military"
+cargo         = "Land", "Small Land", "Big Land", "Merchant", "Non Military", "Raiders"
 flags         = "Settlers", "BadCityDefender"
 veteran_names = _("green"), _("veteran"), _("hardened"), _("elite")
 veteran_raise_chance      = 50, 33, 20, 0
@@ -3074,7 +3074,7 @@ firepower     = 1
 move_rate     = 4
 vision_radius_sq = 2
 transport_cap = 2
-cargo         = "Missile"
+cargo         = "Missile", "Raiders"
 fuel          = 0
 uk_happy      = 0
 uk_shield     = 1
@@ -3230,3 +3230,4 @@ The AWACS (Airborne Warning and Control System) is an airplane with an \
 advanced radar that can determine the location of enemy units over a \
 wide area.\
 ")
+
