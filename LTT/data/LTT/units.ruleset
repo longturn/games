@@ -688,7 +688,7 @@ Engineers are similar to Workers, but they work twice as fast, \
 move twice as fast, and may gain experience from work enabling \
 them to work even faster.\
 "), _("\
-With knowledge of Fusion Power, Engineers may also perform more \
+If the player knows Invention, Engineers may also perform more \
 radical terrain transformations than Workers, Settlers, or Migrants, \
 with the \"transform\" order. Examples include conversion of \
 Tundra into Plains, or even Ocean into Swamp in some circumstances \
