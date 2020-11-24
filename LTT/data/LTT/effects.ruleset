@@ -1396,7 +1396,7 @@ reqs    =
 
 [effect_empire_size_step_monarchy]
 type    = "Empire_Size_Step"
-value   = 14
+value   = 20
 reqs    =
     { "type", "name", "range"
       "Gov", "Monarchy", "Player"
