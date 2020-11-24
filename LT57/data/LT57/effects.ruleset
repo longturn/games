@@ -4274,7 +4274,6 @@ type    = "Transform_Possible"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Tech", "Invention", "Player"
       "UnitFlag", "Transform", "Local"
     }
 
