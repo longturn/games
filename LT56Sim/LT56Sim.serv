@@ -29,7 +29,7 @@ set singlepole=enabled
 set aifill=60
 set nationset=all
 set citymindist=1
-set dispersion=3
+set dispersion=2
 set foggedborders=enabled
 set rapturedelay=3
 set restrictinfra=enabled
@@ -76,8 +76,6 @@ set ec_turns=9
 set maxplayers=126
 set saveturns=1
 set scorelog=enabled
-set timeout=82800
-set unitwaittime=36000
 set fixedlength=1
 metamessage "Longturn Sim Game"
 metapatches longturn
@@ -85,6 +83,7 @@ metapatches longturn
 set civilwarsize=1000
 set mgr_distance=1
 set mgr_worldchance=20
+set killstack=disabled
 
 set victories="SPACERACE|CULTURE"
 
@@ -96,4 +95,3 @@ set unitwaittime=36000
 
 syncturn
 start
-
