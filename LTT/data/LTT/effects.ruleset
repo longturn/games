@@ -511,8 +511,11 @@ reqs    =
     }
 	
 	
-
-; Corruption + waste = 30% for all govs
+; Corruption and Waste
+; Note: no autohelptexts for these!
+;
+; civ2civ3: Corruption + waste = 30% for all govs
+; LT: not including Monarchy and Republic
 
 [effect_corruption_tribal]
 type    = "Output_Waste"
@@ -559,6 +562,16 @@ reqs    =
       "OutputType", "Trade", "Local", FALSE
     }
 
+; placeholder: No corruption in Federation
+[effect_corruption_federation]
+type    = "Output_Waste"
+value   = 0
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Federation", "Player", TRUE
+      "OutputType", "Trade", "Local", FALSE
+    }
+
 [effect_corruption_republic]
 type    = "Output_Waste"
 value   = 25
@@ -576,6 +589,10 @@ reqs    =
       "Gov", "Democracy", "Player", TRUE
       "OutputType", "Trade", "Local", FALSE
     }
+
+
+; Production waste
+; Note: no autohelptexts for these!
 
 ; base -1% shields each tile
 [effect_waste_distance]
@@ -642,6 +659,16 @@ value   = 10
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Monarchy", "Player", TRUE
+      "OutputType", "Shield", "Local", FALSE
+    }
+
+; placeholder: No production waste under Communism
+[effect_waste_communism]
+type    = "Output_Waste"
+value   = 0
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Communism", "Player", TRUE
       "OutputType", "Shield", "Local", FALSE
     }
 

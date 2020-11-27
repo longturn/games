@@ -209,7 +209,7 @@ _("\
  will each force 1 unhappy citizen to become content.\n\
 * Base corruption is 10%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
-* Base production waste is 20%. This increases with distance from the\
+* Base production waste is 10%. This increases with distance from the\
  capital (half as fast with knowledge of Trade).\n\
 * Big cities with size of 9 or more will get an extra 50 % defense against military attacks. \n\
 * The number of free units will be doubled for cities with size of 9 or more.\
@@ -378,7 +378,7 @@ _("\
  each further unit causes 1 unhappy citizen.\n\
 * Base corruption is 25%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
-* Base production waste is 5%. This increases with distance from the\
+* Base production waste is 20%. This increases with distance from the\
  capital (half as fast with knowledge of Trade).\n\
 * Big cities with size of 9 or more will get an extra 50 % defense against military attacks. \n\
 * The number of free units will be doubled for cities with size of 9 or more.\
