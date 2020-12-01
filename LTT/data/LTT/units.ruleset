@@ -1814,7 +1814,7 @@ move without losing all of the move points when unloading from the trireme. The 
 [unit_barge]
 name          = _("Barge")
 class         = "Trireme"
-tech_req      = "Engineering"
+tech_req      = "Steam Engine"
 obsolete_by   = "None"
 graphic       = "u.barge"
 graphic_alt   = "u.trireme"
@@ -1824,9 +1824,9 @@ sound_fight   = "f_trireme"
 sound_fight_alt = "f_generic"
 build_cost    = 45
 pop_cost      = 0
-attack        = 1
+attack        = 0
 defense       = 2
-hitpoints     = 10
+hitpoints     = 20
 firepower     = 1
 move_rate     = 9
 vision_radius_sq = 18
@@ -1836,12 +1836,12 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Land", "Small Land", "Merchant", "Big Siege"
-flags         = "BadCityDefender", "HasNoZOC"
+cargo         = "Land", "Small Land", "Merchant"
+flags         = "BadCityDefender", "HasNoZOC", "Settlers"
 roles         = "Ferryboat", "FerryStartUnit"
 helptext      = _("\
 The Barge can travel on ocean (but not deep ocean) and it can\
- carry all land units except Big Land units, like Armors. It's also able to\
+ clean up pollution. It's also able to\
  move on rivers.\
 ")
 
