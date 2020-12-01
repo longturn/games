@@ -1837,7 +1837,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Land", "Small Land", "Merchant"
-flags         = "BadCityDefender", "HasNoZOC", "Settlers"
+flags         = "BadCityDefender", "HasNoZOC", "Settlers", "NonMil"
 roles         = "Ferryboat", "FerryStartUnit"
 helptext      = _("\
 The Barge can travel on ocean (but not deep ocean) and it can\
