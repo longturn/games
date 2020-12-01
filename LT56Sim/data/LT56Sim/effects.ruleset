@@ -924,6 +924,15 @@ reqs    =
       "Gov", "Anarchy", "Player"
     }
 
+[effect_upkeep_free_units_food_base_tribal]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 99
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "Gov", "Tribal", "Player"
+    }
+
 
 [effect_upkeep_free_units_food_base_despotism_funda]
 type    = "Unit_Upkeep_Free_Per_City"
