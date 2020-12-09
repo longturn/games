@@ -701,6 +701,7 @@ graphic     = "a.radio"
 graphic_alt = "-"
 helptext = _("\
 Allows Workers and Engineers to build airstrips, airbases and buoys.\
+ Upgrades 2 units every turn for all players once any player knows this tech.\
 ")
 cost     = 2060
 

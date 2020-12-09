@@ -4423,5 +4423,12 @@ reqs    =
       "Tech", "Espionage", "World"
     }
 	
-
+[effect_radio_upgrade]
+type    = "Upgrade_Unit"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Tech", "Radio", "World"
+    }
+	
 	
