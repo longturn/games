@@ -58,8 +58,9 @@ set trademindist=999
 set trading_city=disabled
 set team_pooled_research=disabled
 set techlevel=0
-set techlossforgiveness 1
+set techlossforgiveness -1
 set techlossrestore 50
+set freecost 50
 
 # technical
 set aifill=0
