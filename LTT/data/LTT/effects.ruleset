@@ -4413,3 +4413,15 @@ reqs    =
       "Extra", "Ruins", "Local"
       "OutputType", "Trade", "Local"
     }
+	
+	
+[effect_espionage_upgrade]
+type    = "Upgrade_Unit"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Tech", "Espionage", "World"
+    }
+	
+
+	
