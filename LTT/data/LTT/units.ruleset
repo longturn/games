@@ -2959,7 +2959,7 @@ and also for killing the defending diplomats, spies and operatives. Only the scr
 name          = _("Philosopher")
 class         = "Small Land"
 tech_req      = "Railroad"
-obsolete_by   = "None"
+obsolete_by   = "Inventor"
 graphic       = "u.philosopher"
 graphic_alt   = "u.diplomat"
 sound_move    = "m_diplomat"
