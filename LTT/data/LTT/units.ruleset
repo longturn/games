@@ -1310,6 +1310,8 @@ roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Crusaders are highly disciplined mounted\
  warriors driven by a higher cause.\
+ Fundamentalist nations can maintain Crusader units without\
+ having to pay any upkeep nor causing military unhappiness. \
 ")
 
 [unit_knights]
