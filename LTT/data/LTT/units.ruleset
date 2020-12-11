@@ -1283,6 +1283,7 @@ Elephants are towering animals trained for war that are often used as\
 name          = _("Crusaders")
 class         = "Land"
 tech_req      = "Monotheism"
+gov_req       = "Fundamentalism"
 obsolete_by   = "Dragoons"
 graphic       = "u.crusaders"
 graphic_alt   = "u.knights"
@@ -1290,7 +1291,7 @@ sound_move    = "m_crusaders"
 sound_move_alt = "m_generic"
 sound_fight   = "f_crusaders"
 sound_fight_alt = "f_generic"
-build_cost    = 32
+build_cost    = 28
 pop_cost      = 0
 attack        = 3
 defense       = 2
@@ -1304,7 +1305,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer"
+flags         = "Capturer", "Fanatic"
 roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Crusaders are highly disciplined mounted\
