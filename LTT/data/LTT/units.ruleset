@@ -33,8 +33,8 @@ flags =
     _("Unbribable")
     _("TradeRoute"), _("Can establish trade routes (must travel to target city).")
     _("HelpWonder")
-    _("RealSpy"), _("Can do real spy actions, unlike Scholars.")
-    _("RealDiplomat"), _("Can do real diplomat actions, unlike Scholars.")
+    _("RealSpy"), _("Can do real spy actions, unlike tech transfer units.")
+    _("RealDiplomat"), _("Can do real diplomat actions, unlike tech transfer units.")
   }
 
 [veteran_system]
@@ -2897,12 +2897,12 @@ Operatives built under Communist or Federation governments will start\
 
 
 
-[unit_scholar]
-name          = _("Scholar")
+[unit_scribe]
+name          = _("Scribe")
 class         = "Small Land"
 tech_req      = "Literacy"
 obsolete_by   = "None"
-graphic       = "u.scholar"
+graphic       = "u.scribe"
 graphic_alt   = "u.diplomat"
 sound_move    = "m_diplomat"
 sound_move_alt = "m_generic"
@@ -2922,7 +2922,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "IgZOC", "NonMil", "HasNoZOC", "Diplomat", "Spy"
+flags         = "IgZOC", "NonMil", "HasNoZOC", "Diplomat", "Spy", "Unique"
 ; No veteran levels (level name is never displayed)
 veteran_names = _("green")
 veteran_raise_chance = 0
@@ -2931,26 +2931,26 @@ veteran_power_fact = 100
 veteran_move_bonus = 0
 roles         = ""
 helptext      = _("\
-The Scholar wanders foreign lands seeking new knowledge to share in his native country.\
+The Scribe wanders foreign lands seeking new knowledge to share in his native country.\
 "), _("\
-The actions available to Scholars in a foreign city are:\
+The actions available to Scribes in a foreign city are:\
 "), _("\
   - \"Steal Technology\" / \"Industrial Espionage\": Your unit attempts to learn the secrets of a\
  random or chosen technology known to the city's owner but not to you. Trying to steal a \
  particular technology is much less likely to succeed than trying to steal a random \
- technology (\"At Scholar\'s discretion\"). Also, every time technology is stolen from a city, \
+ technology (\"At Scribe\'s discretion\"). Also, every time technology is stolen from a city, \
  the chances of further espionage attempts succeeding at that particular city go down. This\
  action may be attempted even when not at war, but will cause a\
  diplomatic incident.\
 "), _("\
-Like Spies, Scholars have small chance of returning after a successful mission, but are often \
-lost after a mission. Foreign Diplomats and Spies will defend against the Scholar as against other Spy actions.\
+Like Spies, Scribes have small chance of returning after a successful mission, but are often \
+lost after a mission. Foreign Diplomats and Spies will defend against the Scribe as against other Spy actions.\
 "), _("\
-GUIDE: With no traditional tech trading the only way to get techs from other players is using the scholar unit. \
-Instead trading through diplomacy the players can trade or steal techs by using the scholar unit. \
+GUIDE: With no traditional tech trading the only way to get techs from other players is using the scribe unit. \
+Instead trading through diplomacy the players can trade or steal techs by using the scribe unit. \
 Diplomats, spies and operatives can't steal techs \
-but they can defend the cities against scholars trying to steal techs. This is why it's best to use those units for investigating the city \
-and also for killing the defending diplomats, spies and operatives. Only the scholar unit is able to steal techs. 
+but they can defend the cities against scribes trying to steal techs. This is why it's best to use those units for investigating the city \
+and also for killing the defending diplomats, spies and operatives. Only the scribe and other units like it are able to steal techs. 
 ")
 
 
