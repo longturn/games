@@ -1,7 +1,7 @@
 # Server commands to make Longturn Traditional Freeciv rules based on Civ2Civ3 ruleset
 #
 
-rulesetdir LTT
+rulesetdir LT58
 
 # map
 set mapsize="PLAYER"
@@ -9,7 +9,7 @@ set generator="FRACTAL"
 set barbarians=disabled
 set startpos="ALL"
 set huts=0
-set landmass=40
+set landmass=30
 set separatepoles=enabled
 set specials=300
 set steepness=20
