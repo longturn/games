@@ -2955,7 +2955,7 @@ and also for killing the defending diplomats, spies and operatives. Only the scr
 
 
 
-[unit_scribe]
+[unit_philosopher]
 name          = _("Philosopher")
 class         = "Small Land"
 tech_req      = "Railroad"
@@ -3013,7 +3013,7 @@ and also for killing the defending diplomats, spies and operatives. Only the Phi
 
 
 
-[unit_scribe]
+[unit_inventor]
 name          = _("Inventor")
 class         = "Small Land"
 tech_req      = "Automobile"
@@ -3070,7 +3070,7 @@ and also for killing the defending diplomats, spies and operatives. Only the Inv
 ")
 
 
-[unit_scribe]
+[unit_scientist]
 name          = _("Scientist")
 class         = "Small Land"
 tech_req      = "Nuclear Power"
