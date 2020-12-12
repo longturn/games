@@ -371,6 +371,17 @@ target_reqs  =
     { "type",   "name", "range", "present"
     }
 
+[actionenabler_steal_tech_random_scientist]
+action = "Steal Tech"
+actor_reqs    =
+    { "type",   "name", "range", "present"
+      "UnitType", "Scientist", "Local"
+      "UnitState", "OnLivableTile", "Local"
+      "MinMoveFrags", "1", "Local"
+    }
+target_reqs  =
+    { "type",   "name", "range", "present"
+    }
 
 
 [actionenabler_poison_city]
