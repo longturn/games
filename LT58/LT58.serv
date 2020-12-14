@@ -19,7 +19,7 @@ set topology="WRAPX|WRAPY|ISO"
 set wetness=40
 set alltemperate=disabled
 set tinyisles disabled
-set revealmap=START  #uncomment this for revealing the map for test games
+#set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
 set nationset=all
@@ -79,7 +79,7 @@ set unitwaittime=36000
 set fixedlength enabled
 
 # new longturn.net specific patches. this section added in September 2020. you may need to remove these if you play a local game with the standard 2.6 freeciv version
-set diplchance_steal=8
+set diplchance_steal=50
 #set globalwarming_percent=300
 set nuclear_winter_percent = 100
 set contact_intel = disabled	# no info about the other nations if contatturns = 1
@@ -90,10 +90,10 @@ set demography = ncARPEmOCqrb
 set nuke_improvements = 20		# 20% chance for destroying city improvements. never destroyed if the sabotage chance is less than 100%
 
 # for testing purposes now, check for the actual game
-set unitwaittime_range = 4
+set unitwaittime_range = -1
 set unitwaittime_allied = enabled
 set unitwaittime_extended = enabled
-set playerwaittime = 30
+set playerwaittime = 0
 
 
 metamessage "Longturn Traditional for multiplayer games | More info: http://longturn.net"
