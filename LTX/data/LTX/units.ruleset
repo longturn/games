@@ -899,6 +899,40 @@ Musketeers are infantry equipped with early\
  city defender.\
 ")
 
+
+[unit_navy_troops]
+name          = _("Navy Troops")
+class         = "Small Unit"
+tech_req      = "Metallurgy"
+obsolete_by   = "Marines"
+graphic       = "u.navytroops"
+graphic_alt   = "u.musketeers"
+sound_move    = "m_musketeers"
+sound_move_alt = "m_generic"
+sound_fight   = "f_musketeers"
+sound_fight_alt = "f_generic"
+build_cost    = 60
+pop_cost      = 0
+attack        = 2
+defense       = 2
+hitpoints     = 15
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer", "Unique", "Marines"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild",
+                "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
+helptext      = _("\
+Navy Troops are infantry equipped with early\
+ firearms and able to attack land tiles directrly from a ship.\
+")
+
 [unit_riflemen]
 name          = _("Riflemen")
 class         = "Land"
