@@ -48,7 +48,7 @@ set borders DISABLED
 set diplchance=40
 set diplcost=20
 set diplchance_steal=10
-set diplomacy=HUMAN
+set diplomacy=DISABLED
 set sciencebox=100
 set techlost_donor=0
 set techlost_recv=0
