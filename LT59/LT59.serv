@@ -79,7 +79,7 @@ set savefrequency 1  # 1 is for testing now. 60 is for the real game
 set scorelog=enabled
 set timeout=82800
 set unitwaittime=36000
-set fixedlength 1
+set fixedlength enabled
 
 metamessage "Longturn Multiplayer 3 | More info: http://longturn.net/ - this is the warciv multiplayer 3 edition of the multiplayer ruleset"
 metapatches longturn
