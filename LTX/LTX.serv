@@ -10,7 +10,7 @@ set barbarians=disabled
 set startpos="ALL"
 set huts=0
 set landmass=15
-set separatepoles=enabled
+set separatepoles=disabled
 set specials=300
 set steepness=30
 set temperature=70
@@ -63,7 +63,7 @@ set techlossrestore 50
 set freecost 50
 
 # technical
-set aifill=100
+set aifill=0
 set allowtake=""
 cmdlevel info
 set compresstype plain
