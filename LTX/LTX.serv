@@ -1,7 +1,7 @@
 # Server commands to make Longturn Traditional Freeciv rules based on Civ2Civ3 ruleset
 #
 
-rulesetdir LTT
+rulesetdir LTX
 
 # map
 set mapsize="PLAYER"
@@ -9,12 +9,12 @@ set generator="FRACTAL"
 set barbarians=disabled
 set startpos="ALL"
 set huts=0
-set landmass=40
+set landmass=15
 set separatepoles=enabled
 set specials=300
-set steepness=20
+set steepness=30
 set temperature=70
-set tilesperplayer=500
+set tilesperplayer=300
 set topology="WRAPX|WRAPY|ISO"
 set wetness=40
 set alltemperate=disabled
@@ -63,7 +63,7 @@ set techlossrestore 50
 set freecost 50
 
 # technical
-set aifill=0
+set aifill=100
 set allowtake=""
 cmdlevel info
 set compresstype plain
@@ -96,7 +96,7 @@ set unitwaittime_extended = enabled
 set playerwaittime = 30
 
 
-metamessage "Longturn Traditional for multiplayer games | More info: http://longturn.net"
+metamessage "Longturn Traditional Extra for multiplayer games | More info: http://longturn.net"
 metapatches longturn
 
 
