@@ -90,7 +90,7 @@ set victories="SPACERACE|CULTURE"
 #cmdlevel hack
 
 set scorelog=enabled
-set timeout=82800
+set timeout=90000
 set unitwaittime=36000
 
 syncturn
