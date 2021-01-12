@@ -368,7 +368,7 @@ req2     = "Labor Union"
 flags    = ""
 graphic     = "a.fusion_power"
 graphic_alt = "-"
-helptext = _("Allows building several fusion based units. Not all fusion units are worth the cost.")
+helptext = _("Allows building several fusion based units. Not all fusion units are worth the cost. Sea class units will get +6 extra moves.")
 cost     = 17000
 
 
