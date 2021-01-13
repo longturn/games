@@ -930,7 +930,7 @@ roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild",
                 "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
 helptext      = _("\
 Navy Troops are infantry equipped with early\
- firearms and able to attack land tiles directrly from a ship.\
+ firearms and able to attack land tiles directrly from a ship. There is no loss of population if the defender in a city dies and the city has no walls. \
 ")
 
 [unit_riflemen]
