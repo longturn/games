@@ -880,7 +880,7 @@ name		= _("Port Facility")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Amphibious Warfare", "Player"
+      "Tech", "Metallurgy", "Player"
       "TerrainClass", "Oceanic", "Adjacent"
     }
 graphic	= "b.port_facility"
