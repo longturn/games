@@ -2733,6 +2733,17 @@ reqs    =
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
+	
+[effect_port_facility_guangzhou]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Port of Guangzhou", "City", TRUE
+      "UnitClass", "Sea", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
 
 [effect_port_facility_1]
 type    = "HP_Regen"
@@ -2740,6 +2751,15 @@ value   = 100
 reqs    =
     { "type", "name", "range"
       "Building", "Port Facility", "City"
+      "UnitClass", "Sea", "Local"
+    }
+	
+[effect_port_facility_guangzhou_1]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range"
+      "Building", "Port of Guangzhou", "City"
       "UnitClass", "Sea", "Local"
     }
 
@@ -2753,6 +2773,17 @@ reqs    =
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
+	
+[effect_port_facility_guangzhou_trireme]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Port of Guangzhou", "City", TRUE
+      "UnitClass", "Trireme", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
 
 [effect_port_facility_trireme_1]
 type    = "HP_Regen"
@@ -2760,6 +2791,15 @@ value   = 100
 reqs    =
     { "type", "name", "range"
       "Building", "Port Facility", "City"
+      "UnitClass", "Trireme", "Local"
+    }
+	
+[effect_port_facility_guangzhou_trireme_1]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range"
+      "Building", "Port of Guangzhou", "City"
       "UnitClass", "Trireme", "Local"
     }
 
@@ -3635,6 +3675,7 @@ reqs    =
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
       "Building", "Port Facility", "City", FALSE
+	  "Building", "Port of Guangzhou", "City", FALSE
     }
 
 [effect_lighthouse_trireme_move]
@@ -3673,6 +3714,7 @@ reqs    =
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
       "Building", "Port Facility", "City", FALSE
+	  "Building", "Port of Guangzhou", "City", FALSE
     }
 
 [effect_lighthouse_culture]
