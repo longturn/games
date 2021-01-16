@@ -542,7 +542,7 @@ tech_upkeep_divider = 6000
 ; "Goal"     - Towards player`s goal, random if no goal
 ; "Random"   - Random researchable tech
 ; "Cheapest" - Cheapest researchable tech, random among equal cost ones
-free_tech_method = "Cheapest"
+free_tech_method = "Goal"
 
 [culture]
 ; Minimum culture points for cultural domination victory
