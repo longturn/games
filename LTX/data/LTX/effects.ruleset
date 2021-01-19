@@ -4456,6 +4456,21 @@ reqs    =
       "OutputType", "Trade", "Local", TRUE
     }
 
+; +1 production bonus for not keeping a city empty for despotism, monarchy, fundamentalism and communism
+[effect_units_in_a_city_2]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "MaxUnitsOnTile", "0", "Local", FALSE
+      "OutputType", "Shield", "Local"
+	  "CityTile", "Center", "Local", TRUE
+	  "Gov", "Tribalism", "Player", FALSE
+	  "Gov", "Democracy", "Player", FALSE
+	  "Gov", "Republic", "Player", FALSE
+	  "Gov", "Federation", "Player", FALSE
+	  "Gov", "Anarchy", "Player", FALSE
+    }
 
 [effect_ruins_trade]
 type    = "Output_Inc_Tile"
