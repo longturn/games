@@ -1,22 +1,22 @@
 # Server commands to make Longturn Traditional Freeciv rules based on Civ2Civ3 ruleset
 #
 
-rulesetdir LTT
+rulesetdir LT60
 
 # map
 set mapsize="PLAYER"
-set generator="FRACTAL"
+set generator="ISLAND"
 set barbarians=disabled
-set startpos="ALL"
+set startpos="VARIABLE"
 set huts=0
-set landmass=40
+set landmass=15
 set separatepoles=enabled
-set specials=300
+set specials=270
 set steepness=20
-set temperature=70
-set tilesperplayer=500
+set temperature=50
+set tilesperplayer=350
 set topology="WRAPX|WRAPY|ISO"
-set wetness=40
+set wetness=60
 set alltemperate=disabled
 set tinyisles disabled
 set revealmap=START  #uncomment this for revealing the map for test games
@@ -50,7 +50,7 @@ set diplgoldcost=20
 set diplbulbcost=20
 
 set diplomacy=HUMAN
-set sciencebox=100
+set sciencebox=70
 set techlost_donor=0
 set techlost_recv=0
 set techpenalty=10
@@ -79,7 +79,7 @@ set unitwaittime=36000
 set fixedlength enabled
 
 # new longturn.net specific patches. this section added in September 2020. you may need to remove these if you play a local game with the standard 2.6 freeciv version
-set diplchance_steal=8
+set diplchance_steal=50
 #set globalwarming_percent=300
 set nuclear_winter_percent = 100
 set contact_intel = disabled	# no info about the other nations if contatturns = 1
