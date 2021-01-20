@@ -416,7 +416,7 @@ target_reqs  =
       "Gov", "Democracy", "Player", FALSE
       "Building", "Palace", "City", FALSE
       "Building", "Second Palace", "City", FALSE
-      "Building", "Mausoleum of Mausolos", "Player", FALSE
+      "Building", "Mausoleum of Phel", "Player", FALSE
     }
 
 [actionenabler_bribe_unit]

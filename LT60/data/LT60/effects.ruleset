@@ -3741,7 +3741,7 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "Building", "City Walls", "City"
-      "Building", "Mausoleum of Mausolos", "Player"
+      "Building", "Mausoleum of Phel", "Player"
     }
 
 [effect_mausoleum_of_mausolos_1]
@@ -3750,7 +3750,7 @@ value   = 1
 reqs    =
     { "type", "name", "range"
       "Building", "Courthouse", "City"
-      "Building", "Mausoleum of Mausolos", "Player"
+      "Building", "Mausoleum of Phel", "Player"
     }
 
 [effect_mausoleum_of_mausolos_culture]
@@ -3758,7 +3758,7 @@ type    = "History"
 value	= 2
 reqs	=
     { "type", "name", "range"
-      "Building", "Mausoleum of Mausolos", "City"
+      "Building", "Mausoleum of Phel", "City"
     }
 
 ; Note that this doesn't cancel a whole unit's unhappiness in Democracy
