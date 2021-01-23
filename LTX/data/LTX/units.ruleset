@@ -1942,7 +1942,7 @@ building a defensive unit or maybe a worker for the new colony city.\
 name          = _("Square-Rigged Caravel")
 class         = "Sea"
 tech_req      = "Magnetism"
-obsolete_by   = "Transport"
+obsolete_by   = "Frigate"
 graphic       = "u.srcaravel"
 graphic_alt   = "u.caravel"
 sound_move    = "m_caravel"
