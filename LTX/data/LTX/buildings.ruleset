@@ -57,6 +57,30 @@ options="+Freeciv-2.6-ruleset"
 ;
 ; */ <-- avoid gettext warnings
 
+
+[building_academy]
+name		= _("Academy")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Currency", "Player"
+    }
+graphic	= "b.academy"
+graphic_alt	= "b.university"
+obsolete_by	= "None"
+build_cost	= 60
+upkeep		= 0
+sabotage	= 100
+sound		= "b_university"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Allows a city to produce veteran non-military units (such as\
+ veteran Diplomats and veteran Explorers). The Academy does not\
+ heal damaged units.\
+")
+
+
 [building_airport]
 name		= _("Airport")
 genus		= "Improvement"
@@ -812,7 +836,8 @@ If the capital is in a dangerous location, or a more central capital\
 ; /* xgettext:no-c-format */
 _("\
 Under Despotism the city containing the palace gains a +75% \
-gold bonus, and under Monarchy a +50% gold bonus.\
+gold bonus, and under Monarchy a +50% gold bonus. \
+The palace also upgrades one unit every turn if the unit is obsoleted.\
 ")
 
 [building_second_palace]

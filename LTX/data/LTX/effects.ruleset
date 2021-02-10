@@ -3648,6 +3648,14 @@ reqs    =
       "Building", "Leonardo's Workshop", "Player"
     }
 
+[effect_palace_upgrade]
+type    = "Upgrade_Unit"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Palace", "Player"
+    }
+
 [effect_leonardos_workshop_culture]
 type    = "History"
 value	= 4
@@ -4573,4 +4581,33 @@ reqs	=
     { "type", "name", "range"
       "Gov", "Democracy", "Player"
     }
+	
+	
+[effect_academy]
+name  = "Veteran_Build"
+value = 1
+reqs  =
+    { "type", "name", "range"
+       "Building", "Academy", "City"
+       "UnitFlag", "NonMil", "Local"
+    }
+nreqs =
+    { "type", "name", "range"
+       "UnitFlag", "NoVeteran", "Local"
+    }
+
+[effect_academy1]
+name  = "Spy_Resistant"
+value = 10
+reqs  =
+    { "type", "name", "range"
+       "Building", "Academy", "City"
+    }
+
+	
+	
+	
+	
+	
+	
 	
