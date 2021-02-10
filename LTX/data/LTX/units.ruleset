@@ -858,6 +858,10 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+bonuses       =
+   { "flag", "type", "value"
+     "Horse", "DefenseMultiplier", 1
+   }
 flags         = "Capturer"
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
 helptext      = _("\
@@ -1246,7 +1250,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer"
+flags         = "Capturer", "Horse"
 roles         = "AttackFastStartUnit", "Hut", "Barbarian", "Hunter"
 helptext      = _("\
 Horsemen are mounted warriors and an early\
@@ -1279,7 +1283,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer"
+flags         = "Capturer", "Horse"
 roles         = "AttackFastStartUnit"
 helptext      = _("\
 Chariots are horse-pulled war wagons. They have a stronger attack than \
@@ -1315,7 +1319,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer"
+flags         = "Capturer", "Horse"
 roles         = "DefendOk", "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Elephants are towering animals trained for war that are often used as\
@@ -1348,7 +1352,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer", "Fanatic"
+flags         = "Capturer", "Fanatic", "Horse"
 roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Crusaders are highly disciplined mounted\
@@ -1382,7 +1386,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer"
+flags         = "Capturer", "Horse"
 roles         = "DefendOk", "DefendOkStartUnit", "AttackFastStartUnit",
                 "BarbarianTech", "BarbarianBuildTech", "Hunter"
 helptext      = _("\
@@ -1414,7 +1418,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer"
+flags         = "Capturer", "Horse"
 roles         = "AttackFastStartUnit", "BarbarianBuildTech", "Hunter"
 helptext      = _("\
 Dragoons are mounted warriors carrying early firearms.\
@@ -1445,7 +1449,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer"
+flags         = "Capturer", "Horse"
 roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Cavalry are mounted and highly trained soldiers.\
