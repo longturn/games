@@ -35,42 +35,6 @@ options="+Freeciv-2.6-ruleset"
 type    = "City_Unhappy_Size"
 value   = 4
 
-; Barbarian effects
-
-[effect_barb1]
-type    = "No_Diplomacy"
-value   = 1
-reqs    =
-    { "type",   "name", "range"
-      "NationGroup", "Barbarian", "Player"
-    }
-
-; Barbarian disappearance
-
-[effect_barb_disappear]
-type    = "Retire_Pct"
-value   = 10
-reqs    =
-    { "type", "name", "range", "present"
-      "NationGroup", "Barbarian", "Player", TRUE
-      "Age", "5", "Local", TRUE
-      "CityTile", "Center", "Local", FALSE
-    }
-
-; Lone Leader might escape on coast (33% chance)
-; Complement of the two effects should be 0.9 * 0.66 = 0.594
-; (100 - 59) - 10 = 31
-[effect_leader_escape]
-type    = "Retire_Pct"
-value   = 31
-reqs    =
-    { "type", "name", "range"
-      "UnitType", "Barbarian Leader", "Local"
-      "Age", "5", "Local"
-      "TerrainClass", "Oceanic", "Adjacent"
-      "MaxUnitsOnTile", "1", "Local"
-    }
-
 ; Specialist output bonuses
 
 [effect_elvis]
@@ -752,7 +716,6 @@ reqs	=
       "Tech", "Communism", "Player", TRUE
       "Tech", "Gunpowder", "Player", TRUE
       "Tech", "Guerilla Warfare", "World", TRUE
-      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [effect_partisans_democracy]
@@ -764,7 +727,6 @@ reqs	=
       "Tech", "Communism", "Player", TRUE
       "Tech", "Gunpowder", "Player", TRUE
       "Tech", "Guerilla Warfare", "World", TRUE
-      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [effect_airport]
