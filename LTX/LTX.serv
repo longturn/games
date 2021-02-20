@@ -90,10 +90,10 @@ set demography = ncARPEmOCqrbiagw
 set nuke_improvements = 20		# 20% chance for destroying city improvements. never destroyed if the sabotage chance is less than 100%
 
 # for testing purposes now, check for the actual game
-set unitwaittime_range = 4
+set unitwaittime_range = -1
 set unitwaittime_allied = enabled
 set unitwaittime_extended = enabled
-set playerwaittime = 30
+set playerwaittime = 0
 
 
 metamessage "Longturn Traditional Extra for multiplayer games | More info: http://longturn.net"
