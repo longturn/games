@@ -42,6 +42,7 @@ set razechance=10
 set happyborders=enabled
 set occupychance=0
 set globalwarming=enabled
+set victories ALLIED
 
 
 # diplomacy, technology
