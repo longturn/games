@@ -50,7 +50,7 @@ set diplgoldcost=20
 set diplbulbcost=20
 
 set diplomacy=HUMAN
-set sciencebox=100
+set sciencebox=70
 set techlost_donor=0
 set techlost_recv=0
 set techpenalty=10
