@@ -3450,7 +3450,7 @@ reqs	=
 ; Hoover Dam behaves like a (self-enhanced) Hydro Plant in its own city
 [effect_hoover_dam]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Factory", "City"
