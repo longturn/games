@@ -2453,7 +2453,7 @@ reqs    =
 
 [effect_mfg_plant]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
