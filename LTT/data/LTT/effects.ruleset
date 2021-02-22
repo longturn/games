@@ -3460,7 +3460,7 @@ reqs    =
 
 [effect_hoover_dam_1]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "Mfg. Plant", "City"
