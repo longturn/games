@@ -711,8 +711,8 @@ sound		= "b_mfg_plant"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the shield production in a city by an additional 25%, or \
-50% with an electrical plant of any kind in the same city; this \
+Increases the shield production in a city by an additional 50%, or \
+100% with an electrical plant of any kind in the same city; this \
 effect is cumulative with that of a Factory.\
 "), _("\
 With sufficient shield production, cities with a Manufacturing Plant \
