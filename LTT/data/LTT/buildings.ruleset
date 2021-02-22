@@ -582,7 +582,7 @@ effects of any Factory or Mfg. Plant in its city by 50% each. \
 Thus, an electrical plant in combination with either a Factory \
 or Mfg. Plant gives a 100% production bonus over \
 the level without any of these improvements; an electrical plant, \
-Factory, and Mfg. Plant together give a 150% production bonus. \
+Factory, and Mfg. Plant together give a 200% production bonus. \
 The extra production may lead to the city generating more \
 pollution.\
 "),
@@ -728,7 +728,7 @@ effects of any Factory or Mfg. Plant in its city by 50% each. \
 Thus, an electrical plant in combination with either a Factory \
 or Mfg. Plant gives a 100% production bonus over \
 the level without any of these improvements; an electrical plant, \
-Factory, and Mfg. Plant together give a 100% production bonus. \
+Factory, and Mfg. Plant together give a 200% production bonus. \
 The extra production may lead to the city generating more \
 pollution.\
 "),
@@ -926,7 +926,7 @@ effects of any Factory or Mfg. Plant in its city by 50% each. \
 Thus, an electrical plant in combination with either a Factory \
 or Mfg. Plant gives a 100% production bonus over \
 the level without any of these improvements; an electrical plant, \
-Factory, and Mfg. Plant together give a 150% production bonus. \
+Factory, and Mfg. Plant together give a 200% production bonus. \
 The extra production may lead to the city generating more \
 pollution.\
 "), _("\
@@ -1149,7 +1149,7 @@ effects of any Factory or Mfg. Plant in its city by 50% each. \
 Thus, an electrical plant in combination with either a Factory \
 or Mfg. Plant gives a 100% production bonus over \
 the level without any of these improvements; an electrical plant, \
-Factory, and Mfg. Plant together give a 150% production bonus. \
+Factory, and Mfg. Plant together give a 200% production bonus. \
 The extra production may lead to the city generating more \
 pollution.\
 "),
