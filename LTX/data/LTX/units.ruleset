@@ -205,6 +205,13 @@ min_speed     = 2
 hp_loss_pct   = 0
 flags         = "ZOC", "DamageSlows", "AttFromNonNative"
 
+[unitclass_patrol]
+; /* TRANS: Unit class: used adjectivally */
+name          = _("?unitclass:Patrol")
+min_speed     = 2
+hp_loss_pct   = 0
+flags         = "ZOC", "DamageSlows", "AttFromNonNative"
+
 [unitclass_heli]
 ; /* TRANS: Unit class: used adjectivally */
 name          = _("?unitclass:Helicopter")
@@ -1984,7 +1991,7 @@ GUIDE: Use few of these to scout the areas near to you and you may be able to se
 
 [unit_cog]
 name          = _("Cog")
-class         = "Trireme"
+class         = "Patrol"
 tech_req      = "Physics"
 obsolete_by   = "Patrol Cutter"
 graphic       = "u.cog"
@@ -2020,7 +2027,7 @@ GUIDE: In addition to scouting the cog is able to sneak in enemy territories thr
 
 [unit_patrol_cutter]
 name          = _("Patrol Cutter")
-class         = "Trireme"
+class         = "Patrol"
 tech_req      = "Engineering"
 obsolete_by   = "None"
 graphic       = "u.pcutter"
