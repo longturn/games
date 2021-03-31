@@ -1943,6 +1943,44 @@ building a defensive unit or maybe a worker for the new colony city.\
 ")
 
 
+
+[unit_pirogue]
+name          = _("Pirogue")
+class         = "Sea"
+tech_req      = "Seafaring"
+obsolete_by   = "Caravel"
+graphic       = "u.pirogue"
+graphic_alt   = "u.trireme"
+sound_move    = "m_caravel"
+sound_move_alt = "m_generic"
+sound_fight   = "f_caravel"
+sound_fight_alt = "f_generic"
+build_cost    = 20
+pop_cost      = 0
+attack        = 0
+defense       = 1
+hitpoints     = 5
+firepower     = 1
+move_rate     = 6
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC"
+roles         = "BarbarianBoat"
+helptext      = _("\
+The Pirogue is your first unit able to truly explore the oceans\
+ since the required crew is minimal and they are able to harvest the food from the ocean. It can act\
+ as your naval explorer and contribute to your knowledge of the world.\
+ The pirogue has very minimal defensive capabilities and it's not able to perform offensive operations.\
+"), _("\
+GUIDE: Use few of these to scout the areas near to you and you may be able to see the enemy before they can land on your coast.\
+")
+
+
 [unit_square_rigged_caravel]
 name          = _("Square-Rigged Caravel")
 class         = "Sea"
