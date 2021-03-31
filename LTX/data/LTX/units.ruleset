@@ -1986,7 +1986,7 @@ GUIDE: Use few of these to scout the areas near to you and you may be able to se
 name          = _("Cog")
 class         = "Trireme"
 tech_req      = "Physics"
-obsolete_by   = "Transport"
+obsolete_by   = "Patrol Cutter"
 graphic       = "u.cog"
 graphic_alt   = "u.trireme"
 sound_move    = "m_caravel"
@@ -2015,6 +2015,42 @@ The Cog is your second unit able explore the oceans without the limitations from
  The cog has quite poor defensive capabilities and it's not able to perform offensive operations.\
 "), _("\
 GUIDE: In addition to scouting the cog is able to sneak in enemy territories through the rivers. This allows you to get a better idea of your enemy.\
+")
+
+
+[unit_patrol_cutter]
+name          = _("Patrol Cutter")
+class         = "Trireme"
+tech_req      = "Engineering"
+obsolete_by   = "None"
+graphic       = "u.pcutter"
+graphic_alt   = "u.trireme"
+sound_move    = "m_caravel"
+sound_move_alt = "m_generic"
+sound_fight   = "f_caravel"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 0
+attack        = 0
+defense       = 2
+hitpoints     = 20
+firepower     = 1
+move_rate     = 12
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC"
+roles         = "BarbarianBoat"
+helptext      = _("\
+The patrol cutter is a modern ship able to patrol the oceans and warn you about the enemy vessels trying to lurk into your native waters.\
+ It can travel through deep ocean and also enter the rivers making it a great unit for investigating enemy controlled areas if the rivers are left unguarded.\
+ The patrol cutter has decent defensive capabilities but it's not able to attack.\
+"), _("\
+GUIDE: In addition to guard your coastals the patrol cutter is able to sneak in enemy territories through the rivers. This allows you to get a better idea of your enemy.\
 ")
 
 
