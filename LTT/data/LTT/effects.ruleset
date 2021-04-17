@@ -3352,7 +3352,7 @@ reqs	=
 
 [effect_great_library]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range", "survives"
       "Building", "Great Library", "World", TRUE
@@ -3495,7 +3495,7 @@ reqs	=
 
 [effect_isaac_newtons_college]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range", "survives"
       "Building", "Isaac Newton's College", "World", TRUE
@@ -3823,7 +3823,7 @@ reqs	=
 
 [effect_internet]
 type    = "Output_Bonus"
-value   = 25
+value   = 50
 reqs    =
     { "type", "name", "range", "survives"
       "Building", "Internet", "World", TRUE

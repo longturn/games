@@ -618,7 +618,7 @@ sound		= "b_library"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the science output in a city by 50%, or by 75% once the \
+Increases the science output in a city by 50%, or by 100% once the \
 Great Library has been built by any player.\
 ")
 
@@ -980,12 +980,12 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Increases the science output in a city by an additional 50%, or \
-by 75% once the Internet wonder has been built by any player.\
+by 100% once the Internet wonder has been built by any player.\
 "),
 ; /* xgettext:no-c-format */
 _("\
 The total bonus is 150% if a Library, a University and a \
-Research Lab are all present in the same city, increasing to 225% \
+Research Lab are all present in the same city, increasing to 300% \
 once the Great Library, Isaac Newton's College, and the Internet have \
 all been built.\
 ")
@@ -1389,12 +1389,12 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 Increases the science output in a city by an additional 50%, or \
-by 75% once Isaac Newton's College has been built by any player.\
+by 100% once Isaac Newton's College has been built by any player.\
 "),
 ; /* xgettext:no-c-format */
 _("\
 The total bonus is 100% if a Library and a University are present \
-together in the same city, increasing to 150% once the Great Library and \
+together in the same city, increasing to 200% once the Great Library and \
 Isaac Newton's College have both been built.\
 ")
 
@@ -1600,7 +1600,7 @@ helptext	= _("\
 Gives an immediate technology advance to the player that builds it, \
 and thereafter 10 extra research points every turn to its city.\
 "), _("\
-Completion of this wonder permanently adds 25% to the effect of Libraries \
+Completion of this wonder permanently adds 50% to the effect of Libraries \
 for every player.\
 ")
 
@@ -1703,7 +1703,7 @@ helptext	= _("\
 Gives an immediate technology advance to the player that builds it, \
 and thereafter 6 extra research points every turn to its city.\
 "), _("\
-Completion of this wonder permanently adds 25% to the effect of \
+Completion of this wonder permanently adds 50% to the effect of \
 Universities for every player.\
 ")
 
@@ -2109,7 +2109,7 @@ Gives an immediate technology advance to the player that builds it, \
 and thereafter all cities on the map are continuously visible to its \
 owner despite fog-of-war.\
 "), _("\
-Completion of this wonder permanently adds 25% to the effect of \
+Completion of this wonder permanently adds 50% to the effect of \
 Research Labs for every player.\
 ")
 
