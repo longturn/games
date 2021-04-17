@@ -14,7 +14,7 @@ set separatepoles=enabled
 set specials=300
 set steepness=40
 set temperature=70
-set tilesperplayer=500
+set tilesperplayer=700
 set topology="WRAPX|WRAPY|ISO"
 set wetness=40
 set alltemperate=disabled
@@ -60,9 +60,9 @@ set team_pooled_research=disabled
 set techlevel=0
 set techlossforgiveness -1
 set techlossrestore 50
-set freecost 50
-set diplcost 50
-set conquercost 50
+set freecost 80
+set diplcost 80
+set conquercost 80
 
 # technical
 set aifill=0
@@ -81,7 +81,7 @@ set unitwaittime=36000
 set fixedlength enabled
 
 # new longturn.net specific patches. this section added in September 2020. you may need to remove these if you play a local game with the standard 2.6 freeciv version
-set diplchance_steal=50
+set diplchance_steal=80
 #set globalwarming_percent=300
 set nuclear_winter_percent = 100
 set contact_intel = disabled	# no info about the other nations if contatturns = 1
