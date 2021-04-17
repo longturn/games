@@ -2906,7 +2906,7 @@ Operatives built under Communist or Federation governments will start\
 name          = _("Scribe")
 class         = "Small Land"
 tech_req      = "Literacy"
-obsolete_by   = "Scholar"
+obsolete_by   = "Engineers"
 graphic       = "u.scribe"
 graphic_alt   = "u.diplomat"
 sound_move    = "m_diplomat"
