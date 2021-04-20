@@ -38,7 +38,7 @@ set unreachableprotects=disabled
 set killunhomed=0
 set trading_tech=disabled
 set airliftingstyle="FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
-set razechance=10
+set razechance=30
 set happyborders=enabled
 set occupychance=0
 set globalwarming=enabled
@@ -60,9 +60,9 @@ set team_pooled_research=disabled
 set techlevel=0
 set techlossforgiveness -1
 set techlossrestore 50
-set freecost 50
-set diplcost 50
-set conquercost 50
+set freecost 80
+set diplcost 80
+set conquercost 80
 
 # technical
 set aifill=0
@@ -81,7 +81,7 @@ set unitwaittime=36000
 set fixedlength enabled
 
 # new longturn.net specific patches. this section added in September 2020. you may need to remove these if you play a local game with the standard 2.6 freeciv version
-set diplchance_steal=50
+set diplchance_steal=80
 #set globalwarming_percent=300
 set nuclear_winter_percent = 100
 set contact_intel = disabled	# no info about the other nations if contatturns = 1
