@@ -515,7 +515,7 @@ tech_leakage = "All Players"
 tech_upkeep_style = "Cities"
 
 ; upkeep cost is divided by this value
-tech_upkeep_divider = 2500
+tech_upkeep_divider = 25000
 
 ; Method of selecting techs given for free
 ; "Goal"     - Towards player`s goal, random if no goal
