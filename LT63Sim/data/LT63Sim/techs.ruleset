@@ -698,7 +698,7 @@ cost     = 350
 [advance_recycling]
 name     = _("Recycling")
 req1     = "Mass Production"
-req2     = "Sanitation"
+req2     = "None"
 flags    = ""
 graphic     = "a.recycling"
 graphic_alt = "-"
@@ -715,8 +715,8 @@ cost     = 400
 
 [advance_refrigeration]
 name     = _("Refrigeration")
-req1     = "Sanitation"
-req2     = "Electricity"
+req1     = "Electricity"
+req2     = "None"
 graphic     = "a.refrigeration"
 graphic_alt = "-"
 cost     = 350
@@ -740,10 +740,10 @@ graphic_alt = "-"
 helptext = _("Doubles movement of nuclear units.")
 cost     = 590
 
-[advance_sanitation]
-name     = _("Sanitation")
+[advance_architecture]
+name     = _("Architecture")
 req1     = "Construction"
-req2     = "Medicine"
+req2     = "University"
 flags    = ""
 graphic     = "a.sanitation"
 graphic_alt = "-"
@@ -962,8 +962,25 @@ graphic     = "-"
 graphic_alt = "-"
 cost     = 10
 
+[advance_nuclear_doctrine]
+name     = _("Nuclear Doctrine")
+req1     = "Nuclear Fission"
+req2     = "None"
+flags    = ""
+graphic     = "-"
+graphic_alt = "-"
+cost     = 10
+
+[advance_intercontinental_ballistics]
+name	= _("Intercontinental Ballistics")
+req1	= "Nuclear Doctrine"
+req2	= "None"
+flags 	= ""
+graphic     = "-"
+graphic_alt = "-"
+cost     = 10
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Tech Upkeep goals:
 ; 1. slow down big empires sci - allow "singapore style" or "Crimea war effect"
 ; Problem: current TU penalises number of cities, regardless of their size
-
