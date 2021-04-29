@@ -1270,6 +1270,7 @@ or directly by Transport units.\
 [extra_resort]
 name           = _("Resort")
 category       = "Infra"
+causes         = "Irrigation"
 graphic        = "base.resort"
 graphic_alt    = "base.buoy"
 activity_gfx   = "unit.resort"
@@ -1607,6 +1608,33 @@ see further afield. Also, air units recover more hit points (a third per \
 turn, the same as in a city without an Airport).\
 ")
 
+[extra_silo]
+name           = _("Missile Silo")
+category       = "Infra"
+causes         = "Base"
+rmcauses       = "Pillage"
+graphic        = "base.silo"
+graphic_alt    = "base.outpost"
+activity_gfx   = "unit.airstrip"
+act_gfx_alt    = "unit.airbase"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+reqs           =
+    { "type", "name", "range", "present", "quiet"
+      "Tech", "Radio", "Player", TRUE, FALSE
+      "TerrainClass", "Land", "Local", TRUE, FALSE
+      "UnitFlag", "Airbase", "Local", TRUE, FALSE
+      "CityTile", "Center", "Local", FALSE, TRUE
+    }
+build_time     = 2
+removal_time   = 0
+native_to      = "Air", "Helicopter", "Missile"
+conflicts      = "Fort", "Fortress"
+hidden_by      = "Airbase"
+;flags          = "Refuel"
+
+
 [extra_buoy]
 name           = _("Buoy")
 category       = "Infra"
@@ -1857,6 +1885,12 @@ gui_type       = "Airbase"
 border_sq      = -1
 flags          = "NoAggressive", "ParadropFrom"
 
+[base_silo]
+extra          = "Missile Silo"
+gui_type       = "Other"
+border_sq      = -1
+flags          = "ParadropFrom"
+
 [base_buoy]
 extra          = "Buoy"
 gui_type       = "Fortress"
@@ -1928,7 +1962,7 @@ gui_type       = "Other"
 
 [road_road]
 extra          = "Road"
-move_cost      = 2
+move_cost      = 3
 food_incr      = 0
 shield_incr    = 0
 trade_incr     = 1
@@ -1963,7 +1997,7 @@ flags          = "RequiresBridge"
 
 [road_river]
 extra          = "River"
-move_cost      = 2
+move_cost      = 9
 move_mode      = "Cardinal"
 trade_incr_const = 1
 compat_special = "River"
