@@ -98,7 +98,10 @@ _("\
 [government_tribal]
 
 name        = _("Tribal")
-; No reqs
+reqs = { "type", "name", "range", "present"
+         "tech", "Alphabet", "Player", FALSE
+         "tech", "Currency", "Player", FALSE
+       }
 graphic     = "gov.tribal"
 graphic_alt = "s.tax_luxury"
 ai_better   = "Republic"
@@ -110,32 +113,31 @@ helptext = _("\
 Under a Tribal government, you are part ruler of your people. Your\
  control over your citizens is maintained largely by spiritual counsel.\
 "), _("\
-Compared to Despotism, a Tribal economy is more shield-oriented. Its\
- bonuses to veterancy can be an advantage in wartime, but it lacks the\
- martial law of other early governments.\
-"),
-; /* xgettext:no-c-format */
-_("\
-* Increases by half the chance of land units getting the next veteran level\
- after a battle.\n\
+Tribal government is different from other governments. All nations start with Tribal government and need to build the Palace in order to progress to Despotism. Tribal government has the following features:\\
+
+* no Trade\
+* no specialists\
+* military units effectively operate without needing food from city granary ('Food Upkeep Free' : 99) \
+* military units produced in Tribalism have 3 Veteran levels; however, Barracks don't have further effect\
+* settlement is performed by 'Tribe' unit (obsoleted by Settler as soon as you form a non-Tribal government)\
+* every city produces +1 food on its central tile\
+* once the Palace is built, the capital produces additional +1 food\
+* early governments tile penalty is unconditional: cannot be cancelled by researching Tools or building Pyramids\
+* up to 2 units can provide martial law and they make content 1 population each\
+* by default, cities start becoming unhappy after the 2nd citizen\
+* a nation can not revert to Tribal government once Alphabet or Currency have been discovered
 * Each worked tile that gives more than 2 Food, Shield, or Trade will\
  suffer a -1 penalty, unless the city working it is celebrating.\
- (Cities below size 3 will not celebrate.)\n\
-* Each city gets 1 extra content citizen.\n\
-* Each city can support up to 2 units for free; further units each cost\
- 1 shield per turn.\n\
-* Unlike later governments, military units do not cause unhappiness even\
- when deployed aggressively.\n\
-* Base corruption is 30% (the highest under any government). This\
- increases with distance from the capital (half as fast with knowledge\
- of The Corporation).\n\
+\n\
 ")
 
 ;------------------------------------------------------------------------
 [government_despotism]
 
 name        = _("Despotism")
-; No reqs
+reqs = { "type", "name", "range"
+         "building", "Palace", "Player"
+       }
 graphic     = "gov.despotism"
 graphic_alt = "-"
 ai_better   = "Monarchy"
