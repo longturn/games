@@ -359,8 +359,9 @@ sound_alt	= "b_generic"
 helptext	= _("\
 City Hall is the step that signifies the upgrade of a village \
 or a settlement into a city. With this building, the chance of \
-migration into the city is doubled. \
+migration into the city is increased. \
 \
+This building makes one unhappy citizen content.\
 ")
 
 
@@ -613,11 +614,7 @@ sound		= "b_library"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the science output in a city by 50%, or by 100% once the \
-Great Library has been built by any player.\
-\
-Units constructed in a city with this building have one additional\
-veteran level.\
+Increases the science output in a city by 50% or by 100%, depending on the ruleset.\
 \
 Decreases corruption by a small amount, depending on government.\
 ")
@@ -643,8 +640,6 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Increases the luxury and tax output in a city by 50%.\
 \
-Units constructed in a city with this building have one additional\
-veteran level.\
 ")
 
 [building_mass_transit]
@@ -937,6 +932,7 @@ In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or \
 Solar Plant can take effect at any one time.\
 ")
 
+
 [building_recycling_center]
 name		= _("Recycling Center")
 genus		= "Improvement"
@@ -1046,7 +1042,7 @@ name		= _("Sewer System")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Sanitation", "Player"
+      "Tech", "Architecture", "Player"
     }
 graphic	= "b.sewer_system"
 graphic_alt	= "-"
@@ -1353,6 +1349,78 @@ veteran level.\
 Decreases corruption by a small amount, depending on government.\
 ")
 
+[building_uranium]
+name		= _("U235 Enrichment Plant")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Building", "Mutually Assured Destruction", "World"
+    }
+graphic	= "b.uranium"
+graphic_alt	= "b.manhattan_project"
+obsolete_by     =
+    { "type", "name", "range"
+    }
+build_cost	= 200
+upkeep		= 10
+sabotage	= 100
+sound		= "b_university"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Allows mass production of nuclear weapons.\
+")
+
+
+[building_rocket_fuel_plant]
+name		= _("Rocket Fuel Plant")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Intercontinental Ballistics", "World"
+    }
+graphic	= "b.rocket_fuel"
+graphic_alt	= "b.factory"
+obsolete_by     =
+    { "type", "name", "range"
+    }
+build_cost	= 100
+upkeep		= 10
+sabotage	= 100
+sound		= "b_university"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Allows mass production of nuclear weapons.\
+")
+
+[building_MAD]
+name	= _("Mutually Assured Destruction")
+genus	= "Greatwonder"
+reqs	=
+     {	"type", "name", "range"
+	"Tech", "Nuclear Doctrine", "Player"
+     }
+graphic	= "b.MAD"
+graphic_alt	= "b.manhattan_project"
+obsolete_by     =
+    { "type", "name", "range"
+    }
+build_cost	= 500
+upkeep		= 0
+sabotage	= 100
+sound		= "b_university"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _(" 'Gentlemen, you can't fight in here! This is the War Room!'\
+President Merkin Muffley\
+\
+MAD Project is an indication of your nation's determination to go down on the path of nuclear supremacy. But be careful, 'MAD' begins with an 'M'. \
+\
+Once you have completed this wonder, it will allow all other nations to go down the same path because volunteer spies will leak the information to others: The only way to prevent one nation from starting a nuclear war is if everybody goes MAD! \
+")
+
+
 [building_apollo_program]
 name		= _("Apollo Program")
 genus		= "GreatWonder"
@@ -1529,8 +1597,7 @@ sound_alt	= "w_generic"
 helptext	= _("\
 AI nations are more inclined to be friendly and forgiving toward the \
 owner of this wonder (until the Apollo Program is completed). It also \
-reduces the pollution caused by the population; it counteracts the \
-pollution associated with a single building in each of your cities.\
+reduces the pollution caused by the population.\
 ")
 
 [building_great_library]
@@ -1792,13 +1859,34 @@ graphic_alt	= "-"
 obsolete_by     =
     { "type", "name", "range"
     }
-build_cost	= 600
+build_cost	= 100
 upkeep		= 0
 sabotage	= 0
 sound		= "w_manhattan_project"
 sound_alt	= "w_generic"
-;helptext is set in client/helpdata.c:helptext_wonder()
-;helptext	=
+helptext	= _("\ The Manhattan Project is only the first step on the path toward nuclear weapons. After this wonder, it is necessary to perform field tests (Trinity Project) and only then it will be possible to build limited amounts of nuclear weponry. In order to mass produce nukes, you need Uranium Enrichment Plants.\
+")
+
+
+[building_trinity_project]
+name		= _("Trinity Project")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Building", "Manhattan Project", "World"
+    }
+graphic	= "b.trinity_project"
+graphic_alt	= "b.manhattan_project"
+obsolete_by     =
+    { "type", "name", "range"
+    }
+build_cost	= 200
+upkeep		= 0
+sabotage	= 0
+sound		= "w_manhattan_project"
+sound_alt	= "w_generic"
+helptext	= _("\ The Trinity Project is the next step on the path toward nuclear weapons. It makes it possible to build limited amounts of nuclear weponry. In order to mass produce nukes, you need Uranium Enrichment Plants.\
+")
 
 
 [building_michelangelos_chapel]
@@ -1836,7 +1924,7 @@ graphic         = "b.mausoleum"
 graphic_alt     = "b.oracle"
 obsolete_by     =
     { "type", "name", "range"
-      "Tech", "Sanitation", "Player"
+      "Tech", "Architecture", "Player"
     }
 build_cost	= 200
 upkeep		= 0
@@ -2099,10 +2187,7 @@ sound_alt   = "b_generic"
 ; /* xgettext:no-c-format */
 helptext   = _("\
 Increases production in the city by 2 Shields.\
-With the onset of industrial revolution it represents \
-tradition of manufacturing in that city and, if it is \
-not present in the city at that time, it cannot be \
-built/established anymore.\ 
+It represents tradition of manufacturing in the region and, if it is not present in the city by the time of Industrialziation, it cannot be built/established anymore. When a factory is built in the city, Manufaktur becomes outdated, turns into a part of history and does not help production, but instead serves as a museum, producing 2 Trade per turn.\ 
 \
 ")
 
@@ -2547,7 +2632,7 @@ Supplies the city with additional 5 Food.
 \
 \
 'Fifty percent of Americans are obese, dawg. You know what obese means, right? Fat as a motherfucker. All these other countries, nobody's fat. Think about this shit, dawg. How does a motherfucker get fat? You gotta sit on the couch and do nothing but eat and watch TV all day. White trash, poor Mexicans and Blacks, all obese as motherfuckers. See, the white man has created a system with so much excess that even poor motherfuckers are fat.'
-â€” Sgt. Antonio 'Poke' Espera, The Cradle of Civilization, Generation Kill
+— Sgt. Antonio 'Poke' Espera, The Cradle of Civilization, Generation Kill
 \
 \
 If your nation is doing well economically, Shopping Mall is probably a good investment to compensate for lack of food in some of your cities. Or add some fat to your population. \
@@ -2634,8 +2719,7 @@ upkeep		= 0
 sabotage	= 100
 sound		= "b_city_hall"
 sound_alt	= "b_generic"
-helptext	= _("\
-
+helptext	= _("\ Oil refinery creates huge profit for its owner. Each city with a refinery gets 30 gold per oil rig within its radius. The oil tile must be mined and contain a railroad.
 ")
 
 [building_office_hansa]
@@ -2684,7 +2768,31 @@ upkeep		= 4
 sabotage	= 100
 sound		= "b_city_hall"
 sound_alt	= "b_generic"
-helptext	= _("\
-
+helptext	= _("\ Hospital increases city health by 10%. This means that, if you already have Aqueduct and Sewers, the chance of plague is reduced by half.
 ")
 
+[building_school]
+name		= _("School")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Industrialization", "Player"
+    }
+graphic	= "b.library"
+graphic_alt	= "-"
+obsolete_by     =
+    { "type", "name", "range"
+    }
+build_cost	= 40
+upkeep		= 1
+sabotage	= 100
+sound		= "b_library"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+With industrial development the need for a more skilled workforce increases. School system is starting to emerge in order to train general population for work in factories. \
+\
+School increases the science output in a city by 50% or by 100%, depending on the ruleset.\
+\
+Decreases corruption by a small amount, depending on government.\
+")
