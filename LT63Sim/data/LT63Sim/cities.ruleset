@@ -50,39 +50,39 @@ reqs		=
     { "type", "name", "range"
 ; Nothing
     }
-helptext        = _("\
-Each entertainer produces two luxury points for their city per turn, \
-increasing to three once any player has built Shakespeare's Theater. \
-See the section on Happiness for the effects of luxury points.\
-")
+;helptext        = _("\
+;Each entertainer produces two luxury points for their city per turn, \
+;increasing to three once any player has built Shakespeare's Theater. \
+;See the section on Happiness for the effects of luxury points.\
+;")
 
-[specialist_scientist]
-name            = _("Scientists")
-rule_name       = "scientist"
-short_name	= _("?Scientist:S")
-reqs		=
-    { "type", "name", "range"
+;[specialist_scientist]
+;name            = _("Scientists")
+;rule_name       = "scientist"
+;short_name	= _("?Scientist:S")
+;reqs		=
+;    { "type", "name", "range"
 ; Nothing
-    }
-helptext        = _("\
-Each scientist adds two points to your empire's research output \
-per turn, increasing to three once any player has built Darwin's \
-Voyage.\
-")
-
-[specialist_taxman]
-name            = _("Taxmen")
-rule_name       = "taxman"
-short_name	= _("?Taxman:T")
-reqs		=
-    { "type", "name", "range"
+;    }
+;helptext        = _("\
+;Each scientist adds two points to your empire's research output \
+;per turn, increasing to three once any player has built Darwin's \
+;Voyage.\
+;")
+;
+;[specialist_taxman]
+;name            = _("Taxmen")
+;rule_name       = "taxman"
+;short_name	= _("?Taxman:T")
+;reqs		=
+;    { "type", "name", "range"
 ; Nothing
-    }
-helptext        = _("\
-Each tax collector produces two extra gold for your treasury \
-per turn, increasing to three once any player has built \
-A.Smith's Trading Co.\
-")
+;    }
+;helptext        = _("\
+;Each tax collector produces two extra gold for your treasury \
+;per turn, increasing to three once any player has built \
+;A.Smith's Trading Co.\
+;")
 
 [parameters]
 add_to_size_limit  = 99		; cities >= this cannot be added to.
