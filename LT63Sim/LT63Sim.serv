@@ -21,10 +21,8 @@ set temperature=50
 set tilesperplayer=100
 set topology="WRAPX"
 set wetness=60
-#set revealmap=START  #uncomment this for revealing the map for test games
 
 # general rules
-set aifill=20
 set nationset=all
 set citymindist=1
 set dispersion=3
@@ -89,6 +87,12 @@ set demography="NnAwSRLaPEMOCqrb"
 set dispersion=1
 set killstack=disabled
 set alliedvictory=disabled
+
+#test game specifics
+
+#set aifill=20
+set revealmap=START  #uncomment this for revealing the map for test games
+
 
 
 
