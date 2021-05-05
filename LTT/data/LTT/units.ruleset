@@ -1664,7 +1664,7 @@ A Bomber's attack against units on land is a bombard attack; against\
 "),
 ; /* xgettext:no-c-format */
 _("\
-Fighters are very good for securing access from nations with no air units.  \
+Bombers are very good for securing access from nations with no air units.  \
 ")
 bombard_rate = 3
 
