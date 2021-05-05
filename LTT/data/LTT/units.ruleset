@@ -207,7 +207,7 @@ flags         = "Unreachable", "DoesntOccupyTile", "CanOccupyCity", "CollectRans
 ; /* TRANS: Unit class: used adjectivally */
 name          = _("?unitclass:Air")
 min_speed     = 1
-hp_loss_pct   = 10
+hp_loss_pct   = 0
 hut_behavior  = "Frighten"
 flags         = "Unreachable", "DoesntOccupyTile", "CanPillage", "Airliftable"
 
@@ -1624,8 +1624,7 @@ Fighters are your first airborne units. They can\
 "),
 ; /* xgettext:no-c-format */
 _("\
-Fighters and other aircraft lose 10% of their hitpoints for every \
-turn not spent in a city, airstrip, or airbase, or on a Carrier.\
+Fighters are very good for securing access from nations with no air units. \
 ")
 
 [unit_bomber]
@@ -1665,8 +1664,7 @@ A Bomber's attack against units on land is a bombard attack; against\
 "),
 ; /* xgettext:no-c-format */
 _("\
-As with other aircraft, Bombers lose 10% of their hitpoints for every \
-turn not spent in a city, airstrip, or airbase, or on a Carrier.\
+Fighters are very good for securing access from nations with no air units.  \
 ")
 bombard_rate = 3
 
