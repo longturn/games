@@ -1786,8 +1786,8 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Invention", "Player"
     }
-graphic	= "b.leonardos_workshop"
-graphic_alt	= "-"
+graphic	= "b.verrocchios_workshop"
+graphic_alt	= "b.leonardos_workshop"
 obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Industrialization", "Player", FALSE
