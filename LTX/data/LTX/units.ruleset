@@ -1538,6 +1538,48 @@ jungles), are difficult to defend, and are too big for early ships \
 do not gain benefits from Barracks. \
 ")
 
+
+[unit_trebuchet]
+name          = _("Trebuchet")
+class         = "Big Siege"
+tech_req      = "Bridge Building"
+obsolete_by   = "Cannon"
+graphic       = "u.trebuchet"
+graphic_alt   = "u.catapult"
+sound_move    = "m_catapult"
+sound_move_alt = "m_generic"
+sound_fight   = "f_catapult"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 0
+attack        = 10
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "CityBuster", "Capturable"
+roles         = "AttackStrongStartUnit"
+helptext      = _("\
+Trebuchets are large rock-throwing machines of war.\
+ They are very strong attackers - and even more powerful against cities - but equally weak\
+ defenders and will need an escort to be effective.\
+  Unescorted catapults may be captured by the enemy. \
+"), _("\
+While powerful, Trebuchets (and their successors) are bulky, very slow and awkward; \
+they require roads to move in rough terrain (mountains, swamps, and \
+jungles), are difficult to defend, and are too big for early ships \
+(Triremes and Caravels). Trebuchets and later siege units \ 
+do not gain benefits from Barracks. \
+")
+
+
 [unit_cannon]
 name          = _("Cannon")
 class         = "Big Siege"
