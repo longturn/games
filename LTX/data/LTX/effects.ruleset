@@ -520,6 +520,19 @@ reqs    =
       "OutputType", "Science", "Local"
     }
 	
+
+; federation gets another 50% boost for science with the corporation
+[effect_bonus_sci_federation]
+type    = "Output_Bonus_2"
+value   = 50
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Federation", "Player"
+	  "Tech", "The Corporation", "Player", TRUE
+      "OutputType", "Science", "Local"
+    }
+	
+	
 	
 ; Corruption and Waste
 ; Note: no autohelptexts for these!
