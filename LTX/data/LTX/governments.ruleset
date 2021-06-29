@@ -310,7 +310,7 @@ _("\
 
 name        = _("Federation")
 reqs = { "type", "name", "range"
-         "tech", "The Corporation", "World"
+         "tech", "Economics", "World"
        }
 graphic     = "gov.federation"
 graphic_alt = "s.tax_gold"
