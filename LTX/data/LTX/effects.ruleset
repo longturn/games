@@ -4455,15 +4455,6 @@ reqs    =
    }
 
 
-[effect_units_in_a_city_1]
-type    = "Output_Bonus"
-value   = 10
-reqs    =
-    { "type", "name", "range", "present"
-      "MaxUnitsOnTile", "0", "Local", FALSE
-      "OutputType", "Trade", "Local", TRUE
-    }
-
 ; +1 production bonus for not keeping a city empty for despotism, monarchy, fundamentalism and communism
 [effect_units_in_a_city_2]
 type    = "Output_Inc_Tile"
