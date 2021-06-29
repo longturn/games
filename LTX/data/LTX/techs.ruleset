@@ -364,7 +364,7 @@ cost     = 775
 [advance_fusion_power]
 name     = _("Fusion Power")
 req1     = "Superconductors"
-req2     = "Labor Union"
+req2     = "Stealth"
 flags    = ""
 graphic     = "a.fusion_power"
 graphic_alt = "-"
