@@ -1,0 +1,42 @@
+rulesetdir aviation
+
+# Map
+set mapsize PLAYER
+set generator FRACTURE
+set topology WRAPX|WRAPY|ISO
+set alltemperate enabled
+set landmass 30
+set specials 300
+set tilesperplayer 180
+set huts 0
+set startpos ALL
+
+# Military
+set killstack disabled
+
+# Vision
+set fogofwar enabled
+set foggedborders enabled
+
+# Diplomacy
+set diplomacy HUMAN
+set trading_city disabled
+set trading_tech disabled
+set contactturns 2
+
+# Revolution
+set revolen 2
+set revolentype FIXED
+
+# Pace
+set foodbox 100
+set sciencebox 60
+set shieldbox 60
+set techleak 100
+
+# Test games
+set revealmap START
+
+# Technical
+set savename LTEx24
+
