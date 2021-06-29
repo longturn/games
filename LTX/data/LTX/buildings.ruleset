@@ -497,6 +497,36 @@ about military activity), and makes the revolt cost of the city 4 times \
 bigger.\
 ")
 
+
+
+[building_workshop]
+name		= _("Workshop")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Invention", "Player"
+    }
+graphic	= "b.workshop"
+graphic_alt	= "b.factory"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 60
+upkeep		= 1
+sabotage	= 100
+sound		= "b_factory"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases the shield production in a city by 30%. Requires Monarchy for the effect.\
+"), _("\
+This increase in production may contribute to \
+pollution; a Workshop also increases the pollution caused by the \
+population of the city. Power plants have no effect on workshops.\
+")
+
+
+
 [building_factory]
 name		= _("Factory")
 genus		= "Improvement"
