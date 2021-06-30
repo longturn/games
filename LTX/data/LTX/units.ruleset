@@ -3274,62 +3274,6 @@ and also for killing the defending diplomats, spies and operatives. Only the Inv
 ")
 
 
-[unit_scientist]
-name          = _("Scientist")
-class         = "Small Land"
-tech_req      = "Nuclear Power"
-obsolete_by   = "None"
-graphic       = "u.scientist"
-graphic_alt   = "u.diplomat"
-sound_move    = "m_diplomat"
-sound_move_alt = "m_generic"
-sound_fight   = "f_diplomat"
-sound_fight_alt = "f_generic"
-build_cost    = 360
-pop_cost      = 0
-attack        = 0
-defense       = 0
-hitpoints     = 10
-firepower     = 1
-move_rate     = 4
-vision_radius_sq = 18
-transport_cap = 0
-fuel          = 0
-uk_happy      = 0
-uk_shield     = 1
-uk_food       = 0
-uk_gold       = 1
-flags         = "IgZOC", "NonMil", "HasNoZOC", "Diplomat", "Spy", "Unique"
-; No veteran levels (level name is never displayed)
-veteran_names = _("green")
-veteran_raise_chance = 0
-veteran_work_raise_chance = 0
-veteran_power_fact = 100
-veteran_move_bonus = 0
-roles         = ""
-helptext      = _("\
-The Scientist wanders foreign lands seeking new knowledge to share in his native country.\
-"), _("\
-The actions available to Scientist in a foreign city are:\
-"), _("\
-  - \"Steal Technology\" / \"Industrial Espionage\": Your unit attempts to learn the secrets of a\
- random or chosen technology known to the city's owner but not to you. Trying to steal a \
- particular technology is much less likely to succeed than trying to steal a random \
- technology (\"At Scientist\'s discretion\"). Also, every time technology is stolen from a city, \
- the chances of further espionage attempts succeeding at that particular city go down. This\
- action may be attempted even when not at war, but will cause a\
- diplomatic incident.\
-"), _("\
-Like Spies, Scientist have small chance of returning after a successful mission, but are often \
-lost after a mission. Foreign Diplomats and Spies will defend against the Scientist as against other Spy actions.\
-"), _("\
-GUIDE: With no traditional tech trading the only way to get techs from other players is using the Scientist or other tech trading unit. \
-Instead trading through diplomacy the players can trade or steal techs by using the Scientist unit. \
-Diplomats, spies and operatives can't steal techs \
-but they can defend the cities against Scientists trying to steal techs. This is why it's best to use those units for investigating the city \
-and also for killing the defending diplomats, spies and operatives. Only the Scientist and other units like it are able to steal techs. 
-")
-
 
 [unit_caravan]
 name          = _("Caravan")
