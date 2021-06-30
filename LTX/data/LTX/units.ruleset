@@ -3162,8 +3162,8 @@ and also for killing the defending diplomats, spies and operatives. Only the scr
 [unit_scholar]
 name          = _("Scholar")
 class         = "Small Land"
-tech_req      = "Railroad"
-obsolete_by   = "Inventor"
+tech_req      = "Explosives"
+obsolete_by   = "Spy"
 graphic       = "u.scholar"
 graphic_alt   = "u.diplomat"
 sound_move    = "m_diplomat"
