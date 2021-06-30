@@ -3220,15 +3220,15 @@ and also for killing the defending diplomats, spies and operatives. Only the Sch
 [unit_inventor]
 name          = _("Inventor")
 class         = "Small Land"
-tech_req      = "Automobile"
-obsolete_by   = "Scientist"
+tech_req      = "Espionage"
+obsolete_by   = "None"
 graphic       = "u.inventor"
 graphic_alt   = "u.diplomat"
 sound_move    = "m_diplomat"
 sound_move_alt = "m_generic"
 sound_fight   = "f_diplomat"
 sound_fight_alt = "f_generic"
-build_cost    = 240
+build_cost    = 120
 pop_cost      = 0
 attack        = 0
 defense       = 0
