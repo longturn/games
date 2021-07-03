@@ -522,10 +522,10 @@ tech_leakage = "All Players"
 ; "Basic"  - upkeep is calculated as:
 ;     <Cost of technology> / tech_upkeep_divider - tech_upkeep_free
 ; "Cities" - upkeep is calculated like "Basic", but multiplied by number of cities
-tech_upkeep_style = "None"
+tech_upkeep_style = "Basic"
 
 ; upkeep cost is divided by this value
-tech_upkeep_divider = 6000
+tech_upkeep_divider = 300
 
 ; Method of selecting techs given for free
 ; "Goal"     - Towards player`s goal, random if no goal
