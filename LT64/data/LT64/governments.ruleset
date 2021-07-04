@@ -242,6 +242,8 @@ Communism is a good government for maximizing shield production, and\
 _("\
 * City improvements which would normally have an upkeep of 1 gold are\
  free of upkeep.\n\
+* If the player knows The Corporation there will be +50% increase to the\
+ science production.\n\
 * Each city can support up to 3 units for free (the maximum possible);\
  further units each cost 1 shield per turn.\n\
 * Each city tolerates up to 3 aggressively deployed military units;\
