@@ -289,8 +289,8 @@ Fundamentalism is a good government for maximizing gold, and its Fanatics\
 "),
 ; /* xgettext:no-c-format */
 _("\
-* Base science production is half that of other governments. (A\
- Fundamentalist city with a Library produces as much science as a\
+* Base science production is 40% that of other governments. (A\
+ Fundamentalist city with a Library produces roughly as much science as a\
  city under another government does alone.)\n\
 * Each city can support up to 2 units for free; further units each cost\
  2 gold per turn (except for Fanatics).\n\
