@@ -1784,7 +1784,7 @@ sound		= "w_isaac_newtons_college"
 sound_alt	= "w_generic"
 helptext	= _("\
 Gives an immediate technology advance to the player that builds it, \
-and thereafter 6 extra research points every turn to its city.\
+and thereafter 12 extra research points every turn to its city.\
 "), _("\
 Completion of this wonder permanently adds 25% to the effect of \
 Universities for every player.\
