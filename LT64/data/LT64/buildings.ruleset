@@ -1999,8 +1999,8 @@ reqs	=
       "Tech", "Navigation", "Player"
       "Building", "Marco Polo's Embassy", "Player"
     }
-graphic	= "b.marco_polos_embassy"
-graphic_alt	= "-"
+graphic	= "b.trade_company"
+graphic_alt	= "b.marco_polos_embassy"
 obsolete_by	=
     { "type", "name", "range", "survives"
     }
