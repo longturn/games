@@ -4432,3 +4432,11 @@ reqs    =
     }
 	
 	
+; for future purposes not yet implemented
+; [effect_conquest_tech]
+; type    = "Conquest_Tech_Pct"
+; value   = 0
+
+
+
+
