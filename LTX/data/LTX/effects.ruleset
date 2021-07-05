@@ -4647,3 +4647,9 @@ reqs    =
       "OutputType", "Trade", "Local"
 	  "MinSize", "30", "City", TRUE
     }
+
+
+; for future purposes not yet implemented
+; [effect_conquest_tech]
+; type    = "Conquest_Tech_Pct"
+; value   = 0
