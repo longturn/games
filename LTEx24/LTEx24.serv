@@ -35,8 +35,15 @@ set shieldbox 60
 set techleak 100
 
 # Test games
-set revealmap START
+#set revealmap START
+
+# Timeout & UWT
+#set timeout 82800
+#set first_timeout 248400
+#set unitwaittime 36000
 
 # Technical
+set nationset all
 set savename LTEx24
+read players.serv
 
