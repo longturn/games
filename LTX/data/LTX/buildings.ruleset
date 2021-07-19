@@ -2280,6 +2280,29 @@ Republic and Democracy).\
 
 
 
+[building_baudhayana_sutras]
+name		= _("School of Baudhayana sutras")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Folklore", "Player"
+    }
+graphic         = "b.baudhayana"
+graphic_alt     = "b.oracle"
+obsolete_by	=
+    { "type", "name", "range"
+	  "Tech", "Ceremonial Burial", "Player"
+    }
+build_cost	= 20
+upkeep		= 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
+helptext	= _("\
+One of the most early studies containing mathematical results and theorems. \
+")
+
+
 [building_hal_salflieni_hypogeum]
 name		= _("Hal Saflieni Hypogeum")
 genus		= "SmallWonder"
