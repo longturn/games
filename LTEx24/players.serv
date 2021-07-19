@@ -1,4 +1,4 @@
-set aifill 10
+set aifill 11
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
@@ -9,6 +9,7 @@ aitoggle AI*7
 aitoggle AI*8
 aitoggle AI*9
 aitoggle AI*10
+aitoggle AI*11
 playernation AI*1 Soviet 1 louis94
 playernation AI*2 Vincentian 1 soundnfury
 playernation AI*3 Aramean 1 Weshesh
@@ -19,4 +20,5 @@ playernation AI*7 "Animal Kingdom" 1 panch93
 playernation AI*8 Texan 1 jwrober
 playernation AI*9 Tyrolian 1 mae
 playernation AI*10 Slovenian 1 croupier
+playernation AI*11 Celtic 1 ilkkachu
 
