@@ -98,6 +98,17 @@ graphic_alt = "-"
 helptext = _("The invention of pictograms or symbols allows the people to store information without the need of using spoken language. At a later time writing will be made possible by specialized pictography. Hieroglyphic writing, the alphabet and logographic writing systems are all derived from the invention of pictography.")
 cost     = 10
 
+
+[advance_folklore]
+name     = _("Folklore")
+req1     = "None"
+req2     = "None"
+flags    = ""
+graphic     = "a.folklore"
+graphic_alt = "a.alphabet"
+helptext = _("Folklore forms the foundation of the traditions for your people allowing your nation to have unique culture and ways.")
+cost     = 10
+
 [advance_amphibious_warfare]
 name     = _("Amphibious Warfare")
 req1     = "Engineering"
@@ -612,7 +623,7 @@ cost     = 104
 [advance_mysticism]
 name     = _("Mysticism")
 req1     = "Ceremonial Burial"
-req2     = "None"
+req2     = "Folklore"
 flags    = ""
 graphic     = "a.mysticism"
 graphic_alt = "-"
@@ -938,7 +949,7 @@ cost     = 10
 [advance_writing]
 name     = _("Writing")
 req1     = "Alphabet"
-req2     = "None"
+req2     = "Folklore"
 flags    = ""
 graphic     = "a.writing"
 graphic_alt = "-"
