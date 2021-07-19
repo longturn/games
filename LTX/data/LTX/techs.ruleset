@@ -89,12 +89,13 @@ helptext = _("Enables movement of nuclear units.")
 cost     = 2350
 
 [advance_alphabet]
-name     = _("Alphabet")
+name     = _("Pictography")
 req1     = "None"
 req2     = "None"
 flags    = ""
 graphic     = "a.alphabet"
 graphic_alt = "-"
+helptext = _("The invention of pictograms or symbols allows the people to store information without the need of using spoken language. At a later time writing will be made possible by specialized pictography. Hieroglyphic writing, the alphabet and logographic writing systems are all derived from the invention of pictography.")
 cost     = 10
 
 [advance_amphibious_warfare]
