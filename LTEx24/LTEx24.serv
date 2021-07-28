@@ -22,6 +22,7 @@ set foggedborders enabled
 set diplomacy HUMAN
 set trading_city disabled
 set trading_tech disabled
+set team_pooled_research disabled
 set contactturns 2
 
 # Revolution
@@ -35,8 +36,33 @@ set shieldbox 60
 set techleak 100
 
 # Test games
-set revealmap START
+#set revealmap START
+
+# Timeout & UWT
+#set fixedlength enabled
+#set timeout 82800
+#set first_timeout 248400
+#set unitwaittime 36000
+
+# Saves
+set savename LTEx24
+set autosaves TURN|GAMEOVER|INTERRUPT|TIMER
+set saveturns 1
+set savefrequency 60
+set scorelog enabled
+
+# Event log
+set ec_chat enabled # Save chat
+set ec_info enabled # Save turn and time
+set ec_max_size 20000
+set ec_turns 10
+
+# Players
+set nationset all
+read players.serv
 
 # Technical
-set savename LTEx24
+set allowtake ""
+cmdlevel info
+start
 
