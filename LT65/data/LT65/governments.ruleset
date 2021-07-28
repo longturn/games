@@ -100,7 +100,9 @@ You don't usually want to play with anarchy but you need to when there is a need
 For these situations you may want to plan your production so that you have some gold reserve before switching to anarchy and \
 also not using that many trade tiles while in anarchy. You may also want to explore the options to make your cities to \
 celebrate while in anarchy. This way you may be able to make your cities to celebrate when you switch to your \
-new government.
+new government. If you have only some bulbs left from getting the governent you want it may make sense to revolt early and \
+complete the research with scientists. This may be very useful especially when you switch away from tribalism or despotism \
+because you may get the desired government turn or two early.
 ")
 
 ;------------------------------------------------------------------------
@@ -152,7 +154,8 @@ the pyramids as fast as possible to that you will get rid of the -1 tile penalty
 It will also make sense to revolt during the first turn. This way you may lose less production because of anarchy. \
 If you play well you will get the pyramids around T15 - T20 and this will keep your empire competive even \
 until the mid game. The catch however is that you may be too comfortable with the tribalism and switch to another gov \
-too late. This is why you may want to consider switching around T40 - T60. 
+too late. This is why you may want to consider switching around T40 - T60. In short tribalism helps fast expansion more compared \
+to despotism. 
 ")
 
 ;------------------------------------------------------------------------
@@ -198,7 +201,9 @@ With despotism you get slightly better science and if you plan to go for monarch
 Despotism is a very good alternative for someone who is planning to go Monarchy first.\
 While you may want to consider building Hal Saflieni Hypogeum on your capital city and also building \
 the pyramids as fast as possible you may want to focus instead on maxing science and using scientis for getting monarchy really fast. \
-In this case you may want to build te pyramids after revolting and switching to monarchy or maybe even fudamentalism.
+In this case you may want to build te pyramids after revolting and switching to monarchy or maybe even fudamentalism. Then again \
+despotism may be great if you need to defend. It allows a crazy number of units to be used for keeping the people content. This \
+together with pyramids is also great.
 ")
 
 ;------------------------------------------------------------------------
@@ -243,7 +248,8 @@ _("\
 Playing with Monarchy? \n
 Monarchy is great for those players who want to play war. You don't get that much gold of production with monarchy but instead it's reasonably good for those players who want to attack attack and attack. In the late early game and early mid game it's a good
 alternative also for those who wish to build and not fight wars. Switching to monarchy will remove the -1 penalty you get from anarchy, despotism and tribalism and this will allow you to ramp up your economy for the better governments to come.
-If you go for monarchy in the early game try to do it fast. Maybe using the scientists for few turns and then getting the tech by T15 - T20. 
+If you go for monarchy in the early game try to do it fast. Maybe using the scientists for few turns and then getting the tech by T15 - T20. \
+However even the farmers may want to stick with monarchy for some time because of the great unit upkeep for workers and less waste.
 ")
 
 ;------------------------------------------------------------------------
@@ -445,7 +451,10 @@ space for your empire it may make sense to micromanage the worked tiles as Repub
 reduce the number of workers since overlapping city improvements will make it possible to use the same improved \
 tile for two or more cities. For example when one city is about to grow (currently getting +3 food) and needs +2 food \
 you may switch a grass tile (irrigated, recource +1 prod and roads) to another city and use a regular plans tile (irrigated, with roads) for the city \
-only needing +2 food. This way you don't produce +1 extra food going to waste and the other city will benefit from the same worker tile. 
+only needing +2 food. This way you don't produce +1 extra food going to waste and the other city will benefit from the same worker tile. \
+Like always there are many ways to deal with the governments and another way to look at this is saying that in republic you can afford more buildings \
+while in monarchy you can afford more units. Going from monarchy to democracy is a popular route even while in some situations adding \
+fedetation between them might make sense.
 ")
 
 ;------------------------------------------------------------------------
