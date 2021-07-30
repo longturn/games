@@ -592,13 +592,13 @@ sound_move    = "m_worker"
 sound_move_alt = "m_generic"
 sound_fight   = "f_worker"
 sound_fight_alt = "f_generic"
-build_cost    = 25
+build_cost    = 27
 pop_cost      = 0
 attack        = 0
 defense       = 1
-hitpoints     = 10
+hitpoints     = 12
 firepower     = 1
-move_rate     = 2
+move_rate     = 3
 vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
@@ -606,7 +606,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Airbase"
+flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Airbase", "NoVeteran"
 ; No veteran levels (level name is never displayed)
 ;veteran_names = _("green")
 ;veteran_raise_chance = 0
@@ -624,6 +624,13 @@ Terrain and Terrain Alterations for the effects of their actions.\
 "), _("\
 Workers can build airstrips, airbases, and buoys, which Settlers \
 and Migrants cannot. Workers must be on board a ship to build buoys.\
+\n\\n\
+GUIDE: The tribal workers more fast compared to the regular ones but can't become veteran. \
+It's relatively cheap to upgrade the tribal workers into regular ones. There is however a catch to this. \
+The tribal workers have 12 HP instead of 10 HP the regular workers have and since they can't be captured, \
+these units are quite nice for working close the border area. In any case you may want to upgrade them at some point \
+since the upgraded workers are really good and can move way faster compared to green ones. \
+Since the tribal workers can't be captured you can't grab those from the idlers. \
 ")
 
 
