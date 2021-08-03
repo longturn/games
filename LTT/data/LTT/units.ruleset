@@ -957,7 +957,13 @@ flags         = "Capturer"
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
 helptext      = _("\
 Infantry are modern version of infantry, relatively good\
- at defending your cities.\
+ at defending your cities.\n\n
+ Why: This unit is the end of an upgrade patch all the way from the warriors. It's the best non armored unit for defending your cities.\
+ This was added so that the riflemen could be upgraded into something else than marines. Upgading those and the previous units\
+ into marines created issues to the gameplay. The players were taking huge risks by building lots of cheap early units.\
+ The plan was to uprade the early units at a later time for offensive purposes. Upgrading the early units into marines created situations where the game\
+ ended (for some players) in a turn or two with no real warning. With this one as the final upgrade the problem is no more because of this upgrade path.\
+ The infantry unit also allows an alternative research path because of the reasonably good defense value.\
 ")
 
 
@@ -3049,7 +3055,7 @@ A Caravan carries goods or material for trading with other nations,\
 Caravans cannot take advantage of maglevs, but may travel on\
  the railroads that accompany them.\
 "), _("\
-Establishing trade routes is not enables in this ruleset.\
+Establishing trade routes is not enabled in this ruleset.\
 "), _("\
 A Caravan sent to one of your own cities that is building a wonder\
  can add 50 shields towards its production. If your city is not\
