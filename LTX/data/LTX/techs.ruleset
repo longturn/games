@@ -203,7 +203,7 @@ cost     = 120
 
 [advance_code_of_laws]
 name     = _("Code of Laws")
-req1     = "Alphabet"
+req1     = "Pictography"
 req2     = "None"
 flags    = ""
 graphic     = "a.code_of_laws"
@@ -522,7 +522,7 @@ cost     = 115
 
 [advance_map_making]
 name     = _("Map Making")
-req1     = "Alphabet"
+req1     = "Pictography"
 req2     = "None"
 flags    = ""
 graphic     = "a.map_making"
@@ -549,7 +549,7 @@ cost     = 1870
 
 [advance_mathematics]
 name     = _("Mathematics")
-req1     = "Alphabet"
+req1     = "Pictography"
 req2     = "Masonry"
 flags    = ""
 graphic     = "a.mathematics"
@@ -948,7 +948,7 @@ cost     = 10
 
 [advance_writing]
 name     = _("Writing")
-req1     = "Alphabet"
+req1     = "Pictography"
 req2     = "Folklore"
 flags    = ""
 graphic     = "a.writing"

@@ -430,6 +430,49 @@ _("\
 
  ")
 
+
+
+
+;------------------------------------------------------------------------
+[government_city_states]
+
+name        = _("City States")
+reqs = { "type", "name", "range"
+         "tech", "Iron Working", "Player"
+       }
+graphic     = "gov.citystates"
+graphic_alt = "gov.republic"
+
+ruler_male_title = _("Head of States %s")
+ruler_female_title = _("?female:Gead of States %s")
+
+helptext = _("\
+Under a City States government, the nation is formed by a coalition of city states each enjoying considerable autonomy.\
+ Because of this the head of the states hold little control over taxing and distribution of resources. The citizens do \
+ not get upset easily if the coalition only controls a few cities. Even the far away military units are tolerated.\ 
+ However more territory and expansion leads to serious unhappiness issues since the system is unable to resolve internal conflicts in a vast empire.\
+ A City States economy is very trade-oriented.\
+"),
+; /* xgettext:no-c-format */
+_("\
+* Cities produce an extra trade point for every worked land tile that is\
+ already producing trade.\n\
+* Celebrating cities produce a further trade point for every worked tile\
+ (land or water) which is already producing trade. (Cities below size 3\
+ will not celebrate.)\n\
+* Each city can support three units for free; further units each cost\
+ 2 gold per turn.\n\
+* Each city tolerates three aggressively deployed military units;\
+ each further unit causes 1 unhappy citizen.\n\
+* Base corruption is 20%. This increases rapidly with distance from the capital\
+ (half as fast with knowledge of The Corporation).\n\
+* Base production waste is 10%. This increases with distance from the\
+ capital (half as fast with knowledge of Trade).\n\
+* Big cities with size of 9 or more will get an extra 50 % defense against military attacks. \n\
+* The number of free units will be doubled for cities with size of 9 or more.\
+  The number of units avoiding the military unhappiness will also double at this size.\n\
+")
+
 ; /* <-- avoid gettext warnings
 ;
 ; Multipliers (aka policies)

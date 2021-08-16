@@ -2867,7 +2867,7 @@ TIP:  You may be involved in a situation where you've invaded an\
 [unit_diplomat]
 name          = _("Diplomat")
 class         = "Small Land"
-tech_req      = "Alphabet"
+tech_req      = "Pictography"
 obsolete_by   = "Spy"
 graphic       = "u.diplomat"
 graphic_alt   = "-"
