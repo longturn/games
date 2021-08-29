@@ -1,0 +1,24 @@
+[info]
+options = "+Freeciv-2.6-modpack"
+baseURL = "https://raw.githubusercontent.com/longturn/games/master/LTT"
+name = "Longturn Traditional (LTT) Ruleset"
+type = "Ruleset"
+version = "1.0-d8b4bc6"
+
+[file]
+list =
+{ "src", "dsst"
+  "LTT_local.serv, LTT.serv"
+  "data/LTT/buildings.ruleset"
+  "data/LTT/cities.ruleset"
+  "data/LTT/effects.ruleset"
+  "data/LTT/game.ruleset"
+  "data/LTT/governments.ruleset"
+  "data/LTT/nations.ruleset"
+  "data/LTT/script.lua"
+  "data/LTT/styles.ruleset"
+  "data/LTT/techs.ruleset"
+  "data/LTT/terrain.ruleset"
+  "data/LTT/units.ruleset"
+}
+
