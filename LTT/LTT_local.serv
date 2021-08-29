@@ -67,7 +67,7 @@ set conquercost 50
 # technical
 set aifill=10
 set allowtake=""
-cmdlevel info
+#cmdlevel info # Allows for hack level in local games
 set compresstype plain
 set ec_chat=enabled
 set ec_info=enabled 
