@@ -4,6 +4,7 @@
 rulesetdir LTT
 
 # map
+set aifill=10            # Fill with 10 AI players. Standard LT games have no AI players, only human.
 set mapsize="PLAYER"
 set generator="FRACTAL"
 set barbarians=enabled   # Standard LT games don't have Barbarians enabled, but good for local AI games
@@ -19,7 +20,6 @@ set topology="WRAPX|WRAPY|ISO"
 set wetness=40
 set alltemperate=disabled
 set tinyisles disabled   # Don't allow 1x1 islands
-#set revealmap=START     # Uncomment this for revealing the map for test games
 
 # general rules
 set nationset=all
@@ -43,12 +43,13 @@ set happyborders=enabled
 set occupychance=0
 set globalwarming=enabled
 
-# diplomacy, technology
+# diplomacy
 set diplchance=40
 set diplgoldcost=20
 set diplbulbcost=20
 set diplomacy=ALL
 
+# technology
 set sciencebox=100
 set techlost_donor=0
 set techlost_recv=0
@@ -62,19 +63,3 @@ set techlossrestore 50
 set freecost 50
 set diplcost 50
 set conquercost 50
-
-# technical
-set aifill=10
-#set allowtake=""        # Only needed for online games
-#cmdlevel info           # Allows for hack level in local games
-set compresstype plain
-set ec_chat=enabled
-set ec_info=enabled 
-set ec_max_size=5000
-set ec_turns=9
-set maxplayers=126
-#set saveturns=1         # Saves game every turn, good for online games
-set scorelog=enabled
-set timeout=0
-#set unitwaittime=36000  # Only needed for games with a long timeout set (e.g LT Games)
-#set fixedlength enabled # Only needed for games with a timeout set
