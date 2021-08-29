@@ -9,7 +9,7 @@ version = "1.0-d8b4bc6"
 [files]
 list =
 { "src", "dest"
-  "LTT_local.serv, "LTT.serv"
+  "LTT_local.serv", "LTT.serv"
   "data/LTT/buildings.ruleset", "LTT/buildings.ruleset"
   "data/LTT/cities.ruleset", "LTT/cities.ruleset"
   "data/LTT/effects.ruleset", "LTT/effects.ruleset"
