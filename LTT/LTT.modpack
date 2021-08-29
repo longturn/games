@@ -6,7 +6,7 @@ name = "Longturn Traditional (LTT) Ruleset"
 type = "Ruleset"
 version = "1.0-d8b4bc6"
 
-[file]
+[files]
 list =
 { "src", "dest"
   "LTT_local.serv, LTT.serv"
