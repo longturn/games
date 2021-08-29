@@ -1,6 +1,5 @@
 [info]
 options = "+Freeciv-2.6-modpack"
-;baseURL = "https://raw.githubusercontent.com/longturn/games/master/LTT"
 baseURL = "https://raw.githubusercontent.com/jwrober/games/master/LTT"
 name = "Longturn Traditional (LTT) Ruleset"
 type = "Ruleset"
