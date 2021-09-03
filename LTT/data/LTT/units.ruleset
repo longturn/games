@@ -2582,8 +2582,11 @@ With Advanced Flight, all Nuclear units (including those already\
 "), _("\
 On impact, the blast will destroy any unit in an area 3 tiles wide\
  (3x3 squares for rectangular grids), including friendly units.\
- Any city within the blast area loses half its population, and\
+ Any city within the blast area loses 30% of its population, and\
  land tiles within the blast area are subject to nuclear fallout.\
+ The tiles have 20% chance of losing infrastructure and\
+ has a 20% chance of destroying city improvements. \
+(Improvements which have less than 100% sabotage chance aren't destroyed)\
 "), _("\
 Nuclear fallout reduces tile output and increases the risk of global\
  nuclear winter; see the help on Fallout.\
@@ -2641,8 +2644,11 @@ With Advanced Flight, all Nuclear units (including those already\
 "), _("\
 On impact, the blast will destroy any unit in an area 3 tiles wide\
  (3x3 squares for rectangular grids), including friendly units.\
- Any city within the blast area loses half its population, and\
+ Any city within the blast area loses 30% of its population, and\
  land tiles within the blast area are subject to nuclear fallout.\
+ The tiles have 20% chance of losing infrastructure and \
+ has a 20% chance of destroying city improvements. \
+(Improvements which have less than 100% sabotage chance aren't destroyed)\
 "), _("\
 Similar to pollution and global warming, the risk of global nuclear\
  winter increases with fallout. If nuclear winter occurs, terrain\
