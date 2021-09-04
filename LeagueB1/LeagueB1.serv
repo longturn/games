@@ -1,7 +1,7 @@
 # Server commands to make Longturn Traditional Freeciv rules based on Civ2Civ3 ruleset
 #
 
-rulesetdir LTT
+rulesetdir LeagueB1
 
 # map
 set mapsize="PLAYER"
@@ -31,7 +31,7 @@ set rapturedelay=3
 set restrictinfra=enabled
 set revolen=2
 set revolentype = FIXED
-set spacerace=enabled
+set spacerace=disabled
 set startunits=cccccwwwwwwxx
 set techlevel=0
 set unreachableprotects=disabled
@@ -60,9 +60,9 @@ set team_pooled_research=disabled
 set techlevel=0
 set techlossforgiveness -1
 set techlossrestore 50
-set freecost 50
-set diplcost 50
-set conquercost 50
+set freecost 80
+set diplcost 80
+set conquercost 80
 
 # technical
 set aifill=0
@@ -78,7 +78,7 @@ set saveturns=1
 set scorelog=enabled
 set timeout=82800
 set unitwaittime=36000
-set fixedlength enabled
+set fixedlength disabled
 
 # new longturn.net specific patches. this section added in September 2020. you may need to remove these if you play a local game with the standard 2.6 freeciv version
 set diplchance_steal=50
