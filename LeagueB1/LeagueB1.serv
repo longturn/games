@@ -89,7 +89,7 @@ set contact_intel = disabled	# no info about the other nations if contatturns = 
 set default_diplstate_is_peace = enabled
 set nuke_infra = 20		# chance of destroying the infra on tiles when nuked
 set nuke_infra_save_lowest = enabled   # if enabled nuking does not destroy basic roads under rails
-set demography = NnciwASLaPEgRMmuklOCqrb
+set demography = NnciwASLaPEgRMmuklOCqrbsz
 set nuke_improvements = 20		# 20% chance for destroying city improvements. never destroyed if the sabotage chance is less than 100%
 
 # for testing purposes now, check for the actual game
