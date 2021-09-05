@@ -12,14 +12,15 @@ set huts=0
 set landmass=40
 set separatepoles=enabled
 set specials=300
-set steepness=40
+set steepness=10
 set temperature=70
-set tilesperplayer=500
+set tilesperplayer=700
 set topology="WRAPX|WRAPY|ISO"
 set wetness=40
-set alltemperate=disabled
+set alltemperate=enabled
 set tinyisles disabled
 set revealmap=START  #uncomment this for revealing the map for test games
+set fogofwar disabled
 
 # general rules
 set nationset=all
