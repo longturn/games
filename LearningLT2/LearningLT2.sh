@@ -1,7 +1,7 @@
 #!/bin/sh
 
-GAMENAME="LTT"
-GAMEID="LTT" # Name in the database
-PORT=5085
+GAMENAME="LearningLT2"
+GAMEID="LearningLT2" # Name in the database
+PORT=5066
 
 . ../rc.subr.2.6
