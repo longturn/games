@@ -86,6 +86,7 @@ set fixedlength enabled
 metamessage "Longturn Multiplayer 3 | More info: http://longturn.net/ - this is the warciv multiplayer 3 edition of the multiplayer ruleset"
 metapatches longturn
 
+autocreate players.txt
 syncturn
 start
 
