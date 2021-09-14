@@ -33,26 +33,23 @@ function kill_triremes(turn, year)
     'Trireme lost to an attack by a giant squid',
     'No news from your Trireme: presumed lost',
   }
-  for tile in whole_map_iterate() do
-    if tile.terrain:class_name() == 'Oceanic' then
-      -- can have a trireme there
-      for unit in tile:units_iterate() do
-        if unit.utype:rule_name() == 'Trireme' then
-	  -- found one! Is the coast close enough?
-	  local at_coast = false
-	  for tile2 in tile:square_iterate(3) do
-	    -- look up to 3 tiles away
-            if tile2.terrain:class_name() ~= 'Oceanic' then
-	      at_coast = true
-              break
-	    end
-	  end
-	  -- too far, sorry...
-	  if not at_coast then
-	    notify.event(player, tile, E.UNIT_LOST_MISC,
-	                 messages[random(1, #messages)])
-	    unit:kill('fuel')
-	  end
+  for player in players_iterate() do
+    for unit in player:units_iterate() do
+      if unit.utype:rule_name() == 'Trireme' and unit:tile().terrain:class_name() == 'Oceanic' then
+        -- found one! Is the coast close enough?
+        local at_coast = false
+        for tile2 in tile:square_iterate(3) do
+          -- look up to 3 tiles away
+          if tile2.terrain:class_name() ~= 'Oceanic' then
+            at_coast = true
+            break
+          end
+        end
+        -- too far, sorry...
+        if not at_coast then
+          notify.event(player, tile, E.UNIT_LOST_MISC,
+                       messages[random(1, #messages)])
+          unit:kill('fuel')
         end
       end
     end
