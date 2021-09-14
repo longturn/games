@@ -1,7 +1,7 @@
 # Server commands to make warciv Freeciv rules
 #
 
-rulesetdir LT59
+rulesetdir LT66Warciv
 
 
 # map
@@ -50,7 +50,7 @@ set victories ALLIED
 # diplomacy, technology
 set diplchance=40
 set diplcost=20
-set diplchance_steal=10
+set diplchance_steal=50
 set diplomacy=DISABLED
 set sciencebox=100
 set techlost_donor=0
