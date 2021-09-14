@@ -35,7 +35,8 @@ function kill_triremes(turn, year)
   }
   for player in players_iterate() do
     for unit in player:units_iterate() do
-      if unit.utype:rule_name() == 'Trireme' and unit:tile().terrain:class_name() == 'Oceanic' then
+      local tile = unit.tile
+      if unit.utype:rule_name() == 'Trireme' and tile.terrain:class_name() == 'Oceanic' then
         -- found one! Is the coast close enough?
         local at_coast = false
         for tile2 in tile:square_iterate(3) do
