@@ -60,9 +60,9 @@ set team_pooled_research=disabled
 set techlevel=0
 set techlossforgiveness -1
 set techlossrestore 50
-set freecost 50
-set diplcost 50
-set conquercost 50
+set freecost 80
+set diplcost 80
+set conquercost 80
 
 # technical
 set aifill=0
@@ -81,14 +81,14 @@ set unitwaittime=36000
 set fixedlength enabled
 
 # new longturn.net specific patches. this section added in September 2020. you may need to remove these if you play a local game with the standard 2.6 freeciv version
-set diplchance_steal=50
+set diplchance_steal=30
 #set globalwarming_percent=300
 set nuclear_winter_percent = 100
 set contact_intel = disabled	# no info about the other nations if contatturns = 1
-set default_diplstate_is_peace = enabled
+set default_diplstate_is_peace = disabled
 set nuke_infra = 20		# chance of destroying the infra on tiles when nuked
 set nuke_infra_save_lowest = enabled   # if enabled nuking does not destroy basic roads under rails
-set demography = NnciwASLaPEgRMmuklOCqrb
+set demography = NnciwASLaPEgRMmuklOCqrbsz
 set nuke_improvements = 20		# 20% chance for destroying city improvements. never destroyed if the sabotage chance is less than 100%
 
 # for testing purposes now, check for the actual game
