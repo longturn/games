@@ -1,0 +1,106 @@
+# Server commands to make Longturn Traditional Freeciv rules based on Civ2Civ3 ruleset
+#
+
+rulesetdir LeagueO2
+
+# map
+set mapsize="PLAYER"
+set generator="FRACTAL"
+set barbarians=disabled
+set startpos="ALL"
+set huts=0
+set landmass=40
+set separatepoles=enabled
+set specials=300
+set steepness=40
+set temperature=70
+set tilesperplayer=500
+set topology="WRAPX|WRAPY|ISO"
+set wetness=40
+set alltemperate=disabled
+set tinyisles disabled
+set revealmap=START  #uncomment this for revealing the map for test games
+
+# general rules
+set nationset=all
+set citymindist=4
+set contactturns=1
+set dispersion=6
+set foggedborders=enabled
+set rapturedelay=3
+set restrictinfra=enabled
+set revolen=2
+set revolentype = FIXED
+set spacerace=enabled
+set startunits=cccccwwwwwwxx
+set techlevel=0
+set unreachableprotects=disabled
+set killunhomed=0
+set trading_tech=disabled
+set airliftingstyle="FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
+set razechance=10
+set happyborders=enabled
+set occupychance=0
+set globalwarming=enabled
+
+
+# diplomacy, technology
+set diplchance=40
+set diplgoldcost=20
+set diplbulbcost=20
+
+set diplomacy=HUMAN
+set sciencebox=100
+set techlost_donor=0
+set techlost_recv=0
+set techpenalty=10
+set trademindist=999
+set trading_city=disabled
+set team_pooled_research=disabled
+set techlevel=0
+set techlossforgiveness -1
+set techlossrestore 50
+set freecost 80
+set diplcost 80
+set conquercost 80
+
+# technical
+set aifill=0
+set allowtake=""
+cmdlevel info
+set compresstype plain
+set ec_chat=enabled
+set ec_info=enabled 
+set ec_max_size=5000
+set ec_turns=9
+set maxplayers=126
+set saveturns=1
+set scorelog=enabled
+set timeout=82800
+set unitwaittime=36000
+set fixedlength enabled
+
+# new longturn.net specific patches. this section added in September 2020. you may need to remove these if you play a local game with the standard 2.6 freeciv version
+set diplchance_steal=30
+#set globalwarming_percent=300
+set nuclear_winter_percent = 100
+set contact_intel = disabled	# no info about the other nations if contatturns = 1
+set default_diplstate_is_peace = disabled
+set nuke_infra = 20		# chance of destroying the infra on tiles when nuked
+set nuke_infra_save_lowest = enabled   # if enabled nuking does not destroy basic roads under rails
+set demography = NnciwASLaPEgRMmuklOCqrbsz
+set nuke_improvements = 20		# 20% chance for destroying city improvements. never destroyed if the sabotage chance is less than 100%
+
+# for testing purposes now, check for the actual game
+set unitwaittime_range = -1
+set unitwaittime_allied = enabled
+set unitwaittime_extended = enabled
+set playerwaittime = 0
+
+
+metamessage "Longturn Traditional for multiplayer games | More info: http://longturn.net"
+metapatches longturn
+
+
+syncturn
+start
