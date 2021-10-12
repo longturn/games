@@ -1,0 +1,29 @@
+
+For newbies: How to "install" this ruleset
+
+1. Parking the files in the right place: Simply download the SIM26.serv folder and SIM26 directory and put them into your Freeciv2.6/data/ directory
+
+2. Loading them into the game:
+
+For Linux the procedure depends on how you compiled it, but if you did that, you probably know what to do.
+
+For Windows users: if you simply downloaded the Windows thing from Freeciv.org, start the client (Freeciv application) and type 
+
+/read SIM26.serv
+
+in the chat line. Add some AIs for lolz and you're set to go.
+
+------
+
+Additionally, the documentation for Simulation ruleset isn't fully prepared and user-friendly, although everything exists and is available. (Still much better than the LT ruleset, but, on the other hand, Sim ruleset is much more different than everything you played and REQUIRES more documentation.)
+
+The main part of the help is in Freeciv wiki here:
+
+https://freeciv.fandom.com/wiki/Simulation_Ruleset
+
+The newest corrections can be found here in very disorderly fashion:
+
+http://forum.freeciv.org/f/viewtopic.php?f=11&t=90758
+
+
+Although untidy, these two links (along with the unit table that is linked from both) give you maybe even 100% of needed information.
