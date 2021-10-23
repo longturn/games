@@ -36,6 +36,7 @@ flags =
     _("HelpWonder")
     _("RealSpy"), _("Can do real spy actions, unlike tech transfer units.")
     _("RealDiplomat"), _("Can do real diplomat actions, unlike tech transfer units.")
+    _("Stuka"), _("Defender value halved when attacked by Attack Aircrafts.")
   }
 
 [veteran_system]
@@ -753,6 +754,38 @@ This unit may be built from the start of the game.  It is the\
  weakest offensive unit.\
 ")
 
+[unit_advanced_warrior]
+name          = _("Advanced Warrior")
+class         = "Land"
+tech_req      = "Warrior Code"
+obsolete_by   = "Swordsmen"
+graphic       = "u.advanced_warrior"
+graphic_alt   = "u.legion"
+sound_move    = "m_legion"
+sound_move_alt = "m_generic"
+sound_fight   = "f_legion"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 0
+attack        = 3
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer"
+roles         = "DefendOk", "DefendOkStartUnit", "BarbarianBuild", "BarbarianSea"
+helptext      = _("\
+Advanced Warriors are heavily armed infantry\
+ units with an excellent offensive value.\
+")
+
 [unit_phalanx]
 name          = _("Phalanx")
 class         = "Land"
@@ -788,16 +821,16 @@ The Phalanx is armored infantry, suitable for defending your cities.\
 name          = _("Archers")
 class         = "Land"
 tech_req      = "Warrior Code"
-obsolete_by   = "Musketeers"
+obsolete_by   = "Arbalest"
 graphic       = "u.archers"
 graphic_alt   = "-"
 sound_move    = "m_archers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_archers"
 sound_fight_alt = "f_generic"
-build_cost    = 20
+build_cost    = 25
 pop_cost      = 0
-attack        = 3
+attack        = 2
 defense       = 1
 hitpoints     = 10
 firepower     = 1
@@ -809,18 +842,85 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer"
+flags         = "Capturer", "Bombarder"
 roles         = "DefendOk", "DefendOkStartUnit", "Hut"
 helptext      = _("\
 Archers fight with bows and arrows and have a good offensive\
  value.\
 ")
+bombard_rate = 3
+
+[unit_arbalest]
+name          = _("Arbalest")
+class         = "Land"
+tech_req      = "Invention"
+obsolete_by   = "Musketeers"
+graphic       = "u.arbalest"
+graphic_alt   = "u.archers"
+sound_move    = "m_archers"
+sound_move_alt = "m_generic"
+sound_fight   = "f_archers"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 0
+attack        = 4
+defense       = 2
+hitpoints     = 10
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer", "Bombarder"
+roles         = ""
+helptext      = _("\
+Arbalest fight with crossbows and weaken the enemy\
+ by bombarding him with arrows.\
+")
+bombard_rate = 3
+
+[unit_mounted_archer]
+name          = _("Mounted Archer")
+class         = "Land"
+tech_req      = "Code of Laws"
+obsolete_by   = "Arbalest"
+graphic       = "u.mounted_archer"
+graphic_alt   = "u.horsemen"
+sound_move    = "m_horsemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_horsemen"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 0
+attack        = 2
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 4
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer", "Horse"
+roles         = "AttackFastStartUnit", "Hut", "Barbarian", "Hunter"
+helptext      = _("\
+Mounted Archer are cavalry armed with a bow able to shoot while riding from horseback\
+Useful to harass the enemy by making him weaker without the risk of being attacked back.\
+")
+bombard_rate = 3
 
 [unit_legion]
 name          = _("Swordsmen")
 class         = "Land"
 tech_req      = "Iron Working"
-obsolete_by   = "Musketeers"
+obsolete_by   = "Samurai"
 graphic       = "u.swordsmen"
 graphic_alt   = "u.legion"
 sound_move    = "m_legion"
@@ -884,6 +984,68 @@ Equipped with long pikes, Pikemen replaces Phalanx\
  as the preferred city defender.\
 ")
 
+[unit_halberdier]
+name          = _("Halberdier")
+class         = "Land"
+tech_req      = "Philosophy"
+obsolete_by   = "Musketeers"
+graphic       = "u.halberdier"
+graphic_alt   = "pikemen"
+sound_move    = "m_pikemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_pikemen"
+sound_fight_alt = "f_generic"
+build_cost    = 28
+pop_cost      = 0
+attack        = 3
+defense       = 3
+hitpoints     = 10
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
+helptext      = _("\
+Equipped with an axe blade topped with a pike.\
+")
+
+[unit_samurai]
+name          = _("Samurai")
+class         = "Land"
+tech_req      = "Feudalism"
+obsolete_by   = "Musketeers"
+graphic       = "u.samurai"
+graphic_alt   = "u.legion"
+sound_move    = "m_legion"
+sound_move_alt = "m_generic"
+sound_fight   = "f_legion"
+sound_fight_alt = "f_generic"
+build_cost    = 31
+pop_cost      = 0
+attack        = 5
+defense       = 3
+hitpoints     = 10
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer"
+roles         = "DefendOk", "DefendOkStartUnit", "BarbarianBuild", "BarbarianSea"
+helptext      = _("\
+Samurai are heavily armed and well disciplined infantry.\
+")
+
 [unit_musketeers]
 name          = _("Musketeers")
 class         = "Land"
@@ -944,7 +1106,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer", "Unique", "Marines"
+flags         = "Capturer", "Marines"
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
 helptext      = _("\
 Navy Troops are infantry equipped with early\
@@ -983,6 +1145,36 @@ Riflemen are World War-era infantry, very good\
  at defending your cities.\
 ")
 
+[unit_grenadier]
+name          = _("Grenadier")
+class         = "Land"
+tech_req      = "Refrigeration"
+obsolete_by   = "Stormtrooper"
+graphic       = "u.grenadier"
+graphic_alt   = "u.riflemen"
+sound_move    = "m_riflemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_riflemen"
+sound_fight_alt = "f_generic"
+build_cost    = 60
+pop_cost      = 0
+attack        = 6
+defense       = 4
+hitpoints     = 20
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
+helptext      = _("\
+Grenadier are highly specialized attack infantry\
+")
 
 [unit_infantry]
 name          = _("Infantry")
@@ -1009,6 +1201,8 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+embarks       = "Helicopter"
+disembarks    = "Helicopter"
 flags         = "Capturer"
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
 helptext      = _("\
@@ -1016,6 +1210,36 @@ Infantry are modern version of infantry, relatively good\
  at defending your cities.\
 ")
 
+[unit_mounted_infantry]
+name          = _("Mounted Infantry")
+class         = "Land"
+tech_req      = "Machine Tools"
+obsolete_by   = "Motorized Infantry"
+graphic       = "u.mounted_infantry"
+graphic_alt   = "u.riflemen"
+sound_move    = "m_cavalry"
+sound_move_alt = "m_generic"
+sound_fight   = "f_riflemen"
+sound_fight_alt = "f_generic"
+build_cost    = 60
+pop_cost      = 0
+attack        = 5
+defense       = 6
+hitpoints     = 20
+firepower     = 1
+move_rate     = 5
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
+helptext      = _("\
+Same characteristics as Infantry but on horses.\
+")
 
 [unit_alpine_troops]
 name          = _("Alpine Troops")
@@ -1030,7 +1254,7 @@ sound_fight   = "f_alpine_troops"
 sound_fight_alt = "f_generic"
 build_cost    = 60
 pop_cost      = 0
-attack        = 7
+attack        = 6
 defense       = 4
 hitpoints     = 20
 firepower     = 1
@@ -1130,6 +1354,41 @@ Fundamentalist nations can maintain Fanatic units without\
  having to pay any upkeep nor causing military unhappiness. \
 ")
 
+[unit_technical]
+name          = _("Technical")
+class         = "Land"
+tech_req      = "Recycling"
+gov_req       = "Fundamentalism"
+obsolete_by   = "None"
+graphic       = "u.technical"
+graphic_alt   = "fanatics"
+sound_move    = "m_fanatics"
+sound_move_alt = "m_generic"
+sound_fight   = "f_fanatics"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 0
+attack        = 6
+defense       = 3
+hitpoints     = 30
+firepower     = 1
+move_rate     = 12
+vision_radius_sq = 28
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Fanatic", "Capturer"
+roles         = "DefendGood", "DefendGoodStartUnit"
+helptext      = _("\
+Technicals are extremely mobile units.\
+"), _("\
+Fundamentalist nations can maintain Technical units without\
+ having to pay any upkeep nor causing military unhappiness. \
+")
+
 [unit_marines]
 name          = _("Marines")
 class         = "Land"
@@ -1163,10 +1422,75 @@ helptext      = _("\
 Marines are infantry who are experts at marine warfare.\
 ")
 
+[unit_stormtrooper]
+name          = _("Stormtrooper")
+class         = "Land"
+tech_req      = "Miniaturization"
+obsolete_by   = "Mech. Inf."
+graphic       = "u.stormtrooper"
+graphic_alt   = "u.riflemen"
+sound_move    = "m_riflemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_riflemen"
+sound_fight_alt = "f_generic"
+build_cost    = 60
+pop_cost      = 0
+attack        = 9
+defense       = 6
+hitpoints     = 20
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+embarks       = "Helicopter"
+disembarks    = "Helicopter"
+flags         = "Capturer"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
+helptext      = _("\
+Stormtroopers are highly specialized attack infantry\
+")
+
+[unit_motorized_infantry]
+name          = _("Motorized Infantry")
+class         = "Land"
+tech_req      = "Mobile Warfare"
+obsolete_by   = "Mech. Inf."
+graphic       = "u.motorized_infantry"
+graphic_alt   = "u.riflemen"
+sound_move    = "m_riflemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_riflemen"
+sound_fight_alt = "f_generic"
+build_cost    = 55
+pop_cost      = 0
+attack        = 5
+defense       = 6
+hitpoints     = 20
+firepower     = 1
+move_rate     = 10
+vision_radius_sq = 28
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
+helptext      = _("\
+Motorized Infantry is infantry transported by trucks, relatively good\
+ range.\
+")
+
 [unit_paratroopers]
 name          = _("Paratroopers")
 class         = "Land"
-tech_req      = "Combined Arms"
+tech_req      = "Advanced Flight"
 obsolete_by   = "None"
 graphic       = "u.paratroopers"
 graphic_alt   = "-"
@@ -1176,7 +1500,7 @@ sound_fight   = "f_paratroopers"
 sound_fight_alt = "f_generic"
 build_cost    = 60
 pop_cost      = 0
-attack        = 6
+attack        = 7
 defense       = 4
 hitpoints     = 20
 firepower     = 1
@@ -1340,6 +1664,39 @@ Elephants are towering animals trained for war that are often used as\
  powerful shock troops.\
 ")
 
+[unit_dromedarii]
+name          = _("Dromedarii")
+class         = "Big Land"
+tech_req      = "Mysticism"
+obsolete_by   = "Dragoons"
+graphic       = "u.dromedarii"
+graphic_alt   = "u.horsemen"
+sound_move    = "m_horsemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_horsemen"
+sound_fight_alt = "f_generic"
+build_cost    = 28
+pop_cost      = 0
+attack        = 2
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "IgTer", "Capturer", "Horse"
+roles         = "Hunter"
+helptext      = _("\
+Dromedarii are mounted warriors and an early\
+ shock-troop that can penetrate deep into\
+ enemy territory.\
+")
+
 [unit_crusaders]
 name          = _("Crusaders")
 class         = "Land"
@@ -1438,6 +1795,38 @@ helptext      = _("\
 Dragoons are mounted warriors carrying early firearms.\
 ")
 
+[unit_mounted_militia]
+name          = _("Mounted Militia")
+class         = "Land"
+tech_req      = "Industrialization"
+gov_req       = "Federation"
+obsolete_by   = "None"
+graphic       = "u.mounted_militia"
+graphic_alt   = "u.cavalry"
+sound_move    = "m_cavalry"
+sound_move_alt = "m_generic"
+sound_fight   = "f_cavalry"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 1
+attack        = 6
+defense       = 3
+hitpoints     = 20
+firepower     = 1
+move_rate     = 6
+vision_radius_sq = 28
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer", "Horse"
+roles         = "AttackFastStartUnit", "Hunter"
+helptext      = _("\
+Mounted Militia are cheap cavalry recruited from the local population.\
+")
+
 [unit_cavalry]
 name          = _("Cavalry")
 class         = "Land"
@@ -1469,6 +1858,45 @@ helptext      = _("\
 Cavalry are mounted and highly trained soldiers.\
 ")
 
+[unit_early_armor]
+name          = _("Early Armor")
+class         = "Big Land"
+tech_req      = "Automobile"
+obsolete_by   = "Armor"
+graphic       = "u.early_armor"
+graphic_alt   = "armor"
+sound_move    = "m_armor"
+sound_move_alt = "m_generic"
+sound_fight   = "f_armor"
+sound_fight_alt = "f_generic"
+build_cost    = 65
+pop_cost      = 0
+attack        = 6
+defense       = 3
+hitpoints     = 30
+firepower     = 1
+move_rate     = 4
+vision_radius_sq = 40
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+bonuses       =
+   { "flag", "type", "value"
+     "Stuka", "DefenseDivider", 2
+   }
+flags         = ""
+roles         = "DefendOk", "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
+helptext      = _("\
+Early armors are your first tanks. Early Armors are motorized war wagons that are stronger and can take \
+more damage than any mounted unit. However, they are less adaptable to \
+very rough terrain (they cannot move into mountains, swamps, or jungles \
+without roads), and unable to use less rough terrain to improve their \
+defense.\
+")
+
 [unit_armor]
 name          = _("Armor")
 class         = "Big Land"
@@ -1494,11 +1922,93 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+bonuses       =
+   { "flag", "type", "value"
+     "Stuka", "DefenseDivider", 2
+   }
 flags         = ""
 roles         = "DefendOk", "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Armors are motorized war wagons that are faster, stronger, and can take \
 more damage than any mounted unit. However, they are less adaptable to \
+very rough terrain (they cannot move into mountains, swamps, or jungles \
+without roads), and unable to use less rough terrain to improve their \
+defense.\
+")
+
+[unit_advanced_armor]
+name          = _("Advanced Armor")
+class         = "Big Land"
+tech_req      = "Laser"
+obsolete_by   = "Fusion Armor"
+graphic       = "u.advanced_armor"
+graphic_alt   = "armor"
+sound_move    = "m_armor"
+sound_move_alt = "m_generic"
+sound_fight   = "f_armor"
+sound_fight_alt = "f_generic"
+build_cost    = 100
+pop_cost      = 0
+attack        = 20
+defense       = 10
+hitpoints     = 30
+firepower     = 1
+move_rate     = 12
+vision_radius_sq = 40
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+bonuses       =
+   { "flag", "type", "value"
+     "Stuka", "DefenseDivider", 2
+   }
+flags         = ""
+roles         = "DefendOk", "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
+helptext      = _("\
+Armors are motorized war wagons that are faster, stronger, and can take \
+more damage than any mounted unit. However, they are less adaptable to \
+very rough terrain (they cannot move into mountains, swamps, or jungles \
+without roads), and unable to use less rough terrain to improve their \
+defense.\
+")
+
+[unit_tank_hunter]
+name          = _("Tank Hunter")
+class         = "Big Land"
+tech_req      = "Mass Production"
+obsolete_by   = "Advanced Armor"
+graphic       = "u.tank_hunter"
+graphic_alt   = "armor"
+sound_move    = "m_armor"
+sound_move_alt = "m_generic"
+sound_fight   = "f_armor"
+sound_fight_alt = "f_generic"
+build_cost    = 70
+pop_cost      = 0
+attack        = 10
+defense       = 3
+hitpoints     = 30
+firepower     = 1
+move_rate     = 9
+vision_radius_sq = 40
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+bonuses       =
+   { "flag", "type", "value"
+     "Stuka", "DefenseDivider", 2
+   }
+flags         = ""
+roles         = "DefendOk", "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
+helptext      = _("\
+Is a type of armoured fighting vehicle, armed with a direct-fire artillery gun \
+and only light armor. They are less adaptable to \
 very rough terrain (they cannot move into mountains, swamps, or jungles \
 without roads), and unable to use less rough terrain to improve their \
 defense.\
@@ -1658,8 +2168,8 @@ to be effective, and has limited mobility. Artillery and other siege units do no
 [unit_howitzer]
 name          = _("Howitzer")
 class         = "Big Siege"
-tech_req      = "Robotics"
-obsolete_by   = "None"
+tech_req      = "Radio"
+obsolete_by   = "Mobile Howitzer"
 graphic       = "u.howitzer"
 graphic_alt   = "-"
 sound_move    = "m_howitzer"
@@ -1668,11 +2178,11 @@ sound_fight   = "f_howitzer"
 sound_fight_alt = "f_generic"
 build_cost    = 70
 pop_cost      = 0
-attack        = 12
+attack        = 10
 defense       = 2
 hitpoints     = 30
 firepower     = 1
-move_rate     = 9
+move_rate     = 5
 vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
@@ -1688,11 +2198,81 @@ offensive capabilities. However, they still have the limited mobility \
 of their predecessors. Like earlier siege units, Howitzers do not gain benefits from Barracks. \
 ")
 
+[unit_mobile_howitzer]
+name          = _("Mobile Howitzer")
+class         = "Big Siege"
+tech_req      = "Robotics"
+obsolete_by   = "None"
+graphic       = "u.mobile_howitzer"
+graphic_alt   = "u.howitzer"
+sound_move    = "m_howitzer"
+sound_move_alt = "m_generic"
+sound_fight   = "f_howitzer"
+sound_fight_alt = "f_generic"
+build_cost    = 80
+pop_cost      = 0
+attack        = 12
+defense       = 3
+hitpoints     = 30
+firepower     = 1
+move_rate     = 9
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "CityBuster"
+roles         = "AttackStrongStartUnit"
+helptext      = _("\
+Mobile Howitzers are upgraded artillery with improved defensive as well as \
+offensive capabilities. Like earlier siege units, Mobile Howitzers do not gain benefits from Barracks. \
+")
+
+[unit_early_fighter]
+name          = _("Early Fighter")
+class         = "Air"
+tech_req      = "Flight"
+obsolete_by   = "Fighter"
+graphic       = "u.early_fighter"
+graphic_alt   = "u.fighter"
+sound_move    = "m_fighter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_fighter"
+sound_fight_alt = "f_generic"
+build_cost    = 20
+pop_cost      = 0
+attack        = 2
+defense       = 2
+hitpoints     = 20
+firepower     = 1
+move_rate     = 8
+vision_radius_sq = 50
+transport_cap = 0
+fuel          = 2
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+targets       = "Air", "Missile", "Helicopter"
+flags         = "AirAttacker", "HasNoZOC", "OneAttack"
+roles         = "DefendOk", "DefendOkStartUnit"
+helptext      = _("\
+Early Fighters are your first fighter units. They can\
+ move anywhere and attack any unit. The fighter will lose all moves when attacking another unit.\
+"),
+; /* xgettext:no-c-format */
+_("\
+Early fighters and other aircraft lose 10% of their hitpoints for every \
+turn not spent in a city, airstrip, or airbase, or on a Carrier.\
+")
+
 [unit_fighter]
 name          = _("Fighter")
 class         = "Air"
-tech_req      = "Flight"
-obsolete_by   = "Stealth Fighter"
+tech_req      = "Radio"
+obsolete_by   = "Early Jet Fighter"
 graphic       = "u.fighter"
 graphic_alt   = "-"
 sound_move    = "m_fighter"
@@ -1722,14 +2302,155 @@ Fighters are your first airborne units. They can\
 "),
 ; /* xgettext:no-c-format */
 _("\
-Fighters are very good for securing access from nations with no air units.  \
+Fighters are very good for securing access from nations with no air units. \
 ")
+
+[unit_early_jet_fighter]
+name          = _("Early Jet Fighter")
+class         = "Air"
+tech_req      = "Rocketry"
+obsolete_by   = "Jet Fighter"
+graphic       = "u.early_jet_fighter"
+graphic_alt   = "u.fighter"
+sound_move    = "m_stealth_fighter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_stealth_fighter"
+sound_fight_alt = "f_generic"
+build_cost    = 55
+pop_cost      = 0
+attack        = 6
+defense       = 5
+hitpoints     = 20
+firepower     = 1
+move_rate     = 15
+vision_radius_sq = 72
+transport_cap = 0
+fuel          = 2
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+targets       = "Air", "Missile", "Helicopter"
+flags         = "AirAttacker", "HasNoZOC", "OneAttack"
+roles         = "DefendGood", "DefendGoodStartUnit"
+helptext      = _("\
+An improved Fighter, with improved attack and a higher movement\
+ radius.\
+")
+
+[unit_jet_fighter]
+name          = _("Jet Fighter")
+class         = "Air"
+tech_req      = "Space Flight"
+obsolete_by   = "Stealth Fighter"
+graphic       = "u.jet_fighter"
+graphic_alt   = "u.fighter"
+sound_move    = "m_stealth_fighter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_stealth_fighter"
+sound_fight_alt = "f_generic"
+build_cost    = 65
+pop_cost      = 0
+attack        = 7
+defense       = 6
+hitpoints     = 20
+firepower     = 1
+move_rate     = 17
+vision_radius_sq = 72
+transport_cap = 0
+fuel          = 2
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+targets       = "Air", "Missile", "Helicopter"
+flags         = "AirAttacker", "HasNoZOC", "OneAttack"
+roles         = "DefendGood", "DefendGoodStartUnit"
+helptext      = _("\
+An improved Fighter, with improved attack and a higher movement\
+ radius.\
+")
+
+[unit_stealth_fighter]
+name          = _("Stealth Fighter")
+class         = "Air"
+tech_req      = "Stealth"
+obsolete_by   = "None"
+graphic       = "u.stealth_fighter"
+graphic_alt   = "-"
+sound_move    = "m_stealth_fighter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_stealth_fighter"
+sound_fight_alt = "f_generic"
+build_cost    = 80
+pop_cost      = 0
+attack        = 8
+defense       = 7
+hitpoints     = 20
+firepower     = 1
+move_rate     = 18
+vision_radius_sq = 72
+transport_cap = 0
+fuel          = 2
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+targets       = "Air", "Missile", "Helicopter"
+flags         = "Partial_Invis", "AirAttacker", "HasNoZOC", "OneAttack"
+roles         = "DefendGood", "DefendGoodStartUnit"
+helptext      = _("\
+An improved Fighter, with improved attack and a higher movement\
+ radius.\
+")
+
+[unit_early_bomber]
+name          = _("Early Bomber")
+class         = "Air"
+tech_req      = "Flight"
+obsolete_by   = "Bomber"
+graphic       = "u.early_bomber"
+graphic_alt   = "u.bomber"
+sound_move    = "m_bomber"
+sound_move_alt = "m_generic"
+sound_fight   = "f_bomber"
+sound_fight_alt = "f_generic"
+build_cost    = 45
+pop_cost      = 0
+attack        = 3
+defense       = 1
+hitpoints     = 30
+firepower     = 1
+move_rate     = 20
+vision_radius_sq = 60
+transport_cap = 0
+fuel          = 2
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
+roles         = ""
+helptext      = _("\
+Early bombers are specialized airborne units that may\
+ only attack ground targets, not other airborne\
+ units.\
+"), _("\
+A Bomber's attack against units on land is a bombard attack; against\
+ units on water it has a regular attack.\
+"),
+; /* xgettext:no-c-format */
+_("\
+As with other aircraft, Bombers lose 10% of their hitpoints for every \
+turn not spent in a city, airstrip, or airbase, or on a Carrier.\
+")
+bombard_rate = 3
 
 [unit_bomber]
 name          = _("Bomber")
 class         = "Air"
 tech_req      = "Advanced Flight"
-obsolete_by   = "Stealth Bomber"
+obsolete_by   = "Advanced Bomber"
 graphic       = "u.bomber"
 graphic_alt   = "-"
 sound_move    = "m_bomber"
@@ -1766,79 +2487,47 @@ Bombers are very good for securing access from nations with no air units.  \
 ")
 bombard_rate = 3
 
-[unit_helicopter]
-name          = _("Helicopter")
-class         = "Helicopter"
-tech_req      = "Combined Arms"
-obsolete_by   = "None"
-graphic       = "u.helicopter"
-graphic_alt   = "-"
-sound_move    = "m_helicopter"
+[unit_advanced_bomber]
+name          = _("Advanced Bomber")
+class         = "Air"
+tech_req      = "Plastics"
+obsolete_by   = "Stealth Bomber"
+graphic       = "u.advanced_bomber"
+graphic_alt   = "u.bomber"
+sound_move    = "m_bomber"
 sound_move_alt = "m_generic"
-sound_fight   = "f_helicopter"
+sound_fight   = "f_bomber"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 100
 pop_cost      = 0
-attack        = 5
-defense       = 3
+attack        = 7
+defense       = 2
 hitpoints     = 30
 firepower     = 1
-move_rate     = 12
+move_rate     = 30
 vision_radius_sq = 72
-transport_cap = 1
-fuel          = 0
+transport_cap = 0
+fuel          = 2
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Land", "Small Unit"
-flags         = "OneAttack", "AirAttacker", "HasNoZOC"
+flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
 roles         = ""
 helptext      = _("\
-Helicopters can also transport one military land unit; while most troops \
-must load or unload in a city, airstrip, or airbase (and not in the field \
-or onboard a Carrier), units specializing in mobility (Paratroopers, \
-Alpine Troops, Marines, Partisans, and Fanatics) can embark or disembark \
-at any time.\
+Advanced bombers are specialized airborne units that may\
+ only attack ground targets, not other airborne\
+ units.\
 "), _("\
-Unlike other aircraft, Helicopters are not required to return to a city, \
-base, or Carrier to refuel after a set number of turns; however, care \
-must be exercised, due to the health they lose every turn.\
+A Bomber's attack against units on land is a bombard attack; against\
+ units on water it has a regular attack.\
+"),
+; /* xgettext:no-c-format */
+_("\
+As with other aircraft, Bombers lose 10% of their hitpoints for every \
+turn not spent in a city, airstrip, or airbase, or on a Carrier.\
 ")
-bombard_rate = 2
-
-[unit_stealth_fighter]
-name          = _("Stealth Fighter")
-class         = "Air"
-tech_req      = "Stealth"
-obsolete_by   = "None"
-graphic       = "u.stealth_fighter"
-graphic_alt   = "-"
-sound_move    = "m_stealth_fighter"
-sound_move_alt = "m_generic"
-sound_fight   = "f_stealth_fighter"
-sound_fight_alt = "f_generic"
-build_cost    = 80
-pop_cost      = 0
-attack        = 8
-defense       = 7
-hitpoints     = 20
-firepower     = 1
-move_rate     = 18
-vision_radius_sq = 72
-transport_cap = 0
-fuel          = 2
-uk_happy      = 0
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 1
-targets       = "Air", "Missile", "Helicopter"
-flags         = "Partial_Invis", "AirAttacker", "HasNoZOC", "OneAttack"
-roles         = "DefendGood", "DefendGoodStartUnit"
-helptext      = _("\
-An improved Fighter, with improved attack and a higher movement\
- radius.\
-")
+bombard_rate = 3
 
 [unit_stealth_bomber]
 name          = _("Stealth Bomber")
@@ -1872,6 +2561,278 @@ An improved Bomber, with improved attack and a higher movement\
  radius.\
 ")
 bombard_rate = 4
+
+[unit_attack_aircraft]
+name          = _("Attack Aircraft")
+class         = "Air"
+tech_req      = "Mobile Warfare"
+obsolete_by   = "Advanced Attack Aircraft"
+graphic       = "u.attack_aircraft"
+graphic_alt   = "u.fighter"
+sound_move    = "m_fighter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_bomber"
+sound_fight_alt = "f_generic"
+build_cost    = 45
+pop_cost      = 0
+attack        = 3
+defense       = 3
+hitpoints     = 20
+firepower     = 1
+move_rate     = 10
+vision_radius_sq = 72
+transport_cap = 0
+fuel          = 2
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+bonuses       =
+   { "flag", "type", "value"
+   }
+targets       = "Air", "Missile", "Helicopter" 
+flags         = "AirAttacker", "HasNoZOC", "OneAttack", "Stuka"
+roles         = "DefendOk", "DefendOkStartUnit"
+helptext      = _("\
+Attack Aircraft are your first attack aircraft units. They can\
+ move anywhere and attack any unit. Defending tanks and naval units get their defense halved. The Attack Aircraft will lose all moves when attacking another unit.\
+"),
+; /* xgettext:no-c-format */
+_("\
+Attack Aircraft and other aircraft lose 10% of their hitpoints for every \
+turn not spent in a city, airstrip, or airbase, or on a Carrier.\
+")
+
+[unit_advanced_attack_aircraft]
+name          = _("Advanced Attack Aircraft")
+class         = "Air"
+tech_req      = "Laser"
+obsolete_by   = "Fusion Fighter"
+graphic       = "u.advanced_attack_aircraft"
+graphic_alt   = "u.fighter"
+sound_move    = "m_fighter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_bomber"
+sound_fight_alt = "f_generic"
+build_cost    = 80
+pop_cost      = 0
+attack        = 5
+defense       = 5
+hitpoints     = 20
+firepower     = 1
+move_rate     = 16
+vision_radius_sq = 72
+transport_cap = 0
+fuel          = 2
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+bonuses       =
+   { "flag", "type", "value"
+   }
+targets       = "Air", "Missile", "Helicopter"
+flags         = "AirAttacker", "HasNoZOC", "OneAttack", "Stuka"
+roles         = "DefendOk", "DefendOkStartUnit"
+helptext      = _("\
+Advanced Attack Aircraft are your second attack aircraft units. Defending tanks and naval units get their defense halved. They can\
+ move anywhere and attack any unit. The Attack Aircraft will lose all moves when attacking another unit.\
+"),
+; /* xgettext:no-c-format */
+_("\
+Attack Aircraft and other aircraft lose 10% of their hitpoints for every \
+turn not spent in a city, airstrip, or airbase, or on a Carrier.\
+")
+
+[unit_sam]
+name          = _("SAM")
+class         = "Big Land"
+tech_req      = "Plastics"
+obsolete_by   = "None"
+graphic       = "u.sam"
+graphic_alt   = "u.howitzer"
+sound_move    = "m_howitzer"
+sound_move_alt = "m_generic"
+sound_fight   = "f_cruise_missile"
+sound_fight_alt = "f_generic"
+build_cost    = 100
+pop_cost      = 0
+attack        = 2
+defense       = 10
+hitpoints     = 30
+firepower     = 1
+move_rate     = 5
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+bonuses       =
+   { "flag", "type", "value"
+     "AirAttacker", "DefenseMultiplier", 4
+   }
+flags         = "Partial_Invis"
+roles         = ""
+helptext      = _("\
+SAM (Surface to Air Missile) is equipped with an advanced\
+ defensive missile system. The system can't be seen by enemy units. \
+")
+
+[unit_gunship_helicopter]
+name          = _("Gunship Helicopter")
+class         = "Helicopter"
+tech_req      = "Combined Arms"
+obsolete_by   = "Attack Helicopter"
+graphic       = "u.gunship_helicopter"
+graphic_alt   = "u.helicopter"
+sound_move    = "m_helicopter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_helicopter"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 0
+attack        = 5
+defense       = 3
+hitpoints     = 15
+firepower     = 1
+move_rate     = 8
+vision_radius_sq = 72
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "OneAttack", "AirAttacker", "HasNoZOC"
+roles         = ""
+helptext      = _("\
+Gunship Helicopters can NOT transport land units only Transport Helicopters can. \
+"), _("\
+Unlike other aircraft, Helicopters are not required to return to a city, \
+base, or Carrier to refuel after a set number of turns; however, care \
+must be exercised, due to the health they lose every turn.\
+")
+bombard_rate = 2
+
+[unit_attack_helicopter]
+name          = _("Attack Helicopter")
+class         = "Helicopter"
+tech_req      = "Combined Arms"
+obsolete_by   = "None"
+graphic       = "u.helicopter"
+graphic_alt   = "-"
+sound_move    = "m_helicopter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_helicopter"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 0
+attack        = 5
+defense       = 3
+hitpoints     = 30
+firepower     = 1
+move_rate     = 12
+vision_radius_sq = 72
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "OneAttack", "AirAttacker", "HasNoZOC"
+roles         = ""
+helptext      = _("\
+Attack Helicopters can NOT transport land units only Transport Helicopters can. \
+"), _("\
+Unlike other aircraft, Helicopters are not required to return to a city, \
+base, or Carrier to refuel after a set number of turns; however, care \
+must be exercised, due to the health they lose every turn.\
+")
+bombard_rate = 2
+
+[unit_transport_helicopter]
+name          = _("Transport Helicopter")
+class         = "Helicopter"
+tech_req      = "Combined Arms"
+obsolete_by   = "None"
+graphic       = "u.transport_helicopter"
+graphic_alt   = "helicopter"
+sound_move    = "m_helicopter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_helicopter"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 0
+attack        = 0
+defense       = 1
+hitpoints     = 30
+firepower     = 1
+move_rate     = 12
+vision_radius_sq = 72
+transport_cap = 1
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Land"
+flags         = "OneAttack", "AirAttacker", "HasNoZOC"
+roles         = ""
+helptext      = _("\
+Transport Helicopters can transport one military land unit; while most troops \
+must load or unload in a city, airstrip, or airbase (and not in the field \
+or onboard a Carrier), units specializing in mobility (Paratroopers, \
+Alpine Troops, Marines, Stormtrooper, Partisans, Infantry and Fanatics) can embark or disembark \
+at any time.\
+"), _("\
+Unlike other aircraft, Helicopters are not required to return to a city, \
+base, or Carrier to refuel after a set number of turns; however, care \
+must be exercised, due to the health they lose every turn.\
+")
+bombard_rate = 2
+
+[unit_zeppelin]
+name          = _("Zeppelin")
+class         = "Air"
+tech_req      = "Atomic Theory"
+obsolete_by   = "Early Bomber"
+graphic       = "u.zeppelin"
+graphic_alt   = "u.bomber"
+sound_move    = "m_bomber"
+sound_move_alt = "m_generic"
+sound_fight   = "f_bomber"
+sound_fight_alt = "f_generic"
+build_cost    = 100
+pop_cost      = 0
+attack        = 3
+defense       = 1
+hitpoints     = 30
+firepower     = 1
+move_rate     = 8
+vision_radius_sq = 72
+transport_cap = 0
+fuel          = 2
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
+roles         = ""
+helptext      = _("\
+Zeppelins are your first airborne units\
+ only attack ground targets, not other airborne\
+ units.\
+"), _("\
+A Zeppelin's attack against units on land is a bombard attack; against\
+ units on water it has a regular attack.\
+"),
+; /* xgettext:no-c-format */
+_("\
+Zeppelin are very good for securing access from nations with no air units.  \
+")
+bombard_rate = 3
 
 [unit_trireme]
 name          = _("Trireme")
@@ -1914,6 +2875,48 @@ can't (only marines can) attack from the ship if the ship is on an ocean tile bu
 move without losing all of the move points when unloading from the trireme. The same thing applies to the barge unit.\
 ")
 
+[unit_quinquireme]
+name          = _("Quinquireme")
+class         = "Trireme"
+tech_req      = "Map Making"
+obsolete_by   = "Barge"
+graphic       = "u.quinquireme"
+graphic_alt   = "u.trireme"
+sound_move    = "m_trireme"
+sound_move_alt = "m_generic"
+sound_fight   = "f_trireme"
+sound_fight_alt = "f_generic"
+build_cost    = 35
+pop_cost      = 0
+attack        = 2
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 9
+vision_radius_sq = 18
+transport_cap = 2
+fuel          = 6
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Land", "Small Land", "Merchant"
+flags         = "BadCityDefender", "HasNoZOC", "Unique", "Unbribable"
+roles         = "Ferryboat", "FerryStartUnit"
+helptext      = _("\
+The Quinquireme is a better trireme. It can act\
+ as a transport ship and has better offensive\
+ capabilities, and unlike later boats can travel on\
+ rivers, but it may not enter deep ocean tiles.\
+You can have only one unit of this type at a time\
+ and it can't be bribed.\
+"), _("\
+GUIDE: Since the quinquiremes are able to travel on rivers, the players are able to use them for transporting military units \
+for attacking riverside cities deep inside homeland. The trireme can only transport smaller units but the barge (obsoleting the trireme) is able to move big siege units. \
+Because of the river travelling ability it is important to guard the coastal tiles with rivers on them. The units loaded on triremes \
+can't (only marines and raiders can) attack from the ship if the ship is on an ocean tile but if the ship moves on a river tile the land units will be able to attack and also \
+move without losing all of the move points when unloading from the trireme. The same thing applies to the barge unit.\
+")
 
 [unit_barge]
 name          = _("Barge")
@@ -1949,11 +2952,10 @@ The Barge can travel on ocean (but not deep ocean) and it can\
  move on rivers.\
 ")
 
-
-[unit_longboat]
-name          = _("Longboat")
-class         = "Sea"
-tech_req      = "Map Making"
+[unit_longship]
+name          = _("Longship")
+class         = "Patrol"
+tech_req      = "Astronomy"
 obsolete_by   = "Caravel"
 graphic       = "u.longboat"
 graphic_alt   = "u.trireme"
@@ -1975,7 +2977,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Small Land", "Merchant"
+cargo         = "Small Unit"
 flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC", "Unique", "Unbribable"
 roles         = "Ferryboat"
 helptext      = _("\
@@ -1995,13 +2997,80 @@ in the new city. This way you can build a new longboat at home and will also get
 building a defensive unit or maybe a worker for the new colony city.\
 ")
 
+[unit_raider]
+name          = _("Raider")
+class         = "Small Unit"
+tech_req      = "Astronomy"
+obsolete_by   = "Navy Troops"
+graphic       = "u.raider"
+graphic_alt   = "u.warrior"
+sound_move    = "m_pikemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_pikemen"
+sound_fight_alt = "f_generic"
+build_cost    = 28
+pop_cost      = 0
+attack        = 3
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Marines", "Capturer"
+roles         = "DefendOk", "DefendOkStartUnit"
+helptext      = _("\
+Your first marine unit.\
+")
 
+[unit_knarr]
+name          = _("Knarr")
+class         = "Sea"
+tech_req      = "Astronomy"
+obsolete_by   = "Caravel"
+graphic       = "u.knarr"
+graphic_alt   = "u.trireme"
+sound_move    = "m_caravel"
+sound_move_alt = "m_generic"
+sound_fight   = "f_caravel"
+sound_fight_alt = "f_generic"
+build_cost    = 35
+pop_cost      = 0
+attack        = 1
+defense       = 1
+hitpoints     = 4
+firepower     = 1
+move_rate     = 8
+vision_radius_sq = 18
+transport_cap = 2
+fuel          = 7
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Land", "Small Land", "Merchant"
+flags         = "Only_Native_Attack", "HasNoZOC"
+roles         = "Ferryboat", "FerryStartUnit"
+helptext      = _("\
+The knarr is your first deep ocean capable boat unit\
+ can carry three Merchant or Small Land units. It can act\
+ as a transport ship and has rudimentary defensive\
+ and offensive capabilities.\
+"), _("\
+GUIDE: The knarr is very useful for exploring the oceans and since it is able to carry settlers, it can be used for \
+establishing early colonies far away from home.\
+")
 
 [unit_pirogue]
 name          = _("Pirogue")
 class         = "Sea"
 tech_req      = "Seafaring"
-obsolete_by   = "Cog"
+obsolete_by   = "Junk"
 graphic       = "u.pirogue"
 graphic_alt   = "u.trireme"
 sound_move    = "m_caravel"
@@ -2033,10 +3102,8 @@ The Pirogue is your first unit able to truly explore the oceans\
 GUIDE: Use few of these to scout the areas near to you and you may be able to see the enemy before they can land on your coast.\
 ")
 
-
-
-[unit_cog]
-name          = _("Cog")
+[unit_junk]
+name          = _("Junk")
 class         = "Patrol"
 tech_req      = "Physics"
 obsolete_by   = "Patrol Cutter"
@@ -2063,11 +3130,11 @@ uk_gold       = 1
 flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC"
 roles         = "Ferryboat"
 helptext      = _("\
-The Cog is your second unit able explore the oceans without the limitations from supplies.\
+The Junk is your second unit able explore the oceans without the limitations from supplies.\
  It can travel through deep ocean and also enter the rivers making it the perfect unit for investigating enemy territories if rivers are left unguarded.\
- The cog has quite poor defensive capabilities and it's not able to perform offensive operations.\
+ The junk has quite poor defensive capabilities and it's not able to perform offensive operations.\
 "), _("\
-GUIDE: In addition to scouting the cog is able to sneak in enemy territories through the rivers. This allows you to get a better idea of your enemy.\
+GUIDE: In addition to scouting the junk is able to sneak in enemy territories through the rivers. This allows you to get a better idea of your enemy.\
 ")
 
 
@@ -2111,7 +3178,7 @@ GUIDE: In addition to guard your coastals the patrol cutter is able to sneak in 
 name          = _("Square-Rigged Caravel")
 class         = "Sea"
 tech_req      = "Magnetism"
-obsolete_by   = "Frigate"
+obsolete_by   = "Brig"
 graphic       = "u.srcaravel"
 graphic_alt   = "u.caravel"
 sound_move    = "m_caravel"
@@ -2286,6 +3353,38 @@ The Frigate is a specialized ship with a strong offensive value,\
  and it can't be bribed.\
 ")
 
+[unit_Brig]
+name          = _("Brig")
+class         = "Sea"
+tech_req      = "Leadership"
+obsolete_by   = "Transport"
+graphic       = "u.brig"
+graphic_alt   = "u.frigate"
+sound_move    = "m_frigate"
+sound_move_alt = "m_generic"
+sound_fight   = "f_frigate"
+sound_fight_alt = "f_generic"
+build_cost    = 60
+pop_cost      = 0
+attack        = 4
+defense       = 4
+hitpoints     = 20
+firepower     = 1
+move_rate     = 16
+vision_radius_sq = 40
+transport_cap = 1
+fuel          = 6
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo	      = "Land", "Small Land", "Big Land", "Big Siege", "Merchant", "Small Unit"
+flags         = "BadCityDefender"
+roles         = "Hunter"
+helptext      = _("\
+Saling vessel with two square-rigged masts.\
+ Brigs were seen as fast and maneuverable and were used as both naval warships and merchant vessels.\
+")
 
 [unit_ironclad]
 name          = _("Ironclad")
@@ -2428,18 +3527,18 @@ The AEGIS Cruiser is equipped with an advanced\
 [unit_battleship]
 name          = _("Battleship")
 class         = "Sea"
-tech_req      = "Mass Production"
-obsolete_by   = "None"
+tech_req      = "Combustion"
+obsolete_by   = "Fusion Battleship"
 graphic       = "u.battleship"
 graphic_alt   = "-"
 sound_move    = "m_battleship"
 sound_move_alt = "m_generic"
 sound_fight   = "f_battleship"
 sound_fight_alt = "f_generic"
-build_cost    = 180
+build_cost    = 120
 pop_cost      = 0
-attack        = 14
-defense       = 14
+attack        = 10
+defense       = 10
 hitpoints     = 30
 firepower     = 2
 move_rate     = 12
@@ -2450,6 +3549,10 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+bonuses       =
+   { "flag", "type", "value"
+     "Stuka", "DefenseDivider", 2
+   }
 flags         = "BadCityDefender"
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
@@ -2457,27 +3560,27 @@ The Battleship is the supreme naval unit with\
  excellent offensive and defensive values.\
 ")
 
-[unit_submarine]
-name          = _("Submarine")
+[unit_early_submarine]
+name          = _("Early Submarine")
 class         = "Sea"
 tech_req      = "Combustion"
-obsolete_by   = "None"
-graphic       = "u.submarine"
-graphic_alt   = "-"
+obsolete_by   = "Submarine"
+graphic       = "u.early_submarine"
+graphic_alt   = "submarine"
 sound_move    = "m_submarine"
 sound_move_alt = "m_generic"
 sound_fight   = "f_submarine"
 sound_fight_alt = "f_generic"
 build_cost    = 50
 pop_cost      = 0
-attack        = 12
-defense       = 4
+attack        = 10
+defense       = 2
 hitpoints     = 20
 firepower     = 1
-move_rate     = 12
+move_rate     = 10
 vision_radius_sq = 28
 transport_cap = 0
-fuel          = 6
+fuel          = 5
 uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
@@ -2491,7 +3594,39 @@ Traveling under the surface of the ocean, Submarines have\
  off guard.\
 ")
 
-
+[unit_submarine]
+name          = _("Submarine")
+class         = "Sea"
+tech_req      = "Mass Production"
+obsolete_by   = "None"
+graphic       = "u.submarine"
+graphic_alt   = "-"
+sound_move    = "m_submarine"
+sound_move_alt = "m_generic"
+sound_fight   = "f_submarine"
+sound_fight_alt = "f_generic"
+build_cost    = 85
+pop_cost      = 0
+attack        = 14
+defense       = 6
+hitpoints     = 20
+firepower     = 1
+move_rate     = 13
+vision_radius_sq = 28
+transport_cap = 0
+fuel          = 7
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Missile"
+flags         = "Partial_Invis", "BadCityDefender", "Only_Native_Attack", "Submarine"
+roles         = "Hunter"
+helptext      = _("\
+Traveling under the surface of the ocean, Submarines have\
+ a very high strategic value, but a weak defense if caught\
+ off guard.\
+")
 
 [unit_nuclear_submarine]
 name          = _("Nuclear Submarine")
@@ -3366,9 +4501,9 @@ The Freight unit replaces the Caravan, and moves at twice the speed.\
 ")
 
 [unit_explorer]
-name          = _("Explorer")
+name          = _("?unit: Explorer")
 class         = "Small Land"
-tech_req      = "Seafaring"
+tech_req      = "None"
 obsolete_by   = "Operative"
 graphic       = "u.explorer"
 graphic_alt   = "-"
@@ -3382,7 +4517,7 @@ attack        = 0
 defense       = 1
 hitpoints     = 7
 firepower     = 1
-move_rate     = 3
+move_rate     = 2
 vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
@@ -3410,7 +4545,50 @@ Simply move the explorer to a tile you want to go to and you can move unit(s) to
 who is next to you and how far your enemies have already expanded. Many players consider killing an explorer as an act of war. This is why it sometimes makes sense to warn before killing the explorer.\
 ")
 
-
+[unit_Scout]
+name          = _("Scout")
+class         = "Small Land"
+tech_req      = "Seafaring"
+obsolete_by   = "Operative"
+graphic       = "u.scout"
+graphic_alt   = "u.explorer"
+sound_move    = "m_explorer"
+sound_move_alt = "m_generic"
+sound_fight   = "f_explorer"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 0
+attack        = 0
+defense       = 1
+hitpoints     = 7
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+flags         = "IgTer", "IgZOC", "NonMil", "HasNoZOC", "Cant_Fortify"
+roles         = "Explorer", "ExplorerStartUnit"
+helptext      = _("\
+An improved Explorer. Scouts are brave individuals that are very useful for\
+ mapping unknown territory.\
+"), _("\
+Scouts can also perform some actions in another player's city, although\
+ the unit disappears after the action is complete. This text is left here \
+ as a reminder that they could do this if the ruleset would allow it.\
+"), _("\
+ - \"Establish Embassy\": This action is not enabled in this game.\
+"), _("\
+ - \"Investigate City\": This action is not enabled in this game.\
+"), _("\
+GUIDE:  The Scpit can be used to break the Zones of Control (ZoC) if an enemy unit is blocking you. \
+This can be very useful in situations where the enemy is trying to limit your options by placing fortified units in strategic locations next to rivers or roads. \
+Simply move the explorer to a tile you want to go to and you can move unit(s) to a tile already occupied by your own unit. The explorer is also very good for checking \
+who is next to you and how far your enemies have already expanded. Many players consider killing an explorer as an act of war. This is why it sometimes makes sense to warn before killing the explorer.\
+")
 
 [unit_leader]
 name          = _("?unit:Leader")
@@ -3665,7 +4843,37 @@ A fusion powered Armor attacking \
 with double firepower.\
 ")
 
-
+[unit_transport_aircraft]
+name          = _("Transport Aircraft")
+class         = "Air"
+tech_req      = "Advanced Flight"
+obsolete_by   = "None"
+graphic       = "u.transport_aircraft"
+graphic_alt   = "u.bomber"
+sound_move    = "m_bomber"
+sound_move_alt = "m_generic"
+sound_fight   = "f_bomber"
+sound_fight_alt = "f_generic"
+build_cost    = 90
+pop_cost      = 0
+attack        = 0
+defense       = 1
+hitpoints     = 10
+firepower     = 1
+move_rate     = 12
+vision_radius_sq = 72
+transport_cap = 1
+fuel          = 2
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Land", "Small Land", "Merchant", "Small Unit"
+flags         = "HasNoZOC", "BadCityDefender", "Unbribable"
+roles         = "Ferryboat"
+helptext      = _("\
+The Transport Aircraft is able to transport units from city to city. 
+")
 
 [unit_cargo_aircraft]
 name          = _("Cargo Aircraft")
@@ -3700,4 +4908,3 @@ The Cargo Aircraft is an airplane with an exceptionally high range while carryin
 a heavy cargo. It is able to transport a wide range of units able to surprise your enemy. \
 This exceptionally heavy airplane has no offecive capabilities but is able to defend.\
 ")
-
