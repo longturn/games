@@ -77,6 +77,7 @@ set maxplayers 126
 set saveturns 1
 set scorelog enabled
 set timeout 82800
+set first_timeout 150000
 set unitwaittime 30000
 set fixedlength enabled
 # fc21
