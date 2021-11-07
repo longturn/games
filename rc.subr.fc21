@@ -1,0 +1,38 @@
+#
+# common code to start a freeciv server, sourced by individual games.
+# valid for Freeciv21
+#
+
+FC_VERSION=${FC_VERSION:-"fc21"}
+GAMEDIR=${GAMEDIR:-"$HOME/server/$GAMENAME"}
+INSTALL=${INSTALL:-"$HOME/fc21"}
+SERVER=${SERVER:-"$GAMEDIR/freeciv21-server"}
+SAVEDIR=${SAVEDIR:-"$GAMEDIR/save"}
+FCDBCONF=${FCDBCONF:-"${GAMEDIR}/db.conf"}
+
+OPTIONS="-A none -p $PORT --saves $SAVEDIR --log $SAVEDIR/freeciv.log -r $GAMENAME.serv -e -a -D $FCDBCONF -S $GAMEID"
+
+if [ "$1" ]; then
+	SAVE="$SAVEDIR/$1"
+elif [ -f "$SAVEDIR/lastsave.sav.bz2" ]; then
+	SAVE="$SAVEDIR/lastsave.sav.bz2"
+fi
+
+if [ "$SAVE" ]; then
+	OPTIONS="$OPTIONS -f $SAVE"
+fi
+
+if [ ! -f "${FCDBCONF}" ]; then
+    echo -e "[fcdb]\ngame_id=\"${GAMEID}\"" >>"${FCDBCONF}"
+fi
+
+test ! -d $SAVEDIR && mkdir $SAVEDIR
+
+set -x
+export QT_MESSAGE_PATTERN="[%{time}] %{appname} - %{type} - %{message}"
+export FREECIV_DATA_PATH="$GAMEDIR/data:$INSTALL/share/freeciv21"
+
+# For auth modules installed via luarocks
+eval "$(luarocks path)"
+
+$SERVER $OPTIONS
