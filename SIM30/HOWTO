@@ -1,0 +1,70 @@
+On the server
+=============
+
+The first steps can be inside or outside the tmux session, doesn't matter.
+
+Step 1: update fc21
+-------------------
+
+cd src/freeciv21/
+git fetch
+git checkout v3.0-alpha.8  # Use most recent tag
+
+In practice I had to checkout master to get a bugfix in freeciv21-ruleup
+Please mention the version used in the game description!
+
+Step 2: compile and install the latest version
+----------------------------------------------
+
+cmake --build build  # Takes a while
+cmake --build build --target install
+
+Step 3: convert ruleset
+-----------------------
+
+SIM30 is a 3.0 ruleset, it needs conversion to fc21.
+
+FREECIV_DATA_PATH=data:~/fc21/share/freeciv21 ~/fc21/bin/freeciv21-ruleup -o SIM30_fc21 -r SIM30
+
+Explanation:
+FREECIV_DATA_PATH tells the command where to look for ruleset data
+freeciv21-ruleup is the ruleset upgrading tool
+-o selects where to put the thing
+-r selects which ruleset to upgrade
+
+Move it to the correct folder:
+
+mv SIM30_fc21/ data/
+
+Step 4: support files
+---------------------
+
+Easiest is to copy from another game
+
+cp ../LTEx24/players.serv .
+cp ../LTEx24/LTEx24.sh SIM30.sh
+
+Then edit players.serv according to the players file
+Also edit SIM30.serv:
+
+* Change the rulesetdir to the new one
+* Add "set nationset all"
+* Add "read players.serv"
+* Alter some settings used for tests (I think)
+
+db.conf will be created automatically, don't add to git
+
+Step 5: start game
+------------------
+
+As usual
+
+Step 6: fix errors
+------------------
+
+Including a new bug in fc21 :'(
+
+To do
+=====
+
+* Make the converted SIM ruleset available through the modpack installer
