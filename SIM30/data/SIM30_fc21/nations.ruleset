@@ -1,0 +1,73 @@
+
+[datafile]
+description="Sim ruleset nation data for Freeciv21"
+ruledit="3.0.202110008.8-alpha"
+options="+Freeciv-ruleset-Devel-2017.Jan.02"
+format_version=20
+
+[ruledit]
+nationlist="default/nationlist.ruleset"
+embedded_nations="barbarian","pirate"
+
+[default_traits]
+expansionist_min=30
+expansionist_max=90
+expansionist_default=50
+trader_min=30
+trader_max=90
+trader_default=50
+aggressive_min=30
+aggressive_max=90
+aggressive_default=50
+
+[compatibility]
+default_government="Tribal"
+*include "default/nationlist.ruleset"
+
+[nation_0]
+translation_domain="freeciv"
+name=_("Barbarian")
+plural="?plural:Barbarians"
+groups="core","all","Barbarian"
+leaders={"name","sex"
+"Genseric","Male"
+"Alaric","Male"
+"Theodoric","Male"
+"Stilicho","Male"
+"Attila","Male"
+"Boadicea","Female"
+}
+trait_expansionist_default=50
+trait_trader_default=50
+trait_aggressive_default=50
+is_playable=FALSE
+barbarian_type="Land"
+flag="barbarian"
+style="European"
+cities="Barbaricum"
+legend="Since the dawn of civilization, barbarians have been a threat to cultured peoples everywhere."
+
+[nation_1]
+translation_domain="freeciv"
+name=_("Pirate")
+plural="?plural:Pirates"
+groups="core","all","Barbarian"
+leaders={"name","sex"
+"Anne Bonny","Female"
+"Calico Jack","Male"
+"Cofresí","Male"
+"Blackbeard","Male"
+"Henry Morgan","Male"
+"François l'Ollonais","Male"
+"Bartolomeo Portugues","Male"
+"Ching Shih","Female"
+}
+trait_expansionist_default=50
+trait_trader_default=50
+trait_aggressive_default=50
+is_playable=FALSE
+barbarian_type="Sea"
+flag="pirate"
+style="European"
+cities="New Providence","Port Royal","Tortuga"
+legend="As long as honest men have sailed the seas, pirates have been a scourge of them and of all coastal dwelling peoples."
