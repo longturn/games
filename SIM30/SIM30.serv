@@ -21,7 +21,7 @@ set temperature 50
 set tilesperplayer 150
 set topology "WRAPX"
 set wetness 60
-set revealmap START  #uncomment this for revealing the map for test games
+#set revealmap START  #uncomment this for revealing the map for test games
 
 # general rules
 set aifill 20
@@ -40,7 +40,7 @@ set killunhomed 0
 set trading_tech disabled
 set airliftingstyle "FROM_ALLIES|TO_ALLIES"
 set razechance 90
-set happyborders enabled
+set happyborders ALLIED
 set occupychance 0
 
 set migration enabled
@@ -48,7 +48,8 @@ set endturn 5000
 
 # diplomacy, technology
 set diplchance 50
-set diplcost 5  # FIXME doesn't exist
+set diplbulbcost 5
+set diplgoldcost 5
 set diplomacy HUMAN
 set sciencebox 40
 set techlost_donor 0
@@ -67,7 +68,7 @@ set techlossrestore 50
 
 # technical
 set allowtake ""
-set compresstype plain
+set compresstype XZ
 set ec_chat enabled
 set ec_info enabled 
 set ec_max_size 20000
@@ -88,7 +89,7 @@ metapatches longturn
 set civilwarsize 1000
 set mgr_distance 1
 set mgr_worldchance 20
-set razechance 100  # FIXME doesn't exist
+set razechance 100
 set demography "NnAwSRLaPEMOCqrb"  # FIXME too long, need patches
 set dispersion 1
 set killstack disabled
