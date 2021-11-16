@@ -867,7 +867,7 @@ nreqs   =
 
 [effect_upkeep_free_units_food_base_tribal]
 type    = "Unit_Upkeep_Free_Per_City"
-value   = 1
+value   = 5
 reqs    =
       {	"type", "name", "range"
 	"OutputType", "Food", "Local"
@@ -926,7 +926,6 @@ reqs    =
       {	"type", "name", "range"
 	"OutputType", "Food", "Local"
 	"MinSize", "2", "City"
-	"Gov", "Tribal", "Player"
       }	
 
 [effect_upkeep_free_units_food_4]
@@ -936,7 +935,6 @@ reqs    =
       {	"type", "name", "range"
 	"OutputType", "Food", "Local"
 	"MinSize", "4", "City"
-	"Gov", "Tribal", "Player"
       }	
 
 [effect_upkeep_free_units_food_6]
@@ -946,7 +944,6 @@ reqs    =
       {	"type", "name", "range"
 	"OutputType", "Food", "Local"
 	"MinSize", "6", "City"
-	"Gov", "Tribal", "Player"
       }	
 
 [effect_upkeep_free_units_food_8]
@@ -956,7 +953,6 @@ reqs    =
       {	"type", "name", "range"
 	"OutputType", "Food", "Local"
 	"MinSize", "8", "City"
-	"Gov", "Tribal", "Player"
       }	
 
 [effect_upkeep_free_units_food_10]
@@ -965,7 +961,6 @@ value   = 1
 reqs    =
       {	"type", "name", "range"
 	"OutputType", "Food", "Local"
-	"MinSize", "10", "City"
       }	
 
 
