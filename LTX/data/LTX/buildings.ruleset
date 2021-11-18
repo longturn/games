@@ -971,8 +971,8 @@ obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Metallurgy", "Player", FALSE
     }
-build_cost	= 60
-upkeep		= 2
+build_cost	= 25
+upkeep		= 0
 sabotage	= 0
 sound		= "b_port_facility"
 sound_alt	= "b_generic"
