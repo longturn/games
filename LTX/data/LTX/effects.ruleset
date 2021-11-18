@@ -4765,7 +4765,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
       "OutputType", "Trade", "Local"
-	  "MinSize", "10", "City", TRUE
+	  "MinSize", "9", "City", TRUE
     }
 
 	
@@ -4775,7 +4775,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
       "OutputType", "Trade", "Local"
-	  "MinSize", "20", "City", TRUE
+	  "MinSize", "17", "City", TRUE
     }
 
 
