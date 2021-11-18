@@ -4729,7 +4729,7 @@ reqs	=
 
 [effect_enemy_unhappiness_democracy]
 type    = "Enemy_Citizen_Unhappy_Pct"
-value   = 10
+value   = -20
 reqs	=
     { "type", "name", "range"
       "Gov", "Democracy", "Player"
