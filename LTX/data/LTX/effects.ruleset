@@ -683,7 +683,7 @@ reqs    =
 ; 2% more with City States
 [effect_waste_distance_city_states]
 type    = "Output_Waste_By_Distance"
-value   = 2
+value   = 3
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "City States", "Player", TRUE
