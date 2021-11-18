@@ -518,7 +518,7 @@ sound		= "b_factory"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Increases the shield production in a city by 30%. Requires Monarchy for the effect.\
+Increases the shield production in a city by 30%. Requires Monarchy, Republic or City States as the government for the effect.\
 "), _("\
 This increase in production may contribute to \
 pollution; a Workshop also increases the pollution caused by the \
