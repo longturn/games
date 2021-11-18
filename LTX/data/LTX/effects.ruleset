@@ -1442,7 +1442,7 @@ reqs    =
 
 [effect_empire_size_base_tribal]
 type    = "Empire_Size_Base"
-value   = 14
+value   = 10
 reqs    =
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
@@ -1514,7 +1514,7 @@ reqs    =
 
 [effect_empire_size_step_tribal]
 type    = "Empire_Size_Step"
-value   = 7
+value   = 10
 reqs    =
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
