@@ -2182,7 +2182,7 @@ graphic_alt	= "b.seti_program"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 3200
+build_cost	= 800
 upkeep		= 0
 sabotage	= 0
 sound		= "w_seti_program"
