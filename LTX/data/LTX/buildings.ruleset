@@ -229,6 +229,42 @@ Aqueducts in cities with access to a river require no special technology and \
 are cheap to build and maintain.\
 ")
 
+
+
+[building_occupation_government]
+name		= _("Occupation Government")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Leadership", "Player"
+      "Building", "Barracks", "City"
+    }
+graphic	= "b.occupationgov"
+graphic_alt	= "b.barracks_i"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 30
+upkeep		= 1
+sabotage	= 50
+sound		= "b_bank"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Do not build this unless you have lots of foreign citizens in your city! \
+The Occupation Government building halves the unhappiness from foreign \
+citizens but with a heavy cost. You will lose 50% of the shield and gold production. \
+You should sell this building once enough foreign citizens have been converted to \
+your own nationality and you are able to manage the unhappiness. If you sell it too \
+late you will suffer from the production penalty for too long. If you sell it too early \
+(or skip building it) you will suffer from serious happiness issues. Some governments \
+have more trouble with foreign citizens than the others. Democracy suffers the most from \
+unhappiness related to the foreign citizens.\
+")
+
+
+
+
 [building_bank]
 name		= _("Bank")
 genus		= "Improvement"
