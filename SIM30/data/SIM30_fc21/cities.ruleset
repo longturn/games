@@ -1,0 +1,22 @@
+
+[datafile]
+description="Sim ruleset cities data for Freeciv21"
+ruledit="3.0.202110008.8-alpha"
+options="+Freeciv-ruleset-Devel-2017.Jan.02"
+format_version=20
+
+[specialist_0]
+name=_("Entertainers")
+rule_name="elvis"
+short_name="E"
+graphic="specialist.entertainer"
+
+[parameters]
+add_to_size_limit=99
+vision_reveal_tiles=TRUE
+pop_report_zeroes=4
+
+[citizen]
+nationality=TRUE
+convert_speed=20
+partisans_pct=40

@@ -1,0 +1,1629 @@
+
+[datafile]
+description="Sim ruleset building data for Freeciv21"
+ruledit="3.0.202110008.8-alpha"
+options="+Freeciv-ruleset-Devel-2017.Jan.02"
+format_version=20
+
+[building_0]
+name=_("Airport")
+genus="Improvement"
+graphic="b.airport"
+sound="b_airport"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Radio","Player"
+}
+build_cost=80
+upkeep=3
+sabotage=100
+helptext="Allows a city to produce veteran air units (including helicopters).  Also, damaged air units (again, including helicopters) which stay in town for one full turn without moving are completely restored.","Two cities with Airports can airlift one unit per turn.  Airlifting instantly transports the unit from one city to another and will use all of the unit's movement points.  A unit must have some movement points left to be airlifted."
+
+[building_1]
+name=_("Aqueduct")
+genus="Improvement"
+graphic="b.aqueduct"
+sound="b_aqueduct"
+sound_alt="b_generic"
+reqs={"type","name","range","present"
+"Tech","Construction","Player",TRUE
+"Extra","River","Adjacent",FALSE
+"Terrain","Lake","Adjacent",FALSE
+}
+build_cost=40
+upkeep=1
+sabotage=100
+helptext="Allows a city to grow larger than size 8. (A Sewer System is required for a city to grow larger than size 16.)","These larger cities enjoy increased defense (+50%) against both land and sea units; however, such large settlements have a small risk of fire, which can destroy buildings in the city.","Starting at size 5, growing cities incur an increasing risk of plague due to overcrowding; an Aqueduct reduces that base chance by 30%.","Building an Aqueduct in a city without access to a lake or river requires knowledge of Construction, and it costs more to build and maintain."
+
+[building_2]
+name=_("Aqueduct, Lake")
+genus="Improvement"
+graphic="b.aqueduct"
+sound="b_aqueduct"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Terrain","Lake","Adjacent"
+}
+build_cost=20
+upkeep=0
+sabotage=100
+helptext="Allows a city to grow larger than size 8. (A Sewer System is required for a city to grow larger than size 16.)","These larger cities enjoy increased defense (+50%) against both land and sea units; however, such large settlements have a small risk of fire, which can destroy buildings in the city.","Starting at size 5, growing cities incur an increasing risk of plague due to overcrowding; an Aqueduct reduces that base chance by 30%.","Aqueducts in cities with access to a lake require no special technology and are cheap to build and maintain."
+
+[building_3]
+name=_("Aqueduct, River")
+genus="Improvement"
+graphic="b.aqueduct"
+sound="b_aqueduct"
+sound_alt="b_generic"
+reqs={"type","name","range","present"
+"Extra","River","Adjacent",TRUE
+"Terrain","Lake","Adjacent",FALSE
+}
+build_cost=20
+upkeep=0
+sabotage=100
+helptext="Allows a city to grow larger than size 8. (A Sewer System is required for a city to grow larger than size 16.)","These larger cities enjoy increased defense (+50%) against both land and sea units; however, such large settlements have a small risk of fire, which can destroy buildings in the city.","Starting at size 5, growing cities incur an increasing risk of plague due to overcrowding; an Aqueduct reduces that base chance by 30%.","Aqueducts in cities with access to a river require no special technology and are cheap to build and maintain."
+
+[building_4]
+name=_("Bank")
+genus="Improvement"
+graphic="b.bank"
+sound="b_bank"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Banking","Player"
+"Building","Marketplace","City"
+}
+build_cost=60
+upkeep=1
+sabotage=100
+helptext="Increases the luxury and tax output in a city by an additional 50%. With both a Bank and a Marketplace in a city, the total bonus is 100%.Under Communism, the Bank does not give a luxury bonus.Units constructed in a city with this building have one additionalveteran level."
+
+[building_5]
+name=_("Barracks")
+genus="Improvement"
+graphic="b.barracks_i"
+sound="b_barracks_i"
+sound_alt="b_generic"
+obsolete_by={"type","name","range"
+"Tech","Leadership","Player"
+"Building","Barracks II","City"
+"Building","Barracks III","City"
+}
+build_cost=30
+upkeep=1
+sabotage=100
+helptext="With a Barracks, each new land unit built in a city will automatically have three additional Veteran levels. Also, damaged land units which stay in town for one full  turn without moving are completely restored.  Barracks have no effect under Tribal government."
+
+[building_6]
+name=_("Barracks II")
+genus="Improvement"
+graphic="b.barracks_ii"
+graphic_alt="b.barracks_i"
+sound="b_barracks_ii"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Leadership","Player"
+}
+obsolete_by={"type","name","range"
+"Tech","Mobile Warfare","Player"
+"Building","Barracks III","City"
+}
+build_cost=40
+upkeep=1
+sabotage=100
+helptext="With a Barracks, each new land unit built in a city will automatically have three additional Veteran levels. Also, damaged land units which stay in town for one full  turn without moving are completely restored."
+
+[building_7]
+name=_("Barracks III")
+genus="Improvement"
+graphic="b.barracks_iii"
+graphic_alt="b.barracks_i"
+sound="b_barracks_iii"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Mobile Warfare","Player"
+}
+build_cost=60
+upkeep=1
+sabotage=100
+helptext="With a Barracks, each new land unit built in a city will automatically have three additional Veteran levels. Also, damaged land units which stay in town for one full  turn without moving are completely restored."
+
+[building_8]
+name=_("Cathedral")
+genus="Improvement"
+graphic="b.cathedral"
+sound="b_cathedral"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Monotheism","Player"
+"Building","Temple","City"
+}
+build_cost=60
+upkeep=3
+sabotage=100
+helptext="A Cathedral makes 3 unhappy citizens content in a city, making it easier to maintain order in that city; however, it does not affect citizens made unhappy by aggression. Knowledge of Theology increases the effect of a Cathedral, making an additional unhappy citizen content, except under Communism.Units constructed in a city with this building have one additionalveteran level.Decreases corruption by a small amount, depending on government."
+
+[building_9]
+name=_("City Hall")
+genus="Improvement"
+graphic="b.city_hall"
+graphic_alt="b.police_station"
+sound="b_city_hall"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Monarchy","Player"
+}
+build_cost=40
+upkeep=1
+sabotage=100
+helptext="City Hall is the step that signifies the upgrade of a village or a settlement into a city. With this building, the chance of migration into the city is increased. This building makes one unhappy citizen content."
+
+[building_10]
+name=_("City Walls")
+genus="Improvement"
+graphic="b.city_walls"
+sound="b_city_walls"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Masonry","Player"
+}
+build_cost=30
+upkeep=0
+sabotage=50
+flags="VisibleByOthers"
+helptext="City Walls make it easier to defend a city. They add a +100% bonus to the intrinsic defense strength of units within the city against land units (that is a two-thirds increase for small cities, or a one-half increase for cities larger than size 8), but are ineffective against airborne and sea units. City Walls also prevent the loss of population which occurs when a defending unit is defeated by a land unit."
+
+[building_11]
+name=_("Coastal Defense")
+genus="Improvement"
+graphic="b.coastal_defense"
+sound="b_coastal_defense"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Advanced Navigation","Player"
+"TerrainClass","Oceanic","Adjacent"
+}
+build_cost=40
+upkeep=1
+sabotage=100
+helptext="Gives a +100% bonus to the intrinsic defense strength of units within a city when defending against enemy ships. For small cities the defense strength is doubled by this improvement; for cities larger than size 8, it is increased by two-thirds."
+
+[building_12]
+name=_("Amphitheater")
+rule_name="Colosseum"
+genus="Improvement"
+graphic="b.colosseum"
+sound="b_colosseum"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Construction","Player"
+}
+build_cost=70
+upkeep=3
+sabotage=100
+helptext="Entertains the citizens of a city, making 3 unhappy citizens content.  (Four after the discovery of Electricity.)  However, it does not affect citizens made unhappy by military activity."
+
+[building_13]
+name=_("Courthouse")
+genus="Improvement"
+graphic="b.courthouse"
+sound="b_courthouse"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Code of Laws","Player"
+}
+build_cost=40
+upkeep=1
+sabotage=100
+helptext="Reduces corruption in a city, amount depending on government. 	For exact data, check the table athttps://freeciv.fandom.com/wiki/Simulation_Ruleset#Trade\n","Also makes one unhappy citizen content (unless that citizen is unhappy about military activity), and makes the revolt cost of the city 4 times bigger."
+
+[building_14]
+name=_("Factory")
+genus="Improvement"
+graphic="b.factory"
+sound="b_factory"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Industrialization","Player"
+}
+build_cost=140
+upkeep=3
+sabotage=100
+helptext="Increases the shield production in a city by 50%.","This increase in production may contribute significantly to pollution; a Factory also increases the pollution caused by the population of the city."
+
+[building_15]
+name=_("Granary")
+genus="Improvement"
+graphic="b.granary"
+sound="b_granary"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Pottery","Player"
+}
+build_cost=20
+upkeep=1
+sabotage=100
+helptext="When any small city grows or shrinks, some food points are saved; this helps cities to grow faster and more easily withstand famine. With a Granary this is extended to cities of size 4 and above. ","A Granary also halves the food wasted in cities far from your capital. ","Granary decreases the chance that population will migrate to bigger cities.","TIP: to maximise the speed with which a city grows, you should build a Granary before it grows larger than size 4."
+
+[building_16]
+name=_("Harbor")
+rule_name="Harbour"
+genus="Improvement"
+graphic="b.harbour"
+sound="b_harbour"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Seafaring","Player"
+"TerrainClass","Oceanic","City"
+}
+build_cost=40
+upkeep=1
+sabotage=100
+helptext="Gives one extra food resource on all Ocean or Deep Ocean tiles (but not Lakes). The city needs to be coastal to build this improvement."
+
+[building_17]
+name=_("Hydro Plant")
+genus="Improvement"
+graphic="b.hydro_plant"
+sound="b_hydro_plant"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Electronics","Player"
+"Building","Factory","City"
+"Extra","River","Adjacent"
+}
+build_cost=120
+upkeep=4
+sabotage=100
+helptext="Any kind of electrical plant increases the shield production effects of any Factory or Mfg. Plant in its city by 25% each. Thus, an electrical plant in combination with either a Factory or Mfg. Plant gives a 50% production bonus over the level without any of these improvements; an electrical plant, Factory, and Mfg. Plant together give a 100% production bonus. The extra production may lead to the city generating more pollution.","However, a Hydro Plant also reduces the pollution associated with shield production to 50% of its normal value, or 25% in combination with a Recycling Center; pollution is reduced further for the player who owns the Hoover Dam. (A Hydro Plant's effect is the same as that of a Nuclear Plant; with the Hoover Dam, its effect is increased to that of a Solar Plant.)","In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or Solar Plant can take effect at any one time."
+
+[building_18]
+name=_("Library")
+genus="Improvement"
+graphic="b.library"
+sound="b_library"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Writing","Player"
+}
+build_cost=40
+upkeep=1
+sabotage=100
+helptext="Increases the science output in a city by 50% or by 100%, depending on the ruleset.Decreases corruption by a small amount, depending on government."
+
+[building_19]
+name=_("Marketplace")
+genus="Improvement"
+graphic="b.marketplace"
+sound="b_marketplace"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Currency","Player"
+}
+build_cost=40
+upkeep=0
+sabotage=100
+helptext="Increases the luxury and tax output in a city by 50%."
+
+[building_20]
+name=_("Mass Transit")
+genus="Improvement"
+graphic="b.mass_transit"
+sound="b_mass_transit"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Mass Production","Player"
+}
+build_cost=100
+upkeep=2
+sabotage=100
+helptext="Reduces the pollution generated by the population in a city; this building counteracts the additional pollution associated with any two other buildings."
+
+[building_21]
+name=_("Mfg. Plant")
+genus="Improvement"
+graphic="b.mfg_plant"
+sound="b_mfg_plant"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Plastics","Player"
+"Building","Factory","City"
+}
+build_cost=120
+upkeep=4
+sabotage=100
+helptext="Increases the shield production in a city by an additional 25%, or 50% with an electrical plant of any kind in the same city; this effect is cumulative with that of a Factory.","With sufficient shield production, cities with a Manufacturing Plant can produce up to two units each turn (but only single units of types which cost population).","This increase in shield production may contribute significantly to pollution; a Manufacturing Plant also increases the pollution caused by the population of the city."
+
+[building_22]
+name=_("Nuclear Plant")
+genus="Improvement"
+graphic="b.nuclear_plant"
+sound="b_nuclear_plant"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Nuclear Power","Player"
+"Building","Factory","City"
+}
+build_cost=140
+upkeep=2
+sabotage=100
+helptext="Any kind of electrical plant increases the shield production effects of any Factory or Mfg. Plant in its city by 25% each. Thus, an electrical plant in combination with either a Factory or Mfg. Plant gives a 50% production bonus over the level without any of these improvements; an electrical plant, Factory, and Mfg. Plant together give a 100% production bonus. The extra production may lead to the city generating more pollution.","However, a Nuclear Plant also reduces the pollution associated with shield production to 50% of its normal value, or 25% in combination with a Recycling Center. (Its effect is the same as that of a Hydro Plant.)","In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or Solar Plant can take effect at any one time.","A Nuclear Plant has a small risk of suffering a nuclear accident, which can lead to fallout and reduce the city's population."
+
+[building_23]
+name=_("Palace")
+genus="SmallWonder"
+graphic="b.palace"
+sound="b_palace"
+sound_alt="b_generic"
+build_cost=20
+upkeep=0
+sabotage=0
+helptext="Makes a city the capital and the center of your government. Corruption in other cities is often related to how far away from the capital they are. ","The cost to enemy Diplomats and Spies of inciting a revolt in a city also depends upon the city's distance from the capital (under all forms of government). Your capital city itself cannot be incited to revolt, and enjoys a bonus when enemy agents try to evade your own agents stationed in the city, or sabotage your buildings.","Take good care of your capital, as its loss will result in the loss of all centrally collected trade until you rebuild the palace. Losing it also results in losing whatever spaceship you might have.","Under Despotism the city containing the palace gains a +75% gold bonus, and under Monarchy a +50% gold bonus."
+
+[building_24]
+name=_("Second Palace")
+genus="SmallWonder"
+graphic="b.courthouse"
+sound="b_courthouse"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Theology","Player"
+}
+build_cost=150
+upkeep=1
+sabotage=100
+helptext="Creates a government center to combat waste and corrupton (similar to Palace)."
+
+[building_25]
+name=_("Police Station")
+genus="Improvement"
+graphic="b.police_station"
+sound="b_police_station"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Industrialization","Player"
+}
+build_cost=50
+upkeep=2
+sabotage=100
+helptext="A Police Station neutralizes any unhappiness caused by one military unit in its city. It makes up to 2 more unhappy citizens content provided they are not unhappy about aggression. Also, helps defend against aggressive diplomatic action. Decreases corruption by a small amount, depending on government."
+
+[building_26]
+name=_("Naval Base")
+genus="Improvement"
+graphic="b.port_facility"
+sound="b_port_facility"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Amphibious Warfare","Player"
+"TerrainClass","Oceanic","Adjacent"
+}
+build_cost=60
+upkeep=2
+sabotage=100
+helptext="Allows a city to build veteran sea units.  Also, damaged sea units which stay in town for one full turn without moving are completely restored."
+
+[building_27]
+name=_("Port Terminal")
+genus="Improvement"
+graphic="b.port_terminal"
+graphic_alt="b.port_facility"
+sound="b_port_facility"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","The Corporation","Player"
+"TerrainClass","Oceanic","City"
+}
+build_cost=60
+upkeep=2
+sabotage=100
+helptext="Gives +1 Trade for all Ocean tiles."
+
+[building_28]
+name=_("Power Plant")
+genus="Improvement"
+graphic="b.power_plant"
+sound="b_power_plant"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Refining","Player"
+"Building","Factory","City"
+}
+build_cost=110
+upkeep=4
+sabotage=100
+helptext="Any kind of electrical plant increases the shield production effects of any Factory or Mfg. Plant in its city by 25% each. Thus, an electrical plant in combination with either a Factory or Mfg. Plant gives a 50% production bonus over the level without any of these improvements; an electrical plant, Factory, and Mfg. Plant together give a 100% production bonus. The extra production may lead to the city generating more pollution.","In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or Solar Plant can take effect at any one time."
+
+[building_29]
+name=_("Recycling Center")
+genus="Improvement"
+graphic="b.recycling_center"
+sound="b_recycling_center"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Building","Recycling Technology","World"
+}
+build_cost=100
+upkeep=2
+sabotage=100
+helptext="Building a Recycling Center reduces the amount of pollution generated by shield production in a city by 50%, or by an additional 25% in cities with another building which reduces pollution (Nuclear Plant, Hydro Plant, or Solar Plant)."
+
+[building_30]
+name=_("Research Lab")
+genus="Improvement"
+graphic="b.research_lab"
+sound="b_research_lab"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Computers","Player"
+"Building","University","City"
+}
+build_cost=100
+upkeep=3
+sabotage=100
+helptext="Increases the science output in a city by an additional 50%, or by 100% once the Internet wonder has been built by any player.","The total bonus is 150% if a Library, a University and a Research Lab are all present in the same city, increasing to 300% once the Great Library, Isaac Newton's College, and the Internet have all been built."
+
+[building_31]
+name=_("SAM Battery")
+genus="Improvement"
+graphic="b.sam_battery"
+sound="b_sam_battery"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Rocketry","Player"
+}
+build_cost=70
+upkeep=2
+sabotage=100
+helptext="Doubles the intrinsic defense strength of units within a city when defending against aircraft (including helicopters)."
+
+[building_32]
+name=_("SDI Defense")
+genus="Improvement"
+graphic="b.sdi_defense"
+sound="b_sdi_defense"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Laser","Player"
+}
+build_cost=140
+upkeep=3
+sabotage=100
+helptext="Protects a city and its environs (up to 2 tiles away) from attacks by Nuclear units. A Nuclear unit attacking a city with SDI Defense, or attacking a unit (or deliberately exploded) within range, is shot down and simply has no effect. Also, doubles the intrinsic defense strength of units in the city when defending against conventional missiles."
+
+[building_33]
+name=_("Sewer System")
+genus="Improvement"
+graphic="b.sewer_system"
+sound="b_sewer_system"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Architecture","Player"
+}
+build_cost=60
+upkeep=2
+sabotage=100
+helptext="Together with an Aqueduct, allows a city to grow larger by reducing the chance of a plague (by 20% of the base chance)."
+
+[building_34]
+name=_("Solar Plant")
+genus="Improvement"
+graphic="b.solar_plant"
+sound="b_solar_plant"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Environmentalism","Player"
+"Building","Factory","City"
+}
+build_cost=150
+upkeep=4
+sabotage=100
+helptext="Any kind of electrical plant increases the shield production effects of any Factory or Mfg. Plant in its city by 25% each. Thus, an electrical plant in combination with either a Factory or Mfg. Plant gives a 50% production bonus over the level without any of these improvements; an electrical plant, Factory, and Mfg. Plant together give a 100% production bonus. The extra production may lead to the city generating more pollution.","However, a Solar Plant also reduces the pollution associated with shield production to 25% of its normal value, or eliminates it entirely in combination with a Recycling Center.","In each city, only one Power Plant, Hydro Plant, Nuclear Plant, or Solar Plant can take effect at any one time."
+
+[building_35]
+name=_("Space Component")
+genus="Special"
+graphic="b.space_component"
+sound="b_space_component"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Superconductors","Player"
+"Building","Factory","City"
+"Building","Library","City"
+"Building","University","City"
+"Building","Research Lab","City"
+}
+build_cost=160
+upkeep=0
+sabotage=100
+helptext="Space Components can be differentiated into Propulsion and Fuel Components.  Each pair of them reduces your spaceship's travel time.  You can build up to 8 pairs.","Before you can build any spaceship parts, the Apollo Program wonder must have been built by any player."
+
+[building_36]
+name=_("Space Module")
+genus="Special"
+graphic="b.space_modules"
+sound="b_space_module"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Environmentalism","Player"
+"Building","Factory","City"
+"Building","Library","City"
+"Building","University","City"
+"Building","Research Lab","City"
+}
+build_cost=320
+upkeep=0
+sabotage=100
+helptext="Space Modules are the most expensive parts of spaceships.  There are three different types of Space Module:","- Habitation Module: provides living space for 10,000 people.","- Life Support Module: provides food and water for the population of one Habitation Module.","- Solar Panels: provides the energy needed for any two of the other Modules.","You can build up to 4 Space Modules of each kind.","Before you can build any spaceship parts, the Apollo Program wonder must have been built by any player."
+
+[building_37]
+name=_("Space Structural")
+genus="Special"
+graphic="b.space_structural"
+sound="b_space_structural"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Space Flight","Player"
+"Building","Factory","City"
+"Building","Library","City"
+"Building","University","City"
+"Building","Research Lab","City"
+}
+build_cost=80
+upkeep=0
+sabotage=100
+helptext="Space Structurals form the base of your spaceship.  All other spaceship parts need to be connected to Structurals in order to function.  You can build up to 32 Space Structurals.","Before you can build any spaceship parts, the Apollo Program wonder must have been built by any player."
+
+[building_38]
+name=_("Stock Exchange")
+genus="Improvement"
+graphic="b.stock_exchange"
+sound="b_stock_exchange"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Economics","Player"
+"Building","Bank","City"
+}
+build_cost=100
+upkeep=2
+sabotage=100
+helptext="Increases the luxury and tax output in a city by an additional 50%, or 100% if Super Highways are also in the city. A Marketplace, Bank, and Stock Exchange together in a city yield a total bonus of 150%; adding Super Highways yields a total of 200%.Stock Exchange doesn't have any effect under a Communist government.\n"
+
+[building_39]
+name=_("Super Highways")
+genus="Improvement"
+graphic="b.super_highways"
+sound="b_super_highways"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Automobile","Player"
+}
+build_cost=100
+upkeep=3
+sabotage=100
+helptext="Each tile around the city with roads, and without farmlands, that is already generating some trade, produces one extra trade resource.","Also doubles the effect of any Stock Exchange in the city (increasing luxury and tax output by an additional 50%).","Super Highways also increase the pollution caused by the population of the city."
+
+[building_40]
+name=_("Supermarket")
+genus="Improvement"
+graphic="b.supermarket"
+sound="b_supermarket"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Refrigeration","Player"
+}
+build_cost=60
+upkeep=3
+sabotage=100
+helptext="Supermarket saves food after city growth, same as granary. The effect starts gradually at city size 16 and at size 25 reaches 25%. This means that, for sizes of 25 or more, Granary and Supermarket combined save 75% of food on city growth.  \n "
+
+[building_41]
+name=_("Temple")
+genus="Improvement"
+graphic="b.temple"
+sound="b_temple"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Ceremonial Burial","Player"
+}
+build_cost=30
+upkeep=1
+sabotage=100
+helptext="Makes one unhappy citizen content. The Mysticism advance doubles this effect (except under a Communist government). With both Mysticism and the Temple of Artemis, 4 citizens are made content (3 under Communism). Does not affect citizens made unhappy by aggression.Units constructed in a city with this building have one additionalveteran level.Decreases corruption by a small amount, depending on government."
+
+[building_42]
+name=_("University")
+genus="Improvement"
+graphic="b.university"
+sound="b_university"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","University","Player"
+"Building","Library","City"
+}
+build_cost=70
+upkeep=2
+sabotage=100
+helptext="Increases the science output in a city by an additional 50%, or by 100% once Isaac Newton's College has been built by any player.","The total bonus is 100% if a Library and a University are present together in the same city, increasing to 200% once the Great Library and Isaac Newton's College have both been built.Under Democracy, University makes additional citizen unhappy for each aggressively deployed military unit.Units constructed in a city with this building have one additionalveteran level.Decreases corruption by a small amount, depending on government."
+
+[building_43]
+name=_("U235 Enrichment Plant")
+genus="Improvement"
+graphic="b.uranium"
+graphic_alt="b.manhattan_project"
+sound="b_university"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Building","Mutually Assured Destruction","World"
+}
+build_cost=200
+upkeep=10
+sabotage=100
+helptext="Allows mass production of nuclear weapons."
+
+[building_44]
+name=_("Rocket Fuel Plant")
+genus="Improvement"
+graphic="b.rocket_fuel"
+graphic_alt="b.factory"
+sound="b_university"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Intercontinental Ballistics","World"
+}
+build_cost=100
+upkeep=10
+sabotage=100
+helptext="Allows mass production of nuclear weapons."
+
+[building_45]
+name=_("Mutually Assured Destruction")
+genus="GreatWonder"
+graphic="b.MAD"
+graphic_alt="b.manhattan_project"
+sound="b_university"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Nuclear Doctrine","Player"
+}
+build_cost=500
+upkeep=0
+sabotage=100
+helptext=" 'Gentlemen, you can't fight in here! This is the War Room!'President Merkin MuffleyMAD Project is an indication of your nation's determination to go down on the path of nuclear supremacy. But be careful, 'MAD' begins with an 'M'. Once you have completed this wonder, it will allow all other nations to go down the same path because volunteer spies will leak the information to others: The only way to prevent one nation from starting a nuclear war is if everybody goes MAD! "
+
+[building_46]
+name=_("Apollo Program")
+genus="GreatWonder"
+graphic="b.apollo_program"
+sound="w_apollo_program"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Space Flight","Player"
+}
+build_cost=600
+upkeep=0
+sabotage=0
+helptext="The entire map becomes permanently visible to the player who owns it -- the player always has up-to-date knowledge of all terrain and cities (but not units) despite fog-of-war.  It allows all players to start building spaceship parts (assuming they have researched the necessary technologies).","Completion of the Apollo Program also allows nuclear-armed powers to declare war without provocation, regardless of the existence of the United Nations, and AI players will no longer be friendly towards the owner of the United Nations or the Eiffel Tower."
+
+[building_47]
+name=_("A.Smith's Trading Co.")
+genus="GreatWonder"
+graphic="b.asmiths_trading_co"
+sound="w_asmiths_trading_co"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Economics","Player"
+"Building","Stock Exchange","City"
+}
+build_cost=400
+upkeep=0
+sabotage=0
+helptext="In every city with a Stock Exchange, city improvements which would normally have an upkeep of 1 become free of upkeep. (Communist governments inherently give this benefit, so there is no bonus under Communism.)","Upon completion of this wonder, tax collector specialists' gold output increases to 3 permanently for every nation."
+
+[building_48]
+name=_("Colossus")
+genus="SmallWonder"
+graphic="b.colossus"
+sound="w_colossus"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Bronze Working","Player"
+}
+obsolete_by={"type","name","range"
+"Tech","Automobile","Player"
+}
+build_cost=150
+upkeep=0
+sabotage=0
+helptext="Each tile around the city where this wonder is built that is already generating some trade produces one extra trade resource."
+
+[building_49]
+name=_("Copernicus' Observatory")
+genus="SmallWonder"
+graphic="b.copernicus_observatory"
+sound="w_copernicus_observatory"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Astronomy","Player"
+}
+obsolete_by={"type","name","range"
+"Tech","Computers","Player"
+}
+build_cost=100
+upkeep=0
+sabotage=0
+helptext="Each tile worked by the city where this wonder is built produces one extra research point."
+
+[building_50]
+name=_("Cure For Cancer")
+genus="SmallWonder"
+graphic="b.cure_for_cancer"
+sound="w_cure_for_cancer"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Genetic Engineering","Player"
+}
+build_cost=600
+upkeep=0
+sabotage=0
+helptext="This stunning technological achievement makes one content citizen happy in each of your cities (2 extra luxury per city). It further reduces the risk of plague in the city (by 10% of the base chance); together with an Aqueduct, a Sewer System, and knowledge of Medicine, it entirely eliminates the risk of plague."
+
+[building_51]
+name=_("Darwin's Voyage")
+genus="GreatWonder"
+graphic="b.darwins_voyage"
+sound="w_darwins_voyage"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Steam Engine","Player"
+}
+build_cost=300
+upkeep=0
+sabotage=0
+helptext="Charles Darwin's voyage sparked the discovery of the evolution of the species, which inspired greater confidence in science. All your cities generate 1 extra science bulb.","Upon completion of this wonder, scientist specialists' research output increases to 3 permanently for every nation."
+
+[building_52]
+name=_("Eiffel Tower")
+genus="SmallWonder"
+graphic="b.eiffel_tower"
+sound="w_eiffel_tower"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Railroad","Player"
+}
+build_cost=300
+upkeep=0
+sabotage=0
+helptext="AI nations are more inclined to be friendly and forgiving toward the owner of this wonder (until the Apollo Program is completed). It also reduces the pollution caused by the population."
+
+[building_53]
+name=_("Great Library")
+genus="GreatWonder"
+graphic="b.great_library"
+sound="w_great_library"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Literacy","Player"
+"Building","Library","City"
+}
+build_cost=300
+upkeep=0
+sabotage=0
+helptext="Gives an immediate technology advance to the player that builds it, and thereafter 4 extra research points every turn to its city.","Completion of this wonder permanently doubles the effect of Libraries for every player."
+
+[building_54]
+name=_("Great Wall")
+genus="GreatWonder"
+graphic="b.great_wall"
+sound="w_great_wall"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Construction","Player"
+}
+obsolete_by={"type","name","range"
+"Tech","Machine Tools","Player"
+}
+build_cost=2000
+upkeep=0
+sabotage=0
+helptext="Increases the defense of all your cities by adding a +50% bonus to its units' intrinsic defense strength against land units (this is cumulative with any City Walls), and preventing the loss of population which occurs when a defending unit is defeated by a land unit."
+
+[building_55]
+name=_("Hanging Gardens")
+genus="SmallWonder"
+graphic="b.hanging_gardens"
+sound="w_hanging_gardens"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Pottery","Player"
+}
+obsolete_by={"type","name","range"
+"Tech","Electricity","Player"
+}
+build_cost=200
+upkeep=0
+sabotage=0
+helptext="Makes one unhappy citizen content in every city of the player that owns it (not including citizens unhappy about aggression). This wonder also makes two content citizens happy in the city where it is located (4 extra luxury points)."
+
+[building_56]
+name=_("Hoover Dam")
+genus="SmallWonder"
+graphic="b.hoover_dam"
+sound="w_hoover_dam"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Electronics","Player"
+"Extra","River","Adjacent"
+"Building","Factory","City"
+}
+build_cost=600
+upkeep=0
+sabotage=0
+helptext="Acts as a Hydro Plant in the city where it is built, and reduces pollution from shield production by a further 25% in all cities with Hydro Plants, making them equivalent to Solar Plants."
+
+[building_57]
+name=_("Isaac Newton's College")
+genus="GreatWonder"
+graphic="b.isaac_newtons_college"
+sound="w_isaac_newtons_college"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Theory of Gravity","Player"
+"Building","University","City"
+}
+build_cost=200
+upkeep=0
+sabotage=0
+helptext="Gives an immediate technology advance to the player that builds it, and thereafter 6 extra research points every turn to its city.","Completion of this wonder permanently doubles the effect of Universities for every player."
+
+[building_58]
+name=_("J.S. Bach's Cathedral")
+genus="SmallWonder"
+graphic="b.js_bachs_cathedral"
+sound="w_js_bachs_cathedral"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Theology","Player"
+}
+build_cost=400
+upkeep=0
+sabotage=0
+helptext="Makes one content citizen happy in every city of the player that owns it (2 extra luxury points per city)."
+
+[building_59]
+name=_("King Richard's Crusade")
+genus="SmallWonder"
+graphic="b.king_richards_crusade"
+sound="w_king_richards_crusade"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Chivalry","Player"
+}
+obsolete_by={"type","name","range"
+"Tech","Communism","Player"
+}
+build_cost=300
+upkeep=0
+sabotage=0
+helptext="Reduces the unhappiness caused by aggressively deployed military units owned by the city by 1 -- in other words, it neutralizes the unhappiness caused by a single military unit (except under Democracy, where a single unit makes two citizens unhappy). Under governments where unit upkeep is paid in gold, it gives two free gold per city towards upkeep every turn."
+
+[building_60]
+name=_("Lighthouse")
+genus="SmallWonder"
+graphic="b.lighthouse"
+sound="w_lighthouse"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Map Making","Player"
+"Terrain","Ocean","Adjacent"
+}
+obsolete_by={"type","name","range"
+"Tech","Engineering","Player"
+}
+build_cost=200
+upkeep=0
+sabotage=0
+helptext="Gives all your sea units 1 additional movement point (except Triremes while moving on rivers). Makes all your new sea units veterans (for all your cities)."
+
+[building_61]
+name=_("Magellan's Expedition")
+genus="SmallWonder"
+graphic="b.magellans_expedition"
+sound="w_magellans_expedition"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Navigation","Player"
+"Terrain","Ocean","Adjacent"
+}
+obsolete_by={"type","name","range"
+"Tech","Nuclear Power","Player"
+}
+build_cost=400
+upkeep=0
+sabotage=0
+helptext="Gives all your sea units 1 additional movement point. The chance of a sea unit getting the next veteran level after a battle increases by half."
+
+[building_62]
+name=_("Manhattan Project")
+genus="GreatWonder"
+graphic="b.manhattan_project"
+sound="w_manhattan_project"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Nuclear Fission","Player"
+}
+build_cost=100
+upkeep=0
+sabotage=0
+helptext=" The Manhattan Project is only the first step on the path toward nuclear weapons. After this wonder, it is necessary to perform field tests (Trinity Project) and only then it will be possible to build limited amounts of nuclear weponry. In order to mass produce nukes, you need Uranium Enrichment Plants."
+
+[building_63]
+name=_("Trinity Project")
+genus="SmallWonder"
+graphic="b.trinity_project"
+graphic_alt="b.manhattan_project"
+sound="w_manhattan_project"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Building","Manhattan Project","World"
+}
+build_cost=200
+upkeep=0
+sabotage=0
+helptext=" The Trinity Project is the next step on the path toward nuclear weapons. It makes it possible to build limited amounts of nuclear weponry. In order to mass produce nukes, you need Uranium Enrichment Plants."
+
+[building_64]
+name=_("Michelangelo's Chapel")
+genus="SmallWonder"
+graphic="b.michelangelos_chapel"
+sound="w_michelangelos_chapel"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Monotheism","Player"
+"Building","Cathedral","City"
+}
+build_cost=400
+upkeep=0
+sabotage=0
+helptext="Doubles the base effect of Cathedrals. This makes 3 additional unhappy citizens content in each city with a Cathedral; however, it does not affect citizens made unhappy by aggression."
+
+[building_65]
+name=_("Mausoleum of Mausolos")
+genus="SmallWonder"
+graphic="b.mausoleum"
+graphic_alt="b.oracle"
+sound="w_oracle"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Ceremonial Burial","Player"
+}
+obsolete_by={"type","name","range"
+"Tech","Architecture","Player"
+}
+build_cost=200
+upkeep=0
+sabotage=0
+helptext="With this wonder, City Walls and Courthouses each make one unhappy citizen content in their city, unless that citizen is unhappy about aggression. Also, none of the owner's cities can be incited to revolt."
+
+[building_66]
+name=_("Statue of Zeus")
+genus="SmallWonder"
+graphic="b.statue_of_zeus"
+graphic_alt="b.oracle"
+sound="w_oracle"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Polytheism","Player"
+}
+obsolete_by={"type","name","range"
+"Tech","Conscription","Player"
+}
+build_cost=200
+upkeep=0
+sabotage=0
+helptext="Reduces the unhappiness caused by aggressively deployed military units owned by the city by 1 -- in other words, it neutralizes the unhappiness caused by a single military unit (except under Democracy, where a single unit makes two citizens unhappy). Each city also avoids one shield of upkeep for units."
+
+[building_67]
+name=_("Temple of Artemis")
+genus="SmallWonder"
+graphic="b.temple_of_artemis"
+graphic_alt="b.oracle"
+sound="w_oracle"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Mysticism","Player"
+"Building","Temple","City"
+}
+obsolete_by={"type","name","range"
+"Tech","Theology","Player"
+}
+build_cost=200
+upkeep=0
+sabotage=0
+helptext="Makes 2 additional unhappy citizens content in every city with a Temple. Does not affect citizens made unhappy by aggression."
+
+[building_68]
+name=_("Pyramids")
+genus="SmallWonder"
+graphic="b.pyramids"
+sound="w_pyramids"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Masonry","Player"
+}
+obsolete_by={"type","name","range"
+"Tech","Railroad","Player"
+}
+build_cost=100
+upkeep=0
+sabotage=0
+helptext="Each tile around the city where this wonder is built that is already generating some shield output produces one extra shield resource. Under Despotic government, the Pyramids cancel the penalty to worked tiles with output greater than 2 (for all kinds of output), as if all your cities were always celebrating."
+
+[building_69]
+name=_("Internet")
+genus="GreatWonder"
+graphic="b.internet"
+graphic_alt="b.seti_program"
+sound="w_seti_program"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Computers","Player"
+"Building","Research Lab","City"
+}
+build_cost=300
+upkeep=0
+sabotage=0
+helptext="Gives an immediate technology advance to the player that builds it, and thereafter all cities on the map are continuously visible to its owner despite fog-of-war.","Completion of this wonder permanently doubles the effect of Research Labs for every player."
+
+[building_70]
+name=_("Sun Tzu's War Academy")
+genus="SmallWonder"
+graphic="b.sun_tzus_war_academy"
+sound="w_sun_tzus_war_academy"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Feudalism","Player"
+}
+obsolete_by={"type","name","range"
+"Tech","Mobile Warfare","Player"
+}
+build_cost=150
+upkeep=0
+sabotage=0
+helptext="All your new military land units start with an additional veteran level (this is cumulative with any Barracks building in a city; with both, units are created as Hardened)."
+
+[building_71]
+name=_("United Nations")
+genus="GreatWonder"
+graphic="b.united_nations"
+sound="w_united_nations"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Communism","Player"
+}
+build_cost=1500
+upkeep=0
+sabotage=0
+helptext="Creates a world senate that prevents unprovoked declaration of war by any nuclear-capable nation (that is, any nation with knowledge of Nuclear Fission, once the Manhattan Project has been built). Also allows declaration of war by player who built it even if his government is Democracy. AI players are more inclined to be friendly and forgiving toward the owner of this wonder. These effects last until the Apollo Program is completed.","Also, if any player's city is in disorder for more than two turns in a row, that player's government falls (even for governments other than Republic and Democracy)."
+
+[building_72]
+name=_("Manufaktur")
+genus="Improvement"
+graphic="b.manufaktur"
+graphic_alt="b.barracks_i"
+sound="b_generic"
+sound_alt="b_generic"
+reqs={"type","name","range","present"
+"Tech","Monarchy","Player",TRUE
+"Tech","Industrialization","Player",FALSE
+"Building","Factory","City",FALSE
+}
+build_cost=30
+upkeep=1
+sabotage=100
+helptext="Increases production in the city by 2 Shields.It represents tradition of manufacturing in the region and, if it is not present in the city by the time of Industrialziation, it cannot be built/established anymore. When a factory is built in the city, Manufaktur becomes outdated, turns into a part of history and does not help production, but instead serves as a museum, producing 2 Trade per turn. \n"
+
+[building_73]
+name=_("Coinage")
+genus="Special"
+graphic="b.capitalization"
+reqs={"type","name","range","present"
+"Gov","Democracy","Player",FALSE
+}
+build_cost=999
+upkeep=0
+sabotage=0
+flags="Gold"
+helptext="This is not a normal improvement.  Instead, setting a city's production to Coinage means its shield production is converted to tax output (money, coins!)."
+
+[building_74]
+name=_("Income")
+genus="Special"
+graphic="b.capitalization"
+reqs={"type","name","range"
+"Gov","Democracy","Player"
+}
+build_cost=999
+upkeep=0
+sabotage=0
+flags="Gold"
+helptext="This is not a normal improvement.  Instead, setting a city's production to Coinage means its shield production is converted to tax output (money, coins!)."
+
+[building_75]
+name=_("1st Five Year Plan")
+genus="SmallWonder"
+graphic="gov.communism"
+sound="w_united_nations"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Gov","Communism","Player"
+"Building","Palace","City"
+"Tech","Communism","Player"
+}
+build_cost=200
+upkeep=0
+sabotage=0
+helptext="The main point of Planned Economy, the Five Year Plan is aimed at increasing the nation's production by concentrated effort of the People. Some sacrifices are neccessary, but in the end, it is for the greater good.\n","Adds one unit of production to every city belonging to the player.\n"
+
+[building_76]
+name=_("2nd Five Year Plan")
+genus="SmallWonder"
+graphic="gov.communism"
+sound="w_united_nations"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Gov","Communism","Player"
+"Building","1st Five Year Plan","City"
+}
+build_cost=400
+upkeep=0
+sabotage=0
+helptext="The main point of Planned Economy, the Five Year Plan is aimed at increasing the nation's production by concentrated effort of the People. Some sacrifices are neccessary, but in the end, it is for the greater good.\n","Adds one unit of production to every city belonging to the player.\n"
+
+[building_77]
+name=_("3rd Five Year Plan")
+genus="SmallWonder"
+graphic="gov.communism"
+sound="w_united_nations"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Gov","Communism","Player"
+"Building","2nd Five Year Plan","City"
+}
+build_cost=600
+upkeep=0
+sabotage=0
+helptext="The main point of Planned Economy, the Five Year Plan is aimed at increasing the nation's production by concentrated effort of the People. Some sacrifices are neccessary, but in the end, it is for the greater good.\n","Adds one unit of production to every city belonging to the player.\n"
+
+[building_78]
+name=_("4th Five Year Plan")
+genus="SmallWonder"
+graphic="gov.communism"
+sound="w_united_nations"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Gov","Communism","Player"
+"Building","3rd Five Year Plan","City"
+}
+build_cost=800
+upkeep=0
+sabotage=0
+helptext="The main point of Planned Economy, the Five Year Plan is aimed at increasing the nation's production by concentrated effort of the People. Some sacrifices are neccessary, but in the end, it is for the greater good.\n","Adds one unit of production to every city belonging to the player.\n"
+
+[building_79]
+name=_("5th Five Year Plan")
+genus="SmallWonder"
+graphic="gov.communism"
+sound="w_united_nations"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Gov","Communism","Player"
+"Building","4th Five Year Plan","City"
+}
+build_cost=1000
+upkeep=0
+sabotage=0
+helptext="The main point of Planned Economy, the Five Year Plan is aimed at increasing the nation's production by concentrated effort of the People. Some sacrifices are neccessary, but in the end, it is for the greater good.\n","Adds one unit of production to every city belonging to the player.\n"
+
+[building_80]
+name=_("Marco Polo's Embassy")
+genus="SmallWonder"
+graphic="b.university"
+sound="w_marco_polos_embassy"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Banking","Player"
+}
+build_cost=100
+upkeep=0
+sabotage=0
+helptext="Player building it gets an embassy with all players."
+
+[building_81]
+name=_("Governor's Office")
+genus="Improvement"
+graphic="b.governor_office"
+graphic_alt="b.police_station"
+sound="b_city_hall"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Gov","Monarchy","Player"
+}
+build_cost=20
+upkeep=5
+sabotage=100
+helptext="This Office helps money from the city reach the rightful ruler of the kingdom, reducing corruption by 80%. It is best used in smaller cities that don't have other corruption-reduction buildings. It is only usable under Monarchy and, when a different goverment is in place, it is best to dismantle it because of high upkeep. "
+
+[building_82]
+name=_("Tax Office")
+genus="Improvement"
+graphic="b.tax_office"
+graphic_alt="b.police_station"
+sound="b_city_hall"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Gov","Republic","Player"
+}
+build_cost=20
+upkeep=6
+sabotage=100
+helptext="This Office helps money from the city reach the Government, reducing corruption by 90%. It is best used in smaller cities that don't have other corruption-reduction buildings. It is only usable under Democracy or Republic and, when a different goverment is in place, it is best to dismantle it because of high upkeep. "
+
+[building_83]
+name=_("Commissar's Office")
+genus="Improvement"
+graphic="b.comm_office"
+graphic_alt="b.police_station"
+sound="b_city_hall"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Gov","Communism","Player"
+}
+build_cost=20
+upkeep=5
+sabotage=100
+helptext="This Office helps money from the city reach the Government, reducing corruption by 80%. It is best used in smaller cities that don't have other corruption-reduction buildings. It is only usable under Communism and, when a different goverment is in place, it is best to dismantle it because of high upkeep . "
+
+[building_84]
+name=_("Small Shipyard")
+genus="Improvement"
+graphic="b.shipyard_i"
+graphic_alt="b.port_facility"
+sound="b_city_hall"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Steel","Player"
+}
+build_cost=50
+upkeep=2
+sabotage=100
+helptext="Shipyards are used to produce modern warships: Destroyers, Cruisers and Battleships. In order to produce the actual units, Naval Doctrine should be discovered. "
+
+[building_85]
+name=_("Medium Shipyard")
+genus="Improvement"
+graphic="b.shipyard_ii"
+graphic_alt="b.port_facility"
+sound="b_city_hall"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Combustion","Player"
+"Building","Small Shipyard","City"
+}
+build_cost=50
+upkeep=2
+sabotage=100
+helptext="Shipyards are used to produce modern warships: Destroyers, Cruisers and Battleships. In order to produce the actual units, Naval Doctrine should be discovered, "
+
+[building_86]
+name=_("Large Shipyard")
+genus="Improvement"
+graphic="b.shipyard_iii"
+graphic_alt="b.port_facility"
+sound="b_city_hall"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Mass Production","Player"
+"Building","Small Shipyard","City"
+"Building","Medium Shipyard","City"
+}
+build_cost=50
+upkeep=2
+sabotage=100
+helptext="Shipyards are used to produce modern warships: Destroyers, Cruisers and Battleships. In order to produce the actual units, Naval Doctrine should be discovered, "
+
+[building_87]
+name=_("Food Market")
+genus="Improvement"
+graphic="b.food_market"
+graphic_alt="b.marketplace"
+sound="b_city_hall"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Trade","Player"
+}
+build_cost=20
+upkeep=5
+sabotage=100
+helptext="Supplies the city with additional 3 Food.\nWith the development of trade, people started transporting supplies to greater distances. This made it possible for cities to trade surpluses and get hold of commodities that they lacked, making it possible to break their dependence on their immediate surroundings. Food Market makes it possible for a city with no direct access to large food surplus to grow, as long as the treasury is ready to pay the price. Not every city really needs it, but placing Food Markets strategically may reap great benefits for the cities they are built in."
+
+[building_88]
+name=_("Grocery Store")
+genus="Improvement"
+graphic="b.grocery_store"
+graphic_alt="b.marketplace"
+sound="b_city_hall"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Railroad","Player"
+"Building","Food Market","City"
+}
+build_cost=40
+upkeep=8
+sabotage=100
+helptext="Supplies the city with additional 4 Food.\nThe onset of railroad made it possible to haul larger amounts of commodities to larger distances. Of course, everything comes at a price, but with growing markets, every good finds a way to its buyer. Rich cities are able to acquire more if they are willing to pay for it, allowing their populations to grow more. \n\\\nGrocery Store makes it possible for a city with no direct access to large food surplus to grow faster, as long as there is money in the city coffers."
+
+[building_89]
+name=_("Shopping Mall")
+genus="Improvement"
+graphic="b.shopping_mall"
+graphic_alt="b.marketplace"
+sound="b_city_hall"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Refrigeration","Player"
+"Building","Grocery Store","City"
+}
+build_cost=60
+upkeep=12
+sabotage=100
+helptext="Supplies the city with additional 5 Food.\n'Fifty percent of Americans are obese, dawg. You know what obese means, right? Fat as a motherfucker. All these other countries, nobody's fat. Think about this shit, dawg. How does a motherfucker get fat? You gotta sit on the couch and do nothing but eat and watch TV all day. White trash, poor Mexicans and Blacks, all obese as motherfuckers. See, the white man has created a system with so much excess that even poor motherfuckers are fat.'\n— Sgt. Antonio 'Poke' Espera, The Cradle of Civilization, Generation Kill\nIf your nation is doing well economically, Shopping Mall is probably a good investment to compensate for lack of food in some of your cities. Or add some fat to your population. "
+
+[building_90]
+name=_("Recycling Technology")
+genus="GreatWonder"
+graphic="b.rec_tech"
+graphic_alt="b.recycling_center"
+sound="w_apollo_program"
+sound_alt="w_generic"
+reqs={"type","name","range"
+"Tech","Recycling","Player"
+}
+build_cost=50
+upkeep=0
+sabotage=0
+helptext="With recycling technology being a benefit to all, it is only logical that it is shared to all. Building this wonder makes it possible for everybody to build recycling centres, regardless of their technology level.\n"
+
+[building_91]
+name=_("Wooden Dock")
+genus="Improvement"
+graphic="b.docks"
+graphic_alt="b.port_facility"
+sound="b_city_hall"
+sound_alt="b_generic"
+reqs={"type","name","range","present"
+"Tech","Map Making","Player",TRUE
+"Tech","Advanced Navigation","Player",FALSE
+}
+build_cost=10
+upkeep=0
+sabotage=100
+helptext="Wooden dock is a small structure necessary to build wooden ships: Trireme and Caravel."
+
+[building_92]
+name=_("Royal Shipyard")
+genus="Improvement"
+graphic="b.royal_shipyard"
+graphic_alt="b.port_facility"
+sound="b_city_hall"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Advanced Navigation","Player"
+}
+build_cost=40
+upkeep=0
+sabotage=100
+helptext="Royal shipyard is the first step towards gaining control of the seas. It is necessary to be able to build bigger and powerful ships such as Galleons and Frigates.\n"
+
+[building_93]
+name=_("Oil Refinery")
+genus="Improvement"
+graphic="b.oil_refinery"
+graphic_alt="b.factory"
+sound="b_city_hall"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Refining","World"
+}
+build_cost=200
+upkeep=0
+sabotage=100
+helptext=" Oil refinery creates huge profit for its owner. Each city with a refinery gets 30 gold per oil rig within its radius. The oil tile must be mined and contain a railroad.\n"
+
+[building_94]
+name=_("Office of Hansa")
+genus="SmallWonder"
+graphic="b.hanseatic_quarter"
+graphic_alt="b.magellans_expedition"
+sound="w_magellans_expedition"
+sound_alt="w_generic"
+reqs={"type","name","range","present"
+"Tech","Navigation","Player",TRUE
+"Terrain","Ocean","Adjacent",TRUE
+"Tech","The Republic","Player",FALSE
+"Tech","Democracy","Player",FALSE
+}
+build_cost=100
+upkeep=0
+sabotage=0
+helptext=" As the maritime trade develops, coastal cities establish connections in order to increase profits.\nHanseatic Quarter adds 2 Trade on each Ocean tile in city range and 3 Trade on Deep Ocean tile. WARNING! It must be built before you discover Republic or Democracy; after you discover them, construction will not be possible anymore.\n"
+
+[building_95]
+name=_("Hospital")
+genus="Improvement"
+graphic="b.hospital"
+graphic_alt="b.police_station"
+sound="b_city_hall"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Medicine","Player"
+}
+build_cost=80
+upkeep=4
+sabotage=100
+helptext=" Hospital increases city health (reduces the chance of plague) by additional 20%. \n"
+
+[building_96]
+name=_("School")
+genus="Improvement"
+graphic="b.library"
+sound="b_library"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Tech","Industrialization","Player"
+}
+build_cost=40
+upkeep=1
+sabotage=100
+helptext="With industrial development the need for a more skilled workforce increases. School system is starting to emerge in order to train general population for work in factories. School increases the science output in a city by 50%.Decreases corruption by a small amount, depending on government."
+
+[building_97]
+name=_("Police 1st Precint")
+genus="Improvement"
+graphic="b.police_station"
+sound="b_police_station"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Building","Police Station","City"
+}
+build_cost=60
+upkeep=2
+sabotage=100
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
+
+[building_98]
+name=_("Police 2nd Precint")
+genus="Improvement"
+graphic="b.police_station"
+sound="b_police_station"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Building","Police 1st Precint","City"
+}
+build_cost=70
+upkeep=2
+sabotage=100
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
+
+[building_99]
+name=_("Police 3rd Precint")
+genus="Improvement"
+graphic="b.police_station"
+sound="b_police_station"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Building","Police 2nd Precint","City"
+}
+build_cost=80
+upkeep=2
+sabotage=100
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
+
+[building_100]
+name=_("Police 4th Precint")
+genus="Improvement"
+graphic="b.police_station"
+sound="b_police_station"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Building","Police 3rd Precint","City"
+}
+build_cost=90
+upkeep=2
+sabotage=100
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
+
+[building_101]
+name=_("Police 5th Precint")
+genus="Improvement"
+graphic="b.police_station"
+sound="b_police_station"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Building","Police 4th Precint","City"
+}
+build_cost=100
+upkeep=2
+sabotage=100
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
+
+[building_102]
+name=_("Police 6th Precint")
+genus="Improvement"
+graphic="b.police_station"
+sound="b_police_station"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Building","Police 5th Precint","City"
+}
+build_cost=110
+upkeep=2
+sabotage=100
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
+
+[building_103]
+name=_("Police 7th Precint")
+genus="Improvement"
+graphic="b.police_station"
+sound="b_police_station"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Building","Police 6th Precint","City"
+}
+build_cost=120
+upkeep=2
+sabotage=100
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
+
+[building_104]
+name=_("Police 8th Precint")
+genus="Improvement"
+graphic="b.police_station"
+sound="b_police_station"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Building","Police 7th Precint","City"
+}
+build_cost=130
+upkeep=2
+sabotage=100
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
+
+[building_105]
+name=_("Police 9th Precint")
+genus="Improvement"
+graphic="b.police_station"
+sound="b_police_station"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Building","Police 8th Precint","City"
+}
+build_cost=140
+upkeep=2
+sabotage=100
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
+
+[building_106]
+name=_("Police 10th Precint")
+genus="Improvement"
+graphic="b.police_station"
+sound="b_police_station"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Building","Police 9th Precint","City"
+}
+build_cost=150
+upkeep=2
+sabotage=100
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "

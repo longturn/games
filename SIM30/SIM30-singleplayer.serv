@@ -1,0 +1,67 @@
+
+# [effect_free_techs] needs to be updated from effects.ruleset to correspond the number of the players in a game
+# the value defines how many players need to invent a tech before it's given free to everyone. currently set to 18
+
+
+rulesetdir SIM30_fc21
+
+
+# map
+set alltemperate disabled
+set barbarians disabled
+set generator "FRACTAL"
+set huts 0
+set landmass 25
+set mapsize "PLAYER"
+set separatepoles disabled
+set specials 380
+set startpos "ALL"
+set steepness 30
+set temperature 50
+set tilesperplayer 150
+set topology "WRAPX"
+set wetness 60
+#set revealmap START  #uncomment this for revealing the map for test games
+
+# general rules
+set aifill 20
+set nationset all
+set citymindist 1
+set dispersion 2
+set foggedborders enabled
+set rapturedelay 3
+set restrictinfra enabled
+set revolen 1
+set spacerace enabled
+set endspaceship enabled
+set startunits cccccwwwwwwwxxx
+set unreachableprotects disabled
+set killunhomed 0
+set trading_tech disabled
+set airliftingstyle "FROM_ALLIES|TO_ALLIES"
+set razechance 90
+set happyborders ALLIED
+set occupychance 0
+
+set migration enabled
+set endturn 5000
+
+# diplomacy, technology
+set diplchance 50
+set diplbulbcost 5
+set diplgoldcost 5
+set diplomacy HUMAN
+set sciencebox 40
+set techlost_donor 0
+set techlost_recv 0
+set techpenalty 50
+set trademindist 10
+set trading_city disabled
+set team_pooled_research disabled
+set techlevel 0
+set borders enabled
+set contactturns 1
+set savepalace disabled
+
+set techlossforgiveness 1
+set techlossrestore 50
