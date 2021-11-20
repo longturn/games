@@ -683,7 +683,7 @@ reqs    =
 ; 2% more with City States
 [effect_waste_distance_city_states]
 type    = "Output_Waste_By_Distance"
-value   = 2
+value   = 3
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "City States", "Player", TRUE
@@ -1442,7 +1442,7 @@ reqs    =
 
 [effect_empire_size_base_tribal]
 type    = "Empire_Size_Base"
-value   = 14
+value   = 10
 reqs    =
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
@@ -1466,7 +1466,7 @@ reqs    =
 	
 [effect_empire_size_base_city_states]
 type    = "Empire_Size_Base"
-value   = 4
+value   = 6
 reqs    =
     { "type", "name", "range"
       "Gov", "City States", "Player"
@@ -1514,7 +1514,7 @@ reqs    =
 
 [effect_empire_size_step_tribal]
 type    = "Empire_Size_Step"
-value   = 7
+value   = 10
 reqs    =
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
@@ -2447,7 +2447,28 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
-[effect_workshop_1]
+[effect_workshop_2]
+type    = "Output_Bonus"
+value   = 30
+reqs    =
+    { "type", "name", "range"
+	  "Gov", "Republic", "Player", TRUE
+      "Building", "Workshop", "City"
+      "OutputType", "Shield", "Local"
+    }
+	
+[effect_workshop_3]
+type    = "Output_Bonus"
+value   = 30
+reqs    =
+    { "type", "name", "range"
+	  "Gov", "City States", "Player", TRUE
+      "Building", "Workshop", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+
+[effect_workshop_11]
 type    = "Pollu_Pop_Pct"
 value   = 15
 reqs    =
@@ -2455,6 +2476,25 @@ reqs    =
       "Gov", "Monarchy", "Player", TRUE
       "Building", "Workshop", "City"
     }
+	
+[effect_workshop_12]
+type    = "Pollu_Pop_Pct"
+value   = 15
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Republic", "Player", TRUE
+      "Building", "Workshop", "City"
+    }
+	
+[effect_workshop_13]
+type    = "Pollu_Pop_Pct"
+value   = 15
+reqs    =
+    { "type", "name", "range"
+      "Gov", "City States", "Player", TRUE
+      "Building", "Workshop", "City"
+    }
+
 
 ; effect always has value>=50, so this halves food waste
 [effect_granary]
@@ -4729,7 +4769,7 @@ reqs	=
 
 [effect_enemy_unhappiness_democracy]
 type    = "Enemy_Citizen_Unhappy_Pct"
-value   = 10
+value   = -20
 reqs	=
     { "type", "name", "range"
       "Gov", "Democracy", "Player"
@@ -4765,7 +4805,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
       "OutputType", "Trade", "Local"
-	  "MinSize", "10", "City", TRUE
+	  "MinSize", "9", "City", TRUE
     }
 
 	
@@ -4775,7 +4815,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
       "OutputType", "Trade", "Local"
-	  "MinSize", "20", "City", TRUE
+	  "MinSize", "17", "City", TRUE
     }
 
 
@@ -4786,6 +4826,135 @@ reqs    =
     { "type", "name", "range"
       "OutputType", "Trade", "Local"
 	  "MinSize", "30", "City", TRUE
+    }
+
+
+[effect_occupation_government_1]
+type    = "Output_Bonus"
+value   = -50
+reqs    =
+    { "type", "name", "range"
+      "Building", "Occupation Government", "City"
+      "OutputType", "Shield", "Local"
+    }
+
+
+[effect_occupation_government_2]
+type    = "Output_Bonus"
+value   = -50
+reqs    =
+    { "type", "name", "range"
+      "Building", "Occupation Government", "City"
+      "OutputType", "Gold", "Local"
+    }
+
+
+[effect_occupation_government_3]
+type    = "Output_Bonus"
+value   = -50
+reqs    =
+    { "type", "name", "range"
+      "Building", "Occupation Government", "City"
+      "OutputType", "Science", "Local"
+    }
+
+
+[effect_occupation_government_anarchy]
+type    = "Enemy_Citizen_Unhappy_Pct"
+value   = -5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Occupation Government", "City"
+      "Gov", "Anarchy", "Player"
+    }
+
+
+[effect_occupation_government_communism]
+type    = "Enemy_Citizen_Unhappy_Pct"
+value   = -25
+reqs    =
+    { "type", "name", "range"
+      "Building", "Occupation Government", "City"
+      "Gov", "Communism", "Player"
+    }
+
+
+[effect_occupation_government_despotism]
+type    = "Enemy_Citizen_Unhappy_Pct"
+value   = -30
+reqs    =
+    { "type", "name", "range"
+      "Building", "Occupation Government", "City"
+      "Gov", "Despotism", "Player"
+    }
+
+
+[effect_occupation_government_federation]
+type    = "Enemy_Citizen_Unhappy_Pct"
+value   = -15
+reqs    =
+    { "type", "name", "range"
+      "Building", "Occupation Government", "City"
+      "Gov", "Federation", "Player"
+    }
+
+
+[effect_occupation_government_monarchy]
+type    = "Enemy_Citizen_Unhappy_Pct"
+value   = -15
+reqs    =
+    { "type", "name", "range"
+      "Building", "Occupation Government", "City"
+      "Gov", "Monarchy", "Player"
+    }
+
+
+[effect_occupation_government_tribalism]
+type    = "Enemy_Citizen_Unhappy_Pct"
+value   = -40
+reqs    =
+    { "type", "name", "range"
+      "Building", "Occupation Government", "City"
+      "Gov", "Tribal", "Player"
+    }
+
+
+[effect_occupation_government_fundamentalism]
+type    = "Enemy_Citizen_Unhappy_Pct"
+value   = -40
+reqs    =
+    { "type", "name", "range"
+      "Building", "Occupation Government", "City"
+      "Gov", "Fundamentalism", "Player"
+    }
+
+
+[effect_occupation_government_city_states]
+type    = "Enemy_Citizen_Unhappy_Pct"
+value   = 0
+reqs    =
+    { "type", "name", "range"
+      "Building", "Occupation Government", "City"
+      "Gov", "City States", "Player"
+    }
+
+[effect_occupation_government_republic]
+type    = "Enemy_Citizen_Unhappy_Pct"
+value   = -20
+reqs    =
+    { "type", "name", "range"
+      "Building", "Occupation Government", "City"
+	  "Gov", "Republic", "Player"
+    }
+
+
+[effect_occupation_government_democracy]
+type    = "Enemy_Citizen_Unhappy_Pct"
+value   = -40
+reqs    =
+    { "type", "name", "range"
+      "Building", "Occupation Government", "City"
+      "Gov", "Democracy", "Player"
     }
 
 
