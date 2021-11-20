@@ -2447,7 +2447,7 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
-[effect_workshop]
+[effect_workshop_2]
 type    = "Output_Bonus"
 value   = 30
 reqs    =
@@ -2457,7 +2457,7 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 	
-[effect_workshop]
+[effect_workshop_3]
 type    = "Output_Bonus"
 value   = 30
 reqs    =
@@ -2468,7 +2468,7 @@ reqs    =
     }
 
 
-[effect_workshop_1]
+[effect_workshop_11]
 type    = "Pollu_Pop_Pct"
 value   = 15
 reqs    =
@@ -2477,7 +2477,7 @@ reqs    =
       "Building", "Workshop", "City"
     }
 	
-[effect_workshop_1]
+[effect_workshop_12]
 type    = "Pollu_Pop_Pct"
 value   = 15
 reqs    =
@@ -2486,7 +2486,7 @@ reqs    =
       "Building", "Workshop", "City"
     }
 	
-[effect_workshop_1]
+[effect_workshop_13]
 type    = "Pollu_Pop_Pct"
 value   = 15
 reqs    =
