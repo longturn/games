@@ -636,7 +636,7 @@ Since the tribal workers can't be captured you can't grab those from the idlers.
 
 
 [unit_worker]
-name          = _("?unit:Workers")
+name          = _("Workers")
 class         = "Small Land"
 tech_req      = "None"
 obsolete_by   = "Engineers"
@@ -720,6 +720,42 @@ Tundra into Plains, or even Ocean into Swamp in some circumstances \
 (when on board an ocean-going vessel, on a tile surrounded by \
 sufficient existing land). See the Terrain Alterations section \
 for more details.\
+")
+
+[unit_dredger]
+name          = _("Dredger")
+class         = "Patrol"
+tech_req      = "Explosives"
+obsolete_by   = "None"
+graphic       = "u.dredger"
+graphic_alt   = "u.engineers"
+sound_move    = "m_transport"
+sound_move_alt = "m_generic"
+sound_fight   = "f_transport"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 0
+attack        = 0
+defense       = 2
+hitpoints     = 20
+firepower     = 1
+move_rate     = 6
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Transform"
+;veteran_names = _("beginner"), _("seasoned"), _("senior"), _("expert")
+;veteran_raise_chance      = 50, 33, 20, 0
+;veteran_work_raise_chance = 3, 2, 1, 0
+;veteran_power_fact        = 100, 150, 175, 200
+;veteran_move_bonus        = 0, 0, 0, 0
+roles         = "Settlers", "WorkerStartUnit"
+helptext      = _("\
+The Dredger is your floating engineer.
 ")
 
 [unit_warriors]
@@ -1080,7 +1116,6 @@ Musketeers are infantry equipped with early\
  city defender.\
 ")
 
-
 [unit_navy_troops]
 name          = _("Navy Troops")
 class         = "Small Unit"
@@ -1113,13 +1148,45 @@ Navy Troops are infantry equipped with early\
  firearms and able to attack land tiles directrly from a ship. There is no loss of population if the defender in a city dies and the city has no walls. \
 ")
 
-[unit_riflemen]
-name          = _("Riflemen")
+[unit_militia]
+name          = _("Militia")
 class         = "Land"
-tech_req      = "Conscription"
+tech_req      = "Steam Engine"
+gov_req       = "Federation"
 obsolete_by   = "Infantry"
-graphic       = "u.riflemen"
-graphic_alt   = "-"
+graphic       = "u.militia"
+graphic_alt   = "u.riflemen"
+sound_move    = "m_riflemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_riflemen"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 1
+attack        = 4
+defense       = 4
+hitpoints     = 20
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer", "AddToCity"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
+helptext      = _("\
+Militias are riflemen recruited from the local population.\
+")
+
+[unit_grenadier]
+name          = _("Grenadier")
+class         = "Land"
+tech_req      = "Leadership"
+obsolete_by   = "Stormtrooper"
+graphic       = "u.grenadier"
+graphic_alt   = "u.riflemen"
 sound_move    = "m_riflemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_riflemen"
@@ -1141,17 +1208,16 @@ uk_gold       = 1
 flags         = "Capturer"
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
 helptext      = _("\
-Riflemen are World War-era infantry, very good\
- at defending your cities.\
+Grenadier are highly specialized attack infantry\
 ")
 
-[unit_grenadier]
-name          = _("Grenadier")
+[unit_riflemen]
+name          = _("Riflemen")
 class         = "Land"
-tech_req      = "Refrigeration"
-obsolete_by   = "Stormtrooper"
-graphic       = "u.grenadier"
-graphic_alt   = "u.riflemen"
+tech_req      = "Conscription"
+obsolete_by   = "Infantry"
+graphic       = "u.riflemen"
+graphic_alt   = "-"
 sound_move    = "m_riflemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_riflemen"
@@ -1173,7 +1239,8 @@ uk_gold       = 1
 flags         = "Capturer"
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
 helptext      = _("\
-Grenadier are highly specialized attack infantry\
+Riflemen are very good\
+ at defending your cities.\
 ")
 
 [unit_infantry]
@@ -1380,7 +1447,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Fanatic", "Capturer"
+flags         = "Fanatic", "Capturer", "Partial_Invis"
 roles         = "DefendGood", "DefendGoodStartUnit"
 helptext      = _("\
 Technicals are extremely mobile units.\
@@ -1800,7 +1867,7 @@ name          = _("Mounted Militia")
 class         = "Land"
 tech_req      = "Industrialization"
 gov_req       = "Federation"
-obsolete_by   = "None"
+obsolete_by   = "Mounted Infantry"
 graphic       = "u.mounted_militia"
 graphic_alt   = "u.cavalry"
 sound_move    = "m_cavalry"
@@ -1821,7 +1888,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer", "Horse"
+flags         = "Capturer", "Horse", "AddToCity"
 roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Mounted Militia are cheap cavalry recruited from the local population.\
@@ -2695,7 +2762,7 @@ build_cost    = 50
 pop_cost      = 0
 attack        = 5
 defense       = 3
-hitpoints     = 15
+hitpoints     = 30
 firepower     = 1
 move_rate     = 8
 vision_radius_sq = 72
@@ -2705,16 +2772,17 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "OneAttack", "AirAttacker", "HasNoZOC"
+flags         = "AirAttacker", "HasNoZOC", "Bombarder"
 roles         = ""
 helptext      = _("\
 Gunship Helicopters can NOT transport land units only Transport Helicopters can. \
+
 "), _("\
 Unlike other aircraft, Helicopters are not required to return to a city, \
 base, or Carrier to refuel after a set number of turns; however, care \
 must be exercised, due to the health they lose every turn.\
 ")
-bombard_rate = 2
+bombard_rate = 4
 
 [unit_attack_helicopter]
 name          = _("Attack Helicopter")
@@ -2727,9 +2795,9 @@ sound_move    = "m_helicopter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_helicopter"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 90
 pop_cost      = 0
-attack        = 5
+attack        = 13
 defense       = 3
 hitpoints     = 30
 firepower     = 1
@@ -2750,7 +2818,6 @@ Unlike other aircraft, Helicopters are not required to return to a city, \
 base, or Carrier to refuel after a set number of turns; however, care \
 must be exercised, due to the health they lose every turn.\
 ")
-bombard_rate = 2
 
 [unit_transport_helicopter]
 name          = _("Transport Helicopter")
@@ -2861,7 +2928,7 @@ uk_food       = 1
 uk_gold       = 1
 cargo         = "Land", "Small Land", "Merchant"
 flags         = "BadCityDefender", "HasNoZOC"
-roles         = "Ferryboat", "FerryStartUnit"
+roles         = "Ferryboat"
 helptext      = _("\
 The Trireme is your first boat unit. It can act\
  as a transport ship and has rudimentary offensive\
@@ -2902,7 +2969,7 @@ uk_food       = 1
 uk_gold       = 1
 cargo         = "Land", "Small Land", "Merchant"
 flags         = "BadCityDefender", "HasNoZOC", "Unique", "Unbribable"
-roles         = "Ferryboat", "FerryStartUnit"
+roles         = "Ferryboat"
 helptext      = _("\
 The Quinquireme is a better trireme. It can act\
  as a transport ship and has better offensive\
@@ -2945,7 +3012,7 @@ uk_food       = 1
 uk_gold       = 1
 cargo         = "Land", "Small Land", "Merchant", "Small Unit"
 flags         = "BadCityDefender", "HasNoZOC", "Settlers", "NonMil"
-roles         = "Ferryboat", "FerryStartUnit"
+roles         = "Ferryboat"
 helptext      = _("\
 The Barge can travel on ocean (but not deep ocean) and it can\
  clean up pollution. It's also able to\
@@ -2956,7 +3023,7 @@ The Barge can travel on ocean (but not deep ocean) and it can\
 name          = _("Longship")
 class         = "Patrol"
 tech_req      = "Astronomy"
-obsolete_by   = "Caravel"
+obsolete_by   = "Frigate"
 graphic       = "u.longboat"
 graphic_alt   = "u.trireme"
 sound_move    = "m_caravel"
@@ -2967,7 +3034,7 @@ build_cost    = 30
 pop_cost      = 0
 attack        = 1
 defense       = 2
-hitpoints     = 4
+hitpoints     = 10
 firepower     = 1
 move_rate     = 8
 vision_radius_sq = 18
@@ -2978,7 +3045,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Small Unit"
-flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC", "Unique", "Unbribable"
+flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC"
 roles         = "Ferryboat"
 helptext      = _("\
 The Longboat is your first deep ocean capable boat unit\
@@ -3028,6 +3095,39 @@ helptext      = _("\
 Your first marine unit.\
 ")
 
+[unit_tribal_knarr]
+name          = _("?unit: Tribal Knarr")
+class         = "Sea"
+tech_req      = "None"
+obsolete_by   = "None"
+graphic       = "u.tribal_knarr"
+graphic_alt   = "u.trireme"
+sound_move    = "m_caravel"
+sound_move_alt = "m_generic"
+sound_fight   = "f_caravel"
+sound_fight_alt = "f_generic"
+build_cost    = 35
+pop_cost      = 0
+attack        = 0
+defense       = 1
+hitpoints     = 9
+firepower     = 1
+move_rate     = 9
+vision_radius_sq = 18
+transport_cap = 3
+fuel          = 9
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Land", "Small Land", "Merchant"
+flags         = "Only_Native_Attack", "HasNoZOC"
+roles         = "Ferryboat", "FerryStartUnit"
+helptext      = _("\
+The tribal knarr is your deep ocean capable boat unit\
+to carry you to the new world.\
+")
+
 [unit_knarr]
 name          = _("Knarr")
 class         = "Sea"
@@ -3043,7 +3143,7 @@ build_cost    = 35
 pop_cost      = 0
 attack        = 1
 defense       = 1
-hitpoints     = 4
+hitpoints     = 10
 firepower     = 1
 move_rate     = 8
 vision_radius_sq = 18
@@ -3055,7 +3155,7 @@ uk_food       = 1
 uk_gold       = 1
 cargo         = "Land", "Small Land", "Merchant"
 flags         = "Only_Native_Attack", "HasNoZOC"
-roles         = "Ferryboat", "FerryStartUnit"
+roles         = "Ferryboat"
 helptext      = _("\
 The knarr is your first deep ocean capable boat unit\
  can carry three Merchant or Small Land units. It can act\
@@ -3244,7 +3344,7 @@ uk_food       = 1
 uk_gold       = 1
 cargo         = "Land", "Small Land", "Merchant"
 flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC"
-roles         = "Ferryboat", "FerryStartUnit", "BarbarianBoat"
+roles         = "Ferryboat", "BarbarianBoat"
 helptext      = _("\
 The Caravel is a sailing ship that can enter\
  any ocean tile.\
@@ -3277,7 +3377,7 @@ uk_food       = 1
 uk_gold       = 1
 cargo         = "Land", "Small Land", "Big Land", "Merchant", "Big Siege"
 flags         = "BadCityDefender", "HasNoZOC"
-roles         = "Ferryboat", "FerryStartUnit", "BarbarianBoat"
+roles         = "Ferryboat", "BarbarianBoat"
 helptext      = _("\
 The Galleon is a pure transport ship, the first which can\
  transport large wheeled units. It cannot attack other ships, though\
@@ -3733,13 +3833,13 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Land", "Small Land", "Big Land", "Merchant", "Big Siege","Small Unit"
-flags         = "Settlers", "BadCityDefender", "HasNoZOC"
+flags         = "BadCityDefender", "HasNoZOC"
 veteran_names = _("green (100%)"), _("veteran 1 (150%)"), _("veteran 2 (175%)"), _("veteran 3 (200%)"), _("hardened 1 (225%)"), _("hardened 2 (250%)"), _("hardened 3 (275%)"), _("elite 1 (300%)"), _("elite 2 (325%)"), _("elite 3 (350%)")
 veteran_raise_chance = 50, 45, 40, 35, 30, 25, 20, 15, 10, 0
 veteran_work_raise_chance = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 veteran_power_fact = 100, 150, 175, 200, 225, 250, 275, 300, 325, 350
 veteran_move_bonus = 0, 3, 6, 9, 12, 15, 18, 21, 24, 27
-roles         = "Ferryboat", "FerryStartUnit"
+roles         = "Ferryboat"
 helptext      = _("\
 The Transport cannot attack on its own but\
  may defend itself when under attack.\
@@ -4515,7 +4615,7 @@ build_cost    = 30
 pop_cost      = 0
 attack        = 0
 defense       = 1
-hitpoints     = 7
+hitpoints     = 12
 firepower     = 1
 move_rate     = 2
 vision_radius_sq = 18
