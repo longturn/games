@@ -93,7 +93,7 @@ vars=$$
 
 [settings]
 set={"name","value","gamestart"
-"aifill",10,10
+"aifill",0,0
 "airliftingstyle","FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED","FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
 "allowtake","HAhadOo","HAhadOo"
 "alltemperate",FALSE,FALSE
@@ -147,7 +147,7 @@ set={"name","value","gamestart"
 "mapseed",318483391,318483391
 "mapsize","XYSIZE","XYSIZE"
 "maxconnectionsperhost",4,4
-"maxplayers",15,15
+"maxplayers",150,150
 "mgr_distance",0,0
 "mgr_foodneeded",TRUE,TRUE
 "mgr_nationchance",50,50
@@ -186,7 +186,7 @@ set={"name","value","gamestart"
 "specials",300,300
 "startcity",FALSE,FALSE
 "startpos","DEFAULT","DEFAULT"
-"startunits","cccccwwwwwwxx","cccccwwwwwwxx"
+"startunits","ccccwwwwddxxffff","cccccwwwwwwxx"
 "steepness",30,30
 "team_pooled_research",FALSE,FALSE
 "teamplacement","CLOSEST","CLOSEST"
