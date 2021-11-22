@@ -451,7 +451,8 @@ Under a City States government, the nation is formed by a coalition of city stat
  Because of this the head of the states hold little control over taxing and distribution of resources. The citizens do \
  not get upset easily if the coalition only controls a few cities. Even the far away military units are tolerated.\ 
  However more territory and expansion leads to serious unhappiness issues since the system is unable to resolve internal conflicts in a vast empire.\
- A City States economy is very trade-oriented.\
+ A City States economy is very trade-oriented and this allows the capital city with the palace to have 8 extra content citizens.\
+ The City State goventment is intended to be used by nations with very little land.\
 "),
 ; /* xgettext:no-c-format */
 _("\
@@ -469,6 +470,7 @@ _("\
 * Base production waste is 10%. This increases with distance from the\
  capital (half as fast with knowledge of Trade).\n\
 * Big cities with size of 9 or more will get an extra 50 % defense against military attacks. \n\
+* The capital city will get extra 8 content citizens. \n\
 * The number of free units will be doubled for cities with size of 9 or more.\
   The number of units avoiding the military unhappiness will also double at this size.\n\
 ")
