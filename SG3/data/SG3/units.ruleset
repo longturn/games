@@ -944,7 +944,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer", "Horse"
+flags         = "Capturer", "Horse", "Bombarder"
 roles         = "AttackFastStartUnit", "Hut", "Barbarian", "Hunter"
 helptext      = _("\
 Mounted Archer are cavalry armed with a bow able to shoot while riding from horseback\
@@ -1950,11 +1950,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-bonuses       =
-   { "flag", "type", "value"
-     "Stuka", "DefenseDivider", 2
-   }
-flags         = ""
+flags         = "Stuka"
 roles         = "DefendOk", "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Early armors are your first tanks. Early Armors are motorized war wagons that are stronger and can take \
@@ -1989,11 +1985,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-bonuses       =
-   { "flag", "type", "value"
-     "Stuka", "DefenseDivider", 2
-   }
-flags         = ""
+flags         = "Stuka"
 roles         = "DefendOk", "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Armors are motorized war wagons that are faster, stronger, and can take \
@@ -2028,11 +2020,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-bonuses       =
-   { "flag", "type", "value"
-     "Stuka", "DefenseDivider", 2
-   }
-flags         = ""
+flags         = "Stuka"
 roles         = "DefendOk", "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Armors are motorized war wagons that are faster, stronger, and can take \
@@ -2067,11 +2055,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-bonuses       =
-   { "flag", "type", "value"
-     "Stuka", "DefenseDivider", 2
-   }
-flags         = ""
+flags         = "Stuka"
 roles         = "DefendOk", "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Is a type of armoured fighting vehicle, armed with a direct-fire artillery gun \
@@ -2656,9 +2640,10 @@ uk_food       = 1
 uk_gold       = 1
 bonuses       =
    { "flag", "type", "value"
+     "Stuka", "DefenseDivider", 2
    }
 targets       = "Air", "Missile", "Helicopter" 
-flags         = "AirAttacker", "HasNoZOC", "OneAttack", "Stuka"
+flags         = "AirAttacker", "HasNoZOC", "OneAttack"
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
 Attack Aircraft are your first attack aircraft units. They can\
@@ -2697,9 +2682,10 @@ uk_food       = 1
 uk_gold       = 1
 bonuses       =
    { "flag", "type", "value"
+     "Stuka", "DefenseDivider", 2
    }
 targets       = "Air", "Missile", "Helicopter"
-flags         = "AirAttacker", "HasNoZOC", "OneAttack", "Stuka"
+flags         = "AirAttacker", "HasNoZOC", "OneAttack"
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
 Advanced Attack Aircraft are your second attack aircraft units. Defending tanks and naval units get their defense halved. They can\
@@ -2751,7 +2737,7 @@ SAM (Surface to Air Missile) is equipped with an advanced\
 name          = _("Gunship Helicopter")
 class         = "Helicopter"
 tech_req      = "Combined Arms"
-obsolete_by   = "Attack Helicopter"
+obsolete_by   = "None"
 graphic       = "u.gunship_helicopter"
 graphic_alt   = "u.helicopter"
 sound_move    = "m_helicopter"
@@ -3511,7 +3497,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "BadCityDefender"
+flags         = "BadCityDefender", "Stuka"
 roles         = "Hunter"
 helptext      = _("\
 The Ironclad is an armored ship,\
@@ -3547,7 +3533,7 @@ bonuses       =
    { "flag", "type", "value"
      "Submarine", "DefenseMultiplier", 1
    }
-flags         = "BadCityDefender"
+flags         = "BadCityDefender", "Stuka"
 roles         = "Hunter"
 helptext      = _("\
 An improved Ironclad, with better move rate and vision.\
@@ -3582,7 +3568,11 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "BadCityDefender"
+bonuses       =
+   { "flag", "type", "value"
+     "Stuka", "DefenseDivider", 2
+   }
+flags         = "BadCityDefender", "Stuka"
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
 The Cruiser is a strong offensive boat unit.\
@@ -3617,7 +3607,7 @@ bonuses       =
    { "flag", "type", "value"
      "AirAttacker", "DefenseMultiplier", 4
    }
-flags         = "BadCityDefender"
+flags         = "BadCityDefender", "Stuka"
 roles         = "DefendGood", "DefendGoodStartUnit"
 helptext      = _("\
 The AEGIS Cruiser is equipped with an advanced\
@@ -3653,7 +3643,7 @@ bonuses       =
    { "flag", "type", "value"
      "Stuka", "DefenseDivider", 2
    }
-flags         = "BadCityDefender"
+flags         = "BadCityDefender", "Stuka"
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
 The Battleship is the supreme naval unit with\
@@ -3793,7 +3783,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Land", "Air", "Missile", "Helicopter"
-flags         = "BadCityDefender", "HasNoZOC"
+flags         = "BadCityDefender", "HasNoZOC", "Stuka"
 roles         = "DefendGood", "DefendGoodStartUnit"
 helptext      = _("\
 The Carrier is a mobile airport.\
@@ -3833,7 +3823,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Land", "Small Land", "Big Land", "Merchant", "Big Siege","Small Unit"
-flags         = "BadCityDefender", "HasNoZOC"
+flags         = "BadCityDefender", "HasNoZOC", "Stuka"
 veteran_names = _("green (100%)"), _("veteran 1 (150%)"), _("veteran 2 (175%)"), _("veteran 3 (200%)"), _("hardened 1 (225%)"), _("hardened 2 (250%)"), _("hardened 3 (275%)"), _("elite 1 (300%)"), _("elite 2 (325%)"), _("elite 3 (350%)")
 veteran_raise_chance = 50, 45, 40, 35, 30, 25, 20, 15, 10, 0
 veteran_work_raise_chance = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
