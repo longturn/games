@@ -186,9 +186,9 @@ illness_pollution_factor = 50
 ;                    / ((distance to capital) * 100)
 ; See city_incite_cost() for more details
 base_incite_cost = 1000
-improvement_factor = 1
-unit_factor = 2
-total_factor = 2500
+improvement_factor = 10
+unit_factor = 20
+total_factor = 100
 
 [global_unit_options]
 ; Shore landing style
