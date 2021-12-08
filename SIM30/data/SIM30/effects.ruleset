@@ -865,9 +865,19 @@ nreqs   =
 	"Gov", "Democracy", "Player"
       }	
 
+[effect_upkeep_free_units_shield_base_tribal]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 4
+reqs    =
+      {	"type", "name", "range"
+	"OutputType", "Shield", "Local"
+	"Gov", "Tribal", "Player"
+      }	
+
+
 [effect_upkeep_free_units_food_base_tribal]
 type    = "Unit_Upkeep_Free_Per_City"
-value   = 5
+value   = 3	
 reqs    =
       {	"type", "name", "range"
 	"OutputType", "Food", "Local"
@@ -876,7 +886,7 @@ reqs    =
 
 [effect_upkeep_free_units_food_base_despotism_funda]
 type    = "Unit_Upkeep_Free_Per_City"
-value   = 5
+value   = 3
 reqs    =
       {	"type", "name", "range"
 	"OutputType", "Food", "Local"
@@ -2026,13 +2036,13 @@ reqs    =
 	"Building", "Courthouse", "City"
       }	
 
-[effect_tribal_incite]
-type    = "Incite_Cost_Pct"
-value   = -99
-reqs    =
-      {	"type", "name", "range"
-	"Gov", "Tribal", "Player"
-      }	
+;[effect_tribal_incite]
+;type    = "Incite_Cost_Pct"
+;value   = -99
+;reqs    =
+;      {	"type", "name", "range"
+;	"Gov", "Tribal", "Player"
+;      }	
 
 
 [effect_factory]
@@ -6061,3 +6071,20 @@ reqs    =
 	"Building", "Police 10th Precint", "City", TRUE
       }	
 
+[effect_shield2gold_raiders]
+type	= "Shield2Gold_Factor"
+value	= 100
+reqs	= 
+	{ "type", "name", "range", "present"
+	  "Gov", "Tribal", "Player", FALSE
+	  "UnitType", "Raiders", "Local", TRUE
+	}
+
+[effect_shield2gold_bowmen]
+type	= "Shield2Gold_Factor"
+value	= 100
+reqs	= 
+	{ "type", "name", "range", "present"
+	  "Gov", "Tribal", "Player", FALSE
+	  "UnitType", "Bowmen", "Local", TRUE
+	}
