@@ -1,6 +1,6 @@
 
 ; Modifying this file:
-; You should not modify this file except to make bugfixes or
+; You should not modify this file except to make bugfixes or¸
 ; for other "maintenance".  If you want to make custom changes,
 ; you should create a new datadir subdirectory and copy this file
 ; into that directory, and then modify that copy.  Then use the
@@ -164,7 +164,7 @@ graphic_alt = "-"
 
 [advance_ceremonial_burial]
 name     = _("Ceremonial Burial")
-req1     = "Culture"
+req1     = "None"
 req2     = "None"
 flags    = ""
 graphic     = "a.ceremonial_burial"
@@ -489,7 +489,7 @@ graphic_alt = "-"
 
 [advance_map_making]
 name     = _("Map Making")
-req1     = "Alphabet"
+req1     = "Pictography"
 req2     = "None"
 flags    = ""
 graphic     = "a.map_making"
@@ -540,7 +540,7 @@ Reduces the risk of plague in your cities by 30% of the base chance \
 [advance_metallurgy]
 name     = _("Metallurgy")
 req1     = "Gunpowder"
-req2     = "Mathematics"
+req2     = "None"
 flags    = ""
 graphic     = "a.metallurgy"
 graphic_alt = "-"
@@ -566,7 +566,7 @@ graphic_alt = "-"
 
 [advance_monarchy]
 name     = _("Monarchy")
-req1     = "Ceremonial Burial"
+req1     = "Polytheism"
 req2     = "Code of Laws"
 flags    = ""
 graphic     = "a.monarchy"
@@ -576,7 +576,7 @@ graphic_alt = "-"
 [advance_monotheism]
 name     = _("Monotheism")
 req1     = "Astronomy"
-req2     = "Polytheism"
+req2     = "Religion"
 flags    = ""
 graphic     = "a.monotheism"
 graphic_alt = "-"
@@ -651,8 +651,8 @@ graphic_alt = "-"
 
 [advance_polytheism]
 name     = _("Polytheism")
-req1     = "Horseback Riding"
-req2     = "Ceremonial Burial"
+req1     = "Ceremonial Burial"
+req2     = "Mysticism"
 flags    = ""
 graphic     = "a.polytheism"
 graphic_alt = "-"
@@ -661,7 +661,7 @@ graphic_alt = "-"
 [advance_pottery]
 name     = _("Pottery")
 req1     = "Fired Brick"
-req2     = "None"
+req2     = "Culture"
 flags    = ""
 graphic     = "a.pottery"
 graphic_alt = "-"
@@ -717,6 +717,14 @@ graphic_alt = "-"
 [advance_refrigeration]
 name     = _("Refrigeration")
 req1     = "Electricity"
+req2     = "None"
+graphic     = "a.refrigeration"
+graphic_alt = "-"
+;cost     = 350
+
+[advance_religion]
+name     = _("Religion")
+req1     = "Polytheism"
 req2     = "None"
 graphic     = "a.refrigeration"
 graphic_alt = "-"
@@ -837,7 +845,7 @@ graphic_alt = "-"
 
 [advance_the_wheel]
 name     = _("The Wheel")
-req1     = "Horseback Riding"
+req1     = "Tools"
 req2     = "None"
 flags    = ""
 graphic     = "a.the_wheel"
@@ -867,7 +875,7 @@ graphic_alt = "-"
 [advance_trade]
 name     = _("Trade")
 req1     = "Currency"
-req2     = "Pottery"
+req2     = "Wagons"
 flags    = ""
 graphic     = "a.trade"
 graphic_alt = "-"
@@ -884,6 +892,15 @@ flags    = ""
 graphic     = "a.university"
 graphic_alt = "-"
 ;cost     = 100
+
+[advance_wagons]
+name     = _("Wagons")
+req1     = "The Wheel"
+req2     = "Horseback Riding"
+flags    = ""
+graphic     = "a.the_wheel"
+graphic_alt = "-"
+;cost     = 20
 
 [advance_warrior_code]
 name     = _("Warrior Code")
