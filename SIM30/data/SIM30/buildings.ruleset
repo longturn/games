@@ -1801,7 +1801,7 @@ name		= _("Lighthouse")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Map Making", "Player"
+      "Tech", "Seafaring", "Player"
       "Terrain", "Ocean", "Adjacent"
     }
 graphic	= "b.lighthouse"
@@ -1917,7 +1917,7 @@ name		= _("Mausoleum of Mausolos")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Ceremonial Burial", "Player"
+      "Tech", "Hierarchy", "Player"
     }
 graphic         = "b.mausoleum"
 graphic_alt     = "b.oracle"
@@ -1967,7 +1967,7 @@ name		= _("Temple of Artemis")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Mysticism", "Player"
+      "Tech", "Polytheism", "Player"
       "Building", "Temple", "City"
     }
 graphic         = "b.temple_of_artemis"
