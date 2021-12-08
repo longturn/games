@@ -57,7 +57,7 @@ graphic="a.bronze_working"
 
 [advance_8]
 name=_("Ceremonial Burial")
-req1="Culture"
+req1="None"
 req2="None"
 graphic="a.ceremonial_burial"
 
@@ -268,7 +268,7 @@ graphic="a.magnetism"
 
 [advance_42]
 name=_("Map Making")
-req1="Alphabet"
+req1="Pictography"
 req2="None"
 graphic="a.map_making"
 
@@ -300,7 +300,7 @@ helptext="Reduces the risk of plague in your cities by 30% of the base chance (t
 [advance_47]
 name=_("Metallurgy")
 req1="Gunpowder"
-req2="Mathematics"
+req2="None"
 graphic="a.metallurgy"
 
 [advance_48]
@@ -317,14 +317,14 @@ graphic="a.mobile_warfare"
 
 [advance_50]
 name=_("Monarchy")
-req1="Ceremonial Burial"
+req1="Polytheism"
 req2="Code of Laws"
 graphic="a.monarchy"
 
 [advance_51]
 name=_("Monotheism")
 req1="Astronomy"
-req2="Polytheism"
+req2="Religion"
 graphic="a.monotheism"
 
 [advance_52]
@@ -375,14 +375,14 @@ graphic="a.plastics"
 
 [advance_59]
 name=_("Polytheism")
-req1="Horseback Riding"
-req2="Ceremonial Burial"
+req1="Ceremonial Burial"
+req2="Mysticism"
 graphic="a.polytheism"
 
 [advance_60]
 name=_("Pottery")
 req1="Fired Brick"
-req2="None"
+req2="Culture"
 graphic="a.pottery"
 
 [advance_61]
@@ -418,124 +418,136 @@ req2="None"
 graphic="a.refrigeration"
 
 [advance_66]
+name=_("Religion")
+req1="Polytheism"
+req2="None"
+graphic="a.refrigeration"
+
+[advance_67]
 name=_("Robotics")
 req1="Mobile Warfare"
 req2="Computers"
 graphic="a.robotics"
 
-[advance_67]
+[advance_68]
 name=_("Rocketry")
 req1="Advanced Flight"
 req2="Miniaturization"
 graphic="a.rocketry"
 helptext="Doubles movement of nuclear units."
 
-[advance_68]
+[advance_69]
 name=_("Architecture")
 req1="Construction"
 req2="University"
 graphic="a.sanitation"
 
-[advance_69]
+[advance_70]
 name=_("Seafaring")
 req1="Pottery"
 req2="Map Making"
 graphic="a.seafaring"
 
-[advance_70]
+[advance_71]
 name=_("Space Flight")
 req1="Computers"
 req2="Rocketry"
 graphic="a.space_flight"
 
-[advance_71]
+[advance_72]
 name=_("Stealth")
 req1="Plastics"
 req2="Space Flight"
 graphic="a.stealth"
 
-[advance_72]
+[advance_73]
 name=_("Steam Engine")
 req1="Chemistry"
 req2="Metallurgy"
 graphic="a.steam_engine"
 
-[advance_73]
+[advance_74]
 name=_("Steel")
 req1="Engineering"
 req2="Industrialization"
 graphic="a.steel"
 
-[advance_74]
+[advance_75]
 name=_("Superconductors")
 req1="Space Flight"
 req2="Laser"
 graphic="a.superconductors"
 
-[advance_75]
+[advance_76]
 name=_("Tactics")
 req1="Conscription"
 req2="Leadership"
 graphic="a.tactics"
 
-[advance_76]
+[advance_77]
 name=_("The Corporation")
 req1="Economics"
 req2="Industrialization"
 graphic="a.the_corporation"
 helptext="Halves the corruption of trade related to distance from the capital (or eliminates it for Federation governments)."
 
-[advance_77]
+[advance_78]
 name=_("The Republic")
 req1="Code of Laws"
 req2="Philosophy"
 graphic="a.the_republic"
 
-[advance_78]
+[advance_79]
 name=_("The Wheel")
-req1="Horseback Riding"
+req1="Tools"
 req2="None"
 graphic="a.the_wheel"
 
-[advance_79]
+[advance_80]
 name=_("Theology")
 req1="Philosophy"
 req2="Monotheism"
 graphic="a.theology"
 helptext="Improves the effect of Cathedrals."
 
-[advance_80]
+[advance_81]
 name=_("Theory of Gravity")
 req1="Physics"
 req2="University"
 graphic="a.theory_of_gravity"
 
-[advance_81]
+[advance_82]
 name=_("Trade")
 req1="Currency"
-req2="Pottery"
+req2="Wagons"
 graphic="a.trade"
 helptext="Halves the waste of production related to distance from the capital."
 
-[advance_82]
+[advance_83]
 name=_("University")
 req1="Mathematics"
 req2="Philosophy"
 graphic="a.university"
 
-[advance_83]
+[advance_84]
+name=_("Wagons")
+req1="The Wheel"
+req2="Horseback Riding"
+graphic="a.the_wheel"
+
+[advance_85]
 name=_("Warrior Code")
 req1="Hierarchy"
 req2="None"
 graphic="a.warrior_code"
 
-[advance_84]
+[advance_86]
 name=_("Writing")
 req1="Alphabet"
 req2="None"
 graphic="a.writing"
 
-[advance_85]
+[advance_87]
 name=_("Naval Doctrine")
 req1="Advanced Navigation"
 req2="None"
@@ -543,57 +555,57 @@ graphic="a.advanced_navigation"
 graphic_alt="a.naval_doctrine"
 helptext="IMPORTANT! In order to produce modern ships, you must build corresponding shipyards!"
 
-[advance_86]
+[advance_88]
 name=_("Formation")
 req1="Iron Working"
 req2="None"
 graphic="a.writing"
 helptext="'Pullo, formation! Pullo! Single formation!' "," ... ","'Shields on me! Get back in formation, you drunken fool!' ","- Lucius Vorenus, 'Rome' "
 
-[advance_87]
+[advance_89]
 name=_("Pictography")
 req1="Culture"
 req2="None"
 graphic="-"
 
-[advance_88]
+[advance_90]
 name=_("Dried Brick")
 req1="Tools"
 req2="None"
 graphic="-"
 
-[advance_89]
+[advance_91]
 name=_("Fired Brick")
 req1="Dried Brick"
 req2="None"
 graphic="-"
 
-[advance_90]
+[advance_92]
 name=_("Hierarchy")
 req1="Culture"
 req2="None"
 graphic="-"
 
-[advance_91]
+[advance_93]
 name=_("Nuclear Doctrine")
 req1="Nuclear Fission"
 req2="None"
 graphic="-"
 
-[advance_92]
+[advance_94]
 name=_("Intercontinental Ballistics")
 req1="Nuclear Doctrine"
 req2="None"
 graphic="-"
 
-[advance_93]
+[advance_95]
 name=_("Culture")
 req1="None"
 req2="None"
 graphic="-"
 cost=50
 
-[advance_94]
+[advance_96]
 name=_("Tools")
 req1="None"
 req2="None"

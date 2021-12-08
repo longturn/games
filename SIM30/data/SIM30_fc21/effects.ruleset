@@ -534,15 +534,23 @@ reqs={"type","name","range","present"
 
 [effect_61]
 type="Unit_Upkeep_Free_Per_City"
-value=1
+value=4
 reqs={"type","name","range"
-"OutputType","food","Local"
+"OutputType","shield","Local"
 "Gov","Tribal","Player"
 }
 
 [effect_62]
 type="Unit_Upkeep_Free_Per_City"
-value=5
+value=3
+reqs={"type","name","range"
+"OutputType","food","Local"
+"Gov","Tribal","Player"
+}
+
+[effect_63]
+type="Unit_Upkeep_Free_Per_City"
+value=3
 reqs={"type","name","range","present"
 "OutputType","food","Local",TRUE
 "Gov","Anarchy","Player",FALSE
@@ -553,7 +561,7 @@ reqs={"type","name","range","present"
 "Gov","Democracy","Player",FALSE
 }
 
-[effect_63]
+[effect_64]
 type="Unit_Upkeep_Free_Per_City"
 value=4
 reqs={"type","name","range"
@@ -561,7 +569,7 @@ reqs={"type","name","range"
 "Gov","Monarchy","Player"
 }
 
-[effect_64]
+[effect_65]
 type="Unit_Upkeep_Free_Per_City"
 value=2
 reqs={"type","name","range","present"
@@ -573,22 +581,12 @@ reqs={"type","name","range","present"
 "Gov","Fundamentalism","Player",FALSE
 }
 
-[effect_65]
-type="Unit_Upkeep_Free_Per_City"
-value=1
-reqs={"type","name","range"
-"OutputType","food","Local"
-"MinSize","2","City"
-"Gov","Tribal","Player"
-}
-
 [effect_66]
 type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
 "OutputType","food","Local"
-"MinSize","4","City"
-"Gov","Tribal","Player"
+"MinSize","2","City"
 }
 
 [effect_67]
@@ -596,8 +594,7 @@ type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
 "OutputType","food","Local"
-"MinSize","6","City"
-"Gov","Tribal","Player"
+"MinSize","4","City"
 }
 
 [effect_68]
@@ -605,8 +602,7 @@ type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
 "OutputType","food","Local"
-"MinSize","8","City"
-"Gov","Tribal","Player"
+"MinSize","6","City"
 }
 
 [effect_69]
@@ -614,7 +610,7 @@ type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
 "OutputType","food","Local"
-"MinSize","10","City"
+"MinSize","8","City"
 }
 
 [effect_70]
@@ -622,7 +618,6 @@ type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
 "OutputType","food","Local"
-"MinSize","12","City"
 }
 
 [effect_71]
@@ -630,7 +625,7 @@ type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
 "OutputType","food","Local"
-"MinSize","14","City"
+"MinSize","12","City"
 }
 
 [effect_72]
@@ -638,7 +633,7 @@ type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
 "OutputType","food","Local"
-"MinSize","16","City"
+"MinSize","14","City"
 }
 
 [effect_73]
@@ -646,7 +641,7 @@ type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
 "OutputType","food","Local"
-"MinSize","18","City"
+"MinSize","16","City"
 }
 
 [effect_74]
@@ -654,7 +649,7 @@ type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
 "OutputType","food","Local"
-"MinSize","20","City"
+"MinSize","18","City"
 }
 
 [effect_75]
@@ -662,7 +657,7 @@ type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
 "OutputType","food","Local"
-"MinSize","22","City"
+"MinSize","20","City"
 }
 
 [effect_76]
@@ -670,7 +665,7 @@ type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
 "OutputType","food","Local"
-"MinSize","24","City"
+"MinSize","22","City"
 }
 
 [effect_77]
@@ -678,7 +673,7 @@ type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
 "OutputType","food","Local"
-"MinSize","26","City"
+"MinSize","24","City"
 }
 
 [effect_78]
@@ -686,7 +681,7 @@ type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
 "OutputType","food","Local"
-"MinSize","28","City"
+"MinSize","26","City"
 }
 
 [effect_79]
@@ -694,192 +689,200 @@ type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
 "OutputType","food","Local"
-"MinSize","30","City"
+"MinSize","28","City"
 }
 
 [effect_80]
+type="Unit_Upkeep_Free_Per_City"
+value=1
+reqs={"type","name","range"
+"OutputType","food","Local"
+"MinSize","30","City"
+}
+
+[effect_81]
 type="Civil_War_Chance"
 value=99
 reqs={"type","name","range"
 "Gov","Anarchy","Player"
 }
 
-[effect_81]
+[effect_82]
 type="Civil_War_Chance"
 value=80
 reqs={"type","name","range"
 "Gov","Despotism","Player"
 }
 
-[effect_82]
+[effect_83]
 type="Civil_War_Chance"
 value=70
 reqs={"type","name","range"
 "Gov","Monarchy","Player"
 }
 
-[effect_83]
+[effect_84]
 type="Civil_War_Chance"
 value=50
 reqs={"type","name","range"
 "Gov","Communism","Player"
 }
 
-[effect_84]
+[effect_85]
 type="Civil_War_Chance"
 value=60
 reqs={"type","name","range"
 "Gov","Fundamentalism","Player"
 }
 
-[effect_85]
+[effect_86]
 type="Civil_War_Chance"
 value=40
 reqs={"type","name","range"
 "Gov","Republic","Player"
 }
 
-[effect_86]
+[effect_87]
 type="Civil_War_Chance"
 value=30
 reqs={"type","name","range"
 "Gov","Democracy","Player"
 }
 
-[effect_87]
-type="Max_Rates"
-value=100
-reqs={"type","name","range"
-"Gov","Anarchy","Player"
-}
-
 [effect_88]
 type="Max_Rates"
 value=100
 reqs={"type","name","range"
-"Gov","Tribal","Player"
+"Gov","Anarchy","Player"
 }
 
 [effect_89]
 type="Max_Rates"
 value=100
 reqs={"type","name","range"
-"Gov","Despotism","Player"
+"Gov","Tribal","Player"
 }
 
 [effect_90]
 type="Max_Rates"
-value=80
+value=100
 reqs={"type","name","range"
-"Gov","Monarchy","Player"
+"Gov","Despotism","Player"
 }
 
 [effect_91]
 type="Max_Rates"
 value=80
 reqs={"type","name","range"
-"Gov","Communism","Player"
+"Gov","Monarchy","Player"
 }
 
 [effect_92]
+type="Max_Rates"
+value=80
+reqs={"type","name","range"
+"Gov","Communism","Player"
+}
+
+[effect_93]
 type="Max_Rates"
 value=70
 reqs={"type","name","range"
 "Gov","Fundamentalism","Player"
 }
 
-[effect_93]
+[effect_94]
 type="Max_Rates"
 value=60
 reqs={"type","name","range"
 "Gov","Republic","Player"
 }
 
-[effect_94]
+[effect_95]
 type="Max_Rates"
 value=50
 reqs={"type","name","range"
 "Gov","Democracy","Player"
 }
 
-[effect_95]
+[effect_96]
 type="Martial_Law_Each"
 value=0
 reqs={"type","name","range"
 "Gov","Anarchy","Player"
 }
 
-[effect_96]
+[effect_97]
 type="Martial_Law_Each"
 value=1
 reqs={"type","name","range"
 "Gov","Despotism","Player"
 }
 
-[effect_97]
+[effect_98]
 type="Martial_Law_Each"
 value=1
 reqs={"type","name","range"
 "Gov","Monarchy","Player"
-}
-
-[effect_98]
-type="Martial_Law_Each"
-value=2
-reqs={"type","name","range"
-"Gov","Tribal","Player"
 }
 
 [effect_99]
 type="Martial_Law_Each"
 value=2
 reqs={"type","name","range"
-"Gov","Communism","Player"
+"Gov","Tribal","Player"
 }
 
 [effect_100]
-type="Martial_Law_Max"
-value=3
+type="Martial_Law_Each"
+value=2
 reqs={"type","name","range"
-"Gov","Anarchy","Player"
+"Gov","Communism","Player"
 }
 
 [effect_101]
 type="Martial_Law_Max"
 value=3
 reqs={"type","name","range"
-"Gov","Tribal","Player"
+"Gov","Anarchy","Player"
 }
 
 [effect_102]
 type="Martial_Law_Max"
 value=3
 reqs={"type","name","range"
-"Gov","Despotism","Player"
+"Gov","Tribal","Player"
 }
 
 [effect_103]
 type="Martial_Law_Max"
 value=3
 reqs={"type","name","range"
-"Gov","Monarchy","Player"
+"Gov","Despotism","Player"
 }
 
 [effect_104]
 type="Martial_Law_Max"
 value=3
 reqs={"type","name","range"
-"Gov","Communism","Player"
+"Gov","Monarchy","Player"
 }
 
 [effect_105]
+type="Martial_Law_Max"
+value=3
+reqs={"type","name","range"
+"Gov","Communism","Player"
+}
+
+[effect_106]
 type="Output_Penalty_Tile"
 value=2
 reqs={"type","name","range"
 "Gov","Tribal","Player"
 }
 
-[effect_106]
+[effect_107]
 type="Output_Penalty_Tile"
 value=2
 reqs={"type","name","range","present"
@@ -892,7 +895,7 @@ reqs={"type","name","range","present"
 "Building","Pyramids","Player",FALSE
 }
 
-[effect_107]
+[effect_108]
 type="Output_Inc_Tile"
 value=1
 reqs={"type","name","range","present"
@@ -901,7 +904,7 @@ reqs={"type","name","range","present"
 "TerrainClass","Oceanic","Local",FALSE
 }
 
-[effect_108]
+[effect_109]
 type="Output_Inc_Tile"
 value=1
 reqs={"type","name","range","present"
@@ -910,7 +913,7 @@ reqs={"type","name","range","present"
 "TerrainClass","Oceanic","Local",FALSE
 }
 
-[effect_109]
+[effect_110]
 type="Output_Inc_Tile_Celebrate"
 value=1
 reqs={"type","name","range","present"
@@ -922,21 +925,21 @@ reqs={"type","name","range","present"
 "Gov","Fundamentalism","Player",FALSE
 }
 
-[effect_110]
+[effect_111]
 type="Revolution_Unhappiness"
 value=2
 reqs={"type","name","range"
 "Gov","Republic","Player"
 }
 
-[effect_111]
+[effect_112]
 type="Revolution_Unhappiness"
 value=2
 reqs={"type","name","range"
 "Gov","Democracy","Player"
 }
 
-[effect_112]
+[effect_113]
 type="Veteran_Build"
 value=1
 reqs={"type","name","range"
@@ -944,7 +947,7 @@ reqs={"type","name","range"
 "UnitFlag","Diplomat","Local"
 }
 
-[effect_113]
+[effect_114]
 type="Inspire_Partisans"
 value=1
 reqs={"type","name","range","present"
@@ -956,7 +959,7 @@ reqs={"type","name","range","present"
 "Nation","Pirate","Player",FALSE
 }
 
-[effect_114]
+[effect_115]
 type="Inspire_Partisans"
 value=1
 reqs={"type","name","range","present"
@@ -968,7 +971,7 @@ reqs={"type","name","range","present"
 "Nation","Pirate","Player",FALSE
 }
 
-[effect_115]
+[effect_116]
 type="Output_Bonus_2"
 value=-100
 reqs={"type","name","range"
@@ -976,7 +979,7 @@ reqs={"type","name","range"
 "OutputType","trade","Local"
 }
 
-[effect_116]
+[effect_117]
 type="Output_Bonus"
 value=-100
 reqs={"type","name","range"
@@ -984,7 +987,7 @@ reqs={"type","name","range"
 "OutputType","gold","Local"
 }
 
-[effect_117]
+[effect_118]
 type="Output_Bonus"
 value=-100
 reqs={"type","name","range"
@@ -992,7 +995,7 @@ reqs={"type","name","range"
 "OutputType","science","Local"
 }
 
-[effect_118]
+[effect_119]
 type="Output_Bonus_2"
 value=-50
 reqs={"type","name","range"
@@ -1000,21 +1003,21 @@ reqs={"type","name","range"
 "OutputType","science","Local"
 }
 
-[effect_119]
+[effect_120]
 type="Happiness_To_Gold"
 value=1
 reqs={"type","name","range"
 "Gov","Fundamentalism","Player"
 }
 
-[effect_120]
+[effect_121]
 type="Fanatics"
 value=1
 reqs={"type","name","range"
 "Gov","Fundamentalism","Player"
 }
 
-[effect_121]
+[effect_122]
 type="Veteran_Build"
 value=3
 reqs={"type","name","range","present"
@@ -1024,7 +1027,7 @@ reqs={"type","name","range","present"
 "UnitFlag","NoVeteran","Local",FALSE
 }
 
-[effect_122]
+[effect_123]
 type="Veteran_Build"
 value=3
 reqs={"type","name","range","present"
@@ -1034,7 +1037,7 @@ reqs={"type","name","range","present"
 "UnitFlag","NoVeteran","Local",FALSE
 }
 
-[effect_123]
+[effect_124]
 type="HP_Regen"
 value=100
 reqs={"type","name","range"
@@ -1042,7 +1045,7 @@ reqs={"type","name","range"
 "UnitClass","Air","Local"
 }
 
-[effect_124]
+[effect_125]
 type="HP_Regen"
 value=100
 reqs={"type","name","range"
@@ -1050,25 +1053,25 @@ reqs={"type","name","range"
 "UnitClass","Helicopter","Local"
 }
 
-[effect_125]
+[effect_126]
 type="Airlift"
 value=1
 reqs={"type","name","range"
 "Building","Airport","City"
 }
 
-[effect_126]
+[effect_127]
 type="Size_Unlimit"
 value=1
 
-[effect_127]
+[effect_128]
 type="Health_Pct"
 value=50
 reqs={"type","name","range"
 "Building","Aqueduct","City"
 }
 
-[effect_128]
+[effect_129]
 type="Health_Pct"
 value=50
 reqs={"type","name","range","present"
@@ -1076,7 +1079,7 @@ reqs={"type","name","range","present"
 "Building","Aqueduct","City",FALSE
 }
 
-[effect_129]
+[effect_130]
 type="Health_Pct"
 value=50
 reqs={"type","name","range","present"
@@ -1085,7 +1088,7 @@ reqs={"type","name","range","present"
 "Building","Aqueduct, River","City",FALSE
 }
 
-[effect_130]
+[effect_131]
 type="Output_Bonus"
 value=50
 reqs={"type","name","range"
@@ -1093,7 +1096,7 @@ reqs={"type","name","range"
 "OutputType","gold","Local"
 }
 
-[effect_131]
+[effect_132]
 type="Output_Bonus"
 value=50
 reqs={"type","name","range","present"
@@ -1102,26 +1105,12 @@ reqs={"type","name","range","present"
 "Gov","Communism","Player",FALSE
 }
 
-[effect_132]
+[effect_133]
 type="Veteran_Build"
 value=3
 reqs={"type","name","range","present"
 "Building","Barracks","City",TRUE
 "UnitClass","Land","Local",TRUE
-"Building","Barracks II","City",FALSE
-"Building","Barracks III","City",FALSE
-"UnitFlag","NonMil","Local",FALSE
-"UnitFlag","NoVeteran","Local",FALSE
-"Gov","Anarchy","Player",FALSE
-"Gov","Tribal","Player",FALSE
-}
-
-[effect_133]
-type="Veteran_Build"
-value=1
-reqs={"type","name","range","present"
-"Building","Barracks","City",TRUE
-"UnitClass","Big Land","Local",TRUE
 "Building","Barracks II","City",FALSE
 "Building","Barracks III","City",FALSE
 "UnitFlag","NonMil","Local",FALSE
@@ -1131,31 +1120,12 @@ reqs={"type","name","range","present"
 }
 
 [effect_134]
-type="HP_Regen"
-value=100
-reqs={"type","name","range","present"
-"Building","Barracks","City",TRUE
-"UnitClass","Land","Local",TRUE
-"Building","Barracks II","City",FALSE
-"Building","Barracks III","City",FALSE
-}
-
-[effect_135]
-type="HP_Regen"
-value=100
+type="Veteran_Build"
+value=1
 reqs={"type","name","range","present"
 "Building","Barracks","City",TRUE
 "UnitClass","Big Land","Local",TRUE
 "Building","Barracks II","City",FALSE
-"Building","Barracks III","City",FALSE
-}
-
-[effect_136]
-type="Veteran_Build"
-value=3
-reqs={"type","name","range","present"
-"Building","Barracks II","City",TRUE
-"UnitClass","Land","Local",TRUE
 "Building","Barracks III","City",FALSE
 "UnitFlag","NonMil","Local",FALSE
 "UnitFlag","NoVeteran","Local",FALSE
@@ -1163,12 +1133,32 @@ reqs={"type","name","range","present"
 "Gov","Tribal","Player",FALSE
 }
 
+[effect_135]
+type="HP_Regen"
+value=100
+reqs={"type","name","range","present"
+"Building","Barracks","City",TRUE
+"UnitClass","Land","Local",TRUE
+"Building","Barracks II","City",FALSE
+"Building","Barracks III","City",FALSE
+}
+
+[effect_136]
+type="HP_Regen"
+value=100
+reqs={"type","name","range","present"
+"Building","Barracks","City",TRUE
+"UnitClass","Big Land","Local",TRUE
+"Building","Barracks II","City",FALSE
+"Building","Barracks III","City",FALSE
+}
+
 [effect_137]
 type="Veteran_Build"
-value=1
+value=3
 reqs={"type","name","range","present"
 "Building","Barracks II","City",TRUE
-"UnitClass","Big Land","Local",TRUE
+"UnitClass","Land","Local",TRUE
 "Building","Barracks III","City",FALSE
 "UnitFlag","NonMil","Local",FALSE
 "UnitFlag","NoVeteran","Local",FALSE
@@ -1177,6 +1167,19 @@ reqs={"type","name","range","present"
 }
 
 [effect_138]
+type="Veteran_Build"
+value=1
+reqs={"type","name","range","present"
+"Building","Barracks II","City",TRUE
+"UnitClass","Big Land","Local",TRUE
+"Building","Barracks III","City",FALSE
+"UnitFlag","NonMil","Local",FALSE
+"UnitFlag","NoVeteran","Local",FALSE
+"Gov","Anarchy","Player",FALSE
+"Gov","Tribal","Player",FALSE
+}
+
+[effect_139]
 type="HP_Regen"
 value=100
 reqs={"type","name","range","present"
@@ -1185,7 +1188,7 @@ reqs={"type","name","range","present"
 "Building","Barracks III","City",FALSE
 }
 
-[effect_139]
+[effect_140]
 type="HP_Regen"
 value=100
 reqs={"type","name","range","present"
@@ -1194,7 +1197,7 @@ reqs={"type","name","range","present"
 "Building","Barracks III","City",FALSE
 }
 
-[effect_140]
+[effect_141]
 type="Veteran_Build"
 value=3
 reqs={"type","name","range","present"
@@ -1206,7 +1209,7 @@ reqs={"type","name","range","present"
 "Gov","Tribal","Player",FALSE
 }
 
-[effect_141]
+[effect_142]
 type="Veteran_Build"
 value=1
 reqs={"type","name","range","present"
@@ -1218,7 +1221,7 @@ reqs={"type","name","range","present"
 "Gov","Tribal","Player",FALSE
 }
 
-[effect_142]
+[effect_143]
 type="HP_Regen"
 value=100
 reqs={"type","name","range"
@@ -1226,7 +1229,7 @@ reqs={"type","name","range"
 "UnitClass","Land","Local"
 }
 
-[effect_143]
+[effect_144]
 type="HP_Regen"
 value=100
 reqs={"type","name","range"
@@ -1234,7 +1237,7 @@ reqs={"type","name","range"
 "UnitClass","Big Land","Local"
 }
 
-[effect_144]
+[effect_145]
 type="Make_Content"
 value=3
 reqs={"type","name","range","present"
@@ -1242,7 +1245,7 @@ reqs={"type","name","range","present"
 "Gov","Anarchy","Player",FALSE
 }
 
-[effect_145]
+[effect_146]
 type="Make_Content"
 value=1
 reqs={"type","name","range","present"
@@ -1252,14 +1255,14 @@ reqs={"type","name","range","present"
 "Gov","Communism","Player",FALSE
 }
 
-[effect_146]
+[effect_147]
 type="Defend_Bonus"
 value=200
 reqs={"type","name","range"
 "Building","Palace","City"
 }
 
-[effect_147]
+[effect_148]
 type="Defend_Bonus"
 value=100
 reqs={"type","name","range","present"
@@ -1272,26 +1275,18 @@ reqs={"type","name","range","present"
 "UnitFlag","IgWall","Local",FALSE
 }
 
-[effect_148]
+[effect_149]
 type="Unit_No_Lose_Pop"
 value=1
 reqs={"type","name","range"
 "Building","City Walls","City"
 }
 
-[effect_149]
+[effect_150]
 type="Visible_Walls"
 value=1
 reqs={"type","name","range"
 "Building","City Walls","City"
-}
-
-[effect_150]
-type="Defend_Bonus"
-value=100
-reqs={"type","name","range"
-"Building","Coastal Defense","City"
-"UnitClass","Sea","Local"
 }
 
 [effect_151]
@@ -1299,10 +1294,18 @@ type="Defend_Bonus"
 value=100
 reqs={"type","name","range"
 "Building","Coastal Defense","City"
-"UnitClass","Trireme","Local"
+"UnitClass","Sea","Local"
 }
 
 [effect_152]
+type="Defend_Bonus"
+value=100
+reqs={"type","name","range"
+"Building","Coastal Defense","City"
+"UnitClass","Trireme","Local"
+}
+
+[effect_153]
 type="Make_Content"
 value=2
 reqs={"type","name","range","present"
@@ -1310,7 +1313,7 @@ reqs={"type","name","range","present"
 "Gov","Anarchy","Player",FALSE
 }
 
-[effect_153]
+[effect_154]
 type="Specialist_Output"
 value=1
 reqs={"type","name","range","present"
@@ -1320,7 +1323,7 @@ reqs={"type","name","range","present"
 "Gov","Anarchy","Player",FALSE
 }
 
-[effect_154]
+[effect_155]
 type="Make_Content"
 value=1
 reqs={"type","name","range","present"
@@ -1329,7 +1332,7 @@ reqs={"type","name","range","present"
 "Gov","Anarchy","Player",FALSE
 }
 
-[effect_155]
+[effect_156]
 type="Make_Content"
 value=1
 reqs={"type","name","range","present"
@@ -1337,18 +1340,11 @@ reqs={"type","name","range","present"
 "Gov","Anarchy","Player",FALSE
 }
 
-[effect_156]
+[effect_157]
 type="Incite_Cost_Pct"
 value=300
 reqs={"type","name","range"
 "Building","Courthouse","City"
-}
-
-[effect_157]
-type="Incite_Cost_Pct"
-value=-99
-reqs={"type","name","range"
-"Gov","Tribal","Player"
 }
 
 [effect_158]
@@ -4358,6 +4354,22 @@ reqs={"type","name","range"
 }
 
 [effect_518]
+type="Shield2Gold_Factor"
+value=100
+reqs={"type","name","range","present"
+"Gov","Tribal","Player",FALSE
+"UnitType","Raiders","Local",TRUE
+}
+
+[effect_519]
+type="Shield2Gold_Factor"
+value=100
+reqs={"type","name","range","present"
+"Gov","Tribal","Player",FALSE
+"UnitType","Bowmen","Local",TRUE
+}
+
+[effect_520]
 type="Action_Success_Actor_Move_Cost"
 value=65535
 reqs={"type","name","range","quiet"
@@ -4365,7 +4377,7 @@ reqs={"type","name","range","quiet"
 "UnitState","OnNativeTile","Local",TRUE
 }
 
-[effect_519]
+[effect_521]
 type="Action_Success_Actor_Move_Cost"
 value=65535
 reqs={"type","name","range","quiet"
@@ -4373,63 +4385,63 @@ reqs={"type","name","range","quiet"
 "UnitState","OnNativeTile","Local",TRUE
 }
 
-[effect_520]
+[effect_522]
 type="Action_Success_Actor_Move_Cost"
 value=65535
 reqs={"type","name","range","quiet"
 "Action","Bombard","Local",TRUE
 }
 
-[effect_521]
+[effect_523]
 type="Action_Success_Actor_Move_Cost"
 value=65535
 reqs={"type","name","range","quiet"
 "Action","Heal Unit","Local",TRUE
 }
 
-[effect_522]
+[effect_524]
 type="Action_Success_Actor_Move_Cost"
 value=9
 reqs={"type","name","range","quiet"
 "Action","Expel Unit","Local",TRUE
 }
 
-[effect_523]
+[effect_525]
 type="Action_Success_Actor_Move_Cost"
 value=9
 reqs={"type","name","range","quiet"
 "Action","Capture Units","Local",TRUE
 }
 
-[effect_524]
+[effect_526]
 type="Action_Success_Actor_Move_Cost"
 value=1
 reqs={"type","name","range","quiet"
 "Action","Establish Embassy","Local",TRUE
 }
 
-[effect_525]
+[effect_527]
 type="Action_Success_Actor_Move_Cost"
 value=1
 reqs={"type","name","range","quiet"
 "Action","Investigate City","Local",TRUE
 }
 
-[effect_526]
+[effect_528]
 type="Action_Success_Target_Move_Cost"
 value=65535
 reqs={"type","name","range","quiet"
 "Action","Expel Unit","Local",TRUE
 }
 
-[effect_527]
+[effect_529]
 type="Fortify_Defense_Bonus"
 value=50
 reqs={"type","name","range"
 "Activity","Fortified","Local"
 }
 
-[effect_528]
+[effect_530]
 type="Fortify_Defense_Bonus"
 value=50
 reqs={"type","name","range","present"
@@ -4439,18 +4451,18 @@ reqs={"type","name","range","present"
 "UnitFlag","Cant_Fortify","Local",FALSE
 }
 
-[effect_529]
+[effect_531]
 type="Maps_Stolen_Pct"
 value=-50
 
-[effect_530]
+[effect_532]
 type="Unit_Shield_Value_Pct"
 value=-50
 reqs={"type","name","range"
 "Action","Recycle Unit","Local"
 }
 
-[effect_531]
+[effect_533]
 type="Unit_Shield_Value_Pct"
 value=-50
 reqs={"type","name","range"
