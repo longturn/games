@@ -16,7 +16,7 @@ set steepness=30
 set temperature=70
 set tilesperplayer=500
 set topology="WRAPX|WRAPY|ISO|HEX"
-set wetness=40
+set wetness=60
 set alltemperate=disabled
 set tinyisles disabled
 set revealmap START  #uncomment this for revealing the map for test games
