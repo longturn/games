@@ -20,6 +20,7 @@ set wetness=60
 set alltemperate=disabled
 set tinyisles disabled
 set revealmap START  #uncomment this for revealing the map for test games
+set fogofwar 0  # set this to 1 for a real game
 
 # general rules
 set nationset=all
