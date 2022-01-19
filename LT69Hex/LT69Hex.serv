@@ -19,8 +19,7 @@ set topology="WRAPX|WRAPY|ISO|HEX"
 set wetness=60
 set alltemperate=disabled
 set tinyisles disabled
-set revealmap START  #uncomment this for revealing the map for test games
-set fogofwar 0  # set this to 1 for a real game
+#set revealmap START  #uncomment this for revealing the map for test games
 
 # general rules
 set nationset=all
@@ -82,7 +81,7 @@ set unitwaittime=36000
 set fixedlength enabled
 
 # new longturn.net specific patches. this section added in September 2020. you may need to remove these if you play a local game with the standard 2.6 freeciv version
-set diplchance_steal=50
+set diplchance_steal=30
 #set globalwarming_percent=300
 set nuclear_winter_percent = 100
 set contact_intel = disabled	# no info about the other nations if contatturns = 1
