@@ -923,7 +923,7 @@ bombard_rate = 3
 name          = _("Mounted Archer")
 class         = "Land"
 tech_req      = "Code of Laws"
-obsolete_by   = "Arbalest"
+obsolete_by   = "Musketeers"
 graphic       = "u.mounted_archer"
 graphic_alt   = "u.horsemen"
 sound_move    = "m_horsemen"
@@ -2883,7 +2883,7 @@ A Zeppelin's attack against units on land is a bombard attack; against\
 "),
 ; /* xgettext:no-c-format */
 _("\
-Zeppelin are very good for securing access from nations with no air units.  \
+Zeppelin are very good for securing access from nations with no air units.\
 ")
 bombard_rate = 3
 
@@ -3024,7 +3024,7 @@ hitpoints     = 10
 firepower     = 1
 move_rate     = 8
 vision_radius_sq = 18
-transport_cap = 1
+transport_cap = 2
 fuel          = 7
 uk_happy      = 1
 uk_shield     = 1
@@ -3034,20 +3034,8 @@ cargo         = "Small Unit"
 flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC"
 roles         = "Ferryboat"
 helptext      = _("\
-The Longboat is your first deep ocean capable boat unit\
- that only can carry one Merchant or Small Land unit. It can act\
- as a transport ship and has rudimentary defensive\
- and offensive capabilities.\
- It's also unique and you can only have one Longboat\
- at a time. The Longboat is heavier than the \
- trireme and this allows it to travel on deep ocean but \
- not on rivers.\
-"), _("\
-GUIDE: The longboat is very useful for exploring the oceans and since it is able to carry settlers, it can be used for \
-establishing early colonies far away from home. You can only have one longboat at a time but this is not as limiting as you may think. \
-The longboat can take a settler to a far away land, unload the settler, build a city with it and then you can disband the longboat \
-in the new city. This way you can build a new longboat at home and will also get half of the shields back. Those can be used for \
-building a defensive unit or maybe a worker for the new colony city.\
+Together with raiders the longship allows you to attack enemy cities directly from your ship.\
+Belongs to the patrol class and allows you to travel on deep ocean and rivers as well.\
 ")
 
 [unit_raider]
@@ -3082,7 +3070,7 @@ Your first marine unit.\
 ")
 
 [unit_tribal_knarr]
-name          = _("?unit: Tribal Knarr")
+name          = _("?unit:Tribal Knarr")
 class         = "Sea"
 tech_req      = "None"
 obsolete_by   = "trireme"
@@ -4591,7 +4579,7 @@ The Freight unit replaces the Caravan, and moves at twice the speed.\
 ")
 
 [unit_explorer]
-name          = _("?unit: Explorer")
+name          = _("?unit:Explorer")
 class         = "Small Land"
 tech_req      = "None"
 obsolete_by   = "Operative"
@@ -4629,9 +4617,9 @@ Explorers can also perform some actions in another player's city, although\
 "), _("\
  - \"Investigate City\": This action is not enabled in this game.\
 "), _("\
-GUIDE:  The explorer can be used to break the Zones of Control (ZoC) if an enemy unit is blocking you. \
-This can be very useful in situations where the enemy is trying to limit your options by placing fortified units in strategic locations next to rivers or roads. \
-Simply move the explorer to a tile you want to go to and you can move unit(s) to a tile already occupied by your own unit. The explorer is also very good for checking \
+GUIDE:  The explorer can be used to break the Zones of Control (ZoC) if an enemy unit is blocking you.\
+This can be very useful in situations where the enemy is trying to limit your options by placing fortified units in strategic locations next to rivers or roads.\
+Simply move the explorer to a tile you want to go to and you can move unit(s) to a tile already occupied by your own unit. The explorer is also very good for checking\
 who is next to you and how far your enemies have already expanded. Many players consider killing an explorer as an act of war. This is why it sometimes makes sense to warn before killing the explorer.\
 ")
 
