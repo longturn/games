@@ -2336,6 +2336,7 @@ sound		= "w_oracle"
 sound_alt	= "w_generic"
 helptext	= _("\
 One of the most early studies containing mathematical results and theorems. \
+Gives 4 extra bulbs to the city it's in. This wonder expires very early. \
 ")
 
 
