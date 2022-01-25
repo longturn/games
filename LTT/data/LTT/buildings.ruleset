@@ -521,6 +521,12 @@ helptext	= _("\
 When any small city grows or shrinks, 50 % of food points are saved; this \
 helps cities to grow faster and more easily withstand famine. With a \
 Granary this is extended to cities of size 4 and above. \
+The automatic or default granary effect applies to cities with size less than \
+4 just before they grow. When a city grows from size 3 to size 4 it will always have \
+50% of the food stored in the granary after the size chanage. \
+If a city doesn't have a granary building and it grows from size 4 to \
+size 5 there will be no food stored in the granary. If a city has the granary \
+city improvement and it grows from size 4 to 5 it will have 50% food stored in the granary. \ 
 "), _("\
 A Granary also halves the food wasted in cities far from your capital. \
 Together with a Courthouse it eliminates food waste.\
