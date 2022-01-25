@@ -60,9 +60,9 @@ set team_pooled_research=disabled
 set techlevel=0
 set techlossforgiveness -1
 set techlossrestore 50
-set freecost 80
+set freecost 0 # for getting techs from philosphy etc
 set diplcost 80
-set conquercost 80
+set conquercost 80 # for getting techs with tech stealing/trading units
 
 # technical
 set aifill=0
