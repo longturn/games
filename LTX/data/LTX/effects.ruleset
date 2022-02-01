@@ -689,6 +689,28 @@ reqs    =
       "Gov", "City States", "Player", TRUE
       "OutputType", "Shield", "Local", FALSE
     }
+	
+	
+; 3% more with Despotism
+[effect_waste_distance_despotism]
+type    = "Output_Waste_By_Distance"
+value   = 3
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Despotism", "Player", TRUE
+      "OutputType", "Shield", "Local", FALSE
+    }
+	
+; 3% more with Tribal
+[effect_waste_distance_tribal]
+type    = "Output_Waste_By_Distance"
+value   = 3
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Tribal", "Player", TRUE
+      "OutputType", "Shield", "Local", FALSE
+    }
+	
 
 [effect_waste_anarchy]
 type    = "Output_Waste"
