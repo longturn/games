@@ -111,6 +111,11 @@ ruler_female_title = _("Warlady %s")
 helptext = _("\
 Under a Tribal government, you are part ruler of your people. Your\
  control over your citizens is maintained largely by spiritual counsel.\
+ The cities need to be close to the government center or there will\
+ be issues with waste. With Tribalism it's possible to counter this\
+ effect with some early wonders that will act like government centers.\
+ However these wonders will expire realtively soon and Tribalism is not\
+ that well suited for an advanced empire.\
 "), _("\
 Compared to Despotism, a Tribal economy is more shield-oriented. Its\
  bonuses to veterancy can be an advantage in wartime.\

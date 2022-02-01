@@ -2343,6 +2343,8 @@ sound_alt	= "w_generic"
 helptext	= _("\
 One of the most early studies containing mathematical results and theorems. \
 Gives 4 extra bulbs to the city it's in. This wonder expires very early. \
+If the nation's government is Despotism or Tribal this amazing building will \
+also work as a government center as long as it's not obsoleted.\
 ")
 
 
