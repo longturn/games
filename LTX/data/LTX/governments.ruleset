@@ -152,6 +152,11 @@ ruler_female_title = _("?female:Chief %s")
 helptext = _("\
 Under Despotism, you are the absolute ruler of your people.  Your\
  control over your citizens is maintained largely by martial law.\
+ The cities need to be close to the government center or there will\
+ be issues with waste. With despotism it's possible to counter this\
+ effect with some early wonders that will act like government centers.\
+ However these wonders will expire realtively soon and Despotism is not\
+ that well suited for an advanced empire.\
 "), _("\
 Compared to Tribalism, a Despotic economy is more trade-oriented.\
 "),

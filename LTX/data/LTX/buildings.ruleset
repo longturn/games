@@ -2369,6 +2369,8 @@ helptext	= _("\
 It pre-dates bronze age and was one of the first, if not the first, shrines built. \
 With this wonder, the city having it will get +6 additional lux. The effect \
 of this very early wonder ends with the invention of bronze. \
+If the nation's government is Despotism or Tribal this amazing building will \
+also work as a government center as long as it's not obsoleted.\
 ")
 
 [building_capitalization]
