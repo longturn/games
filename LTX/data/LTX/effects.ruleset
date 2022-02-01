@@ -1656,7 +1656,7 @@ reqs    =
 
 [effect_max_rates_fundamentalism]
 type    = "Max_Rates"
-value   = 50
+value   = 60
 reqs    =
     { "type", "name", "range"
       "Gov", "Fundamentalism", "Player"
