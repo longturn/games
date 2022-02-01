@@ -4061,6 +4061,30 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
+
+[effect_statue_of_zeus_gov_center_despotism]
+type    = "Gov_Center"
+value	= 1
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Statue of Zeus", "City", TRUE
+	  "Gov", "Despotism", "Player", TRUE
+      "Building", "Palace", "City", FALSE
+    }
+	
+
+[effect_statue_of_zeus_gov_center_tribal]
+type    = "Gov_Center"
+value	= 1
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Statue of Zeus", "City", TRUE
+	  "Gov", "Tribal", "Player", TRUE
+      "Building", "Palace", "City", FALSE
+    }
+	
+
+
 [effect_statue_of_zeus_culture]
 type    = "History"
 value	= 2

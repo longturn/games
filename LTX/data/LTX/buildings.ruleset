@@ -2159,6 +2159,8 @@ units owned by the city by 1 -- in other words, it neutralizes the \
 unhappiness caused by a single military unit (except under Democracy, \
 where a single unit makes two citizens unhappy). Each city also avoids \
 one shield of upkeep for units.\
+If the nation's government is Despotism or Tribal this small wonder will \
+also work as a government center as long as it's not obsoleted.\
 ")
 
 [building_temple_of_artemis]
