@@ -3532,6 +3532,29 @@ reqs	=
       "Building", "Colossus", "City"
     }
 
+
+[effect_colossus_gov_center_despotism]
+type    = "Gov_Center"
+value	= 1
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Colossus", "City", TRUE
+	  "Gov", "Despotism", "Player", TRUE
+      "Building", "Palace", "City", FALSE
+    }
+	
+	
+[effect_colossus_gov_center_tribal]
+type    = "Gov_Center"
+value	= 1
+reqs	=
+    { "type", "name", "range", "present"
+      "Building", "Colossus", "City", TRUE
+	  "Gov", "Tribal", "Player", TRUE
+      "Building", "Palace", "City", FALSE
+    }
+
+
 [effect_copernicus_observatory]
 type    = "Output_Add_Tile"
 value   = 1

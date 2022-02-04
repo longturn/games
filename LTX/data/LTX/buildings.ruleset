@@ -1602,6 +1602,8 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Each tile around the city where this wonder is built that is already\
  generating some trade produces one extra trade resource.\
+ If the nation's government is Despotism or Tribal this small wonder will \
+also work as a government center as long as it's not obsoleted.\
 ")
 
 [building_copernicus_observatory]
