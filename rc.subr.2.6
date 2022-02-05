@@ -9,6 +9,7 @@ INSTALL=${INSTALL:-"$HOME/fc${FC_VERSION}"}
 SERVER=${SERVER:-"$GAMEDIR/freeciv-server"}
 SAVEDIR=${SAVEDIR:-"$GAMEDIR/save"}
 FCDBCONF=${FCDBCONF:-"$HOME/server/lt-database-${FC_VERSION}.conf"}
+CAMBOT=${CAMBOT:-"$HOME/src/cambot-v2/cambot"}
 
 OPTIONS="-A none -p $PORT --saves $SAVEDIR --log $SAVEDIR/freeciv.log -r $GAMENAME.serv -e -a -D $FCDBCONF -S $GAMEID"
 
@@ -27,4 +28,8 @@ test ! -d $SAVEDIR && mkdir $SAVEDIR
 export FREECIV_DATA_PATH="$GAMEDIR/data:$INSTALL/share/freeciv"
 printenv
 
-$SERVER $OPTIONS
+if test -x "$CAMBOT" ; then
+    (sleep 10 && echo "Starting cambot..." && setsid "$CAMBOT" -server localhost:$PORT -password $(cat "$(dirname "$CAMBOT")/password")) &
+fi
+
+exec $SERVER $OPTIONS
