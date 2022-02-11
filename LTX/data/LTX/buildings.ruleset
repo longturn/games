@@ -2294,6 +2294,31 @@ All your new military land units start with an additional veteran level \
 are created as veteran 2).\
 ")
 
+
+[building_terracotta_army]
+name		= _("Terracotta Army")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Construction", "Player"
+    }
+graphic	= "b.terracotta_army"
+graphic_alt	= "b.sun_tzus_war_academy"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Invention", "Player", FALSE
+    }
+build_cost	= 40
+upkeep		= 0
+sabotage	= 0
+sound		= "w_sun_tzus_war_academy"
+sound_alt	= "w_generic"
+helptext	= _("\
+All your new military land units built in the city with the Terracotta Army start with an additional veteran level \
+(this is cumulative with any Barracks building in a city; with both, units \
+are created as veteran 2 or as veteran 3 if the player also owns Sun Tzu's War Academy). This does not apply to siege units such as catapults.\
+")
+
 [building_united_nations]
 name		= _("United Nations")
 genus		= "GreatWonder"

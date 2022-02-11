@@ -4270,6 +4270,39 @@ reqs	=
       "Building", "Sun Tzu's War Academy", "City"
     }
 
+
+[effect_terracotta_army]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Terracotta Army", "City", TRUE
+      "UnitClass", "Land", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
+
+[effect_terracotta_army_1]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Terracotta Army", "City", TRUE
+      "UnitClass", "Big Land", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
+[effect_terracotta_army_culture]
+type    = "History"
+value	= 2
+reqs	=
+    { "type", "name", "range"
+      "Building", "Terracotta Army", "City"
+    }
+
+
 [effect_united_nations]
 type    = "Has_Senate"
 value   = 1
