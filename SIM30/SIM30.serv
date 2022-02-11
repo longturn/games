@@ -1,6 +1,9 @@
 # Most settings are shared with the single player version
 read SIM30-singleplayer.serv
 
+# geology
+set startpos 2
+
 # technical
 set allowtake ""
 set compresstype XZ
