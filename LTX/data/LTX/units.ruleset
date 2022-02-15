@@ -1619,7 +1619,7 @@ Catapults are large rock-throwing machines of war.\
 While powerful, Catapults (and their successors) are bulky and awkward; \
 they require roads to move in rough terrain (mountains, swamps, and \
 jungles), are difficult to defend, and are too big for early ships \
-(Triremes and Caravels). Catapults and later siege units \ 
+(Triremes and Caravels). Catapults and later siege units \
 do not gain benefits from Barracks. \
 ")
 
@@ -1655,12 +1655,12 @@ helptext      = _("\
 Trebuchets are large rock-throwing machines of war.\
  They are very strong attackers - and even more powerful against cities - but equally weak\
  defenders and will need an escort to be effective.\
-  Unescorted catapults may be captured by the enemy. \
+  Unescorted trebuchets may be captured by the enemy. \
 "), _("\
 While powerful, Trebuchets (and their successors) are bulky, very slow and awkward; \
 they require roads to move in rough terrain (mountains, swamps, and \
 jungles), are difficult to defend, and are too big for early ships \
-(Triremes and Caravels). Trebuchets and later siege units \ 
+(Triremes and Caravels). Trebuchets and later siege units \
 do not gain benefits from Barracks. \
 ")
 
