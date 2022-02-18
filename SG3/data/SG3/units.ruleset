@@ -3133,7 +3133,7 @@ Your first marine unit.\
 ")
 
 [unit_tribal_knarr]
-name          = _("?unit:Tribal Knarr")
+name          = _("?unit: Tribal Knarr")
 class         = "Sea"
 tech_req      = "None"
 obsolete_by   = "trireme"
@@ -4674,7 +4674,7 @@ The Freight unit replaces the Caravan, and moves at twice the speed.\
 ")
 
 [unit_explorer]
-name          = _("?unit:Explorer")
+name          = _("?unit: Explorer")
 class         = "Small Land"
 tech_req      = "None"
 obsolete_by   = "Operative"
