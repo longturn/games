@@ -1129,9 +1129,9 @@ sound_fight   = "f_musketeers"
 sound_fight_alt = "f_generic"
 build_cost    = 60
 pop_cost      = 0
-attack        = 2
-defense       = 2
-hitpoints     = 15
+attack        = 3
+defense       = 3
+hitpoints     = 20
 firepower     = 1
 move_rate     = 2
 vision_radius_sq = 18
@@ -1160,7 +1160,7 @@ sound_move    = "m_riflemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_riflemen"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 15
 pop_cost      = 1
 attack        = 4
 defense       = 4
@@ -1256,7 +1256,7 @@ sound_fight   = "f_riflemen"
 sound_fight_alt = "f_generic"
 build_cost    = 50
 pop_cost      = 0
-attack        = 5
+attack        = 6
 defense       = 6
 hitpoints     = 20
 firepower     = 1
@@ -1290,7 +1290,7 @@ sound_fight   = "f_riflemen"
 sound_fight_alt = "f_generic"
 build_cost    = 60
 pop_cost      = 0
-attack        = 5
+attack        = 6
 defense       = 6
 hitpoints     = 20
 firepower     = 1
@@ -1322,7 +1322,7 @@ sound_fight_alt = "f_generic"
 build_cost    = 60
 pop_cost      = 0
 attack        = 6
-defense       = 4
+defense       = 5
 hitpoints     = 20
 firepower     = 1
 move_rate     = 2
@@ -1522,6 +1522,37 @@ helptext      = _("\
 Stormtroopers are highly specialized attack infantry\
 ")
 
+[unit_armored_car]
+name          = _("Armored Car")
+class         = "Land"
+tech_req      = "Automobile"
+obsolete_by   = "Mech. Inf."
+graphic       = "u.armored_car"
+graphic_alt   = "u.elephants"
+sound_move    = "m_riflemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_riflemen"
+sound_fight_alt = "f_generic"
+build_cost    = 60
+pop_cost      = 0
+attack        = 7
+defense       = 6
+hitpoints     = 20
+firepower     = 1
+move_rate     = 8
+vision_radius_sq = 28
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
+helptext      = _("\
+An armored car is a lightweight wheeled armored fighting vehicle.\
+")
+
 [unit_motorized_infantry]
 name          = _("Motorized Infantry")
 class         = "Land"
@@ -1535,7 +1566,7 @@ sound_fight   = "f_riflemen"
 sound_fight_alt = "f_generic"
 build_cost    = 55
 pop_cost      = 0
-attack        = 5
+attack        = 6
 defense       = 6
 hitpoints     = 20
 firepower     = 1
@@ -1874,7 +1905,7 @@ sound_move    = "m_cavalry"
 sound_move_alt = "m_generic"
 sound_fight   = "f_cavalry"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 20
 pop_cost      = 1
 attack        = 6
 defense       = 3
@@ -1923,6 +1954,38 @@ flags         = "Capturer", "Horse"
 roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Cavalry are mounted and highly trained soldiers.\
+")
+
+[unit_tachanka]
+name          = _("Tachanka")
+class         = "Land"
+tech_req      = "Genetic Engineering"
+obsolete_by   = "Motorized Infantry"
+gov_req       = "Communism"
+graphic       = "u.tachanka"
+graphic_alt   = "u.elephants"
+sound_move    = "m_cavalry"
+sound_move_alt = "m_generic"
+sound_fight   = "f_cavalry"
+sound_fight_alt = "f_generic"
+build_cost    = 50
+pop_cost      = 0
+attack        = 7
+defense       = 5
+hitpoints     = 20
+firepower     = 1
+move_rate     = 5
+vision_radius_sq = 28
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Capturer", "Horse"
+roles         = "AttackFastStartUnit", "Hunter"
+helptext      = _("\
+Wagon with a heavy machine gun installed in the back.\
 ")
 
 [unit_early_armor]
@@ -3070,7 +3133,7 @@ Your first marine unit.\
 ")
 
 [unit_tribal_knarr]
-name          = _("?unit: Tribal Knarr")
+name          = _("?unit:Tribal Knarr")
 class         = "Sea"
 tech_req      = "None"
 obsolete_by   = "trireme"
@@ -3490,6 +3553,38 @@ roles         = "Hunter"
 helptext      = _("\
 The Ironclad is an armored ship,\
  more sturdy than the Frigate.\
+")
+
+[unit_monitor]
+name          = _("Monitor")
+class         = "Patrol"
+tech_req      = "Steel"
+obsolete_by   = "AEGIS Cruiser"
+graphic       = "u.monitor"
+graphic_alt   = "u.trireme"
+sound_move    = "m_caravel"
+sound_move_alt = "m_generic"
+sound_fight   = "f_caravel"
+sound_fight_alt = "f_generic"
+build_cost    = 60
+pop_cost      = 0
+attack        = 4
+defense       = 2
+hitpoints     = 30
+firepower     = 1
+move_rate     = 12
+vision_radius_sq = 50
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Small Unit"
+flags         = "BadCityDefender", "Stuka"
+roles         = "Hunter"
+helptext      = _("\
+A monitor was a relatively small warship which was neither fast nor strongly armored but carried disproportionately large guns.\
 ")
 
 [unit_destroyer]
@@ -4579,7 +4674,7 @@ The Freight unit replaces the Caravan, and moves at twice the speed.\
 ")
 
 [unit_explorer]
-name          = _("?unit: Explorer")
+name          = _("?unit:Explorer")
 class         = "Small Land"
 tech_req      = "None"
 obsolete_by   = "Operative"
