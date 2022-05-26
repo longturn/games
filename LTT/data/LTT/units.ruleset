@@ -686,10 +686,10 @@ flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Airbase", "Tr
 roles         = "Settlers", "WorkerStartUnit"
 helptext      = _("\
 Engineers are similar to Workers, but they work twice as fast, \
-move twice as fast, and may gain experience from work enabling \
+move twice as fast, and may also gain experience from work enabling \
 them to work even faster.\
 "), _("\
-If the player knows Invention, Engineers may also perform more \
+Engineers may also perform more \
 radical terrain transformations than Workers, Settlers, or Migrants, \
 with the \"transform\" order. Examples include conversion of \
 Tundra into Plains, or even Ocean into Swamp in some circumstances \
