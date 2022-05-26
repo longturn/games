@@ -387,10 +387,18 @@ sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
 City Walls make it easier to defend a city. They add a +100% bonus to the \
-intrinsic defense strength of units within the city against land units \
-(that is a two-thirds increase for small cities, or a one-half increase \
-for cities larger than size 8), but are ineffective against airborne and \
-sea units. City Walls also prevent the loss of population which occurs \
+intrinsic defense strength of units within the city against land units. Additional \
+defence bonuses will be added on top of the defense bonus a city has. If an additional \
+effect adds another 50% to the defense bonus the end result. For example if a city has \
+city walls the defense bonus from that is 100%. If the city also has the 50% city size bonus \
+(50% more defense if the city is size 9 or bigger) the combined bonus for \
+city walls and size bonus is 150% combined.\
+Some specific land units may ignore the city walls but if they do this is  \
+mentioned on the help text for those units. \
+City walls do not defend the city against naval units or air units. \
+City walls defend against land units attacking the city from onboard another unit. \
+Example of this is a marine on a transport or a helicopter. City walls don't protect \
+against espionage. City Walls also prevent the loss of population which occurs \
 when a defending unit is defeated by a land unit.\
 ")
 
