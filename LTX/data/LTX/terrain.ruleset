@@ -31,7 +31,7 @@ flags =
 
 ; Percentage of "land" tiles required to be adjacent to a water tile before
 ; it may be "reclaimed" into a land tile (0-101; 0=anywhere, default 101=nowhere)
-ocean_reclaim_requirement = 30
+ocean_reclaim_requirement = 0
 
 ; Percentage of "water" tiles required to be adjacent to a land tile before
 ; it may be "channeled" into a water tile (0-101; 0=anywhere, default 101=nowhere)
