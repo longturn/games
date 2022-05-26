@@ -1382,6 +1382,185 @@ reqs    =
       "MinSize", "20", "City"
     }
 
+[effect_upkeep_free_units_food_21]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "21", "City"
+    }
+	
+[effect_upkeep_free_units_food_22]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "22", "City"
+    }
+	
+[effect_upkeep_free_units_food_23]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "23", "City"
+    }
+	
+[effect_upkeep_free_units_food_24]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "24", "City"
+    }
+[effect_upkeep_free_units_food_25]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "25", "City"
+    }
+	
+[effect_upkeep_free_units_food_26]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "26", "City"
+    }
+	
+[effect_upkeep_free_units_food_27]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "27", "City"
+    }
+	
+[effect_upkeep_free_units_food_28]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "28", "City"
+    }
+	
+[effect_upkeep_free_units_food_29]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "29", "City"
+    }
+	
+[effect_upkeep_free_units_food_30]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "30", "City"
+    }
+	
+[effect_upkeep_free_units_food_31]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "31", "City"
+    }
+	
+[effect_upkeep_free_units_food_32]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "32", "City"
+    }
+	
+[effect_upkeep_free_units_food_33]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "33", "City"
+    }
+	
+[effect_upkeep_free_units_food_34]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "34", "City"
+    }
+	
+[effect_upkeep_free_units_food_35]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "35", "City"
+    }
+	
+[effect_upkeep_free_units_food_36]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "36", "City"
+    }
+	
+[effect_upkeep_free_units_food_37]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "37", "City"
+    }
+		
+[effect_upkeep_free_units_food_38]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "38", "City"
+    }
+		
+[effect_upkeep_free_units_food_39]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "39", "City"
+    }
+		
+[effect_upkeep_free_units_food_40]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+      "MinSize", "40", "City"
+    }
+
 [effect_civil_war_anarchy]
 type    = "Civil_War_Chance"
 value   = 49
