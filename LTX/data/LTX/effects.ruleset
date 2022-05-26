@@ -1064,7 +1064,7 @@ reqs    =
 	
 [effect_upkeep_free_units_city_states]
 type    = "Unit_Upkeep_Free_Per_City"
-value   = 3
+value   = 6
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "City States", "Player", TRUE
@@ -1163,7 +1163,7 @@ reqs    =
 	
 [effect_upkeep_free_units_city_states_city]
 type    = "Unit_Upkeep_Free_Per_City"
-value   = 3
+value   = 6
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "City States", "Player", TRUE
