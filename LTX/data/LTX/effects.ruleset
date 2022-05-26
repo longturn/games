@@ -1488,7 +1488,7 @@ reqs    =
 	
 [effect_empire_size_base_city_states]
 type    = "Empire_Size_Base"
-value   = 6
+value   = 7
 reqs    =
     { "type", "name", "range"
       "Gov", "City States", "Player"
