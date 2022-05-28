@@ -143,7 +143,7 @@ flags         = "Missile", "Unreachable", "DoesntOccupyTile", "Airliftable"
 
 [unitclass_nuclear]
 ; /* TRANS: Unit class: used adjectivally */
-name          = _("?unitclass:Missile")
+name          = _("?unitclass:Nuclear")
 min_speed     = 0
 hp_loss_pct   = 0
 hut_behavior  = "Frighten"
