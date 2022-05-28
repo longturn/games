@@ -826,6 +826,16 @@ graphic     = "a.stealth"
 graphic_alt = "-"
 cost     = 3600
 
+[advance_advanced_engineering]
+name     = _("Advanced Engineering")
+req1     = "Plastics"
+req2     = "Laser"
+flags    = ""
+graphic     = "a.aengineering"
+graphic_alt = "a.plastics"
+cost     = 7200
+
+
 [advance_steam_engine]
 name     = _("Steam Engine")
 req1     = "Chemistry"
