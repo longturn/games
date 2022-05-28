@@ -1829,13 +1829,14 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Advanced Torpedo"
+cargo         = "Small Sea", "Missile"
 flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
 roles         = ""
 helptext      = _("\
 Bombers are specialized airborne units that may\
  only attack ground targets, not other airborne\
- units.\
+ units. It can carry one missile or Small Sea (like Advanced Torpedo) unit but it can only be fired to adjacent tile - and that needs to be done from the keypad or with the number keys. The regular number keys move like this:\
+ 7 = middle left/up, 8 = up, 9 = middle right/up, 4 = left, 6 = right, 1 = middle left/down, 2 = down and 3 = middle right/down. This is because of current client limitations.\
 "), _("\
 A Bomber's attack against units on land is a bombard attack; against\
  units on water it has a regular attack.\
@@ -1945,12 +1946,13 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Advanced Torpedo"
+cargo         = "Small Sea", "Missile"
 flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
 An improved Bomber, with improved attack and a higher movement\
- radius.\
+ radius. It can carry one missile or Small Sea (like Advanced Torpedo) unit but it can only be fired to adjacent tile - and that needs to be done from the keypad or with the number keys. The regular number keys move like this:\
+ 7 = middle left/up, 8 = up, 9 = middle right/up, 4 = left, 6 = right, 1 = middle left/down, 2 = down and 3 = middle right/down. This is because of current client limitations.\
 ")
 bombard_rate = 4
 
@@ -2464,7 +2466,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Advanced Torpedo"
+cargo         = "Small Sea"
 flags         = "BadCityDefender"
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
@@ -2500,7 +2502,7 @@ bonuses       =
    { "flag", "type", "value"
      "AirAttacker", "DefenseMultiplier", 4
    }
-cargo         = "Advanced Torpedo"
+cargo         = "Small Sea"
 flags         = "BadCityDefender"
 roles         = "DefendGood", "DefendGoodStartUnit"
 helptext      = _("\
@@ -2601,7 +2603,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Missile", "Nuclear", "Advanced Torpedo"
+cargo         = "Missile", "Nuclear", "Small Sea"
 flags         = "Partial_Invis", "BadCityDefender", "Only_Native_Attack", "Submarine", "NoHome"
 roles         = "Hunter"
 helptext      = _("\
@@ -2642,7 +2644,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Missile", "Nuclear", "Advanced Torpedo"
+cargo         = "Missile", "Nuclear", "Small Sea"
 flags         = "Partial_Invis", "BadCityDefender", "Only_Native_Attack", "Submarine", "NoHome"
 roles         = "Hunter"
 helptext      = _("\
@@ -3750,17 +3752,19 @@ hitpoints     = 30
 firepower     = 1
 move_rate     = 35
 vision_radius_sq = 144
-transport_cap = 0
+transport_cap = 2
 fuel          = 3
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "Advanced Torpedo"
+cargo         = "Small Sea", "Missile"
+flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder"
 roles         = "DefendOk"
 helptext      = _("\
 An improved Stealth Bomber, with a higher movement\
- radius.\
+ radius. It can carry one missile or Small Sea (like Advanced Torpedo) unit but it can only be fired to adjacent tile - and that needs to be done from the keypad or with the number keys. The regular number keys move like this:\
+ 7 = middle left/up, 8 = up, 9 = middle right/up, 4 = left, 6 = right, 1 = middle left/down, 2 = down and 3 = middle right/down. This is because of current client limitations.\
 ")
 bombard_rate = 4
 
