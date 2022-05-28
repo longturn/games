@@ -219,7 +219,7 @@ flags         = "AttackNonNative", "AttFromNonNative", "CanPillage"
 name          = _("?unitclass:Deep Sea")
 min_speed     = 8
 hp_loss_pct   = 0
-flags         = "AttFromNonNative", "CanPillage"
+flags         = "AttFromNonNative", "CanPillage", "Unreachable"
 
 [unitclass_trireme]
 ; /* TRANS: Unit class: used adjectivally */
@@ -2602,6 +2602,48 @@ GUIDE:  The nuclear submarine is able to carry missile units. A chain of several
 nuclear missiles almost anywhere really fast. This makes them extremely dangerous. Like the non nuclear submarines these units use fuel and need refueling. \
 This is why you may need allies for refueling the submarines if they are far from home. Another option is to get remote colony cities you \
 can use as submarine bases. Since the nuclear submarines have no home city they can retaliate even if you lose all your coastal cities supporting your other naval units. \
+")
+
+
+
+[unit_nuclear_submarine]
+name          = _("Nuclear Submarine Type II")
+class         = "Deep Sea"
+tech_req      = "Advanced Engineering"
+obsolete_by   = "None"
+graphic       = "u.nsubmarinetii"
+graphic_alt   = "u.submarine"
+sound_move    = "m_submarine"
+sound_move_alt = "m_generic"
+sound_fight   = "f_submarine"
+sound_fight_alt = "f_generic"
+build_cost    = 180
+pop_cost      = 0
+attack        = 10
+defense       = 6
+hitpoints     = 20
+firepower     = 1
+move_rate     = 16
+vision_radius_sq = 28
+transport_cap = 2
+fuel          = 12
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Missile", "Nuclear"
+flags         = "Partial_Invis", "BadCityDefender", "Only_Native_Attack", "Submarine", "NoHome"
+roles         = "Hunter"
+helptext      = _("\
+Traveling deep under the surface of the ocean, these new Nuclear Submarines have\
+ a very high strategic value, but a weaker defense if caught\
+ off guard. Unlike other submarines this one is unreachable to most units and it can only travel on deep ocean.\
+ The nuclear submarine type ii is also able to carry missiles and nuclear units.\
+"), _("\
+GUIDE:  The nuclear submarine type ii is able to carry missile units. A chain of several nuclear submarines and the modern counterpart nuclear submarine type ii can be used to transport \
+nuclear missiles almost anywhere really fast. This makes them extremely dangerous. Like the non nuclear submarines these units use fuel and need refueling. This unit is able to remain out there for extended amount of time. \
+Since the nuclear submarines have no home city they can retaliate even if you lose all your coastal cities supporting your other naval units. Since this unit is also unreachable to most units it it more likely to remain \
+unharmed even if seen by the enemy.\
 ")
 
 [unit_carrier]
