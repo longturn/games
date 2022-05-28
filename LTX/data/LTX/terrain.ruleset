@@ -1609,7 +1609,7 @@ reqs           =
     }
 build_time     = 0
 removal_time   = 0
-native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege", "Small Unit"
+native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege", "Small Unit", "Amphibious"
 hidden_by      = "Railroad", "Maglev"
 flags          = "NativeTile", "AlwaysOnCityCenter"
 helptext       = _("\
@@ -1645,7 +1645,7 @@ reqs           =
     }
 build_time     = 3
 removal_time   = 0
-native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege", "Small Unit"
+native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege", "Small Unit", "Amphibious"
 flags          = "NativeTile", "AutoOnCityCenter"
 hidden_by      = "Maglev"
 helptext       = _("\
@@ -1683,7 +1683,7 @@ reqs           =
     }
 build_time     = 3
 removal_time   = 0
-native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege", "Small Unit"
+native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege", "Small Unit", "Amphibious"
 flags          = "NativeTile", "AutoOnCityCenter"
 helptext       = _("\
 With sufficient technology, you may build magnetic levitation systems\
@@ -1712,7 +1712,7 @@ act_gfx_alt2   = "-"
 rmact_gfx      = "None"
 rmact_gfx_alt  = "-"
 buildable      = FALSE
-native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege", "Trireme", "Small Unit", "Patrol"
+native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege", "Trireme", "Small Unit", "Patrol", "Amphibious"
 defense_bonus  = 25
 flags          = "NativeTile"
 ; /* xgettext:no-c-format */
