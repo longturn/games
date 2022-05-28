@@ -2619,7 +2619,7 @@ can use as submarine bases. Since the nuclear submarines have no home city they 
 
 
 
-[unit_nuclear_submarine]
+[unit_nuclear_submarine_type_ii]
 name          = _("Nuclear Submarine Type II")
 class         = "Deep Sea"
 tech_req      = "Advanced Engineering"
@@ -2769,7 +2769,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-targets       = "Nuclear Submarine Type II"
+targets       = "Deep Sea"
 flags         = "OneAttack", "HasNoZOC"
 roles         = ""
 helptext      = _("\
