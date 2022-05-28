@@ -214,6 +214,13 @@ min_speed     = 2
 hp_loss_pct   = 0
 flags         = "AttackNonNative", "AttFromNonNative", "CanPillage"
 
+[unitclass_small_sea]
+; /* TRANS: Unit class: used adjectivally */
+name          = _("?unitclass:Small Sea")
+min_speed     = 3
+hp_loss_pct   = 0
+flags         = "AttFromNonNative"
+
 [unitclass_deep_sea]
 ; /* TRANS:Unit class: used adjectivally */
 name          = _("?unitclass:Deep Sea")
@@ -2772,7 +2779,6 @@ until the next turn. This is when you can use the missiles for shooting down the
 The nuclear submarines and carriers can also move the missile units. Use this to your advantage and you may need \
 less missiles to cover your air defense needs with the short range missile units. \
 ")
-
 
 [unit_cruise_missile]
 name          = _("Cruise Missile")
