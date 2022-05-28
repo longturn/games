@@ -2541,7 +2541,7 @@ hitpoints     = 20
 firepower     = 1
 move_rate     = 12
 vision_radius_sq = 28
-transport_cap = 0
+transport_cap = 1
 fuel          = 6
 uk_happy      = 0
 uk_shield     = 1
@@ -2553,7 +2553,7 @@ roles         = "Hunter"
 helptext      = _("\
 Traveling under the surface of the ocean, Submarines have\
  a very high strategic value, but a weak defense if caught\
- off guard.\
+ off guard. Submarines are able to carry a missile unit but not nuclear weapons.\
 ")
 
 
