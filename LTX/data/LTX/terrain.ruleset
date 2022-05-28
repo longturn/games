@@ -1784,7 +1784,7 @@ flags          = "NoAggressive", "ParadropFrom", "NoStackDeath"
 [base_buoy]
 extra          = "Buoy"
 gui_type       = "Fortress"
-vision_main_sq = 5
+vision_main_sq = 18
 
 [base_ruins]
 extra          = "Ruins"
