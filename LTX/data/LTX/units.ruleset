@@ -141,6 +141,14 @@ hp_loss_pct   = 0
 hut_behavior  = "Frighten"
 flags         = "Missile", "Unreachable", "DoesntOccupyTile", "Airliftable"
 
+[unitclass_nuclear]
+; /* TRANS: Unit class: used adjectivally */
+name          = _("?unitclass:Missile")
+min_speed     = 0
+hp_loss_pct   = 0
+hut_behavior  = "Frighten"
+flags         = "Missile", "Unreachable", "DoesntOccupyTile", "Airliftable"
+
 [unitclass_land]
 ; /* TRANS: Unit class: used adjectivally */
 name          = _("?unitclass:Land")
@@ -1770,7 +1778,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-targets       = "Air", "Missile", "Helicopter"
+targets       = "Air", "Missile", "Helicopter", "Nuclear"
 flags         = "AirAttacker", "HasNoZOC", "OneAttack"
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
@@ -1889,7 +1897,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-targets       = "Air", "Missile", "Helicopter"
+targets       = "Air", "Missile", "Helicopter", "Nuclear"
 flags         = "Partial_Invis", "AirAttacker", "HasNoZOC", "OneAttack"
 roles         = "DefendGood", "DefendGoodStartUnit"
 helptext      = _("\
@@ -2575,13 +2583,13 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Missile"
+cargo         = "Missile", "Nuclear"
 flags         = "Partial_Invis", "BadCityDefender", "Only_Native_Attack", "Submarine", "NoHome"
 roles         = "Hunter"
 helptext      = _("\
 Traveling under the surface of the ocean, Submarines have\
  a very high strategic value, but a weak defense if caught\
- off guard. The nuclear submarine is also able to carry missiles.\
+ off guard. The nuclear submarine is also able to carry missiles and nuclear units.\
 "), _("\
 GUIDE:  The nuclear submarine is able to carry missile units. A chain of several nuclear submarines can be used to transport \
 nuclear missiles almost anywhere really fast. This makes them extremely dangerous. Like the non nuclear submarines these units use fuel and need refueling. \
@@ -2614,7 +2622,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Land", "Air", "Missile", "Helicopter"
+cargo         = "Land", "Air", "Missile", "Helicopter", "Nuclear"
 flags         = "BadCityDefender", "HasNoZOC"
 roles         = "DefendGood", "DefendGoodStartUnit"
 helptext      = _("\
@@ -2800,7 +2808,7 @@ the enemy ships. This is why extra caution is needed if your enemy is able to bu
 
 [unit_nuclear_bomb]
 name          = _("Nuclear Bomb")
-class         = "Missile"
+class         = "Nuclear"
 tech_req      = "Nuclear Fission"
 obsolete_by   = "None"
 graphic       = "u.nuclearbomb"
@@ -2863,7 +2871,7 @@ TIP:  You may be involved in a situation where you've invaded an\
 
 [unit_nuclear]
 name          = _("Nuclear")
-class         = "Missile"
+class         = "Nuclear"
 tech_req      = "Robotics"
 obsolete_by   = "None"
 graphic       = "u.nuclear"
@@ -3611,7 +3619,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-targets       = "Air", "Missile", "Helicopter"
+targets       = "Air", "Missile", "Helicopter", "Nuclear"
 flags         = "Partial_Invis", "AirAttacker"
 roles         = "DefendGood"
 helptext      = _("\
