@@ -1823,12 +1823,13 @@ hitpoints     = 30
 firepower     = 1
 move_rate     = 24
 vision_radius_sq = 72
-transport_cap = 0
+transport_cap = 1
 fuel          = 2
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+cargo         = "Advanced Torpedo"
 flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
 roles         = ""
 helptext      = _("\
@@ -1938,12 +1939,13 @@ hitpoints     = 30
 firepower     = 1
 move_rate     = 36
 vision_radius_sq = 72
-transport_cap = 0
+transport_cap = 2
 fuel          = 3
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+cargo         = "Advanced Torpedo"
 flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
@@ -2456,12 +2458,13 @@ hitpoints     = 30
 firepower     = 1
 move_rate     = 15
 vision_radius_sq = 72
-transport_cap = 0
+transport_cap = 1
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+cargo         = "Advanced Torpedo"
 flags         = "BadCityDefender"
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
@@ -2497,6 +2500,7 @@ bonuses       =
    { "flag", "type", "value"
      "AirAttacker", "DefenseMultiplier", 4
    }
+cargo         = "Advanced Torpedo"
 flags         = "BadCityDefender"
 roles         = "DefendGood", "DefendGoodStartUnit"
 helptext      = _("\
@@ -2597,7 +2601,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Missile", "Nuclear"
+cargo         = "Missile", "Nuclear", "Advanced Torpedo"
 flags         = "Partial_Invis", "BadCityDefender", "Only_Native_Attack", "Submarine", "NoHome"
 roles         = "Hunter"
 helptext      = _("\
@@ -2638,7 +2642,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-cargo         = "Missile", "Nuclear"
+cargo         = "Missile", "Nuclear", "Advanced Torpedo"
 flags         = "Partial_Invis", "BadCityDefender", "Only_Native_Attack", "Submarine", "NoHome"
 roles         = "Hunter"
 helptext      = _("\
@@ -2737,6 +2741,47 @@ tiles (for use by Offshore Platforms).\
 ; FIXME: also cleans pollution/fallout in coastal cities (and faster
 ; than Engineers)
 
+
+[unit_advanced_torpedo]
+name          = _("Advanced Torpedo")
+class         = "Small Sea"
+tech_req      = "Robotics"
+obsolete_by   = "None"
+graphic       = "u.atorpedo"
+graphic_alt   = "u.cruise_missile"
+sound_move    = "m_cruise_missile"
+sound_move_alt = "m_generic"
+sound_fight   = "f_cruise_missile"
+sound_fight_alt = "f_generic"
+build_cost    = 80
+pop_cost      = 0
+attack        = 12
+defense       = 0
+hitpoints     = 2
+firepower     = 2
+move_rate     = 3
+vision_radius_sq = 1
+transport_cap = 0
+fuel          = 1
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+targets       = "Nuclear Submarine Type II"
+flags         = "OneAttack", "HasNoZOC"
+roles         = ""
+helptext      = _("\
+The Advanced Torpedo is a unit able to target enemy deep sea units. It is expensive, has short range but it able to hit otherwise unreachable deep sea units. This is the first torpedo unit the players can move. \
+Pervious torpedo units are available only as a weaponry the ships can use, simulated simply as better attack values. Modern ships use regular torpedo units but since those are a concept like ammunition there is \
+no individual unit available. The Advanced Torpedo is available as a unit \
+of it's own since it's specifically intended for tasks where old conventional weapons no longer work.\
+"), _("\
+TIP:  A handful of these may successfully keep the sea around\
+ your treasured homeland free of enemy deep sea units.\
+"), _("\
+GUIDE: The torpedo units have poor vision so you may want to use other units for scouting the area \
+before attacking. Keep few of these in stock so that you can defend against otherwise unreachable deep ocean units. \
+")
 
 [unit_missile]
 name          = _("Missile")
@@ -3711,7 +3756,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder"
+flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "Advanced Torpedo"
 roles         = "DefendOk"
 helptext      = _("\
 An improved Stealth Bomber, with a higher movement\
