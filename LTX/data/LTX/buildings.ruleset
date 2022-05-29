@@ -1804,16 +1804,16 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 6000
+build_cost	= 700
 upkeep		= 0
 sabotage	= 0
 sound		= "w_hoover_dam"
 sound_alt	= "w_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-Acts as a Hydro Plant in the city where it is built, and reduces \
-pollution from shield production by a further 25% in all cities \
-with Hydro Plants, making them equivalent to Solar Plants.\
+Acts as a double effective hydro plant in the city where it is built, and reduces \
+pollution from shield production by a further 15% in all cities \
+with Hydro Plants.\
 ")
 
 [building_isaac_newtons_college]
