@@ -2106,7 +2106,7 @@ name		= _("International Labour Standards")
 genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", ""International Labour Organization"", "Player"
+      "Tech", "International Labour Organization", "Player"
     }
 graphic	= "b.international_labour_standards"
 graphic_alt	=  "b.university"
@@ -2124,6 +2124,29 @@ Shield production and trade is reduced 10% for every player. Science output is i
 The owner of this wonder gets additional 10% to science output.\
 ")
 
+
+[building_world_health_organization]
+name		= _("World Health Organization")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Global Health Regulations", "Player"
+    }
+graphic	= "b.whorganization"
+graphic_alt	=  "b.university"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+    }
+build_cost	= 1000
+upkeep		= 0
+sabotage	= 0
+sound		= "w_marco_polos_embassy"
+sound_alt	= "w_generic"
+helptext	= _("\
+World Health Organization keeps the people more healty and productive. Working and living on hazardouns conditions becomes less usual and people will live longer. \
+Trade is reduced 10% for every player. Science output is increased 5%. Less hazardous work costs trade but eventually pays back in science. \
+The owner of this wonder gets additional 10% to science output.\
+")
 
 
 [building_michelangelos_chapel]

@@ -5007,6 +5007,39 @@ reqs    =
 	
 
 
+
+
+[effect_world_health_organization_1]
+type    = "Output_Bonus"
+value   = -10
+reqs    =
+    { "type", "name", "range"
+      "Building", "World Health Organization", "World"
+      "OutputType", "Trade", "Local"
+    }
+
+[effect_world_health_organization_2]
+type    = "Output_Bonus"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "World Health Organization", "World"
+      "OutputType", "Science", "Local"
+    }
+	
+[effect_world_health_organization_3]
+type    = "Output_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+      "Building", "World Health Organization", "Player"
+      "OutputType", "Science", "Local"
+    }
+	
+
+
+
+
 [effect_atlantic_telegraph_company]
 type    = "Have_Embassies"
 value   = 1
