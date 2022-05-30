@@ -376,6 +376,16 @@ graphic_alt = " "a.espionage""
 helptext = _("Allows creating global deals regarding health issues.")
 cost     = 3000
 
+[advance_sustainable_energy_agreements]
+name     = _("Sustainable Energy Agreements")
+req1     = "Global Health Regulations"
+req2     = "None"
+flags    = ""
+graphic     = "a.ghregulations"
+graphic_alt = " "a.espionage""
+helptext = _("Allows creating global deals regarding energy sources.")
+cost     = 4000
+
 [advance_explosives]
 name     = _("Explosives")
 req1     = "Gunpowder"
