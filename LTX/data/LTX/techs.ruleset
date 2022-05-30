@@ -346,6 +346,16 @@ graphic_alt = "-"
 helptext = _("Upgrades 2 units every turn for all players if any player knows this tech.")
 cost     = 1450
 
+[advance_intergovernmental_organization]
+name     = _("Intergovernmental Organization")
+req1     = "Espionage"
+req2     = "The Corporation"
+flags    = ""
+graphic     = "a.espionage"
+graphic_alt = "-"
+helptext = _("International treaties has been a thing since ancient times but allowing the majority of the nations to make mutual agreements is a true breakthrough.")
+cost     = 2000
+
 [advance_explosives]
 name     = _("Explosives")
 req1     = "Gunpowder"
