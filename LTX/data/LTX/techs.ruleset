@@ -366,6 +366,16 @@ graphic_alt = " "a.espionage""
 helptext = _("Allows creating wolrd wide deals regarding labour usage.")
 cost     = 2500
 
+[advance_global_health_regulations]
+name     = _("Global Health Regulations")
+req1     = "International Labour Organization"
+req2     = "None"
+flags    = ""
+graphic     = "a.ghregulations"
+graphic_alt = " "a.espionage""
+helptext = _("Allows creating global deals regarding health issues.")
+cost     = 3000
+
 [advance_explosives]
 name     = _("Explosives")
 req1     = "Gunpowder"
