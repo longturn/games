@@ -2149,6 +2149,31 @@ The owner of this wonder gets additional 10% to science output.\
 ")
 
 
+
+[building_international_energy_union]
+name		= _("International Energy Union")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Sustainable Energy Agreements", "Player"
+    }
+graphic	= "b.ieunion"
+graphic_alt	=  "b.university"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+    }
+build_cost	= 2000
+upkeep		= 0
+sabotage	= 0
+sound		= "w_marco_polos_embassy"
+sound_alt	= "w_generic"
+helptext	= _("\
+Keeping the energy renewable and sustainable is enormous task and requires some sacrifices. This comes with a price. \
+Production is reduced 15% for every player except for the player owning the wonder. The wonder owner having more control on the union suffers only a 5% penalty to production. \
+")
+
+
+
 [building_michelangelos_chapel]
 name		= _("Michelangelo's Chapel")
 genus		= "SmallWonder"

@@ -352,7 +352,7 @@ req1     = "Espionage"
 req2     = "The Corporation"
 flags    = ""
 graphic     = "a.igovorganization"
-graphic_alt = " "a.espionage""
+graphic_alt = "a.espionage"
 helptext = _("International treaties has been a thing since ancient times but allowing the majority of the nations to make mutual agreements is a true breakthrough.")
 cost     = 2000
 
@@ -362,7 +362,7 @@ req1     = "Intergovernmental Organization"
 req2     = "None"
 flags    = ""
 graphic     = "a.ilaborganization"
-graphic_alt = " "a.espionage""
+graphic_alt = "a.espionage"
 helptext = _("Allows creating wolrd wide deals regarding labour usage.")
 cost     = 2500
 
@@ -372,7 +372,7 @@ req1     = "International Labour Organization"
 req2     = "None"
 flags    = ""
 graphic     = "a.ghregulations"
-graphic_alt = " "a.espionage""
+graphic_alt = "a.espionage"
 helptext = _("Allows creating global deals regarding health issues.")
 cost     = 3000
 
@@ -382,7 +382,7 @@ req1     = "Global Health Regulations"
 req2     = "None"
 flags    = ""
 graphic     = "a.ghregulations"
-graphic_alt = " "a.espionage""
+graphic_alt = "a.espionage"
 helptext = _("Allows creating global deals regarding energy sources.")
 cost     = 4000
 
