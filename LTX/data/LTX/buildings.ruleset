@@ -2101,6 +2101,30 @@ tile already producing trade.\
 ")
 
 
+[building_international_labour_standards]
+name		= _("International Labour Standards")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", ""International Labour Organization"", "Player"
+    }
+graphic	= "b.international_labour_standards"
+graphic_alt	=  "b.university"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+    }
+build_cost	= 1000
+upkeep		= 0
+sabotage	= 0
+sound		= "w_marco_polos_embassy"
+sound_alt	= "w_generic"
+helptext	= _("\
+World wide labour standards make work more fair and makes it harder to abuse the workforce. \
+Shield production and trade is reduced 10% for every player. Science output is increased 10%. \
+The owner of this wonder gets additional 10% to science output.\
+")
+
+
 
 [building_michelangelos_chapel]
 name		= _("Michelangelo's Chapel")
