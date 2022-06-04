@@ -386,7 +386,7 @@ actor_reqs    =
     }
 target_reqs    =
     { "type",   "name", "range"
-      "MinSize", "2", "City"
+      "MinSize", "9", "City"
     }
 
 [actionenabler_incite_city]
