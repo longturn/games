@@ -800,6 +800,9 @@ colorlist =
 [teams]
 ; freeciv optional team names definition.
 ;
+names =
+ _("Fire"),
+ _("Water")
 ; names =
 ;  _("Team 0"),
 ; _("Team 1"),
