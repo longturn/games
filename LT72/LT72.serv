@@ -14,7 +14,7 @@ set separatepoles=enabled
 set specials=300
 set steepness=40
 set temperature=70
-set tilesperplayer=500
+set tilesperplayer=400
 set topology="WRAPX|WRAPY|ISO"
 set wetness=40
 set alltemperate=disabled
@@ -46,10 +46,9 @@ set globalwarming=enabled
 
 # diplomacy, technology
 set diplchance=40
-set diplgoldcost=20
+set diplgoldcost=40
 set diplbulbcost=20
-
-set diplomacy=HUMAN
+set diplomacy=TEAM
 set sciencebox=100
 set techlost_donor=0
 set techlost_recv=0
@@ -61,8 +60,8 @@ set techlevel=0
 set techlossforgiveness -1
 set techlossrestore 50
 set freecost 0 # for getting techs from philosphy etc
-set diplcost 80
-set conquercost 80 # for getting techs with tech stealing/trading units
+set diplcost 95
+set conquercost 95 # for getting techs with tech stealing/trading units
 
 # technical
 set aifill=0
@@ -81,7 +80,7 @@ set unitwaittime=36000
 set fixedlength enabled
 
 # new longturn.net specific patches. this section added in September 2020. you may need to remove these if you play a local game with the standard 2.6 freeciv version
-set diplchance_steal=30
+set diplchance_steal=50
 #set globalwarming_percent=300
 set nuclear_winter_percent = 100
 set contact_intel = disabled	# no info about the other nations if contatturns = 1
