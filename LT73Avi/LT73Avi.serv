@@ -1,0 +1,69 @@
+rulesetdir aviation
+
+# Map
+set mapsize PLAYER
+set generator RANDOM
+set topology WRAPX|WRAPY
+set alltemperate enabled
+set landmass 30
+set specials 300
+set tilesperplayer 180
+set huts 0
+
+# Military
+set killstack disabled
+
+# Vision
+set fogofwar enabled
+set foggedborders enabled
+
+# Diplomacy
+set diplomacy HUMAN
+set trading_city disabled
+set trading_tech disabled
+set team_pooled_research disabled
+set contactturns 2
+
+# Revolution
+set revolen 2
+set revolentype FIXED
+
+# Pace
+set foodbox 100
+set sciencebox 60
+set shieldbox 60
+set techleak 100
+
+# Test games
+set revealmap START
+
+# Timeout & UWT
+set fixedlength enabled
+set timeout 120
+set first_timeout 600
+#set timeout 82800
+#set first_timeout 248400
+#set unitwaittime 36000
+
+# Saves
+set savename LT73Avi
+set autosaves TURN|GAMEOVER|INTERRUPT|TIMER
+set saveturns 1
+set savefrequency 60
+set scorelog enabled
+
+# Event log
+set ec_chat enabled # Save chat
+set ec_info enabled # Save turn and time
+set ec_max_size 20000
+set ec_turns 10
+
+# Players
+set nationset all
+read players.serv
+
+# Technical
+set allowtake ""
+cmdlevel info
+start
+
