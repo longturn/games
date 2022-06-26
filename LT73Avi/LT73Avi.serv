@@ -35,15 +35,15 @@ set shieldbox 60
 set techleak 100
 
 # Test games
-set revealmap START
+#set revealmap START
 
 # Timeout & UWT
 set fixedlength enabled
-set timeout 120
-set first_timeout 600
-#set timeout 82800
-#set first_timeout 248400
-#set unitwaittime 36000
+#set timeout 120
+#set first_timeout 600
+set timeout 82800
+set first_timeout 248400
+set unitwaittime 36000
 
 # Saves
 set savename LT73Avi
