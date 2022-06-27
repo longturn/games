@@ -1,3 +1,6 @@
 [submodule "LTEx24/data"]
 	path = LTEx24/data
 	url = https://github.com/ec429/fc-aviation.git
+[submodule "LT73Avi/data"]
+	path = LT73Avi/data
+	url = https://github.com/ec429/fc-aviation.git
