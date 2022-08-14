@@ -3300,7 +3300,7 @@ reqs    =
 
 [effect_sdi_i_defense_1]
 type    = "Nuke_Proof"
-value   = 30
+value   = 50
 reqs    =
     { "type", "name", "range", "present"
       "Building", "SDI Defense I", "City", TRUE
@@ -3311,7 +3311,7 @@ reqs    =
 	
 [effect_sdi_i_defense_2]
 type    = "Nuke_Proof"
-value   = 70
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "SDI Defense I", "City"
@@ -3343,7 +3343,7 @@ reqs    =
 	
 [effect_sdi_ii_defense_1]
 type    = "Nuke_Proof"
-value   = 30
+value   = 20
 reqs    =
     { "type", "name", "range", "present"
       "Building", "SDI Defense II", "City", TRUE
@@ -3366,7 +3366,7 @@ reqs    =
 	
 [effect_sdi_iii_defense_1]
 type    = "Nuke_Proof"
-value   = 30
+value   = 20
 reqs    =
     { "type", "name", "range", "present"
       "Building", "SDI Defense III", "City", TRUE

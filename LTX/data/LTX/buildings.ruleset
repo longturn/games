@@ -1164,7 +1164,7 @@ teammate which attacks a city with SDI Defense, or attacks a unit (or is \
 deliberately exploded) within range, may be shot down and simply has no effect. \
 Also, adds 30% to the intrinsic defense strength of units in the city when \
 defending against conventional missiles. SDI I + capital protects against 100% of the nuclear attacks while \
-SDI I only defends against 30% of the attacks. SDI I + Palace adds 100% to the defense against missiles.\
+SDI I only defends against 50% of the attacks. SDI I + Palace adds 100% to the defense against missiles.\
  NOTE: The Palace City gets 100% SDI defense with the Palace and with SDI I. SDI II and SDI III are not needed.\
 ")
 
@@ -1193,7 +1193,7 @@ by other nations' Nuclear units. A Nuclear unit not owned by you or a \
 teammate which attacks a city with SDI Defense, or attacks a unit (or is \
 deliberately exploded) within range, may be shot down and simply has no effect. \
 Also, adds 30% to the intrinsic defense strength of units in the city when \
-defending against conventional missiles. SDI II adds another 30% against the nuclear attacks.\
+defending against conventional missiles. SDI II adds additional 20% against the nuclear attacks.\
  NOTE: The Palace City gets 100% SDI defense with the Palace and with SDI I. SDI II and SDI III are not needed.\
  The Palace with SDI II but without SDI I doesn't give 100% defense against nukes.
 ")
@@ -1223,7 +1223,7 @@ by other nations' Nuclear units. A Nuclear unit not owned by you or a \
 teammate which attacks a city with SDI Defense, or attacks a unit (or is \
 deliberately exploded) within range, may be shot down and simply has no effect. \
 Also, adds 40% to the intrinsic defense strength of units in the city when \
-defending against conventional missiles. SDI III adds another 30% against the nuclear attacks.\
+defending against conventional missiles. SDI III adds additional 20% against the nuclear attacks.\
  NOTE: The Palace City gets 100% SDI defense with the Palace and with SDI I. SDI II and SDI III are not needed.\
  The Palace with SDI III but without SDI I doesn't give 100% defense against nukes.
 ")
