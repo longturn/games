@@ -5283,7 +5283,7 @@ reqs    =
 
 [effect_occupation_government_anarchy]
 type    = "Enemy_Citizen_Unhappy_Pct"
-value   = -5
+value   = 0
 reqs    =
     { "type", "name", "range"
       "Building", "Occupation Government", "City"
@@ -5293,7 +5293,7 @@ reqs    =
 
 [effect_occupation_government_communism]
 type    = "Enemy_Citizen_Unhappy_Pct"
-value   = -25
+value   = -15
 reqs    =
     { "type", "name", "range"
       "Building", "Occupation Government", "City"
@@ -5323,7 +5323,7 @@ reqs    =
 
 [effect_occupation_government_monarchy]
 type    = "Enemy_Citizen_Unhappy_Pct"
-value   = -15
+value   = -25
 reqs    =
     { "type", "name", "range"
       "Building", "Occupation Government", "City"
