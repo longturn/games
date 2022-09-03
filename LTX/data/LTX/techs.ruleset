@@ -346,8 +346,8 @@ graphic_alt = "-"
 helptext = _("Upgrades 2 units every turn for all players if any player knows this tech.")
 cost     = 1450
 
-[advance_intergovernmental_organization]
-name     = _("Intergovernmental Organization")
+[advance_intergovernmentalism]
+name     = _("Intergovernmentalism")
 req1     = "Espionage"
 req2     = "The Corporation"
 flags    = ""
