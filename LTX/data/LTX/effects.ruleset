@@ -5119,7 +5119,7 @@ value   = 100
 
 [effect_enemy_unhappiness_anarchy]
 type    = "Enemy_Citizen_Unhappy_Pct"
-value   = -90
+value   = -100
 reqs	=
     { "type", "name", "range"
       "Gov", "Anarchy", "Player"
@@ -5127,7 +5127,7 @@ reqs	=
 
 [effect_enemy_unhappiness_communism]
 type    = "Enemy_Citizen_Unhappy_Pct"
-value   = -50
+value   = -70
 reqs	=
     { "type", "name", "range"
       "Gov", "Communism", "Player"
@@ -5143,7 +5143,7 @@ reqs	=
 	
 [effect_enemy_unhappiness_federation]
 type    = "Enemy_Citizen_Unhappy_Pct"
-value   = -70
+value   = -20
 reqs	=
     { "type", "name", "range"
       "Gov", "Federation", "Player"
@@ -5173,10 +5173,9 @@ reqs	=
       "Gov", "Fundamentalism", "Player"
     }
 	
-	
 [effect_enemy_unhappiness_city_states]
 type    = "Enemy_Citizen_Unhappy_Pct"
-value   = -100
+value   = -80
 reqs	=
     { "type", "name", "range"
       "Gov", "City States", "Player"
