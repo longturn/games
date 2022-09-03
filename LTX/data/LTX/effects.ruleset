@@ -4969,93 +4969,70 @@ reqs    =
     }
 
 
-[effect_international_labour_standards_1]
+[effect_world emission organization_1]
 type    = "Output_Bonus"
-value   = -10
+value   = -25
 reqs    =
     { "type", "name", "range"
-      "Building", "International Labour Standards", "World"
-      "OutputType", "Trade", "Local"
-    }
-
-[effect_international_labour_standards_2]
-type    = "Output_Bonus"
-value   = -10
-reqs    =
-    { "type", "name", "range"
-      "Building", "International Labour Standards", "World"
+      "Building", "World Emission Organization", "World"
       "OutputType", "Shield", "Local"
     }
-	
-[effect_international_labour_standards_3]
-type    = "Output_Bonus"
-value   = 10
-reqs    =
+nreqs =
     { "type", "name", "range"
-      "Building", "International Labour Standards", "World"
-      "OutputType", "Science", "Local"
+      "Gov", "Communism", "Player"
+	  "Gov", "Anarchy", "Player"
+	  "Gov", "Fundamentalism", "Player"
+	  "Gov", "City States", "Player"
+	  "Building", "International Energy Union", "World"
     }
 	
-[effect_international_labour_standards_4]
-type    = "Output_Bonus"
-value   = 10
-reqs    =
-    { "type", "name", "range"
-      "Building", "International Labour Standards", "Player"
-      "OutputType", "Science", "Local"
-    }
 	
-
-
-
-
-[effect_world_health_organization_1]
-type    = "Output_Bonus"
-value   = -10
+[effect_world emission organization_2]
+type    = "Pollu_Pop_Pct"
+value   = -40
 reqs    =
     { "type", "name", "range"
-      "Building", "World Health Organization", "World"
-      "OutputType", "Trade", "Local"
-    }
-
-[effect_world_health_organization_2]
-type    = "Output_Bonus"
-value   = 5
-reqs    =
-    { "type", "name", "range"
-      "Building", "World Health Organization", "World"
-      "OutputType", "Science", "Local"
-    }
-	
-[effect_world_health_organization_3]
-type    = "Output_Bonus"
-value   = 10
-reqs    =
-    { "type", "name", "range"
-      "Building", "World Health Organization", "Player"
-      "OutputType", "Science", "Local"
-    }
-	
-
-
-[effect_international energy_union_1]
-type    = "Output_Bonus"
-value   = -15
-reqs    =
-    { "type", "name", "range"
-      "Building", "International Energy Union", "World"
+      "Building", "World Emission Organization", "World"
       "OutputType", "Shield", "Local"
     }
-
-[effect_international energy_union_2]
-type    = "Output_Bonus"
-value   = 10
-reqs    =
+nreqs =
     { "type", "name", "range"
-      "Building", "International Energy Union", "Player"
-      "OutputType", "Shield", "Local"
+      "Gov", "Communism", "Player"
+	  "Gov", "Anarchy", "Player"
+	  "Gov", "Fundamentalism", "Player"
+	  "Gov", "City States", "Player"
+	  "Building", "International Energy Union", "World"
     }
 
+
+
+
+[effect_global_emission_union_1]
+type    = "Output_Bonus"
+value   = -20
+reqs    =
+    { "type", "name", "range"
+      "Building", "World Emission Organization", "World"
+      "OutputType", "Shield", "Local"
+    }
+nreqs =
+    { "type", "name", "range"
+	  "Gov", "Anarchy", "Player"
+    }
+	
+
+[effect_global_emission_union_2]
+type    = "Pollu_Pop_Pct"
+value   = -50
+reqs    =
+    { "type", "name", "range"
+      "Building", "World Emission Organization", "World"
+      "OutputType", "Shield", "Local"
+    }
+nreqs =
+    { "type", "name", "range"
+	  "Gov", "Anarchy", "Player"
+    }
 
 
 [effect_atlantic_telegraph_company]
