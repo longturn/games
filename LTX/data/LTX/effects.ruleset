@@ -521,10 +521,10 @@ reqs    =
     }
 	
 
-; federation gets another 50% boost for science with the corporation
+; federation gets another 25% boost for science with the corporation
 [effect_bonus_sci_federation_2]
 type    = "Output_Bonus_2"
-value   = 50
+value   = 25
 reqs    =
     { "type", "name", "range"
       "Gov", "Federation", "Player"
