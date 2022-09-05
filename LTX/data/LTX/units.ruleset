@@ -2743,7 +2743,7 @@ before attacking. Keep few of these in stock so that you can defend against othe
 ")
 
 [unit_missile]
-name          = _("Missile")
+name          = _("Air Defense Missile")
 class         = "Missile"
 tech_req      = "Flight"
 obsolete_by   = "None"
@@ -2767,13 +2767,13 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-targets       = "Air", "Missile", "Helicopter"
+targets       = "Air", "Missile", "Helicopter", "Nuclear"
 embarks       = "Deep Sea", "Air"
 disembarks    = "Deep Sea", "Air"
 flags         = "OneAttack", "AirAttacker", "HasNoZOC"
 roles         = ""
 helptext      = _("\
-The Missile is a missile unit able to shoot down enemy air units.\
+The Air Defense Missile is a missile unit able to shoot down enemy air units.\
 "), _("\
 TIP:  A handful of these may successfully keep the air around\
  your treasured homeland free of enemy air units.\
