@@ -3153,6 +3153,17 @@ reqs    =
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
 	
+[effect_port_facility_deep_sea]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Port Facility", "City", TRUE
+      "UnitClass", "Deep Sea", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+	
 [effect_port_facility_guangzhou]
 type    = "Veteran_Build"
 value   = 1
@@ -3171,6 +3182,16 @@ reqs    =
     { "type", "name", "range"
       "Building", "Port Facility", "City"
       "UnitClass", "Sea", "Local"
+    }
+
+
+[effect_port_facility_deep_sea]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range"
+      "Building", "Port Facility", "City"
+      "UnitClass", "Deep Sea", "Local"
     }
 	
 [effect_port_facility_guangzhou_1]
