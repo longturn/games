@@ -1790,8 +1790,7 @@ roles         = ""
 helptext      = _("\
 Bombers are specialized airborne units that may\
  only attack ground targets, not other airborne\
- units. It can carry one missile or Small Sea (like Advanced Torpedo) unit but it can only be fired to adjacent tile - and that needs to be done from the keypad or with the number keys. The regular number keys move like this:\
- 7 = middle left/up, 8 = up, 9 = middle right/up, 4 = left, 6 = right, 1 = middle left/down, 2 = down and 3 = middle right/down. This is because of current client limitations.\
+ units. It can carry one missile or Small Sea (like Advanced Torpedo) unit.\
 "), _("\
 A Bomber's attack against units on land is a bombard attack; against\
  units on water it has a regular attack.\
@@ -1906,8 +1905,7 @@ flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bomba
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
 An improved Bomber, with improved attack and a higher movement\
- radius. It can carry one missile or Small Sea (like Advanced Torpedo) unit but it can only be fired to adjacent tile - and that needs to be done from the keypad or with the number keys. The regular number keys move like this:\
- 7 = middle left/up, 8 = up, 9 = middle right/up, 4 = left, 6 = right, 1 = middle left/down, 2 = down and 3 = middle right/down. This is because of current client limitations.\
+ radius. It can carry one missile or Small Sea (like Advanced Torpedo) unit.\
 ")
 bombard_rate = 4
 
@@ -3730,8 +3728,7 @@ flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bomba
 roles         = "DefendOk"
 helptext      = _("\
 An improved Stealth Bomber, with a higher movement\
- radius. It can carry one missile or Small Sea (like Advanced Torpedo) unit but it can only be fired to adjacent tile - and that needs to be done from the keypad or with the number keys. The regular number keys move like this:\
- 7 = middle left/up, 8 = up, 9 = middle right/up, 4 = left, 6 = right, 1 = middle left/down, 2 = down and 3 = middle right/down. This is because of current client limitations.\
+ radius. It can carry one missile or Small Sea (like Advanced Torpedo) unit.\
 ")
 bombard_rate = 4
 
