@@ -2603,8 +2603,8 @@ roles         = "Hunter"
 helptext      = _("\
 Traveling deep under the surface of the ocean, these new Nuclear Submarines have\
  a very high strategic value, but a weaker defense if caught\
- off guard. Unlike other submarines this one is unreachable to most units and it can only travel on deep ocean.\
- The nuclear submarine type ii is also able to carry missiles and nuclear units.\
+ off guard. Unlike other submarines this one is unreachable to most units.\
+ The nuclear submarine type ii is also able to carry missiles, nuclears and advanced torpedo units.\
 "), _("\
 GUIDE:  The nuclear submarine type ii is able to carry missile units. A chain of several nuclear submarines and the modern counterpart nuclear submarine type ii can be used to transport \
 nuclear missiles almost anywhere really fast. This makes them extremely dangerous. Like the non nuclear submarines these units use fuel and need refueling. This unit is able to remain out there for extended amount of time. \
