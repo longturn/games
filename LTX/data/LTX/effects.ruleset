@@ -3216,7 +3216,7 @@ reqs    =
     }
 
 
-[effect_port_facility_deep_sea]
+[effect_port_facility_regen_deep_sea]
 type    = "HP_Regen"
 value   = 100
 reqs    =
