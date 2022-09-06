@@ -9,7 +9,7 @@ set generator="FRACTAL"
 set barbarians=disabled
 set startpos=4
 set huts=0
-set landmass=30
+set landmass=15
 set separatepoles=disabled
 set specials=300
 set steepness=30
@@ -19,7 +19,7 @@ set topology="WRAPX|WRAPY|ISO|HEX"
 set wetness=60
 set alltemperate=disabled
 set tinyisles disabled
-set revealmap START  #uncomment this for revealing the map for test games
+#set revealmap START  #uncomment this for revealing the map for test games
 
 # general rules
 set nationset=all
