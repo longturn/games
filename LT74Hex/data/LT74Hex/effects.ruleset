@@ -2337,6 +2337,16 @@ reqs    =
       "UnitClass", "Big Land", "Local", TRUE
     }
 
+[effect_barracks_siege_hp]
+type    = "HP_Regen"
+value   = 60
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks", "City", TRUE
+      "UnitClass", "Big Siege", "Local", TRUE
+    }
+
+
 [effect_barracks_ii]
 type    = "Veteran_Build"
 value   = 1
@@ -2377,6 +2387,17 @@ reqs    =
       "UnitClass", "Big Land", "Local", TRUE
     }
 
+
+[effect_barracks_ii_siege_hp]
+type    = "HP_Regen"
+value   = 60
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks II", "City", TRUE
+      "UnitClass", "Big Siege", "Local", TRUE
+    }
+
+
 [effect_barracks_iii]
 type    = "Veteran_Build"
 value   = 1
@@ -2415,6 +2436,16 @@ reqs    =
     { "type", "name", "range"
       "Building", "Barracks III", "City"
       "UnitClass", "Big Land", "Local"
+    }
+
+	
+[effect_barracks_iii_siege_hp]
+type    = "HP_Regen"
+value   = 60
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks III", "City", TRUE
+      "UnitClass", "Big Siege", "Local", TRUE
     }
 
 [effect_cathedral]
@@ -3153,6 +3184,17 @@ reqs    =
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
 	
+[effect_port_facility_deep_sea]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Port Facility", "City", TRUE
+      "UnitClass", "Deep Sea", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+	
 [effect_port_facility_guangzhou]
 type    = "Veteran_Build"
 value   = 1
@@ -3171,6 +3213,16 @@ reqs    =
     { "type", "name", "range"
       "Building", "Port Facility", "City"
       "UnitClass", "Sea", "Local"
+    }
+
+
+[effect_port_facility_regen_deep_sea]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range"
+      "Building", "Port Facility", "City"
+      "UnitClass", "Deep Sea", "Local"
     }
 	
 [effect_port_facility_guangzhou_1]
@@ -4969,12 +5021,12 @@ reqs    =
     }
 
 
-[effect_world emission organization_1]
+[effect_The_paris_agreement_1]
 type    = "Output_Bonus"
 value   = -25
 reqs    =
     { "type", "name", "range"
-      "Building", "World Emission Organization", "World"
+      "Building", "The Paris Agreement", "World"
       "OutputType", "Shield", "Local"
     }
 nreqs =
@@ -4983,16 +5035,16 @@ nreqs =
 	  "Gov", "Anarchy", "Player"
 	  "Gov", "Fundamentalism", "Player"
 	  "Gov", "City States", "Player"
-	  "Building", "International Energy Union", "World"
+	  "Building", "Global Emission Union", "World"
     }
 	
 	
-[effect_world emission organization_2]
+[effect_The_paris_agreement__2]
 type    = "Pollu_Pop_Pct"
 value   = -40
 reqs    =
     { "type", "name", "range"
-      "Building", "World Emission Organization", "World"
+      "Building", "The Paris Agreement", "World"
       "OutputType", "Shield", "Local"
     }
 nreqs =
@@ -5001,7 +5053,7 @@ nreqs =
 	  "Gov", "Anarchy", "Player"
 	  "Gov", "Fundamentalism", "Player"
 	  "Gov", "City States", "Player"
-	  "Building", "International Energy Union", "World"
+	  "Building", "Global Emission Union", "World"
     }
 
 
@@ -5012,7 +5064,7 @@ type    = "Output_Bonus"
 value   = -20
 reqs    =
     { "type", "name", "range"
-      "Building", "World Emission Organization", "World"
+      "Building", "Global Emission Union", "World"
       "OutputType", "Shield", "Local"
     }
 nreqs =
@@ -5026,7 +5078,7 @@ type    = "Pollu_Pop_Pct"
 value   = -50
 reqs    =
     { "type", "name", "range"
-      "Building", "World Emission Organization", "World"
+      "Building", "Global Emission Union", "World"
       "OutputType", "Shield", "Local"
     }
 nreqs =
@@ -5057,7 +5109,7 @@ reqs    =
 ; City radius increased with Mass Transit
 [effect_mass_transit_2]
 type    = "City_Radius_Sq"
-value   = 1
+value   = 5
 reqs    =
     { "type", "name", "range"
    "Building", "Mass Transit", "City"

@@ -2102,14 +2102,14 @@ tile already producing trade.\
 
 
 
-[building_world_emission_organization]
-name		= _("World Emission Organization")
+[building_the_paris_agreement]
+name		= _("The Paris Agreement")
 genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Intergovernmentalism", "Player"
     }
-graphic	= "b.weorg"
+graphic	= "b.theparis"
 graphic_alt	=  "b.university"
 obsolete_by	=
     { "type", "name", "range", "survives"
@@ -2121,7 +2121,7 @@ sound		= "w_marco_polos_embassy"
 sound_alt	= "w_generic"
 helptext	= _("\
 This stunning achievement makes it possible to reduce pollution and the risk of global warming in a global scale. Like everything this comes with a price. \
-Production is reduced 25% and there is 40% less pollution for every player except for those with a government immune to intergovernmental treaties. Communism, fundamentalism, city states and anarchy are immune to WEO.\
+Production is reduced 25% and there is 40% less pollution for every player except for those with a government immune to intergovernmental treaties. Communism, fundamentalism, city states and anarchy are immune to this wonder.\
 ")
 
 
@@ -2132,7 +2132,7 @@ genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Global Intergovernmentalism", "Player"
-	  "Building", "World Emission Organization", "World"
+	  "Building", "The Paris Agreement", "World"
     }
 graphic	= "b.geunion"
 graphic_alt	=  "b.university"
@@ -2146,7 +2146,7 @@ sound		= "w_marco_polos_embassy"
 sound_alt	= "w_generic"
 helptext	= _("\
 This stunning achievement makes it possible to reduce pollution on a global level. \
-Production is reduced 20% and there is 50% less pollution for almost every player. Only the nations in anarchy one are immune to GEU. The effect of Wolrd Emission Organization is replaced by this wonder.\
+Production is reduced 20% and there is 50% less pollution for almost every player. Only the nations in anarchy are immune to GEU. The effect of World Emission Organization is replaced by this wonder.\
 ")
 
 
