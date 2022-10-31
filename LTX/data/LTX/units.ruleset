@@ -157,6 +157,15 @@ hp_loss_pct   = 0
 flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
                 "CollectRansom", "ZOC", "CanFortify", "CanPillage",
                 "TerrainDefense", "Airliftable", "KillCitizen"
+				
+[unitclass_ancient_land]
+; /* TRANS: Unit class: used adjectivally */
+name          = _("?unitclass:Ancient Land")
+min_speed     = 1
+hp_loss_pct   = 0
+flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
+                "CollectRansom", "ZOC", "CanFortify", "CanPillage",
+                "TerrainDefense", "Airliftable", "KillCitizen"
 
 [unitclass_small_unit]
 ; /* TRANS: Unit class: used adjectivally */
@@ -2015,7 +2024,7 @@ cargo         = "Small Land", "Merchant"
 flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC", "Unique", "Unbribable"
 roles         = "Ferryboat"
 helptext      = _("\
-The Longboat is your first deep ocean capable boat unit\
+The Longboat is one of your first deep ocean capable boat units\
  that only can carry one Merchant or Small Land unit. It can act\
  as a transport ship and has rudimentary defensive\
  and offensive capabilities.\
@@ -2030,6 +2039,47 @@ The longboat can take a settler to a far away land, unload the settler, build a 
 in the new city. This way you can build a new longboat at home and will also get half of the shields back. Those can be used for \
 building a defensive unit or maybe a worker for the new colony city.\
 ")
+
+
+
+
+[unit_longboat]
+name          = _("War Longboat")
+class         = "Sea"
+tech_req      = "Map Making"
+obsolete_by   = "Caravel"
+graphic       = "u.wlongboat"
+graphic_alt   = "u.trireme"
+sound_move    = "m_caravel"
+sound_move_alt = "m_generic"
+sound_fight   = "f_caravel"
+sound_fight_alt = "f_generic"
+build_cost    = 12
+pop_cost      = 0
+attack        = 1
+defense       = 1
+hitpoints     = 1
+firepower     = 1
+move_rate     = 7
+vision_radius_sq = 18
+transport_cap = 1
+fuel          = 7
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+cargo         = "Ancient Land"
+flags         = "BadCityDefender", "Only_Native_Attack", "HasNoZOC"
+roles         = "Ferryboat"
+helptext      = _("\
+The War Longboat is one of your first deep ocean capable boat units\
+ that only can carry one Ancient Land unit. It can act\
+ as a transport ship and has extremely low defensive\
+ and offensive capabilities.\
+"), _("\
+GUIDE: The war longboat is very useful for sending a military presence to far away lands at a very early time.\
+")
+
 
 
 
