@@ -51,7 +51,7 @@ The LTT ruleset is designed to be played without AI players even while it's quit
 
 ; Detailed description
 ; When updating this, update also desciption_file in [ruledit] section to match
-description = *LTT/README.LTT*
+;description = *LTT/README.LTT*
 
 ; What capabilities ruleset provides for the scenarios.
 ; See doc/README.rulesets for definitions of official capabilities
