@@ -1,4 +1,4 @@
-set aifill 11
+set aifill 15
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
