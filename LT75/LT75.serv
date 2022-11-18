@@ -4,10 +4,11 @@ rulesetdir LT75
 set mapsize "PLAYER"
 set gameseed "0"
 set generator "FRACTAL"
+#set generator "FRACTURE"
 set barbarians disabled
-set startpos "ALL"
+set startpos "VARIABLE" # ALL
 set huts 0
-set landmass 30
+set landmass 60
 set specials 300
 set steepness 50
 set temperature 70
@@ -17,13 +18,14 @@ set wetness 30
 set alltemperate enabled
 set tinyisles disabled
 set animals "0"
-set mapseed "0"
+set mapseed 0
 set separatepoles "ENABLED"
 set shieldbox "100"
 set foodbox "100"
 set singlepole "DISABLED"
 set startcity "DISABLED"
-#set revealmap START  #uncomment this for revealing the map for test games
+#set revealmap DEAD  #uncomment this for revealing the map for test games
+
 
 # general rules
 set nationset all
