@@ -766,7 +766,7 @@ for more details.\
 
 [unit_warriors]
 name          = _("Warriors")
-class         = , "Ancient Land"
+class         = "Ancient Land"
 tech_req      = "None"
 obsolete_by   = "Pikemen"
 graphic       = "u.warriors"
@@ -2043,7 +2043,7 @@ building a defensive unit or maybe a worker for the new colony city.\
 
 
 
-[unit_longboat]
+[unit_war_longboat]
 name          = _("War Longboat")
 class         = "Sea"
 tech_req      = "Map Making"
