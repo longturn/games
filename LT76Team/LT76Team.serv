@@ -50,6 +50,8 @@ set nuclearwinter_percent 100
 set diplchance 40
 set diplgoldcost 20
 set diplbulbcost 20
+set incite_gold_loss_chance 20
+set incite_gold_capt_chance 20
 
 set diplomacy HUMAN
 set sciencebox 100

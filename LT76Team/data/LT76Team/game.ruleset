@@ -215,11 +215,6 @@ total_factor = 100
 
 [combat_rules]
 
-
-incite_gold_loss_chance = 20
-incite_gold_capt_chance = 20
-timeoutmask = 30
-
 ; If tired_attack is set to TRUE, units that attack with less than a single
 ; move point (per move_fragments in terrain.ruleset) will have their attack
 ; power reduced accordingly. For instance, if move_fragments=3, a unit with
