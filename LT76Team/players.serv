@@ -1,4 +1,4 @@
-set aifill 14
+set aifill 16
 aitoggle AI*1
 #aitoggle AI*2
 #aitoggle AI*3
@@ -14,18 +14,36 @@ aitoggle AI*1
 #aitoggle AI*13
 #aitoggle AI*14
 #aitoggle AI*15
-playernation AI*1 Ainu 1 louis
-playernation AI*2 Vietnamese 1 chill
-playernation AI*3 Canadian 1 Koffy
-playernation AI*4 Icelandic 1 kamBLR
-playernation AI*5 French 1 zol
-playernation AI*6 Greek 1 big_premium
-playernation AI*7 American 1 mooreinstore
-playernation AI*8 Khazar 1 Meddelney
-playernation AI*9 UN 1 Pilo
-playernation AI*10 Irish 1 Xinthroni
-playernation AI*11 Prussian 1 ReterlitzII
-playernation AI*12 Serbian 1 vladserbia
-playernation AI*13 Saxon 1 petromax
-playernation AI*14 Finnish 1 L1meE
-
+#aitoggle AI*16
+playernation AI*1 Hanseatic 1 louis94
+playernation AI*2 "East German" 1 wieder_fi
+playernation AI*3 Scottish 1 jwrober
+playernation AI*4 Icelandic 1 panch93
+playernation AI*5 Vietnamese 1 chill
+playernation AI*6 Chuvash 1 kamBLR
+playernation AI*7 Canadian 1 Koffy
+playernation AI*8 English 1 mooreinstore
+playernation AI*9 Walloon 1 Zoe
+playernation AI*10 Celtiberian 1 TriClad
+playernation AI*11 Persian 1 Nyala
+playernation AI*12 Aragonese 1 havoc
+playernation AI*13 Ainu 1 mu
+playernation AI*14 Czech 1 Daavko
+playernation AI*15 Irish 1 Xinthroni
+playernation AI*16 Yugoslav 1 Corbeau
+team louis94        Hoohfhramnn
+team wieder_fi      Fellowship
+team jwrober        Hoohfhramnn
+team panch93        Hoohfhramnn
+team chill          Fellowship
+team kamBLR         Hoohfhramnn
+team Koffy          Fellowship
+team mooreinstore   Fellowship
+team Zoe            Fellowship
+team TriClad        Fellowship
+team Nyala          Fellowship
+team havoc          Fellowship
+team mu             Hoohfhramnn
+team Daavko         Hoohfhramnn
+team Xinthroni      Hoohfhramnn
+team Corbeau        Hoohfhramnn
