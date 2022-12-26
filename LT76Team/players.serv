@@ -1,20 +1,20 @@
 set aifill 16
 aitoggle AI*1
-#aitoggle AI*2
-#aitoggle AI*3
-#aitoggle AI*4
-#aitoggle AI*5
-#aitoggle AI*6
-#aitoggle AI*7
-#aitoggle AI*8
-#aitoggle AI*9
-#aitoggle AI*10
-#aitoggle AI*11
-#aitoggle AI*12
-#aitoggle AI*13
-#aitoggle AI*14
-#aitoggle AI*15
-#aitoggle AI*16
+aitoggle AI*2
+aitoggle AI*3
+aitoggle AI*4
+aitoggle AI*5
+aitoggle AI*6
+aitoggle AI*7
+aitoggle AI*8
+aitoggle AI*9
+aitoggle AI*10
+aitoggle AI*11
+aitoggle AI*12
+aitoggle AI*13
+aitoggle AI*14
+aitoggle AI*15
+aitoggle AI*16
 playernation AI*1 Hanseatic 1 louis94
 playernation AI*2 "East German" 1 wieder_fi
 playernation AI*3 Scottish 1 jwrober

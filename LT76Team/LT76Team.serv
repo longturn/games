@@ -68,7 +68,7 @@ set demography NnciwASLaPEgRMmuklOCqrb
 
 # technical
 set aifill 0
-;set allowtake ""
+set allowtake ""
 cmdlevel info
 set compresstype zstd
 set ec_chat enabled
