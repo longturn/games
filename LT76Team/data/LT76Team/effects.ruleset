@@ -552,7 +552,7 @@ value   = 25
 reqs    =
     { "type", "name", "range"
       "Gov", "Federation", "Player"
-	  "Tech", "The Corporation", "Player", TRUE
+	  "Tech", "The Corporation", "Player"
       "OutputType", "Science", "Local"
     }
 	
@@ -564,7 +564,7 @@ value   = 50
 reqs    =
     { "type", "name", "range"
       "Gov", "Communism", "Player"
-	  "Tech", "The Corporation", "Player", TRUE
+	  "Tech", "The Corporation", "Player"
       "OutputType", "Science", "Local"
     }
 	
@@ -2722,7 +2722,7 @@ type    = "Output_Bonus"
 value   = 30
 reqs    =
     { "type", "name", "range"
-	  "Gov", "Monarchy", "Player", TRUE
+	  "Gov", "Monarchy", "Player"
       "Building", "Workshop", "City"
       "OutputType", "Shield", "Local"
     }
@@ -2732,7 +2732,7 @@ type    = "Output_Bonus"
 value   = 30
 reqs    =
     { "type", "name", "range"
-	  "Gov", "Republic", "Player", TRUE
+	  "Gov", "Republic", "Player"
       "Building", "Workshop", "City"
       "OutputType", "Shield", "Local"
     }
@@ -2742,7 +2742,7 @@ type    = "Output_Bonus"
 value   = 30
 reqs    =
     { "type", "name", "range"
-	  "Gov", "City States", "Player", TRUE
+	  "Gov", "City States", "Player"
       "Building", "Workshop", "City"
       "OutputType", "Shield", "Local"
     }
@@ -2753,7 +2753,7 @@ type    = "Pollu_Pop_Pct"
 value   = 15
 reqs    =
     { "type", "name", "range"
-      "Gov", "Monarchy", "Player", TRUE
+      "Gov", "Monarchy", "Player"
       "Building", "Workshop", "City"
     }
 	
@@ -2762,7 +2762,7 @@ type    = "Pollu_Pop_Pct"
 value   = 15
 reqs    =
     { "type", "name", "range"
-      "Gov", "Republic", "Player", TRUE
+      "Gov", "Republic", "Player"
       "Building", "Workshop", "City"
     }
 	
@@ -2771,7 +2771,7 @@ type    = "Pollu_Pop_Pct"
 value   = 15
 reqs    =
     { "type", "name", "range"
-      "Gov", "City States", "Player", TRUE
+      "Gov", "City States", "Player"
       "Building", "Workshop", "City"
     }
 
@@ -5490,13 +5490,10 @@ reqs	=
 type  = "Veteran_Build"
 value = 1
 reqs  =
-    { "type", "name", "range"
-       "Building", "Academy", "City"
-       "UnitFlag", "NonMil", "Local"
-    }
-nreqs =
-    { "type", "name", "range"
-       "UnitFlag", "NoVeteran", "Local"
+    { "type", "name", "range", "present"
+       "Building", "Academy", "City", TRUE
+       "UnitFlag", "NonMil", "Local", TRUE
+       "UnitFlag", "NoVeteran", "Local", FALSE
     }
 
 [effect_academy1]
@@ -5522,7 +5519,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
       "OutputType", "Trade", "Local"
-	  "MinSize", "9", "City", TRUE
+	  "MinSize", "9", "City"
     }
 
 	
@@ -5532,7 +5529,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
       "OutputType", "Trade", "Local"
-	  "MinSize", "17", "City", TRUE
+	  "MinSize", "17", "City"
     }
 
 
@@ -5542,7 +5539,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
       "OutputType", "Trade", "Local"
-	  "MinSize", "30", "City", TRUE
+	  "MinSize", "30", "City"
     }
 
 

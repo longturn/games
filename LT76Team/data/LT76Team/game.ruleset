@@ -644,7 +644,7 @@ action       = "Investigate City"
 actor_reqs    =
     { "type",   "name", "range"
       "UnitFlag", "RealSpy", "Local"
-      "UnitState", "OnLivableTile", "Local", TRUE
+      "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
       "DiplRel", "Foreign", "Local"
     }
@@ -656,7 +656,7 @@ actor_reqs    =
       "UnitType", "Scribe", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
-      "DiplRel",      "Foreign",       "Local", TRUE
+      "DiplRel",      "Foreign",       "Local"
     }
 target_reqs  =
     { "type",   "name", "range", "present"
@@ -670,7 +670,7 @@ actor_reqs    =
       "UnitType", "Scholar", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
-      "DiplRel",      "Foreign",       "Local", TRUE
+      "DiplRel",      "Foreign",       "Local"
     }
 target_reqs  =
     { "type",   "name", "range", "present"
@@ -684,7 +684,7 @@ actor_reqs    =
       "UnitType", "Inventor", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
-      "DiplRel",      "Foreign",       "Local", TRUE
+      "DiplRel",      "Foreign",       "Local"
     }
 target_reqs  =
     { "type",   "name", "range", "present"
