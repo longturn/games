@@ -71,7 +71,9 @@ reqs	=
     }
 graphic	= "b.academy"
 graphic_alt	= "b.university"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 30
 upkeep		= 0
 sabotage	= 100
