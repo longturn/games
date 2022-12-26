@@ -1841,7 +1841,7 @@ colorlist =
 ;
 names =
  _("Hoohfhramnn"),
- _("Fellowship")
+ _("The Fellowship")
 
 [settings]
 ; freeciv game settings for civ2civ3 ruleset
