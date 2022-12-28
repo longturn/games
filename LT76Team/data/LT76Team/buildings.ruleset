@@ -1695,7 +1695,7 @@ increases to 3 permanently for every nation.\
 
 [building_eiffel_tower]
 name		= _("Eiffel Tower")
-genus		= "GreatWonder"
+genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Railroad", "Player"
@@ -1711,6 +1711,9 @@ sabotage	= 0
 sound		= "w_eiffel_tower"
 sound_alt	= "w_generic"
 helptext	= _("\
+Makes your embassies more powerful, letting you see the other player's \
+gold, national budget, and research.\
+"), _("\
 AI nations are more inclined to be friendly and forgiving toward the \
 owner of this wonder (until the Apollo Program is completed). It also \
 reduces the pollution caused by the population; it counteracts the \
@@ -2093,15 +2096,16 @@ graphic_alt	= "b.university"
 obsolete_by	=
     { "type", "name", "range", "survives"
     }
-build_cost	= 250
+build_cost	= 2000
 upkeep		= 0
 sabotage	= 0
 sound		= "w_marco_polos_embassy"
 sound_alt	= "w_generic"
 helptext	= _("\
-The world will become smaller place with when the new means \
+The world becomes a smaller place with when the new means \
 of communication connect all the people over the globe. \
-All the players will get an embassy with all the players. \
+The team owning this wonder sees the score and wonders of all \
+players in the game. \
 The city where the wonder is located gets extra trade for each \
 tile already producing trade.\
 ")
@@ -2310,7 +2314,8 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Gives an immediate technology advance to the player that builds it, \
 and thereafter all cities on the map are continuously visible to its \
-owner despite fog-of-war.\
+owner despite fog-of-war. The player owning this wonder also sees \
+what every other player researches.\
 "), _("\
 Completion of this wonder permanently adds 25% to the effect of \
 Research Labs for every player.\
