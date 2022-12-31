@@ -655,22 +655,20 @@ flags         = "Settlers", "Cant_Fortify", "NonMil", "HasNoZOC", "Airbase"
 roles         = "Settlers", "WorkerStartUnit"
 helptext      = _("\
 The tribal workers are those you start the game with. \
-You can't build tribal workers. They have the same number of moves as the workers you can build. \
-The tribal workers can't get promoted. \
-They however have one major advantage. The enemy is not able to \
-capture the tribal workers. Only the workers you can build can be captured. \
+You can't build tribal workers. The tribal workers have less moves compared to the workers you can build. \
+Since the tribal workers can get promoted it might make sense to upgrade the promoted ones first. \
+The original tribal workers however have one major advantage. The enemy is not able to \
+capture them. Only the workers you can build can be captured. \
 Workers have the ability to improve terrain tiles. See the help on \
 Terrain and Terrain Alterations for the effects of their actions.\
 "), _("\
 Workers can build airstrips, airbases, and buoys, which Settlers \
 and Migrants cannot. Workers must be on board a ship to build buoys.\
 \n\\n\
-GUIDE: The tribal workers have the same amount of moves as the workers you can build but can't become veteran. \
-It's relatively cheap to upgrade the tribal workers into regular ones. There is however a catch to this. \
+GUIDE: It's relatively cheap to upgrade tribal workers to regular ones. There is however a catch to this. \
 The tribal workers have 12 HP instead of 10 HP the regular workers have and since they can't be captured, \
 these units are quite nice for working close the border area. In any case you may want to upgrade them at some point \
-since the upgraded workers are really good and can move way faster compared to green ones. \
-Since the tribal workers can't be captured you can't grab those from the idlers. \
+since the upgraded workers can perform the work tasks much faster. \
 ")
 
 
