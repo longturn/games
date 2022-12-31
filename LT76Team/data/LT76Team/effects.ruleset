@@ -5344,14 +5344,6 @@ reqs    =
       "Gov", "Anarchy", "Player", FALSE
     }
 
-[effect_atlantic_telegraph_company]
-type    = "Have_Embassies"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Atlantic Telegraph Company", "World"
-    }
-
 [effect_atlantic_telegraph_company_2]
 type    = "Output_Inc_Tile"
 value   = 1
@@ -5671,30 +5663,103 @@ reqs    =
       "Gov", "Democracy", "Player"
     }
 
-; Having contact with another player lets one see their score.
-[effect_ni_score_contact]
+; Having contact with another player lets one see their wonders (soldiers like
+; to brag about those).
+[effect_ni_wonders_contact]
 type  = "Nation_Intelligence"
 value = 1
 reqs  =
-    { "type",                 "name",         "range",  "present"
-      "NationalIntelligence", "Score",        "Player", TRUE
-      "DiplRel",              "Has Contact",  "Local",  TRUE
+    { "type",                 "name",         "range"
+      "NationalIntelligence", "Wonders",      "Player"
+      "DiplRel",              "Has Contact",  "Local"
     }
 
-; Having an embassy lets one see almost everything. In fact, the things we
-; disable are not even shown in the client.
-[effect_ni_any_embassy]
+[effect_ni_wonders_embassy]
 type  = "Nation_Intelligence"
 value = 1
 reqs  =
-    { "type",                 "name",         "range",  "present"
-      "NationalIntelligence", "Mood",         "Player", FALSE
-      "NationalIntelligence", "History",      "Player", FALSE
-      "NationalIntelligence", "Infra Points", "Player", FALSE
-      "DiplRel",              "Has embassy",  "Local",  TRUE
+    { "type",                 "name",         "range"
+      "NationalIntelligence", "Wonders",      "Player"
+      "DiplRel",              "Has embassy",  "Local"
     }
 
-; for future purposes not yet implemented
-; [effect_conquest_tech]
-; type    = "Conquest_Tech_Pct"
-; value   = 0
+[effect_ni_wonders_atlantic_telegraph_company]
+type  = "Nation_Intelligence"
+value = 1
+reqs  =
+    { "type",                 "name",                       "range"
+      "NationalIntelligence", "Wonders",                    "Player"
+      "Building",             "Atlantic Telegraph Company", "Player"
+    }
+
+; Having an embassy with another player lets one see their score.
+[effect_ni_score_embassy]
+type  = "Nation_Intelligence"
+value = 1
+reqs  =
+    { "type",                 "name",         "range"
+      "NationalIntelligence", "Score",        "Player"
+      "DiplRel",              "Has embassy",  "Local"
+    }
+
+[effect_ni_score_atlantic_telegraph_company]
+type  = "Nation_Intelligence"
+value = 1
+reqs  =
+    { "type",                 "name",                       "range"
+      "NationalIntelligence", "Score",                      "Player"
+      "Building",             "Atlantic Telegraph Company", "Player"
+    }
+
+; Having an embassy lets you see the other player's government
+[effect_ni_gov_embassy]
+type  = "Nation_Intelligence"
+value = 1
+reqs  =
+    { "type",                 "name",         "range"
+      "NationalIntelligence", "Government",   "Player"
+      "DiplRel",              "Has embassy",  "Local"
+    }
+
+; Having an embassy and the Eiffel Tower lets you see the other player's gold
+[effect_ni_gold_embassy_eiffel]
+type  = "Nation_Intelligence"
+value = 1
+reqs  =
+    { "type",                 "name",         "range"
+      "NationalIntelligence", "Gold",         "Player"
+      "DiplRel",              "Has embassy",  "Local"
+      "Building",             "Eiffel Tower", "Player"
+    }
+
+; Having an embassy and the Eiffel Tower lets you see the other player's budget
+[effect_ni_budget_embassy_eiffel]
+type  = "Nation_Intelligence"
+value = 1
+reqs  =
+    { "type",                 "name",         "range"
+      "NationalIntelligence", "Tax Rates",    "Player"
+      "DiplRel",              "Has embassy",  "Local"
+      "Building",             "Eiffel Tower", "Player"
+    }
+
+; Having an embassy and the Eiffel Tower lets you see the other player's techs
+[effect_ni_techs_embassy_eiffel]
+type  = "Nation_Intelligence"
+value = 1
+reqs  =
+    { "type",                 "name",         "range"
+      "NationalIntelligence", "Techs",         "Player"
+      "DiplRel",              "Has embassy",  "Local"
+      "Building",             "Eiffel Tower", "Player"
+    }
+
+; Having the Internet lets you see everyone's techs
+[effect_ni_techs_internet]
+type  = "Nation_Intelligence"
+value = 1
+reqs  =
+    { "type",                 "name",     "range"
+      "NationalIntelligence", "Techs",    "Player"
+      "Building",             "Internet", "Player"
+    }
