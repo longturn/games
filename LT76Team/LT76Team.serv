@@ -14,10 +14,10 @@ set landmass 30
 set separatepoles disabled
 set specials 300
 set steepness 30
-set temperature 70
+set temperature 60
 set tilesperplayer 500
 set topology "WRAPX|WRAPY|ISO|HEX"
-set wetness 35
+set wetness 40
 set alltemperate disabled
 set tinyisles disabled
 set revealmap START #uncomment this for revealing the map for test games
