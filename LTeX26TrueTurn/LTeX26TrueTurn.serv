@@ -5,16 +5,15 @@ rulesetdir LTeX26TrueTurn
 
 # map
 set mapsize "PLAYER"
-set generator "FRACTURE"
+set generator "FRACTAL"
 set barbarians disabled
-set startpos "VARIABLE"
-set teamplacement CONTINENT
+set startpos "ALL"
 set huts 0
 set landmass 30
 set separatepoles disabled
 set specials 300
 set steepness 30
-set temperature 60
+set temperature 70
 set tilesperplayer 500
 set topology "WRAPX|WRAPY|ISO|HEX"
 set wetness 40
