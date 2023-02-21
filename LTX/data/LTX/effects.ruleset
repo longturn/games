@@ -694,7 +694,7 @@ reqs    =
 ; 3% more with Despotism
 [effect_waste_distance_despotism]
 type    = "Output_Waste_By_Distance"
-value   = 3
+value   = 2
 reqs    =
     { "type", "name", "range", "quiet"
       "Gov", "Despotism", "Player", TRUE
