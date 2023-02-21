@@ -451,7 +451,7 @@ _("\
 
 name        = _("City States")
 reqs = { "type", "name", "range"
-         "tech", "Iron Working", "Player"
+         "tech", "Bronze Working", "Player"
        }
 graphic     = "gov.citystates"
 graphic_alt = "gov.republic"
