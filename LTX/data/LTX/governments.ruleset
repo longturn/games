@@ -117,7 +117,9 @@ Under a Tribal government, you are part ruler of your people. Your\
  However these wonders will expire realtively soon and Tribalism is not\
  that well suited for an advanced empire.\
 "), _("\
-Compared to Despotism, a Tribal economy is more shield-oriented. Its\
+Compared to Despotism, a Tribal economy is more shield-oriented and it has \
+a huge penalty for sci production. The penalty from distance to the gov center \
+is however half of what despotism has. Its\
  bonuses to veterancy can be an advantage in wartime.\
 "),
 ; /* xgettext:no-c-format */
@@ -161,7 +163,8 @@ Under Despotism, you are the absolute ruler of your people.  Your\
  be issues with waste. With despotism it's possible to counter this\
  effect with some early wonders that will act like government centers.\
  However these wonders will expire realtively soon and Despotism is not\
- that well suited for an advanced empire.\
+ that well suited for an advanced empire. The penalty for distance to \
+ the capital is twice of what monarchy or tribal have.\
 "), _("\
 Compared to Tribalism, a Despotic economy is more trade-oriented.\
 "),
