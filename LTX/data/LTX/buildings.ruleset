@@ -2261,7 +2261,7 @@ name		= _("Pyramids")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Mathematics", "Player"
+      "Tech", "Masonry", "Player"
     }
 graphic	= "b.pyramids"
 graphic_alt	= "-"
@@ -2269,7 +2269,7 @@ obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Railroad", "Player", FALSE
     }
-build_cost	= 70
+build_cost	= 75
 upkeep		= 0
 sabotage	= 0
 sound		= "w_pyramids"
