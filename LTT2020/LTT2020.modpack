@@ -1,0 +1,24 @@
+[info]
+options = "+Freeciv-2.6-modpack"
+baseURL = "https://raw.githubusercontent.com/longturn/games/master/LTT2020"
+name = "Longturn Traditional (LTT2020) Ruleset 2020 version"
+type = "Ruleset"
+version = "1.0-d8b4bc6"
+
+[files]
+list =
+{ "src", "dest"
+  "LTT2020_local.serv", "LTT2020.serv"
+  "data/LTT2020/buildings.ruleset", "LTT2020/buildings.ruleset"
+  "data/LTT2020/cities.ruleset", "LTT2020/cities.ruleset"
+  "data/LTT2020/effects.ruleset", "LTT2020/effects.ruleset"
+  "data/LTT2020/game.ruleset", "LTT2020/game.ruleset"
+  "data/LTT2020/governments.ruleset", "LTT2020/governments.ruleset"
+  "data/LTT2020/nations.ruleset", "LTT2020/nations.ruleset"
+  "data/LTT2020/script.lua", "LTT2020/script.lua"
+  "data/LTT2020/styles.ruleset", "LTT2020/styles.ruleset"
+  "data/LTT2020/techs.ruleset", "LTT2020/techs.ruleset"
+  "data/LTT2020/terrain.ruleset", "LTT2020/terrain.ruleset"
+  "data/LTT2020/units.ruleset", "LTT2020/units.ruleset"
+}
+
