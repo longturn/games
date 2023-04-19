@@ -2291,6 +2291,15 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 	
+[effect_workshop]
+type    = "Output_Bonus"
+value   = 40
+reqs    =
+    { "type", "name", "range"
+      "Building", "Workshop", "City"
+      "OutputType", "Shield", "Local"
+    }
+	
 
 [effect_factory_1]
 type    = "Pollu_Pop_Pct"

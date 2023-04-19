@@ -510,7 +510,7 @@ name		= _("Forge")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", ""Iron Working", "Player"
+      "Tech", "Iron Working", "Player"
     }
 graphic	= "b.forge"
 graphic_alt	= "b.university"
@@ -526,7 +526,33 @@ sound_alt	= "b_generic"
 helptext	= _("\
 Increases the shield production in a city by 40%.\
 "), _("\
-This increase is your first step towards better production. Power plants do not increase the production of a forge.\
+This increase is your first step towards better production. Power plants do not increase the production of a forge. A forge doesn't increase pollution.\
+")
+
+
+
+[building_workshop]
+name		= _("Workshop")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Feudalism", "Player"
+    }
+graphic	= "b.workshop"
+graphic_alt	= "b.university"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 80
+upkeep		= 4
+sabotage	= 100
+sound		= "b_factory"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases the shield production in a city by 40%. Building a forge is not needed to build a workshop. Like the forge a workshop doesn't increase pollution.\
+"), _("\
+This increase is your second step towards better production. Power plants do not increase the production of a workshop.\
 ")
 
 
