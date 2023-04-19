@@ -503,6 +503,33 @@ pollution; a Factory also increases the pollution caused by the \
 population of the city.\
 ")
 
+
+
+[building_forge]
+name		= _("Forge")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", ""Iron Working", "Player"
+    }
+graphic	= "b.forge"
+graphic_alt	= "b.university"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 50
+upkeep		= 2
+sabotage	= 100
+sound		= "b_factory"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases the shield production in a city by 40%.\
+"), _("\
+This increase is your first step towards better production. Power plants do not increase the production of a forge.\
+")
+
+
 [building_granary]
 name		= _("Granary")
 genus		= "Improvement"

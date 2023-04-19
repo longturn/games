@@ -2281,6 +2281,16 @@ reqs    =
       "Building", "Factory", "City"
       "OutputType", "Shield", "Local"
     }
+	
+[effect_forge]
+type    = "Output_Bonus"
+value   = 40
+reqs    =
+    { "type", "name", "range"
+      "Building", "Forge", "City"
+      "OutputType", "Shield", "Local"
+    }
+	
 
 [effect_factory_1]
 type    = "Pollu_Pop_Pct"
