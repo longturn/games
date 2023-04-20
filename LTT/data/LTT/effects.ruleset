@@ -4402,7 +4402,6 @@ reqs    =
       "OutputType", "Trade", "Local"
     }
 
-	
 
 ; City radius increased with Mass Transit
 [effect_mass_transit_2]
@@ -4413,6 +4412,16 @@ reqs    =
    "Building", "Mass Transit", "City"
    }
 
+
+; City radius increased with banking
+[effect_mass_transit_3]
+type    = "City_Radius_Sq"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+    "Tech", "Banking", "Player"
+   }
+	
 
 [effect_units_in_a_city_1]
 type    = "Output_Bonus"
