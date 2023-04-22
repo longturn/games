@@ -223,6 +223,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Extra", "Fortress", "Local", TRUE
 ;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Land Defense", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Big Siege", "Local", FALSE
@@ -242,6 +243,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Extra", "Fortress", "Local", TRUE
 ;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Land Defense", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Big Siege", "Local", FALSE
@@ -264,6 +266,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Extra", "Airbase", "Local", TRUE
       "UnitClass", "Land", "Local", FALSE
+	  "UnitClass", "Land Defense", "Local", FALSE
       "UnitClass", "Small Land", "Local", FALSE
       "UnitClass", "Big Land", "Local", FALSE
       "UnitClass", "Big Siege", "Local", FALSE
@@ -283,6 +286,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Extra", "Airbase", "Local", TRUE
       "UnitClass", "Land", "Local", FALSE
+	  "UnitClass", "Land Defense", "Local", FALSE
       "UnitClass", "Small Land", "Local", FALSE
       "UnitClass", "Big Land", "Local", FALSE
       "UnitClass", "Big Siege", "Local", FALSE
@@ -322,6 +326,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Terrain", "Mountains", "Local", TRUE
 ;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Land Defense", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Merchant", "Local", FALSE
@@ -340,6 +345,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Terrain", "Mountains", "Local", TRUE
 ;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Land Defense", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Merchant", "Local", FALSE
@@ -1699,6 +1705,19 @@ reqs    =
       "UnitFlag", "NoVeteran", "Local", FALSE, FALSE
     }
 
+[effect_combat_tribal_b]
+type    = "Veteran_Combat"
+value   = 50
+reqs    =
+    { "type", "name", "range", "present", "quiet"
+      "Gov", "Tribal", "Player", TRUE, TRUE
+      "UnitClass",  "Land Defense", "Local", TRUE, FALSE
+      "UnitFlag", "NonMil", "Local", FALSE, FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE, FALSE
+    }
+
+
+
 [effect_revolution_republic]
 type    = "Revolution_Unhappiness"
 value   = 2
@@ -1950,6 +1969,9 @@ reqs    =
       "OutputType", "Luxury", "Local"
     }
 
+
+ 
+
 [effect_barracks]
 type    = "Veteran_Build"
 value   = 1
@@ -1960,6 +1982,18 @@ reqs    =
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
+	
+[effect_barracks_c]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks", "City", TRUE
+      "UnitClass", "Land Defense", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
 
 [effect_barracks_b]
 type    = "Veteran_Build"
@@ -1989,6 +2023,17 @@ reqs    =
       "Building", "Barracks", "City", TRUE
       "UnitClass", "Big Land", "Local", TRUE
     }
+	
+[effect_barracks_c_hp]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks", "City", TRUE
+      "UnitClass", "Land Defense", "Local", TRUE
+    }
+	
+	
 
 [effect_barracks_ii]
 type    = "Veteran_Build"
@@ -2011,6 +2056,20 @@ reqs    =
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
+	
+	
+[effect_barracks_ii_c]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks II", "City", TRUE
+      "UnitClass", "Land Defense", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+	
+	
 
 [effect_barracks_ii_hp]
 type    = "HP_Regen"
@@ -2029,6 +2088,20 @@ reqs    =
       "Building", "Barracks II", "City", TRUE
       "UnitClass", "Big Land", "Local", TRUE
     }
+
+
+[effect_barracks_ii_c_hp]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks II", "City", TRUE
+      "UnitClass", "Land Defense", "Local", TRUE
+    }
+
+
+
+
 
 [effect_barracks_iii]
 type    = "Veteran_Build"
@@ -2051,6 +2124,18 @@ reqs    =
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
+	
+[effect_barracks_iii_c]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks III", "City", TRUE
+      "UnitClass", "Land Defense", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+	
 
 [effect_barracks_iii_hp]
 type    = "HP_Regen"
@@ -2069,6 +2154,17 @@ reqs    =
       "Building", "Barracks III", "City"
       "UnitClass", "Big Land", "Local"
     }
+
+
+[effect_barracks_iii_c_hp]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range"
+      "Building", "Barracks III", "City"
+      "UnitClass", "Land Defense", "Local"
+    }
+
 
 [effect_cathedral]
 type    = "Make_Content"
@@ -2104,6 +2200,7 @@ reqs    =
     { "type", "name", "range", "present"
       "CityTile", "Center", "Local", TRUE
 ;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Land Defense", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Merchant", "Local", FALSE
@@ -2123,6 +2220,7 @@ reqs    =
       "MinSize", "9", "City", TRUE
       "CityTile", "Center", "Local", TRUE
 ;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Land Defense", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Merchant", "Local", FALSE
@@ -2141,6 +2239,7 @@ reqs    =
     { "type", "name", "range", "present"
       "Building", "City Walls", "City", TRUE
 ;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Land Defense", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Merchant", "Local", FALSE
@@ -3414,6 +3513,7 @@ reqs    =
       "Building", "Great Wall", "Player", TRUE
       "CityTile", "Center", "Local", TRUE
 ;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Land Defense", "Local", FALSE
 ;      "UnitClass", "Small Land", "Local", FALSE
 ;      "UnitClass", "Big Land", "Local", FALSE
 ;      "UnitClass", "Merchant", "Local", FALSE
@@ -3951,6 +4051,21 @@ reqs    =
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
+
+
+[effect_sun_tzus_war_academy_2]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Sun Tzu's War Academy", "Player", TRUE
+      "UnitClass", "Land Defense", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
+
+
 
 [effect_sun_tzus_war_academy_culture]
 type    = "History"

@@ -150,6 +150,15 @@ flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
                 "CollectRansom", "ZOC", "CanFortify", "CanPillage",
                 "TerrainDefense", "Airliftable", "KillCitizen"
 
+[unitclass_land_defense]
+; /* TRANS: Unit class: used adjectivally */
+name          = _("?unitclass:Land Defense")
+min_speed     = 1
+hp_loss_pct   = 0
+flags         = "TerrainSpeed", "DamageSlows", "CanOccupyCity", "BuildAnywhere",
+                "CollectRansom", "ZOC", "CanFortify", "CanPillage",
+                "Airliftable", "KillCitizen"
+
 [unitclass_land_small]
 ; /* TRANS: Unit class: used adjectivally */
 name          = _("?unitclass:Small Land")
@@ -732,7 +741,7 @@ This unit may be built from the start of the game.  It is the\
 
 [unit_phalanx]
 name          = _("Phalanx")
-class         = "Land"
+class         = "Land Defense"
 tech_req      = "Bronze Working"
 obsolete_by   = "Pikemen"
 graphic       = "u.phalanx"
@@ -831,7 +840,7 @@ Legions are heavily armed and well disciplined infantry\
 
 [unit_pikemen]
 name          = _("Pikemen")
-class         = "Land"
+class         = "Land Defense"
 tech_req      = "Feudalism"
 obsolete_by   = "Musketeers"
 graphic       = "u.pikemen"
