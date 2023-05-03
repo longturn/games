@@ -1,7 +1,39 @@
-set aifill 2
+set aifill 19
 aitoggle AI*1
 aitoggle AI*2
-playernation AI*1 Nationame 1 Playername
-playernation AI*2 Nationame2 1 Playername2
-
-
+aitoggle AI*3
+aitoggle AI*4
+aitoggle AI*5
+aitoggle AI*6
+aitoggle AI*7
+aitoggle AI*8
+aitoggle AI*9
+aitoggle AI*10
+aitoggle AI*11
+aitoggle AI*12
+aitoggle AI*13
+aitoggle AI*14
+aitoggle AI*15
+aitoggle AI*16
+aitoggle AI*17
+aitoggle AI*18
+aitoggle AI*19
+playernation AI*1 daavko 1 Hacker
+playernation AI*2 kamBLR 1 Mi'kmaq
+playernation AI*3 absurdCartilage 1 Kievan Rus'
+playernation AI*4 L1meE 1 Finnish
+playernation AI*5 jwrober 1 Scottish
+playernation AI*6 Kroko24 1 Hittite
+playernation AI*7 Modeemirotta 1 Lithuanian
+playernation AI*8 Kocu 1 Veletian
+playernation AI*9 Username 1 UN
+playernation AI*10 spicyFerret 1 Thai
+playernation AI*11 paavo 1 Karelian
+playernation AI*12 xtc69 1 Panamanian
+playernation AI*13 white9blue1 1 Viking
+playernation AI*14 chill 1 Vietnamese
+playernation AI*15 Ainu 1 mu
+playernation AI*16 Shoilf 1 Mitanni
+playernation AI*17 you 1 Werewolf
+playernation AI*18 ollikka 1 Swiss
+playernation AI*19 Mrkurre06 1 Teutonic
