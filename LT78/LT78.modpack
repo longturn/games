@@ -1,0 +1,24 @@
+[info]
+options = "+Freeciv-2.6-modpack"
+baseURL = "https://raw.githubusercontent.com/longturn/games/master/LT78"
+name = "Longturn Traditional (LTT) Ruleset"
+type = "Ruleset"
+version = "1.0-d8b4bc6"
+
+[files]
+list =
+{ "src", "dest"
+  "LT78_local.serv", "LT78.serv"
+  "data/LT78/buildings.ruleset", "LT78/buildings.ruleset"
+  "data/LT78/cities.ruleset", "LT78/cities.ruleset"
+  "data/LT78/effects.ruleset", "LT78/effects.ruleset"
+  "data/LT78/game.ruleset", "LT78/game.ruleset"
+  "data/LT78/governments.ruleset", "LT78/governments.ruleset"
+  "data/LT78/nations.ruleset", "LT78/nations.ruleset"
+  "data/LT78/script.lua", "LT78/script.lua"
+  "data/LT78/styles.ruleset", "LT78/styles.ruleset"
+  "data/LT78/techs.ruleset", "LT78/techs.ruleset"
+  "data/LT78/terrain.ruleset", "LT78/terrain.ruleset"
+  "data/LT78/units.ruleset", "LT78/units.ruleset"
+}
+
