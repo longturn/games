@@ -9,7 +9,7 @@ set teamplacement CONTINENT
 set huts 0
 set landmass 30
 set separatepoles disabled
-set specials 300
+set specials 320
 set steepness 30
 set temperature 60
 set tilesperplayer 450
