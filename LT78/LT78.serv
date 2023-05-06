@@ -7,7 +7,7 @@ set barbarians disabled
 set startpos "VARIABLE"
 set teamplacement CONTINENT
 set huts 0
-set landmass 30
+set landmass 40
 set separatepoles enabled
 set specials 320
 set steepness 30
