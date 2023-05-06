@@ -8,7 +8,7 @@ set startpos "VARIABLE"
 set teamplacement CONTINENT
 set huts 0
 set landmass 30
-set separatepoles disabled
+set separatepoles enabled
 set specials 320
 set steepness 30
 set temperature 60
@@ -17,7 +17,7 @@ set topology "WRAPX|WRAPY|ISO"
 set wetness 50
 set alltemperate disabled
 set tinyisles disabled
-set revealmap START #uncomment this for revealing the map for test games
+#set revealmap START #uncomment this for revealing the map for test games
 
 
 # general rules
