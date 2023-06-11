@@ -1,0 +1,89 @@
+; Modifying this file:
+; You should not modify this file except to make bugfixes or
+; for other "maintenance".  If you want to make custom changes,
+; you should create a new datadir subdirectory and copy this file
+; into that directory, and then modify that copy.  Then use the
+; command "rulesetdir <mysubdir>" in the server to have freeciv
+; use your new customized file.
+; Note that the freeciv AI may not cope well with anything more
+; than minor changes.
+
+
+[datafile]
+description="Sim ruleset cities data for Freeciv21"
+ruledit="3.0.601765.2-rc"
+options="+Freeciv-ruleset-Devel-2017.Jan.02 HP_Regen_Min Bombard_Limit_Pct Wonder_Visible Vision_Layer Nation_Intelligence"
+format_version=20
+; /* <-- avoid gettext warnings
+;
+; A specialist is a city citizen who is not a tile worker.  Usually the
+; player can control what specialist each citizen is, so long as the
+; requirements for that specialist are met.
+;
+; Below are the entries for the specialists, one per specialist type.
+; The tag name (in [specialist_*]) doesn't matter so long as it's unique.
+; For each specialist the following fields may be set:
+;
+;
+; name          = translatable (plural) name as seen by user
+; rule_name     = (optional) internal name for savegames, rulesets etc; if
+;                 not present, "name" is used for this purpose too. Since
+;                 the name used in savegames must not change, if you want
+;                 to rename an item after a ruleset has been released, you
+;                 should set "rule_name" to the original value of "name".
+; short_name    = one-character "short name" used (for instance) in cityrep;
+;                 should be first character/abbrevation of "name"
+; graphic       = tag specifying preferred graphic
+;                 Different images based on citizen number are supported.
+;                 If no such images indexed with citizen number are found,
+;                 plain tag is used instead.
+; graphic_alt   = fallback graphic tag in case the specialist graphic isn't
+;                 found.
+; reqs          = requirements to have the specialist pick (see
+;                 effects.ruleset and README.effects for help on requirements)
+; helptext      = optional help text string; should escape all raw newlines
+;                 so that xgettext parsing works
+;
+; */ <-- avoid gettext warnings
+
+
+[specialist_0]
+name=_("Entertainers")
+rule_name="elvis"
+short_name="E"
+reqs={"type","name","range","present"
+"Gov","Anarchy","Player",FALSE
+}
+graphic="specialist.entertainer"
+
+[specialist_1]
+name=_("Scientists")
+rule_name="scientist"
+short_name="S"
+reqs={"type","name","range","present"
+"Building","Library","City",TRUE
+"Gov","Anarchy","Player",FALSE
+}
+graphic="specialist.scientist"
+helptext="Scientists can be employed after you build a library in your city. Each scientist adds points to your empire's research output per turn, the amount depending on buildings present in the city and active wonders in your nation and the world. "
+
+[specialist_2]
+name=_("Taxmen")
+rule_name="taxman"
+short_name="T"
+reqs={"type","name","range","present"
+"Building","Marketplace","City",TRUE
+"Gov","Anarchy","Player",FALSE
+}
+graphic="specialist.taxman"
+helptext="Taxmen can be employed after you build a marketplace in your city. Each tax collector produces extra gold for your treasury per turn, the amount depending on buildings present in the city and active wonders in your nation and the world. "
+
+[parameters]
+add_to_size_limit=99
+vision_reveal_tiles=TRUE
+pop_report_zeroes=4
+
+[citizen]
+nationality=TRUE
+convert_speed=20
+partisans_pct=40
