@@ -1,2 +1,0 @@
--- This file is for lua-functionality for parsing luadata.txt
--- of this ruleset.
