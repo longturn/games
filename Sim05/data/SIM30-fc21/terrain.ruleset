@@ -1571,6 +1571,7 @@ build_time=0
 removal_time=0
 native_to="Land","Raiders","Small Land","Non Military","Big Land","Merchant", "Tribe"
 flags="NativeTile","AlwaysOnCityCenter"
+bridged_over   = "River"
 hidden_by="Railroad","Maglev"
 helptext="Roads allow your land units to move more quickly, and allow wheeled Big Land units such as Chariots and Catapults to travel through otherwise difficult terrain (Mountains, Jungle, and Swamp).","On some terrains, roads also provide a trade bonus.","Building roads on river tiles requires knowledge of Bridge Building. City center tiles automatically get roads (even on a river tile)."
 
@@ -1594,6 +1595,7 @@ build_time=3
 removal_time=0
 native_to="Land","Raiders","Small Land","Non Military","Big Land","Merchant", "Tribe"
 flags="NativeTile","AutoOnCityCenter"
+bridged_over   = "River"
 hidden_by="Maglev"
 helptext="Once you learn the Railroad technology, you may upgrade your roads to railroads. Units travel considerably faster along railroads than along roads.","A railroad also increases any shield resources produced by a tile. A tile whose road is upgraded to a railroad retains any trade bonus from the road as well.","City center tiles with roads are automatically upgraded to railroads when you learn the Railroad technology."
 
@@ -1618,6 +1620,7 @@ build_time=3
 removal_time=0
 native_to="Land","Raiders","Small Land","Non Military","Merchant", "Tribe"
 flags="NativeTile","AutoOnCityCenter"
+bridged_over   = "River"
 helptext="With sufficient technology, you may build magnetic levitation systems along your railroad routes. Land and Small Land units expend no movement points when riding a maglev; you may ride indefinitely. (As may your enemies!)","Your regular railroads are still used to carry heavy Big Land and Merchant units for which the maglev system is unsuitable, and they continue to provide production and trade bonuses.","City center tiles with railroads are automatically upgraded to maglev when you learn about Superconductors."
 
 [extra_39]
