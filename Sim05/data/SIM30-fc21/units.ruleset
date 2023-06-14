@@ -127,7 +127,7 @@ flags="Unreachable","DoesntOccupyTile"
 name=_("?unitclass:Land")
 min_speed=1
 hp_loss_pct=0
-flags="TerrainSpeed","TerrainDefense","CanOccupyCity","BuildAnywhere","CollectRansom","ZOC"
+flags="TerrainSpeed","TerrainDefense","CanOccupyCity","BuildAnywhere","CollectRansom","ZOC","CanFortify"
 
 [unitclass_2]
 name=_("?unitclass:Raiders")
