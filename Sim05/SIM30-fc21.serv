@@ -20,17 +20,19 @@ set steepness 30
 set temperature 50
 set topology "WRAPX|ISO|HEX"
 set wetness 60
-#set revealmap START  #uncomment this for revealing the map for test games
+set revealmap START  #(un)comment this for for test/real games  <------------- TEST
+set mapsize "PLAYER"
+set tilesperplayer 200    # <----------------------- TEST
 
 # general rules
-# set aifill 20    <------------------ TEST!!!
+# set aifill 20    #<------------------ TEST!!!
 set nationset all
 set borders enabled
 set citymindist 1
 set foggedborders enabled
 set rapturedelay 3
 set restrictinfra enabled
-set revolen 2
+set revolen 1
 set victories SPACERACE
 set endspaceship enabled
 set unreachableprotects disabled
