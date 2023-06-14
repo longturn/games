@@ -23,7 +23,7 @@ set wetness 60
 #set revealmap START  #uncomment this for revealing the map for test games
 
 # general rules
-set aifill 20
+# set aifill 20    <------------------ TEST!!!
 set nationset all
 set borders enabled
 set citymindist 1
