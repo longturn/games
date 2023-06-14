@@ -85,3 +85,6 @@ set demography "NnAwSRLaPEMOCqrb"
 set dispersion 1
 set killstack disabled
 
+
+set nationset all
+read players.serv
