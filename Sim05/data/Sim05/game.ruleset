@@ -21,8 +21,8 @@ description_file="civ2civ3/README.civ2civ3"
 [about]
 name="Sim ruleset"
 version=""
-summary=_("You are playing Freeciv with Sim rules:\\n\nGameplay pretty much unique, aimed at recreating the feel of human history.\\n\nCreated for multiplayer, with AI being completely lost, although it does tend to hold its ground in the beginning.")
-description=*civ2civ3/README.civ2civ3*
+summary=_("You are playing Freeciv with Sim rules. Gameplay is pretty much unique, aimed at recreating the feel of human history. The ruleset is created for multiplayer, with AI being completely lost, although it does tend to hold its ground in the beginning. \n \n For full manual, see: \n https://freeciv.fandom.com/wiki/Simulation_Ruleset")
+#description=*civ2civ3/README.civ2civ3*
 capabilities=""
 
 [civstyle]
