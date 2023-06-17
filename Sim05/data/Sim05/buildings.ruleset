@@ -1220,7 +1220,8 @@ helptext="This is not a normal improvement.  Instead, setting a city's productio
 [building_76]
 name=_("1st Five Year Plan")
 genus="SmallWonder"
-graphic="gov.communism"
+graphic="1stFYP"
+graphic_alt="gov.communism"
 sound="w_united_nations"
 sound_alt="w_generic"
 reqs={"type","name","range"
@@ -1236,7 +1237,8 @@ helptext="The main point of Planned Economy, the Five Year Plan is aimed at incr
 [building_77]
 name=_("2nd Five Year Plan")
 genus="SmallWonder"
-graphic="gov.communism"
+graphic="2ndFYP"
+graphic_alt="gov.communism"
 sound="w_united_nations"
 sound_alt="w_generic"
 reqs={"type","name","range"
@@ -1251,7 +1253,8 @@ helptext="The main point of Planned Economy, the Five Year Plan is aimed at incr
 [building_78]
 name=_("3rd Five Year Plan")
 genus="SmallWonder"
-graphic="gov.communism"
+graphic="1rdFYP"
+graphic_alt="gov.communism"
 sound="w_united_nations"
 sound_alt="w_generic"
 reqs={"type","name","range"
@@ -1266,7 +1269,8 @@ helptext="The main point of Planned Economy, the Five Year Plan is aimed at incr
 [building_79]
 name=_("4th Five Year Plan")
 genus="SmallWonder"
-graphic="gov.communism"
+graphic="4thFYP"
+graphic_alt="gov.communism"
 sound="w_united_nations"
 sound_alt="w_generic"
 reqs={"type","name","range"
@@ -1281,7 +1285,8 @@ helptext="The main point of Planned Economy, the Five Year Plan is aimed at incr
 [building_80]
 name=_("5th Five Year Plan")
 genus="SmallWonder"
-graphic="gov.communism"
+graphic="5thFYP"
+graphic_alt="gov.communism"
 sound="w_united_nations"
 sound_alt="w_generic"
 reqs={"type","name","range"
