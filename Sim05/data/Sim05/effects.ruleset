@@ -4271,70 +4271,70 @@ reqs={"type","name","range"
 type="Make_Content"
 value=2
 reqs={"type","name","range"
-"Building","Police 1st Precint","City"
+"Building","Police 1st Precinct","City"
 }
 
 [effect_510]
 type="Make_Content"
 value=2
 reqs={"type","name","range"
-"Building","Police 2nd Precint","City"
+"Building","Police 2nd Precinct","City"
 }
 
 [effect_511]
 type="Make_Content"
 value=2
 reqs={"type","name","range"
-"Building","Police 3rd Precint","City"
+"Building","Police 3rd Precinct","City"
 }
 
 [effect_512]
 type="Make_Content"
 value=2
 reqs={"type","name","range"
-"Building","Police 4th Precint","City"
+"Building","Police 4th Precinct","City"
 }
 
 [effect_513]
 type="Make_Content"
 value=2
 reqs={"type","name","range"
-"Building","Police 5th Precint","City"
+"Building","Police 5th Precinct","City"
 }
 
 [effect_514]
 type="Make_Content"
 value=2
 reqs={"type","name","range"
-"Building","Police 6th Precint","City"
+"Building","Police 6th Precinct","City"
 }
 
 [effect_515]
 type="Make_Content"
 value=2
 reqs={"type","name","range"
-"Building","Police 7th Precint","City"
+"Building","Police 7th Precinct","City"
 }
 
 [effect_516]
 type="Make_Content"
 value=2
 reqs={"type","name","range"
-"Building","Police 8th Precint","City"
+"Building","Police 8th Precinct","City"
 }
 
 [effect_517]
 type="Make_Content"
 value=2
 reqs={"type","name","range"
-"Building","Police 9th Precint","City"
+"Building","Police 9th Precinct","City"
 }
 
 [effect_518]
 type="Make_Content"
 value=2
 reqs={"type","name","range"
-"Building","Police 10th Precint","City"
+"Building","Police 10th Precinct","City"
 }
 
 [effect_519]
