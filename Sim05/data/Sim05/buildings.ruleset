@@ -64,7 +64,8 @@ format_version=20
 [building_0]
 name=_("==Building complete==")
 genus="Special"
-graphic="b.capitalization"
+graphic="b.building_complete"
+graphic_alt="b.capitalization"
 reqs={"type","name","range","present"
 "Gov","Tribal","Player",FALSE
 }
@@ -444,7 +445,8 @@ helptext="Makes a city the capital and the center of your government. Corruption
 [building_26]
 name=_("Second Palace")
 genus="SmallWonder"
-graphic="b.courthouse"
+graphic="b.ecclesiastical_palace"
+graphic_alt="b.palace"
 sound="b_courthouse"
 sound_alt="b_generic"
 reqs={"type","name","range"
@@ -1220,7 +1222,7 @@ helptext="This is not a normal improvement.  Instead, setting a city's productio
 [building_76]
 name=_("1st Five Year Plan")
 genus="SmallWonder"
-graphic="1stFYP"
+graphic="b.five_year_plan_1"
 graphic_alt="gov.communism"
 sound="w_united_nations"
 sound_alt="w_generic"
@@ -1237,7 +1239,7 @@ helptext="The main point of Planned Economy, the Five Year Plan is aimed at incr
 [building_77]
 name=_("2nd Five Year Plan")
 genus="SmallWonder"
-graphic="2ndFYP"
+graphic="b.five_year_plan_2"
 graphic_alt="gov.communism"
 sound="w_united_nations"
 sound_alt="w_generic"
@@ -1253,7 +1255,7 @@ helptext="The main point of Planned Economy, the Five Year Plan is aimed at incr
 [building_78]
 name=_("3rd Five Year Plan")
 genus="SmallWonder"
-graphic="1rdFYP"
+graphic="b.five_year_plan_3"
 graphic_alt="gov.communism"
 sound="w_united_nations"
 sound_alt="w_generic"
@@ -1269,7 +1271,7 @@ helptext="The main point of Planned Economy, the Five Year Plan is aimed at incr
 [building_79]
 name=_("4th Five Year Plan")
 genus="SmallWonder"
-graphic="4thFYP"
+graphic="b.five_year_plan_4"
 graphic_alt="gov.communism"
 sound="w_united_nations"
 sound_alt="w_generic"
@@ -1285,7 +1287,7 @@ helptext="The main point of Planned Economy, the Five Year Plan is aimed at incr
 [building_80]
 name=_("5th Five Year Plan")
 genus="SmallWonder"
-graphic="5thFYP"
+graphic="b.five_year_plan_5"
 graphic_alt="gov.communism"
 sound="w_united_nations"
 sound_alt="w_generic"
@@ -1301,7 +1303,7 @@ helptext="The main point of Planned Economy, the Five Year Plan is aimed at incr
 [building_81]
 name=_("Marco Polo's Embassy")
 genus="SmallWonder"
-graphic="b.university"
+graphic="b.marco_polos_embassy"
 sound="w_marco_polos_embassy"
 sound_alt="w_generic"
 reqs={"type","name","range"
@@ -1519,7 +1521,8 @@ helptext=" Hospital increases city health (reduces the chance of plague) by addi
 [building_95]
 name=_("School")
 genus="Improvement"
-graphic="b.library"
+graphic="b.school"
+graphic_alt="b.library"
 sound="b_library"
 sound_alt="b_generic"
 reqs={"type","name","range"
@@ -1533,7 +1536,8 @@ helptext="With industrial development the need for a more skilled workforce incr
 [building_96]
 name=_("Police 1st Precint")
 genus="Improvement"
-graphic="b.police_station"
+graphic="b.police_precinct_1"
+graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
@@ -1547,7 +1551,8 @@ helptext="The bigger the city, the more police you have to employ to maintain la
 [building_97]
 name=_("Police 2nd Precint")
 genus="Improvement"
-graphic="b.police_station"
+graphic="b.police_precinct_2"
+graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
@@ -1561,7 +1566,8 @@ helptext="The bigger the city, the more police you have to employ to maintain la
 [building_98]
 name=_("Police 3rd Precint")
 genus="Improvement"
-graphic="b.police_station"
+graphic="b.police_precinct_3"
+graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
@@ -1575,7 +1581,8 @@ helptext="The bigger the city, the more police you have to employ to maintain la
 [building_99]
 name=_("Police 4th Precint")
 genus="Improvement"
-graphic="b.police_station"
+graphic="b.police_precinct_4"
+graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
@@ -1589,7 +1596,8 @@ helptext="The bigger the city, the more police you have to employ to maintain la
 [building_100]
 name=_("Police 5th Precint")
 genus="Improvement"
-graphic="b.police_station"
+graphic="b.police_precinct_5"
+graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
@@ -1603,7 +1611,8 @@ helptext="The bigger the city, the more police you have to employ to maintain la
 [building_101]
 name=_("Police 6th Precint")
 genus="Improvement"
-graphic="b.police_station"
+graphic="b.police_precinct_6"
+graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
@@ -1617,7 +1626,8 @@ helptext="The bigger the city, the more police you have to employ to maintain la
 [building_102]
 name=_("Police 7th Precint")
 genus="Improvement"
-graphic="b.police_station"
+graphic="b.police_precinct_7"
+graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
@@ -1631,7 +1641,8 @@ helptext="The bigger the city, the more police you have to employ to maintain la
 [building_103]
 name=_("Police 8th Precint")
 genus="Improvement"
-graphic="b.police_station"
+graphic="b.police_precinct_8"
+graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
@@ -1645,7 +1656,8 @@ helptext="The bigger the city, the more police you have to employ to maintain la
 [building_104]
 name=_("Police 9th Precint")
 genus="Improvement"
-graphic="b.police_station"
+graphic="b.police_precinct_9"
+graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
@@ -1659,7 +1671,8 @@ helptext="The bigger the city, the more police you have to employ to maintain la
 [building_105]
 name=_("Police 10th Precint")
 genus="Improvement"
-graphic="b.police_station"
+graphic="b.police_precinct_10"
+graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
@@ -1673,7 +1686,8 @@ helptext="The bigger the city, the more police you have to employ to maintain la
 [building_106]
 name=_("Extra Field")
 genus="Improvement"
-graphic="b.granary"
+graphic="b.extra_field"
+graphic_alt="b.granary"
 sound="b_granary"
 sound_alt="b_generic"
 reqs={"type","name","range"
