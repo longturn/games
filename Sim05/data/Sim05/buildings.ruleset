@@ -89,18 +89,6 @@ upkeep=3
 sabotage=100
 helptext="Allows a city to produce veteran air units (including helicopters).  Also, damaged air units (again, including helicopters) which stay in town for one full turn without moving are completely restored.","Two cities with Airports can airlift one unit per turn.  Airlifting instantly transports the unit from one city to another and will use all of the unit's movement points.  A unit must have some movement points left to be airlifted."
 
-[building_2]
-name=_("Production complete")
-genus="Special"
-graphic="b.capitalization"
-reqs={"type","name","range","present"
-"Gov","Tribal","Player",FALSE
-}
-build_cost=999
-upkeep=0
-sabotage=0
-flags="Gold"
-
 [building_3]
 name=_("Aqueduct")
 genus="Improvement"
