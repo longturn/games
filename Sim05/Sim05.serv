@@ -20,12 +20,12 @@ set steepness 30
 set temperature 50
 set topology "WRAPX|ISO|HEX"
 set wetness 60
-set revealmap START  #(un)comment this for for test/real games  <------------- TEST
+#set revealmap START  #(un)comment this for for test/real games  <------------- TEST
 set mapsize "PLAYER"
-set tilesperplayer 200    # <----------------------- TEST
+set tilesperplayer 50    # <----------------------- TEST
 
 # general rules
-# set aifill 20    #<------------------ TEST!!!
+set aifill 63    #<------------------ TEST!!!
 set nationset all
 set borders enabled
 set citymindist 1
@@ -72,8 +72,8 @@ set ec_turns 9
 set maxplayers 126
 set saveturns 1
 set scorelog enabled
-set timeout 120       # <------------------------------------- TEST
-set unitwaittime 1      # <--------------------------------------- TEST
+set timeout 90000       # <------------------------------------- TEST
+set unitwaittime 36000      # <--------------------------------------- TEST
 set fixedlength enabled
 metamessage "Longturn Sim Game"
 metapatches longturn
