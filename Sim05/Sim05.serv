@@ -25,8 +25,7 @@ set mapsize "PLAYER"
 set tilesperplayer 50
 
 # general rules
-set aifill 63
-set nationset all
+# set aifill 63 -- see players.serv
 set borders enabled
 set citymindist 1
 set foggedborders enabled
@@ -84,7 +83,6 @@ set mgr_worldchance 20
 set demography "NnAwSRLaPEMOCqrb"
 set dispersion 1
 set killstack disabled
-
 
 set nationset all
 read players.serv
