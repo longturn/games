@@ -138,7 +138,7 @@ flags="TerrainSpeed","TerrainDefense","CanOccupyCity","BuildAnywhere","CollectRa
 [unitclass_tribe]
 name=_("?unitclass:Tribe")
 min_speed=1
-hp_loss_pct=30
+hp_loss_pct=20
 flags="TerrainSpeed","TerrainDefense","BuildAnywhere","CollectRansom","ZOC","DoesntOccupyTile","Airliftable"
 
 [unitclass_3]
@@ -451,7 +451,7 @@ sound_move_alt="m_generic"
 sound_fight="f_settlers"
 sound_fight_alt="f_generic"
 build_cost=5
-pop_cost=0
+pop_cost=1
 attack=0
 defense=1
 move_rate=2
