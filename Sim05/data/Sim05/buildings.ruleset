@@ -1534,7 +1534,7 @@ sabotage=100
 helptext="With industrial development the need for a more skilled workforce increases. School system is starting to emerge in order to train general population for work in factories. \\School increases the science output in a city by 50%.\\Decreases corruption by a small amount, depending on government."
 
 [building_96]
-name=_("Police 1st Precint")
+name=_("Police 1st Precinct")
 genus="Improvement"
 graphic="b.police_precinct_1"
 graphic_alt="b.police_station"
@@ -1546,142 +1546,142 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
 
 [building_97]
-name=_("Police 2nd Precint")
+name=_("Police 2nd Precinct")
 genus="Improvement"
 graphic="b.police_precinct_2"
 graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
-"Building","Police 1st Precint","City"
+"Building","Police 1st Precinct","City"
 }
 build_cost=70
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
 
 [building_98]
-name=_("Police 3rd Precint")
+name=_("Police 3rd Precinct")
 genus="Improvement"
 graphic="b.police_precinct_3"
 graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
-"Building","Police 2nd Precint","City"
+"Building","Police 2nd Precinct","City"
 }
 build_cost=80
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
 
 [building_99]
-name=_("Police 4th Precint")
+name=_("Police 4th Precinct")
 genus="Improvement"
 graphic="b.police_precinct_4"
 graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
-"Building","Police 3rd Precint","City"
+"Building","Police 3rd Precinct","City"
 }
 build_cost=90
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
 
 [building_100]
-name=_("Police 5th Precint")
+name=_("Police 5th Precinct")
 genus="Improvement"
 graphic="b.police_precinct_5"
 graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
-"Building","Police 4th Precint","City"
+"Building","Police 4th Precinct","City"
 }
 build_cost=100
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
 
 [building_101]
-name=_("Police 6th Precint")
+name=_("Police 6th Precinct")
 genus="Improvement"
 graphic="b.police_precinct_6"
 graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
-"Building","Police 5th Precint","City"
+"Building","Police 5th Precinct","City"
 }
 build_cost=110
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
 
 [building_102]
-name=_("Police 7th Precint")
+name=_("Police 7th Precinct")
 genus="Improvement"
 graphic="b.police_precinct_7"
 graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
-"Building","Police 6th Precint","City"
+"Building","Police 6th Precinct","City"
 }
 build_cost=120
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
 
 [building_103]
-name=_("Police 8th Precint")
+name=_("Police 8th Precinct")
 genus="Improvement"
 graphic="b.police_precinct_8"
 graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
-"Building","Police 7th Precint","City"
+"Building","Police 7th Precinct","City"
 }
 build_cost=130
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
 
 [building_104]
-name=_("Police 9th Precint")
+name=_("Police 9th Precinct")
 genus="Improvement"
 graphic="b.police_precinct_9"
 graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
-"Building","Police 8th Precint","City"
+"Building","Police 8th Precinct","City"
 }
 build_cost=140
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
 
 [building_105]
-name=_("Police 10th Precint")
+name=_("Police 10th Precinct")
 genus="Improvement"
 graphic="b.police_precinct_10"
 graphic_alt="b.police_station"
 sound="b_police_station"
 sound_alt="b_generic"
 reqs={"type","name","range"
-"Building","Police 9th Precint","City"
+"Building","Police 9th Precinct","City"
 }
 build_cost=150
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precint makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
 
 [building_106]
 name=_("Extra Field")
