@@ -62,7 +62,7 @@ set techlossforgiveness 1
 set techlossrestore 50
 
 # technical
-set allowtake "h"
+set allowtake ""
 set compresstype XZ
 set ec_chat enabled
 set ec_info enabled 
