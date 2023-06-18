@@ -22,7 +22,7 @@ set topology "WRAPX|ISO|HEX"
 set wetness 60
 #set revealmap START  #(un)comment this for for test/real games  <------------- TEST
 set mapsize "PLAYER"
-set tilesperplayer 50
+set tilesperplayer 80
 
 # general rules
 # set aifill 63 -- see players.serv
