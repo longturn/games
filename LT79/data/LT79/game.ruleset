@@ -19,7 +19,7 @@ format_version=20
 [ruledit]
 
 ; Which file to read description in from.
-description_file = "LTX/README.LTX"
+description_file = "LTX/README.LTT"
 
 [about]
 ; Ruleset name
