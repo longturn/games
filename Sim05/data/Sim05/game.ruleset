@@ -21,8 +21,8 @@ description_file="civ2civ3/README.civ2civ3"
 [about]
 name="Sim ruleset"
 version=""
-summary=_("You are playing Freeciv with Sim rules:\\n\nGameplay pretty much unique, aimed at recreating the feel of human history.\\n\nCreated for multiplayer, with AI being completely lost, although it does tend to hold its ground in the beginning.")
-description=*civ2civ3/README.civ2civ3*
+summary=_("You are playing Freeciv with Sim rules. Gameplay is pretty much unique, aimed at recreating the feel of human history. The ruleset is created for multiplayer, with AI being completely lost, although it does tend to hold its ground in the beginning. \n \n For full manual, see: \n https://freeciv.fandom.com/wiki/Simulation_Ruleset")
+#description=*civ2civ3/README.civ2civ3*
 capabilities=""
 
 [civstyle]
@@ -567,8 +567,9 @@ actor_reqs={"type","name","range","present"
 action="Attack"
 actor_reqs={"type","name","range","present"
 "UnitFlag","NonMil","Local",FALSE
-"MinMoveFrags","1","Local",TRUE
+"MinMoveFrags","9","Local",TRUE
 "UnitState","OnNativeTile","Local",TRUE
+"UnitFlag","Bombarder","Local",FALSE
 "DiplRel","War","Local",TRUE
 }
 
@@ -576,8 +577,9 @@ actor_reqs={"type","name","range","present"
 action="Attack"
 actor_reqs={"type","name","range","present"
 "UnitFlag","NonMil","Local",FALSE
-"MinMoveFrags","1","Local",TRUE
+"MinMoveFrags","9","Local",TRUE
 "UnitFlag","Marines","Local",TRUE
+"UnitFlag","Bombarder","Local",FALSE
 "DiplRel","War","Local",TRUE
 }
 
@@ -585,7 +587,8 @@ actor_reqs={"type","name","range","present"
 action="Attack"
 actor_reqs={"type","name","range","present"
 "UnitFlag","NonMil","Local",FALSE
-"MinMoveFrags","1","Local",TRUE
+"MinMoveFrags","9","Local",TRUE
+"UnitFlag","Bombarder","Local",FALSE
 "UnitClassFlag","AttFromNonNative","Local",TRUE
 "DiplRel","War","Local",TRUE
 }

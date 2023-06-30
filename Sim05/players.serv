@@ -1,4 +1,4 @@
-set aifill 7
+set aifill 32
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
@@ -6,6 +6,7 @@ aitoggle AI*4
 aitoggle AI*5
 aitoggle AI*6
 aitoggle AI*7
+aitoggle AI*8
 playernation AI*1 Yugoslav 1 Corbeau
 playernation AI*2 Czech 1 daavko 
 playernation AI*3 Russian 1 you
@@ -13,3 +14,28 @@ playernation AI*4 Finnish 1 L1meE
 playernation AI*5 Japanese 1 Blue
 playernation AI*6 Veletian 1 Kocu
 playernation AI*7 Texan 1 jwrober
+playernation AI*8 American 1 chomwitt
+hard AI*9
+hard AI*10
+hard AI*11
+hard AI*12
+hard AI*13
+hard AI*14
+hard AI*15
+hard AI*16
+hard AI*17
+hard AI*18
+hard AI*19
+hard AI*20
+hard AI*21
+hard AI*22
+hard AI*23
+hard AI*24
+hard AI*25
+hard AI*26
+hard AI*27
+hard AI*28
+hard AI*29
+hard AI*30
+hard AI*31
+hard AI*32
