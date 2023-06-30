@@ -45,7 +45,7 @@ The Longturn more experimental ruleset is designed to be played without AI playe
 
 ; Detailed description
 ; When updating this, update also desciption_file in [ruledit] section to match
-description = *LTX/README.LTT*
+;description = *LTX/README.LTT*
 
 ; What capabilities ruleset provides for the scenarios.
 ; See doc/README.rulesets for definitions of official capabilities
