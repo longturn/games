@@ -1,0 +1,24 @@
+[info]
+options = "+Freeciv-2.6-modpack"
+baseURL = "https://raw.githubusercontent.com/longturn/LTT-LTX/master/LTX"
+name = "Longturn Extended (LTX) Ruleset"
+type = "Ruleset"
+version = "1.0-d8b4bc6"
+
+[files]
+list =
+{ "src", "dest"
+  "LTX_local.serv", "LTX.serv"
+  "data/LTX/buildings.ruleset", "LTX/buildings.ruleset"
+  "data/LTX/cities.ruleset", "LTX/cities.ruleset"
+  "data/LTX/effects.ruleset", "LTX/effects.ruleset"
+  "data/LTX/game.ruleset", "LTX/game.ruleset"
+  "data/LTX/governments.ruleset", "LTX/governments.ruleset"
+  "data/LTX/nations.ruleset", "LTX/nations.ruleset"
+  "data/LTX/script.lua", "LTX/script.lua"
+  "data/LTX/styles.ruleset", "LTX/styles.ruleset"
+  "data/LTX/techs.ruleset", "LTX/techs.ruleset"
+  "data/LTX/terrain.ruleset", "LTX/terrain.ruleset"
+  "data/LTX/units.ruleset", "LTX/units.ruleset"
+}
+
