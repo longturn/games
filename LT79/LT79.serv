@@ -7,12 +7,12 @@ set barbarians disabled
 set startpos "VARIABLE"
 set teamplacement CONTINENT
 set huts 0
-set landmass 40
+set landmass 30
 set separatepoles enabled
 set specials 320
 set steepness 30
 set temperature 60
-set tilesperplayer 450
+set tilesperplayer 500
 set topology "WRAPX|WRAPY|ISO"
 set wetness 50
 set alltemperate disabled
@@ -22,7 +22,7 @@ set tinyisles disabled
 
 # general rules
 set nationset all
-set citymindist 5
+set citymindist 4
 set contactturns 1
 set disasters "10"
 set dispersion "6"
@@ -33,7 +33,7 @@ set revolen 2
 set revolentype   FIXED
 set spaceship_travel_time "100"
 set startunits cccccwwwwwwxx
-set techleak "200"
+set techleak "150"
 set techlevel "0"
 set trading_tech disabled
 set airliftingstyle "FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
