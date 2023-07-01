@@ -1078,6 +1078,7 @@ name=_("Goods")
 from_pct=150
 to_pct=135
 flags="Depletes"
+
 ; /* <-- avoid gettext warnings
 ;
 ; Clause types
@@ -1091,6 +1092,36 @@ flags="Depletes"
 ; receiver_reqs          = requirements that the receiving side of the clause needs to fulfill
 ;
 ; */ <-- avoid gettext warnings
+
+[clause_advance]
+type = "Advance"
+
+[clause_gold]
+type = "Gold"
+
+[clause_map]
+type = "Map"
+
+[clause_seamap]
+type = "Seamap"
+
+[clause_city]
+type = "City"
+
+[clause_ceasefire]
+type = "Ceasefire"
+
+[clause_peace]
+type = "Peace"
+
+[clause_alliance]
+type = "Alliance"
+
+[clause_vision]
+type = "Vision"
+
+[clause_embassy]
+type = "Embassy"
 
 
 [settings]
