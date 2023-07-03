@@ -294,7 +294,7 @@ In a fundamentalist society, the people and the rulers are entirely\
 "), _("\
 Improvements that normally convert unhappy citizens to content\
  citizens, produce `tithes' (gold) equivalent to the number\
- of people they would convert, and require no maintenance.\
+ of people they would convert.\
 "), _("\
 Fundamentalism is a good government for maximizing gold, and its Fanatics\
  are useful in wartime, but it has a heavy penalty to technological\
@@ -344,7 +344,7 @@ _("\
  already producing trade. (Cities below size 3 will not celebrate.)\n\
 * Each city can support up to 2 units for free; further units each cost\
  2 gold per turn.\n\
-* If the player knows The Corporation there will be +50% increase to the\
+* If the player knows The Corporation there will be +25% increase to the\
  science production.\n\
 * Each city tolerates up to 2 aggressively deployed military units;\
  each further unit causes 1 unhappy citizen.\n\
