@@ -1136,7 +1136,7 @@ set={"name","value"
 "razechance",10
 "restrictinfra",TRUE
 "revolentype","RANDQUICK"
-"startunits","cccccwwwwwwwxxx"
+"startunits","cccccwwwwxxx"
 "techlevel",1
 "techlossforgiveness",0
 "techlossrestore",50
