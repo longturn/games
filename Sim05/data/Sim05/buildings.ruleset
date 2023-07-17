@@ -329,7 +329,7 @@ reqs={"type","name","range"
 build_cost=40
 upkeep=1
 sabotage=100
-helptext="Gives one extra food resource on all Ocean or Deep Ocean tiles (but \not Lakes). The city needs to be coastal to build this improvement."
+helptext="Gives one extra food resource on all Ocean or Deep Ocean tiles (but not Lakes). The city needs to be coastal to build this improvement."
 
 [building_19]
 name=_("Hydro Plant")
