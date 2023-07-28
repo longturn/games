@@ -4503,3 +4503,9 @@ reqs    =
       "Action", "Bombard", "Local", TRUE
     }
 
+[effect_disband_unit_shield_return]
+type    = "Unit_Shield_Value_Pct"
+value   = 0
+reqs    =
+    { "type", "name", "range", "present"
+    }
