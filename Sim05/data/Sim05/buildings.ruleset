@@ -1489,7 +1489,7 @@ reqs={"type","name","range","present"
 build_cost=100
 upkeep=0
 sabotage=0
-helptext=" As the maritime trade develops, coastal cities establish connections in order to increase profits.Hanseatic Quarter adds 2 Trade on each Ocean tile in city range and 3 Trade on Deep Ocean tile. \\WARNING! It must be built before you discover Republic or Democracy; after you discover them, construction will not be possible anymore."
+helptext=" As maritime trade develops, coastal cities establish connections in order to increase profits. Hanseatic Quarter adds 2 Trade on each Ocean tile in city range and 3 Trade on Deep Ocean tile. \\WARNING! It must be built before you discover Republic or Democracy; after you discover them, construction will not be possible anymore."
 
 [building_94]
 name=_("Hospital")
