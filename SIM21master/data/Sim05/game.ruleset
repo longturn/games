@@ -1,0 +1,1146 @@
+; Modifying this file:
+; You should not modify this file except to make bugfixes or
+; for other "maintenance".  If you want to make custom changes,
+; you should create a new datadir subdirectory and copy this file
+; into that directory, and then modify that copy.  Then use the
+; command "rulesetdir <mysubdir>" in the server to have freeciv
+; use your new customized file.
+; Note that the freeciv AI may not cope well with anything more
+; than minor changes.
+
+
+[datafile]
+description="Sim ruleset game data for Freeciv21"
+ruledit="3.0.601765.2-rc"
+options="+Freeciv-ruleset-Devel-2017.Jan.02 HP_Regen_Min Bombard_Limit_Pct Wonder_Visible Vision_Layer Nation_Intelligence"
+format_version=20
+
+[ruledit]
+description_file="civ2civ3/README.civ2civ3"
+
+[about]
+name="Sim ruleset"
+version=""
+summary=_("You are playing Freeciv with Sim rules. Gameplay is pretty much unique, aimed at recreating the feel of human history. The ruleset is created for multiplayer, with AI being completely lost, although it does tend to hold its ground in the beginning. \n \n For full manual, see: \n https://freeciv.fandom.com/wiki/Simulation_Ruleset")
+#description=*civ2civ3/README.civ2civ3*
+capabilities=""
+
+[civstyle]
+civil_war_enabled=FALSE
+tech_steal_allow_holes=FALSE
+tech_trade_allow_holes=FALSE
+tech_trade_loss_allow_holes=FALSE
+tech_parasite_allow_holes=FALSE
+tech_loss_allow_holes=FALSE
+upgrade_veteran_loss=1
+autoupgrade_veteran_loss=1
+granary_food_ini=10,12,14,16,20,25,30,35,40
+min_city_center_food=1
+min_city_center_shield=1
+min_city_center_trade=1
+init_vis_radius_sq=4
+init_city_radius_sq=1
+gold_upkeep_style="Nation"
+
+[illness]
+illness_on=TRUE
+illness_base_factor=75
+illness_min_size=4
+
+[incite_cost]
+improvement_factor=10
+unit_factor=200
+
+[actions]
+force_trade_route=TRUE
+ui_name_poison_city_escape="%sPoison City%s"
+ui_name_sabotage_city_escape="%sSabotage City Escape%s"
+ui_name_targeted_sabotage_city_escape="Industrial %sSabotage%s"
+ui_name_sabotage_city_production_escape="Industrial %sSabotage Production%s"
+ui_name_targeted_steal_tech_escape="Indus%strial Espionage%s"
+ui_name_incite_city="Incite a %sRevolt%s"
+ui_name_enter_marketplace="Sell %sGoods%s"
+ui_name_bribe_unit="%sBribe Enemy Unit%s"
+ui_name_sabotage_unit_escape="%sSabotage Enemy Unit%s"
+ui_name_found_city="%sBuild City%s"
+ui_name_join_city="%sAdd to City%s"
+ui_name_explode_nuclear="Explode %sNuclear In Place%s"
+airlift_max_range="unlimited"
+ui_name_suicide_attack="%sExplode Missile%s"
+ui_name_conquer_city_2="%sConquer City from non native%s"
+ui_name_transport_disembark_2="%sDisembark from non native%s"
+; /* <-- avoid gettext warnings
+;
+; Action enablers:
+;
+; action               = the action to enable.
+; actor_reqs           = requirements that apply to the actor.
+; target_reqs          = requirements that apply to the target.
+;
+; README.actions lists the possible actions and their hard coded
+; requirements.
+;
+; An action enabler is active when its actor_reqs AND its target_reqs are
+; satisfied.
+;
+; */ <-- avoid gettext warnings
+
+
+[actionenabler_0]
+action="Establish Embassy"
+actor_reqs={"type","name","range","present"
+"UnitFlag","Spy","Local",TRUE
+"MinMoveFrags","1","Local",TRUE
+"DiplRel","Foreign","Local",TRUE
+"DiplRel","Has real embassy","Local",FALSE
+}
+target_reqs={"type","name","range","present"
+"NationGroup","Barbarian","Player",FALSE
+}
+
+[actionenabler_1]
+action="Establish Embassy Stay"
+actor_reqs={"type","name","range","present"
+"UnitFlag","Diplomat","Local",TRUE
+"MinMoveFrags","1","Local",TRUE
+"DiplRel","Foreign","Local",TRUE
+"UnitFlag","Spy","Local",FALSE
+"DiplRel","Has real embassy","Local",FALSE
+}
+target_reqs={"type","name","range","present"
+"NationGroup","Barbarian","Player",FALSE
+}
+
+[actionenabler_2]
+action="Establish Embassy Stay"
+actor_reqs={"type","name","range","present"
+"UnitType","Explorer","Local",TRUE
+"MinMoveFrags","1","Local",TRUE
+"DiplRel","Foreign","Local",TRUE
+"DiplRel","Has real embassy","Local",FALSE
+}
+target_reqs={"type","name","range","present"
+"NationGroup","Barbarian","Player",FALSE
+}
+
+[actionenabler_3]
+action="Investigate City"
+actor_reqs={"type","name","range","present"
+"UnitFlag","Diplomat","Local",TRUE
+"MinMoveFrags","1","Local",TRUE
+"DiplRel","Foreign","Local",TRUE
+"UnitFlag","Spy","Local",FALSE
+}
+
+[actionenabler_4]
+action="Investigate City"
+actor_reqs={"type","name","range"
+"UnitFlag","Spy","Local"
+"MinMoveFrags","1","Local"
+"DiplRel","Foreign","Local"
+}
+
+[actionenabler_5]
+action="Investigate City"
+actor_reqs={"type","name","range"
+"UnitType","Explorer","Local"
+"MinMoveFrags","1","Local"
+"DiplRel","Foreign","Local"
+}
+
+[actionenabler_6]
+action="Steal Gold Escape"
+actor_reqs={"type","name","range"
+"UnitFlag","Spy","Local"
+"UnitState","OnLivableTile","Local"
+"MinMoveFrags","1","Local"
+"Tech","Banking","Player"
+"DiplRel","Foreign","Local"
+}
+target_reqs={"type","name","range","present"
+"NationGroup","Barbarian","Player",FALSE
+}
+
+[actionenabler_7]
+action="Sabotage City"
+actor_reqs={"type","name","range","present"
+"UnitFlag","Diplomat","Local",TRUE
+"DiplRel","War","Local",TRUE
+"UnitState","OnLivableTile","Local",TRUE
+"MinMoveFrags","1","Local",TRUE
+"UnitFlag","Spy","Local",FALSE
+}
+
+[actionenabler_8]
+action="Sabotage City Escape"
+actor_reqs={"type","name","range"
+"UnitFlag","Spy","Local"
+"DiplRel","War","Local"
+"UnitState","OnLivableTile","Local"
+"MinMoveFrags","1","Local"
+}
+
+[actionenabler_9]
+action="Targeted Sabotage City Escape"
+actor_reqs={"type","name","range"
+"DiplRel","War","Local"
+"UnitFlag","Spy","Local"
+"UnitState","OnLivableTile","Local"
+"MinMoveFrags","1","Local"
+}
+
+[actionenabler_10]
+action="Steal Tech"
+actor_reqs={"type","name","range","present"
+"UnitFlag","Spy","Local",FALSE
+"UnitFlag","Diplomat","Local",TRUE
+"UnitState","OnLivableTile","Local",TRUE
+"MinMoveFrags","1","Local",TRUE
+"DiplRel","Foreign","Local",TRUE
+}
+target_reqs={"type","name","range","present"
+"NationGroup","Barbarian","Player",FALSE
+}
+
+[actionenabler_11]
+action="Steal Tech Escape Expected"
+actor_reqs={"type","name","range"
+"UnitFlag","Spy","Local"
+"UnitState","OnLivableTile","Local"
+"MinMoveFrags","1","Local"
+"DiplRel","Foreign","Local"
+}
+target_reqs={"type","name","range","present"
+"NationGroup","Barbarian","Player",FALSE
+}
+
+[actionenabler_12]
+action="Targeted Steal Tech Escape Expected"
+actor_reqs={"type","name","range"
+"UnitFlag","Spy","Local"
+"UnitState","OnLivableTile","Local"
+"MinMoveFrags","1","Local"
+"DiplRel","Foreign","Local"
+}
+target_reqs={"type","name","range","present"
+"NationGroup","Barbarian","Player",FALSE
+}
+
+[actionenabler_13]
+action="Incite City"
+actor_reqs={"type","name","range","present"
+"UnitFlag","Diplomat","Local",TRUE
+"DiplRel","Alliance","Local",FALSE
+"DiplRel","Team","Local",FALSE
+"UnitState","OnLivableTile","Local",TRUE
+"MinMoveFrags","1","Local",TRUE
+"DiplRel","Foreign","Local",TRUE
+"UnitFlag","Spy","Local",FALSE
+}
+target_reqs={"type","name","range","present"
+"Gov","Democracy","Player",FALSE
+"Building","Palace","City",FALSE
+"Building","Second Palace","City",FALSE
+"Building","Mausoleum of Mausolos","Player",FALSE
+"MaxUnitsOnTile","1","Local",TRUE
+}
+
+[actionenabler_14]
+action="Incite City Escape"
+actor_reqs={"type","name","range","present"
+"UnitFlag","Spy","Local",TRUE
+"DiplRel","Alliance","Local",FALSE
+"DiplRel","Team","Local",FALSE
+"UnitState","OnLivableTile","Local",TRUE
+"MinMoveFrags","1","Local",TRUE
+"DiplRel","Foreign","Local",TRUE
+}
+target_reqs={"type","name","range","present"
+"Gov","Democracy","Player",FALSE
+"Building","Palace","City",FALSE
+"Building","Second Palace","City",FALSE
+"Building","Mausoleum of Mausolos","Player",FALSE
+"MaxUnitsOnTile","2","Local",TRUE
+}
+
+[actionenabler_15]
+action="Establish Trade Route"
+actor_reqs={"type","name","range"
+"UnitFlag","TradeRoute","Local"
+"MinMoveFrags","1","Local"
+"UnitState","HasHomeCity","Local"
+}
+
+[actionenabler_16]
+action="Enter Marketplace"
+actor_reqs={"type","name","range"
+"UnitFlag","TradeRoute","Local"
+"UnitState","HasHomeCity","Local"
+"MinMoveFrags","1","Local"
+}
+target_reqs={"type","name","range"
+"Building","Marketplace","City"
+}
+
+[actionenabler_17]
+action="Help Wonder"
+actor_reqs={"type","name","range","present"
+"UnitFlag","HelpWonder","Local",TRUE
+"DiplRel","Armistice","Local",FALSE
+"DiplRel","War","Local",FALSE
+"DiplRel","Cease-fire","Local",FALSE
+"DiplRel","Peace","Local",FALSE
+"MinMoveFrags","1","Local",TRUE
+}
+target_reqs={"type","name","range","present"
+"BuildingGenus","Improvement","Local",FALSE
+"BuildingGenus","Special","Local",FALSE
+}
+
+[actionenabler_18]
+action="Bribe Unit"
+actor_reqs={"type","name","range","present"
+"UnitFlag","Diplomat","Local",TRUE
+"DiplRel","Alliance","Local",FALSE
+"DiplRel","Team","Local",FALSE
+"UnitState","OnLivableTile","Local",TRUE
+"MinMoveFrags","1","Local",TRUE
+"DiplRel","Foreign","Local",TRUE
+}
+target_reqs={"type","name","range","present"
+"UnitFlag","Unbribable","Local",FALSE
+"CityTile","Center","Local",FALSE
+"Gov","Republic","Player",FALSE
+"Gov","Democracy","Player",FALSE
+"MaxUnitsOnTile","1","Local",TRUE
+}
+
+[actionenabler_19]
+action="Sabotage Unit Escape"
+actor_reqs={"type","name","range"
+"UnitFlag","Spy","Local"
+"DiplRel","War","Local"
+"UnitState","OnLivableTile","Local"
+"MinMoveFrags","1","Local"
+}
+target_reqs={"type","name","range","present"
+"CityTile","Center","Local",FALSE
+"MinHitPoints","2","Local",TRUE
+}
+
+[actionenabler_20]
+action="Capture Units"
+actor_reqs={"type","name","range"
+"UnitFlag","Capturer","Local"
+"DiplRel","War","Local"
+"MinMoveFrags","1","Local"
+"DiplRel","Foreign","Local"
+}
+target_reqs={"type","name","range","present"
+"UnitFlag","Capturable","Local",TRUE
+"UnitState","Transporting","Local",FALSE
+"CityTile","Center","Local",FALSE
+}
+
+[actionenabler_21]
+action="Found City"
+actor_reqs={"type","name","range"
+"UnitFlag","Cities","Local"
+"UnitState","OnLivableTile","Local"
+"MinMoveFrags","1","Local"
+}
+target_reqs={"type","name","range","present"
+"CityTile","Claimed","Local",FALSE
+"TerrainFlag","NoCities","Local",FALSE
+}
+
+[actionenabler_22]
+action="Found City"
+actor_reqs={"type","name","range","present"
+"UnitFlag","Cities","Local",TRUE
+"UnitState","OnLivableTile","Local",TRUE
+"MinMoveFrags","1","Local",TRUE
+"DiplRel","Foreign","Local",FALSE
+}
+target_reqs={"type","name","range","present"
+"CityTile","Claimed","Local",TRUE
+"TerrainFlag","NoCities","Local",FALSE
+}
+
+[actionenabler_23]
+action="Join City"
+actor_reqs={"type","name","range","present"
+"UnitFlag","AddToCity","Local",TRUE
+"DiplRel","Foreign","Local",FALSE
+"MinMoveFrags","1","Local",TRUE
+}
+
+[actionenabler_24]
+action="Steal Maps Escape"
+actor_reqs={"type","name","range"
+"UnitFlag","Spy","Local"
+"UnitState","OnLivableTile","Local"
+"MinMoveFrags","1","Local"
+"DiplRel","Foreign","Local"
+}
+target_reqs={"type","name","range","present"
+"NationGroup","Barbarian","Player",FALSE
+}
+
+[actionenabler_25]
+action="Bombard"
+actor_reqs={"type","name","range","present"
+"UnitFlag","Bombarder","Local",TRUE
+"UnitState","Transported","Local",FALSE
+"MinMoveFrags","1","Local",TRUE
+"DiplRel","War","Local",TRUE
+}
+target_reqs={"type","name","range","present"
+"TerrainClass","Oceanic","Local",FALSE
+}
+
+[actionenabler_26]
+action="Explode Nuclear"
+actor_reqs={"type","name","range"
+"UnitFlag","Nuclear","Local"
+}
+
+[actionenabler_27]
+action="Destroy City"
+actor_reqs={"type","name","range","present"
+"UnitFlag","GameLoss","Local",TRUE
+"DiplRel","Foreign","Local",FALSE
+"MinMoveFrags","1","Local",TRUE
+"UnitState","OnLivableTile","Local",TRUE
+}
+
+[actionenabler_28]
+action="Expel Unit"
+actor_reqs={"type","name","range","present"
+"UnitState","OnDomesticTile","Local",TRUE
+"DiplRel","Foreign","Local",TRUE
+"DiplRel","Team","Local",FALSE
+"DiplRel","Alliance","Local",FALSE
+"MinMoveFrags","1","Local",TRUE
+}
+target_reqs={"type","name","range","present"
+"UnitClassFlag","Expellable","Local",TRUE
+"UnitState","OnDomesticTile","Local",FALSE
+}
+
+[actionenabler_29]
+action="Recycle Unit"
+actor_reqs={"type","name","range","present"
+"UnitFlag","EvacuateFirst","Local",FALSE
+"DiplRel","War","Local",FALSE
+"DiplRel","Cease-fire","Local",FALSE
+"DiplRel","Armistice","Local",FALSE
+"DiplRel","Peace","Local",FALSE
+}
+
+[actionenabler_30]
+action="Recycle Unit"
+actor_reqs={"type","name","range","present"
+"UnitFlag","EvacuateFirst","Local",FALSE
+"Gov","Communism","Player",FALSE
+"Gov","Democracy","Player",FALSE
+"Gov","Republic","Player",FALSE
+"DiplRel","War","Local",FALSE
+"DiplRel","Cease-fire","Local",FALSE
+"DiplRel","Armistice","Local",FALSE
+"DiplRel","Peace","Local",FALSE
+}
+
+[actionenabler_31]
+action="Disband Unit"
+actor_reqs={"type","name","range","present"
+"UnitFlag","EvacuateFirst","Local",FALSE
+}
+
+[actionenabler_32]
+action="Disband Unit"
+actor_reqs={"type","name","range","present"
+"UnitFlag","EvacuateFirst","Local",FALSE
+"Gov","Communism","Player",FALSE
+"Gov","Democracy","Player",FALSE
+"Gov","Republic","Player",FALSE
+}
+
+[actionenabler_33]
+action="Home City"
+actor_reqs={"type","name","range","present"
+"UnitFlag","NoHome","Local",FALSE
+"UnitState","HasHomeCity","Local",TRUE
+"DiplRel","Foreign","Local",FALSE
+}
+
+[actionenabler_34]
+action="Upgrade Unit"
+actor_reqs={"type","name","range","present"
+"DiplRel","Foreign","Local",FALSE
+}
+
+[actionenabler_35]
+action="Paradrop Unit"
+actor_reqs={"type","name","range","present"
+"UnitFlag","Paratroopers","Local",TRUE
+"MinMoveFrags","3","Local",TRUE
+"UnitState","Transporting","Local",FALSE
+"Extra","Airbase","Local",TRUE
+}
+target_reqs={"type","name","range","present"
+"CityTile","Claimed","Local",FALSE
+}
+
+[actionenabler_36]
+action="Paradrop Unit"
+actor_reqs={"type","name","range","present"
+"UnitFlag","Paratroopers","Local",TRUE
+"MinMoveFrags","3","Local",TRUE
+"UnitState","Transporting","Local",FALSE
+"CityTile","Center","Local",TRUE
+"DiplRel","Peace","Local",FALSE
+}
+target_reqs={"type","name","range"
+"CityTile","Claimed","Local"
+}
+
+[actionenabler_37]
+action="Paradrop Unit"
+actor_reqs={"type","name","range","present"
+"UnitFlag","NonMil","Local",TRUE
+"MinMoveFrags","3","Local",TRUE
+"UnitState","Transporting","Local",FALSE
+"CityTile","Center","Local",TRUE
+}
+target_reqs={"type","name","range","present"
+"CityTile","Claimed","Local",FALSE
+}
+
+[actionenabler_38]
+action="Airlift Unit"
+actor_reqs={"type","name","range","present"
+"UnitClassFlag","LightWeight","Local",TRUE
+"UnitState","Transporting","Local",FALSE
+"MinMoveFrags","1","Local",TRUE
+"CityTile","Center","Local",TRUE
+}
+
+[actionenabler_39]
+action="Airlift Unit"
+actor_reqs={"type","name","range","present"
+"UnitClassFlag","MediumWeight","Local",TRUE
+"UnitState","Transporting","Local",FALSE
+"Tech","Advanced Flight","Player",TRUE
+"Building","Airport","City",TRUE
+"MinMoveFrags","1","Local",TRUE
+"CityTile","Center","Local",TRUE
+}
+target_reqs={"type","name","range"
+"Building","Airport","City"
+}
+
+[actionenabler_40]
+action="Airlift Unit"
+actor_reqs={"type","name","range","present"
+"UnitClassFlag","HeavyWeight","Local",TRUE
+"UnitState","Transporting","Local",FALSE
+"Tech","Fusion Power","Player",TRUE
+"Building","Airport","City",TRUE
+"MinMoveFrags","1","Local",TRUE
+"CityTile","Center","Local",TRUE
+}
+target_reqs={"type","name","range"
+"Building","Airport","City"
+}
+
+[actionenabler_41]
+action="Airlift Unit"
+actor_reqs={"type","name","range","present"
+"UnitClassFlag","Airliftable","Local",TRUE
+"UnitState","Transporting","Local",FALSE
+"MinMoveFrags","1","Local",TRUE
+"CityTile","Center","Local",TRUE
+}
+
+[actionenabler_42]
+action="Attack"
+actor_reqs={"type","name","range","present"
+"UnitFlag","NonMil","Local",FALSE
+"MinMoveFrags","1","Local",TRUE
+"UnitState","OnNativeTile","Local",TRUE
+"UnitFlag","Bombarder","Local",FALSE
+"DiplRel","War","Local",TRUE
+}
+
+[actionenabler_43]
+action="Attack"
+actor_reqs={"type","name","range","present"
+"UnitFlag","NonMil","Local",FALSE
+"MinMoveFrags","1","Local",TRUE
+"UnitFlag","Marines","Local",TRUE
+"UnitFlag","Bombarder","Local",FALSE
+"DiplRel","War","Local",TRUE
+}
+
+[actionenabler_44]
+action="Attack"
+actor_reqs={"type","name","range","present"
+"UnitFlag","NonMil","Local",FALSE
+"MinMoveFrags","1","Local",TRUE
+"UnitFlag","Bombarder","Local",FALSE
+"UnitClassFlag","AttFromNonNative","Local",TRUE
+"DiplRel","War","Local",TRUE
+}
+
+[actionenabler_45]
+action="Suicide Attack"
+actor_reqs={"type","name","range","present"
+"UnitFlag","NonMil","Local",FALSE
+"UnitClassFlag","Missile","Local",TRUE
+"MinMoveFrags","1","Local",TRUE
+"DiplRel","War","Local",TRUE
+}
+
+[actionenabler_46]
+action="Conquer City"
+actor_reqs={"type","name","range","present"
+"UnitClassFlag","CanOccupyCity","Local",TRUE
+"UnitFlag","NonMil","Local",FALSE
+"DiplRel","War","Local",TRUE
+"MinMoveFrags","1","Local",TRUE
+"UnitState","OnLivableTile","Local",TRUE
+}
+target_reqs={"type","name","range"
+"MaxUnitsOnTile","0","Local"
+}
+
+[actionenabler_47]
+action="Conquer City"
+actor_reqs={"type","name","range","present"
+"UnitClassFlag","CanOccupyCity","Local",TRUE
+"UnitFlag","NonMil","Local",FALSE
+"DiplRel","War","Local",TRUE
+"MinMoveFrags","1","Local",TRUE
+"UnitFlag","Marines","Local",TRUE
+}
+target_reqs={"type","name","range"
+"MaxUnitsOnTile","0","Local"
+}
+
+[actionenabler_48]
+action="Transform Terrain"
+actor_reqs={"type","name","range"
+"UnitFlag","Transform","Local"
+"UnitFlag","Settlers","Local"
+}
+
+[actionenabler_49]
+action="Cultivate"
+actor_reqs={"type","name","range"
+"UnitFlag","Settlers","Local"
+}
+
+[actionenabler_50]
+action="Plant"
+actor_reqs={"type","name","range"
+"UnitFlag","Settlers","Local"
+}
+
+[actionenabler_51]
+action="Pillage"
+actor_reqs={"type","name","range"
+"UnitClassFlag","CanPillage","Local"
+}
+
+[actionenabler_52]
+action="Fortify"
+actor_reqs={"type","name","range","present"
+"UnitClassFlag","CanFortify","Local",TRUE
+"UnitFlag","Cant_Fortify","Local",FALSE
+"TerrainFlag","NoFortify","Local",FALSE
+"Activity","Fortified","Local",FALSE
+}
+
+[actionenabler_53]
+action="Fortify"
+actor_reqs={"type","name","range","present"
+"UnitClassFlag","CanFortify","Local",TRUE
+"UnitFlag","Cant_Fortify","Local",FALSE
+"CityTile","Center","Local",TRUE
+"Activity","Fortified","Local",FALSE
+}
+
+[actionenabler_54]
+action="Build Road"
+actor_reqs={"type","name","range"
+"UnitFlag","Settlers","Local"
+}
+
+[actionenabler_55]
+action="Build Base"
+actor_reqs={"type","name","range"
+"UnitFlag","Settlers","Local"
+}
+
+[actionenabler_56]
+action="Build Mine"
+actor_reqs={"type","name","range"
+"UnitFlag","Settlers","Local"
+}
+target_reqs={"type","name","range","present"
+"TerrainFlag","Oil","Local",FALSE
+}
+
+[actionenabler_57]
+action="Build Mine"
+actor_reqs={"type","name","range"
+"UnitFlag","Settlers","Local"
+"Tech","Construction","Player"
+}
+target_reqs={"type","name","range"
+"Terrain","Desert","Local"
+}
+
+[actionenabler_58]
+action="Build Mine"
+actor_reqs={"type","name","range"
+"UnitFlag","Settlers","Local"
+"Tech","Refining","Player"
+}
+target_reqs={"type","name","range"
+"Terrain","Glacier","Local"
+}
+
+[actionenabler_59]
+action="Build Irrigation"
+actor_reqs={"type","name","range"
+"UnitFlag","Settlers","Local"
+}
+target_reqs={"type","name","range"
+"TerrainClass","Oceanic","CAdjacent"
+}
+
+[actionenabler_60]
+action="Build Irrigation"
+actor_reqs={"type","name","range"
+"UnitFlag","Settlers","Local"
+}
+target_reqs={"type","name","range"
+"Extra","River","CAdjacent"
+}
+
+[actionenabler_61]
+action="Build Irrigation"
+actor_reqs={"type","name","range"
+"UnitFlag","Settlers","Local"
+}
+target_reqs={"type","name","range"
+"Extra","Irrigation","CAdjacent"
+}
+
+[actionenabler_62]
+action="Build Irrigation"
+actor_reqs={"type","name","range"
+"Tech","Electricity","Player"
+"UnitFlag","Settlers","Local"
+}
+
+[actionenabler_63]
+action="Clean Pollution"
+actor_reqs={"type","name","range"
+"UnitFlag","Settlers","Local"
+}
+
+[actionenabler_64]
+action="Clean Fallout"
+actor_reqs={"type","name","range"
+"UnitFlag","Settlers","Local"
+}
+
+[actionenabler_65]
+action="Transport Alight"
+actor_reqs={"type","name","range"
+"UnitState","OnLivableTile","Local"
+"UnitState","Transported","Local"
+}
+target_reqs={"type","name","range"
+"UnitState","Transporting","Local"
+}
+
+[actionenabler_66]
+action="Transport Unload"
+actor_reqs={"type","name","range"
+"UnitState","Transporting","Local"
+}
+target_reqs={"type","name","range"
+"UnitState","OnLivableTile","Local"
+"UnitState","Transported","Local"
+}
+
+[actionenabler_67]
+action="Transport Disembark"
+actor_reqs={"type","name","range"
+"UnitState","Transported","Local"
+"MinMoveFrags","1","Local"
+"UnitState","OnNativeTile","Local"
+}
+
+[actionenabler_68]
+action="Transport Disembark 2"
+actor_reqs={"type","name","range","present"
+"UnitState","Transported","Local",TRUE
+"MinMoveFrags","1","Local",TRUE
+"UnitState","OnNativeTile","Local",FALSE
+}
+
+[actionenabler_69]
+action="Transport Board"
+actor_reqs={"type","name","range","present"
+"DiplRel","Armistice","Local",FALSE
+"DiplRel","War","Local",FALSE
+"DiplRel","Cease-fire","Local",FALSE
+"DiplRel","Peace","Local",FALSE
+"DiplRel","Never met","Local",FALSE
+}
+
+[actionenabler_70]
+action="Transport Embark"
+actor_reqs={"type","name","range","present"
+"MinMoveFrags","1","Local",TRUE
+"DiplRel","Armistice","Local",FALSE
+"DiplRel","War","Local",FALSE
+"DiplRel","Cease-fire","Local",FALSE
+"DiplRel","Peace","Local",FALSE
+"DiplRel","Never met","Local",FALSE
+}
+
+[combat_rules]
+tired_attack=TRUE
+
+[borders]
+radius_sq_city=3
+
+[research]
+tech_cost_style="Classic+"
+base_tech_cost=10
+tech_leakage="All Players"
+tech_upkeep_style="Cities"
+tech_upkeep_divider=2500
+free_tech_method="Goal"
+
+[culture]
+victory_min_points=18000
+victory_lead_pct=200
+
+[calendar]
+start_year=-2000
+positive_label="CE"
+negative_label="BCE"
+
+[playercolors]
+background.r=86
+background.g=86
+background.b=86
+colorlist={"r","g","b"
+255,0,0
+255,255,0
+0,255,255
+138,43,226
+255,165,0
+255,0,255
+173,216,230
+0,255,127
+250,128,114
+124,252,0
+139,0,0
+255,192,203
+211,211,211
+218,112,214
+255,20,147
+100,149,237
+255,215,0
+245,222,179
+255,255,128
+192,255,128
+204,255,0
+255,211,140
+255,79,0
+240,145,169
+255,219,88
+153,17,153
+184,134,11
+255,102,0
+102,205,170
+195,33,72
+168,153,230
+255,250,205
+}
+; /* <-- avoid gettext warnings
+;
+; Disaster types:
+;
+; name                    = translatable name as seen by user
+; reqs                    = requirements for disaster to happen (see effects.ruleset
+;                           and README.effects for help on requirements)
+; frequency               = how likely disaster is to occur
+; effects
+;   - "DestroyBuilding"   = Random building is destroyed
+;   - "ReducePopulation"  = Reduce city size by one unless it's already 1
+;   - "ReducePopDestroy"  = Reduce city size by one, possibly destroying the city
+;   - "EmptyFoodStock"    = Remove all food from food stock
+;   - "EmptyProdStock"    = Destroy current production
+;   - "Pollution"         = One tile surrounding city polluted
+;   - "Fallout"           = One tile surrounding city polluted with fallout
+;
+; */ <-- avoid gettext warnings
+
+
+[disaster_0]
+name=_("Earthquake")
+reqs={"type","name","range"
+"Terrain","Hills","Local"
+}
+frequency=100
+effects="EmptyProdStock"
+
+[disaster_1]
+name=_("Flood")
+reqs={"type","name","range"
+"Extra","River","Adjacent"
+}
+frequency=100
+effects="EmptyFoodStock"
+
+[disaster_2]
+name=_("Fire")
+reqs={"type","name","range"
+"MinSize","9","City"
+}
+frequency=100
+effects="DestroyBuilding"
+
+[disaster_3]
+name=_("Industrial Accident")
+reqs={"type","name","range"
+"Building","Mfg. Plant","City"
+}
+frequency=100
+effects="ReducePopulation","Pollution"
+
+[disaster_4]
+name=_("Nuclear Accident")
+reqs={"type","name","range"
+"Building","Nuclear Plant","City"
+}
+frequency=100
+effects="ReducePopulation","Fallout"
+; /* <-- avoid gettext warnings
+;
+; Achievement types:
+;
+; name                    = translatable name as seen by user
+; rule_name               = (optional) internal name for savegames, rulesets
+;                           etc; if not present, "name" is used for this
+;                           purpose too. Since the name used in savegames must
+;                           not change, if you want to rename an item after a
+;                           ruleset has been released, you should set
+;                           "rule_name" to the original value of "name".
+; type                    = What event grants the achievement to player.
+;                           See README.achievements for list of these types.
+; unique                  = If TRUE, only first one reaching the achievement will
+;                           get it. Defaults to TRUE.
+; value                   = Value to reach. Exact meaning of this depends on
+;                           achievement type.
+; culture                 = Amount of culture granted to player who gets achievement
+;                           granted.
+; first_msg               = Message shown to first player gaining the achievement
+; cons_msg                = Message shown to consecutive players gaining the achievement
+;
+; */ <-- avoid gettext warnings
+
+
+[achievement_0]
+name=_("Spaceship Launch")
+type="Spaceship"
+unique=FALSE
+culture=10000
+first_msg="You're the first one to launch a spaceship towards Alpha Centauri!"
+cons_msg="You have launched a spaceship towards Alpha Centauri!"
+
+[achievement_1]
+name=_("Entire Map Known")
+type="Map_Known"
+unique=FALSE
+value=100
+culture=1000
+first_msg="You're the first one to have mapped the entire world!"
+cons_msg="You have mapped the entire world!"
+
+[achievement_2]
+name=_("Land Ahoy")
+type="Land_Ahoy"
+unique=FALSE
+value=2
+culture=100
+first_msg="As the first people in history, your people sight a foreign shore!"
+cons_msg="You sight your first foreign shore!"
+
+[achievement_3]
+name=_("Literate")
+type="Literate"
+unique=FALSE
+value=100
+culture=100
+first_msg="Your nation is the first to reach 100% literacy!"
+cons_msg="Your nation has reached 100% literacy!"
+
+[achievement_4]
+name=_("Multicultural")
+type="Multicultural"
+unique=FALSE
+value=2
+culture=100
+first_msg="You're the first nation to have citizens of multiple nationalities!"
+cons_msg="Your nation now has citizens of multiple nationalities!"
+
+[achievement_5]
+name=_("Metropolis")
+type="Metropolis"
+unique=FALSE
+value=20
+culture=100
+first_msg="Your nation is the first with a city of population 20!"
+cons_msg="One of your cities has reached population 20!"
+
+[achievement_6]
+name=_("Cultured City")
+type="Cultured_City"
+unique=FALSE
+value=1000
+culture=100
+first_msg="Your nation is the first with a city of 1000 culture points!"
+cons_msg="One of your cities has 1000 culture points!"
+
+[achievement_7]
+name=_("Cultured Nation")
+type="Cultured_Nation"
+unique=FALSE
+value=10000
+first_msg="Your nation is the first one to achieve 10000 culture points!"
+cons_msg="Your nation has achieved 10000 culture points!"
+
+[trade]
+settings={"type","pct","cancelling","bonus"
+"National",0,"Cancel","None"
+"NationalIC",0,"Cancel","None"
+"IN",100,"Cancel","None"
+"INIC",200,"Cancel","None"
+"Ally",100,"Cancel","None"
+"AllyIC",200,"Cancel","None"
+"Enemy",0,"Cancel","None"
+"EnemyIC",0,"Cancel","None"
+"Team",100,"Cancel","None"
+"TeamIC",200,"Cancel","None"
+}
+; /* <-- avoid gettext warnings
+;
+; Goods types:
+;
+; name                    = translatable name as seen by user
+; rule_name               = (optional) internal name for savegames, rulesets
+;                           etc; if not present, "name" is used for this
+;                           purpose too. Since the name used in savegames must
+;                           not change, if you want to rename an item after a
+;                           ruleset has been released, you should set
+;                           "rule_name" to the original value of "name".
+; reqs                    = requirements for a city to provide goods (see effects.ruleset
+;                           and README.effects for help on requirements)
+; from_pct                = Income for the sending end of the trade route. Default is 100%
+;                           This value is applied to both ends of bidirectional routes.
+; to_pct                  = Income for the receiving end of the trade route. Default is 100%
+;                           This value is not used at all in case of bidirectional routes.
+; onetime_pct             = Onetime bonuses when traderoute is established. Default is 100%
+; flags
+;   - "Bidirectional"     = Trade route carrying the goods does not have "from" and "to"
+;                           ends, but both ends are considered the same.
+;   - "Depletes"          = Trade route gets cancelled when the source city cannot provide
+;                           goods any more. Bidirectional routes gets cancelled if either
+;                           one of the involved cities cannot provide goods.
+; helptext                = Optional help text string; should escape all raw
+;                           newlines so that xgettext parsing works
+;
+; */ <-- avoid gettext warnings
+
+
+[goods_0]
+name=_("Goods")
+from_pct=150
+to_pct=135
+flags="Depletes"
+
+; /* <-- avoid gettext warnings
+;
+; Clause types
+;
+; Clause types that are not listed here, are not enabled at all.
+;
+; type                   = Type of the clause, one of "Advance", "Gold", "Map", "Seamap",
+;                          "City", "Ceasefire", "Peace", "Alliance", "Vision", "Embassy"
+; giver_reqs             = requirements that the giving side of the clause needs to fulfill
+;                          (see effects.ruleset and README.effects for help on requirements)
+; receiver_reqs          = requirements that the receiving side of the clause needs to fulfill
+;
+; */ <-- avoid gettext warnings
+
+[clause_advance]
+type = "Advance"
+
+[clause_gold]
+type = "Gold"
+
+[clause_map]
+type = "Map"
+
+[clause_seamap]
+type = "Seamap"
+
+[clause_city]
+type = "City"
+
+[clause_ceasefire]
+type = "Ceasefire"
+
+[clause_peace]
+type = "Peace"
+
+[clause_alliance]
+type = "Alliance"
+
+[clause_vision]
+type = "Vision"
+
+[clause_embassy]
+type = "Embassy"
+
+
+[settings]
+set={"name","value"
+"borders","ENABLED"
+"citymindist",1
+"flatpoles",0
+"foggedborders",TRUE
+"mapsize","PLAYER"
+"occupychance",100
+"onsetbarbs",120
+"razechance",10
+"restrictinfra",TRUE
+"revolentype","RANDQUICK"
+"startunits","cccccwwwwxxx"
+"techlevel",1
+"techlossforgiveness",0
+"techlossrestore",50
+"tilesperplayer",100
+"tinyisles",TRUE
+"unreachableprotects",FALSE
+}

@@ -1,0 +1,247 @@
+; Modifying this file:
+; You should not modify this file except to make bugfixes or
+; for other "maintenance".  If you want to make custom changes,
+; you should create a new datadir subdirectory and copy this file
+; into that directory, and then modify that copy.  Then use the
+; command "rulesetdir <mysubdir>" in the server to have freeciv
+; use your new customized file.
+; Note that the freeciv AI may not cope well with anything more
+; than minor changes.
+
+
+[datafile]
+description="Sim ruleset styles data for Freeciv21"
+ruledit="3.0.601765.2-rc"
+options="+Freeciv-ruleset-Devel-2017.Jan.02 HP_Regen_Min Bombard_Limit_Pct Wonder_Visible Vision_Layer Nation_Intelligence"
+format_version=20
+; /* <-- avoid gettext warnings
+;
+; Nation styles
+;
+; name          = translatable name as seen by user
+; rule_name     = (optional) internal name for savegames, rulesets etc; if
+;                 not present, "name" is used for this purpose too. Since
+;                 the name used in savegames must not change, if you want
+;                 to rename an item after a ruleset has been released, you
+;                 should set "rule_name" to the original value of "name".
+;
+; */ <-- avoid gettext warnings
+
+
+[style_0]
+name=_("?style:European")
+
+[style_1]
+name=_("?style:Classical")
+
+[style_2]
+name=_("?style:Tropical")
+
+[style_3]
+name=_("?style:Asian")
+
+[style_4]
+name=_("?style:Babylonian")
+
+[style_5]
+name=_("?style:Celtic")
+; /* <-- avoid gettext warnings
+;
+; City styles define the way cities are drawn
+;
+; name             = translatable name as seen by user
+; rule_name        = (optional) internal name for savegames, rulesets etc; if
+;                    not present, "name" is used for this purpose too. Since
+;                    the name used in savegames must not change, if you want
+;                    to rename an item after a ruleset has been released, you
+;                    should set "rule_name" to the original value of "name".
+; graphic          = group of tiles to use, see cities spec for
+;                    more info on city tiles
+; citizens_graphic = group of citizens tiles to use, see citizens/small
+;                    spec for more info on citizens tiles
+;                    FIXME: this and _alt not currently used!
+; reqs             = requirements for this city style (see README.effects)
+;
+; */ <-- avoid gettext warnings
+
+
+[citystyle_0]
+name=_("?citystyle:European")
+graphic="city.european"
+graphic_alt="-"
+citizens_graphic="ancient"
+reqs={"type","name","range"
+"Style","European","Player"
+}
+
+[citystyle_1]
+name=_("?citystyle:Classical")
+graphic="city.classical"
+graphic_alt="-"
+citizens_graphic="ancient"
+reqs={"type","name","range"
+"Style","Classical","Player"
+}
+
+[citystyle_2]
+name=_("?citystyle:Tropical")
+graphic="city.tropical"
+graphic_alt="city.european"
+citizens_graphic="ancient"
+reqs={"type","name","range"
+"Style","Tropical","Player"
+}
+
+[citystyle_3]
+name=_("?citystyle:Asian")
+graphic="city.asian"
+graphic_alt="city.classical"
+citizens_graphic="ancient"
+reqs={"type","name","range"
+"Style","Asian","Player"
+}
+
+[citystyle_4]
+name=_("?citystyle:Babylonian")
+graphic="city.babylonian"
+graphic_alt="city.classical"
+citizens_graphic="ancient"
+reqs={"type","name","range"
+"Style","Babylonian","Player"
+}
+
+[citystyle_5]
+name=_("?citystyle:Celtic")
+graphic="city.celtic"
+graphic_alt="city.european"
+citizens_graphic="ancient"
+reqs={"type","name","range"
+"Style","Celtic","Player"
+}
+
+[citystyle_6]
+name=_("?citystyle:Industrial")
+graphic="city.industrial"
+graphic_alt="-"
+citizens_graphic="industrial"
+reqs={"type","name","range"
+"Tech","Railroad","Player"
+}
+
+[citystyle_7]
+name=_("?citystyle:ElectricAge")
+graphic="city.electricage"
+graphic_alt="city.modern"
+citizens_graphic="electricage"
+reqs={"type","name","range"
+"Tech","Automobile","Player"
+}
+
+[citystyle_8]
+name=_("?citystyle:Modern")
+graphic="city.modern"
+graphic_alt="-"
+citizens_graphic="modern"
+reqs={"type","name","range"
+"Tech","Rocketry","Player"
+}
+
+[citystyle_9]
+name=_("?citystyle:PostModern")
+graphic="city.postmodern"
+graphic_alt="-"
+citizens_graphic="postmodern"
+reqs={"type","name","range"
+"Tech","Superconductors","Player"
+}
+; /* <-- avoid gettext warnings
+;
+; Music styles
+;
+; Order is important. The last one for which activation requirements
+; are fulfilled is the one that plays.
+;
+; music_peaceful = Music to play when nation in peaceful mood
+; music_combat   = Music to play when nation in combat mood
+; reqs           = requirements to activate the style (see effects.ruleset
+;                  and README.effects for help on requirements)
+;
+; */ <-- avoid gettext warnings
+
+
+[musicstyle_0]
+music_peaceful="music_european_peace"
+music_combat="music_european_combat"
+reqs={"type","name","range"
+"Style","European","Player"
+}
+
+[musicstyle_1]
+music_peaceful="music_classical_peace"
+music_combat="music_classical_combat"
+reqs={"type","name","range"
+"Style","Classical","Player"
+}
+
+[musicstyle_2]
+music_peaceful="music_tropical_peace"
+music_combat="music_tropical_combat"
+reqs={"type","name","range"
+"Style","Tropical","Player"
+}
+
+[musicstyle_3]
+music_peaceful="music_asian_peace"
+music_combat="music_asian_combat"
+reqs={"type","name","range"
+"Style","Asian","Player"
+}
+
+[musicstyle_4]
+music_peaceful="music_babylonian_peace"
+music_combat="music_babylonian_combat"
+reqs={"type","name","range"
+"Style","Babylonian","Player"
+}
+
+[musicstyle_5]
+music_peaceful="music_celtic_peace"
+music_combat="music_celtic_combat"
+reqs={"type","name","range"
+"Style","Celtic","Player"
+}
+
+[musicstyle_6]
+music_peaceful="music_renaissance_peace"
+music_combat="music_renaissance_combat"
+reqs={"type","name","range"
+"Tech","University","Player"
+}
+
+[musicstyle_7]
+music_peaceful="music_industrial_peace"
+music_combat="music_industrial_combat"
+reqs={"type","name","range"
+"Tech","Railroad","Player"
+}
+
+[musicstyle_8]
+music_peaceful="music_electricage_peace"
+music_combat="music_electricage_combat"
+reqs={"type","name","range"
+"Tech","Automobile","Player"
+}
+
+[musicstyle_9]
+music_peaceful="music_modern_peace"
+music_combat="music_modern_combat"
+reqs={"type","name","range"
+"Tech","Rocketry","Player"
+}
+
+[musicstyle_10]
+music_peaceful="music_postmodern_peace"
+music_combat="music_postmodern_combat"
+reqs={"type","name","range"
+"Tech","Superconductors","Player"
+}
