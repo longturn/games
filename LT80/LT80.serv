@@ -1,71 +1,93 @@
-# Server commands to make Longturn Traditional Freeciv rules based on Civ2Civ3 ruleset
-#
-
 rulesetdir LT80
 
 # map
 set mapsize "PLAYER"
-set generator "FRACTAL"
+set generator "ISLAND"
 set barbarians disabled
-set startpos "VARIABLE"
+set startpos "SINGLE"
+set teamplacement CONTINENT
 set huts 0
-set landmass 40
-set separatepoles disabled
-set specials 300
-set steepness 30
-set temperature 70
+set landmass 20
+set separatepoles enabled
+set specials 320
+set steepness 40
+set temperature 60
 set tilesperplayer 500
 set topology "WRAPX|WRAPY|ISO"
-set wetness 40
+set wetness 50
 set alltemperate disabled
 set tinyisles disabled
 set revealmap START #uncomment this for revealing the map for test games
 
+
 # general rules
 set nationset all
-set citymindist 4
+set citymindist 5
 set contactturns 1
-set dispersion 6
+set disasters "10"
+set dispersion "6"
 set foggedborders enabled
 set rapturedelay 3
 set restrictinfra enabled
 set revolen 2
-set revolentype FIXED
-set spacerace enabled
+set revolentype   FIXED
+set spaceship_travel_time "100"
 set startunits cccccwwwwwwxx
-set techlevel 0
-set unreachableprotects disabled
-set killunhomed 0
+set techleak "150"
+set techlevel "0"
 set trading_tech disabled
 set airliftingstyle "FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
 set razechance 10
-set happyborders "NATIONAL"
-set occupychance 0
-set globalwarming enabled
+set globalwarming "ENABLED"
 set globalwarming_percent 300
 set nuclearwinter_percent 100
+set unreachableprotects "DISABLED"
+set happyborders "NATIONAL"
+set killcitizen "ENABLED"
+set killstack "ENABLED"
+set killunhomed "0"
+set flatpoles "0"
+set fogofwar "ENABLED"
+set occupychance "0"
+set aqueductloss "0"
+set autoattack "DISABLED"
+set caravan_bonus_style "CLASSIC"
+set trade_revenue_style "CLASSIC"
+set endspaceship "ENABLED"
+set endturn "5000"
+set savepalace "ENABLED"
 
 # diplomacy, technology
-set diplchance 40
+set diplchance 60
 set diplgoldcost 20
 set diplbulbcost 20
-set incite_gold_loss_chance 20
-set incite_gold_capt_chance 20
-
-set diplomacy HUMAN
+set diplomacy "HUMAN"
 set sciencebox 100
 set techlost_donor 0
 set techlost_recv 0
 set techpenalty 10
 set trademindist 999
+set tradeworldrelpct "50"
 set trading_city disabled
 set team_pooled_research disabled
 set techlevel 0
 set techlossforgiveness -1
 set techlossrestore 50
 set freecost 0 # for getting techs from philosphy etc
-set conquercost 80 # for getting techs with tech stealing/trading units
-set demography NnciwASLaPEgRMmuklOCqrb
+#set diplcost 95
+set conquercost 95 # for getting techs with tech stealing/trading units
+set persistentready "DISABLED"
+set civilwarsize "10"
+set teamplacement "CLOSEST"
+set fulltradesize "1"
+set gold "50"
+set trading_city "DISABLED"
+set trading_gold "ENABLED"
+set trading_tech "DISABLED"
+set victories "SPACERACE|ALLIED"
+set incite_gold_capt_chance "0"
+set incite_gold_loss_chance "0"
+set demography   NnciwASLaPEgRMmuklOCqrbsz
 
 # technical
 set aifill 0
@@ -73,19 +95,68 @@ set allowtake ""
 cmdlevel info
 set compresstype plain
 set ec_chat enabled
-set ec_info enabled
+set ec_info enabled 
 set ec_max_size 5000
 set ec_turns 9
 set maxplayers 126
 set saveturns 1
-set scorelog enabled
 set timeout 82800
 set unitwaittime 36000
 set fixedlength enabled
+set savefrequency "15"
+set savename "freeciv"
+set infrapoints "0"
+set kicktime "1800"
+set first_timeout "-1"
+set scorefile "freeciv-score.log"
+set scorelog "ENABLED"
+set scoreloglevel "ALL"
 
-metamessage "Longturn Experimental Extra for multiplayer games | More info: https://longturn.net"
+# misc
+set autosaves "TURN|GAMEOVER|QUITIDLE|INTERRUPT"
+set autotoggle "DISABLED"
+set onsetbarbs "120"
+set barbarians "DISABLED"
+set borders "ENABLED"
+set compresstype "LIBZ"
+set maxconnectionsperhost "4"
+set maxplayers "500"
+set metamessage ""
+set mgr_distance "0"
+set mgr_foodneeded "ENABLED"
+set mgr_nationchance "50"
+set mgr_turninterval "5"
+set mgr_worldchance "10"
+set migration "DISABLED"
+set minplayers "1"
+set multiresearch "DISABLED"
+set nationset "all"
+set naturalcitynames "ENABLED"
+set citynames "PLAYER_UNIQUE"
+set netwait "4"
+set notradesize "0"
+set nuclearwinter "ENABLED"
+set nuclearwinter_percent "100" # now default setting
+set phasemode "ALL"
+set pingtime "20"
+set pingtimeout "60"
+set plrcolormode "PLR_ORDER"
+set threaded_save "DISABLED"
+set traitdistribution "FIXED"
+set turnblock "ENABLED"
+set homecaughtunits "ENABLED"
+
+metamessage "Longturn Traditional for multiplayer games | More info: https://longturn.net"
 metapatches longturn
 
+# Players
+set nationset all
+read players.serv
 
-syncturn
+syncturn # for longturn games
 start
+
+cmdlevel basic new
+cmdlevel basic first
+Easy
+metapatches 
