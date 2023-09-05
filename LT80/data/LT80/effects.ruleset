@@ -2545,7 +2545,7 @@ value   = 60
 reqs    =
     { "type", "name", "range", "present"
       "Building", "Barracks III", "City", TRUE
-      "UnitClass", ""Small Unit", "Local", TRUE
+      "UnitClass", "Small Unit", "Local", TRUE
     }
 		
 	
