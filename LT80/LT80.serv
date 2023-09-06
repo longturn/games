@@ -7,14 +7,14 @@ set barbarians disabled
 set startpos "SINGLE"
 set teamplacement CONTINENT
 set huts 0
-set landmass 20
+set landmass 40
 set separatepoles enabled
 set specials 320
-set steepness 40
+set steepness 50
 set temperature 60
-set tilesperplayer 500
+set tilesperplayer 400
 set topology "WRAPX|WRAPY|ISO"
-set wetness 50
+set wetness 60
 set alltemperate disabled
 set tinyisles disabled
 set revealmap START #uncomment this for revealing the map for test games
@@ -102,8 +102,8 @@ set maxplayers 126
 set saveturns 1
 #set timeout 82800  # real game
 #set unitwaittime 36000  # real game§
-set timeout 82800 # test game
-set unitwaittime 36000  # test game
+set timeout 120 # test game
+set unitwaittime 0  # test game
 set fixedlength enabled
 set savefrequency "15"
 set savename "freeciv"
