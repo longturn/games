@@ -1,4 +1,4 @@
-set aifill 11
+set aifill 15
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
@@ -10,6 +10,10 @@ aitoggle AI*8
 aitoggle AI*9
 aitoggle AI*10
 aitoggle AI*11
+aitoggle AI*12
+aitoggle AI*13
+aitoggle AI*14
+aitoggle AI*15
 playernation AI*1 Georgian 1 aeronaut
 playernation AI*2 Finnish 1 L1meE
 playernation AI*3 Assyrian 1 Shoilf
@@ -20,4 +24,8 @@ playernation AI*7 Samnite 1 Beezling
 playernation AI*8 Canadian 1 Koffy
 playernation AI*9 Texan 1 axe
 playernation AI*10 Yugoslav 1 Corbeau
-playernation AI*11 Austrian 1 xtc69
+playernation AI*11 Japanese 1 xtc69
+playernation AI*12 Atlantean 1 Blue
+playernation AI*13 Austrian 1 hyperboreax
+playernation AI*14 Chinese 1 mikezy66
+playernation AI*15 Samnite 1 Beezling
