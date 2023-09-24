@@ -107,8 +107,10 @@ set ec_max_size 5000
 set ec_turns 9
 set maxplayers 126
 set saveturns 1
-set timeout 82800
-set unitwaittime 36000
+#set timeout 82800  # real game
+#set unitwaittime 36000  # real game§
+set timeout 120 # test game
+set unitwaittime 0  # test game
 set fixedlength enabled
 set savefrequency "15"
 set savename "freeciv"
