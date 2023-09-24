@@ -8,11 +8,11 @@ set generator "FRACTAL"
 set barbarians disabled
 set startpos "VARIABLE" # ALL
 set huts 0
-set landmass 60
+set landmass 40
 set specials 300
-set steepness 50
+set steepness 10
 set temperature 70
-set tilesperplayer 500
+set tilesperplayer 700
 set topology "WRAPX|WRAPY|ISO"
 set wetness 30
 set alltemperate enabled
@@ -24,7 +24,7 @@ set shieldbox "100"
 set foodbox "100"
 set singlepole "DISABLED"
 set startcity "DISABLED"
-#set revealmap DEAD  #uncomment this for revealing the map for test games
+set revealmap START  #uncomment this for revealing the map for test games
 
 
 # general rules
@@ -46,7 +46,7 @@ set trading_tech disabled
 set airliftingstyle "FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
 set razechance 10
 set globalwarming "ENABLED"
-set globalwarming_percent 300
+set globalwarming_percent 100
 set nuclearwinter_percent 100
 set unreachableprotects "DISABLED"
 set happyborders "NATIONAL"
@@ -60,13 +60,13 @@ set aqueductloss "0"
 set autoattack "DISABLED"
 set caravan_bonus_style "CLASSIC"
 set trade_revenue_style "CLASSIC"
-set endspaceship "ENABLED"
+set endspaceship "DISABLED"
 set endturn "5000"
 set savepalace "ENABLED"
 
 # diplomacy, technology
 set diplchance 40
-set diplgoldcost 40
+set diplgoldcost 20
 set diplbulbcost 20
 set diplomacy "HUMAN"
 set sciencebox 100
@@ -91,7 +91,7 @@ set gold "50"
 set trading_city "DISABLED"
 set trading_gold "ENABLED"
 set trading_tech "DISABLED"
-set victories "SPACERACE|ALLIED"
+set victories "ALLIED"
 set incite_gold_capt_chance "0"
 set incite_gold_loss_chance "0"
 set demography   NnciwASLaPEgRMmuklOCqrbsz
