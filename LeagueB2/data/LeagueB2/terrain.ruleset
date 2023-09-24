@@ -2078,7 +2078,7 @@ border_sq      = -1
 extra          = "Fortress"
 gui_type       = "Fortress"
 border_sq      = 5
-flags          = "NoAggressive", "DiplomatDefense", "NoStackDeath"
+flags          = "NoAggressive", "NoStackDeath"
 
 [base_airbase]
 extra          = "Airbase"
