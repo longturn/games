@@ -2,34 +2,27 @@ rulesetdir Suomipeli2023b
 
 # map
 set mapsize "PLAYER"
-set gameseed "0"
-set generator "FRACTAL"
-#set generator "FRACTURE"
+set generator "ISLAND"
 set barbarians disabled
-set startpos "VARIABLE" # ALL
+set startpos "VARIABLE"
+#set teamplacement CONTINENT
 set huts 0
-set landmass 60
-set specials 300
-set steepness 50
-set temperature 70
+set landmass 15
+set separatepoles enabled
+set specials 500
+set steepness 20
+set temperature 60
 set tilesperplayer 500
 set topology "WRAPX|WRAPY|ISO"
-set wetness 30
-set alltemperate enabled
+set wetness 60
+set alltemperate disabled
 set tinyisles disabled
-set animals "0"
-set mapseed 0
-set separatepoles "ENABLED"
-set shieldbox "100"
-set foodbox "100"
-set singlepole "DISABLED"
-set startcity "DISABLED"
-#set revealmap DEAD  #uncomment this for revealing the map for test games
+set revealmap START #uncomment this for revealing the map for test games
 
 
 # general rules
 set nationset all
-set citymindist 4
+set citymindist 5
 set contactturns 1
 set disasters "10"
 set dispersion "6"
@@ -38,15 +31,15 @@ set rapturedelay 3
 set restrictinfra enabled
 set revolen 2
 set revolentype   FIXED
-set spaceship_travel_time "100"
+set spaceship_travel_time "150"
 set startunits cccccwwwwwwxx
-set techleak "100"
+set techleak "200"
 set techlevel "0"
 set trading_tech disabled
 set airliftingstyle "FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
 set razechance 10
 set globalwarming "ENABLED"
-set globalwarming_percent 300
+set globalwarming_percent 100
 set nuclearwinter_percent 100
 set unreachableprotects "DISABLED"
 set happyborders "NATIONAL"
@@ -107,8 +100,10 @@ set ec_max_size 5000
 set ec_turns 9
 set maxplayers 126
 set saveturns 1
-set timeout 82800
-set unitwaittime 36000
+#set timeout 82800  # real game
+#set unitwaittime 36000  # real game§
+set timeout 120 # test game
+set unitwaittime 0  # test game
 set fixedlength enabled
 set savefrequency "15"
 set savename "freeciv"
@@ -154,7 +149,7 @@ set traitdistribution "FIXED"
 set turnblock "ENABLED"
 set homecaughtunits "ENABLED"
 
-metamessage "Longturn Traditional for multiplayer games | More info: https://longturn.net"
+metamessage "LongturnRoyale for multiplayer games - Suomipeli2023b edition | More info: https://longturn.net"
 metapatches longturn
 
 # Players
