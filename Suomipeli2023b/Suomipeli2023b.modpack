@@ -1,0 +1,24 @@
+[info]
+options = "+Freeciv-2.6-modpack"
+baseURL = "https://raw.githubusercontent.com/longturn/games/master/Suomipeli2023b"
+name = "Longturn Royale (Royale) Ruleset"
+type = "Ruleset"
+version = "1.0-d8b4bc6"
+
+[files]
+list =
+{ "src", "dest"
+  "Suomipeli2023b_local.serv", "LTT.serv"
+  "data/Suomipeli2023b/buildings.ruleset", "Suomipeli2023b/buildings.ruleset"
+  "data/Suomipeli2023b/cities.ruleset", "Suomipeli2023b/cities.ruleset"
+  "data/Suomipeli2023b/effects.ruleset", "Suomipeli2023b/effects.ruleset"
+  "data/Suomipeli2023b/game.ruleset", "Suomipeli2023b/game.ruleset"
+  "data/Suomipeli2023b/governments.ruleset", "Suomipeli2023b/governments.ruleset"
+  "data/Suomipeli2023b/nations.ruleset", "Suomipeli2023b/nations.ruleset"
+  "data/Suomipeli2023b/script.lua", "Suomipeli2023b/script.lua"
+  "data/Suomipeli2023b/styles.ruleset", "Suomipeli2023b/styles.ruleset"
+  "data/Suomipeli2023b/techs.ruleset", "Suomipeli2023b/techs.ruleset"
+  "data/Suomipeli2023b/terrain.ruleset", "Suomipeli2023b/terrain.ruleset"
+  "data/Suomipeli2023b/units.ruleset", "Suomipeli2023b/units.ruleset"
+}
+
