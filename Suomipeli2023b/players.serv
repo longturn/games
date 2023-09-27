@@ -1,7 +1,61 @@
-set aifill 2
+set aifill 30
 aitoggle AI*1
 aitoggle AI*2
-playernation AI*1 Nationame 1 Playername
-playernation AI*2 Nationame2 1 Playername2
-
-
+aitoggle AI*3
+aitoggle AI*4
+aitoggle AI*5
+aitoggle AI*6
+aitoggle AI*7
+aitoggle AI*8
+aitoggle AI*9
+aitoggle AI*10
+aitoggle AI*11
+aitoggle AI*12
+aitoggle AI*13
+aitoggle AI*14
+aitoggle AI*15
+aitoggle AI*16
+aitoggle AI*17
+aitoggle AI*18
+aitoggle AI*19
+aitoggle AI*20
+aitoggle AI*21
+aitoggle AI*22
+aitoggle AI*23
+aitoggle AI*24
+aitoggle AI*25
+aitoggle AI*26
+aitoggle AI*27
+aitoggle AI*28
+aitoggle AI*29
+aitoggle AI*30
+playernation AI*1 "East German" 1 wieder
+playernation AI*2 Ukrainian 1 L1meE
+playernation AI*3 Northumbrian 1 Kroko24
+playernation AI*4 Lithuanian 1 Modeemirotta
+playernation AI*5 Mixtec 1 v1znut
+playernation AI*6 Finnish 1 meton
+playernation AI*7 Karelian 1 paavo
+playernation AI*8 Hittite 1 Yuccamask
+playernation AI*9 Somali 1 norttihirmu
+playernation AI*10 Angolan 1 Shoilf
+playernation AI*11 Chinese 1 mikezy66
+playernation AI*12 Alander 1 Mrkurre06
+playernation AI*13 Werewolf 1 beerw0lf
+playernation AI*14 Barbarian 1 Seppo_Taalasmaahinen
+playernation AI*15 Confederate 1 Pklx
+playernation AI*16  1 Rou
+playernation AI*17 Californian 1 asiantuntia
+playernation AI*18 Catalan 1 Viperish
+playernation AI*19 Mongol 1 purppura
+playernation AI*20 Pirate 1 karvin3n
+playernation AI*21  1 Milla
+playernation AI*22 Jamaican 1 erzerkr
+playernation AI*23 Benin 1 tsilokki
+playernation AI*24 Viking 1 Zathor
+playernation AI*25 1 Relix
+playernation AI*26 Zulu 1 laamanni
+playernation AI*27 Kenyan 1 suihkulokki
+playernation AI*28 Estonian 1 tm4888
+playernation AI*29 1 mijutu
+playernation AI*30 Roman 1 Martta
