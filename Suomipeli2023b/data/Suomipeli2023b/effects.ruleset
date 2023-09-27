@@ -153,19 +153,6 @@ reqs    =
 type    = "City_Unhappy_Size"
 value   = 4
 
-; Lone Leader might escape on coast (33% chance)
-; Complement of the two effects should be 0.9 * 0.66 = 0.594
-; (100 - 59) - 10 = 31
-[effect_leader_escape]
-type    = "Retire_Pct"
-value   = 31
-reqs    =
-    { "type", "name", "range"
-      "UnitType", "Barbarian Leader", "Local"
-      "Age", "5", "Local"
-      "TerrainClass", "Oceanic", "Adjacent"
-      "MaxUnitsOnTile", "1", "Local"
-    }
 
 ; Specialist output bonuses
 
@@ -3291,7 +3278,7 @@ value   = 20
 
 [effect_sdi_i_defense_1]
 type    = "Nuke_Proof"
-value   = 30
+value   = 50
 reqs    =
     { "type", "name", "range", "present"
       "Building", "SDI Defense I", "City", TRUE
@@ -3302,7 +3289,7 @@ reqs    =
 	
 [effect_sdi_i_defense_2]
 type    = "Nuke_Proof"
-value   = 70
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "SDI Defense I", "City"
@@ -3312,7 +3299,7 @@ reqs    =
 
 [effect_sdi_i_defense_3]
 type    = "Defend_Bonus"
-value   = 30
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "SDI Defense I", "City"
@@ -3322,7 +3309,7 @@ reqs    =
 	
 [effect_sdi_i_defense_4]
 type    = "Defend_Bonus"
-value   = 70
+value   = 50
 reqs    =
     { "type", "name", "range"
       "Building", "SDI Defense I", "City"
@@ -3334,7 +3321,7 @@ reqs    =
 	
 [effect_sdi_ii_defense_1]
 type    = "Nuke_Proof"
-value   = 30
+value   = 20
 reqs    =
     { "type", "name", "range", "present"
       "Building", "SDI Defense II", "City", TRUE
@@ -3357,7 +3344,7 @@ reqs    =
 	
 [effect_sdi_iii_defense_1]
 type    = "Nuke_Proof"
-value   = 30
+value   = 20
 reqs    =
     { "type", "name", "range", "present"
       "Building", "SDI Defense III", "City", TRUE
@@ -3369,7 +3356,7 @@ reqs    =
 
 [effect_sdi_iii_defense_2]
 type    = "Defend_Bonus"
-value   = 40
+value   = 20
 reqs    =
     { "type", "name", "range", "present"
       "Building", "SDI Defense III", "City", TRUE

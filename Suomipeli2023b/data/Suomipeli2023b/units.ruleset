@@ -3207,7 +3207,7 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
-flags         = "IgTer", "IgZOC", "NonMil", "HasNoZOC", "Cant_Fortify"
+flags         = "IgTer", "NonMil", "HasNoZOC", "Cant_Fortify"
 roles         = "Explorer", "ExplorerStartUnit"
 helptext      = _("\
 Explorers are brave individuals that are very useful for\

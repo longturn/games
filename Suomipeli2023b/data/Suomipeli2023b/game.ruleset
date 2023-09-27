@@ -616,7 +616,6 @@ actor_reqs    =
     }
 target_reqs  =
     { "type",        "name",      "range", "present"
-      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [actionenabler_establish_embassy_spy]
@@ -630,7 +629,6 @@ actor_reqs    =
     }
 target_reqs  =
     { "type",        "name",      "range", "present"
-      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [actionenabler_investigate_city]
@@ -664,7 +662,6 @@ actor_reqs    =
     }
 target_reqs  =
     { "type",   "name", "range", "present"
-      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [actionenabler_steal_tech_random]
@@ -678,7 +675,6 @@ actor_reqs    =
     }
 target_reqs  =
     { "type",   "name", "range", "present"
-      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [actionenabler_poison_city]
