@@ -5079,7 +5079,7 @@ type    = "City_Radius_Sq"
 value   = 3
 reqs    =
     { "type", "name", "range"
-   "Building", "Mass Transit", "City"
+         "Tech", "Theology", "Player"
    }
 
 
