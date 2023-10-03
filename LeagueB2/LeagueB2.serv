@@ -24,7 +24,7 @@ set shieldbox "100"
 set foodbox "100"
 set singlepole "DISABLED"
 set startcity "DISABLED"
-set revealmap START  #uncomment this for revealing the map for test games
+#set revealmap START  #uncomment this for revealing the map for test games
 
 
 # general rules
