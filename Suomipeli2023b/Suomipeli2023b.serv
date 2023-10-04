@@ -39,7 +39,7 @@ set trading_tech disabled
 set airliftingstyle "FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
 set razechance 10
 set globalwarming "ENABLED"
-set globalwarming_percent 100
+set globalwarming_percent 40
 set nuclearwinter_percent 100
 set unreachableprotects "DISABLED"
 set happyborders "NATIONAL"
