@@ -130,6 +130,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.alphabet"
 graphic_alt = "-"
+cost     = 10
 
 [advance_amphibious_warfare]
 name     = _("Amphibious Warfare")
@@ -186,6 +187,7 @@ flags    = "Bridge"
 graphic     = "a.bridge_building"
 graphic_alt = "-"
 helptext = _("Allows roads to be built on river tiles.")
+cost     = 80
 
 [advance_bronze_working]
 name     = _("Bronze Working")
@@ -194,6 +196,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.bronze_working"
 graphic_alt = "-"
+cost     = 10
 
 [advance_ceremonial_burial]
 name     = _("Ceremonial Burial")
@@ -202,6 +205,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.ceremonial_burial"
 graphic_alt = "-"
+cost     = 10
 
 [advance_chemistry]
 name     = _("Chemistry")
@@ -287,6 +291,7 @@ helptext = _("\
 Allows Settlers, Migrants, Workers and Engineers to build forts and \
 fortresses.\
 ")
+cost     = 50
 
 [advance_currency]
 name     = _("Currency")
@@ -456,6 +461,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.horseback_riding"
 graphic_alt = "-"
+cost     = 10
 
 [advance_industrialization]
 name     = _("Industrialization")
@@ -500,6 +506,7 @@ req2     = "Nuclear Power"
 flags    = ""
 graphic     = "a.laser"
 graphic_alt = "-"
+cost     = 4000
 
 [advance_leadership]
 name     = _("Leadership")
@@ -553,6 +560,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.masonry"
 graphic_alt = "-"
+cost     = 10
 
 [advance_mass_production]
 name     = _("Mass Production")
@@ -570,6 +578,7 @@ req2     = "Masonry"
 flags    = ""
 graphic     = "a.mathematics"
 graphic_alt = "-"
+cost     = 30
 
 [advance_medicine]
 name     = _("Medicine")
@@ -718,6 +727,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.pottery"
 graphic_alt = "-"
+cost     = 10
 
 [advance_radio]
 name     = _("Radio")
@@ -957,6 +967,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.warrior_code"
 graphic_alt = "-"
+cost     = 10
 
 [advance_writing]
 name     = _("Writing")
