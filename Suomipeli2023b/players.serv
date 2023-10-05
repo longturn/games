@@ -1,4 +1,4 @@
-set aifill 35
+set aifill 39
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
@@ -34,6 +34,10 @@ aitoggle AI*32
 aitoggle AI*33
 aitoggle AI*34
 aitoggle AI*35
+aitoggle AI*36
+aitoggle AI*37
+aitoggle AI*38
+aitoggle AI*39
 playernation AI*1 "East German" 1 wieder
 playernation AI*2 Ukrainian 1 L1meE
 playernation AI*3 Northumbrian 1 Kroko24
@@ -64,9 +68,12 @@ playernation AI*27 Kenyan 1 suihkulokki
 playernation AI*28 Estonian 1 tm4888
 playernation AI*29 Papuan 1 mijutu
 playernation AI*30 Roman 1 Martta
-playernation AI*31 UN 1 mestaritikku
+playernation AI*31 Chola 1 mestaritikku
 playernation AI*32 "Knights Templar" 1 Usylles
 playernation AI*33 Briton 1 Umeetiusbaarus
 playernation AI*34 Ghana 1 manqo
 playernation AI*35 Aleut 1 Haldric
-
+playernation AI*36 British 1 trodoc
+playernation AI*37 UN 1 Pilo
+playernation AI*38 Cossack 1 Horhe
+playernation AI*39 Tibetan 1 Blue
