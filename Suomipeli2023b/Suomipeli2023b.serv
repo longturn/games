@@ -1,5 +1,16 @@
 rulesetdir Suomipeli2023b
 
+# test game / real game settings
+
+set revealmap START #uncomment this for revealing the map for test games
+#set timeout 82800  # real game
+#set unitwaittime 36000  # real game§
+set timeout 120 # test game
+set unitwaittime 0  # test game
+#set fogofwar "ENABLED"		# real game
+set fogofwar "DISABLED"		# test game
+
+
 # map
 set mapsize "PLAYER"
 set generator "ISLAND"
@@ -17,7 +28,7 @@ set topology "WRAPX|WRAPY|ISO"
 set wetness 60
 set alltemperate disabled
 set tinyisles disabled
-set revealmap START #uncomment this for revealing the map for test games
+
 
 
 # general rules
@@ -47,7 +58,6 @@ set killcitizen "ENABLED"
 set killstack "ENABLED"
 set killunhomed "0"
 set flatpoles "0"
-set fogofwar "ENABLED"
 set occupychance "0"
 set aqueductloss "0"
 set autoattack "DISABLED"
@@ -100,10 +110,6 @@ set ec_max_size 5000
 set ec_turns 9
 set maxplayers 126
 set saveturns 1
-#set timeout 82800  # real game
-#set unitwaittime 36000  # real game§
-set timeout 120 # test game
-set unitwaittime 0  # test game
 set fixedlength enabled
 set savefrequency "15"
 set savename "freeciv"
