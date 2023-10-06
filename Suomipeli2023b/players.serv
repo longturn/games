@@ -1,4 +1,4 @@
-set aifill 39
+set aifill 40
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
@@ -38,6 +38,7 @@ aitoggle AI*36
 aitoggle AI*37
 aitoggle AI*38
 aitoggle AI*39
+aitoggle AI*40
 playernation AI*1 "East German" 1 wieder
 playernation AI*2 Ukrainian 1 L1meE
 playernation AI*3 Northumbrian 1 Kroko24
@@ -77,3 +78,4 @@ playernation AI*36 British 1 trodoc
 playernation AI*37 UN 1 Pilo
 playernation AI*38 Cossack 1 Horhe
 playernation AI*39 Tibetan 1 Blue
+playernation AI*40 Aragonese 1 uziF
