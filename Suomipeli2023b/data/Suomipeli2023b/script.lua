@@ -319,7 +319,7 @@ function place_map_labels()
       selected_mountain = selected_mountain - 1
       if selected_mountain == 0 then
         if surrounded_by(place, "Mountains") then
-          place:set_label(_("Korkean Paikan Kammo"))
+          place:set_label(_("Paikoista Korkein"))
         elseif not adjacent_to(place, "Mountains") then
           place:set_label(_("Amigan Vuori"))
         elseif adjacent_to(place, "Ocean") then
