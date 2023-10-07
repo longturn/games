@@ -170,134 +170,134 @@ function place_map_labels()
       selected_river = selected_river - 1
       if selected_river == 0 then
         if tname == "Hills" then
-          place:set_label(_("Grand Canyon"))
+          place:set_label(_("Varkaankuru"))
         elseif tname == "Mountains" then
-          place:set_label(_("Deep Gorge"))
+          place:set_label(_("Rautahammas"))
         elseif tname == "Tundra" then
-          place:set_label(_("Fjords"))
+          place:set_label(_("Kaukainen Tundra"))
         elseif random(1, 100) <= 50 then
-          place:set_label(_("Waterfalls"))
+          place:set_label(_("Koskinen"))
         else
-          place:set_label(_("Travertine Terraces"))
+          place:set_label(_("Kaljakuru"))
         end
       end
     elseif tname == "Deep Ocean" then
       selected_deep = selected_deep - 1
       if selected_deep == 0 then
         if random(1, 100) <= 50 then
-          place:set_label(_("Deep Trench"))
+          place:set_label(_("Vetehinen"))
         else
-          place:set_label(_("Thermal Vent"))
+          place:set_label(_("Vesimaa"))
         end
       end
     elseif tname == "Ocean" then
       selected_ocean = selected_ocean - 1
       if selected_ocean == 0 then
         if surrounded_by(place, "Ocean") then
-          place:set_label(_("Atoll Chain"))
+          place:set_label(_("Riuttapaikka"))
         elseif adjacent_to(place, "Deep Ocean") then
-          place:set_label(_("Great Barrier Reef"))
+          place:set_label(_("Pohjanne"))
         else
           -- Coast
-          place:set_label(_("Great Blue Hole"))
+          place:set_label(_("Isostelija"))
         end
       end
     elseif tname == "Lake" then
       selected_lake = selected_lake - 1
       if selected_lake == 0 then
         if surrounded_by(place, "Lake") then
-          place:set_label(_("Great Lakes"))
+          place:set_label(_("Suursaimaa"))
         elseif not adjacent_to(place, "Lake") then
           -- Isolated
-          place:set_label(_("Dead Sea"))
+          place:set_label(_("Umpilampi"))
         else
-          place:set_label(_("Rift Lake"))
+          place:set_label(_("Kalakko"))
         end
       end
     elseif tname == "Swamp" then
       selected_swamp = selected_swamp - 1
       if selected_swamp == 0 then
         if not adjacent_to(place, "Swamp") then
-          place:set_label(_("Grand Prismatic Spring"))
+          place:set_label(_("Teuravuoma"))
         elseif adjacent_to(place, "Ocean") then
-          place:set_label(_("Mangrove Forest"))
+          place:set_label(_("Lehtovaara"))
         else
-          place:set_label(_("Cenotes"))
+          place:set_label(_("Ojanpohja"))
         end
       end
     elseif tname == "Glacier" then
       selected_glacier = selected_glacier - 1
       if selected_glacier == 0 then
         if surrounded_by(place, "Glacier") then
-          place:set_label(_("Ice Sheet"))
+          place:set_label(_("Kohmelo"))
         elseif not adjacent_to(place, "Glacier") then
-          place:set_label(_("Frozen Lake"))
+          place:set_label(_("Umpivesi"))
         elseif adjacent_to(place, "Ocean") then
-          place:set_label(_("Glacier Bay"))
+          place:set_label(_("Laajalahti"))
         else
-          place:set_label(_("Advancing Glacier"))
+          place:set_label(_("Railopaikka"))
         end
       end
     elseif tname == "Tundra" then
       selected_tundra = selected_tundra - 1
       if selected_tundra == 0 then
-          place:set_label(_("Geothermal Area"))
+          place:set_label(_("Kolo"))
       end
     elseif tname == "Desert" then
       selected_desert = selected_desert - 1
       if selected_desert == 0 then
         if surrounded_by(place, "Desert") then
-          place:set_label(_("Sand Sea"))
+          place:set_label(_("Yyteri"))
         elseif not adjacent_to(place, "Desert") then
-          place:set_label(_("Salt Flat"))
+          place:set_label(_("Speden Hiekkakuoppa"))
         elseif random(1, 100) <= 50 then
-          place:set_label(_("Singing Dunes"))
+          place:set_label(_("7 Velikultaa"))
         else
-          place:set_label(_("White Desert"))
+          place:set_label(_("Soramonttujen Soramonttu"))
         end
       end
     elseif tname == "Plains" then
       selected_plain = selected_plain - 1
       if selected_plain == 0 then
         if adjacent_to(place, "Ocean") then
-          place:set_label(_("Long Beach"))
+          place:set_label(_("Pitkulainen Yyteri"))
         elseif random(1, 100) <= 50 then
-          place:set_label(_("Mud Volcanoes"))
+          place:set_label(_("Mudakko"))
         else
-          place:set_label(_("Rock Pillars"))
+          place:set_label(_("Paasivaara"))
         end
       end
     elseif tname == "Grassland" then
       selected_grassland = selected_grassland - 1
       if selected_grassland == 0 then
         if adjacent_to(place, "Ocean") then
-          place:set_label(_("White Cliffs"))
+          place:set_label(_("Marmorimaa"))
         elseif random(1, 100) <= 50 then
-          place:set_label(_("Giant Cave"))
+          place:set_label(_("Kalavalan Temppeli"))
         else
-          place:set_label(_("Rock Formation"))
+          place:set_label(_("Pirunpelto"))
         end
       end
     elseif tname == "Jungle" then
       selected_jungle = selected_jungle - 1
       if selected_jungle == 0 then
         if surrounded_by(place, "Jungle") then
-          place:set_label(_("Rainforest"))
+          place:set_label(_("Tropiikkimaa"))
         elseif adjacent_to(place, "Ocean") then
-          place:set_label(_("Subterranean River"))
+          place:set_label(_("Maanalainen Joki"))
         else
-          place:set_label(_("Sinkholes"))
+          place:set_label(_("Suppa"))
         end
       end
     elseif tname == "Forest" then
       selected_forest = selected_forest - 1
       if selected_forest == 0 then
         if adjacent_to(place, "Mountains") then
-          place:set_label(_("Stone Forest"))
+          place:set_label(_("Lumottu Kivikko"))
         elseif random(1, 100) <= 50 then
-          place:set_label(_("Sequoia Forest"))
+          place:set_label(_("Varttihehtaarin Puisto"))
         else
-          place:set_label(_("Millenary Trees"))
+          place:set_label(_("Sellupuisto"))
         end
       end
     elseif tname == "Hills" then
@@ -305,29 +305,29 @@ function place_map_labels()
       if selected_hill == 0 then
         if not adjacent_to(place, "Hills") then
           if adjacent_to(place, "Mountains") then
-            place:set_label(_("Table Mountain"))
+            place:set_label(_("Suuri Vuoristo"))
           else
-            place:set_label(_("Inselberg"))
+            place:set_label(_("Korkean Paikan Kammo"))
           end
         elseif random(1, 100) <= 50 then
-          place:set_label(_("Karst Landscape"))
+          place:set_label(_("Ihmeiden Ihme"))
         else
-          place:set_label(_("Valley of Geysers"))
+          place:set_label(_("Nukkelaakso"))
         end
       end
     elseif tname == "Mountains" then
       selected_mountain = selected_mountain - 1
       if selected_mountain == 0 then
         if surrounded_by(place, "Mountains") then
-          place:set_label(_("Highest Peak"))
+          place:set_label(_("Korkean Paikan Kammo"))
         elseif not adjacent_to(place, "Mountains") then
-          place:set_label(_("Sacred Mount"))
+          place:set_label(_("Amigan Vuori"))
         elseif adjacent_to(place, "Ocean") then
-          place:set_label(_("Cliff Coast"))
+          place:set_label(_("Kivikko"))
         elseif random(1, 100) <= 50 then
-          place:set_label(_("Active Volcano"))
+          place:set_label(_("Tarmo Mannin Temppeli"))
         else
-          place:set_label(_("High Summit"))
+          place:set_label(_("Puukkojunkkarien Muistomerkki"))
         end
       end
     end
