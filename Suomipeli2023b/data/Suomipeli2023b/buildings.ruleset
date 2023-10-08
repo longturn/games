@@ -1349,14 +1349,14 @@ Increases the food resources by 50% on each farmland tile which\
 ")
 
 [building_temple]
-name		= _("Temple")
+name		= _("Sauna Temple")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Ceremonial Burial", "Player"
     }
-graphic	= "b.temple"
-graphic_alt	= "-"
+graphic	= "b.saunatemple"
+graphic_alt	= "b.temple"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -1366,6 +1366,10 @@ sabotage	= 100
 sound		= "b_temple"
 sound_alt	= "b_generic"
 helptext	= _("\
+People in many regions have sweat lodge ceremonies. People from various \
+origins have practiced a sweat bath ceremony known with many names. Sauna \
+is a name for a place used for mental and physical purification. With or \
+without with the religious aspect a sauna is considered a sacred place. \
 Makes one unhappy citizen content. The Mysticism advance doubles \
 this effect (except under a Communist government). With both Mysticism \
 and the Temple of Artemis, 4 citizens are made content (3 under \

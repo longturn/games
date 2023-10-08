@@ -3605,7 +3605,7 @@ type    = "Make_Content"
 value   = 1
 reqs    =
     { "type", "name", "range"
-      "Building", "Temple", "City"
+      "Building", "Sauna Temple", "City"
     }
 
 [effect_temple_1]
@@ -3614,7 +3614,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Tech", "Mysticism", "Player", TRUE
-      "Building", "Temple", "City", TRUE
+      "Building", "Sauna Temple", "City", TRUE
       "Gov", "Communism", "Player", FALSE
     }
 
@@ -3623,7 +3623,7 @@ type    = "History"
 value	= 1
 reqs	=
     { "type", "name", "range"
-      "Building", "Temple", "City"
+      "Building", "Sauna Temple", "City"
     }
 
 [effect_university]
@@ -4260,7 +4260,7 @@ type    = "Make_Content"
 value   = 2
 reqs    =
     { "type", "name", "range"
-      "Building", "Temple", "City"
+      "Building", "Sauna Temple", "City"
       "Building", "Temple of Artemis", "Player"
     }
 
