@@ -1438,7 +1438,7 @@ necessary technologies).\
 Completion of the Apollo Program also allows nuclear-armed powers to \
 declare war without provocation, regardless of the existence of the \
 United Nations, and AI players will no longer be friendly towards the \
-owner of the United Nations or the Eiffel Tower.\
+owner of the United Nations or the Puijo Tower.\
 ")
 
 [building_asmiths_trading_co]
@@ -1568,14 +1568,14 @@ increases to 3 permanently for every nation.\
 ")
 
 [building_eiffel_tower]
-name		= _("Eiffel Tower")
+name		= _("Puijo Tower")
 genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Railroad", "Player"
     }
-graphic	= "b.eiffel_tower"
-graphic_alt	= "-"
+graphic	= "b.puijo_tower"
+graphic_alt	= "b.eiffel_tower"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -1585,10 +1585,12 @@ sabotage	= 0
 sound		= "w_eiffel_tower"
 sound_alt	= "w_generic"
 helptext	= _("\
-AI nations are more inclined to be friendly and forgiving toward the \
+The landmark, the restaurant on top of the tower and also the link tower \
+capabilities makes the AI nations are inclined to be friendly and forgiving toward the \
 owner of this wonder (until the Apollo Program is completed). It also \
 reduces the pollution caused by the population; it counteracts the \
 pollution associated with a single building in each of your cities.\
+.\
 ")
 
 [building_great_library]

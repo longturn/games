@@ -3790,7 +3790,7 @@ type    = "Gain_AI_Love"
 value   = 10
 reqs    =
     { "type", "name", "range", "present", "survives"
-      "Building", "Eiffel Tower", "Player", TRUE, FALSE
+      "Building", "Puijo Tower", "Player", TRUE, FALSE
       "Building", "Apollo Program", "World", FALSE, TRUE
     }
 
@@ -3799,7 +3799,7 @@ type    = "Pollu_Pop_Pct"
 value   = -25
 reqs    =
     { "type", "name", "range"
-      "Building", "Eiffel Tower", "Player"
+      "Building", "Puijo Tower", "Player"
     }
 
 [effect_eiffel_tower_culture]
@@ -3807,7 +3807,7 @@ type    = "History"
 value	= 3
 reqs	=
     { "type", "name", "range"
-      "Building", "Eiffel Tower", "City"
+      "Building", "Puijo Tower", "City"
     }
 
 [effect_great_library]
