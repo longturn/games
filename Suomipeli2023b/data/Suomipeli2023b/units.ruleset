@@ -1001,12 +1001,12 @@ Infantry are modern version of infantry, relatively good\
 
 
 [unit_alpine_troops]
-name          = _("Alpine Troops")
+name          = _("Jaeger Troops")
 class         = "Land"
 tech_req      = "Tactics"
 obsolete_by   = "None"
-graphic       = "u.alpine_troops"
-graphic_alt   = "-"
+graphic       = "u.jaeger_troops"
+graphic_alt   = "u.alpine_troops"
 sound_move    = "m_alpine_troops"
 sound_move_alt = "m_generic"
 sound_fight   = "f_alpine_troops"
@@ -1030,8 +1030,8 @@ disembarks    = "Helicopter"
 flags         = "IgTer", "Capturer"
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
-Alpine Troops are highly mobile units as well as\
- excellent defenders.\
+Jaeger Troops are highly mobile units and excellent defenders. Historically, these troops have included groups capable of moving \
+rapidly and possessing some sniper capabilities. In the game, this is illustrated by the ability to ignore terrain while moving the unit.\
 ")
 
 [unit_partisan]
