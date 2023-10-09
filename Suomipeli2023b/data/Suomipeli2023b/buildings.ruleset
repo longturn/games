@@ -820,7 +820,7 @@ gold bonus, and under Monarchy a +50% gold bonus.\
 ")
 
 [building_second_palace]
-name		= _("Ecclesiastical Palace")
+name		= _("Second Palace")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
