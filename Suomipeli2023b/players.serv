@@ -1,4 +1,4 @@
-set aifill 40
+set aifill 43
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
