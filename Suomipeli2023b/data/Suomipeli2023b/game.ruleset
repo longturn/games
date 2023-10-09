@@ -712,7 +712,7 @@ target_reqs  =
       "Gov",      "Federation",            "Player", FALSE
       "Gov",      "Democracy",             "Player", FALSE
       "Building", "Palace",                "City",   FALSE
-      "Building", "Ecclesiastical Palace", "City",   FALSE
+      "Building", "Second Palace", "City",   FALSE
       "Building", "Mausoleum of Mausolos", "Player", FALSE
     }
 
@@ -732,7 +732,7 @@ target_reqs  =
       "Gov",      "Federation",            "Player", FALSE
       "Gov",      "Democracy",             "Player", FALSE
       "Building", "Palace",                "City",   FALSE
-      "Building", "Ecclesiastical Palace", "City",   FALSE
+      "Building", "Second Palace", "City",   FALSE
       "Building", "Mausoleum of Mausolos", "Player", FALSE
     }
 
