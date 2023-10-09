@@ -350,7 +350,7 @@ genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
       "Tech", "Monotheism", "Player"
-      "Building", "Temple", "City"
+      "Building", "Sauna Temple", "City"
     }
 graphic	= "b.cathedral"
 graphic_alt	= "-"
@@ -2050,7 +2050,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Mysticism", "Player"
-      "Building", "Temple", "City"
+      "Building", "Sauna Temple", "City"
     }
 graphic         = "b.temple_of_artemis"
 graphic_alt     = "b.oracle"
