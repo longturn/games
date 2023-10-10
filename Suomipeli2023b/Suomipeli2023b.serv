@@ -3,10 +3,10 @@ rulesetdir Suomipeli2023b
 # test game / real game settings
 
 #set revealmap START #uncomment this for revealing the map for test games
-#set timeout 82800  # real game
-#set unitwaittime 36000  # real game§
-set timeout 120 # test game
-set unitwaittime 0  # test game
+set timeout 82800  # real game
+set unitwaittime 36000  # real game§
+#set timeout 120 # test game
+#set unitwaittime 0  # test game
 set fogofwar "ENABLED"		# real game
 #set fogofwar "DISABLED"		# test game
 
