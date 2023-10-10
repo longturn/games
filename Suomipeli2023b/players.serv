@@ -1,4 +1,4 @@
-set aifill 43
+set aifill 44
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
@@ -42,45 +42,48 @@ aitoggle AI*40
 aitoggle AI*41
 aitoggle AI*42
 aitoggle AI*43
+aitoggle AI*44
 playernation AI*1 "East German" 1 wieder
 playernation AI*2 Ukrainian 1 L1meE
 playernation AI*3 Northumbrian 1 Kroko24
-playernation AI*5 Mixtec 1 v1znut
-playernation AI*6 Finnish 1 meton
-playernation AI*7 Karelian 1 paavo
-playernation AI*8 Hittite 1 Yuccamask
-playernation AI*9 Somali 1 norttihirmu
-playernation AI*10 Angolan 1 Shoilf
-playernation AI*11 Chinese 1 mikezy66
-playernation AI*12 Alander 1 Mrkurre06
-playernation AI*13 Werewolf 1 beerw0lf
-playernation AI*14 Dryad 1 Seppo_Taalasmaahinen
-playernation AI*15 Confederate 1 Pklx
-playernation AI*16 Mayan 1 Rou
-playernation AI*17 Californian 1 asiantuntia
-playernation AI*18 Catalan 1 Viperish
-playernation AI*19 Mongol 1 purppura
-playernation AI*20 Hacker 1 karvin3n
-playernation AI*21 Median 1 Milla
-playernation AI*22 Jamaican 1 erzerkr
-playernation AI*23 Benin 1 tsilokki
-playernation AI*24 Viking 1 Zathor
-playernation AI*25 Mali 1 Relix
-playernation AI*26 Zulu 1 laamanni
-playernation AI*27 Kenyan 1 suihkulokki
-playernation AI*28 Estonian 1 tm4888
-playernation AI*29 Papuan 1 mijutu
-playernation AI*30 Chola 1 mestaritikku
-playernation AI*31 "Knights Templar" 1 Usylles
-playernation AI*32 Briton 1 Umeetiusbaarus
-playernation AI*33 Ghana 1 manqo
-playernation AI*34 Aleut 1 Haldric
-playernation AI*35 British 1 trodoc
-playernation AI*36 UN 1 Pilo
-playernation AI*37 Cossack 1 Horhe
-playernation AI*38 Tibetan 1 Blue
-playernation AI*39 Aragonese 1 uziF
-playernation AI*40 Etruscan 1 Surmansuu
-playernation AI*41 Manx 1 iHevimies
-playernation AI*42 Roman 1 Zoelz
-playernation AI*43 Venezuelan 1 Blorb
+playernation AI*4 Mixtec 1 v1znut
+playernation AI*5 Finnish 1 meton
+playernation AI*6 Karelian 1 paavo
+playernation AI*7 Hittite 1 Yuccamask
+playernation AI*8 Somali 1 norttihirmu
+playernation AI*9 Angolan 1 Shoilf
+playernation AI*10 English 1 mikezy66
+playernation AI*11 Alander 1 Mrkurre06
+playernation AI*12 Werewolf 1 beerw0lf
+playernation AI*13 Dryad 1 Seppo_Taalasmaahinen
+playernation AI*14 Confederate 1 Pklx
+playernation AI*15 Mayan 1 Rou
+playernation AI*16 Californian 1 asiantuntia
+playernation AI*17 Catalan 1 Viperish
+playernation AI*18 Mongol 1 purppura
+playernation AI*19 Hacker 1 karvin3n
+playernation AI*20 Median 1 Milla
+playernation AI*21 Jamaican 1 erzerkr
+playernation AI*22 Benin 1 tsilokki
+playernation AI*23 Viking 1 Zathor
+playernation AI*24 Mali 1 Relix
+playernation AI*25 Zulu 1 laamanni
+playernation AI*26 Kenyan 1 suihkulokki
+playernation AI*27 Estonian 1 tm4888
+playernation AI*28 Papuan 1 mijutu
+playernation AI*29 Tibetan 1 mestaritikku
+playernation AI*30 "Knights Templar" 1 Usylles
+playernation AI*31 Briton 1 Umeetiusbaarus
+playernation AI*32 Ghana 1 manqo
+playernation AI*33 Aleut 1 Haldric
+playernation AI*34 British 1 trodoc
+playernation AI*35 UN 1 Pilo
+playernation AI*36 Cossack 1 Horhe
+playernation AI*37 Tibetan 1 Blue
+playernation AI*38 Etruscan 1 Surmansuu
+playernation AI*39 Manx 1 iHevimies
+playernation AI*40 Roman 1 Zoelz
+playernation AI*41 Venezuelan 1 Blorb
+playernation AI*42 Aragonese 1 Maioranus
+playernation AI*43 Atlantean 1 xtzu
+playernation AI*44 Aymara 1 tero
