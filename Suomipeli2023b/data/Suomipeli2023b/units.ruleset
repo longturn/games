@@ -1031,7 +1031,8 @@ flags         = "IgTer", "Capturer"
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
 Jaeger Troops are highly mobile units and excellent defenders. Historically, these troops have included groups capable of moving \
-rapidly and possessing some sniper capabilities. In the game, this is illustrated by the ability to ignore terrain while moving the unit.\
+rapidly and possessing some sniper capabilities. Famous snipers like Simo Häyhä have been part of units like Jaeger Troops. \
+In the game, stuff like this is illustrated by the ability to ignore terrain while moving the unit.\
 ")
 
 [unit_partisan]
