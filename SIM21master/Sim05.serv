@@ -42,6 +42,7 @@ set happyborders NATIONAL
 set occupychance 0
 set migration enabled
 set endturn 5000
+set unitwaittime_style = "ACTIVITIES|FORTIFY|DELAYGOTO
 
 # diplomacy, technology
 set diplchance 50
