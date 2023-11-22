@@ -3,6 +3,21 @@
 
 rulesetdir LT81
 
+
+# real game settings
+
+#set timeout 82800  # real game
+#set unitwaittime 36000  # real game§
+#set fogofwar "ENABLED"		# real game
+
+# test game settings
+
+set revealmap START #uncomment this for revealing the map for test games
+set timeout 120 # test game
+set unitwaittime 0  # test game
+set fogofwar "DISABLED"		# test game
+
+
 # map
 set mapsize "PLAYER"
 set generator "FRACTAL"
@@ -19,7 +34,6 @@ set topology "WRAPX|WRAPY|ISO"
 set wetness 40
 set alltemperate disabled
 set tinyisles disabled
-set revealmap START #uncomment this for revealing the map for test games
 
 # general rules
 set nationset all
@@ -79,8 +93,6 @@ set ec_turns 9
 set maxplayers 126
 set saveturns 1
 set scorelog enabled
-set timeout 82800
-set unitwaittime 36000
 set fixedlength enabled
 
 metamessage "Longturn Experimental Extra for multiplayer games | More info: https://longturn.net"
