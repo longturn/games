@@ -1,0 +1,37 @@
+set aifill 18
+aitoggle AI*1
+aitoggle AI*2
+aitoggle AI*3
+aitoggle AI*4
+aitoggle AI*5
+aitoggle AI*6
+aitoggle AI*7
+aitoggle AI*8
+aitoggle AI*9
+aitoggle AI*10
+aitoggle AI*11
+aitoggle AI*12
+aitoggle AI*13
+aitoggle AI*14
+aitoggle AI*15
+aitoggle AI*16
+aitoggle AI*17
+aitoggle AI*18
+playernation AI*1 "East German" 1 wieder
+playernation AI*2 Cherokee 1 Blue
+playernation AI*3 Japanese 1 xtc69
+playernation AI*4 Akwe 1 Shoilf
+playernation AI*5 Texan 1 axe
+playernation AI*6 Mexican 1 Pilo
+playernation AI*7 Bavarian 1 hroden
+playernation AI*8 Cornish 1 el_perdedor
+playernation AI*9 Veletian 1 Kocu
+playernation AI*10 Germanic 1 hyperboreax
+playernation AI*11 Australian 1 Barr
+playernation AI*12 Gepid 1 Blauwal
+playernation AI*13 Yugoslav 1 Corbeau
+playernation AI*14 Aleut 1 Haldric
+playernation AI*15 Scottish 1 jwrober
+playernation AI*16 Chinese 1 ionwywh
+playernation AI*17 Dryad 1 vic123
+playernation AI*18 "South Korean" 1 chill
