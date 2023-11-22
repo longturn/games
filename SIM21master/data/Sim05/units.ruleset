@@ -139,7 +139,7 @@ flags="TerrainSpeed","TerrainDefense","CanOccupyCity","BuildAnywhere","CollectRa
 name=_("?unitclass:Tribe")
 min_speed=1
 hp_loss_pct=20
-flags="TerrainSpeed","TerrainDefense","BuildAnywhere","CollectRansom","ZOC","DoesntOccupyTile","Airliftable", "Unhomed"
+flags="TerrainSpeed","TerrainDefense","BuildAnywhere","CollectRansom","ZOC","DoesntOccupyTile","Airliftable"
 
 [unitclass_3]
 name=_("?unitclass:Small Land")
@@ -468,7 +468,7 @@ veteran_power_fact=100
 veteran_base_raise_chance=0
 veteran_work_raise_chance=0
 veteran_move_bonus=0
-flags="HasNoZOC","NonMil","IgTer","Settlers","Cities"
+flags="HasNoZOC","NonMil","IgTer","Settlers","Cities", "NoHome"
 roles="CitiesStartunit","Settlers"
 helptext="In the early stages of civilization, expansion was a constant. People simply moved from one place to another and settled in new locations, carrying only basic stuff, because that was all they had. ","Tribe is a predecessor of Settlers and is used for founding new cities. Tribe can also perform the same terrain alterations as Workers."
 
