@@ -1,4 +1,4 @@
-set aifill 18
+set aifill 19
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
@@ -17,6 +17,7 @@ aitoggle AI*15
 aitoggle AI*16
 aitoggle AI*17
 aitoggle AI*18
+aitoggle AI*19
 playernation AI*1 "East German" 1 wieder
 playernation AI*2 Cherokee 1 Blue
 playernation AI*3 Japanese 1 xtc69
@@ -35,3 +36,4 @@ playernation AI*15 Scottish 1 jwrober
 playernation AI*16 Chinese 1 ionwywh
 playernation AI*17 Dryad 1 vic123
 playernation AI*18 "South Korean" 1 chill
+playernation AI*19 Venetian 1 Alfred
