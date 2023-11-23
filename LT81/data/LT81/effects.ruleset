@@ -5378,11 +5378,21 @@ reqs    =
 ; City radius increased with Mass Transit
 [effect_mass_transit_2]
 type    = "City_Radius_Sq"
-value   = 5
+value   = 3
 reqs    =
     { "type", "name", "range"
    "Building", "Mass Transit", "City"
    }
+   
+; City radius increased with Theology
+[effect_theology_work_area]
+type    = "City_Radius_Sq"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+         "Tech", "Theology", "Player"
+   }
+
 
 
 [effect_ruins_trade]
