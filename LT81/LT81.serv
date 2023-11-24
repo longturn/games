@@ -13,6 +13,12 @@ set unitwaittime 0  # test game
 #set fogofwar "ENABLED"		# real game
 set fogofwar "DISABLED"		# test game
 
+set mgr_distance "7"
+set mgr_foodneeded "ENABLED"
+set mgr_nationchance "50"
+set mgr_turninterval "1"
+set mgr_worldchance "30"
+set migration "ENABLED"
 
 # map
 set mapsize "PLAYER"
@@ -21,7 +27,7 @@ set barbarians disabled
 set startpos "VARIABLE"
 #set teamplacement CONTINENT
 set huts 0
-set landmass 30
+set landmass 40
 set separatepoles enabled
 set specials 300
 set steepness 45
@@ -135,12 +141,6 @@ set compresstype "LIBZ"
 set maxconnectionsperhost "4"
 set maxplayers "500"
 set metamessage ""
-set mgr_distance "0"
-set mgr_foodneeded "ENABLED"
-set mgr_nationchance "50"
-set mgr_turninterval "5"
-set mgr_worldchance "10"
-set migration "DISABLED"
 set minplayers "1"
 set multiresearch "DISABLED"
 set nationset "all"
