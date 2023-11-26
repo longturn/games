@@ -4169,13 +4169,6 @@ reqs    =
       "Building", "Manhattan Project", "World", TRUE
     }
 
-[effect_marco_polos_contact]
-type    = "Have_Contacts"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Marco Polo's Embassy", "Player"
-    }
 
 [effect_manhattan_project_culture]
 type    = "History"
@@ -5063,6 +5056,15 @@ reqs    =
       "Building", "Atlantic Telegraph Company", "City"
       "OutputType", "Trade", "Local"
     }
+
+[effect_atlantic_telegraph_company_3]
+type    = "Have_Contacts"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Atlantic Telegraph Company", "World"
+    }
+
 
 ; City radius increased with Mass Transit
 [effect_mass_transit_2]
