@@ -3129,6 +3129,15 @@ reqs    =
       "OutputType", "Gold", "Local", TRUE, FALSE
       "Building", "Palace", "City", FALSE, FALSE
     }
+	
+[effect_palace_gov_center_2]
+type    = "Gov_Center"
+value	= 1
+reqs	=
+    { "type", "name", "range"
+      "Building", "Second Palace", "City"
+    }
+	
 
 [effect_2nd_palace_culture]
 type    = "History"
