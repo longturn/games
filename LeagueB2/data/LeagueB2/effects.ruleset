@@ -2638,6 +2638,14 @@ reqs	=
       "Building", "Palace", "City"
     }
 
+[effect_palace_gov_center_2]
+type    = "Gov_Center"
+value	= 1
+reqs	=
+    { "type", "name", "range"
+      "Building", "Ecclesiastical Palace", "City"
+    }
+
 [effect_palace_despotism]
 type    = "Output_Bonus"
 value   = 75
