@@ -54,7 +54,7 @@ set revolen 2
 set revolentype   FIXED
 set spaceship_travel_time "150"
 set startunits cccccwwwwwwxx
-set techleak "200"
+set techleak "100"
 set techlevel "0"
 set trading_tech disabled
 set airliftingstyle "FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"

@@ -1,4 +1,4 @@
-set aifill 19
+set aifill 23
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
@@ -18,6 +18,10 @@ aitoggle AI*16
 aitoggle AI*17
 aitoggle AI*18
 aitoggle AI*19
+aitoggle AI*20
+aitoggle AI*21
+aitoggle AI*22
+aitoggle AI*23
 playernation AI*1 "East German" 1 wieder
 playernation AI*2 Cherokee 1 Blue
 playernation AI*3 Japanese 1 xtc69
@@ -31,9 +35,13 @@ playernation AI*10 Germanic 1 hyperboreax
 playernation AI*11 Australian 1 Barr
 playernation AI*12 Gepid 1 Blauwal
 playernation AI*13 Yugoslav 1 Corbeau
-playernation AI*14 Aleut 1 Haldric
-playernation AI*15 Scottish 1 jwrober
-playernation AI*16 Chinese 1 ionwywh
-playernation AI*17 Dryad 1 vic123
-playernation AI*18 "South Korean" 1 chill
-playernation AI*19 Venetian 1 Alfred
+playernation AI*14 Scottish 1 jwrober
+playernation AI*15 Chinese 1 ionwywh
+playernation AI*16 "South Korean" 1 chill
+playernation AI*17 Venetian 1 Alfred
+playernation AI*18 Confederate 1 Ujsege
+playernation AI*19 Byzantine 1 ashley_bitrate
+playernation AI*20 Californian 1 stacycats
+playernation AI*21 Aleut 1 Tumahab
+playernation AI*22 Friulian 1 Joy
+playernation AI*23 Turkish 1 white9blue1
