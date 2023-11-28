@@ -2638,6 +2638,14 @@ reqs	=
       "Building", "Palace", "City"
     }
 
+[effect_palace_gov_center_2]
+type    = "Gov_Center"
+value	= 1
+reqs	=
+    { "type", "name", "range"
+      "Building", "Ecclesiastical Palace", "City"
+    }
+
 [effect_palace_despotism]
 type    = "Output_Bonus"
 value   = 75
@@ -3774,14 +3782,6 @@ reqs    =
       "Building", "Manhattan Project", "World", TRUE
     }
 
-[effect_marco_polos_contact]
-type    = "Have_Contacts"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Marco Polo's Embassy", "Player"
-    }
-
 [effect_manhattan_project_culture]
 type    = "History"
 value	= 6
@@ -4667,6 +4667,13 @@ reqs    =
     { "type", "name", "range"
       "Building", "Atlantic Telegraph Company", "City"
       "OutputType", "Trade", "Local"
+    }
+[effect_atlantic_telegraph_company_3]
+type    = "Have_Contacts"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Atlantic Telegraph Company", "World"
     }
 
 ; City radius increased with Mass Transit
