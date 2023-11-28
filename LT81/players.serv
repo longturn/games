@@ -1,4 +1,4 @@
-set aifill 23
+set aifill 16
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
@@ -15,33 +15,19 @@ aitoggle AI*13
 aitoggle AI*14
 aitoggle AI*15
 aitoggle AI*16
-aitoggle AI*17
-aitoggle AI*18
-aitoggle AI*19
-aitoggle AI*20
-aitoggle AI*21
-aitoggle AI*22
-aitoggle AI*23
-playernation AI*1 "East German" 1 wieder
-playernation AI*2 Cherokee 1 Blue
-playernation AI*3 Japanese 1 xtc69
-playernation AI*4 Akwe 1 Shoilf
-playernation AI*5 Texan 1 axe
-playernation AI*6 Mexican 1 Pilo
-playernation AI*7 Bavarian 1 hroden
-playernation AI*8 Cornish 1 el_perdedor
-playernation AI*9 Veletian 1 Kocu
-playernation AI*10 Germanic 1 hyperboreax
-playernation AI*11 Australian 1 Barr
-playernation AI*12 Gepid 1 Blauwal
-playernation AI*13 Yugoslav 1 Corbeau
-playernation AI*14 Scottish 1 jwrober
-playernation AI*15 Chinese 1 ionwywh
-playernation AI*16 "South Korean" 1 chill
-playernation AI*17 Venetian 1 Alfred
-playernation AI*18 Confederate 1 Ujsege
-playernation AI*19 Byzantine 1 ashley_bitrate
-playernation AI*20 Californian 1 stacycats
-playernation AI*21 Aleut 1 Tumahab
-playernation AI*22 Friulian 1 Joy
-playernation AI*23 Turkish 1 white9blue1
+playernation AI*1 Cherokee 1 Blue
+playernation AI*2 Akwe 1 Shoilf
+playernation AI*3 Mexican 1 Pilo
+playernation AI*4 Cornish 1 el_perdedor
+playernation AI*5 Veletian 1 Kocu
+playernation AI*6 Germanic 1 hyperboreax
+playernation AI*7 Gepid 1 Blauwal
+playernation AI*8 Yugoslav 1 Corbeau
+playernation AI*9 Scottish 1 jwrober
+playernation AI*10 "South Korean" 1 chill
+playernation AI*11 Venetian 1 Alfred
+playernation AI*12 Confederate 1 Ujsege
+playernation AI*13 Californian 1 stacycats
+playernation AI*14 Aleut 1 Tumahab
+playernation AI*15 Friulian 1 Joy
+playernation AI*16 Turkish 1 white9blue1
