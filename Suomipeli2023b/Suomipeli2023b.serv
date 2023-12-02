@@ -122,7 +122,7 @@ set scorelog "ENABLED"
 set scoreloglevel "ALL"
 
 # misc
-set autosaves "TURN|GAMEOVER|QUITIDLE|INTERRUPT"
+set autosaves "TURN|GAMEOVER|QUITIDLE|INTERRUPT|TIMER"
 set autotoggle "DISABLED"
 set onsetbarbs "120"
 set barbarians "DISABLED"
