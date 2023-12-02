@@ -609,6 +609,7 @@ action       = "Establish Embassy Stay"
 actor_reqs    =
     { "type",         "name",             "range", "present"
       "UnitFlag",     "RealDiplomat",     "Local", TRUE
+	  "UnitState",    "OnLivableTile",    "Local", TRUE
       "MinMoveFrags", "1",                "Local", TRUE
       "DiplRel",      "Foreign",          "Local", TRUE
       "DiplRel",      "Has real embassy", "Local", FALSE
@@ -624,6 +625,7 @@ action       = "Establish Embassy"
 actor_reqs    =
     { "type",         "name",             "range", "present"
       "UnitFlag",     "Spy",              "Local", TRUE
+	  "UnitState",    "OnLivableTile",    "Local", TRUE
       "MinMoveFrags", "1",                "Local", TRUE
       "DiplRel",      "Foreign",          "Local", TRUE
       "DiplRel",      "Has real embassy", "Local", FALSE
