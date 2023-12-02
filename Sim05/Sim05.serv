@@ -62,6 +62,8 @@ set techlossforgiveness 1
 set techlossrestore 50
 
 # technical
+set autosaves "TURN|GAMEOVER|QUITIDLE|INTERRUPT|TIMER"
+set savefrequency "15"
 set allowtake ""
 set compresstype XZ
 set ec_chat enabled
