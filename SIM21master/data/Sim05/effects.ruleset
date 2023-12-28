@@ -709,6 +709,7 @@ type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
 "OutputType","food","Local"
+"MinSize","10","City"
 }
 
 [effect_85]
