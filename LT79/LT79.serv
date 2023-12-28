@@ -156,7 +156,5 @@ read players.serv
 syncturn # for longturn games
 start
 
-cmdlevel basic new
-cmdlevel basic first
 Easy
 metapatches 
