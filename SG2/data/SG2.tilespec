@@ -166,6 +166,7 @@ files =
   "misc/overlays.spec",
   "misc/citybar.spec",
   "misc/shields-large.spec",
+  "SG2_tiles/flags-overrides.spec",
   "misc/editor.spec"
 
 
