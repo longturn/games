@@ -1195,6 +1195,13 @@ shield      = 1
 trade       = 1
 # plains.
 
+[resource_uranium]
+extra       = "Uranium"
+identifier  = "*"
+shield      = 5
+trade       = 2
+# mountains, desert.
+
 [resource_game]
 extra       = "Game"
 identifier  = "e"
