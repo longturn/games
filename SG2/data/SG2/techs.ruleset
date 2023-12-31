@@ -8,8 +8,8 @@
 ; use your new customized file.
 
 [datafile]
-description="LTT technology data for Freeciv"
-options="+Freeciv-ruleset-Devel-2017.Jan.02 web-compatible"
+description="Longturn Traditional based on Civ2Civ3 technology data for Freeciv"
+options="+Freeciv-ruleset-Devel-2017.Jan.02"
 format_version=20
 
 [control]
@@ -49,8 +49,8 @@ format_version=20
 ; Below: The individual advances, one per section.
 ; The number can be variable, up to 250.
 ;
-; The actual tag used (the * in [advance_*]) does not matter, except
-; it must be unique within this file, and it may be used in debug
+; The actual tag used (the * in [advance_*]) does not matter, except 
+; it must be unique within this file, and it may be used in debug 
 ; output when reading this file.
 ;
 ; Notes:
@@ -94,18 +94,17 @@ format_version=20
 ;                 this field is read for information on how much a tech
 ;                 costs.
 ;
-; Special values for req1 and req2 are "None" (first section below)
-; and "Never" (never available).  If only one tech is required,
+; Special values for req1 and req2 are "None" (first section below) 
+; and "Never" (never available).  If only one tech is required, 
 ; it should be listed as req1.
 ;
 ; As well as custom flags defined above, the following flag strings are
 ; possible:
 ;
-; "Bonus_Tech"          = player gets extra tech if reached first
-; "Bridge"              = "Settler" unit types can build roads with
-;                         "RequiresBridge" flag over roads with
-;                         "PreventsOtherRoads" flag (rivers)
-; "Build_Airborne"      = from now on can build air units (for use by AI)
+; "Bonus_Tech" = player gets extra tech if reached first
+; "Bridge"   = "Settler" unit types can build roads with "RequiresBridge" flag
+;              over roads with "PreventsOtherRoads" flag (rivers)
+; "Build_Airborne" = from now on can build air units (for use by AI)
 ; "Claim_Ocean"         = Player claims ocean tiles even if they are not
 ;                         adjacent to border source
 ; "Claim_Ocean_Limited" = Oceanic border sources claim ocean tiles even if
@@ -130,6 +129,19 @@ req2     = "None"
 flags    = ""
 graphic     = "a.alphabet"
 graphic_alt = "-"
+helptext = _("The invention of pictograms or symbols allows the people to store information without the need of using spoken language. At a later time writing will be made possible by specialized pictography. Hieroglyphic writing, the alphabet and logographic writing systems are all derived from the invention of pictography.")
+cost     = 10
+
+
+[advance_folklore]
+name     = _("Folklore")
+req1     = "None"
+req2     = "None"
+flags    = ""
+graphic     = "a.folklore"
+graphic_alt = "a.alphabet"
+helptext = _("Folklore forms the foundation of the traditions for your people allowing your nation to have unique culture and ways.")
+cost     = 10
 
 [advance_amphibious_warfare]
 name     = _("Amphibious Warfare")
@@ -184,6 +196,7 @@ req2     = "Construction"
 flags    = "Bridge"
 graphic     = "a.bridge_building"
 graphic_alt = "-"
+cost     = 80
 helptext = _("Allows roads to be built on river tiles.")
 
 [advance_bronze_working]
@@ -193,6 +206,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.bronze_working"
 graphic_alt = "-"
+cost     = 10
 
 [advance_ceremonial_burial]
 name     = _("Ceremonial Burial")
@@ -201,6 +215,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.ceremonial_burial"
 graphic_alt = "-"
+cost     = 10
 
 [advance_chemistry]
 name     = _("Chemistry")
@@ -286,6 +301,7 @@ helptext = _("\
 Allows Settlers, Migrants, Workers and Engineers to build forts and \
 fortresses.\
 ")
+cost     = 50
 
 [advance_currency]
 name     = _("Currency")
@@ -364,6 +380,26 @@ graphic_alt = "-"
 helptext = _("Upgrades 2 units every turn for all players if any player knows this tech.")
 cost     = 1450
 
+[advance_intergovernmentism]
+name     = _("Intergovernmentalism")
+req1     = "Espionage"
+req2     = "The Corporation"
+flags    = ""
+graphic     = "a.intergov"
+graphic_alt = "a.espionage"
+helptext = _("International treaties has been a thing since ancient times but allowing the majority of the nations to make mutual agreements is a true breakthrough.")
+cost     = 2000
+
+[advance_global_intergovernmentalism]
+name     = _("Global Intergovernmentalism")
+req1     = "Intergovernmentalism"
+req2     = "None"
+flags    = ""
+graphic     = "a.ginter"
+graphic_alt = "a.espionage"
+helptext = _("Allows extending the international treaties to all nations.")
+cost     = 4000
+
 [advance_explosives]
 name     = _("Explosives")
 req1     = "Gunpowder"
@@ -394,11 +430,11 @@ cost     = 775
 [advance_fusion_power]
 name     = _("Fusion Power")
 req1     = "Superconductors"
-req2     = "Labor Union"
+req2     = "Stealth"
 flags    = ""
 graphic     = "a.fusion_power"
 graphic_alt = "-"
-helptext = _("Allows building several fusion based units. Not all fusion units are worth the cost.")
+helptext = _("Allows building several fusion based units. Not all fusion units are worth the cost. Sea class units will get +6 extra moves.")
 cost     = 17000
 
 
@@ -455,6 +491,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.horseback_riding"
 graphic_alt = "-"
+cost     = 10
 
 [advance_industrialization]
 name     = _("Industrialization")
@@ -499,6 +536,7 @@ req2     = "Nuclear Power"
 flags    = ""
 graphic     = "a.laser"
 graphic_alt = "-"
+cost     = 4000
 
 [advance_leadership]
 name     = _("Leadership")
@@ -552,6 +590,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.masonry"
 graphic_alt = "-"
+cost     = 10
 
 [advance_mass_production]
 name     = _("Mass Production")
@@ -569,6 +608,7 @@ req2     = "Masonry"
 flags    = ""
 graphic     = "a.mathematics"
 graphic_alt = "-"
+cost     = 30
 
 [advance_medicine]
 name     = _("Medicine")
@@ -637,7 +677,7 @@ cost     = 104
 [advance_mysticism]
 name     = _("Mysticism")
 req1     = "Ceremonial Burial"
-req2     = "None"
+req2     = "Folklore"
 flags    = ""
 graphic     = "a.mysticism"
 graphic_alt = "-"
@@ -669,7 +709,7 @@ req2     = "Miniaturization"
 flags    = ""
 graphic     = "a.nuclear_power"
 graphic_alt = "-"
-helptext = _("Gives sea units one extra move.")
+helptext = _("Gives sea units 3 extra moves.")
 cost     = 1450
 
 [advance_philosophy]
@@ -717,6 +757,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.pottery"
 graphic_alt = "-"
+cost     = 10
 
 [advance_radio]
 name     = _("Radio")
@@ -839,6 +880,16 @@ graphic     = "a.stealth"
 graphic_alt = "-"
 cost     = 3600
 
+[advance_advanced_engineering]
+name     = _("Advanced Engineering")
+req1     = "Plastics"
+req2     = "Laser"
+flags    = ""
+graphic     = "a.aengineering"
+graphic_alt = "a.plastics"
+cost     = 7200
+
+
 [advance_steam_engine]
 name     = _("Steam Engine")
 req1     = "Chemistry"
@@ -957,11 +1008,12 @@ req2     = "None"
 flags    = ""
 graphic     = "a.warrior_code"
 graphic_alt = "-"
+cost     = 10
 
 [advance_writing]
 name     = _("Writing")
 req1     = "Pictography"
-req2     = "None"
+req2     = "Folklore"
 flags    = ""
 graphic     = "a.writing"
 graphic_alt = "-"
