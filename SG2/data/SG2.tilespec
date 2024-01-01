@@ -364,6 +364,7 @@ styles =
       "ts.tundra_game", "Single1"
       "ts.furs",       "Single1"
       "ts.coal",       "Single1"
+      "ts.copper",     "Single1"
       "ts.fish",       "Single1"
       "ts.fruit",      "Single1"
       "ts.gems",       "Single1"
