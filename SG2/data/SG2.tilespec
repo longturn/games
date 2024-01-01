@@ -167,6 +167,7 @@ files =
   "misc/citybar.spec",
   "misc/shields-large.spec",
   "SG2_tiles/flags-overrides.spec",
+  "misc/icons.spec",  ; Compatibility with 3.0
   "misc/editor.spec"
 
 
