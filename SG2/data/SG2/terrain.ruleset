@@ -695,7 +695,7 @@ Cities built in hills are at risk of earthquakes, which can interrupt\
 
 [terrain_snow_hills]
 name                 = _("Snow Hills")
-graphic              = "show_hills"
+graphic              = "snow_hills"
 graphic_alt          = "hills"
 identifier           = "w"
 class                = "Land"
