@@ -1019,6 +1019,14 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+Gold is a malleable metal that has been the source of wealth for thousands of\
+ years. Due to its ubiquity in nature it has traditionally been used as a hard\
+ currency (coins).\
+"), _("\
+Gold, when found on a Glacier, Hills, or Mountain tile, gives 6 more trade.\
+ For more information, review the help for the individual tile types.\
+")
 
 [extra_1]
 name=_("Iron")
@@ -1031,6 +1039,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+Iron ore can be forged into a variety of metals that can be used to make\
+ machines, armor, and many other useful things.\
+"), _("\
+Iron, when found on a Mountain tile, gives 3 more shields.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_2]
 name=_("?animals:Game")
@@ -1043,6 +1058,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+Wild \"Game\" has been a source of food and tools for hunter-gathers in the\
+ ancient past all the way to modern times.\
+"), _("\
+Game, when found on a Tundra tile, gives 2 more food and 1 more shield.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_3]
 name=_("Furs")
@@ -1055,6 +1077,12 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+The fur trade has been source of food and trade for thousands of years.\
+"), _("\
+Furs, when found on a Tundra tile, gives 1 more food and 3 more trade.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_4]
 name=_("Coal")
@@ -1067,6 +1095,14 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+Coal is a hard black ore that is easily mined. When burned it produces a very\
+ hot fire useful for many purposes. In modern times, burning coal produces the\
+ heat needed for the steam engine or to generate electricity.\
+"), _("\
+Coal, when found on a Hills tile, gives 2 more shields.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_5]
 name=_("Fish")
@@ -1079,6 +1115,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+The fishing industry has been a source of food for all civilizations for all\
+ time.\
+"), _("\
+Fish, when found on an Ocean tile, gives 2 more food.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_6]
 name=_("Fruit")
@@ -1091,6 +1134,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+The picking and cultivation of fruit has been a source of food for hunter-gathers\
+ in the ancient past all the way to modern times.\
+"), _("\
+Fruit, when found on a Jungle tile, gives 3 more food and 1 more trade.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_7]
 name=_("Gems")
@@ -1103,6 +1153,14 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+Freeciv21 combines all valuable stones used in jewelry and other important\
+ artifacts, such as diamonds and rubies, into the word \"gems\". These precious\
+ stones have been used for trade for thousands of years.\
+"), _("\
+Gems, when found on a Jungle tile, gives 4 more trade.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_8]
 name=_("Buffalo")
@@ -1115,6 +1173,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+Buffalo have been a source of food and tools for thousands of years,\
+ especially on the plains of North America.\
+"), _("\
+Buffalo, when found on a Plains tile, gives 2 more shields.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_9]
 name=_("Wheat")
@@ -1127,6 +1192,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+The cultivation and discovery of wheat greatly increased the ability of\
+ civilizations to produce food for ever larger nations.\
+"), _("\
+Wheat, when found on a Plains tile, gives 2 more food.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_10]
 name=_("Oasis")
@@ -1139,6 +1211,14 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+An oasis is an area of a surface fresh water spring in a desert region.\
+ The oasis is an important respite, fresh water, and food source in\
+ regions that have reduced rain fall.\
+"), _("\
+Oasis, when found on a Desert tile, gives 3 more food and 4 more trade.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_11]
 name=_("Peat")
@@ -1151,6 +1231,14 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+Peat is an accumulation of partially decayed vegetation or organic matter.\
+ It is unique to naturally wet areas such as swamps and bogs. It can be burned\
+ and has many other useful purposes.\
+"), _("\
+Peat, when found on a Swamp tile, gives 4 more shields.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_12]
 name=_("Pheasant")
@@ -1163,6 +1251,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+The hunting of Pheasant and other game birds has been a source of food\
+ for many civilizations.\
+"), _("\
+Pheasant, when found on a Forest tile, gives 2 more food.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_13]
 name=_("Resources")
@@ -1175,6 +1270,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+\"Bonus\" Resources is a map-tile game-play feature of Freeciv21. It is not\
+ a naturally occurring resource like the other ones added to the map.\
+"), _("\
+Resources, when found on a Grassland tile, gives 1 more shield.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_14]
 name=_("Ivory")
@@ -1187,6 +1289,14 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+The hunting of animals with tusks such as arctic walrus has been a source of\
+ food, energy, and trade for many civilizations throughout history.\
+"), _("\
+Ivory, when found on a Glacier tile, gives 1 more food, 1 more shield, and 4\
+ more trade.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_15]
 name=_("Silk")
@@ -1199,6 +1309,14 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Spice","Whales","Wine","Oil"
+helptext       = _("\
+The discovery of the silkworm and the ability to create garments and other\
+ important artifacts from the produced silk has been a source of trade for\
+ many civilizations.\
+"), _("\
+Silk, when found on a Forest tile, gives 3 more trade.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_16]
 name=_("Spice")
@@ -1211,6 +1329,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Whales","Wine","Oil"
+helptext       = _("\
+Freeciv21 combines all the varying types of valuable spices used in trade\
+ into a single resource called \"Spice\".\
+"), _("\
+Spice(s), when found on a Swamp tile, gives 1 more food and 4 more trade.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_17]
 name=_("Whales")
@@ -1223,6 +1348,14 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Wine","Oil"
+helptext       = _("\
+The hunting of whales has been an important source of food and energy for\
+ many civilizations. The modern world no longer needs the whale blubber\
+ with the discovery of oil.\
+"), _("\
+Whales, when found on an Ocean tile, gives 1 more food and 1 more shield.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_18]
 name=_("Wine")
@@ -1235,6 +1368,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Oil"
+helptext       = _("\
+The fermentation of grapes into wine has been a source of trade between\
+ nations for thousands of years.\
+"), _("\
+Wine, when found on a Hills tile, gives 4 more trade.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_19]
 name=_("Oil")
@@ -1247,6 +1387,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine"
+helptext       = _("\
+The discovery of oil and the production of fuel and other derivative\
+ petroleum products has revolutionized the modern world.\
+"), _("\
+Oil, when found on a Glacier or Desert tile, gives 2 more shields.\
+ For more information, review the help for the individual tile types.\
+")
 
 [extra_20]
 name=_("Irrigation")
