@@ -1488,7 +1488,7 @@ migration_pml = 50
 
 [calendar]
 ; Year in the beginning of the game
-start_year = -4000
+start_year = 1918
 
 ; Year 1 instead of 0.
 skip_year_0 = TRUE
@@ -1496,14 +1496,35 @@ skip_year_0 = TRUE
 ; How many fragments each year has. In addition to this, "Turn_Fragments" effects are
 ; needed to control fragment accumulation.
 ; Value 0 here disables year advancement by fragment accumulation.
-fragments = 0
+fragments = 24
 
 ; Calendar fragment names. If name is missing, only a fragment number +1 (so human readable
 ; numbers begin from 1 and not 0) is shown.
 
-;fragment_name0 = _("Jan")
-;fragment_name1 = _("Feb")
-; ...
+fragment_name0  = _("Jan 1")
+fragment_name1  = _("Jan 15")
+fragment_name2  = _("Feb 1")
+fragment_name3  = _("Feb 14")
+fragment_name4  = _("Mar 1")
+fragment_name5  = _("Mar 15")
+fragment_name6  = _("Apr 1")
+fragment_name7  = _("Apr 15")
+fragment_name8  = _("May 1")
+fragment_name9  = _("May 15")
+fragment_name10 = _("Jun 1")
+fragment_name11 = _("Jun 15")
+fragment_name12 = _("Jul 1")
+fragment_name13 = _("Jul 15")
+fragment_name14 = _("Aug 1")
+fragment_name15 = _("Aug 15")
+fragment_name16 = _("Sep 1")
+fragment_name17 = _("Sep 15")
+fragment_name18 = _("Oct 1")
+fragment_name19 = _("Oct 15")
+fragment_name20 = _("Nov 1")
+fragment_name21 = _("Nov 15")
+fragment_name22 = _("Dec 1")
+fragment_name23 = _("Dec 15")
 
 ; What labels are used for positive and negative years.
 ; /* TRANS: year label (Common Era) */

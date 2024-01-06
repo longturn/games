@@ -4725,62 +4725,8 @@ type	= "Trade_Revenue_Bonus"
 value	= 1585
 
 [effect_calendar_base]
-type    = "Turn_Years"
-value   = 50
-
-; 50 - 25 = 25
-[effect_calendar_1]
-type    = "Turn_Years"
-value   = -25
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "-1000", "World"
-    }
-
-; 25 - 5 = 20
-[effect_calendar_2]
-type    = "Turn_Years"
-value   = -5
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "0", "World"
-    }
-
-; 20 - 10 = 10
-[effect_calendar_3]
-type    = "Turn_Years"
-value   = -10
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "1000", "World"
-    }
-
-; 10 - 5 = 5
-[effect_calendar_4]
-type    = "Turn_Years"
-value   = -5
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "1500", "World"
-    }
-
-; 5 - 3 = 2
-[effect_calendar_5]
-type    = "Turn_Years"
-value   = -3
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "1750", "World"
-    }
-
-; 2 - 1 = 1
-[effect_calendar_6]
-type    = "Turn_Years"
-value   = -1
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "1900", "World"
-    }
+type    = "Turn_Fragments"
+value   = 1
 
 ; No base pop pollution; buildings will increase it
 [effect_pollu_pop]
