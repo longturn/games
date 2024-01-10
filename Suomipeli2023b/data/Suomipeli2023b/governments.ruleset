@@ -486,8 +486,8 @@ _("\
  will not celebrate.)\n\
 * Each city can support one unit for free; further units each cost\
  2 gold per turn.\n\
-* Each city tolerates a single aggressively deployed military unit;\
- each further unit causes 2 unhappy citizens.\n\
+* Each city almost tolerates a single aggressively deployed military unit;\
+ the first unit results with one unhappy citizen and each further unit causes 2 unhappy citizens.\n\
 * Base corruption is 5%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 25%. This increases with distance from the\
