@@ -1317,8 +1317,8 @@ Each tile around the city with roads and without farmland, that\
 "),
 ; /* xgettext:no-c-format */
 _("\
-Also doubles the effect of any Stock Exchange in the city (increasing\
- luxury and tax output by an additional 50%).\
+Also adds to the effect of any Stock Exchange in the city (increasing\
+ luxury and tax output by an additional 25%).\
 "), _("\
 Super Highways also increase the pollution caused by the population\
  of the city.\
