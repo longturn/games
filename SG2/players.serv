@@ -1,0 +1,43 @@
+set aifill 21
+aitoggle AI*1
+aitoggle AI*2
+aitoggle AI*3
+aitoggle AI*4
+aitoggle AI*5
+aitoggle AI*6
+aitoggle AI*7
+aitoggle AI*8
+aitoggle AI*9
+aitoggle AI*10
+aitoggle AI*11
+aitoggle AI*12
+aitoggle AI*13
+aitoggle AI*14
+aitoggle AI*15
+aitoggle AI*16
+aitoggle AI*17
+aitoggle AI*18
+aitoggle AI*19
+aitoggle AI*20
+aitoggle AI*21
+playernation AI*1  German          1 Sketlux
+playernation AI*2  Estonian        1 Blauwal
+playernation AI*3  Soviet          1 Corbeau
+playernation AI*4  Russian         1 white9blue1
+playernation AI*5  Tunisian        1 Blue
+playernation AI*6  Finnish         1 L1meE
+playernation AI*7  Turkmen         1 Vladimir
+playernation AI*8  Czechoslovakian 1 daavko
+playernation AI*9  Werewolf        1 Paulos
+playernation AI*10 Romanian        1 Meddelney
+playernation AI*11 Latvian         1 Glika_ozoli
+playernation AI*12 British         1 Sirfuzz
+playernation AI*13 American        1 jwrober
+playernation AI*14 Azeri           1 ACY
+playernation AI*15 Curonian        1 Vares
+playernation AI*16 French          1 DatIrishDrank
+playernation AI*17 Siberian        1 panch93
+playernation AI*18 Polish          1 Kocu
+playernation AI*19 Belarusian      1 kamBLR
+playernation AI*20 Lithuanian      1 sophia791
+playernation AI*21 Ukrainian       1 Hans_Lemurson

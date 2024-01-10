@@ -38,6 +38,7 @@ freeze_requirement=0
 lake_max_size=14
 move_fragments=9
 igter_cost=8
+
 ; /* <-- avoid gettext warnings
 ;
 ; The individual terrain types, one per section.
@@ -206,7 +207,7 @@ flags="NoCities","UnsafeCoast","NotGenerated","Frozen","NoPollution"
 color.r=25
 color.g=25
 color.b=25
-helptext="No unit can enter this terrain, nor can any city work its tiles."
+helptext=_("No unit can enter this terrain, nor can any city work its tiles.")
 
 [terrain_1]
 name=_("Lake")
@@ -245,7 +246,7 @@ native_to="Missile","Sea","Trireme","Helicopter","Air"
 color.r=46
 color.g=120
 color.b=182
-helptext="Lakes are substantial bodies of fresh water."
+helptext=_("Lakes are substantial bodies of fresh water.")
 
 [terrain_2]
 name=_("Ocean")
@@ -285,7 +286,7 @@ native_to="Missile","Sea","Trireme","Helicopter","Air"
 color.r=0
 color.g=46
 color.b=137
-helptext="Shallow oceans are mostly found near coastlines, and are often rich sources of food and other resources."
+helptext=_("Shallow oceans are mostly found near coastlines, and are often rich sources of food and other resources.")
 
 [terrain_3]
 name=_("Deep Ocean")
@@ -324,7 +325,8 @@ native_to="Missile","Sea","Helicopter","Air"
 color.r=0
 color.g=33
 color.b=129
-helptext="Deep oceans cover much of the world away from coastlines, and only seaworthy units (not including Triremes) can travel on them."
+helptext=_("Deep oceans cover much of the world away from coastlines,\
+ and only seaworthy units (not including Triremes) can travel on them.")
 
 [terrain_4]
 name=_("Glacier")
@@ -362,7 +364,8 @@ native_to="Missile","Land","Raiders","Small Land","Non Military","Big Land","Mer
 color.r=232
 color.g=232
 color.b=232
-helptext="Glaciers are found only in the most northerly or southerly reaches of the world.  They are very cold, and hence difficult to work with."
+helptext=_("Glaciers are found only in the most northerly or southerly reaches of the world.\
+ They are very cold, and hence difficult to work with.")
 
 [terrain_5]
 name=_("Desert")
@@ -404,7 +407,11 @@ native_to="Missile","Land","Raiders","Small Land","Non Military","Big Land","Mer
 color.r=214
 color.g=185
 color.b=106
-helptext="Deserts are regions of extreme dryness, making agriculture and trade very difficult.","Deserts can be irrigated for a small amount of extra food, but without an oasis or river, bare desert cannot be further improved with farmland.","Rivers bring fertile soil to deserts; on a desert river not already benefiting from an oasis, building irrigation will yield two extra food resources rather than the usual one."
+helptext=_("Deserts are regions of extreme dryness, making agriculture and trade very difficult.\
+ Deserts can be irrigated for a small amount of extra food, but without an oasis or river, bare\
+ desert cannot be further improved with farmland. Rivers bring fertile soil to deserts; on a\
+ desert river not already benefiting from an oasis, building irrigation will yield two extra\
+ food resources rather than the usual one.")
 
 [terrain_6]
 name=_("Forest")
@@ -447,7 +454,7 @@ native_to="Missile","Land","Raiders","Small Land","Non Military","Big Land","Mer
 color.r=43
 color.g=107
 color.b=19
-helptext="Forests are densely wooded, making agriculture somewhat problematic."
+helptext=_("Forests are densely wooded, making agriculture somewhat problematic.")
 
 [terrain_7]
 name=_("Grassland")
@@ -488,7 +495,7 @@ native_to="Missile","Land","Raiders","Small Land","Non Military","Big Land","Mer
 color.r=11
 color.g=138
 color.b=4
-helptext="Grasslands afford exceptional agricultural opportunities."
+helptext=_("Grasslands afford exceptional agricultural opportunities.")
 
 [terrain_8]
 name=_("Hills")
@@ -529,7 +536,9 @@ native_to="Missile","Land","Raiders","Small Land","Non Military","Big Land","Mer
 color.r=24
 color.g=97
 color.b=5
-helptext="In addition to being amenable to agriculture, Hills are frequently rich in resources.","Cities built in hills are at risk of earthquakes, which can interrupt a city's current project."
+helptext=_("In addition to being amenable to agriculture, Hills are frequently\
+ rich in resources. Cities built in hills are at risk of earthquakes, which can\
+ interrupt a city's current project.")
 
 [terrain_9]
 name=_("Jungle")
@@ -572,7 +581,8 @@ native_to="Missile","Land","Raiders","Small Land","Non Military","Merchant","Hel
 color.r=55
 color.g=156
 color.b=38
-helptext="Jungles are densely overgrown, making agriculture somewhat problematic. Big Land units may not move into jungle without a road."
+helptext=_("Jungles are densely overgrown, making agriculture somewhat problematic.\
+ Big Land units may not move into jungle without a road.")
 
 [terrain_10]
 name=_("Mountains")
@@ -611,7 +621,10 @@ native_to="Missile","Land","Raiders","Small Land","Non Military","Merchant","Hel
 color.r=129
 color.g=127
 color.b=118
-helptext="Mountains are regions of extreme altitude, making agriculture and trade very difficult.","Land units that move into mountains can see an extra space, but a fast land unit ending its turn in mountains without a road will start its next turn with one fewer movement point. Big Land units may not move into mountains without a road."
+helptext=_("Mountains are regions of extreme altitude, making agriculture and trade very difficult.\
+ Land units that move into mountains can see an extra space, but a fast land unit ending its turn\
+ in mountains without a road will start its next turn with one fewer movement point. Big Land units\
+ may not move into mountains without a road.")
 
 [terrain_11]
 name=_("Plains")
@@ -653,7 +666,7 @@ native_to="Missile","Land","Raiders","Small Land","Non Military","Big Land","Mer
 color.r=122
 color.g=156
 color.b=46
-helptext="Plains are very broad, sparse regions, which makes trade slightly inconvenient."
+helptext=_("Plains are very broad, sparse regions, which makes trade slightly inconvenient.")
 
 [terrain_12]
 name=_("Swamp")
@@ -695,7 +708,8 @@ native_to="Missile","Land","Raiders","Small Land","Non Military","Merchant","Hel
 color.r=48
 color.g=85
 color.b=97
-helptext="Swamps suffer from an over-abundance of water, making agriculture somewhat problematic. Big Land units may not move in swamps without a road."
+helptext=_("Swamps suffer from an over-abundance of water, making agriculture somewhat problematic.\
+ Big Land units may not move in swamps without a road.")
 
 [terrain_13]
 name=_("Tundra")
@@ -735,7 +749,8 @@ native_to="Missile","Land","Raiders","Small Land","Non Military","Big Land","Mer
 color.r=188
 color.g=188
 color.b=188
-helptext="Tundra are broad, cold regions, fit for some agriculture and little else."
+helptext=_("Tundra are broad, cold regions, fit for some agriculture and little else.")
+
 ; /* <-- avoid gettext warnings
 ;
 ; Resource types:
@@ -868,6 +883,7 @@ identifier="x"
 [extraui]
 ui_name_base_fortress="?gui_type:Build Fort/Fortress/Buoy/Resort"
 ui_name_base_airbase="?gui_type:Build Airstrip/Airbase"
+
 ; /* <-- avoid gettext warnings
 ;
 ; Each extra, including bases, roads, and resource, must have a section here.
@@ -1003,6 +1019,14 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+Gold is a malleable metal that has been the source of wealth for thousands of\
+ years. Due to its ubiquity in nature it has traditionally been used as a hard\
+ currency (coins).\
+"), _("\
+Gold, when found on a Glacier, Hills, or Mountain tile, gives 6 more trade.\
+ For more information, review the help for the individual tile types.\
+")
 
 [extra_1]
 name=_("Iron")
@@ -1015,6 +1039,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+Iron ore can be forged into a variety of metals that can be used to make\
+ machines, armor, and many other useful things.\
+"), _("\
+Iron, when found on a Mountain tile, gives 3 more shields.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_2]
 name=_("?animals:Game")
@@ -1027,6 +1058,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+Wild \"Game\" has been a source of food and tools for hunter-gathers in the\
+ ancient past all the way to modern times.\
+"), _("\
+Game, when found on a Tundra tile, gives 2 more food and 1 more shield.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_3]
 name=_("Furs")
@@ -1039,6 +1077,12 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+The fur trade has been source of food and trade for thousands of years.\
+"), _("\
+Furs, when found on a Tundra tile, gives 1 more food and 3 more trade.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_4]
 name=_("Coal")
@@ -1051,6 +1095,14 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+Coal is a hard black ore that is easily mined. When burned it produces a very\
+ hot fire useful for many purposes. In modern times, burning coal produces the\
+ heat needed for the steam engine or to generate electricity.\
+"), _("\
+Coal, when found on a Hills tile, gives 2 more shields.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_5]
 name=_("Fish")
@@ -1063,6 +1115,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+The fishing industry has been a source of food for all civilizations for all\
+ time.\
+"), _("\
+Fish, when found on an Ocean tile, gives 2 more food.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_6]
 name=_("Fruit")
@@ -1075,6 +1134,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+The picking and cultivation of fruit has been a source of food for hunter-gathers\
+ in the ancient past all the way to modern times.\
+"), _("\
+Fruit, when found on a Jungle tile, gives 3 more food and 1 more trade.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_7]
 name=_("Gems")
@@ -1087,6 +1153,14 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+Freeciv21 combines all valuable stones used in jewelry and other important\
+ artifacts, such as diamonds and rubies, into the word \"gems\". These precious\
+ stones have been used for trade for thousands of years.\
+"), _("\
+Gems, when found on a Jungle tile, gives 4 more trade.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_8]
 name=_("Buffalo")
@@ -1099,6 +1173,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+Buffalo have been a source of food and tools for thousands of years,\
+ especially on the plains of North America.\
+"), _("\
+Buffalo, when found on a Plains tile, gives 2 more shields.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_9]
 name=_("Wheat")
@@ -1111,6 +1192,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+The cultivation and discovery of wheat greatly increased the ability of\
+ civilizations to produce food for ever larger nations.\
+"), _("\
+Wheat, when found on a Plains tile, gives 2 more food.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_10]
 name=_("Oasis")
@@ -1123,6 +1211,14 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+An oasis is an area of a surface fresh water spring in a desert region.\
+ The oasis is an important respite, fresh water, and food source in\
+ regions that have reduced rain fall.\
+"), _("\
+Oasis, when found on a Desert tile, gives 3 more food and 4 more trade.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_11]
 name=_("Peat")
@@ -1135,6 +1231,14 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+Peat is an accumulation of partially decayed vegetation or organic matter.\
+ It is unique to naturally wet areas such as swamps and bogs. It can be burned\
+ and has many other useful purposes.\
+"), _("\
+Peat, when found on a Swamp tile, gives 4 more shields.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_12]
 name=_("Pheasant")
@@ -1147,6 +1251,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Resources","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+The hunting of Pheasant and other game birds has been a source of food\
+ for many civilizations.\
+"), _("\
+Pheasant, when found on a Forest tile, gives 2 more food.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_13]
 name=_("Resources")
@@ -1159,6 +1270,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Ivory","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+\"Bonus\" Resources is a map-tile game-play feature of Freeciv21. It is not\
+ a naturally occurring resource like the other ones added to the map.\
+"), _("\
+Resources, when found on a Grassland tile, gives 1 more shield.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_14]
 name=_("Ivory")
@@ -1171,6 +1289,14 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Silk","Spice","Whales","Wine","Oil"
+helptext       = _("\
+The hunting of animals with tusks such as arctic walrus has been a source of\
+ food, energy, and trade for many civilizations throughout history.\
+"), _("\
+Ivory, when found on a Glacier tile, gives 1 more food, 1 more shield, and 4\
+ more trade.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_15]
 name=_("Silk")
@@ -1183,6 +1309,14 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Spice","Whales","Wine","Oil"
+helptext       = _("\
+The discovery of the silkworm and the ability to create garments and other\
+ important artifacts from the produced silk has been a source of trade for\
+ many civilizations.\
+"), _("\
+Silk, when found on a Forest tile, gives 3 more trade.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_16]
 name=_("Spice")
@@ -1195,6 +1329,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Whales","Wine","Oil"
+helptext       = _("\
+Freeciv21 combines all the varying types of valuable spices used in trade\
+ into a single resource called \"Spice\".\
+"), _("\
+Spice(s), when found on a Swamp tile, gives 1 more food and 4 more trade.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_17]
 name=_("Whales")
@@ -1207,6 +1348,14 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Wine","Oil"
+helptext       = _("\
+The hunting of whales has been an important source of food and energy for\
+ many civilizations. The modern world no longer needs the whale blubber\
+ with the discovery of oil.\
+"), _("\
+Whales, when found on an Ocean tile, gives 1 more food and 1 more shield.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_18]
 name=_("Wine")
@@ -1219,6 +1368,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Oil"
+helptext       = _("\
+The fermentation of grapes into wine has been a source of trade between\
+ nations for thousands of years.\
+"), _("\
+Wine, when found on a Hills tile, gives 4 more trade.\
+ For more information, review the help for the individual tile type.\
+")
 
 [extra_19]
 name=_("Oil")
@@ -1231,6 +1387,13 @@ buildable=FALSE
 build_time=0
 removal_time=0
 conflicts="Gold","Iron","Game","Furs","Coal","Fish","Fruit","Gems","Buffalo","Wheat","Oasis","Peat","Pheasant","Resources","Ivory","Silk","Spice","Whales","Wine"
+helptext       = _("\
+The discovery of oil and the production of fuel and other derivative\
+ petroleum products has revolutionized the modern world.\
+"), _("\
+Oil, when found on a Glacier or Desert tile, gives 2 more shields.\
+ For more information, review the help for the individual tile types.\
+")
 
 [extra_20]
 name=_("Irrigation")
@@ -1245,7 +1408,18 @@ build_time=0
 removal_time=0
 conflicts="Mine","Oil Well"
 hidden_by="Farmland"
-helptext="Building an irrigation system on a suitable tile causes it to produce some extra food each turn. Most tiles yield one extra food; a desert with a river will yield two, if it is not already benefiting from an oasis.","Without knowledge of Electricity, irrigation requires a nearby source of water: an ocean, lake, or river tile, or another tile with an irrigation system, must share an edge (not just a corner) with the target tile. However, once irrigated, land remains so even if the water source is removed. Once Electricity is known, any suitable tile may be irrigated without a water source.","Building irrigation on a tile with a mine or oil well will destroy it.","City center tiles get their terrain's irrigation bonus automatically, if there is no conflicting mine or oil well on the tile; however, this does not make cities count as a water source for further irrigation. Irrigation can be built on the city tile simply to allow building further irrigation elsewhere, but will not give the tile any further bonus."
+helptext=_("Building an irrigation system on a suitable tile causes it to produce some\
+ extra food each turn. Most tiles yield one extra food; a desert with a river will yield\
+ two, if it is not already benefiting from an oasis. Without knowledge of Electricity,\
+ irrigation requires a nearby source of water: an ocean, lake, or river tile, or another\
+ tile with an irrigation system, must share an edge (not just a corner) with the target\
+ tile. However, once irrigated, land remains so even if the water source is removed. Once\
+ Electricity is known, any suitable tile may be irrigated without a water source. Building\
+ irrigation on a tile with a mine or oil well will destroy it. City center tiles get their\
+ terrain's irrigation bonus automatically, if there is no conflicting mine or oil well on\
+ the tile; however, this does not make cities count as a water source for further irrigation.\
+ Irrigation can be built on the city tile simply to allow building further irrigation elsewhere,\
+ but will not give the tile any further bonus.")
 
 [extra_21]
 name=_("Mine")
@@ -1264,7 +1438,10 @@ build_time=0
 removal_time=0
 conflicts="Irrigation","Resort","Farmland"
 hidden_by="Oil Well"
-helptext="Mines can be built on some types of terrain, which increases the \number of production points produced by that tile. Hills and Mountains get an extra 2 production points per tile; other terrains get 1 extra production point.","Building a mine on an irrigated tile will destroy the irrigation."
+helptext=_("Mines can be built on some types of terrain, which increases the\
+ number of production points produced by that tile. Hills and Mountains get\
+ an extra 2 production points per tile; other terrains get 1 extra production\
+ point. Building a mine on an irrigated tile will destroy the irrigation.")
 
 [extra_22]
 name=_("Oil Well")
@@ -1286,7 +1463,8 @@ reqs={"type","name","range","present","quiet"
 build_time=0
 removal_time=0
 conflicts="Irrigation","Farmland"
-helptext="Once Refining is known, mines on Desert and Glacier tiles can be upgraded to oil wells for an extra production point."
+helptext=_("Once Refining is known, mines on Desert and Glacier tiles can be\
+ upgraded to oil wells for an extra production point.")
 
 [extra_23]
 name=_("Oil Platform")
@@ -1306,7 +1484,9 @@ reqs={"type","name","range"
 build_time=0
 removal_time=0
 conflicts="Buoy"
-helptext="Oil platforms allow cities with Offshore Platforms to get an extra production point from Deep Ocean tiles.","Oil platforms can be built by Workers and similar units on board ships, or directly by Transport units."
+helptext=_("Oil platforms allow cities with Offshore Platforms to get an extra\
+ production point from Deep Ocean tiles. Oil platforms can be built by Workers\
+ and similar units on board ships, or directly by Transport units.")
 
 [extra_24]
 name=_("Resort")
@@ -1326,7 +1506,9 @@ reqs={"type","name","range","present"
 build_time=9
 removal_time=0
 conflicts="Mine","Farmland"
-helptext="Resort can be built on hills and mountains.It can coexist with irrigation, but not with farmland. ","The city population uses it for rest and recreation resulting in additional Trade produced in the city."
+helptext=_("Resort can be built on hills and mountains. It can coexist with\
+ irrigation, but not with farmland. The city population uses it for rest and\
+ recreation resulting in additional Trade produced in the city.")
 
 [extra_25]
 name=_("Pollution")
@@ -1343,7 +1525,29 @@ buildable=FALSE
 build_time=0
 removal_time=0
 flags="GlobalWarming"
-helptext="Pollution appears on tiles around cities with high production or population, or when a Mfg. Plant suffers an industrial accident. It halves all output from its tile, and contributes to the risk of global warming.","The pollution can only be cleared by dispatching Workers, Migrants, Settlers, Engineers, or a Transport with the \"clean pollution\" order.","Pollution from production is likely to start becoming important as your civilization becomes more industrialized, giving you buildings such as Factory and Power Plant which boost production. Replacing a Power Plant with cleaner forms of energy -- a Hydro Plant / Hoover Dam, Nuclear Plant, or Solar Plant -- will reduce pollution from production, as will a Recycling Center.","The city's population starts adding to pollution with the Factory, Super Highways, Offshore Platform, and Mfg. Plant buildings; each building causes the population to add more to pollution. A Mass Transit will counteract the pollution from two buildings in a city, and the Eiffel Tower wonder will counteract the pollution from one building in all the owner's cities.","The contribution of these factors can be seen in the city dialog; once it exceeds a threshold, the excess is the percent chance of pollution appearing each turn.","When an unused tile becomes polluted, there is the temptation to avoid the effort of cleaning it; but the spread of pollution has far more terrible results than the immediate economic impact -- every polluted tile increases the chance of global warming. Each time global warming advances, the entire world loses coastal land to the sea and to jungles and swamps, and inland tiles are lost to desert. This tends to devastate cities and leads to global impoverishment.","The risk of global warming is cumulative; the longer polluted tiles are left uncleaned, the higher the risk becomes, and the risk can linger for some time even after all pollution has been cleaned. If a long time passes with an elevated risk of warming, its effects will be all the more severe when it does occur."
+helptext=_("Pollution appears on tiles around cities with high production or population,\
+ or when a Mfg. Plant suffers an industrial accident. It halves all output from its tile,\
+ and contributes to the risk of global warming. The pollution can only be cleared by\
+ dispatching Workers, Migrants, Settlers, Engineers, or a Transport with the \"clean pollution\"\
+ order. Pollution from production is likely to start becoming important as your civilization\
+ becomes more industrialized, giving you buildings such as Factory and Power Plant which\
+ boost production. Replacing a Power Plant with cleaner forms of energy --\
+ a Hydro Plant / Hoover Dam, Nuclear Plant, or Solar Plant -- will reduce pollution from\
+ production, as will a Recycling Center. The city's population starts adding to pollution\
+ with the Factory, Super Highways, Offshore Platform, and Mfg. Plant buildings; each building\
+ causes the population to add more to pollution. A Mass Transit will counteract the pollution\
+ from two buildings in a city, and the Eiffel Tower wonder will counteract the pollution from\
+ one building in all the owner's cities. The contribution of these factors can be seen in the\
+ city dialog; once it exceeds a threshold, the excess is the percent chance of pollution appearing\
+ each turn. When an unused tile becomes polluted, there is the temptation to avoid the effort of\
+ cleaning it; but the spread of pollution has far more terrible results than the immediate economic\
+ impact -- every polluted tile increases the chance of global warming. Each time global warming\
+ advances, the entire world loses coastal land to the sea and to jungles and swamps, and inland\
+ tiles are lost to desert. This tends to devastate cities and leads to global impoverishment. The\
+ risk of global warming is cumulative; the longer polluted tiles are left uncleaned, the higher\
+ the risk becomes, and the risk can linger for some time even after all pollution has been\
+ cleaned. If a long time passes with an elevated risk of warming, its effects will be all the\
+ more severe when it does occur.")
 
 [extra_26]
 name=_("Minor Tribe Village")
@@ -1359,7 +1563,14 @@ reqs={"type","name","range"
 buildable=FALSE
 build_time=0
 removal_time=0
-helptext="Villages (also called \"huts\") are primitive communities spread across the world at the beginning of the game. Any land unit can enter a village, making the village disappear and deliver a random response. If the village proves hostile, it could produce barbarians or the unit entering may simply be destroyed. If they are friendly, the player could receive gold, a new technology, a military unit (occasionally a settler; and sometimes a unit that the player cannot yet create), or even a new city.","Later in the game, helicopters may also enter villages, but overflight by other aircraft will cause the villagers to take fright and disband."
+helptext=_("Villages (also called \"huts\") are primitive communities spread across\
+ the world at the beginning of the game. Any land unit can enter a village, making\
+ the village disappear and deliver a random response. If the village proves hostile,\
+ it could produce barbarians or the unit entering may simply be destroyed. If they\
+ are friendly, the player could receive gold, a new technology, a military unit\
+ (occasionally a settler; and sometimes a unit that the player cannot yet create),\
+ or even a new city. Later in the game, helicopters may also enter villages, but\
+ overflight by other aircraft will cause the villagers to take fright and disband.")
 
 [extra_27]
 name=_("Farmland")
@@ -1378,7 +1589,11 @@ reqs={"type","name","range"
 build_time=0
 removal_time=0
 conflicts="Mine","Oil Well","Resort"
-helptext="Once Refrigeration is known, irrigation systems can be upgraded to farmland by irrigating them a second time; if the city working the tile has a Supermarket, a farmland tile provides 50% more food. (Hence, farmland is only useful on tiles which with irrigation yield 2 or more food.)","Farmland on a tile prevents any trade bonus from Super Highways.","Like irrigation, farmland is incompatible with mines and oil wells."
+helptext=_("Once Refrigeration is known, irrigation systems can be upgraded to farmland\
+ by irrigating them a second time; if the city working the tile has a Supermarket, a\
+ farmland tile provides 50% more food. (Hence, farmland is only useful on tiles which\
+ with irrigation yield 2 or more food.) Farmland on a tile prevents any trade bonus from\
+ Super Highways. Like irrigation, farmland is incompatible with mines and oil wells.")
 
 [extra_28]
 name=_("Fallout")
@@ -1395,7 +1610,12 @@ buildable=FALSE
 build_time=0
 removal_time=0
 flags="NuclearWinter"
-helptext="Nuclear fallout can appear on tiles when a Nuclear unit is detonated, or when a city's Nuclear Plant has an accident. It halves all output from its tile.","Every tile with nuclear fallout also increases the risk of global \nuclear winter. If nuclear winter occurs, land across the globe changes into desert, tundra, and ice, and lakes and oceans freeze.","Settlers, Workers, Migrants, Engineers, and Transport units can all clean up nuclear fallout."
+helptext=_("Nuclear fallout can appear on tiles when a Nuclear unit is detonated,\
+ or when a city's Nuclear Plant has an accident. It halves all output from its tile.\
+ Every tile with nuclear fallout also increases the risk of global \nuclear winter.\
+ If nuclear winter occurs, land across the globe changes into desert, tundra, and ice,\
+ and lakes and oceans freeze. Settlers, Workers, Migrants, Engineers, and Transport\
+ units can all clean up nuclear fallout.")
 
 [extra_29]
 name=_("Fort")
@@ -1420,7 +1640,8 @@ native_to="Land","Raiders","Small Land","Non Military","Big Land","Merchant", "T
 flags="NativeTile"
 conflicts="Airstrip","Airbase","Missile Silo"
 hidden_by="Fortress"
-helptext="Forts are rapidly-built fortifications providing some defense (+50%) against land units and boats. A fort is also necessary to start building a fortress."
+helptext=_("Forts are rapidly-built fortifications providing some defense (+50%) against\
+ land units and boats. A fort is also necessary to start building a fortress.")
 
 [extra_30]
 name=_("Fortress")
@@ -1443,7 +1664,13 @@ removal_time=0
 native_to="Land","Raiders","Small Land","Non Military","Big Land","Merchant", "Tribe"
 flags="NativeTile","NoStackDeath"
 conflicts="Airstrip","Airbase","Missile Silo"
-helptext="Fortresses are more permanent forts; construction on them can only begin once the underlying fort is complete. Forts on River tiles cannot be upgraded to Fortresses.","Compared to a fort, units in a fortress receive extra defense (+50%) against all units (in total, their defense against land units and boats is doubled), and do not count as aggressive if near a friendly city. Any kind of land unit remaining in a fortress for a whole turn without moving recovers a quarter of its hit points.","With Astronomy, fortresses gain watchtowers from which units can see further afield."
+helptext=_("Fortresses are more permanent forts; construction on them can only begin once\
+ the underlying fort is complete. Forts on River tiles cannot be upgraded to Fortresses.\
+ Compared to a fort, units in a fortress receive extra defense (+50%) against all units\
+ (in total, their defense against land units and boats is doubled), and do not count as\
+ aggressive if near a friendly city. Any kind of land unit remaining in a fortress for a\
+ whole turn without moving recovers a quarter of its hit points. With Astronomy, fortresses\
+ gain watchtowers from which units can see further afield.")
 
 [extra_31]
 name=_("Airstrip")
@@ -1467,7 +1694,12 @@ native_to="Missile","Helicopter","Air"
 flags="Refuel"
 conflicts="Fort","Fortress"
 hidden_by="Airbase"
-helptext="Airstrips are rapidly-built runways allowing air units to land, refuel, and recover outside cities; an aircraft remaining on an airstrip for a whole turn without moving recovers a tenth of its hit points (that is, the same amount it loses each turn while airborne). However, air units on an airstrip are vulnerable to attack by land units.","Any units on an airstrip receive extra defense (+50%) against enemy aircraft.","An airstrip is necessary to start building an airbase."
+helptext=_("Airstrips are rapidly-built runways allowing air units to land, refuel, and recover\
+ outside cities; an aircraft remaining on an airstrip for a whole turn without moving recovers\
+ a tenth of its hit points (that is, the same amount it loses each turn while airborne).\
+ However, air units on an airstrip are vulnerable to attack by land units. Any units on an\
+ airstrip receive extra defense (+50%) against enemy aircraft. An airstrip is necessary to\
+ start building an airbase.")
 
 [extra_32]
 name=_("Airbase")
@@ -1490,7 +1722,13 @@ removal_time=0
 native_to="Missile","Helicopter","Air"
 flags="Refuel"
 conflicts="Fort","Fortress"
-helptext="Airbases are more permanent airstrips; construction on them can only begin once the underlying airstrip is complete. Airstrips on River tiles cannot be upgraded to Airbases.","Compared to an airstrip, units in an airbase receive extra defense (+50%) against all units (in total, their defense against air units and missiles is doubled), do not count as aggressive if near a friendly city, and can see further afield. Also, air units recover more hit points (a third per turn, the same as in a city without an Airport)."
+helptext=_("Airbases are more permanent airstrips; construction on them can only begin\
+ once the underlying airstrip is complete. Airstrips on River tiles cannot be upgraded\
+ to Airbases. Compared to an airstrip, units in an airbase receive extra defense (+50%)\
+ against all units (in total, their defense against air units and missiles is doubled),\
+ do not count as aggressive if near a friendly city, and can see further afield. Also,\
+ air units recover more hit points (a third per turn, the same as in a city without an\
+ Airport).")
 
 [extra_33]
 name=_("Missile Silo")
@@ -1534,7 +1772,8 @@ build_time=3
 removal_time=0
 flags="ShowFlag"
 conflicts="Oil Platform"
-helptext="Buoys may be built in the ocean (by units on a sea-going vessel) to allow their owner to see the surrounding tiles."
+helptext=_("Buoys may be built in the ocean (by units on a sea-going vessel) to allow\
+ their owner to see the surrounding tiles.")
 
 [extra_35]
 name=_("Ruins")
@@ -1552,7 +1791,8 @@ buildable=FALSE
 build_time=0
 removal_time=0
 flags="TerrChangeRemoves"
-helptext="Ruins mark the former site of a city that was destroyed or abandoned. They have no effect on gameplay."
+helptext=_("Ruins mark the former site of a city that was destroyed or abandoned.\
+ They have no effect on gameplay.")
 
 [extra_36]
 name=_("Road")
@@ -1573,7 +1813,11 @@ native_to="Land","Raiders","Small Land","Non Military","Big Land","Merchant", "T
 flags="NativeTile","AlwaysOnCityCenter"
 bridged_over   = "River"
 hidden_by="Railroad","Maglev"
-helptext="Roads allow your land units to move more quickly, and allow wheeled Big Land units such as Chariots and Catapults to travel through otherwise difficult terrain (Mountains, Jungle, and Swamp).","On some terrains, roads also provide a trade bonus.","Building roads on river tiles requires knowledge of Bridge Building. City center tiles automatically get roads (even on a river tile)."
+helptext=_("Roads allow your land units to move more quickly, and allow wheeled Big Land\
+ units such as Chariots and Catapults to travel through otherwise difficult terrain (Mountains,\
+ Jungle, and Swamp). On some terrains, roads also provide a trade bonus. Building roads on\
+ river tiles requires knowledge of Bridge Building. City center tiles automatically get\
+ roads (even on a river tile).")
 
 [extra_37]
 name=_("Railroad")
@@ -1597,7 +1841,11 @@ native_to="Land","Raiders","Small Land","Non Military","Big Land","Merchant", "T
 flags="NativeTile","AutoOnCityCenter"
 bridged_over   = "River"
 hidden_by="Maglev"
-helptext="Once you learn the Railroad technology, you may upgrade your roads to railroads. Units travel considerably faster along railroads than along roads.","A railroad also increases any shield resources produced by a tile. A tile whose road is upgraded to a railroad retains any trade bonus from the road as well.","City center tiles with roads are automatically upgraded to railroads when you learn the Railroad technology."
+helptext=_("Once you learn the Railroad technology, you may upgrade your roads to railroads.\
+ Units travel considerably faster along railroads than along roads. A railroad also increases\
+ any shield resources produced by a tile. A tile whose road is upgraded to a railroad retains\
+ any trade bonus from the road as well. City center tiles with roads are automatically upgraded\
+ to railroads when you learn the Railroad technology.")
 
 [extra_38]
 name=_("Maglev")
@@ -1621,7 +1869,13 @@ removal_time=0
 native_to="Land","Raiders","Small Land","Non Military","Merchant", "Tribe"
 flags="NativeTile","AutoOnCityCenter"
 bridged_over   = "River"
-helptext="With sufficient technology, you may build magnetic levitation systems along your railroad routes. Land and Small Land units expend no movement points when riding a maglev; you may ride indefinitely. (As may your enemies!)","Your regular railroads are still used to carry heavy Big Land and Merchant units for which the maglev system is unsuitable, and they continue to provide production and trade bonuses.","City center tiles with railroads are automatically upgraded to maglev when you learn about Superconductors."
+helptext=_("With sufficient technology, you may build magnetic levitation systems\
+ along your railroad routes. Land and Small Land units expend no movement points when\
+ riding a maglev; you may ride indefinitely. (As may your enemies!) Your regular\
+ railroads are still used to carry heavy Big Land and Merchant units for which the maglev\
+ system is unsuitable, and they continue to provide production and trade bonuses.\
+ City center tiles with railroads are automatically upgraded to maglev when you learn\
+ about Superconductors.")
 
 [extra_39]
 name=_("River")
@@ -1636,7 +1890,14 @@ removal_time=0
 defense_bonus=25
 native_to="Land","Raiders","Small Land","Non Military","Big Land","Merchant","Trireme", "Tribe"
 flags="NativeTile"
-helptext="Any land terrain type may have a River on it. A River adds 1 trade to the resources produced by that tile. It also increases a tile's defense factor by 25%.","Land units may move along rivers for faster travel (but not diagonally). Triremes may also travel up rivers (although later boats cannot).","Roads and railroads can only be built on River tiles if your civilization has learned Bridge Building technology. Fortresses and Airbases cannot be built on River tiles.","Cities built on or next to rivers incur a small risk of flooding, which will destroy stored food."
+helptext=_("Any land terrain type may have a River on it. A River adds 1 trade to the\
+ resources produced by that tile. It also increases a tile's defense factor by 25%.\
+ Land units may move along rivers for faster travel (but not diagonally). Triremes\
+ may also travel up rivers (although later boats cannot). Roads and railroads can only\
+ be built on River tiles if your civilization has learned Bridge Building technology.\
+ Fortresses and Airbases cannot be built on River tiles. Cities built on or next to\
+ rivers incur a small risk of flooding, which will destroy stored food.")
+
 ; /* <-- avoid gettext warnings
 ;
 ; Base types:
@@ -1700,6 +1961,7 @@ vision_main_sq=5
 [base_7]
 extra="Ruins"
 gui_type="Other"
+
 ; /* <-- avoid gettext warnings
 ;
 ; Road types:
