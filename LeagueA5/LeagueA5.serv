@@ -1,13 +1,13 @@
 rulesetdir LeagueA5
 
 # test and actual game defined here
-#set timeout 82800  # real game
-#set unitwaittime 36000  # real game
-set timeout 120 # test game
-set unitwaittime 0  # test game
-set revealmap START  #uncomment this for revealing the map for test games
-#set fogofwar "ENABLED"		# actual game
-set fogofwar "DISABLED"		# test game
+set timeout 82800  # real game
+set unitwaittime 36000  # real game
+#set timeout 120 # test game
+#set unitwaittime 0  # test game
+#set revealmap START  #uncomment this for revealing the map for test games
+set fogofwar "ENABLED"		# actual game
+#set fogofwar "DISABLED"		# test game
 
 
 # map
@@ -50,7 +50,7 @@ set revolen 2
 set revolentype   FIXED
 set spaceship_travel_time "100"
 set startunits cccccwwwwwwxx
-set techleak "100"
+set techleak "30"
 set techlevel "0"
 set trading_tech disabled
 set airliftingstyle "FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
