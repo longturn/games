@@ -1,4 +1,4 @@
-set aifill 8
+set aifill 9
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
@@ -7,6 +7,7 @@ aitoggle AI*5
 aitoggle AI*6
 aitoggle AI*7
 aitoggle AI*8
+aitoggle AI*9
 playernation AI*1 Cornish 1 el_perdedor
 playernation AI*2 Atlantean 1 xtzu
 playernation AI*3 Abkhazt 1 Vladimir
@@ -15,3 +16,4 @@ playernation AI*5 Sikh 1 Kroko24
 playernation AI*6 Chola 1 you
 playernation AI*7 Métis 1 mikezy66
 playernation AI*8 Ukrainian 1 L1meE
+playernation AI*8 Celtic 1 petromax
