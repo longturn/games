@@ -15,13 +15,15 @@ set temperature 60
 set tilesperplayer 280
 set topology "WRAPX|WRAPY|ISO"
 set wetness 50
-set alltemperate disabled
+set alltemperate enabled
+#set alltemperate disabled
 set tinyisles disabled
 
 set gameseed "0"
 set animals "0"
 set mapseed 0
-set separatepoles "ENABLED"
+#set separatepoles "ENABLED"
+set separatepoles "DISABLED"
 set shieldbox "100"
 set foodbox "100"
 set singlepole "DISABLED"
