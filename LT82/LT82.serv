@@ -10,7 +10,7 @@ set huts 0
 set landmass 70
 set separatepoles enabled
 set specials 200
-set steepness 30
+set steepness 60
 set temperature 60
 set tilesperplayer 300
 set topology "WRAPX|WRAPY|ISO"
