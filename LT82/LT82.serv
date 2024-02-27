@@ -2,21 +2,23 @@ rulesetdir LT82
 
 # map
 set mapsize "PLAYER"
-set gameseed "0"
-set generator "FRACTAL"
-#set generator "FRACTURE"
+set generator "FRACTURE"
 set barbarians disabled
-set startpos "VARIABLE" # ALL
+set startpos "VARIABLE"
+set teamplacement CONTINENT
 set huts 0
-set landmass 60
-set specials 300
+set landmass 50
+set separatepoles enabled
+set specials 200
 set steepness 30
-set temperature 70
+set temperature 60
 set tilesperplayer 280
 set topology "WRAPX|WRAPY|ISO"
-set wetness 30
-set alltemperate enabled
+set wetness 50
+set alltemperate disabled
 set tinyisles disabled
+
+set gameseed "0"
 set animals "0"
 set mapseed 0
 set separatepoles "ENABLED"
