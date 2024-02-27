@@ -12,7 +12,7 @@ set separatepoles enabled
 set specials 200
 set steepness 30
 set temperature 60
-set tilesperplayer 280
+set tilesperplayer 300
 set topology "WRAPX|WRAPY|ISO"
 set wetness 50
 set alltemperate enabled
