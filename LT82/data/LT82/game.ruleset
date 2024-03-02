@@ -1835,12 +1835,12 @@ colorlist =
 [teams]
 ; freeciv optional team names definition.
 ;
-; names =
-; _("Team 1"),
-; _("Team 2"),
-; _("Team 3"),
-; _("Team 4"),
-; etc...
+names =
+ _("MrBrown"),
+ _("MrBlue"),
+ _("MrPink"),
+ _("MrOrange"),
+ _("MrBlonde")
 
 [settings]
 ; freeciv game settings for LTT ruleset

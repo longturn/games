@@ -1,4 +1,4 @@
-set aifill 34
+set aifill 21
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
@@ -20,51 +20,45 @@ aitoggle AI*18
 aitoggle AI*19
 aitoggle AI*20
 aitoggle AI*21
-aitoggle AI*22
-aitoggle AI*23
-aitoggle AI*24
-aitoggle AI*25
-aitoggle AI*26
-aitoggle AI*27
-aitoggle AI*28
-aitoggle AI*29
-aitoggle AI*30
-aitoggle AI*31
-aitoggle AI*32
-aitoggle AI*33
-aitoggle AI*34
-playernation AI*1 "East German" 1 wieder
-playernation AI*2 Illyrian 1 Kroko24
-playernation AI*3 Crusader 1 kamBLR
-playernation AI*4 Catalan 1 fizu
-playernation AI*5 Scottish 1 jwrober
+playernation AI*1 Crusader 1 kamBLR
+playernation AI*2 Cherokee 1 zrcalo
+playernation AI*3 Ohlone 1 stacycats
+playernation AI*4 Czechoslovakian 1 sid
+playernation AI*5 Ainu 1 mu
 playernation AI*6 Ukrainian 1 L1meE
-playernation AI*7 Texan 1 axe
-playernation AI*8 Cornish 1 el_perdedor
-playernation AI*9 Soviet 1 TalkyRaptor9457
-playernation AI*10 "New Zealand" 1 zoe
-playernation AI*11 Seleucid 1 you
-playernation AI*12 Czech 1 daavko
-playernation AI*13 Austrian 1 msw
-playernation AI*14 Japanese 1 higher_worm
-playernation AI*15 Hessian 1 blabber
-playernation AI*16 "Knights Templar" 1 Vladimir
-playernation AI*17 Ohlone 1 stacycats
-playernation AI*18 Greek 1 mikezy66
-playernation AI*19 German 1 Jueeelian
-playernation AI*20 Californian 1 mmm2
-playernation AI*21 Slavic 1 alewezzamknijryj
-playernation AI*22 Apache 1 bbb
-playernation AI*23 Roman 1 Ray2404
-playernation AI*24 Babylonian 1 Rorr404
-playernation AI*25 Frankish 1 louis94
-playernation AI*26 Cherokee 1 zrcalo
-playernation AI*27 Byzantine 1 Umeetiusbaarus
-playernation AI*28 American 1 Dim
-playernation AI*29 Etruscan 1 panch93
-playernation AI*30 Ainu 1 mu
-playernation AI*31 Korean 1 Blue
-playernation AI*32 "North Korean" 1 Ewoxzu
-playernation AI*33 Libyan 1 Hasp
-playernation AI*34 Aleut 1 Haldric
-
+playernation AI*7 German 1 Jueeelian
+playernation AI*8 Byzantine 1 Umeetiusbaarus
+playernation AI*9 "North Korean" 1 Ewoxzu
+playernation AI*10 Frankish 1 louis94
+playernation AI*11 "New Zealand" 1 zoe
+playernation AI*12 Hessian 1 blabber
+playernation AI*13 Babylonian 1 Rorr404
+playernation AI*14 Seleucid 1 you
+playernation AI*15 Czech 1 daavko
+playernation AI*16 Greek 1 mikezy66
+playernation AI*17 Antarctican 1 dePol
+playernation AI*18 Illyrian 1 Kroko24
+playernation AI*19 Catalan 1 fizu
+playernation AI*20 "Knights Templar" 1 Vladimir
+playernation AI*21 Cornish 1 el_perdedor
+team kamBLR           "MrBrown"
+team zrcalo           "MrBrown"
+team stacycats        "MrBrown"
+team sid              "MrBrown"
+team mu               "MrPink"
+team L1meE            "MrPink"
+team Jueeelian        "MrPink"
+team Umeetiusbaarus   "MrPink"
+team Ewoxzu           "MrPink"
+team louis94          "MrOrange"
+team zoe              "MrOrange"
+team blabber          "MrOrange"
+team Rorr404          "MrOrange"
+team you              "MrBlonde"
+team daavko           "MrBlonde"
+team mikezy66         "MrBlonde"
+team dePol            "MrBlonde"
+team Kroko24          "MrBlue"
+team fizu             "MrBlue"
+team Vladimir         "MrBlue"
+team el_perdedor      "MrBlue"
