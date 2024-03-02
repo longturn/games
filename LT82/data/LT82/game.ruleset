@@ -655,33 +655,6 @@ actor_reqs    =
       "DiplRel", "Foreign", "Local"
     }
 
-[actionenabler_steal_tech_random_scribe]
-action = "Steal Tech"
-actor_reqs    =
-    { "type",   "name", "range"
-      "UnitType", "Scribe", "Local"
-      "UnitState", "OnLivableTile", "Local"
-      "MinMoveFrags", "1", "Local"
-      "DiplRel",      "Foreign",       "Local", TRUE
-    }
-target_reqs  =
-    { "type",   "name", "range", "present"
-      "NationGroup", "Barbarian", "Player", FALSE
-    }
-
-[actionenabler_steal_tech_random]
-action = "Steal Tech"
-actor_reqs    =
-    { "type",   "name", "range"
-      "UnitType", "Scholar", "Local"
-      "UnitState", "OnLivableTile", "Local"
-      "MinMoveFrags", "1", "Local"
-      "DiplRel",      "Foreign",       "Local", TRUE
-    }
-target_reqs  =
-    { "type",   "name", "range", "present"
-      "NationGroup", "Barbarian", "Player", FALSE
-    }
 
 [actionenabler_poison_city]
 action = "Poison City Escape"
