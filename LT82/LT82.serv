@@ -73,7 +73,7 @@ set diplchance 60
 set diplgoldcost 40
 set diplbulbcost 20
 set diplomacy "TEAM"
-set sciencebox 80
+set sciencebox 60
 set techlost_donor 0
 set techlost_recv 0
 set techpenalty 10
