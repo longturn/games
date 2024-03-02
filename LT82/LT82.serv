@@ -28,9 +28,9 @@ set shieldbox "100"
 set foodbox "100"
 set singlepole "DISABLED"
 set startcity "DISABLED"
-set revealmap START #uncomment this for revealing the map for test games
-set fogofwar "DISABLED"	# test
-#set fogofwar "ENABLED"   # real
+#set revealmap START #uncomment this for revealing the map for test games
+#set fogofwar "DISABLED"	# test
+set fogofwar "ENABLED"   # real
 
 # general rules
 set nationset all
