@@ -37,7 +37,7 @@ set nationset all
 set citymindist 4
 set contactturns 1
 set disasters "10"
-set dispersion "6"
+set dispersion "4"
 set foggedborders enabled
 set rapturedelay 3
 set restrictinfra enabled
@@ -112,8 +112,8 @@ set ec_max_size 5000
 set ec_turns 9
 set maxplayers 126
 set saveturns 1
-set timeout 120 	#	test
-set unitwaittime 0 # test
+#set timeout 120 	#	test
+#set unitwaittime 0 # test
 set timeout 82800	# real
 set unitwaittime 36000 # real
 set fixedlength enabled
