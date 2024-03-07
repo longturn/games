@@ -5,17 +5,18 @@ rulesetdir LT83
 
 # map
 set mapsize "PLAYER"
-set generator "FRACTAL"
+set generator "FRACTURE"
 set barbarians disabled
 set startpos "VARIABLE"
+set teamplacement CONTINENT
 set huts 0
 set landmass 40
 set separatepoles disabled
 set specials 300
 set steepness 30
-set temperature 70
+set temperature 60
 set tilesperplayer 500
-set topology "WRAPX|WRAPY|ISO"
+set topology "WRAPX|WRAPY|ISO|HEX"
 set wetness 40
 set alltemperate disabled
 set tinyisles disabled
