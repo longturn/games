@@ -947,7 +947,7 @@ entirely).\
 "), _("\
 The city where this palace is located cannot be incited to revolt, \
 and enjoys a bonus when enemy agents try to evade your own agents \
-stationed in the city, or sabotage your buildings.\
+stationed in the city, or sabotage your buildings. Losing the 2nd palace will destroy your space ship if it's on the way. \
 "),
 ; /* xgettext:no-c-format */
 _("\
