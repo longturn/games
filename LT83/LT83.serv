@@ -88,5 +88,6 @@ set fixedlength enabled
 metamessage "Longturn Experimental Extra for multiplayer games | More info: https://longturn.net"
 metapatches longturn
 
+read players.serv
 
 start
