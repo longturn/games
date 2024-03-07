@@ -52,6 +52,8 @@ set diplbulbcost 20
 set incite_gold_loss_chance 20
 set incite_gold_capt_chance 20
 
+set spaceship_travel_time "200"
+set techleak "200"
 set diplomacy HUMAN
 set sciencebox 100
 set techlost_donor 0
