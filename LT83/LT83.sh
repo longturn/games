@@ -1,0 +1,8 @@
+#!/bin/sh
+
+GAMEID=LT83
+GAMENAME=LT83
+GAMEDIR=$HOME/server/LT83
+PORT=5083
+
+. ../rc.subr.fc21

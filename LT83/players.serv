@@ -1,0 +1,32 @@
+set aifill 15
+aitoggle AI*1
+aitoggle AI*2
+aitoggle AI*3
+aitoggle AI*4
+aitoggle AI*5
+aitoggle AI*6
+aitoggle AI*7
+aitoggle AI*8
+aitoggle AI*9
+aitoggle AI*10
+aitoggle AI*11
+aitoggle AI*12
+aitoggle AI*13
+aitoggle AI*14
+aitoggle AI*15
+playernation AI*1 Cornish 1 el_perdedor
+playernation AI*2 Ohlone 1 stacycats
+playernation AI*3 Transnistrian 1 Vladimir
+playernation AI*4 Californian 1 kamBLR
+playernation AI*5 Acadian 1 ptizoom
+playernation AI*6 Ukrainian 1 Dim
+playernation AI*7 Burgundian 1 laamanni
+playernation AI*8 Icelandic 1 Blauwal
+playernation AI*9 German 1 Hasp
+playernation AI*10 Czechoslovakian 1 sid
+playernation AI*11 Celtiberian 1 TriClad
+playernation AI*12 Texan 1 Umeetiusbaarus
+playernation AI*13 Scottish 1 Nyala
+playernation AI*14 Aragonese 1 havoc
+playernation AI*15 Mexican 1 Salazarum1
+
