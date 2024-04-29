@@ -1,0 +1,158 @@
+# Server commands to make Royale Freeciv21 rules based on Civ2Civ3 ruleset
+#
+
+rulesetdir LT84
+
+# test game / real game settings
+
+# Uncomment the following for test games
+set revealmap START                        # test game
+set timeout 120                            # test game
+set unitwaittime 0                         # test game
+set fogofwar "DISABLED"	               # test game
+
+# Set these for real games, add comment for test games
+#set timeout 82800                           # real game
+#set unitwaittime 36000                      # real game
+#set fogofwar "ENABLED"		                # real game
+
+
+# map
+set aifill 0                                # Fill with 0 AI players. Standard LT games have no AI players, only human.
+set alltemperate disabled
+set barbarians disabled
+set generator "FRACTAL"
+set huts 0
+set landmass 40
+set mapsize "PLAYER"
+set separatepoles enabled
+set specials 350
+set startpos "ALL"
+set steepness 30
+set temperature 60
+set tilesperplayer 550
+set tinyisles disabled
+set topology "WRAPX|WRAPY|ISO"
+set wetness 60
+
+# general rules
+set airliftingstyle "FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
+set aqueductloss 0
+set autoattack disabled
+set caravan_bonus_style "CLASSIC"
+set citymindist 4
+set contactturns 1
+set disasters 10
+set dispersion 6
+set endspaceship enabled
+set endturn 5000
+set flatpoles 0
+set foggedborders enabled
+set globalwarming enabled
+set globalwarming_percent 40
+set happyborders "NATIONAL"
+set killcitizen enabled
+set killstack enabled
+set killunhomed 0
+set nationset all
+set nuclearwinter enabled
+set nuclearwinter_percent 100
+set occupychance 0
+set rapturedelay 3
+set razechance 10
+set restrictinfra enabled
+set revolen 2
+set revolentype FIXED
+set savepalace enabled
+set spaceship_travel_time 150
+set startunits cccccwwwwwwxx
+set techleak 100
+set trade_revenue_style "CLASSIC"
+set unreachableprotects disabled
+
+# diplomacy, technology
+set civilwarsize 10
+set conquercost 95                          # for getting techs with tech stealing/trading units
+set demography NnciwASLaMklOCqrbszPE
+set diplbulbcost 20
+set diplbulbcost 95
+set diplchance 40
+set diplgoldcost 40
+set diplgoldcost 95
+set diplomacy HUMAN
+set freecost 0                              # for getting techs from philosphy etc
+set fulltradesize 1
+set gold 50
+set incite_gold_capt_chance 0
+set incite_gold_loss_chance 0
+set persistentready disabled
+set sciencebox 100
+set team_pooled_research disabled
+set teamplacement "CLOSEST"
+set techlevel 0
+set techlossforgiveness -1
+set techlossrestore 50
+set techlost_donor 0
+set techlost_recv 0
+set techpenalty 10
+set trademindist 999
+set tradeworldrelpct 50
+set trading_city disabled
+set trading_gold enabled
+set trading_tech disabled
+set victories "SPACERACE|ALLIED"
+# technical
+
+set allowtake ""
+cmdlevel info
+set allowtake ""
+set compresstype XZ
+set ec_chat enabled
+set ec_info enabled
+set ec_max_size 5000
+set ec_turns 9
+set first_timeout "-1"
+set fixedlength enabled
+set kicktime 1800
+set maxplayers 500
+set savefrequency 15
+set savename "freeciv21"
+set saveturns 1
+set scorefile "freeciv21-score.log"
+set scorelog enabled
+set scoreloglevel "ALL"
+
+# misc
+set autosaves "TURN|GAMEOVER|QUITIDLE|INTERRUPT|TIMER"
+set autotoggle disabled
+set borders enabled
+set citynames "PLAYER_UNIQUE"
+set homecaughtunits enabled
+set metamessage ""
+set mgr_distance 0
+set mgr_foodneeded enabled
+set mgr_nationchance 50
+set mgr_turninterval 5
+set mgr_worldchance 10
+set migration disabled
+set minplayers 1
+set multiresearch disabled
+set naturalcitynames enabled
+set netwait 4
+set notradesize 0
+set onsetbarbs 120
+set phasemode "ALL"
+set pingtime 20
+set pingtimeout 60
+set plrcolormode "PLR_ORDER"
+set threaded_save disabled
+set traitdistribution "FIXED"
+set turnblock enabled
+metamessage "Longturn Royale for multiplayer games | More info: https://longturn.net"
+metapatches longturn
+
+# Players
+read players.serv
+start
+
+Easy
