@@ -40,7 +40,7 @@ set airliftingstyle "FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
 set aqueductloss 0
 set autoattack disabled
 set caravan_bonus_style "CLASSIC"
-set citymindist 4
+set citymindist 5
 set contactturns 1
 set disasters 10
 set dispersion 6
