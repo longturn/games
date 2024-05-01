@@ -21,7 +21,7 @@ set fogofwar "DISABLED"	               # test game
 set aifill 0                                # Fill with 0 AI players. Standard LT games have no AI players, only human.
 set alltemperate disabled
 set barbarians disabled
-set generator "FRACTAL"
+set generator "FRACTURE"
 set huts 0
 set landmass 30
 set mapsize "PLAYER"
