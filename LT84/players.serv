@@ -1,4 +1,4 @@
-set aifill 13
+set aifill 15
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
@@ -12,6 +12,8 @@ aitoggle AI*10
 aitoggle AI*11
 aitoggle AI*12
 aitoggle AI*13
+aitoggle AI*14
+aitoggle AI*15
 playernation AI*1 "East German" 1 wieder
 playernation AI*2 Scanian 1 Vladimir
 playernation AI*3 Finnish 1 L1meE
@@ -25,3 +27,5 @@ playernation AI*10 Roman 1 sid
 playernation AI*11 Yugoslav 1 Corbeau
 playernation AI*12 Californian 1 Blue
 playernation AI*13 Mexican 1 Bjorn
+playernation AI*14 Atlantean 1 davski
+playernation AI*15 Aleut 1 Haldric
