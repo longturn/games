@@ -23,14 +23,14 @@ set alltemperate disabled
 set barbarians disabled
 set generator "FRACTAL"
 set huts 0
-set landmass 40
+set landmass 30
 set mapsize "PLAYER"
 set separatepoles enabled
 set specials 350
 set startpos "ALL"
 set steepness 30
 set temperature 60
-set tilesperplayer 550
+set tilesperplayer 650
 set tinyisles disabled
 set topology "WRAPX|WRAPY|ISO"
 set wetness 60
@@ -64,21 +64,19 @@ set restrictinfra enabled
 set revolen 2
 set revolentype FIXED
 set savepalace enabled
-set spaceship_travel_time 150
+set spaceship_travel_time 200
 set startunits cccccwwwwwwxx
-set techleak 100
+set techleak 200
 set trade_revenue_style "CLASSIC"
 set unreachableprotects disabled
 
 # diplomacy, technology
-set civilwarsize 10
-set conquercost 95                          # for getting techs with tech stealing/trading units
+set civilwarsize 25
+set conquercost 50                          # for getting techs with tech stealing/trading units
 set demography NnciwASLaMklOCqrbszPE
 set diplbulbcost 20
-set diplbulbcost 95
 set diplchance 40
-set diplgoldcost 40
-set diplgoldcost 95
+set diplgoldcost 20
 set diplomacy HUMAN
 set freecost 0                              # for getting techs from philosphy etc
 set fulltradesize 1
