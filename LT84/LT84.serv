@@ -27,7 +27,7 @@ set landmass 30
 set mapsize "PLAYER"
 set separatepoles enabled
 set specials 350
-set startpos "ALL"
+set startpos "VARIABLE"
 set steepness 30
 set temperature 60
 set tilesperplayer 650
