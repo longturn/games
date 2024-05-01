@@ -898,7 +898,7 @@ graphic     = "a.the_corporation"
 graphic_alt = "-"
 helptext = _("\
 Halves the corruption of trade related to distance from the capital \
-(or eliminates it for Federation governments).\
+(or eliminates it for Federation governments). Also adds 25% sci bonus to federation.\
 ")
 cost     = 1220
 
