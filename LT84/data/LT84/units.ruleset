@@ -1366,13 +1366,13 @@ uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer", "Fanatic", "Horse"
+flags         = "Capturer", "Fanatic"
 roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Crusaders are highly disciplined mounted\
  warriors driven by a higher cause.\
  Fundamentalist nations can maintain Crusader units without\
- having to pay any upkeep nor causing military unhappiness. \
+ having to pay any upkeep nor causing military unhappiness. Pikemen don't get a defense bonus agains crusaders.\
 ")
 
 [unit_knights]

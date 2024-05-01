@@ -2260,148 +2260,18 @@ sabotage	= 0
 sound		= "w_goldroad"
 sound_alt	= "w_generic"
 helptext	= _("\
-Increases the trade output of the nation. The increase is 4% for the nations \
+Increases the trade output of the nation. The increase is 10% for the nations \
 with non trade based governments. Since the trade based goverments such as republic and democracy already \
 benefit from trade the bonus for this wonder is not as important as it is for \
-other types of governments. The bonus for trade based governments is 2%. \
+other types of governments. The bonus for trade based governments is 5%. \
 ")
-
-
-[building_iron_road]
-name		= _("Iron Road")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Metallurgy", "World"
-	  "Extra", "Iron", "Local" 
-    }
-graphic	= "b.ironroad"
-graphic_alt	= "b.university"
-obsolete_by	=
-    { "type", "name", "range", "survives"
-    }
-build_cost	= 40
-upkeep		= 0
-sabotage	= 0
-sound		= "w_ironroad"
-sound_alt	= "w_generic"
-helptext	= _("\
-Increases the trade output of the nation. The increase is 4% for the nations \
-with non trade based governments. Since the trade based goverments such as republic and democracy already \
-benefit from trade the bonus for this wonder is not as important as it is for \
-other types of governments. The bonus for trade based governments is 2%. \
-")
-
-
-[building_game_road]
-name		= _("Game Road")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-	  "Extra", "Game", "Local" 
-    }
-graphic	= "b.gameroad"
-graphic_alt	= "b.university"
-obsolete_by	=
-    { "type", "name", "range", "survives"
-    }
-build_cost	= 40
-upkeep		= 0
-sabotage	= 0
-sound		= "w_gameroad"
-sound_alt	= "w_generic"
-helptext	= _("\
-Increases the trade output of the nation. The increase is 4% for the nations \
-with non trade based governments. Since the trade based goverments such as republic and democracy already \
-benefit from trade the bonus for this wonder is not as important as it is for \
-other types of governments. The bonus for trade based governments is 2%. \
-")
-
-
-
-[building_furs_road]
-name		= _("Furs Road")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-	  "Extra", "Furs", "Local" 
-    }
-graphic	= "b.fursroad"
-graphic_alt	= "b.university"
-obsolete_by	=
-    { "type", "name", "range", "survives"
-    }
-build_cost	= 40
-upkeep		= 0
-sabotage	= 0
-sound		= "w_fursroad"
-sound_alt	= "w_generic"
-helptext	= _("\
-Increases the trade output of the nation. The increase is 4% for the nations \
-with non trade based governments. Since the trade based goverments such as republic and democracy already \
-benefit from trade the bonus for this wonder is not as important as it is for \
-other types of governments. The bonus for trade based governments is 2%. \
-")
-
-
-
-[building_coal_road]
-name		= _("Coal Road")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Industrialization", "World"
-	  "Extra", "Coal", "Local" 
-    }
-graphic	= "b.coalroad"
-graphic_alt	= "b.university"
-obsolete_by	=
-    { "type", "name", "range", "survives"
-    }
-build_cost	= 40
-upkeep		= 0
-sabotage	= 0
-sound		= "w_coalroad"
-sound_alt	= "w_generic"
-helptext	= _("\
-Increases the trade output of the nation. The increase is 4% for the nations \
-with non trade based governments. Since the trade based goverments such as republic and democracy already \
-benefit from trade the bonus for this wonder is not as important as it is for \
-other types of governments. The bonus for trade based governments is 2%. \
-")
-
-
-[building_fruit_road]
-name		= _("Fruit Road")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Construction", "World"
-	  "Extra", "Fruit", "Local" 
-    }
-graphic	= "b.fruitroad"
-graphic_alt	= "b.university"
-obsolete_by	=
-    { "type", "name", "range", "survives"
-    }
-build_cost	= 40
-upkeep		= 0
-sabotage	= 0
-sound		= "w_fruitroad"
-sound_alt	= "w_generic"
-helptext	= _("\
-Increases the trade output of the nation. The increase is 4% for the nations \
-with non trade based governments. Since the trade based goverments such as republic and democracy already \
-benefit from trade the bonus for this wonder is not as important as it is for \
-other types of governments. The bonus for trade based governments is 2%. \
-")
-
 
 
 
 [building_gems_road]
 name		= _("Gems Road")
 genus		= "SmallWonder"
+flags		= "VisibleByOthers"
 reqs	=
     { "type", "name", "range"
 	  "Extra", "Gems", "Local" 
@@ -2417,66 +2287,10 @@ sabotage	= 0
 sound		= "w_gemsroad"
 sound_alt	= "w_generic"
 helptext	= _("\
-Increases the trade output of the nation. The increase is 4% for the nations \
+Increases the trade output of the nation. The increase is 10% for the nations \
 with non trade based governments. Since the trade based goverments such as republic and democracy already \
 benefit from trade the bonus for this wonder is not as important as it is for \
-other types of governments. The bonus for trade based governments is 2%. \
-")
-
-
-
-
-[building_peat_road]
-name		= _("Peat Road")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Sanitation", "World"
-	  "Extra", "Peat", "Local" 
-    }
-graphic	= "b.peatroad"
-graphic_alt	= "b.university"
-obsolete_by	=
-    { "type", "name", "range", "survives"
-    }
-build_cost	= 40
-upkeep		= 0
-sabotage	= 0
-sound		= "w_peatroad"
-sound_alt	= "w_generic"
-helptext	= _("\
-Increases the trade output of the nation. The increase is 4% for the nations \
-with non trade based governments. Since the trade based goverments such as republic and democracy already \
-benefit from trade the bonus for this wonder is not as important as it is for \
-other types of governments. The bonus for trade based governments is 2%. \
-")
-
-
-
-
-[building_pheasant_road]
-name		= _("Pheasant Road")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Gunpowder", "World"
-	  "Extra", "Pheasant", "Local" 
-    }
-graphic	= "b.pheasantroad"
-graphic_alt	= "b.university"
-obsolete_by	=
-    { "type", "name", "range", "survives"
-    }
-build_cost	= 40
-upkeep		= 0
-sabotage	= 0
-sound		= "w_pheasantroad"
-sound_alt	= "w_generic"
-helptext	= _("\
-Increases the trade output of the nation. The increase is 4% for the nations \
-with non trade based governments. Since the trade based goverments such as republic and democracy already \
-benefit from trade the bonus for this wonder is not as important as it is for \
-other types of governments. The bonus for trade based governments is 2%. \
+other types of governments. The bonus for trade based governments is 5%. \
 ")
 
 
@@ -2484,6 +2298,7 @@ other types of governments. The bonus for trade based governments is 2%. \
 [building_ivory_road]
 name		= _("Ivory Road")
 genus		= "SmallWonder"
+flags		= "VisibleByOthers"
 reqs	=
     { "type", "name", "range"
       "Tech", "Magnetism", "World"
@@ -2500,97 +2315,18 @@ sabotage	= 0
 sound		= "w_ivoryroad"
 sound_alt	= "w_generic"
 helptext	= _("\
-Increases the trade output of the nation. The increase is 4% for the nations \
+Increases the trade output of the nation. The increase is 10% for the nations \
 with non trade based governments. Since the trade based goverments such as republic and democracy already \
 benefit from trade the bonus for this wonder is not as important as it is for \
-other types of governments. The bonus for trade based governments is 2%. \
+other types of governments. The bonus for trade based governments is 5%. \
 ")
 
-
-
-
-[building_silk_road]
-name		= _("Silk Road")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Trade", "World"
-	  "Extra", "Silk", "Local" 
-    }
-graphic	= "b.silkroad"
-graphic_alt	= "b.university"
-obsolete_by	=
-    { "type", "name", "range", "survives"
-    }
-build_cost	= 40
-upkeep		= 0
-sabotage	= 0
-sound		= "w_silkroad"
-sound_alt	= "w_generic"
-helptext	= _("\
-Increases the trade output of the nation. The increase is 4% for the nations \
-with non trade based governments. Since the trade based goverments such as republic and democracy already \
-benefit from trade the bonus for this wonder is not as important as it is for \
-other types of governments. The bonus for trade based governments is 2%. \
-")
-
-
-[building_spice_road]
-name		= _("Spice Road")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Trade", "World"
-	  "Extra", "Spice", "Local" 
-    }
-graphic	= "b.silkroad"
-graphic_alt	= "b.university"
-obsolete_by	=
-    { "type", "name", "range", "survives"
-    }
-build_cost	= 40
-upkeep		= 0
-sabotage	= 0
-sound		= "w_spiceroad"
-sound_alt	= "w_generic"
-helptext	= _("\
-Increases the trade output of the nation. The increase is 4% for the nations \
-with non trade based governments. Since the trade based goverments such as republic and democracy already \
-benefit from trade the bonus for this wonder is not as important as it is for \
-other types of governments. The bonus for trade based governments is 2%. \
-")
-
-
-
-[building_wine_road]
-name		= _("Wine Road")
-genus		= "SmallWonder"
-reqs	=
-    { "type", "name", "range"
-      "Tech", "Economics", "World"
-	  "Extra", "Wine", "Local" 
-    }
-graphic	= "b.wineroad"
-graphic_alt	= "b.university"
-obsolete_by	=
-    { "type", "name", "range", "survives"
-    }
-build_cost	= 40
-upkeep		= 0
-sabotage	= 0
-sound		= "w_wineroad"
-sound_alt	= "w_generic"
-helptext	= _("\
-Increases the trade output of the nation. The increase is 4% for the nations \
-with non trade based governments. Since the trade based goverments such as republic and democracy already \
-benefit from trade the bonus for this wonder is not as important as it is for \
-other types of governments. The bonus for trade based governments is 2%. \
-")
 
 
 [building_oil_road]
 name		= _("Oil Road")
 genus		= "SmallWonder"
+flags		= "VisibleByOthers"
 reqs	=
     { "type", "name", "range"
       "Tech", "Refining", "World"
@@ -2607,10 +2343,10 @@ sabotage	= 0
 sound		= "w_oilroad"
 sound_alt	= "w_generic"
 helptext	= _("\
-Increases the trade output of the nation. The increase is 4% for the nations \
+Increases the trade output of the nation. The increase is 10% for the nations \
 with non trade based governments. Since the trade based goverments such as republic and democracy already \
 benefit from trade the bonus for this wonder is not as important as it is for \
-other types of governments. The bonus for trade based governments is 2%. \
+other types of governments. The bonus for trade based governments is 5%. \
 ")
 
 
