@@ -6,15 +6,15 @@ rulesetdir LT84
 # test game / real game settings
 
 # Uncomment the following for test games
-set revealmap START                        # test game
-set timeout 120                            # test game
-set unitwaittime 0                         # test game
-set fogofwar "DISABLED"	               # test game
+#set revealmap START                        # test game
+#set timeout 120                            # test game
+#set unitwaittime 0                         # test game
+#set fogofwar "DISABLED"	               # test game
 
 # Set these for real games, add comment for test games
-#set timeout 82800                           # real game
-#set unitwaittime 36000                      # real game
-#set fogofwar "ENABLED"		                # real game
+set timeout 82800                           # real game
+set unitwaittime 36000                      # real game
+set fogofwar "ENABLED"		                # real game
 
 
 # map
@@ -49,7 +49,7 @@ set endturn 5000
 set flatpoles 0
 set foggedborders enabled
 set globalwarming enabled
-set globalwarming_percent 40
+set globalwarming_percent 100
 set happyborders "NATIONAL"
 set killcitizen enabled
 set killstack enabled

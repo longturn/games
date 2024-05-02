@@ -1,4 +1,4 @@
-set aifill 15
+set aifill 14
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
@@ -13,19 +13,17 @@ aitoggle AI*11
 aitoggle AI*12
 aitoggle AI*13
 aitoggle AI*14
-aitoggle AI*15
-playernation AI*1 "East German" 1 wieder
-playernation AI*2 Scanian 1 Vladimir
-playernation AI*3 Finnish 1 L1meE
-playernation AI*4 Cornish 1 el_perdedor
-playernation AI*5 Swedish 1 Loveaabb
-playernation AI*6 Ainu 1 mu
-playernation AI*7 Egyptian 1 Akhenaten
-playernation AI*8 Teutonic 1 meton
-playernation AI*9 Amazonian 1 stacycats
-playernation AI*10 Roman 1 sid
-playernation AI*11 Yugoslav 1 Corbeau
-playernation AI*12 Californian 1 Blue
-playernation AI*13 Mexican 1 Bjorn
-playernation AI*14 Atlantean 1 davski
-playernation AI*15 Aleut 1 Haldric
+playernation AI*1 Scanian 1 Vladimir
+playernation AI*2 Finnish 1 L1meE
+playernation AI*3 Cornish 1 el_perdedor
+playernation AI*4 Swedish 1 Loveaabb
+playernation AI*5 Ainu 1 mu
+playernation AI*6 Egyptian 1 Akhenaten
+playernation AI*7 Teutonic 1 meton
+playernation AI*8 Amazonian 1 stacycats
+playernation AI*9 Roman 1 sid
+playernation AI*10 Yugoslav 1 Corbeau
+playernation AI*11 Californian 1 Blue
+playernation AI*12 Mexican 1 Bjorn
+playernation AI*13 Atlantean 1 davski
+playernation AI*14 Aleut 1 Haldric
