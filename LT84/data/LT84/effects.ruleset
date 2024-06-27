@@ -5301,7 +5301,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Gold Road", "Player"
-      "Extra", "Gold", "Local"
+      "Extra", "Gold", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Tribal", "Player"
     }
@@ -5312,7 +5312,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Gold Road", "Player"
-      "Extra", "Gold", "Local"
+      "Extra", "Gold", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Despotism", "Player"
     }
@@ -5323,7 +5323,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Gold Road", "Player"
-      "Extra", "Gold", "Local"
+      "Extra", "Gold", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Monarchy", "Player"
     }
@@ -5334,7 +5334,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Gold Road", "Player"
-      "Extra", "Coal", "Local"
+      "Extra", "Gold", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Communism", "Player"
     }
@@ -5345,7 +5345,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Gold Road", "Player"
-      "Extra", "Gold", "Local"
+      "Extra", "Gold", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Fundamentalism", "Player"
     }
@@ -5356,7 +5356,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Gold Road", "Player"
-      "Extra", "Gold", "Local"
+      "Extra", "Gold", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Federation", "Player"
     }
@@ -5367,7 +5367,7 @@ value   = 5
 reqs    =
     { "type", "name", "range"
 	  "Building", "Gold Road", "Player"
-      "Extra", "Gold", "Local"
+      "Extra", "Gold", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Republic", "Player"
     }
@@ -5378,7 +5378,7 @@ value   = 5
 reqs    =
     { "type", "name", "range"
 	  "Building", "Gold Road", "Player"
-      "Extra", "Gold", "Local"
+      "Extra", "Gold", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Democracy", "Player"
     }
@@ -5392,7 +5392,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Gems Road", "Player"
-      "Extra", "Gems", "Local"
+      "Extra", "Gems", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Tribal", "Player"
     }
@@ -5403,7 +5403,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Gems Road", "Player"
-      "Extra", "Gems", "Local"
+      "Extra", "Gems", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Despotism", "Player"
     }
@@ -5414,7 +5414,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Gems Road", "Player"
-      "Extra", "Gems", "Local"
+      "Extra", "Gems", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Monarchy", "Player"
     }
@@ -5425,7 +5425,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Gems Road", "Player"
-      "Extra", "Gems", "Local"
+      "Extra", "Gems", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Communism", "Player"
     }
@@ -5436,7 +5436,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Gems Road", "Player"
-      "Extra", "Gems", "Local"
+      "Extra", "Gems", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Fundamentalism", "Player"
     }
@@ -5447,7 +5447,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Gems Road", "Player"
-      "Extra", "Gems", "Local"
+      "Extra", "Gems", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Federation", "Player"
     }
@@ -5458,7 +5458,7 @@ value   = 5
 reqs    =
     { "type", "name", "range"
 	  "Building", "Gems Road", "Player"
-      "Extra", "Gems", "Local"
+      "Extra", "Gems", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Republic", "Player"
     }
@@ -5469,7 +5469,7 @@ value   = 5
 reqs    =
     { "type", "name", "range"
 	  "Building", "Gems Road", "Player"
-      "Extra", "Gems", "Local"
+      "Extra", "Gems", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Democracy", "Player"
     }
@@ -5483,7 +5483,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Ivory Road", "Player"
-      "Extra", "Ivory", "Local"
+      "Extra", "Ivory", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Tribal", "Player"
     }
@@ -5494,7 +5494,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Ivory Road", "Player"
-      "Extra", "Ivory", "Local"
+      "Extra", "Ivory", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Despotism", "Player"
     }
@@ -5505,7 +5505,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Ivory Road", "Player"
-      "Extra", "Ivory", "Local"
+      "Extra", "Ivory", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Monarchy", "Player"
     }
@@ -5516,7 +5516,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Ivory Road", "Player"
-      "Extra", "Ivory", "Local"
+      "Extra", "Ivory", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Communism", "Player"
     }
@@ -5527,7 +5527,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Ivory Road", "Player"
-      "Extra", "Ivory", "Local"
+      "Extra", "Ivory", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Fundamentalism", "Player"
     }
@@ -5538,7 +5538,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Ivory Road", "Player"
-      "Extra", "Ivory", "Local"
+      "Extra", "Ivory", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Federation", "Player"
     }
@@ -5549,7 +5549,7 @@ value   = 5
 reqs    =
     { "type", "name", "range"
 	  "Building", "Ivory Road", "Player"
-      "Extra", "Ivory", "Local"
+      "Extra", "Ivory", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Republic", "Player"
     }
@@ -5560,7 +5560,7 @@ value   = 5
 reqs    =
     { "type", "name", "range"
 	  "Building", "Ivory Road", "Player"
-      "Extra", "Ivory", "Local"
+      "Extra", "Ivory", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Democracy", "Player"
     }
@@ -5575,7 +5575,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Oil Road", "Player"
-      "Extra", "Oil", "Local"
+      "Extra", "Oil", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Tribal", "Player"
     }
@@ -5586,7 +5586,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Oil Road", "Player"
-      "Extra", "Oil", "Local"
+      "Extra", "Oil", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Despotism", "Player"
     }
@@ -5597,7 +5597,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Oil Road", "Player"
-      "Extra", "Oil", "Local"
+      "Extra", "Oil", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Monarchy", "Player"
     }
@@ -5608,7 +5608,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Oil Road", "Player"
-      "Extra", "Oil", "Local"
+      "Extra", "Oil", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Communism", "Player"
     }
@@ -5619,7 +5619,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Oil Road", "Player"
-      "Extra", "Oil", "Local"
+      "Extra", "Oil", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Fundamentalism", "Player"
     }
@@ -5630,7 +5630,7 @@ value   = 10
 reqs    =
     { "type", "name", "range"
 	  "Building", "Oil Road", "Player"
-      "Extra", "Oil", "Local"
+      "Extra", "Oil", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Federation", "Player"
     }
@@ -5641,7 +5641,7 @@ value   = 5
 reqs    =
     { "type", "name", "range"
 	  "Building", "Oil Road", "Player"
-      "Extra", "Oil", "Local"
+      "Extra", "Oil", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Republic", "Player"
     }
@@ -5652,7 +5652,7 @@ value   = 5
 reqs    =
     { "type", "name", "range"
 	  "Building", "Oil Road", "Player"
-      "Extra", "Oil", "Local"
+      "Extra", "Oil", "City"
       "OutputType", "Trade", "Local"
 	  "Gov", "Democracy", "Player"
     }

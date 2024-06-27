@@ -1863,7 +1863,7 @@ sabotage	= 0
 sound		= "w_marco_polos_embassy"
 sound_alt	= "w_generic"
 helptext	= _("\
-Increases trade output by 10% in all cities for all the \
+Increases trade output by 30% in all cities for all the \
 players. The player owning this wonder is the only one able to build the Trade Company.\
  Marco Polo is also needed for enabling some of the special resource small wonders like Silk Road. Once Marco Polo is built the special resource small wonders are enabled for everyone"), _("\
 TIP: it may make sense to let someone else to build this wonder. Everyone gets the effect \
@@ -2247,7 +2247,7 @@ genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
       "Tech", "Trade", "World"
-	  "Extra", "Gold", "Local" 
+	  "Extra", "Gold", "City"
     }
 graphic	= "b.goldroad"
 graphic_alt	= "b.university"
@@ -2260,7 +2260,7 @@ sabotage	= 0
 sound		= "w_goldroad"
 sound_alt	= "w_generic"
 helptext	= _("\
-Increases the trade output of the nation. The increase is 10% for the nations \
+Increases the trade output of the nation. The effect affects all the cities controlled by the nation. The increase is 10% for the nations \
 with non trade based governments. Since the trade based goverments such as republic and democracy already \
 benefit from trade the bonus for this wonder is not as important as it is for \
 other types of governments. The bonus for trade based governments is 5%. \
@@ -2274,7 +2274,7 @@ genus		= "SmallWonder"
 flags		= "VisibleByOthers"
 reqs	=
     { "type", "name", "range"
-	  "Extra", "Gems", "Local" 
+	  "Extra", "Gems", "City"
     }
 graphic	= "b.gemsroad"
 graphic_alt	= "b.university"
@@ -2287,7 +2287,7 @@ sabotage	= 0
 sound		= "w_gemsroad"
 sound_alt	= "w_generic"
 helptext	= _("\
-Increases the trade output of the nation. The increase is 10% for the nations \
+Increases the trade output of the nation. The effect affects all the cities controlled by the nation. The increase is 10% for the nations \
 with non trade based governments. Since the trade based goverments such as republic and democracy already \
 benefit from trade the bonus for this wonder is not as important as it is for \
 other types of governments. The bonus for trade based governments is 5%. \
@@ -2302,7 +2302,7 @@ flags		= "VisibleByOthers"
 reqs	=
     { "type", "name", "range"
       "Tech", "Magnetism", "World"
-	  "Extra", "Ivory", "Local" 
+	  "Extra", "Ivory", "City"
     }
 graphic	= "b.ivoryroad"
 graphic_alt	= "b.university"
@@ -2315,7 +2315,7 @@ sabotage	= 0
 sound		= "w_ivoryroad"
 sound_alt	= "w_generic"
 helptext	= _("\
-Increases the trade output of the nation. The increase is 10% for the nations \
+Increases the trade output of the nation. The effect affects all the cities controlled by the nation. The increase is 10% for the nations \
 with non trade based governments. Since the trade based goverments such as republic and democracy already \
 benefit from trade the bonus for this wonder is not as important as it is for \
 other types of governments. The bonus for trade based governments is 5%. \
@@ -2330,7 +2330,7 @@ flags		= "VisibleByOthers"
 reqs	=
     { "type", "name", "range"
       "Tech", "Refining", "World"
-	  "Extra", "Oil", "Local" 
+	  "Extra", "Oil", "City"
     }
 graphic	= "b.oilroad"
 graphic_alt	= "b.university"
@@ -2343,7 +2343,7 @@ sabotage	= 0
 sound		= "w_oilroad"
 sound_alt	= "w_generic"
 helptext	= _("\
-Increases the trade output of the nation. The increase is 10% for the nations \
+Increases the trade output of the nation. The effect affects all the cities controlled by the nation. The increase is 10% for the nations \
 with non trade based governments. Since the trade based goverments such as republic and democracy already \
 benefit from trade the bonus for this wonder is not as important as it is for \
 other types of governments. The bonus for trade based governments is 5%. \
