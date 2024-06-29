@@ -1865,7 +1865,7 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Increases trade output by 30% in all cities for all the \
 players. The player owning this wonder is the only one able to build the Trade Company.\
- Marco Polo is also needed for enabling some of the special resource small wonders like Silk Road. Once Marco Polo is built the special resource small wonders are enabled for everyone"), _("\
+ At the time Marco Polo is not needed for the Roads small wonders but this may change in the future."), _("\
 TIP: it may make sense to let someone else to build this wonder. Everyone gets the effect \
 and the Trade Company can't usually be instantly built after Marco Polo is finished.\
 ")
