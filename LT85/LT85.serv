@@ -123,7 +123,6 @@ set saveturns 1
 set fixedlength enabled
 set savefrequency "15"
 set savename "freeciv"
-set infrapoints "0"
 set kicktime "1800"
 set first_timeout "-1"
 set fixedlength "DISABLED"
@@ -166,7 +165,6 @@ metapatches longturn
 set nationset all
 read players.serv
 
-syncturn # for longturn games
 start
 
 Easy
