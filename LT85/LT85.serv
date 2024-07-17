@@ -5,7 +5,7 @@ rulesetdir LT85
 
 # test game / real game settings
 
-#set revealmap START #uncomment this for revealing the map for test games
+set revealmap START #uncomment this for revealing the map for test games
 #set timeout 90000  # real game
 #set unitwaittime 36000  # real game§
 set timeout 120 # test game
@@ -33,8 +33,8 @@ set specials 300
 set steepness 45
 set temperature 60
 set tilesperplayer 500
-#set topology "WRAPX|WRAPY|ISO"
-set topology "WRAPX|WRAPY|ISO|HEX"
+set topology "WRAPX|WRAPY|ISO"
+#set topology "WRAPX|WRAPY|ISO|HEX"
 set wetness 60
 set alltemperate disabled
 set tinyisles disabled
