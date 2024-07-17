@@ -1,0 +1,173 @@
+# Server commands to make Longturn Extended Experimental Freeciv rules based on Civ2Civ3 ruleset
+#
+
+rulesetdir LT85
+
+# test game / real game settings
+
+#set revealmap START #uncomment this for revealing the map for test games
+#set timeout 90000  # real game
+#set unitwaittime 36000  # real game§
+set timeout 120 # test game
+set unitwaittime 0  # test game
+#set fogofwar "ENABLED"		# real game
+set fogofwar "DISABLED"		# test game
+
+set mgr_distance "7"
+set mgr_foodneeded "ENABLED"
+set mgr_nationchance "50"
+set mgr_turninterval "1"
+set mgr_worldchance "30"
+set migration "ENABLED"
+
+# map
+set mapsize "PLAYER"
+set generator "FRACTURE"
+set barbarians disabled
+set startpos "VARIABLE"
+#set teamplacement CONTINENT
+set huts 0
+set landmass 40
+set separatepoles enabled
+set specials 300
+set steepness 45
+set temperature 60
+set tilesperplayer 500
+#set topology "WRAPX|WRAPY|ISO"
+set topology "WRAPX|WRAPY|ISO|HEX"
+set wetness 60
+set alltemperate disabled
+set tinyisles disabled
+
+
+
+# general rules
+set nationset all
+set citymindist 5
+set contactturns 1
+set disasters "10"
+set dispersion "6"
+set foggedborders enabled
+set rapturedelay 3
+set restrictinfra enabled
+set revolen 2
+set revolentype   FIXED
+set spaceship_travel_time "200"
+set startunits cccccwwwwwwxx
+set techleak "150"
+set techlevel "0"
+set trading_tech disabled
+set airliftingstyle "FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
+set razechance 10
+set globalwarming "ENABLED"
+set globalwarming_percent 40
+set nuclearwinter_percent 100
+set unreachableprotects "DISABLED"
+set happyborders "NATIONAL"
+set killcitizen "ENABLED"
+set killstack "ENABLED"
+set killunhomed "0"
+set flatpoles "0"
+set occupychance "0"
+set aqueductloss "0"
+set autoattack "DISABLED"
+set caravan_bonus_style "CLASSIC"
+set trade_revenue_style "CLASSIC"
+set endspaceship "ENABLED"
+set endturn "5000"
+set savepalace "ENABLED"
+
+# diplomacy, technology
+set diplchance 40
+set diplgoldcost 40
+set diplbulbcost 20
+set diplomacy "HUMAN"
+set sciencebox 100
+set techlost_donor 0
+set techlost_recv 0
+set techpenalty 10
+set trademindist 999
+set tradeworldrelpct "50"
+set trading_city disabled
+set team_pooled_research disabled
+set techlevel 0
+set techlossforgiveness -1
+set techlossrestore 50
+set freecost 0 # for getting techs from philosphy etc
+
+set conquercost 30 # for getting techs with tech stealing/trading units
+set persistentready "DISABLED"
+set civilwarsize "10"
+set teamplacement "CLOSEST"
+set fulltradesize "1"
+set gold "50"
+set trading_city "DISABLED"
+set trading_gold "ENABLED"
+set trading_tech "DISABLED"
+set victories "SPACERACE|ALLIED"
+set incite_gold_capt_chance "0"
+set incite_gold_loss_chance "0"
+set demography   NnciwASLaMklOCqrbszPE
+
+# technical
+set aifill 0
+set allowtake ""
+cmdlevel info
+set compresstype plain
+set ec_chat enabled
+set ec_info enabled 
+set ec_max_size 5000
+set ec_turns 9
+set maxplayers 126
+set saveturns 1
+set fixedlength enabled
+set savefrequency "15"
+set savename "freeciv"
+set infrapoints "0"
+set kicktime "1800"
+set first_timeout "-1"
+set fixedlength "DISABLED"
+set scorefile "freeciv-score.log"
+set scorelog "ENABLED"
+set scoreloglevel "ALL"
+
+# misc
+set autosaves "TURN|GAMEOVER|QUITIDLE|INTERRUPT"
+set autotoggle "DISABLED"
+set onsetbarbs "120"
+set barbarians "DISABLED"
+set borders "ENABLED"
+set compresstype "LIBZ"
+set maxconnectionsperhost "4"
+set maxplayers "500"
+set metamessage ""
+set minplayers "1"
+set multiresearch "DISABLED"
+set nationset "all"
+set naturalcitynames "ENABLED"
+set citynames "PLAYER_UNIQUE"
+set netwait "4"
+set notradesize "0"
+set nuclearwinter "ENABLED"
+set nuclearwinter_percent "100" # now default setting
+set phasemode "ALL"
+set pingtime "20"
+set pingtimeout "60"
+set plrcolormode "PLR_ORDER"
+set threaded_save "DISABLED"
+set traitdistribution "FIXED"
+set turnblock "ENABLED"
+set homecaughtunits "ENABLED"
+
+metamessage "LongturnRoyale for multiplayer games - Suomipeli2023b edition | More info: https://longturn.net"
+metapatches longturn
+
+# Players
+set nationset all
+read players.serv
+
+syncturn # for longturn games
+start
+
+Easy
+metapatches 

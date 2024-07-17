@@ -1,0 +1,8 @@
+#!/bin/sh
+
+GAMEID=LT85
+GAMENAME=LT85
+GAMEDIR=$HOME/server/LT85
+PORT=5085
+
+. ../rc.subr.fc21
