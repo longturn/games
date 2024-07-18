@@ -137,7 +137,7 @@ set onsetbarbs "120"
 set barbarians "DISABLED"
 set borders "ENABLED"
 set compresstype "LIBZ"
-set maxconnectionsperhost "4"
+set maxconnectionsperhost "40"
 set maxplayers "500"
 set metamessage ""
 set minplayers "1"
@@ -164,6 +164,9 @@ metapatches longturn
 # Players
 set nationset all
 read players.serv
+
+set aitoggle ""
+
 
 start
 
