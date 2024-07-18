@@ -1134,51 +1134,6 @@ Alpine Troops are highly mobile units as well as\
 ")
 
 
-[unit_partisan_rebel]
-name          = _("Rebel")
-class         = "Land"
-tech_req      = "The Republic"
-gov_req       = "Anarchy"
-obsolete_by   = "Partisan"
-graphic       = "u.rebel"
-graphic_alt   = "u.partisan"
-sound_move    = "m_partisan"
-sound_move_alt = "m_generic"
-sound_fight   = "f_partisan"
-sound_fight_alt = "f_generic"
-build_cost    = 40
-pop_cost      = 1
-attack        = 4
-defense       = 3
-hitpoints     = 8
-firepower     = 1
-move_rate     = 3
-vision_radius_sq = 25
-transport_cap = 0
-fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 1
-embarks       = "Helicopter"
-disembarks    = "Helicopter"
-flags         = "IgZOC", "Capturer", "NoHome", "AddToCity"
-roles         = "DefendGood", "DefendGoodStartUnit", "Partisan", "BarbarianTech"
-helptext      = _("\
-Rebels (This unit is currently unfinished and does not appear properly) are guerilla fighters who are experts\
- at using the terrain to their advantage. Rebels\
- have no home city. Since rebels\
- are citizens trained to fight the oppressor they can\
- once again become part of the normal population when\
- the war is over. The players can build Rebels only under anarchy.\
- A number of Rebels are granted free when an enemy conquers your\
- city -- they automatically assume defensive positions in the\
- surrounding countryside -- but only under these conditions:\n\n\
- - Feudalism must be known by at least one player.\n\
- - At least three quarters of the citizens must have your nationality.\n\
- - You must know about republic.\n\
- - You must have Democracy, Communism, Monarchy, Fundamentalism, Federation or Republic as the government.\
-")
 
 
 
