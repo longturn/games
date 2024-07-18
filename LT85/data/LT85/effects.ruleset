@@ -4740,61 +4740,71 @@ value	= 1585
 
 [effect_calendar_base]
 type    = "Turn_Years"
-value   = 50
+value   = 100
 
-; 50 - 25 = 25
+; 50 - 50 = 50 -> T40 = Y0
 [effect_calendar_1]
 type    = "Turn_Years"
-value   = -25
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "-1000", "World"
-    }
-
-; 25 - 5 = 20
-[effect_calendar_2]
-type    = "Turn_Years"
-value   = -5
+value   = -50
 reqs    =
     { "type", "name", "range"
       "MinYear", "0", "World"
     }
 
-; 20 - 10 = 10
-[effect_calendar_3]
+; 50 - 25 = 25 -> T70 = Y1500
+[effect_calendar_2]
 type    = "Turn_Years"
-value   = -10
-reqs    =
-    { "type", "name", "range"
-      "MinYear", "1000", "World"
-    }
-
-; 10 - 5 = 5
-[effect_calendar_4]
-type    = "Turn_Years"
-value   = -5
+value   = -25
 reqs    =
     { "type", "name", "range"
       "MinYear", "1500", "World"
     }
 
-; 5 - 3 = 2
-[effect_calendar_5]
+; 25 - 15 = 10 -> T80 = Y1750
+[effect_calendar_3]
 type    = "Turn_Years"
-value   = -3
+value   = -15
 reqs    =
     { "type", "name", "range"
       "MinYear", "1750", "World"
     }
 
-; 2 - 1 = 1
+; 10 - 5 = 5 -> T90 = Y1850
+[effect_calendar_4]
+type    = "Turn_Years"
+value   = -5
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "1850", "World"
+    }
+
+; 5 - 2 = 3 -> T110 = Y1950 
+[effect_calendar_5]
+type    = "Turn_Years"
+value   = -2
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "1950", "World"
+    }
+
+; 3 - 1 = 2 -> T120 = Y1980
 [effect_calendar_6]
 type    = "Turn_Years"
 value   = -1
 reqs    =
     { "type", "name", "range"
-      "MinYear", "1900", "World"
+      "MinYear", "1980", "World"
     }
+
+; 2 - 1 = 1 -> T130 = Y2000
+[effect_calendar_7]
+type    = "Turn_Years"
+value   = -1
+reqs    =
+    { "type", "name", "range"
+      "MinYear", "2000", "World"
+    }
+
 
 ; No base pop pollution; buildings will increase it
 [effect_pollu_pop]
