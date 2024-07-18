@@ -13,6 +13,9 @@ set unitwaittime 0  # test game
 #set fogofwar "ENABLED"		# real game
 set fogofwar "DISABLED"		# test game
 
+set unitwaittime_style ACTIVITIES   
+#set unitwaittime_extended enabled # unitwaittime also applies to newly-built and captured/bribed units
+
 set mgr_distance "6"
 set mgr_foodneeded "ENABLED"
 set mgr_nationchance "50"
@@ -158,7 +161,7 @@ set traitdistribution "FIXED"
 set turnblock "ENABLED"
 set homecaughtunits "ENABLED"
 
-metamessage "LongturnRoyale for multiplayer games - Suomipeli2023b edition | More info: https://longturn.net"
+metamessage "Longturn LTX for multiplayer games - More info: https://longturn.net"
 metapatches longturn
 
 # Players
