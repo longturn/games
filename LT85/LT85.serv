@@ -13,7 +13,10 @@ set unitwaittime 10  # test game
 #set fogofwar "ENABLED"		# real game
 set fogofwar "DISABLED"		# test game
 
-set unitwaittime_style "ACTIVITIES|FORTIFY|DELAYGOTO"    
+set unitwaittime_style ACTIVITIES    
+#set unitwaittime_style "ACTIVITIES|FORTIFY|DELAYGOTO"    # fortify and delaygoto maybe not supported?
+#set fortyfywaittime = 36000
+
 #set unitwaittime_extended enabled # unitwaittime also applies to newly-built and captured/bribed units
 
 set mgr_distance "6"
