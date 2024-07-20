@@ -168,7 +168,7 @@ metapatches longturn
 set nationset all
 read players.serv
 
-set aitoggle ""
+# set aitoggle "" # how to make this work?
 
 
 start
