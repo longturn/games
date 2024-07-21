@@ -5,13 +5,13 @@ rulesetdir LT85
 
 # test game / real game settings
 
-set revealmap START #uncomment this for revealing the map for test games
-#set timeout 90000  # real game
-#set unitwaittime 36000  # real game§
-set timeout 120 # test game
-set unitwaittime 10  # test game
-#set fogofwar "ENABLED"		# real game
-set fogofwar "DISABLED"		# test game
+#set revealmap START #uncomment this for revealing the map for test games
+set timeout 90000  # real game
+set unitwaittime 36000  # real game§
+#set timeout 120 # test game
+#set unitwaittime 10  # test game
+set fogofwar "ENABLED"		# real game
+#set fogofwar "DISABLED"		# test game
 
 set unitwaittime_style ACTIVITIES
 #set unitwaittime_style "ACTIVITIES|FORTIFY|DELAYGOTO"    # fortify and delaygoto maybe not supported?
