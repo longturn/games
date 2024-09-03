@@ -124,8 +124,8 @@ graphic="a.amphibious_warfare"
 
 [advance_3]
 name=_("Astronomy")
-req1="Mysticism"
-req2="Mathematics"
+req1="Mathematics"
+req2="None"
 graphic="a.astronomy"
 helptext="Increases units' vision when in fortresses."
 
@@ -167,8 +167,8 @@ graphic="a.chemistry"
 
 [advance_10]
 name=_("Chivalry")
-req1="Feudalism"
-req2="Horseback Riding"
+req1="Horseback Riding"
+req2="None"
 graphic="a.chivalry"
 
 [advance_11]
@@ -273,8 +273,8 @@ graphic="a.explosives"
 
 [advance_27]
 name=_("Feudalism")
-req1="Iron Working"
-req2="Monarchy"
+req1="Monarchy"
+req2="None"
 graphic="a.feudalism"
 
 [advance_28]
@@ -300,7 +300,7 @@ graphic="a.genetic_engineering"
 [advance_31]
 name=_("Gunpowder")
 req1="Physics"
-req2="Feudalism"
+req2="None"
 graphic="a.gunpowder"
 
 [advance_32]
@@ -342,8 +342,8 @@ graphic="a.laser"
 
 [advance_38]
 name=_("Leadership")
-req1="Theology"
-req2="Gunpowder"
+req1="Gunpowder"
+req2="None"
 graphic="a.leadership"
 
 [advance_39]
@@ -393,7 +393,7 @@ name=_("Medicine")
 req1="Philosophy"
 req2="Trade"
 graphic="a.medicine"
-helptext="Reduces the risk of plague in your cities by 30% of the base chance (this is additive with the benefits of any buildings)."
+helptext="Reduces the risk of plague in your cities by additional 9% of the base chance (this is additive with the benefits of any buildings)."
 
 [advance_47]
 name=_("Metallurgy")
@@ -421,8 +421,8 @@ graphic="a.monarchy"
 
 [advance_51]
 name=_("Monotheism")
-req1="Astronomy"
-req2="Religion"
+req1="Religion"
+req2="None"
 graphic="a.monotheism"
 
 [advance_52]
@@ -727,3 +727,14 @@ name=_("Smelting")
 req1="None"
 req2="None"
 graphic="-"
+
+[advance_mass_media]
+name=_("Mass Media")
+req1="Radio"
+req2="Mass Production"
+graphic="-"
+
+[advance_taxation]
+name = _("Taxation")
+req1 = "Monarchy"
+req2 = "None"
