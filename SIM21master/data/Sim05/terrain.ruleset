@@ -1507,7 +1507,7 @@ build_time=9
 removal_time=0
 conflicts="Mine","Farmland"
 helptext=_("Resort can be built on hills and mountains. It can coexist with\
- irrigation, but not with farmland. The city population uses it for rest and\
+ irrigation, but not with farmland or mine. The city population uses it for rest and\
  recreation resulting in additional Trade produced in the city.")
 
 [extra_25]
@@ -1928,8 +1928,9 @@ helptext=_("Any land terrain type may have a River on it. A River adds 1 trade t
 
 
 [base_0]
-extra="Resort"
-gui_type="Other"
+extra = "Resort"
+gui_type = "Other"
+
 
 [base_1]
 extra="Fort"
