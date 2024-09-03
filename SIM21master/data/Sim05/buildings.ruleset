@@ -147,7 +147,7 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=1
 sabotage=100
-helptext="Increases the luxury and tax output in a city by an additional 50%. With both a Bank and a Marketplace in a city, the total bonus is 100%.\\Under Communism, the Bank does not give a luxury bonus.\\Units constructed in a city with this building have one additionalveteran level.","Bank adds 1 gold per turn to city economy."
+helptext="Increases the luxury and tax output in a city by an additional 50%. With both a Bank and a Marketplace in a city, the total bonus is 100%.", "Under Communism, the Bank does not give a luxury bonus.", "Units constructed in a city with this building have one additionalveteran level.","Bank adds 1 gold per turn to city economy."
 
 [building_7]
 name=_("Barracks")
@@ -212,7 +212,7 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=3
 sabotage=100
-helptext="A Cathedral makes 3 unhappy citizens content in a city, making it easier to maintain order in that city; however, it does not affect citizens made unhappy by aggression. Knowledge of Theology increases the effect of a Cathedral, making an additional unhappy citizen content, except under Communism.\\Units constructed in a city with this building have one additionalveteran level.\\Decreases corruption by a small amount, depending on government."
+helptext="A Cathedral makes 3 unhappy citizens content in a city, making it easier to maintain order in that city; however, it does not affect citizens made unhappy by aggression. Knowledge of Theology increases the effect of a Cathedral, making an additional unhappy citizen content, except under Communism.", "Units constructed in a city with this building have one additionalveteran level.", "Decreases corruption by a small amount, depending on government."
 
 [building_11]
 name=_("City Hall")
@@ -222,12 +222,12 @@ graphic_alt="b.police_station"
 sound="b_city_hall"
 sound_alt="b_generic"
 reqs={"type","name","range"
-"Tech","Monarchy","Player"
+"Tech","Code of Laws","Player"
 }
 build_cost=40
 upkeep=1
 sabotage=100
-helptext="City Hall is the step that signifies the upgrade of a village or a settlement into a city. With this building, the chance of migration into the city is increased. \\This building makes one unhappy citizen content."
+helptext="City Hall is the step that signifies the upgrade of a village or a settlement into a city. With this building, the chance of migration into the city is increased. ", "This building makes one unhappy citizen content."
 
 [building_12]
 name=_("City Walls")
@@ -359,7 +359,7 @@ reqs={"type","name","range"
 build_cost=40
 upkeep=1
 sabotage=100
-helptext="Library makes it possible to use Scientists. Each scientist now adds 1 research point.\\Increases the science output in a city by 50% or by 100%, depending on the ruleset.\\Decreases corruption by a small amount, depending on government."
+helptext="Library makes it possible to use Scientists. Each scientist now adds 1 research point.", "Increases the science output in a city by 50% or by 100%, depending on the ruleset.", "Decreases corruption by a small amount, depending on government."
 
 [building_21]
 name=_("Marketplace")
@@ -373,7 +373,7 @@ reqs={"type","name","range"
 build_cost=40
 upkeep=0
 sabotage=100
-helptext="Increases the luxury and tax output in a city by 50%.\\Makes it possible for Taxmen to extract gold from the population. Each Taxman yields 1 gold per turn.\\"
+helptext="Increases the luxury and tax output in a city by 50%.", "Makes it possible for Taxmen to extract gold from the population. Each Taxman yields 1 gold per turn."
 
 [building_22]
 name=_("Mass Transit")
@@ -457,7 +457,7 @@ reqs={"type","name","range"
 build_cost=50
 upkeep=2
 sabotage=100
-helptext="A Police Station neutralizes any unhappiness caused by one military unit in its city. It makes up to 2 more unhappy citizens content provided they are not unhappy about aggression. Also, helps defend against aggressive diplomatic action. \\Decreases corruption by a small amount, depending on government."
+helptext="A Police Station neutralizes any unhappiness caused by one military unit in its city. It makes up to 2 more unhappy citizens content provided they are not unhappy about aggression. Also, helps defend against aggressive diplomatic action. ", "Decreases corruption by a small amount, depending on government."
 
 [building_28]
 name=_("Naval Base")
@@ -658,7 +658,7 @@ reqs={"type","name","range"
 build_cost=100
 upkeep=2
 sabotage=100
-helptext="Increases the luxury and tax output in a city by an additional 50%, or 100% if Super Highways are also in the city. A Marketplace, Bank, and Stock Exchange together in a city yield a total bonus of 150%; adding Super Highways yields a total of 200%.\\Stock Exchange doesn't have any effect under a Communist government.\\Adds 1 gold per Taxmen."
+helptext="Increases the luxury and tax output in a city by an additional 50%, or 100% if Super Highways are also in the city. A Marketplace, Bank, and Stock Exchange together in a city yield a total bonus of 150%; adding Super Highways yields a total of 200%.", "Stock Exchange doesn't have any effect under a Communist government.", "Adds 1 gold per Taxmen."
 
 [building_41]
 name=_("Super Highways")
@@ -700,7 +700,7 @@ reqs={"type","name","range"
 build_cost=30
 upkeep=1
 sabotage=100
-helptext="Makes one unhappy citizen content. The Mysticism advance doubles this effect (except under a Communist government). With both Mysticism and the Temple of Artemis, 4 citizens are made content (3 under Communism). Does not affect citizens made unhappy by aggression.\\Units constructed in a city with this building have one additionalveteran level.\\Decreases corruption by a small amount, depending on government."
+helptext="Makes one unhappy citizen content. The Mysticism advance doubles this effect (except under a Communist government). With both Mysticism and the Temple of Artemis, 4 citizens are made content (3 under Communism). Does not affect citizens made unhappy by aggression.", "Units constructed in a city with this building have one additionalveteran level.", "Decreases corruption by a small amount, depending on government."
 
 [building_44]
 name=_("University")
@@ -715,7 +715,7 @@ reqs={"type","name","range"
 build_cost=70
 upkeep=2
 sabotage=100
-helptext="Increases the science output in a city by an additional 50%, or by 100% once Isaac Newton's College has been built by any player.","The total bonus is 100% if a Library and a University are present together in the same city, increasing to 200% once the Great Library and Isaac Newton's College have both been built.\\Each employed Scientists now contributes 2 research points every turn.\\Under Democracy, University makes additional citizen unhappy for each aggressively deployed military unit.\\Units constructed in a city with this building have one additionalveteran level.\\Decreases corruption by a small amount, depending on government."
+helptext="Increases the science output in a city by an additional 50%, or by 100% once Isaac Newton's College has been built by any player.","The total bonus is 100% if a Library and a University are present together in the same city, increasing to 200% once the Great Library and Isaac Newton's College have both been built.", "Each employed Scientists now contributes 2 research points every turn.", "Under Democracy, University makes additional citizen unhappy for each aggressively deployed military unit.", "Units constructed in a city with this building have one additionalveteran level.", "Decreases corruption by a small amount, depending on government."
 
 [building_45]
 name=_("U235 Enrichment Plant")
@@ -760,7 +760,7 @@ reqs={"type","name","range"
 build_cost=500
 upkeep=0
 sabotage=100
-helptext=" 'Gentlemen, you can't fight in here! This is the War Room!'President Merkin Muffley\\MAD Project is an indication of your nation's determination to go down on the path of nuclear supremacy. But be careful, 'MAD' begins with an 'M'. \\Once you have completed this wonder, it will allow all other nations to go down the same path because volunteer spies will leak the information to others: The only way to prevent one nation from starting a nuclear war is if everybody goes MAD! "
+helptext=" 'Gentlemen, you can't fight in here! This is the War Room!'President Merkin Muffley", "MAD Project is an indication of your nation's determination to go down on the path of nuclear supremacy. But be careful, 'MAD' begins with an 'M'. ", "Once you have completed this wonder, it will allow all other nations to go down the same path because volunteer spies will leak the information to others: The only way to prevent one nation from starting a nuclear war is if everybody goes MAD! "
 
 [building_48]
 name=_("Apollo Program")
@@ -1177,22 +1177,22 @@ upkeep=0
 sabotage=0
 helptext="Creates a world senate that prevents unprovoked declaration of war by any nuclear-capable nation (that is, any nation with knowledge of Nuclear Fission, once the Manhattan Project has been built). Also allows declaration of war by player who built it even if his government is Democracy. AI players are more inclined to be friendly and forgiving toward the owner of this wonder. These effects last until the Apollo Program is completed.","Also, if any player's city is in disorder for more than two turns in a row, that player's government falls (even for governments other than Republic and Democracy)."
 
-[building_74]
-name=_("Manufaktur")
-genus="Improvement"
-graphic="b.manufaktur"
-graphic_alt="b.barracks_i"
-sound="b_generic"
-sound_alt="b_generic"
-reqs={"type","name","range","present"
-"Tech","Monarchy","Player",TRUE
-"Tech","Industrialization","Player",FALSE
-"Building","Factory","City",FALSE
-}
-build_cost=30
-upkeep=1
-sabotage=100
-helptext="Increases production in the city by 2 Shields.It represents tradition of manufacturing in the region and, if it is not present in the city by the time of Industrialziation, it cannot be built/established anymore. When a factory is built in the city, Manufaktur becomes outdated, turns into a part of history and does not help production, but instead serves as a museum, producing 2 Trade per turn. "
+;[building_74]
+;name=_("Manufaktur")
+;genus="Improvement"
+;graphic="b.manufaktur"
+;graphic_alt="b.barracks_i"
+;sound="b_generic"
+;sound_alt="b_generic"
+;reqs={"type","name","range","present"
+;"Tech","Monarchy","Player",TRUE
+;"Tech","Industrialization","Player",FALSE
+;"Building","Factory","City",FALSE
+;}
+;build_cost=30
+;upkeep=1
+;sabotage=100
+;helptext="Increases production in the city by 2 Shields.It represents tradition of manufacturing in the region and, if it is not present in the city by the time of Industrialziation, it ;cannot be built/established anymore. When a factory is built in the city, Manufaktur becomes outdated, turns into a part of history and does not help production, but instead serves as a ;museum, producing 2 Trade per turn. "
 
 [building_75]
 name=_("Coinage")
@@ -1310,7 +1310,7 @@ graphic_alt="b.police_station"
 sound="b_city_hall"
 sound_alt="b_generic"
 reqs={"type","name","range"
-"Tech","Monarchy","Player"
+"Tech","Taxation","Player"
 }
 build_cost=20
 upkeep=6
@@ -1378,7 +1378,7 @@ reqs={"type","name","range"
 build_cost=20
 upkeep=5
 sabotage=100
-helptext="Supplies the city with additional 3 Food.With the development of trade, people started transporting supplies to greater distances. This made it possible for cities to trade surpluses and get hold of commodities that they lacked, making it possible to break their dependence on their immediate surroundings. \\Food Market makes it possible for a city with no direct access to large food surplus to grow, as long as the treasury is ready to pay the price. Not every city really needs it, but placing Food Markets strategically may reap great benefits for the cities they are built in."
+helptext="Supplies the city with additional 3 Food.With the development of trade, people started transporting supplies to greater distances. This made it possible for cities to trade surpluses and get hold of commodities that they lacked, making it possible to break their dependence on their immediate surroundings. ", "Food Market makes it possible for a city with no direct access to large food surplus to grow, as long as the treasury is ready to pay the price. Not every city really needs it, but placing Food Markets strategically may reap great benefits for the cities they are built in."
 
 [building_87]
 name=_("Grocery Store")
@@ -1394,7 +1394,7 @@ reqs={"type","name","range"
 build_cost=40
 upkeep=8
 sabotage=100
-helptext="Supplies the city with additional 4 Food.The onset of railroad made it possible to haul larger amounts of commodities to larger distances. Of course, everything comes at a price, but with growing markets, every good finds a way to its buyer. Rich cities are able to acquire more if they are willing to pay for it, allowing their populations to grow more. \\Grocery Store makes it possible for a city with no direct access to large food surplus to grow faster, as long as there is money in the city coffers."
+helptext="Supplies the city with additional 4 Food.The onset of railroad made it possible to haul larger amounts of commodities to larger distances. Of course, everything comes at a price, but with growing markets, every good finds a way to its buyer. Rich cities are able to acquire more if they are willing to pay for it, allowing their populations to grow more. ", "Grocery Store makes it possible for a city with no direct access to large food surplus to grow faster, as long as there is money in the city coffers."
 
 [building_88]
 name=_("Shopping Mall")
@@ -1410,7 +1410,7 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=12
 sabotage=100
-helptext="Supplies the city with additional 5 Food.\\'Fifty percent of Americans are obese, dawg. You know what obese means, right? Fat as a motherfucker. All these other countries, nobody's fat. Think about this shit, dawg. How does a motherfucker get fat? You gotta sit on the couch and do nothing but eat and watch TV all day. White trash, poor Mexicans and Blacks, all obese as motherfuckers. See, the white man has created a system with so much excess that even poor motherfuckers are fat.'— Sgt. Antonio 'Poke' Espera, The Cradle of Civilization, Generation Kill\\If your nation is doing well economically, Shopping Mall is probably a good investment to compensate for lack of food in some of your cities. Or add some fat to your population. "
+helptext="Supplies the city with additional 5 Food.", "'Fifty percent of Americans are obese, dawg. You know what obese means, right? Fat as a motherfucker. All these other countries, nobody's fat. Think about this shit, dawg. How does a motherfucker get fat? You gotta sit on the couch and do nothing but eat and watch TV all day. White trash, poor Mexicans and Blacks, all obese as motherfuckers. See, the white man has created a system with so much excess that even poor motherfuckers are fat.'— Sgt. Antonio 'Poke' Espera, The Cradle of Civilization, Generation Kill", "If your nation is doing well economically, Shopping Mall is probably a good investment to compensate for lack of food in some of your cities. Or add some fat to your population. "
 
 [building_89]
 name=_("Recycling Technology")
@@ -1483,13 +1483,13 @@ sound_alt="w_generic"
 reqs={"type","name","range","present"
 "Tech","Navigation","Player",TRUE
 "Terrain","Ocean","Adjacent",TRUE
-"Tech","The Republic","Player",FALSE
 "Tech","Democracy","Player",FALSE
+"Tech","Economics","Player",FALSE
 }
 build_cost=100
 upkeep=0
 sabotage=0
-helptext=" As maritime trade develops, coastal cities establish connections in order to increase profits. Hanseatic Quarter adds 2 Trade on each Ocean tile in city range and 3 Trade on Deep Ocean tile. \\WARNING! It must be built before you discover Republic or Democracy; after you discover them, construction will not be possible anymore."
+helptext=" As maritime trade develops, coastal cities establish connections in order to increase profits. Office of Hansa adds 1 Trade on each Ocean tile in city range and 2 Trade on Deep Ocean tile.","WARNING! It must be built before you discover Economics or Democracy; after you discover them, construction will not be possible anymore. Also, Hansa presumes free trade between independent entities. A monarch's meddling in your affairs will prevent you from achieving full profits so it will work only under Republican or Democratic governments."
 
 [building_94]
 name=_("Hospital")
@@ -1519,7 +1519,7 @@ reqs={"type","name","range"
 build_cost=40
 upkeep=1
 sabotage=100
-helptext="With industrial development the need for a more skilled workforce increases. School system is starting to emerge in order to train general population for work in factories. \\School increases the science output in a city by 50%.\\Decreases corruption by a small amount, depending on government."
+helptext="With industrial development the need for a more skilled workforce increases. School system is starting to emerge in order to train general population for work in factories.", "School increases the science output in a city by 50%.", "Decreases corruption by a small amount, depending on government."
 
 [building_96]
 name=_("Police 1st Precinct")
@@ -1534,7 +1534,7 @@ reqs={"type","name","range"
 build_cost=60
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression. "
 
 [building_97]
 name=_("Police 2nd Precinct")
@@ -1549,7 +1549,7 @@ reqs={"type","name","range"
 build_cost=70
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
 
 [building_98]
 name=_("Police 3rd Precinct")
@@ -1564,7 +1564,7 @@ reqs={"type","name","range"
 build_cost=80
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
 
 [building_99]
 name=_("Police 4th Precinct")
@@ -1579,7 +1579,7 @@ reqs={"type","name","range"
 build_cost=90
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
 
 [building_100]
 name=_("Police 5th Precinct")
@@ -1594,7 +1594,7 @@ reqs={"type","name","range"
 build_cost=100
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
 
 [building_101]
 name=_("Police 6th Precinct")
@@ -1609,7 +1609,7 @@ reqs={"type","name","range"
 build_cost=110
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
 
 [building_102]
 name=_("Police 7th Precinct")
@@ -1624,7 +1624,7 @@ reqs={"type","name","range"
 build_cost=120
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
 
 [building_103]
 name=_("Police 8th Precinct")
@@ -1639,7 +1639,7 @@ reqs={"type","name","range"
 build_cost=130
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
 
 [building_104]
 name=_("Police 9th Precinct")
@@ -1654,7 +1654,7 @@ reqs={"type","name","range"
 build_cost=140
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
 
 [building_105]
 name=_("Police 10th Precinct")
@@ -1669,7 +1669,7 @@ reqs={"type","name","range"
 build_cost=150
 upkeep=2
 sabotage=100
-helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  \\"
+helptext="The bigger the city, the more police you have to employ to maintain law & order. Each precinct makes up to 2 more unhappy citizens content provided they are not unhappy about aggression.  "
 
 [building_106]
 name=_("Extra Field")
@@ -1685,3 +1685,195 @@ build_cost=5
 upkeep=0
 sabotage=100
 helptext="When the tribe has no immediate threats or things to do, they focus all their efforts to food production. Working on an additional field converts all production to food:* 1 Food if city is size 1 or 2* 2 Food if city is size 3 or moreAfter the nation moves to a more advanced government, the Extra Field cannot be obtained because all additional land belongs to the monarch. The fields already in action remain, though."
+
+[building_local_council_I]
+name=_("Local Council I")
+genus="SmallWonder"
+graphic="b.local_council_i"
+graphic_alt="b.courthouse"
+sound="b_courthouse"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Gov","Republic","Player"
+}
+build_cost=60
+upkeep=0
+sabotage=100
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+
+[building_local_council_II]
+name=_("Local Council II")
+genus="SmallWonder"
+graphic="b.local_council_ii"
+graphic_alt="b.courthouse"
+sound="b_courthouse"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Gov","Republic","Player"
+"Building", "Local Council I", "Player"
+}
+build_cost=60
+upkeep=0
+sabotage=100
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+
+[building_local_council_III]
+name=_("Local Council III")
+genus="SmallWonder"
+graphic="b.local_council_iii"
+graphic_alt="b.courthouse"
+sound="b_courthouse"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Gov","Republic","Player"
+"Building", "Local Council II", "Player"
+}
+build_cost=60
+upkeep=0
+sabotage=100
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+
+[building_local_council_IV]
+name=_("Local Council IV")
+genus="SmallWonder"
+graphic="b.local_council_iv"
+graphic_alt="b.courthouse"
+sound="b_courthouse"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Gov","Republic","Player"
+"Building", "Local Council III", "Player"
+}
+build_cost=60
+upkeep=0
+sabotage=100
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+
+[building_local_council_V]
+name=_("Local Council V")
+genus="SmallWonder"
+graphic="b.local_council_v"
+graphic_alt="b.courthouse"
+sound="b_courthouse"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Gov","Republic","Player"
+"Building", "Local Council IV", "Player"
+}
+build_cost=60
+upkeep=0
+sabotage=100
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+
+[building_local_council_VI]
+name=_("Local Council VI")
+genus="SmallWonder"
+graphic="b.local_council_vi"
+graphic_alt="b.courthouse"
+sound="b_courthouse"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Gov","Republic","Player"
+"Building", "Local Council V", "Player"
+}
+build_cost=60
+upkeep=0
+sabotage=100
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+
+[building_local_council_VII]
+name=_("Local Council VII")
+genus="SmallWonder"
+graphic="b.local_council_VIi"
+graphic_alt="b.courthouse"
+sound="b_courthouse"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Gov","Republic","Player"
+"Building", "Local Council VI", "Player"
+}
+build_cost=60
+upkeep=0
+sabotage=100
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+
+[building_local_council_VIII]
+name=_("Local Council VIII")
+genus="SmallWonder"
+graphic="b.local_council_viii"
+graphic_alt="b.courthouse"
+sound="b_courthouse"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Gov","Republic","Player"
+"Building", "Local Council VII", "Player"
+}
+build_cost=60
+upkeep=0
+sabotage=100
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+
+[building_local_council_IX]
+name=_("Local Council IX")
+genus="SmallWonder"
+graphic="b.local_council_ix"
+graphic_alt="b.courthouse"
+sound="b_courthouse"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Gov","Republic","Player"
+"Building", "Local Council VIII", "Player"
+}
+build_cost=60
+upkeep=0
+sabotage=100
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+
+[building_local_council_X]
+name=_("Local Council X")
+genus="SmallWonder"
+graphic="b.local_council_x"
+graphic_alt="b.courthouse"
+sound="b_courthouse"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Gov","Republic","Player"
+"Building", "Local Council IX", "Player"
+}
+build_cost=60
+upkeep=0
+sabotage=100
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+
+[building_local_council_XI]
+name=_("Local Council XI")
+genus="SmallWonder"
+graphic="b.local_council_Xi"
+graphic_alt="b.courthouse"
+sound="b_courthouse"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Gov","Republic","Player"
+"Building", "Local Council X", "Player"
+}
+build_cost=60
+upkeep=0
+sabotage=100
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+
+[building_local_council_XII]
+name=_("Local Council XII")
+genus="SmallWonder"
+graphic="b.local_council_Xii"
+graphic_alt="b.courthouse"
+sound="b_courthouse"
+sound_alt="b_generic"
+reqs={"type","name","range"
+"Gov","Republic","Player"
+"Building", "Local Council XI", "Player"
+}
+build_cost=60
+upkeep=0
+sabotage=100
+helptext="Governing more distant areas in early republic wasn't a trivial matter. This is why giving public matters into the hands of responsible citizens may be a good choice; allowing participation in decisions that affect everyone is a good way to motivate the population to work in the public interest."
+
