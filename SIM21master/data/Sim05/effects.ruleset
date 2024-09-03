@@ -396,7 +396,7 @@ type="Output_Waste"
 value=25
 reqs={"type","name","range"
 "Gov","Despotism","Player"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 }
 
 [effect_45]
@@ -404,7 +404,7 @@ type="Output_Waste"
 value=25
 reqs={"type","name","range"
 "Gov","Monarchy","Player"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 }
 
 [effect_46]
@@ -412,7 +412,7 @@ type="Output_Waste"
 value=50
 reqs={"type","name","range"
 "Gov","Communism","Player"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 }
 
 [effect_47]
@@ -420,7 +420,7 @@ type="Output_Waste"
 value=25
 reqs={"type","name","range"
 "Gov","Fundamentalism","Player"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 }
 
 [effect_48]
@@ -428,7 +428,7 @@ type="Output_Waste"
 value=30
 reqs={"type","name","range"
 "Gov","Republic","Player"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 }
 
 [effect_49]
@@ -436,7 +436,7 @@ type="Output_Waste"
 value=40
 reqs={"type","name","range"
 "Gov","Democracy","Player"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 }
 
 [effect_50]
@@ -709,7 +709,6 @@ type="Unit_Upkeep_Free_Per_City"
 value=1
 reqs={"type","name","range"
 "OutputType","food","Local"
-"MinSize","10","City"
 }
 
 [effect_85]
@@ -947,7 +946,7 @@ type="Output_Inc_Tile"
 value=1
 reqs={"type","name","range","present"
 "Gov","Republic","Player",TRUE
-"OutputType","trade","Local",TRUE
+"OutputType","Trade","Local",TRUE
 "TerrainClass","Oceanic","Local",FALSE
 }
 
@@ -956,7 +955,7 @@ type="Output_Inc_Tile"
 value=1
 reqs={"type","name","range","present"
 "Gov","Democracy","Player",TRUE
-"OutputType","trade","Local",TRUE
+"OutputType","Trade","Local",TRUE
 "TerrainClass","Oceanic","Local",FALSE
 }
 
@@ -964,7 +963,7 @@ reqs={"type","name","range","present"
 type="Output_Inc_Tile_Celebrate"
 value=1
 reqs={"type","name","range","present"
-"OutputType","trade","Local",TRUE
+"OutputType","Trade","Local",TRUE
 "Gov","Anarchy","Player",FALSE
 "Gov","Tribal","Player",FALSE
 "Gov","Communism","Player",FALSE
@@ -1023,7 +1022,7 @@ type="Output_Bonus_2"
 value=-100
 reqs={"type","name","range"
 "Gov","Anarchy","Player"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 }
 
 [effect_125]
@@ -1750,7 +1749,7 @@ value=1
 reqs={"type","name","range"
 "Terrain","Ocean","Local"
 "Building","Port Terminal","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 }
 
 [effect_205]
@@ -1759,7 +1758,7 @@ value=2
 reqs={"type","name","range"
 "Terrain","Deep Ocean","Local"
 "Building","Port Terminal","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 }
 
 [effect_206]
@@ -1768,7 +1767,7 @@ value=2
 reqs={"type","name","range"
 "Terrain","Mountains","Local"
 "Extra","Resort","Local"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 }
 
 [effect_207]
@@ -1777,7 +1776,7 @@ value=1
 reqs={"type","name","range"
 "Terrain","Hills","Local"
 "Extra","Railroad","Local"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 }
 
 [effect_208]
@@ -1786,7 +1785,7 @@ value=1
 reqs={"type","name","range"
 "Terrain","Mountains","Local"
 "Extra","Railroad","Local"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 }
 
 [effect_209]
@@ -1822,19 +1821,13 @@ type="Output_Add_Tile"
 value=10
 reqs={"type","name","range","present"
 "CityTile","Center","Local",TRUE
-"OutputType","trade","Local",TRUE
+"OutputType","Trade","Local",TRUE
 "Building","Palace","City",TRUE
 "Gov","Anarchy","Player",FALSE
 "Gov","Tribal","Player",FALSE
 "Gov","Despotism","Player",FALSE
 }
 
-[effect_214]
-type="Gov_Center"
-value=1
-reqs={"type","name","range"
-"Building","Second Palace","City"
-}
 
 [effect_215]
 type="Spy_Resistant"
@@ -2094,7 +2087,7 @@ value=1
 reqs={"type","name","range","present"
 "Extra","Road","Local",TRUE
 "Building","Super Highways","City",TRUE
-"OutputType","trade","Local",TRUE
+"OutputType","Trade","Local",TRUE
 "Extra","Farmland","Local",FALSE
 }
 
@@ -2104,7 +2097,7 @@ value=1
 reqs={"type","name","range","present"
 "Extra","Road","Local",TRUE
 "Building","Super Highways","City",TRUE
-"OutputType","trade","Local",TRUE
+"OutputType","Trade","Local",TRUE
 "CityTile","Center","Local",TRUE
 "Extra","Farmland","Local",FALSE
 }
@@ -2115,7 +2108,7 @@ value=1
 reqs={"type","name","range"
 "Extra","Road","Local"
 "Building","Super Highways","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "CityTile","Center","Local"
 "Building","Supermarket","City"
 "Extra","Mine","Local"
@@ -2210,7 +2203,7 @@ type="Output_Inc_Tile"
 value=1
 reqs={"type","name","range"
 "Building","Colossus","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 }
 
 [effect_259]
@@ -2843,31 +2836,31 @@ reqs={"type","name","range"
 "MinSize","17","City"
 }
 
-[effect_337]
-type="Output_Add_Tile"
-value=2
-reqs={"type","name","range","present"
-"CityTile","Center","Local",TRUE
-"OutputType","shield","Local",TRUE
-"Building","Manufaktur","City",TRUE
-"Building","Factory","City",FALSE
-}
+;[effect_337]
+;type="Output_Add_Tile"
+;value=2
+;reqs={"type","name","range","present"
+;"CityTile","Center","Local",TRUE
+;"OutputType","shield","Local",TRUE
+;"Building","Manufaktur","City",TRUE
+;"Building","Factory","City",FALSE
+;}
 
-[effect_338]
-type="Output_Add_Tile"
-value=2
-reqs={"type","name","range"
-"CityTile","Center","Local"
-"OutputType","trade","Local"
-"Building","Manufaktur","City"
-"Building","Factory","City"
-}
+;[effect_338]
+;type="Output_Add_Tile"
+;value=2
+;reqs={"type","name","range"
+;"CityTile","Center","Local"
+;"OutputType","Trade","Local"
+;"Building","Manufaktur","City"
+;"Building","Factory","City"
+;}
 
 [effect_339]
 type="Output_Waste_By_Distance"
 value=500
 reqs={"type","name","range"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Despotism","Player"
 }
 
@@ -2877,7 +2870,7 @@ value=25
 reqs={"type","name","range"
 "Building","Temple","City"
 "Gov","Despotism","Player"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 }
 
 [effect_341]
@@ -2885,7 +2878,7 @@ type="Output_Waste_Pct"
 value=30
 reqs={"type","name","range"
 "Building","Courthouse","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Despotism","Player"
 }
 
@@ -2894,7 +2887,7 @@ type="Output_Waste_Pct"
 value=25
 reqs={"type","name","range"
 "Building","Cathedral","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Despotism","Player"
 }
 
@@ -2903,15 +2896,15 @@ type="Output_Waste_Pct"
 value=10
 reqs={"type","name","range"
 "Building","Police Station","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Despotism","Player"
 }
 
 [effect_344]
 type="Output_Waste_By_Distance"
-value=400
+value=2000
 reqs={"type","name","range"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Monarchy","Player"
 }
 
@@ -2920,7 +2913,7 @@ type="Output_Waste_Pct"
 value=15
 reqs={"type","name","range"
 "Building","Temple","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Monarchy","Player"
 }
 
@@ -2929,7 +2922,7 @@ type="Output_Waste_Pct"
 value=40
 reqs={"type","name","range"
 "Building","Courthouse","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Monarchy","Player"
 }
 
@@ -2938,7 +2931,7 @@ type="Output_Waste_Pct"
 value=20
 reqs={"type","name","range"
 "Building","Cathedral","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Monarchy","Player"
 }
 
@@ -2947,7 +2940,7 @@ type="Output_Waste_Pct"
 value=20
 reqs={"type","name","range"
 "Building","Police Station","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Monarchy","Player"
 }
 
@@ -2955,7 +2948,7 @@ reqs={"type","name","range"
 type="Output_Waste_By_Distance"
 value=400
 reqs={"type","name","range"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Fundamentalism","Player"
 }
 
@@ -2964,7 +2957,7 @@ type="Output_Waste_Pct"
 value=30
 reqs={"type","name","range"
 "Building","Temple","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Fundamentalism","Player"
 }
 
@@ -2973,7 +2966,7 @@ type="Output_Waste_Pct"
 value=10
 reqs={"type","name","range"
 "Building","Courthouse","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Fundamentalism","Player"
 }
 
@@ -2982,7 +2975,7 @@ type="Output_Waste_Pct"
 value=30
 reqs={"type","name","range"
 "Building","Cathedral","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Fundamentalism","Player"
 }
 
@@ -2991,7 +2984,7 @@ type="Output_Waste_Pct"
 value=20
 reqs={"type","name","range"
 "Building","Police Station","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Fundamentalism","Player"
 }
 
@@ -2999,7 +2992,7 @@ reqs={"type","name","range"
 type="Output_Waste_By_Distance"
 value=200
 reqs={"type","name","range"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Republic","Player"
 }
 
@@ -3008,7 +3001,7 @@ type="Output_Waste_Pct"
 value=5
 reqs={"type","name","range"
 "Building","Temple","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Republic","Player"
 }
 
@@ -3017,7 +3010,7 @@ type="Output_Waste_Pct"
 value=30
 reqs={"type","name","range"
 "Building","Courthouse","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Republic","Player"
 }
 
@@ -3026,7 +3019,7 @@ type="Output_Waste_Pct"
 value=20
 reqs={"type","name","range"
 "Building","Cathedral","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Republic","Player"
 }
 
@@ -3035,7 +3028,7 @@ type="Output_Waste_Pct"
 value=20
 reqs={"type","name","range"
 "Building","Police Station","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Republic","Player"
 }
 
@@ -3044,7 +3037,7 @@ type="Output_Waste_Pct"
 value=5
 reqs={"type","name","range"
 "Building","Library","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Republic","Player"
 }
 
@@ -3053,7 +3046,7 @@ type="Output_Waste_Pct"
 value=10
 reqs={"type","name","range"
 "Building","University","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Republic","Player"
 }
 
@@ -3061,7 +3054,7 @@ reqs={"type","name","range"
 type="Output_Waste_By_Distance"
 value=0
 reqs={"type","name","range"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Democracy","Player"
 }
 
@@ -3070,7 +3063,7 @@ type="Output_Waste_Pct"
 value=5
 reqs={"type","name","range"
 "Building","Temple","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Democracy","Player"
 }
 
@@ -3079,7 +3072,7 @@ type="Output_Waste_Pct"
 value=30
 reqs={"type","name","range"
 "Building","Courthouse","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Democracy","Player"
 }
 
@@ -3088,7 +3081,7 @@ type="Output_Waste_Pct"
 value=20
 reqs={"type","name","range"
 "Building","Cathedral","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Democracy","Player"
 }
 
@@ -3097,7 +3090,7 @@ type="Output_Waste_Pct"
 value=20
 reqs={"type","name","range"
 "Building","Police Station","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Democracy","Player"
 }
 
@@ -3106,7 +3099,7 @@ type="Output_Waste_Pct"
 value=5
 reqs={"type","name","range"
 "Building","Library","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Democracy","Player"
 }
 
@@ -3115,7 +3108,7 @@ type="Output_Waste_Pct"
 value=10
 reqs={"type","name","range"
 "Building","University","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Democracy","Player"
 }
 
@@ -3123,7 +3116,7 @@ reqs={"type","name","range"
 type="Output_Waste_By_Distance"
 value=0
 reqs={"type","name","range"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Communism","Player"
 }
 
@@ -3132,7 +3125,7 @@ type="Output_Waste_Pct"
 value=0
 reqs={"type","name","range"
 "Building","Temple","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Communism","Player"
 }
 
@@ -3141,7 +3134,7 @@ type="Output_Waste_Pct"
 value=25
 reqs={"type","name","range"
 "Building","Courthouse","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Communism","Player"
 }
 
@@ -3150,7 +3143,7 @@ type="Output_Waste_Pct"
 value=10
 reqs={"type","name","range"
 "Building","Cathedral","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Communism","Player"
 }
 
@@ -3159,7 +3152,7 @@ type="Output_Waste_Pct"
 value=30
 reqs={"type","name","range"
 "Building","Police Station","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Communism","Player"
 }
 
@@ -3168,7 +3161,7 @@ type="Output_Waste_Pct"
 value=10
 reqs={"type","name","range"
 "Building","Library","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Communism","Player"
 }
 
@@ -3177,7 +3170,7 @@ type="Output_Waste_Pct"
 value=10
 reqs={"type","name","range"
 "Building","University","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 "Gov","Communism","Player"
 }
 
@@ -3918,7 +3911,7 @@ type="Output_Waste_Pct"
 value=100
 reqs={"type","name","range"
 "Building","Governor's Office","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 }
 
 [effect_467]
@@ -4112,20 +4105,24 @@ reqs={"type","name","range","present"
 
 [effect_488]
 type="Output_Add_Tile"
-value=2
+value=1
 reqs={"type","name","range"
 "Terrain","Ocean","Local"
 "Building","Office of Hansa","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
+}
+nreqs = {"type","name","range", "present"
+	"Gov", "Republic", "Player", FALSE
+	"Gov", "Democracy", "Player", FALSE
 }
 
 [effect_489]
 type="Output_Add_Tile"
-value=1
+value=2
 reqs={"type","name","range"
 "Terrain","Deep Ocean","Local"
 "Building","Office of Hansa","City"
-"OutputType","trade","Local"
+"OutputType","Trade","Local"
 }
 
 [effect_490]
@@ -4359,7 +4356,7 @@ type="Output_Bonus"
 value=-100
 reqs={"type","name","range"
 "Building","Extra Field","City"
-"OutputType","Shield","Local"
+"OutputType","shield","Local"
 }
 
 [effect_522]
@@ -4496,15 +4493,6 @@ reqs={"type","name","range"
 type    = "Growth_Surplus_Pct"
 value   = 100
 
-[effect_action_success_move_cost_from_non_native]
-type    = "Action_Success_Actor_Move_Cost"
-value   = 65535
-reqs    =
-    { "type",      "name",                  "range", "present"
-      "Action",    "Transport Disembark 2", "Local", TRUE
-      "UnitState", "OnNativeTile",          "Local", TRUE
-    }
-
 [effect_action_success_move_cost_bombard]
 type    = "Action_Success_Actor_Move_Cost"
 value   = 9
@@ -4513,9 +4501,538 @@ reqs    =
       "Action", "Bombard", "Local", TRUE
     }
 
-[effect_disband_unit_shield_return]
-type    = "Unit_Shield_Value_Pct"
-value   = 0
-reqs    =
-    { "type", "name", "range", "present"
+
+;;;;;;;;;;;;;;;;;;;; LOCAL COUNCILS ;;;;;;;;;;;;;;;;;;;;;
+
+[effect_214]
+type="Gov_Center"
+value=1
+reqs={"type","name","range"
+      	"Gov", "Republic", "Player"
+	"Building","Second Palace","City"
+}
+
+[effect_local_council_i]
+type="Gov_Center"
+value=1
+reqs={"type","name","range"
+      	"Gov", "Republic", "Player"
+	"Building","Local Council I","City"
+}
+
+[effect_local_council_ii]
+type="Gov_Center"
+value=1
+reqs={"type","name","range"
+      	"Gov", "Republic", "Player"
+	"Building","Local Council II","City"
+}
+
+[effect_local_council_iii]
+type="Gov_Center"
+value=1
+reqs={"type","name","range"
+      	"Gov", "Republic", "Player"
+	"Building","Local Council III","City"
+}
+
+[effect_local_council_iv]
+type="Gov_Center"
+value=1
+reqs={"type","name","range"
+      	"Gov", "Republic", "Player"
+	"Building","Local Council IV","City"
+}
+
+[effect_local_council_v]
+type="Gov_Center"
+value=1
+reqs={"type","name","range"
+      	"Gov", "Republic", "Player"
+	"Building","Local Council V","City"
+}
+
+[effect_local_council_vi]
+type="Gov_Center"
+value=1
+reqs={"type","name","range"
+      	"Gov", "Republic", "Player"
+	"Building","Local Council VI","City"
+}
+
+[effect_local_council_vii]
+type="Gov_Center"
+value=1
+reqs={"type","name","range"
+      	"Gov", "Republic", "Player"
+	"Building","Local Council VII","City"
+}
+
+[effect_local_council_viii]
+type="Gov_Center"
+value=1
+reqs={"type","name","range"
+      	"Gov", "Republic", "Player"
+	"Building","Local Council VIII","City"
+}
+
+[effect_local_council_ix]
+type="Gov_Center"
+value=1
+reqs={"type","name","range"
+      	"Gov", "Republic", "Player"
+	"Building","Local Council IX","City"
+}
+
+[effect_local_council_x]
+type="Gov_Center"
+value=1
+reqs={"type","name","range"
+      	"Gov", "Republic", "Player"
+	"Building","Local Council X","City"
+}
+
+[effect_local_council_xi]
+type="Gov_Center"
+value=1
+reqs={"type","name","range"
+      	"Gov", "Republic", "Player"
+	"Building","Local Council XI","City"
+}
+
+[effect_local_council_xii]
+type="Gov_Center"
+value=1
+reqs={"type","name","range"
+      	"Gov", "Republic", "Player"
+	"Building","Local Council XII","City"
+}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;; COMBAT ROUNDS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+[effect_combat_rounds_Raiders]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Raiders", "Local"
     }
+
+[effect_combat_rounds_Warriors]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Warriors", "Local"
+    }
+
+[effect_combat_rounds_Phalanx]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Phalanx", "Local"
+    }
+
+[effect_combat_rounds_Bowmen]
+type   = "Combat_Rounds"
+value  =  5
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Bowmen", "Local"
+    }
+
+[effect_combat_rounds_Archers]
+type   = "Combat_Rounds"
+value  =  5
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Archers", "Local"
+    }
+
+[effect_combat_rounds_Swordsmen]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Swordsmen", "Local"
+    }
+
+[effect_combat_rounds_Legion]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Legion", "Local"
+    }
+
+[effect_combat_rounds_Pikemen]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Pikemen", "Local"
+    }
+
+[effect_combat_rounds_Militia]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Militia", "Local"
+    }
+
+[effect_combat_rounds_Arquebusiers]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Arquebusiers", "Local"
+    }
+
+[effect_combat_rounds_Musketeers]
+type   = "Combat_Rounds"
+value  =  15
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Musketeers", "Local"
+    }
+
+[effect_combat_rounds_Skirmishers]
+type   = "Combat_Rounds"
+value  =  5
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Skirmishers", "Local"
+    }
+
+[effect_combat_rounds_Riflemen]
+type   = "Combat_Rounds"
+value  =  15
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Riflemen", "Local"
+    }
+
+[effect_combat_rounds_Commandos]
+type   = "Combat_Rounds"
+value  =  20
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Commandos", "Local"
+    }
+
+[effect_combat_rounds_Partisan]
+type   = "Combat_Rounds"
+value  =  20
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Partisan", "Local"
+    }
+
+[effect_combat_rounds_Fanatics]
+type   = "Combat_Rounds"
+value  =  15
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Fanatics", "Local"
+    }
+
+[effect_combat_rounds_Naval Inf.]
+type   = "Combat_Rounds"
+value  =  15
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Naval Inf.", "Local"
+    }
+
+[effect_combat_rounds_Paratroopers]
+type   = "Combat_Rounds"
+value  =  20
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Paratroopers", "Local"
+    }
+
+[effect_combat_rounds_Mech. Inf.]
+type   = "Combat_Rounds"
+value  =  20
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Mech. Inf.", "Local"
+    }
+
+[effect_combat_rounds_Horsemen]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Horsemen", "Local"
+    }
+
+[effect_combat_rounds_Chariot]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Chariot", "Local"
+    }
+
+[effect_combat_rounds_Elephants]
+type   = "Combat_Rounds"
+value  =  20
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Elephants", "Local"
+    }
+
+[effect_combat_rounds_Knights]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Knights", "Local"
+    }
+
+[effect_combat_rounds_Dragoons]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Dragoons", "Local"
+    }
+
+[effect_combat_rounds_Cavalry]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Cavalry", "Local"
+    }
+
+[effect_combat_rounds_Armor]
+type   = "Combat_Rounds"
+value  =  30
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Armor", "Local"
+    }
+
+[effect_combat_rounds_Catapult]
+type   = "Combat_Rounds"
+value  =  5
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Catapult", "Local"
+    }
+
+[effect_combat_rounds_Cannon]
+type   = "Combat_Rounds"
+value  =  5
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Cannon", "Local"
+    }
+
+[effect_combat_rounds_Artillery]
+type   = "Combat_Rounds"
+value  =  5
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Artillery", "Local"
+    }
+
+[effect_combat_rounds_Howitzer]
+type   = "Combat_Rounds"
+value  =  5
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Howitzer", "Local"
+    }
+
+[effect_combat_rounds_Fighter]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Fighter", "Local"
+    }
+
+[effect_combat_rounds_Bomber]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Bomber", "Local"
+    }
+
+[effect_combat_rounds_Strategic Bomber]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Strategic Bomber", "Local"
+    }
+
+[effect_combat_rounds_Helicopter]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Helicopter", "Local"
+    }
+
+[effect_combat_rounds_Stealth Fighter]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Stealth Fighter", "Local"
+    }
+
+[effect_combat_rounds_Stealth Bomber]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Stealth Bomber", "Local"
+    }
+
+[effect_combat_rounds_Boat]
+type   = "Combat_Rounds"
+value  =  5
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Boat", "Local"
+    }
+
+[effect_combat_rounds_Trireme]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Trireme", "Local"
+    }
+
+[effect_combat_rounds_Caravel]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Caravel", "Local"
+    }
+
+[effect_combat_rounds_Galleon]
+type   = "Combat_Rounds"
+value  =  20
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Galleon", "Local"
+    }
+
+[effect_combat_rounds_Frigate]
+type   = "Combat_Rounds"
+value  =  20
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Frigate", "Local"
+    }
+
+[effect_combat_rounds_Ironclad]
+type   = "Combat_Rounds"
+value  =  20
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Ironclad", "Local"
+    }
+
+[effect_combat_rounds_Destroyer]
+type   = "Combat_Rounds"
+value  =  30
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Destroyer", "Local"
+    }
+
+[effect_combat_rounds_Cruiser]
+type   = "Combat_Rounds"
+value  =  30
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Cruiser", "Local"
+    }
+
+[effect_combat_rounds_AEGIS Cruiser]
+type   = "Combat_Rounds"
+value  =  30
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "AEGIS Cruiser", "Local"
+    }
+
+[effect_combat_rounds_Battleship]
+type   = "Combat_Rounds"
+value  =  30
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Battleship", "Local"
+    }
+
+[effect_combat_rounds_Submarine]
+type   = "Combat_Rounds"
+value  =  20
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Submarine", "Local"
+    }
+
+[effect_combat_rounds_Carrier]
+type   = "Combat_Rounds"
+value  =  20
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Carrier", "Local"
+    }
+
+[effect_combat_rounds_Cruise Missile]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Cruise Missile", "Local"
+    }
+
+[effect_combat_rounds_Little Boy]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Little Boy", "Local"
+    }
+
+[effect_combat_rounds_Fat Man]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Fat Man", "Local"
+    }
+
+[effect_combat_rounds_Atom Bomb]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "Atom Bomb", "Local"
+    }
+
+[effect_combat_rounds_ICBM]
+type   = "Combat_Rounds"
+value  =  10
+reqs   =
+    { "type", "name", "range"
+    "UnitType", "ICBM", "Local"
+    }
+
