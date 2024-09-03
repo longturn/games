@@ -3,11 +3,11 @@
 # the value defines how many players need to invent a tech before it's given free to everyone. currently set to 18
 
 
-rulesetdir Sim05
+rulesetdir Sim
 
 
 # map
-cmdlevel info
+
 set alltemperate disabled
 set barbarians disabled
 set generator "FRACTAL"
@@ -15,38 +15,39 @@ set huts 0
 set landmass 35
 set separatepoles disabled
 set specials 380
-set startpos "ALL"
+set startpos ALL
 set steepness 30
 set temperature 50
-set topology "WRAPX|ISO|HEX"
+set topology WRAPX|ISO|HEX
 set wetness 60
-#set revealmap START  #(un)comment this for for test/real games  <------------- TEST
+set revealmap START  #(un)comment this for for test/real games  <------------- TEST
 set mapsize "PLAYER"
-set tilesperplayer 80
+set tilesperplayer 80  # <------------------------------------------------------
 
 # general rules
-# set aifill 63 -- see players.serv
+set aifill 20 # see players.serv   <------------------------------------------
+set nationset all
 set borders enabled
 set citymindist 1
 set foggedborders enabled
 set rapturedelay 3
 set restrictinfra enabled
 set revolen 1
-set victories SPACERACE
-set endspaceship enabled
+set victories ""
+set endspaceship disabled
 set unreachableprotects disabled
 set killunhomed 0
-set airliftingstyle "FROM_ALLIES|TO_ALLIES"
+set airliftingstyle FROM_ALLIES|TO_ALLIES
 set razechance 90
-set happyborders NATIONAL
+set happyborders ALLIED
 set occupychance 0
+
 set migration enabled
 set endturn 5000
-set unitwaittime_style = "ACTIVITIES|FORTIFY|DELAYGOTO
+set unitwaittime_style ACTIVITIES
 
 # diplomacy, technology
-set diplchance 50
-set diplgoldcost 5
+# set diplchance 50
 set diplomacy HUMAN
 set sciencebox 40
 set techlost_donor 0
@@ -59,31 +60,40 @@ set team_pooled_research disabled
 set techlevel 0
 set contactturns 1
 set savepalace disabled
-set techlossforgiveness 1
+set techlossforgiveness -1
 set techlossrestore 50
 
 # technical
-set allowtake ""
-set compresstype XZ
+###set allowtake Hh  <------------------------------------------
+set compresstype LIBZ
 set ec_chat enabled
 set ec_info enabled 
-set ec_max_size 5000
-set ec_turns 9
-set maxplayers 126
+set ec_max_size 15000
+set ec_turns 5
+###set maxplayers 126  <---------------------------
 set saveturns 1
 set scorelog enabled
-set timeout 90000       # 25 hours
-set unitwaittime 36000      # 10 hours
-set fixedlength enabled
+#set timeout 90000       # 25 hours    <------------------------------
+#set unitwaittime 36000      # 10 hours  <------------------------------
+#set fixedlength enabled  #  <------------------------------
 metamessage "Longturn Sim Game"
 metapatches longturn
+set autotoggle disabled
 
+#sim
 set civilwarsize 999
-set mgr_distance 2
+set mgr_distance 0
 set mgr_worldchance 20
 set demography "NnAwSRLaPEMOCqrb"
-set dispersion 1
+set dispersion 3
 set killstack disabled
+set borders SEE_INSIDE
+set multiresearch ENABLED
+
 
 set nationset all
-read players.serv
+hard
+# read players.serv
+
+cmdlevel hack # <----------------------------------------------------------
+
