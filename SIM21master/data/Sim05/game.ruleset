@@ -819,7 +819,7 @@ actor_reqs={"type","name","range","present"
 tired_attack=TRUE
 
 [borders]
-radius_sq_city=3
+radius_sq_city=0
 
 [research]
 tech_cost_style="Classic+"
@@ -1125,22 +1125,23 @@ type = "Embassy"
 
 
 [settings]
-set={"name","value"
-"borders","ENABLED"
-"citymindist",1
-"flatpoles",0
-"foggedborders",TRUE
-"mapsize","PLAYER"
-"occupychance",100
-"onsetbarbs",120
-"razechance",10
-"restrictinfra",TRUE
-"revolentype","RANDQUICK"
-"startunits","cccccwwwwxxx"
-"techlevel",1
-"techlossforgiveness",0
-"techlossrestore",50
-"tilesperplayer",100
-"tinyisles",TRUE
-"unreachableprotects",FALSE
+set=
+	{"name","value"
+;"borders","ENABLED"
+	"citymindist",1
+;"flatpoles",0
+;"foggedborders",TRUE
+;"mapsize","PLAYER"
+;"occupychance",100
+;"onsetbarbs",120
+;"razechance",10
+;"restrictinfra",TRUE
+;"revolentype","RANDQUICK"
+	"startunits","cccccwwwwAAA"
+;"techlevel",1
+;"techlossforgiveness",0
+;"techlossrestore",50
+;"tilesperplayer",100
+;"tinyisles",TRUE
+;"unreachableprotects",FALSE
 }
