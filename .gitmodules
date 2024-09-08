@@ -4,3 +4,7 @@
 [submodule "LT73Avi/data"]
 	path = LT73Avi/data
 	url = https://github.com/ec429/fc-aviation.git
+[submodule "Sim06"]
+	path = Sim06
+	url = https://github.com/longturn/Sim
+	branch = Sim06
