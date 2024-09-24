@@ -10,7 +10,7 @@ SERVER=${SERVER:-"$GAMEDIR/freeciv21-server"}
 SAVEDIR=${SAVEDIR:-"$GAMEDIR/save"}
 FCDBCONF=${FCDBCONF:-"${GAMEDIR}/db.conf"}
 
-OPTIONS="-A none -p $PORT --saves $SAVEDIR --log $SAVEDIR/freeciv.log -r $GAMENAME.serv -e -a -D $FCDBCONF -S $GAMEID"
+OPTIONS="-A none -p $PORT --saves $SAVEDIR --log $SAVEDIR/freeciv.log -e -a -D $FCDBCONF -S $GAMEID"
 
 if [ "$1" ]; then
 	SAVE="$SAVEDIR/$1"
@@ -20,6 +20,8 @@ fi
 
 if [ "$SAVE" ]; then
 	OPTIONS="$OPTIONS -f $SAVE"
+else
+	OPTIONS="$OPTIONS -r $GAMENAME.serv"
 fi
 
 if [ ! -f "${FCDBCONF}" ]; then
@@ -30,7 +32,7 @@ test ! -d $SAVEDIR && mkdir $SAVEDIR
 
 set -x
 export QT_MESSAGE_PATTERN="[%{time}] %{appname} - %{type} - %{message}"
-export FREECIV_DATA_PATH="$GAMEDIR/data:$INSTALL/share/freeciv21"
+export FREECIV_DATA_PATH="$GAMEDIR:$GAMEDIR/data:$INSTALL/share/freeciv21"
 
 # For auth modules installed via luarocks
 eval "$(luarocks path)"
