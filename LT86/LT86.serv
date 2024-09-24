@@ -7,8 +7,8 @@ set unitwaittime_style ACTIVITIES
 # map
 set mapsize "PLAYER"
 set gameseed "0"
-#set generator "FRACTAL"
-set generator "FRACTURE"
+set generator "FRACTAL"
+#set generator "FRACTURE"
 set startpos "VARIABLE" # ALL
 set huts 0
 set landmass 50
@@ -57,7 +57,8 @@ set happyborders "NATIONAL"
 set killcitizen "ENABLED"
 set killstack "ENABLED"
 set killunhomed "0"
-set fogofwar "ENABLED"
+#set fogofwar "ENABLED"  # real game
+set fogofwar "DISABLED" # test game
 set occupychance "0"
 set aqueductloss "0"
 set autoattack "DISABLED"
@@ -111,8 +112,10 @@ set ec_max_size 5000
 set ec_turns 9
 set maxplayers 126
 set saveturns 1
-set timeout 82800
-set unitwaittime 36000
+#set timeout 82800  # real game
+set timeout 120    # test game
+#set unitwaittime 36000  # real game
+set unitwaittime 10     # test game
 set fixedlength enabled
 set savefrequency "15"
 set savename "freeciv"
