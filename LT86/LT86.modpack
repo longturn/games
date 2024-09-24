@@ -1,0 +1,24 @@
+[info]
+options = "+Freeciv-2.6-modpack"
+baseURL = "https://raw.githubusercontent.com/longturn/games/master/LTT2"
+name = "Longturn Traditional V2.0 (LTT2) Ruleset"
+type = "Ruleset"
+version = "1.0-d8b4bc6"
+
+[files]
+list =
+{ "src", "dest"
+  "LTT2_local.serv", "LTT2.serv"
+  "data/LTT2/buildings.ruleset", "LTT2/buildings.ruleset"
+  "data/LTT2/cities.ruleset", "LTT2/cities.ruleset"
+  "data/LTT2/effects.ruleset", "LTT2/effects.ruleset"
+  "data/LTT2/game.ruleset", "LTT2/game.ruleset"
+  "data/LTT2/governments.ruleset", "LTT2/governments.ruleset"
+  "data/LTT2/nations.ruleset", "LTT2/nations.ruleset"
+  "data/LTT2/script.lua", "LTT2/script.lua"
+  "data/LTT2/styles.ruleset", "LTT2/styles.ruleset"
+  "data/LTT2/techs.ruleset", "LTT2/techs.ruleset"
+  "data/LTT2/terrain.ruleset", "LTT2/terrain.ruleset"
+  "data/LTT2/units.ruleset", "LTT2/units.ruleset"
+}
+

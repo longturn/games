@@ -1,0 +1,7 @@
+set aifill 2
+aitoggle AI*1
+aitoggle AI*2
+playernation AI*1 Nationame 1 Playername
+playernation AI*2 Nationame2 1 Playername2
+
+
