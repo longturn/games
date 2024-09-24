@@ -166,7 +166,7 @@ metapatches longturn
 set nationset all
 read players.serv
 
-#start
+start
 
 #Easy
 #metapatches
