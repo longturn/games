@@ -7,28 +7,28 @@ set unitwaittime_style ACTIVITIES
 # map
 set mapsize "PLAYER"
 set gameseed "0"
-set generator "FRACTAL"
-#set generator "FRACTURE"
-set barbarians disabled
+#set generator "FRACTAL"
+set generator "FRACTURE"
 set startpos "VARIABLE" # ALL
 set huts 0
-set landmass 60
+set landmass 50
 set specials 300
 set steepness 50
 set temperature 70
 set tilesperplayer 500
 set topology "WRAPX|WRAPY|ISO"
 set wetness 30
-set alltemperate enabled
-set tinyisles disabled
+set alltemperate "ENABLED"
+set tinyisles "DISABLED"
 set animals "0"
 set mapseed 0
 set separatepoles "ENABLED"
+set singlepole "DISABLED"
 set shieldbox "100"
 set foodbox "100"
-set singlepole "DISABLED"
+set flatpoles "0"
 set startcity "DISABLED"
-#set revealmap DEAD  #uncomment this for revealing the map for test games
+set revealmap START  #uncomment this for revealing the map for test games
 
 
 # general rules
@@ -57,7 +57,6 @@ set happyborders "NATIONAL"
 set killcitizen "ENABLED"
 set killstack "ENABLED"
 set killunhomed "0"
-set flatpoles "0"
 set fogofwar "ENABLED"
 set occupychance "0"
 set aqueductloss "0"
@@ -105,7 +104,7 @@ set demography   NnciwASLaPEgRMmuklOCqrbsz
 set aifill 0
 set allowtake ""
 cmdlevel info
-set compresstype plain
+set compresstype "LIBZ"
 set ec_chat enabled
 set ec_info enabled 
 set ec_max_size 5000
@@ -130,7 +129,6 @@ set autotoggle "DISABLED"
 set onsetbarbs "120"
 set barbarians "DISABLED"
 set borders "ENABLED"
-set compresstype "LIBZ"
 set maxconnectionsperhost "4"
 set maxplayers "500"
 set metamessage ""
@@ -158,14 +156,14 @@ set traitdistribution "FIXED"
 set turnblock "ENABLED"
 set homecaughtunits "ENABLED"
 
-metamessage "Longturn Traditional for multiplayer games | More info: https://longturn.net"
+metamessage "Longturn Traditional v2 for multiplayer games | More info: https://longturn.net"
 metapatches longturn
 
 # Players
 set nationset all
 read players.serv
 
-start
+#start
 
-Easy
-metapatches 
+#Easy
+#metapatches
