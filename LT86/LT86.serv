@@ -7,23 +7,23 @@ set unitwaittime_style ACTIVITIES
 # map
 set mapsize "PLAYER"
 set gameseed "0"
-set generator "FRACTAL"
-#set generator "FRACTURE"
+#set generator "FRACTAL"
+set generator "FRACTURE"
 set startpos "VARIABLE" # ALL
 set huts 0
-set landmass 50
+set landmass 55
 set specials 300
-set steepness 50
-set temperature 70
+set steepness 45
+set temperature 60
 set tilesperplayer 500
 set topology "WRAPX|WRAPY|ISO"
-set wetness 30
-set alltemperate "ENABLED"
+set wetness 60
+set alltemperate disabled
 set tinyisles "DISABLED"
 set animals "0"
 set mapseed 0
-set separatepoles "ENABLED"
-set singlepole "DISABLED"
+set separatepoles enabled
+set singlepole disabled
 set shieldbox "100"
 set foodbox "100"
 set flatpoles "0"
@@ -104,7 +104,6 @@ set demography   NnciwASLaPEgRMmuklOCqrbsz
 # technical
 set aifill 0
 set allowtake ""
-cmdlevel info
 set compresstype "LIBZ"
 set ec_chat enabled
 set ec_info enabled 
@@ -121,7 +120,6 @@ set savefrequency "15"
 set savename "freeciv"
 set kicktime "1800"
 set first_timeout "-1"
-set fixedlength "DISABLED"
 set scorefile "freeciv-score.log"
 set scorelog "ENABLED"
 set scoreloglevel "ALL"
@@ -143,7 +141,6 @@ set mgr_worldchance "10"
 set migration "DISABLED"
 set minplayers "1"
 set multiresearch "DISABLED"
-set nationset "all"
 set naturalcitynames "ENABLED"
 set citynames "PLAYER_UNIQUE"
 set netwait "4"
@@ -167,6 +164,7 @@ set nationset all
 read players.serv
 
 start
+cmdlevel info
 
-#Easy
-#metapatches
+easy
+metapatches
