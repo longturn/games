@@ -1,4 +1,4 @@
-set aifill 13
+set aifill 14
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
@@ -12,6 +12,7 @@ aitoggle AI*10
 aitoggle AI*11
 aitoggle AI*12
 aitoggle AI*13
+aitoggle AI*14
 playernation AI*1 Ukrainian 1 L1meE
 playernation AI*2 Cornish 1 el_perdedor
 playernation AI*3 Mitanni 1 Shoilf
@@ -25,3 +26,4 @@ playernation AI*10 Lesothoan 1 Vladimir
 playernation AI*11 Guyanese 1 kamBLR
 playernation AI*12 Norwegian 1 VikingBoyBilly
 playernation AI*13 French 1 Mr_Belegro
+playernation AI*14 Babylonian 1 Der_Faehrmann2099
