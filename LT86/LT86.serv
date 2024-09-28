@@ -57,8 +57,8 @@ set happyborders "NATIONAL"
 set killcitizen "ENABLED"
 set killstack "ENABLED"
 set killunhomed "0"
-#set fogofwar "ENABLED"  # real game
-set fogofwar "DISABLED" # test game
+set fogofwar "ENABLED"  # real game
+#set fogofwar "DISABLED" # test game
 set occupychance "0"
 set aqueductloss "0"
 set autoattack "DISABLED"
@@ -85,8 +85,8 @@ set techlevel 0
 set techlossforgiveness -1
 set techlossrestore 50
 set freecost 0 # for getting techs from philosphy etc
-set diplbulbcost 95
-set diplgoldcost 95
+set diplbulbcost 20
+set diplgoldcost 20
 set conquercost 95 # for getting techs with tech stealing/trading units
 set persistentready "DISABLED"
 set civilwarsize "10"
@@ -111,10 +111,10 @@ set ec_max_size 5000
 set ec_turns 9
 set maxplayers 126
 set saveturns 1
-#set timeout 82800  # real game
-set timeout 120    # test game
-#set unitwaittime 36000  # real game
-set unitwaittime 10     # test game
+set timeout 82800  # real game
+#set timeout 120    # test game
+set unitwaittime 36000  # real game
+#set unitwaittime 10     # test game
 set fixedlength enabled
 set savefrequency "15"
 set savename "freeciv"
