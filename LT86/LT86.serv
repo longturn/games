@@ -7,28 +7,28 @@ set unitwaittime_style ACTIVITIES
 # map
 set mapsize "PLAYER"
 set gameseed "0"
-set generator "FRACTAL"
-#set generator "FRACTURE"
-set barbarians disabled
+#set generator "FRACTAL"
+set generator "FRACTURE"
 set startpos "VARIABLE" # ALL
 set huts 0
-set landmass 60
+set landmass 55
 set specials 300
-set steepness 50
-set temperature 70
+set steepness 45
+set temperature 60
 set tilesperplayer 500
 set topology "WRAPX|WRAPY|ISO"
-set wetness 30
-set alltemperate enabled
-set tinyisles disabled
+set wetness 60
+set alltemperate disabled
+set tinyisles "DISABLED"
 set animals "0"
 set mapseed 0
-set separatepoles "ENABLED"
+set separatepoles enabled
+set singlepole disabled
 set shieldbox "100"
 set foodbox "100"
-set singlepole "DISABLED"
+set flatpoles "0"
 set startcity "DISABLED"
-#set revealmap DEAD  #uncomment this for revealing the map for test games
+#set revealmap START  #uncomment this for revealing the map for test games
 
 
 # general rules
@@ -57,8 +57,8 @@ set happyborders "NATIONAL"
 set killcitizen "ENABLED"
 set killstack "ENABLED"
 set killunhomed "0"
-set flatpoles "0"
-set fogofwar "ENABLED"
+set fogofwar "ENABLED"  # real game
+#set fogofwar "DISABLED" # test game
 set occupychance "0"
 set aqueductloss "0"
 set autoattack "DISABLED"
@@ -85,8 +85,8 @@ set techlevel 0
 set techlossforgiveness -1
 set techlossrestore 50
 set freecost 0 # for getting techs from philosphy etc
-set diplbulbcost 95
-set diplgoldcost 95
+set diplbulbcost 20
+set diplgoldcost 20
 set conquercost 95 # for getting techs with tech stealing/trading units
 set persistentready "DISABLED"
 set civilwarsize "10"
@@ -104,22 +104,22 @@ set demography   NnciwASLaPEgRMmuklOCqrbsz
 # technical
 set aifill 0
 set allowtake ""
-cmdlevel info
-set compresstype plain
+set compresstype "LIBZ"
 set ec_chat enabled
 set ec_info enabled 
 set ec_max_size 5000
 set ec_turns 9
 set maxplayers 126
 set saveturns 1
-set timeout 82800
-set unitwaittime 36000
+set timeout 82800  # real game
+#set timeout 120    # test game
+set unitwaittime 36000  # real game
+#set unitwaittime 10     # test game
 set fixedlength enabled
 set savefrequency "15"
 set savename "freeciv"
 set kicktime "1800"
 set first_timeout "-1"
-set fixedlength "DISABLED"
 set scorefile "freeciv-score.log"
 set scorelog "ENABLED"
 set scoreloglevel "ALL"
@@ -130,7 +130,6 @@ set autotoggle "DISABLED"
 set onsetbarbs "120"
 set barbarians "DISABLED"
 set borders "ENABLED"
-set compresstype "LIBZ"
 set maxconnectionsperhost "4"
 set maxplayers "500"
 set metamessage ""
@@ -142,7 +141,6 @@ set mgr_worldchance "10"
 set migration "DISABLED"
 set minplayers "1"
 set multiresearch "DISABLED"
-set nationset "all"
 set naturalcitynames "ENABLED"
 set citynames "PLAYER_UNIQUE"
 set netwait "4"
@@ -158,7 +156,7 @@ set traitdistribution "FIXED"
 set turnblock "ENABLED"
 set homecaughtunits "ENABLED"
 
-metamessage "Longturn Traditional for multiplayer games | More info: https://longturn.net"
+metamessage "Longturn Traditional v2 for multiplayer games | More info: https://longturn.net"
 metapatches longturn
 
 # Players
@@ -166,6 +164,7 @@ set nationset all
 read players.serv
 
 start
+cmdlevel info
 
-Easy
-metapatches 
+easy
+metapatches

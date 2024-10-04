@@ -1,7 +1,29 @@
-set aifill 2
+set aifill 14
 aitoggle AI*1
 aitoggle AI*2
-playernation AI*1 Nationame 1 Playername
-playernation AI*2 Nationame2 1 Playername2
-
-
+aitoggle AI*3
+aitoggle AI*4
+aitoggle AI*5
+aitoggle AI*6
+aitoggle AI*7
+aitoggle AI*8
+aitoggle AI*9
+aitoggle AI*10
+aitoggle AI*11
+aitoggle AI*12
+aitoggle AI*13
+aitoggle AI*14
+playernation AI*1 Ukrainian 1 L1meE
+playernation AI*2 Cornish 1 el_perdedor
+playernation AI*3 Mitanni 1 Shoilf
+playernation AI*4 Finnish 1 you
+playernation AI*5 Guanche 1 adecaelders
+playernation AI*6 Majapahit 1 Sasha
+playernation AI*7 Muscovite 1 Shoigu
+playernation AI*8 Abyssinian 1 Korak
+playernation AI*9 American 1 kingTevyn
+playernation AI*10 Lesothoan 1 Vladimir
+playernation AI*11 Guyanese 1 kamBLR
+playernation AI*12 Norwegian 1 VikingBoyBilly
+playernation AI*13 French 1 Mr_Belegro
+playernation AI*14 Babylonian 1 Der_Faehrmann2099
