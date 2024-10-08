@@ -62,7 +62,7 @@ set occupychance 0
 set rapturedelay 3
 set razechance 10
 set restrictinfra enabled
-set revolen 2
+set revolen 1
 set revolentype FIXED
 set savepalace enabled
 set spaceship_travel_time 150
