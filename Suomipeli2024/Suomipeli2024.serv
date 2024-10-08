@@ -24,14 +24,14 @@ set alltemperate disabled
 set barbarians disabled
 set generator "FRACTAL"
 set huts 0
-set landmass 50
+set landmass 40
 set mapsize "PLAYER"
 set separatepoles enabled
 set specials 600
 set startpos "ALL"
 set steepness 30
 set temperature 60
-set tilesperplayer 600
+set tilesperplayer 700
 set tinyisles disabled
 set topology "WRAPX|WRAPY|ISO"
 set wetness 60
