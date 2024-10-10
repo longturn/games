@@ -1,4 +1,4 @@
-set aifill 26
+set aifill 28
 
 # Make sure they are human
 aitoggle AI*1
@@ -27,6 +27,8 @@ aitoggle AI*23
 aitoggle AI*24
 aitoggle AI*25
 aitoggle AI*26
+aitoggle AI*27
+aitoggle AI*28
 
 # Set nations
 playernation AI*1 "East German" 1 "wieder"
@@ -55,3 +57,5 @@ playernation AI*23 "Roman" 1 "mijutu"
 playernation AI*24 "Scottish" 1 "Reginmund"
 playernation AI*25 "Babylonian" 1 "Surmansuu"
 playernation AI*26 "Aztec" 1 "v1znut"
+playernation AI*27 "Spanish" 1 "senorhukka"
+playernation AI*28 "Icelandic" 1 "Mary"
