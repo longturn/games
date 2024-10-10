@@ -31,7 +31,7 @@ set specials 600
 set startpos "ALL"
 set steepness 30
 set temperature 60
-set tilesperplayer 700
+set tilesperplayer 900
 set tinyisles disabled
 set topology "WRAPX|WRAPY|ISO"
 set wetness 60
