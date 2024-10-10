@@ -6,15 +6,15 @@ rulesetdir Suomipeli2024
 # test game / real game settings
 
 # Uncomment the following for test games
-set revealmap START                        # test game
-set timeout 120                            # test game
-set unitwaittime 10                         # test game
-set fogofwar "DISABLED"	               # test game
+#set revealmap START                        # test game
+#set timeout 120                            # test game
+#set unitwaittime 10                         # test game
+#set fogofwar "DISABLED"	               # test game
 
 # Set these for real games, add comment for test games
-#set timeout 82800                           # real game
-#set unitwaittime 36000                      # real game
-#set fogofwar "ENABLED"		                # real game
+set timeout 82800                           # real game
+set unitwaittime 36000                      # real game
+set fogofwar "ENABLED"		                # real game
 
 set unitwaittime_style ACTIVITIES   
 #set unitwaittime_extended enabled # unitwaittime also applies to newly-built and captured/bribed units
