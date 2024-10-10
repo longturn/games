@@ -1,4 +1,4 @@
-set aifill 15
+set aifill 26
 
 # Make sure they are human
 aitoggle AI*1
@@ -16,20 +16,42 @@ aitoggle AI*12
 aitoggle AI*13
 aitoggle AI*14
 aitoggle AI*15
+aitoggle AI*16
+aitoggle AI*17
+aitoggle AI*18
+aitoggle AI*19
+aitoggle AI*20
+aitoggle AI*21
+aitoggle AI*22
+aitoggle AI*23
+aitoggle AI*24
+aitoggle AI*25
+aitoggle AI*26
 
 # Set nations
 playernation AI*1 "East German" 1 "wieder"
 playernation AI*2 "Ukrainian" 1 "L1meE"
 playernation AI*3 "English" 1 "mikezy66"
-playernation AI*4 "Korean" 1 "laamanni"
-playernation AI*5 "Teutonic" 1 "iHevimies"
-playernation AI*6 "Karelian" 1 "paavo"
-playernation AI*7 "Scottish" 1 "Sasha"
-playernation AI*8 "Mitanni" 1 "Shoilf"
-playernation AI*9 "Etruscan" 1 "Yuccamask"
-playernation AI*10 "Werewolf" 1 "you"
-playernation AI*11 "Muscovite" 1 "Shoigu"
-playernation AI*12 "Gabonese" 1 "Vladimir"
-playernation AI*13 "Cornish" 1 "el_perdedor"
-playernation AI*14 "Florentine" 1 "kamBLR"
-playernation AI*15 "Ainu" 1 "mu"
+playernation AI*4 "North Korean" 1 "laamanni"
+playernation AI*5 "Finnish" 1 "meton"
+playernation AI*6 "Teutonic" 1 "iHevimies"
+playernation AI*7 "British" 1 "captain"
+playernation AI*8 "Karelian" 1 "paavo"
+playernation AI*9 "Libyan" 1 "Sasha"
+playernation AI*10 "Viking" 1 "jp"
+playernation AI*11 "Lithuanian" 1 "Modeemirotta"
+playernation AI*12 "Mitanni" 1 "Shoilf"
+playernation AI*13 "Etruscan" 1 "Yuccamask"
+playernation AI*14 "Kenyan" 1 "suihkulokki"
+playernation AI*15 "Atlantean" 1 "xtzu"
+playernation AI*16 "Werewolf" 1 "you"
+playernation AI*17 "Muscovite" 1 "Shoigu"
+playernation AI*18 "Gabonese" 1 "Vladimir"
+playernation AI*19 "Cornish" 1 "el_perdedor"
+playernation AI*20 "Florentine" 1 "kamBLR"
+playernation AI*21 "Ainu" 1 "mu"
+playernation AI*22 "Navajo" 1 "ollikka"
+playernation AI*23 "Roman" 1 "mijutu"
+playernation AI*24 "Scottish" 1 "Reginmund"
+playernation AI*25 "Babylonian" 1 "Surmansuu"
+playernation AI*26 "Aztec" 1 "v1znut"
