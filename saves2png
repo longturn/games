@@ -16,7 +16,6 @@ fi
 echo >saves2png.serv
 for sav in "$folder"/*.sav*; do
     echo load "$sav"
-    echo set minplayers 0
     echo start
     echo "mapimg define format=png:map=abctu:show=all:zoom=1"
     echo mapimg create all
