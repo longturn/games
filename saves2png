@@ -1,0 +1,25 @@
+#! /usr/bin/env bash
+
+# Usage: saves2png folder
+#
+# Creates a file called saves2png.serv that contains Freeciv21 server commands
+# to produce a map image for every save file in the specified folder. To
+# produce the images in the current directory, run:
+#   freeciv21-server -r saves2png.serv
+
+folder=$1
+if [ ! -d $folder ]; then
+    echo "$folder is not a directory" >&2
+    exit 1
+fi
+
+echo >saves2png.serv
+for sav in "$folder"/*.sav*; do
+    echo load "$sav"
+    echo set minplayers 0
+    echo start
+    echo "mapimg define format=png:map=abctu:show=all:zoom=1"
+    echo mapimg create all
+done >>saves2png.serv
+echo quit >>saves2png.serv
+
