@@ -1,4 +1,4 @@
-set aifill 8
+set aifill 9
 aitoggle AI*1
 aitoggle AI*2
 aitoggle AI*3
@@ -7,6 +7,7 @@ aitoggle AI*5
 aitoggle AI*6
 aitoggle AI*7
 aitoggle AI*8
+aitoggle AI*9
 playernation AI*1 Gallic 1 louis94
 playernation AI*2 Celtiberian 1 TriClad
 playernation AI*3 Belarusian 1 kamBLR
@@ -15,3 +16,4 @@ playernation AI*5 Cornish 1 el_perdedor
 playernation AI*6 Finnish 1 L1meE
 playernation AI*7 Venetian 1 Alfred
 playernation AI*8 Roman 1 Joy
+playernation AI*9 Azeri 1 Vladimir
