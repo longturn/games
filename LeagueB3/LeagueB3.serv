@@ -167,7 +167,6 @@ metapatches longturn
 set nationset all
 read players.serv
 
-syncturn # for longturn games
 start
 
 cmdlevel basic new
