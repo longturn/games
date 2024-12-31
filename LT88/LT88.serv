@@ -14,7 +14,7 @@ rulesetdir LT88
 # Set these for real games, add comment for test games
 set timeout 90000                           # real game
 set unitwaittime 36000                      # real game
-#set fogofwar "ENABLED"		                # real game
+set fogofwar "ENABLED"		                # real game
 
 set unitwaittime_style ACTIVITIES   
 #set unitwaittime_extended enabled # unitwaittime also applies to newly-built and captured/bribed units
