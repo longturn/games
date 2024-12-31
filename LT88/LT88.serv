@@ -6,7 +6,7 @@ rulesetdir LT88
 # test game / real game settings
 
 # Uncomment the following for test games
-#set revealmap START                        # test game
+set revealmap START                        # test game
 #set timeout 120                            # test game
 #set unitwaittime 10                         # test game
 set fogofwar "DISABLED"	               # test game
