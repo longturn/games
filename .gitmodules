@@ -8,3 +8,7 @@
 	path = Sim06
 	url = https://github.com/longturn/Sim
 	branch = Sim06
+[submodule "SG4"]
+	path = SG4
+	url = ../LTT-LTX
+	branch = game/SG4
