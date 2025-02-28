@@ -4908,3 +4908,12 @@ reqs    =
 	
 	
 
+; LT89’s only addition to LTT2: no wasting of food
+
+[effect_no_food_waste_upon_growth]
+type  = "Growth_Surplus_Pct"
+value = 100
+reqs    =
+    { "type", "name", "range"
+      "MinSize", "1", "City"
+    }
