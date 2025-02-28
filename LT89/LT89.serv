@@ -8,17 +8,17 @@ rulesetdir LT89
 
 ## Settings specific to test games (comment out for the real game)
 
-#set revealmap START
-#set timeout 120
-#set unitwaittime 10
-#set fogofwar "DISABLED"
+set revealmap START
+set timeout 120
+set unitwaittime 10
+set fogofwar "DISABLED"
 
 
 ## Settings specific to the real game (comment out for test games)
 
-set timeout 90000
-set unitwaittime 36000
-set fogofwar "ENABLED"
+#set timeout 90000
+#set unitwaittime 36000
+#set fogofwar "ENABLED"
 
 
 # Unit wait time
