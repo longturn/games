@@ -1,0 +1,24 @@
+set aifill 10
+
+aitoggle AI*1
+aitoggle AI*2
+aitoggle AI*3
+aitoggle AI*4
+aitoggle AI*5
+aitoggle AI*6
+aitoggle AI*7
+aitoggle AI*8
+aitoggle AI*9
+aitoggle AI*10
+
+playernation AI*1 "Nenets" 1 "Blauwal"
+playernation AI*2 "Hessian" 1 "blabber"
+playernation AI*3 "Atlantean" 1 "AHemlocksLie"
+playernation AI*4 "Ozite" 1 "mangofeet"
+playernation AI*5 "Filipino" 1 "Gorithow"
+playernation AI*6 "Laotian" 1 "thfr"
+playernation AI*7 "Gallic" 1 "petromax"
+playernation AI*8 "Sami" 1 "Eppu"
+playernation AI*9 "Confederate" 1 "Mr_Belegro"
+playernation AI*10 "Slovenian" 1 "croupier"
+
