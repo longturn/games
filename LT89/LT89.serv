@@ -30,15 +30,15 @@ set unitwaittime_style ACTIVITIES
 # Map
 
 set aifill 0
-set alltemperate enabled
+set alltemperate disabled
 set barbarians disabled
 set generator "FRACTAL"
 set huts 0
-set landmass 50
+set landmass 40
 set mapsize "PLAYER"
 set separatepoles enabled
 set specials 250
-set startpos "ALL"
+set startpos "VARIABLE"
 set steepness 30
 set temperature 60
 set tilesperplayer 600
