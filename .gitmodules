@@ -12,3 +12,7 @@
 	path = SG4
 	url = ../LTT-LTX
 	branch = game/SG4
+[submodule "Chaos52Dingo"]
+	path = Chaos52Dingo
+	url = https://github.com/longturn/rules-of-chaos.git
+	branch = chaos52dingo
