@@ -16,3 +16,6 @@
 	path = Chaos52Dingo
 	url = https://github.com/longturn/rules-of-chaos.git
 	branch = chaos52dingo
+[submodule "LT87Hex"]
+	path = LT87Hex
+	url = https://github.com/longturn/LTT-LTX.git
