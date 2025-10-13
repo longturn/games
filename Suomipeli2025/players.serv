@@ -1,0 +1,33 @@
+set aifill 14
+
+# Make sure they are human
+aitoggle AI*1
+aitoggle AI*2
+aitoggle AI*3
+aitoggle AI*4
+aitoggle AI*5
+aitoggle AI*6
+aitoggle AI*7
+aitoggle AI*8
+aitoggle AI*9
+aitoggle AI*10
+aitoggle AI*11
+aitoggle AI*12
+aitoggle AI*13
+aitoggle AI*14
+
+# Set nations
+playernation AI*1 "East German" 1 "wieder"
+playernation AI*2 "Ukrainian" 1 "L1meE"
+playernation AI*3 "Golden Horde" 1 "mikezy66"
+playernation AI*4 "Teutonic" 1 "iHevimies"
+playernation AI*5 "Lithuanian" 1 "Modeemirotta"
+playernation AI*6 "Karelian" 1 "paavo"
+playernation AI*7 "Finnish" 1 "meton"
+playernation AI*8 "Australian" 1 "Jfordie"
+playernation AI*9 "Dryad" 1 "ollikka"
+playernation AI*10 "Etruscan" 1 "Yuccamask"
+playernation AI*11 "Boer" 1 "xtc69"
+playernation AI*12 "Zanzibari" 1 "qanon"
+playernation AI*13 "Comorian" 1 "laamanni"
+playernation AI*14 "Cornish" 1 "el_perdedor"
