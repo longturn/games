@@ -24,7 +24,7 @@ set alltemperate disabled
 set barbarians disabled
 set generator "FRACTAL"
 set huts 0
-set landmass 40
+set landmass 30
 set mapsize "PLAYER"
 set separatepoles enabled
 set specials 400
