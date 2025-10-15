@@ -27,7 +27,7 @@ function destroy_fort_on_last_unit_killed(unit, loser, reason)
   if reason ~= "killed" then return end
   local tile = unit.tile
   if not tile:has_base("Fortress") then return end
-  if tile:num_units() > 0 then return end
+  if tile:num_units() > 1 then return end
   tile:remove_extra("Fortress")
   end
   

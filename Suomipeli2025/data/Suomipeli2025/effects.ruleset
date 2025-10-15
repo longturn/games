@@ -5071,6 +5071,26 @@ reqs    =
     }
 
 
+[effect_unit_shield_value_recycle_caravan]
+type    = "Unit_Shield_Value_Pct"
+value   = 30
+reqs    =
+    { "type",   "name",         "range", "present"
+      "Action", "Recycle Unit", "Local", TRUE
+	  "UnitType","Caravan","Local",TRUE
+    }
+
+
+[effect_unit_shield_value_recycle_freight]
+type    = "Unit_Shield_Value_Pct"
+value   = 30
+reqs    =
+    { "type",   "name",         "range", "present"
+      "Action", "Recycle Unit", "Local", TRUE
+	  "UnitType","Freight","Local",TRUE
+    }
+
+
 
 [effect_hal_salflieni_hypogeum]
 type    = "Output_Add_Tile"
