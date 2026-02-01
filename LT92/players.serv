@@ -1,4 +1,4 @@
-set aifill 6
+set aifill 9
 
 # Make sure they are human
 aitoggle AI*1
@@ -7,12 +7,17 @@ aitoggle AI*3
 aitoggle AI*4
 aitoggle AI*5
 aitoggle AI*6
+aitoggle AI*7
+aitoggle AI*8
+aitoggle AI*9
 
 # Set nations
-playernation AI*1 "Korean" 1 "chill"
-playernation AI*2 "Esperant" 1 "Arminius"
-playernation AI*3 "Cornish" 1 "el_perdedor"
-playernation AI*4 "Yugoslav" 1 "Corbeau"
-playernation AI*5 "Swedish" 1 "nilamo"
-playernation AI*6 "Holy Roman" 1 "ipilowe"
-
+playernation AI*1 "Finnish" 1 "L1meE"
+playernation AI*2 "Pelasgian" 1 "LeoAfricanus"
+playernation AI*3 "Korean" 1 "chill"
+playernation AI*4 "Esperant" 1 "Arminius"
+playernation AI*5 "Cornish" 1 "el_perdedor"
+playernation AI*6 "Yugoslav" 1 "Corbeau"
+playernation AI*7 "Swedish" 1 "nilamo"
+playernation AI*8 "Holy Roman" 1 "ipilowe"
+playernation AI*9 "North Korean" 1 "louis94"
