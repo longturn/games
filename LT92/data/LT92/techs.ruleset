@@ -196,7 +196,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.bronze_working"
 graphic_alt = "-"
-cost     = 10
+cost     = 7
 
 [advance_ceremonial_burial]
 name     = _("Ceremonial Burial")
