@@ -13,7 +13,7 @@ set unitwaittime 10  # test game
 #set fogofwar "ENABLED"		# real game
 set fogofwar "DISABLED"		# test game
 
-set mgr_distance "7"
+set mgr_distance "3"
 set mgr_foodneeded "ENABLED"
 set mgr_nationchance "50"
 set mgr_turninterval "1"
