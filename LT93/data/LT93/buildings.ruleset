@@ -12,7 +12,8 @@
 
 [datafile]
 description="Longturn Traditional based on Civ2Civ3 buildings data for Freeciv"
-options="+Freeciv-2.6-ruleset"
+options="+Freeciv-ruleset-Devel-2017.Jan.02"
+format_version=20
 
 ; /* <-- avoid gettext warnings
 ;
@@ -54,6 +55,9 @@ options="+Freeciv-2.6-ruleset"
 ; "Gold"             = Not a real building; production turned into gold
 ;                      indefinitely (capitalization/coinage).
 ;                      Genus should be "Special".
+; "DisasterProof"    = Disasters never destroy this building. Is meaningful
+;                      only for genus "Improvement" buildings as others are
+;                      automatically disaster proof.
 ;
 ; */ <-- avoid gettext warnings
 
@@ -67,7 +71,9 @@ reqs	=
     }
 graphic	= "b.academy"
 graphic_alt	= "b.university"
-obsolete_by	= "None"
+obsolete_by	=
+    { "type", "name", "range"
+    }
 build_cost	= 30
 upkeep		= 0
 sabotage	= 100
@@ -236,7 +242,7 @@ name		= _("Occupation Government")
 genus		= "Improvement"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Leadership", "Player"
+      "Tech", "Economics", "Player"
     }
 graphic	= "b.occupationgov"
 graphic_alt	= "b.barracks_i"
@@ -489,8 +495,8 @@ reqs	=
     { "type", "name", "range"
       "Tech", "Construction", "Player"
     }
-graphic	= "b.amphitheater"
-graphic_alt	= "b.colosseum"
+graphic	    = "b.amphitheater"
+graphic_alt = "b.colosseum"
 obsolete_by	=
     { "type", "name", "range"
     }
@@ -613,7 +619,7 @@ helps cities to grow faster and more easily withstand famine. With a \
 Granary this is extended to cities of size 4 and above. \
 The automatic or default granary effect applies to cities with size less than \
 4 just before they grow. When a city grows from size 3 to size 4 it will always have \
-50% of the food stored in the granary after the size chanage. \
+50% of the food stored in the granary after the size change. \
 If a city doesn't have a granary building and it grows from size 4 to \
 size 5 there will be no food stored in the granary. If a city has the granary \
 city improvement and it grows from size 4 to 5 it will have 50% food stored in the granary. \ 
@@ -910,7 +916,6 @@ If the capital is in a dangerous location, or a more central capital\
 _("\
 Under Despotism the city containing the palace gains a +75% \
 gold bonus, and under Monarchy a +50% gold bonus. \
-The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 [building_second_palace]
@@ -942,13 +947,12 @@ entirely).\
 "), _("\
 The city where this palace is located cannot be incited to revolt, \
 and enjoys a bonus when enemy agents try to evade your own agents \
-stationed in the city, or sabotage your buildings.\
+stationed in the city, or sabotage your buildings. Losing the 2nd palace will destroy your space ship if it's on the way. \
 "),
 ; /* xgettext:no-c-format */
 _("\
 Under Despotism the city containing the palace gains a +75% \
 gold bonus, and under Monarchy a +50% gold bonus.\
-The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 [building_police_station]
@@ -1024,7 +1028,6 @@ helptext	= _("\
 Allows a city to build veteran sea units.  Also, damaged sea units\
  which stay in town for one full turn without moving are completely\
  restored.\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 ; Includes Triremes, but not worth mentioning explicitly as unlikely
 ; to happen
@@ -1605,9 +1608,6 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Each tile around the city where this wonder is built that is already\
  generating some trade produces one extra trade resource.\
- If the nation's government is Despotism or Tribal this small wonder will \
-also work as a government center as long as it's not obsoleted. \
-The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 [building_copernicus_observatory]
@@ -1631,7 +1631,6 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Each tile worked by the city where this wonder is built produces \
 one extra research point.\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 [building_cure_for_cancer]
@@ -1658,7 +1657,6 @@ happy in each of your cities (2 extra luxury per city). It further \
 reduces your risk of plague (by 10% of the base chance); with \
 knowledge of Medicine, any of your cities with an Aqueduct and a \
 Sewer System will be entirely free of plague.\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 [building_darwins_voyage]
@@ -1761,7 +1759,6 @@ Increases the defense of all your cities by adding a +40% bonus to \
 its units' intrinsic defense strength against land units (this is cumulative \
 with any City Walls), and preventing the loss of population which occurs \
 when a defending unit is defeated by a land unit.\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 [building_hanging_gardens]
@@ -1787,7 +1784,6 @@ Makes one unhappy citizen content in every city of the player that \
 owns it (not including citizens unhappy about aggression). This wonder \
 also makes two content citizens happy in the city where it is located \
 (4 extra luxury points).\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 [building_hoover_dam]
@@ -1862,7 +1858,6 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Makes one content citizen happy in every city of the player that owns \
 it (2 extra luxury points per city).\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 [building_king_richards_crusade]
@@ -1890,7 +1885,6 @@ unhappiness caused by a single military unit (except under Democracy, \
 where a single unit makes two citizens unhappy). Under governments \
 where unit upkeep is paid in gold, it gives two free gold per city \
 towards upkeep every turn.\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 [building_leonardos_workshop]
@@ -1913,7 +1907,6 @@ sound		= "w_leonardos_workshop"
 sound_alt	= "w_generic"
 helptext	= _("\
 Upgrades two obsolete units per game turn.\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 
@@ -1963,7 +1956,6 @@ helptext	= _("\
 Gives all your sea units 1 additional movement point (except Triremes \
 while moving on rivers). Makes all your new sea units veterans (for all \
 your cities).\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 [building_magellans_expedition]
@@ -1989,7 +1981,6 @@ helptext	= _("\
 Gives all your sea units 1 additional movement point. The chance\
  of a sea unit getting the next veteran level after a battle\
  increases by half.\
-  The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 
@@ -2044,7 +2035,7 @@ Increases trade output by 30% in all cities for all the\
  players. The player owning this wonder is the only one able to build the Trade Company. \
 "), _("\
 TIP: it may make sense to let someone else to build this wonder. Everyone gets the effect \
-and the Trade Conpany can't usually be instantly built after Marco Polo is finished.\
+and the Trade Company can't usually be instantly built after Marco Polo is finished.\
 ")
 
 
@@ -2114,7 +2105,7 @@ graphic_alt	=  "b.university"
 obsolete_by	=
     { "type", "name", "range", "survives"
     }
-build_cost	= 2000
+build_cost	= 1500
 upkeep		= 0
 sabotage	= 0
 sound		= "w_marco_polos_embassy"
@@ -2139,7 +2130,7 @@ graphic_alt	=  "b.university"
 obsolete_by	=
     { "type", "name", "range", "survives"
     }
-build_cost	= 4000
+build_cost	= 3000
 upkeep		= 0
 sabotage	= 0
 sound		= "w_marco_polos_embassy"
@@ -2174,7 +2165,6 @@ helptext	= _("\
 Doubles the base effect of Cathedrals. This makes 3 additional unhappy \
 citizens content in each city with a Cathedral; however, it does \
 not affect citizens made unhappy by aggression.\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 [building_mausoleum_of_mausolos]
@@ -2188,7 +2178,7 @@ graphic         = "b.mausoleum"
 graphic_alt     = "b.oracle"
 obsolete_by	=
     { "type", "name", "range", "survives"
-      "Tech", "The Republic", "Player", FALSE
+      "Tech", "Construction", "Player", FALSE
     }
 build_cost	= 80
 upkeep		= 0
@@ -2199,7 +2189,6 @@ helptext	= _("\
 With this wonder, City Walls and Courthouses each make one unhappy \
 citizen content in their city, unless that citizen is unhappy about \
 aggression. Also, none of the owner's cities can be incited to revolt.\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 [building_statue_of_zeus]
@@ -2226,9 +2215,6 @@ units owned by the city by 1 -- in other words, it neutralizes the \
 unhappiness caused by a single military unit (except under Democracy, \
 where a single unit makes two citizens unhappy). Each city also avoids \
 one shield of upkeep for units.\
-If the nation's government is Despotism or Tribal this small wonder will \
-also work as a government center as long as it's not obsoleted.\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 [building_temple_of_artemis]
@@ -2253,7 +2239,6 @@ sound_alt	= "w_generic"
 helptext	= _("\
 Makes 2 additional unhappy citizens content in every city with \
 a Temple. Does not affect citizens made unhappy by aggression.\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 [building_pyramids]
@@ -2261,7 +2246,7 @@ name		= _("Pyramids")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Masonry", "Player"
+      "Tech", "Mathematics", "Player"
     }
 graphic	= "b.pyramids"
 graphic_alt	= "-"
@@ -2269,7 +2254,7 @@ obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Railroad", "Player", FALSE
     }
-build_cost	= 75
+build_cost	= 70
 upkeep		= 0
 sabotage	= 0
 sound		= "w_pyramids"
@@ -2280,7 +2265,6 @@ generating some shield output produces one extra shield resource. \
 Under Despotism or Tribal governments, the Pyramids cancel the penalty \
 to worked tiles with output greater than 2 (for all kinds of output), \
 as if all your cities were always celebrating.\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 [building_internet]
@@ -2360,7 +2344,6 @@ helptext	= _("\
 All your new military land units start with an additional veteran level \
 (this is cumulative with any Barracks building in a city; with both, units \
 are created as veteran 2).\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 
@@ -2386,7 +2369,6 @@ helptext	= _("\
 All your new military land units built in the city with the Terracotta Army start with an additional veteran level \
 (this is cumulative with any Barracks building in a city; with both, units \
 are created as veteran 2 or as veteran 3 if the player also owns Sun Tzu's War Academy). This does not apply to siege units such as catapults.\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 [building_united_nations]
@@ -2442,9 +2424,6 @@ sound_alt	= "w_generic"
 helptext	= _("\
 One of the most early studies containing mathematical results and theorems. \
 Gives 4 extra bulbs to the city it's in. This wonder expires very early. \
-If the nation's government is Despotism or Tribal this amazing building will \
-also work as a government center as long as it's not obsoleted.\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 
@@ -2471,9 +2450,6 @@ helptext	= _("\
 It pre-dates bronze age and was one of the first, if not the first, shrines built. \
 With this wonder, the city having it will get +6 additional lux. The effect \
 of this very early wonder ends with the invention of bronze. \
-If the nation's government is Despotism or Tribal this amazing building will \
-also work as a government center as long as it's not obsoleted.\
- The build cost shown is half of the actual cost. One shield left will cost 4 units of gold.\
 ")
 
 [building_capitalization]

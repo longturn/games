@@ -12,7 +12,8 @@
 
 [datafile]
 description="Longturn Traditional based on Civ2Civ3 governments data for Freeciv"
-options="+Freeciv-2.6-ruleset"
+options="+Freeciv-ruleset-Devel-2017.Jan.02"
+format_version=20
 
 [governments]
 during_revolution="Anarchy"
@@ -85,7 +86,7 @@ _("\
 * Military units do not cause unhappiness even when deployed aggressively.\n\
 * Military units impose martial law. Up to 3 military units inside a city\
  will each force 1 unhappy citizen to become content.\n\
-* You have no control over tax rates. Half of the trade income is\
+* You have no control over the national budget. Half of the trade income is\
  simply lost to your economy (less if you have luxury-promoting buildings),\
  and the remainder all goes to luxuries.\
  Conventional corruption increases with distance from the capital\
@@ -114,12 +115,10 @@ Under a Tribal government, you are part ruler of your people. Your\
  The cities need to be close to the government center or there will\
  be issues with waste. With Tribalism it's possible to counter this\
  effect with some early wonders that will act like government centers.\
- However these wonders will expire realtively soon and Tribalism is not\
+ However these wonders will expire relatively soon and Tribalism is not\
  that well suited for an advanced empire.\
 "), _("\
-Compared to Despotism, a Tribal economy is more shield-oriented and it has \
-a huge penalty for sci production. The penalty from distance to the gov center \
-is however half of what despotism has. Its\
+Compared to Despotism, a Tribal economy is more shield-oriented. Its\
  bonuses to veterancy can be an advantage in wartime.\
 "),
 ; /* xgettext:no-c-format */
@@ -162,9 +161,8 @@ Under Despotism, you are the absolute ruler of your people.  Your\
  The cities need to be close to the government center or there will\
  be issues with waste. With despotism it's possible to counter this\
  effect with some early wonders that will act like government centers.\
- However these wonders will expire realtively soon and Despotism is not\
- that well suited for an advanced empire. The penalty for distance to \
- the capital is twice of what monarchy or tribal have.\
+ However these wonders will expire relatively soon and Despotism is not\
+ that well suited for an advanced empire.\
 "), _("\
 Compared to Tribalism, a Despotic economy is more trade-oriented.\
 "),
@@ -296,7 +294,7 @@ In a fundamentalist society, the people and the rulers are entirely\
 "), _("\
 Improvements that normally convert unhappy citizens to content\
  citizens, produce `tithes' (gold) equivalent to the number\
- of people they would convert, and require no maintenance.\
+ of people they would convert.\
 "), _("\
 Fundamentalism is a good government for maximizing gold, and its Fanatics\
  are useful in wartime, but it has a heavy penalty to technological\
@@ -346,7 +344,7 @@ _("\
  already producing trade. (Cities below size 3 will not celebrate.)\n\
 * Each city can support up to 2 units for free; further units each cost\
  2 gold per turn.\n\
-* If the player knows The Corporation there will be +50% increase to the\
+* If the player knows The Corporation there will be +25% increase to the\
  science production.\n\
 * Each city tolerates up to 2 aggressively deployed military units;\
  each further unit causes 1 unhappy citizen.\n\
@@ -431,7 +429,7 @@ _("\
 * Each city can support one unit for free; further units each cost\
  2 gold per turn.\n\
 * None of the cities can tolerate even a single aggressively deployed military unit;\
- The first one cause one unhappy citizend and additional units each cause 2 unhappy citizens.\n\
+ The first one cause one unhappy citizen and additional units each cause 2 unhappy citizens.\n\
 * Base corruption is 5%. This increases with distance from the capital\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 25%. This increases with distance from the\
@@ -451,7 +449,7 @@ _("\
 
 name        = _("City States")
 reqs = { "type", "name", "range"
-         "tech", "Bronze Working", "Player"
+         "tech", "Iron Working", "Player"
        }
 graphic     = "gov.citystates"
 graphic_alt = "gov.republic"
@@ -465,7 +463,7 @@ Under a City States government, the nation is formed by a coalition of city stat
  not get upset easily if the coalition only controls a few cities. Even the far away military units are tolerated.\ 
  However more territory and expansion leads to serious unhappiness issues since the system is unable to resolve internal conflicts in a vast empire.\
  A City States economy is very trade-oriented and this allows the capital city with the palace to have 8 extra content citizens.\
- The City State goventment is intended to be used by nations with very little land.\
+ The City State government is intended to be used by nations with very little land.\
 "),
 ; /* xgettext:no-c-format */
 _("\
@@ -508,6 +506,7 @@ _("\
 ;                            effect_value = (ui_value + offset) * (factor/100)
 ;                            Optional; by default offset=0, factor=100, so
 ;                            that UI values are used as-is.
+; reqs                    = requirements for adjusting this policy (see README.effects)
 ; helptext                = optional help text string; should escape all raw 
 ;                           newlines so that xgettext parsing works
 ;

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+GAMEID=LT93
+GAMENAME=LT93
+GAMEDIR=$HOME/server/LT93
+PORT=5093
+
+. ../rc.subr.fc21

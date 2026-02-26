@@ -12,10 +12,11 @@
 
 [datafile]
 description="Longturn Traditional based on Civ2Civ3 tile_type data for Freeciv"
-options="+Freeciv-2.6-ruleset"
+options="+Freeciv-ruleset-Devel-2017.Jan.02"
+format_version=20
 
 [control]
-; Names for custom terrain flags. There can be up to 8 of these.
+; Names for custom terrain flags. There can be up to 10 of these.
 ; name          = rule name; In some circumstances user may see this
 ;                 as part of some sentences, so try to make it descriptive
 ;                 and sensible.
@@ -25,6 +26,23 @@ flags =
     _("Oil"), _("Mine can be upgraded to Oil Well.")
     _("Sea"), _("Allows cities to build Harbors and coastal wonders.")
     _("NoPollution"), _("No Pollution nor Fallout appear here.")
+    _("NoFortify"), _("No units can fortify on this terrain.")
+  }
+
+; Names for custom extra flags. There can be up to 8 of these.
+; name          = rule name; In some circumstances user may see this
+;                 as part of some sentences, so try to make it descriptive
+;                 and sensible.
+; helptxt       = displayed in the help for extra types with this flag
+;                 (optional)
+extra_flags =
+  { "name", "helptxt"
+    _("ParadropFrom"), _("Units can paradrop from this tile.")
+    _("DiplomatDefense"),
+        ; /* xgettext:no-c-format */
+        _("Diplomatic units get a 25% defense bonus in diplomatic fights.")
+    _("IrrigationSource")
+    _("AllowsFarmlandOnDesert")
   }
 
 [parameters]
@@ -105,6 +123,8 @@ ocean_resources = FALSE
 ;                        Nonzero values only affect extras with build_time 0.
 ; road_time            = time to build roads; if 0, cannot build any roads.
 ;                        Nonzero values only affect extras with build_time 0.
+; cultivate_time       = time to cultivate
+; plant_time           = time to plant
 ; irrigation_result    = result of 'irrigate' activity; one of:
 ;                        "no"  -- cannot irrigate
 ;                        "yes" -- can build extra
@@ -129,6 +149,10 @@ ocean_resources = FALSE
 ;                        terrain rule_name -- transformation changes to that
 ;                          terrain
 ; transform_time       = time to transform; if 0, cannot transform
+; placing_time         = time for 'placing' an extra; if 0, cannot place
+;                        Nonzero values only affect extras with build_time 0.
+;                        Such extras can modify time with build_time_factor.
+;                        Default is 1.
 ; pillage_time         = time to pillage extra from the tile (0 = impossible)
 ;                        Nonzero values only affect extras with removal_time 0.
 ; clean_pollution_time = time for 'clean pollution' activity (0 = impossible)
@@ -167,7 +191,6 @@ ocean_resources = FALSE
 ;                        (lua scripting)
 ;   - NoZoc            = Units on this terrain are not generating or subject
 ;                        to zoc
-;   - NoFortify        = Units cannot fortify on this terrain
 ;   - Frozen           = Frozen/polar terrain. For water tiles, Frozen terrain
 ;                        is generated near poles. Conversion between frozen
 ;                        and unfrozen terrain can be controlled with
@@ -211,6 +234,8 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 0
 road_time            = 0
+cultivate_time       = 0
+plant_time           = 0
 irrigation_result    = "no"
 irrigation_food_incr = 0
 irrigation_time      = 0
@@ -252,6 +277,8 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 0
+cultivate_time       = 0
+plant_time           = 0
 irrigation_result    = "no"
 irrigation_food_incr = 0
 irrigation_time      = 0
@@ -295,13 +322,15 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 0
+cultivate_time       = 0
+plant_time           = 0
 irrigation_result    = "no"
 irrigation_food_incr = 0
 irrigation_time      = 0
 mining_result        = "no"
 mining_shield_incr   = 0
 mining_time          = 0
-transform_result     = "Swamp"
+transform_result     = "Desert"
 transform_time       = 72
 pillage_time         = 1
 clean_pollution_time = 3
@@ -339,6 +368,8 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 0
+cultivate_time       = 0
+plant_time           = 0
 irrigation_result    = "no"
 irrigation_food_incr = 0
 irrigation_time      = 0
@@ -383,6 +414,8 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
+cultivate_time       = 0
+plant_time           = 0
 irrigation_result    = "no"
 irrigation_food_incr = 0
 irrigation_time      = 0
@@ -428,6 +461,8 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 100
 base_time            = 1
 road_time            = 2
+cultivate_time       = 0
+plant_time           = 0
 irrigation_result    = "yes"
 irrigation_food_incr = 1
 irrigation_time      = 5
@@ -478,14 +513,16 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
+cultivate_time       = 10
+plant_time           = 80
 irrigation_result    = "Plains"
 irrigation_food_incr = 0
-irrigation_time      = 10
+irrigation_time      = 80
 mining_result        = "Swamp"
 mining_shield_incr   = 0
-mining_time          = 15
+mining_time          = 80
 transform_result     = "Grassland"
-transform_time       = 24
+transform_time       = 96
 pillage_time         = 1
 clean_pollution_time = 3
 clean_fallout_time   = 3
@@ -525,6 +562,8 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 100
 base_time            = 1
 road_time            = 2
+cultivate_time       = 0
+plant_time           = 15
 irrigation_result    = "yes"
 irrigation_food_incr = 1
 irrigation_time      = 5
@@ -569,6 +608,8 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
+cultivate_time       = 0
+plant_time           = 0
 irrigation_result    = "yes"
 irrigation_food_incr = 1
 irrigation_time      = 10
@@ -617,6 +658,8 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 8
+cultivate_time       = 10
+plant_time           = 0
 irrigation_result    = "Plains"
 irrigation_food_incr = 0
 irrigation_time      = 36
@@ -643,7 +686,7 @@ color.g              = 156
 color.b              = 38
 helptext             = _("\
 Jungles are densely overgrown, making agriculture somewhat\
- problematic. Sone land units may not move into jungle without\
+ problematic. Some land units may not move into jungle without\
  a road.\
 ")
 
@@ -664,6 +707,8 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 6
+cultivate_time       = 0
+plant_time           = 0
 irrigation_result    = "no"
 irrigation_food_incr = 0
 irrigation_time      = 0
@@ -713,12 +758,14 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 100
 base_time            = 1
 road_time            = 2
+cultivate_time       = 0
+plant_time           = 20
 irrigation_result    = "yes"
 irrigation_food_incr = 1
 irrigation_time      = 5
 mining_result        = "Forest"
 mining_shield_incr   = 0
-mining_time          = 10
+mining_time          = 32
 transform_result     = "Hills"
 transform_time       = 96
 pillage_time         = 1
@@ -758,9 +805,11 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
 road_time            = 4
+plant_time           = 10
+cultivate_time       = 10
 irrigation_result    = "Grassland"
 irrigation_food_incr = 1
-irrigation_time      = 5
+irrigation_time      = 20
 mining_result        = "Forest"
 mining_shield_incr   = 0
 mining_time          = 12
@@ -806,6 +855,8 @@ road_shield_incr_pct = 0
 road_trade_incr_pct  = 100
 base_time            = 1
 road_time            = 2
+cultivate_time       = 0
+plant_time           = 0
 irrigation_result    = "no"
 irrigation_food_incr = 0
 irrigation_time      = 0
@@ -833,46 +884,40 @@ Tundra are broad, cold regions, fit for some agriculture and little\
  else.\
 ")
 
-; The individual resource types, one per section.
-; Roughly sorted by identifier.
+; /* <-- avoid gettext warnings
+;
+; Resource types:
+;
 ; The actual tag used (the * in [resource_*]) must be unique for each resource,
 ; and may be used in debug output when reading this file.
 ;
 ; Notes:
 ;
-; name                 = name as seen by user
-; graphic              = tag specifying preferred graphic
-; graphic_alt          = tag for alternate graphic if preferred graphic is not
-;                        present; especially if preferred graphic is non-standard,
-;                        this should be a standard tag.  Otherwise can use eg "-"
-;                        for no alternate graphic.
-; identifier           = single-character identifier used in savegames.  This
+; extra                = name of the extra this resource section is part of
+;                        (must have "Resource" in its causes)
+; identifier           = single-character identifier used in old savegames. This
 ;                        must be unique for each resource, and changing it will
-;                        break savegame compatibility.
+;                        break loading those old savegames.
 ; food                 = increased food production
 ; shield               = increased shield production
 ; trade                = increased trade production
+;
+; */ <-- avoid gettext warnings
 
 [resource_gold]
-name        = _("Gold")
-graphic     = "ts.gold"
-graphic_alt = "-"
+extra       = "Gold"
 identifier  = "$"
 trade       = 6
 # glacier, hills, mountains.
 
 [resource_iron]
-name        = _("Iron")
-graphic     = "ts.iron"
-graphic_alt = "-"
+extra       = "Iron"
 identifier  = "/"
 shield      = 4
 # mountains.
 
 [resource_game]
-name        = _("?animals:Game")
-graphic     = "ts.tundra_game"
-graphic_alt = "-"
+extra       = "Game"
 identifier  = "e"
 food        = 3
 shield      = 1
@@ -880,9 +925,7 @@ trade		= 2
 # tundra.
 
 [resource_furs]
-name        = _("Furs")
-graphic     = "ts.furs"
-graphic_alt = "-"
+extra       = "Furs"
 identifier  = "u"
 food        = 1
 shield      = 1
@@ -890,34 +933,26 @@ trade       = 4
 # tundra-only (beaver pelts).
 
 [resource_coal]
-name        = _("Coal")
-graphic     = "ts.coal"
-graphic_alt = "-"
+extra       = "Coal"
 identifier  = "c"
 shield      = 2
 # hills.
 
 [resource_fish]
-name        = _("Fish")
-graphic     = "ts.fish"
-graphic_alt = "-"
+extra       = "Fish"
 identifier  = "y"
 food        = 2
 # ocean.
 
 [resource_fruit]
-name        = _("Fruit")
-graphic     = "ts.fruit"
-graphic_alt = "-"
+extra       = "Fruit"
 identifier  = "f"
 food        = 3
 trade       = 1
 # jungle.
 
 [resource_gems]
-name        = _("Gems")
-graphic     = "ts.gems"
-graphic_alt = "-"
+extra       = "Gems"
 identifier  = "g"
 trade       = 4
 # jungle.
@@ -925,17 +960,13 @@ trade       = 4
 ; "h" reserved for strategic horses
 
 [resource_buffalo]
-name        = _("Buffalo")
-graphic     = "ts.buffalo"
-graphic_alt = "-"
+extra       = "Buffalo"
 identifier  = "b"
 shield      = 2
 # plains (horses => buffalo => cattle).
 
 [resource_wheat]
-name        = _("Wheat")
-graphic     = "ts.wheat"
-graphic_alt = "-"
+extra       = "Wheat"
 identifier  = "j"
 food        = 2
 # plains.
@@ -947,26 +978,20 @@ food        = 2
 ; "m" reserved for marble
 
 [resource_oasis]
-name        = _("Oasis")
-graphic     = "ts.oasis"
-graphic_alt = "-"
+extra       = "Oasis"
 identifier  = "o"
 food        = 3
 trade       = 4
 # desert.
 
 [resource_peat]
-name        = _("Peat")
-graphic     = "ts.peat"
-graphic_alt = "-"
+extra       = "Peat"
 identifier  = "a"
 shield      = 4
 # swamp (petroleum => peat => petroleum).
 
 [resource_pheasant]
-name        = _("Pheasant")
-graphic     = "ts.pheasant"
-graphic_alt = "-"
+extra       = "Pheasant"
 identifier  = "p"
 food        = 2
 # forest, forested.
@@ -974,17 +999,13 @@ food        = 2
 ; "r" reserved for rubber
 
 [resource_bonus]
-name        = _("Resources")
-graphic     = "ts.grassland_resources"
-graphic_alt = "-"
+extra       = "Resources"
 identifier  = "r"
 shield      = 1
 # grassland.
 
 [resource_icy_ivory]
-name        = _("Ivory")
-graphic     = "ts.arctic_ivory"
-graphic_alt = "-"
+extra       = "Ivory"
 identifier  = "i"
 food        = 1
 shield      = 1
@@ -992,17 +1013,13 @@ trade       = 4
 # glacier (seals => walrus).
 
 [resource_silk]
-name        = _("Silk")
-graphic     = "ts.silk"
-graphic_alt = "-"
+extra       = "Silk"
 identifier  = "s"
 trade       = 3
 # forest, wooded.
 
 [resource_spice]
-name        = _("Spice")
-graphic     = "ts.spice"
-graphic_alt = "-"
+extra       = "Spice"
 identifier  = "t"
 food        = 2
 trade       = 4
@@ -1011,26 +1028,20 @@ trade       = 4
 ; "u" reserved for uranium
 
 [resource_whales]
-name        = _("Whales")
-graphic     = "ts.whales"
-graphic_alt = "-"
+extra       = "Whales"
 identifier  = "v"
 food        = 1
 shield      = 1
 # ocean (sea).
 
 [resource_wine]
-name        = _("Wine")
-graphic     = "ts.wine"
-graphic_alt = "-"
+extra       = "Wine"
 identifier  = "w"
 trade       = 4
 # hills-only.
 
 [resource_oil]
-name        = _("Oil")
-graphic     = "ts.oil"
-graphic_alt = "-"
+extra       = "Oil"
 identifier  = "x"
 shield      = 3 ; glacier used to have 4
 # glacier, desert
@@ -1062,13 +1073,18 @@ ui_name_base_airbase = _("?gui_type:Build Airbase")
 ;                           ruleset has been released, you should set
 ;                           "rule_name" to the original value of "name".
 ; category                = How UI should categorize this extra. One of
-;                           "Infra", "Natural", "Nuisance", or "Bonus"
+;                           "Infra", "Natural", "Nuisance", "Resource",
+;                           or "Bonus"
 ; causes                  = events that can create extra type.
 ;                           "Irrigation", "Mine", "Hut", "Pollution", "Fallout",
-;                           "Base", or "Road" (last two require a corresponding
-;                           [base_*] or [road_*] section)
+;                           "Appear", "Resource", "Base", or "Road"
+;                           (the last three require a corresponding
+;                           [resource_*] / [base_*] / [road_*] section)
 ; rmcauses                = events that can remove extra type.
-;                           "CleanPollution", "CleanFallout", or "Pillage"
+;                           "CleanPollution", "CleanFallout", "Pillage",
+;                           "Disappear", or "Enter"
+; infracost               = Number of infrapoints it costs to place this
+;                           extra. 0, the default, means extra cannot be placed.
 ; graphic                 = tag specifying preferred graphic
 ; graphic_alt             = tag for alternate graphic if preferred graphic is
 ;                           not present. Can use eg "-" for no alternate
@@ -1085,11 +1101,20 @@ ui_name_base_airbase = _("?gui_type:Build Airbase")
 ; reqs                    = requirements to build the extra (see effects.ruleset
 ;                           and README.effects for help on requirements)
 ; rmreqs                  = requirements to remove the extra
-; buildable               = Can extra be built? Defaults to TRUE
+; appearance_reqs         = spontaneous appearance requirements
+; disappearance_reqs      = spontaneous disappearance requirements
+; visibility_req          = Tech a player needs to have to see the extra
+;                           This affects visibility only, for all the rules
+;                           extra is still there even if player can't see it.
+; buildable               = Can extra be built? Defaults to TRUE if extra has
+;                           any causes indicating it can result from worker
+;                           activity.
 ;                           If extra is not buildable, it can appear in game
 ;                           only if placed in the editor, it's placed by
 ;                           map generator, or on city tile if the extra
 ;                           also has "AlwaysOnCityCenter" flag set.
+; generated               = Can map generator place the extra? Applicable
+;                           for Hut, Resource, and River extras.
 ; build_time              = how long it takes a unit to build this extra.
 ;                           Value of 0 (default) means that terrain- and
 ;                           build activity specific time is used instead.
@@ -1104,6 +1129,17 @@ ui_name_base_airbase = _("?gui_type:Build Airbase")
 ;                           multiplied by this value (default 1)
 ; defense_bonus           = Percent added to defense when tile has the extra
 ;                           (default none)
+; unit_seen               = How opponents see units inside this extra
+;                           "Normal" - Units are seen normally (default)
+;                           "Hidden" - Units are hidden from opponents
+; appearance_chance       = If extra has cause "Appear" and other requirements
+;                           for its appearance are fulfilled, this tells how big
+;                           chance it has to appear each turn. The chance is 1/10000
+;                           times this value.
+; disappearance_chance    = If extra has rmcause "Disappear" and other requirements
+;                           for its disappearance are fulfilled, this tells how big
+;                           chance it has to disappear each turn. The chance is 1/10000
+;                           times this value.
 ; native_to               = List of unit classes that are considered to
 ;                           be inside the extra when they are on same tile
 ; conflicts               = List of extras that cannot be on the same tile.
@@ -1111,6 +1147,8 @@ ui_name_base_airbase = _("?gui_type:Build Airbase")
 ;                           with each other.
 ; hidden_by               = List of extra types that will make this extra
 ;                           type not to show on UI if both present.
+; bridged_over            = List of extra types that, if present in tile, will prevent
+;                           building this extra if can't be bridged over
 ; flags
 ;   - "NativeTile"        = Native units consider tile native regardless of
 ;                           terrain
@@ -1136,6 +1174,7 @@ ui_name_base_airbase = _("?gui_type:Build Airbase")
 ;                           on the default "Fortification" defense layer multiplied
 ;                           by the 1 + sum of bonuses from the extras on the
 ;                           "Natural" layer.
+;   - "NoStackDeath"      = Units inside do not die all at once when attacked
 ; helptext                = optional help text string; should escape all raw
 ;                           newlines so that xgettext parsing works
 ;
@@ -1157,6 +1196,7 @@ build_time     = 0
 removal_time   = 0
 conflicts      = "Mine", "Oil Well"
 hidden_by      = "Farmland"
+flags          = "IrrigationSource"
 helptext       = _("\
 Building an irrigation system on a suitable tile causes it to \
 produce some extra food each turn. Most tiles yield one extra food; \
@@ -1480,7 +1520,7 @@ build_time     = 3
 removal_time   = 0
 native_to      = "Land", "Small Land", "Merchant", "Big Land", "Big Siege", "Small Unit", "Ancient Land"
 conflicts      = "Airbase"
-flags          = "NativeTile"
+flags          = "NativeTile", "NoStackDeath"
 helptext       = _("\
 Fortresses are more permanent forts; construction on them can only begin \
 once the underlying fort is complete. Forts on River tiles cannot be \
@@ -1522,7 +1562,7 @@ build_time     = 3
 removal_time   = 0
 native_to      = "Air", "Helicopter", "Missile", "Nuclear"
 conflicts      = "Pre-Fortress", "Fortress"
-flags          = "Refuel"
+flags          = "Refuel", "NoStackDeath"
 helptext       = _("\
 An Airbase provides permanent support for air units and missiles. Air units can land \
 and refuel on an Airbase and Paratroopers can be sent from Airbases. \ 
@@ -1567,10 +1607,10 @@ allow their owner to see the surrounding tiles.\
 [extra_ruins]
 name           = _("Ruins")
 category       = "Bonus"
-causes         = "Base"
+;causes         = ""
 rmcauses       = "Pillage"
-graphic        = "base.ruins"
-graphic_alt    = "-"
+graphic        = "extra.ruins"
+graphic_alt    = "base.ruins"
 activity_gfx   = "None"
 act_gfx_alt    = "-"
 act_gfx_alt2   = "-"
@@ -1611,6 +1651,7 @@ build_time     = 0
 removal_time   = 0
 native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege", "Small Unit", "Amphibious", "Ancient Land"
 hidden_by      = "Railroad", "Maglev"
+bridged_over   = "River"
 flags          = "NativeTile", "AlwaysOnCityCenter"
 helptext       = _("\
 Roads allow your land units to move more quickly, and allow wheeled\
@@ -1648,6 +1689,7 @@ removal_time   = 0
 native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege", "Small Unit", "Amphibious", "Ancient Land"
 flags          = "NativeTile", "AutoOnCityCenter"
 hidden_by      = "Maglev"
+bridged_over   = "River"
 helptext       = _("\
 Once you learn the Railroad technology, you may upgrade your roads\
  to railroads. Units travel considerably faster along railroads than\
@@ -1685,6 +1727,7 @@ build_time     = 3
 removal_time   = 0
 native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege", "Small Unit", "Amphibious", "Ancient Land"
 flags          = "NativeTile", "AutoOnCityCenter"
+bridged_over   = "River"
 helptext       = _("\
 With sufficient technology, you may build magnetic levitation systems\
  along your railroad routes. Land units expend no\
@@ -1714,7 +1757,7 @@ rmact_gfx_alt  = "-"
 buildable      = FALSE
 native_to      = "Land", "Small Land", "Big Land", "Merchant", "Big Siege", "Trireme", "Small Unit", "Patrol", "Amphibious", "Ancient Land"
 defense_bonus  = 25
-flags          = "NativeTile"
+flags          = "NativeTile", "IrrigationSource", "AllowsFarmlandOnDesert"
 ; /* xgettext:no-c-format */
 helptext       = _("\
 Any land terrain type may have a River on it. A River adds 1\
@@ -1730,6 +1773,415 @@ Roads and railroads can only be built on River tiles if your\
 "), _("\
 Cities built on or next to rivers incur a small risk of flooding,\
  which will destroy stored food.\
+")
+
+[extra_gold]
+name           = _("Gold")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.gold"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+Gold is a malleable metal that has been the source of wealth for thousands of\
+ years. Due to its ubiquity in nature it has traditionally been used as a hard\
+ currency (coins).\
+"), _("\
+Gold, when found on a Glacier, Hills, or Mountain tile, gives 6 more trade.\
+ For more information, review the help for the individual tile types.\
+")
+
+[extra_iron]
+name           = _("Iron")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.iron"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+Iron ore can be forged into a variety of metals that can be used to make\
+ machines, armor, and many other useful things.\
+"), _("\
+Iron, when found on a Mountain tile, gives 4 more shields.\
+ For more information, review the help for the individual tile type.\
+")
+
+[extra_game]
+name           = _("?animals:Game")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.tundra_game"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+Wild \"Game\" has been a source of food and tools for hunter-gathers in the\
+ ancient past all the way to modern times.\
+"), _("\
+Game, when found on a Tundra tile, gives 3 more food, 1 more shield,\
+ and 2 more trade. For more information, review the help for the individual\
+ tile type.\
+")
+
+[extra_furs]
+name           = _("Furs")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.furs"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+The fur trade has been source of food and trade for thousands of years.\
+"), _("\
+Furs, when found on a Tundra tile, gives 1 more food, 1 more shield, and 4 more trade.\
+ For more information, review the help for the individual tile type.\
+")
+
+[extra_coal]
+name           = _("Coal")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.coal"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+Coal is a hard black ore that is easily mined. When burned it produces a very\
+ hot fire useful for many purposes. In modern times, burning coal produces the\
+ heat needed for the steam engine or to generate electricity.\
+"), _("\
+Coal, when found on a Hills tile, gives 2 more shields.\
+ For more information, review the help for the individual tile type.\
+")
+
+[extra_fish]
+name           = _("Fish")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.fish"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+The fishing industry has been a source of food for all civilizations for all\
+ time.\
+"), _("\
+Fish, when found on an Ocean tile, gives 2 more food.\
+ For more information, review the help for the individual tile type.\
+")
+
+[extra_fruit]
+name           = _("Fruit")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.fruit"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+The picking and cultivation of fruit has been a source of food for hunter-gathers\
+ in the ancient past all the way to modern times.\
+"), _("\
+Fruit, when found on a Jungle tile, gives 3 more food and 1 more trade.\
+ For more information, review the help for the individual tile type.\
+")
+
+[extra_gems]
+name           = _("Gems")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.gems"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+Freeciv21 combines all valuable stones used in jewelry and other important\
+ artifacts, such as diamonds and rubies, into the word \"gems\". These precious\
+ stones have been used for trade for thousands of years.\
+"), _("\
+Gems, when found on a Jungle tile, gives 4 more trade.\
+ For more information, review the help for the individual tile type.\
+")
+
+[extra_buffalo]
+name           = _("Buffalo")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.buffalo"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+Buffalo have been a source of food and tools for thousands of years,\
+ especially on the plains of North America.\
+"), _("\
+Buffalo, when found on a Plains tile, gives 2 more shields.\
+ For more information, review the help for the individual tile type.\
+")
+
+[extra_wheat]
+name           = _("Wheat")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.wheat"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+The cultivation and discovery of wheat greatly increased the ability of\
+ civilizations to produce food for ever larger nations.\
+"), _("\
+Wheat, when found on a Plains tile, gives 2 more food.\
+ For more information, review the help for the individual tile type.\
+")
+
+[extra_oasis]
+name           = _("Oasis")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.oasis"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+flags          = "AllowsFarmlandOnDesert"
+helptext       = _("\
+An oasis is an area of a surface fresh water spring in a desert region.\
+ The oasis is an important respite, fresh water, and food source in\
+ regions that have reduced rain fall.\
+"), _("\
+Oasis, when found on a Desert tile, gives 3 more food and 4 more trade.\
+ For more information, review the help for the individual tile type.\
+")
+
+[extra_peat]
+name           = _("Peat")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.peat"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+Peat is an accumulation of partially decayed vegetation or organic matter.\
+ It is unique to naturally wet areas such as swamps and bogs. It can be burned\
+ and has many other useful purposes.\
+"), _("\
+Peat, when found on a Swamp tile, gives 4 more shields.\
+ For more information, review the help for the individual tile type.\
+")
+
+[extra_pheasant]
+name           = _("Pheasant")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.pheasant"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+The hunting of Pheasant and other game birds has been a source of food\
+ for many civilizations.\
+"), _("\
+Pheasant, when found on a Forest tile, gives 2 more food.\
+ For more information, review the help for the individual tile type.\
+")
+
+[extra_resources]
+name           = _("Resources")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.grassland_resources"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+\"Bonus\" Resources is a map-tile game-play feature of Freeciv21. It is not\
+ a naturally occurring resource like the other ones added to the map.\
+"), _("\
+Resources, when found on a Grassland tile, gives 1 more shield.\
+ For more information, review the help for the individual tile type.\
+")
+
+[extra_ivory]
+name           = _("Ivory")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.arctic_ivory"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+The hunting of animals with tusks such as arctic walrus has been a source of\
+ food, energy, and trade for many civilizations throughout history.\
+"), _("\
+Ivory, when found on a Glacier tile, gives 1 more food, 1 more shield, and 4\
+ more trade.\
+ For more information, review the help for the individual tile type.\
+")
+
+[extra_silk]
+name           = _("Silk")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.silk"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+The discovery of the silkworm and the ability to create garments and other\
+ important artifacts from the produced silk has been a source of trade for\
+ many civilizations.\
+"), _("\
+Silk, when found on a Forest tile, gives 3 more trade.\
+ For more information, review the help for the individual tile type.\
+")
+
+[extra_spice]
+name           = _("Spice")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.spice"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+Freeciv21 combines all the varying types of valuable spices used in trade\
+ into a single resource called \"Spice\".\
+"), _("\
+Spice(s), when found on a Swamp tile, gives 2 more food and 4 more trade.\
+ For more information, review the help for the individual tile type.\
+")
+
+[extra_whales]
+name           = _("Whales")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.whales"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+The hunting of whales has been an important source of food and energy for\
+ many civilizations. The modern world no longer needs the whale blubber\
+ with the discovery of oil.\
+"), _("\
+Whales, when found on an Ocean tile, gives 1 more food and 1 more shield.\
+ For more information, review the help for the individual tile type.\
+")
+
+[extra_wine]
+name           = _("Wine")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.wine"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+The fermentation of grapes into wine has been a source of trade between\
+ nations for thousands of years.\
+"), _("\
+Wine, when found on a Hills tile, gives 4 more trade.\
+ For more information, review the help for the individual tile type.\
+")
+
+[extra_oil]
+name           = _("Oil")
+category       = "Resource"
+causes         = "Resource"
+;rmcauses       = ""
+graphic        = "ts.oil"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+helptext       = _("\
+The discovery of oil and the production of fuel and other derivative\
+ petroleum products has revolutionized the modern world.\
+"), _("\
+Oil, when found on a Glacier or Desert tile, gives 3 more shields.\
+ For more information, review the help for the individual tile types.\
 ")
 
 ; /* <-- avoid gettext warnings
@@ -1753,12 +2205,10 @@ Cities built on or next to rivers incur a small risk of flooding,\
 ;                           base or city, or another base is built (tile only
 ;                           tracks one owner for all bases).
 ; vision_invis_sq         = Base will have invisible layer vision to this radius
+; vision_subs_sq          = Base will have subsurface layer vision to this radius
 ; flags
 ;   - "NoAggressive"      = Units inside are not considered aggressive if
 ;                           there`s friendly city within 3 tiles
-;   - "NoStackDeath"      = Units inside do not die all at once when attacked
-;   - "DiplomatDefense"   = Diplomats inside get bonus to diplomatic defense
-;   - "ParadropFrom"      = Paradrop can be initiated from base
 ;
 ; */ <-- avoid gettext warnings
 
@@ -1766,29 +2216,23 @@ Cities built on or next to rivers incur a small risk of flooding,\
 extra          = "Pre-Fortress"
 gui_type       = "Fortress"
 border_sq      = -1
-; flags          =
 
 [base_fortress]
 extra          = "Fortress"
 gui_type       = "Fortress"
 border_sq      = 5
-flags          = "NoAggressive", "DiplomatDefense", "NoStackDeath"
-
+flags          = "NoAggressive"
 
 [base_airbase]
 extra          = "Airbase"
 gui_type       = "Airbase"
 border_sq      = -1
-flags          = "NoAggressive", "ParadropFrom", "NoStackDeath"
+flags          = "NoAggressive"
 
 [base_buoy]
 extra          = "Buoy"
 gui_type       = "Fortress"
 vision_main_sq = 18
-
-[base_ruins]
-extra          = "Ruins"
-gui_type       = "Other"
 
 ; /* <-- avoid gettext warnings
 ;
@@ -1826,7 +2270,7 @@ gui_type       = "Other"
 ;   In summary, output bonuses from roads are given by the formula:
 ;   (base_prod + roads.incr_const + roads.incr*terrain.incr_pct) * roads.bonus
 ; compat_special          = what kind of pre-2.5 special this road corresponds
-;                           to, if any: "Road", "Railroad", "River, or "None".
+;                           to, if any: "Road", "Railroad", "River", or "None".
 ;                           Used for UI and loading old savegames
 ; integrates              = list of road types that are suitable next steps
 ;                           for travel from this road type; such steps are
@@ -1834,11 +2278,6 @@ gui_type       = "Other"
 ;                           get cost from underlying terrain; graphics are
 ;                           drawn accordingly
 ; flags
-;   - "RequiresBridge"    = Technology with "Bridge" flag needed to build this
-;                           road on the same tile as another road with
-;                           "PreventsOtherRoads" flag (usually rivers)
-;   - "PreventsOtherRoads" = Prevents "RequiresBridge" roads being built on
-;                           the same tile as this one without appropriate tech
 ;   - "River"             = Automatically generated by map generator, always
 ;                           flowing from land tiles to ocean
 ;   - "UnrestrictedInfra" = Use of the enemy owned road is not restricted
@@ -1860,7 +2299,6 @@ food_bonus     = 0
 shield_bonus   = 0
 trade_bonus    = 0
 compat_special = "Road"
-flags          = "RequiresBridge"
 
 [road_railroad]
 extra          = "Railroad"
@@ -1872,7 +2310,6 @@ food_bonus     = 0
 shield_bonus   = 50
 trade_bonus    = 0
 compat_special = "Railroad"
-flags          = "RequiresBridge"
 
 [road_maglev]
 extra          = "Maglev"
@@ -1883,7 +2320,6 @@ trade_incr     = 0
 food_bonus     = 0
 shield_bonus   = 0
 trade_bonus    = 0
-flags          = "RequiresBridge"
 
 [road_river]
 extra          = "River"
@@ -1891,4 +2327,4 @@ move_cost      = 3
 move_mode      = "Cardinal"
 trade_incr_const = 1
 compat_special = "River"
-flags          = "River", "PreventsOtherRoads"
+flags          = "River"

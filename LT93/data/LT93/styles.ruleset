@@ -9,7 +9,8 @@
 
 [datafile]
 description="Nation theme data for Freeciv"
-options="+Freeciv-2.6-ruleset"
+options="+Freeciv-ruleset-Devel-2017.Jan.02"
+format_version=20
 
 ; /* <-- avoid gettext warnings
 ;

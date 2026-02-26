@@ -1,0 +1,23 @@
+set aifill 9
+
+# Make sure they are human
+aitoggle AI*1
+aitoggle AI*2
+aitoggle AI*3
+aitoggle AI*4
+aitoggle AI*5
+aitoggle AI*6
+aitoggle AI*7
+aitoggle AI*8
+aitoggle AI*9
+
+# Set nations
+playernation AI*1 "random" 1 "nilamo"
+playernation AI*2 "Cornish" 1 "el_perdedor"
+playernation AI*3 "Korean" 1 "chill"
+playernation AI*4 "Lithuanian" 1 "Modeemirotta"
+playernation AI*5 "Karelian" 1 "paavo"
+playernation AI*6 "Australian" 1 "Jfordie"
+playernation AI*7 "Frisian" 1 "Spekulatius"
+playernation AI*8 "Danish" 1 "Deborin"
+playernation AI*9 "Mauritian" 1 "Frieren"
