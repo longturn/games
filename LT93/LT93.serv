@@ -5,13 +5,13 @@ rulesetdir LT93
 
 # test game / real game settings
 
-set revealmap START #uncomment this for revealing the map for test games
-#set timeout 90000  # real game
-#set unitwaittime 36000  # real game§
-set timeout 120 # test game
-set unitwaittime 10  # test game
-#set fogofwar "ENABLED"		# real game
-set fogofwar "DISABLED"		# test game
+#set revealmap START #uncomment this for revealing the map for test games
+set timeout 90000  # real game
+set unitwaittime 36000  # real game§
+#set timeout 120 # test game
+#set unitwaittime 10  # test game
+set fogofwar "ENABLED"		# real game
+#set fogofwar "DISABLED"		# test game
 
 set mgr_distance "3"
 set mgr_foodneeded "ENABLED"
@@ -140,7 +140,7 @@ set onsetbarbs "120"
 set barbarians "DISABLED"
 set borders "ENABLED"
 set compresstype "LIBZ"
-set maxconnectionsperhost "4"
+set maxconnectionsperhost "40"
 set maxplayers "500"
 set metamessage ""
 set minplayers "1"
@@ -161,7 +161,7 @@ set traitdistribution "FIXED"
 set turnblock "ENABLED"
 set homecaughtunits "ENABLED"
 
-metamessage "LongturnRoyale for multiplayer games - Suomipeli2023b edition | More info: https://longturn.net"
+metamessage "Longturn LTX for multiplayer games - | More info: https://longturn.net"
 metapatches longturn
 
 # Players
