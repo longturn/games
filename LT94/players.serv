@@ -18,7 +18,7 @@ aitoggle AI*14
 
 # Set nations
 playernation AI*1 "Andalusi" 1 "louis94"
-playernation AI*2 "Animal Kingdom" 1 "houroftheowl"
+playernation AI*2 "Briton" 1 "houroftheowl"
 playernation AI*3 "Finnish" 1 "meton"
 playernation AI*4 "Transylvanian" 1 "Mikalor"
 playernation AI*5 "Korean" 1 "chill"
