@@ -33,7 +33,8 @@ set steepness 30
 set temperature 60
 set tilesperplayer 550
 set tinyisles disabled
-set topology "WRAPX|WRAPY|ISO"
+#set topology "WRAPX|WRAPY|ISO"
+set topology="WRAPX|WRAPY|ISO|HEX"
 set wetness 60
 
 # general rules
