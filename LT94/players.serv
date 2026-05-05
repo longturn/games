@@ -1,0 +1,33 @@
+set aifill 14
+
+# Make sure they are human
+aitoggle AI*1
+aitoggle AI*2
+aitoggle AI*3
+aitoggle AI*4
+aitoggle AI*5
+aitoggle AI*6
+aitoggle AI*7
+aitoggle AI*8
+aitoggle AI*9
+aitoggle AI*10
+aitoggle AI*11
+aitoggle AI*12
+aitoggle AI*13
+aitoggle AI*14
+
+# Set nations
+playernation AI*1 "Andalusi" 1 "louis94"
+playernation AI*2 "Animal Kingdom" 1 "houroftheowl"
+playernation AI*3 "Finnish" 1 "meton"
+playernation AI*4 "Transylvanian" 1 "Mikalor"
+playernation AI*5 "Korean" 1 "chill"
+playernation AI*6 "Metis" 1 "coyote"
+playernation AI*7 "Celtiberian" 1 "TriClad"
+playernation AI*8 "Cornish" 1 "el_perdedor"
+playernation AI*9 "Chola" 1 "panch93"
+playernation AI*10 "Vampire" 1 "freeve4h"
+playernation AI*11 "Italian Greek" 1 "Leap71"
+playernation AI*12 "Australian" 1 "Jfordie"
+playernation AI*13 "Australian Aboriginal" 1 "Vladimir"
+playernation AI*14 "Persian" 1 "Nyala"
