@@ -4744,7 +4744,7 @@ reqs    =
 
 [effect_pollution]
 type	= "Output_Tile_Punish_Pct"
-value	= 50
+value	= 70
 reqs	=
     { "type", "name", "range", "present"
       "Extra", "Pollution", "Local", TRUE
@@ -4753,7 +4753,7 @@ reqs	=
 
 [effect_fallout]
 type	= "Output_Tile_Punish_Pct"
-value	= 50
+value	= 70
 reqs	=
     { "type", "name", "range", "present"
       "Extra", "Fallout", "Local", TRUE
@@ -4762,7 +4762,7 @@ reqs	=
 
 [effect_pollution_fallout]
 type	= "Output_Tile_Punish_Pct"
-value	= 75
+value	= 90
 reqs	=
     { "type", "name", "range"
       "Extra", "Fallout", "Local"
