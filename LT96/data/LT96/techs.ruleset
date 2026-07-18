@@ -130,7 +130,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.alphabet"
 graphic_alt = "-"
-cost     = 10
+cost     = 7
 
 [advance_amphibious_warfare]
 name     = _("Amphibious Warfare")
@@ -196,7 +196,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.bronze_working"
 graphic_alt = "-"
-cost     = 10
+cost     = 7
 
 [advance_ceremonial_burial]
 name     = _("Ceremonial Burial")
@@ -205,7 +205,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.ceremonial_burial"
 graphic_alt = "-"
-cost     = 10
+cost     = 7
 
 [advance_chemistry]
 name     = _("Chemistry")
@@ -462,7 +462,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.horseback_riding"
 graphic_alt = "-"
-cost     = 10
+cost     = 7
 
 [advance_industrialization]
 name     = _("Industrialization")
@@ -525,6 +525,7 @@ req2     = "Code of Laws"
 flags    = ""
 graphic     = "a.literacy"
 graphic_alt = "-"
+helptext = _("Upgrades one unit every turn.")
 cost     = 44
 
 [advance_machine_tools]
@@ -561,7 +562,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.masonry"
 graphic_alt = "-"
-cost     = 10
+cost     = 7
 
 [advance_mass_production]
 name     = _("Mass Production")
@@ -728,7 +729,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.pottery"
 graphic_alt = "-"
-cost     = 10
+cost     = 7
 
 [advance_radio]
 name     = _("Radio")
@@ -751,7 +752,7 @@ graphic     = "a.railroad"
 graphic_alt = "-"
 helptext = _("\
 Allows Settlers, Migrants, Workers and Engineers to upgrade roads to \
-railroads.\
+railroads. Increases city working area.\
 "), _("\
 For Despotism or Tribal governments, cancels the penalty to worked \
 tiles with output greater than 2 (as if all your cities were always \
@@ -959,6 +960,7 @@ req2     = "Philosophy"
 flags    = ""
 graphic     = "a.university"
 graphic_alt = "-"
+helptext = _("Upgrades one unit every turn.")
 cost     = 120
 
 [advance_warrior_code]
@@ -968,7 +970,7 @@ req2     = "None"
 flags    = ""
 graphic     = "a.warrior_code"
 graphic_alt = "-"
-cost     = 10
+cost     = 7
 
 [advance_writing]
 name     = _("Writing")

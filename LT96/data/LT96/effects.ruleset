@@ -2378,6 +2378,17 @@ reqs    =
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
+	
+[effect_barracks_c]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks", "City", TRUE
+      "UnitClass", "Big Siege", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
 
 [effect_barracks_hp]
 type    = "HP_Regen"
@@ -2395,6 +2406,15 @@ reqs    =
     { "type", "name", "range", "present"
       "Building", "Barracks", "City", TRUE
       "UnitClass", "Big Land", "Local", TRUE
+    }
+	
+[effect_barracks_c_hp]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks", "City", TRUE
+      "UnitClass", "Big Siege", "Local", TRUE
     }
 
 [effect_barracks_ii]
@@ -2418,6 +2438,18 @@ reqs    =
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
+	
+[effect_barracks_ii_c]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks II", "City", TRUE
+      "UnitClass", "Big Siege", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
 
 [effect_barracks_ii_hp]
 type    = "HP_Regen"
@@ -2435,6 +2467,15 @@ reqs    =
     { "type", "name", "range", "present"
       "Building", "Barracks II", "City", TRUE
       "UnitClass", "Big Land", "Local", TRUE
+    }
+
+[effect_barracks_ii_c_hp]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks II", "City", TRUE
+      "UnitClass", "Big Siege", "Local", TRUE
     }
 
 [effect_barracks_iii]
@@ -2459,6 +2500,17 @@ reqs    =
       "UnitFlag", "NoVeteran", "Local", FALSE
     }
 
+[effect_barracks_iii_c]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Building", "Barracks III", "City", TRUE
+      "UnitClass", "Big Siege", "Local", TRUE
+      "UnitFlag", "NonMil", "Local", FALSE
+      "UnitFlag", "NoVeteran", "Local", FALSE
+    }
+
 [effect_barracks_iii_hp]
 type    = "HP_Regen"
 value   = 100
@@ -2476,6 +2528,16 @@ reqs    =
       "Building", "Barracks III", "City"
       "UnitClass", "Big Land", "Local"
     }
+
+[effect_barracks_iii_c_hp]
+type    = "HP_Regen"
+value   = 100
+reqs    =
+    { "type", "name", "range"
+      "Building", "Barracks III", "City"
+      "UnitClass", "Big Siege", "Local"
+    }
+
 
 [effect_cathedral]
 type    = "Make_Content"
@@ -3279,7 +3341,7 @@ value   = 20
 
 [effect_sdi_i_defense_1]
 type    = "Nuke_Proof"
-value   = 80
+value   = 70
 reqs    =
     { "type", "name", "range", "present"
       "Building", "SDI Defense I", "City", TRUE
@@ -3290,7 +3352,7 @@ reqs    =
 	
 [effect_sdi_i_defense_2]
 type    = "Nuke_Proof"
-value   = 20
+value   = 30
 reqs    =
     { "type", "name", "range"
       "Building", "SDI Defense I", "City"
@@ -5009,6 +5071,26 @@ reqs    =
     }
 
 
+[effect_unit_shield_value_recycle_caravan]
+type    = "Unit_Shield_Value_Pct"
+value   = 30
+reqs    =
+    { "type",   "name",         "range", "present"
+      "Action", "Recycle Unit", "Local", TRUE
+	  "UnitType","Caravan","Local",TRUE
+    }
+
+
+[effect_unit_shield_value_recycle_freight]
+type    = "Unit_Shield_Value_Pct"
+value   = 30
+reqs    =
+    { "type",   "name",         "range", "present"
+      "Action", "Recycle Unit", "Local", TRUE
+	  "UnitType","Freight","Local",TRUE
+    }
+
+
 
 [effect_hal_salflieni_hypogeum]
 type    = "Output_Add_Tile"
@@ -5065,10 +5147,11 @@ reqs    =
       "OutputType", "Trade", "Local"
     }
 
+
 ; City radius increased with Mass Transit
 [effect_mass_transit_2]
 type    = "City_Radius_Sq"
-value   = 6
+value   = 12
 reqs    =
     { "type", "name", "range"
    "Building", "Mass Transit", "City"
@@ -5083,6 +5166,14 @@ reqs    =
          "Tech", "Theology", "Player"
    }
 
+; City radius increased with Railroad
+[effect_railroad_work_area]
+type    = "City_Radius_Sq"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+         "Tech", "Theology", "Player"
+   }
 
 
 [effect_units_in_a_city_1]
@@ -5101,6 +5192,24 @@ reqs    =
     { "type", "name", "range"
       "Extra", "Ruins", "Local"
       "OutputType", "Trade", "Local"
+    }
+
+
+[effect_literacy_upgrade]
+type    = "Upgrade_Unit"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Tech", "Literacy", "Player"
+    }
+
+	
+[effect_university_upgrade]
+type    = "Upgrade_Unit"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Tech", "University", "Player"
     }
 
 
@@ -5338,6 +5447,35 @@ reqs    =
     }
 	
 	
+[effect_trade_penalty_fort]
+type    = "Output_Bonus"
+value   = -20
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Trade", "Local"
+	  "Extra", "Fortress", "City"
+    }
+
+	
+	
+[effect_trade_resource_penalty_pollution]
+type    = "Output_Bonus"
+value   = -30
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Shield", "Local"
+	  "Extra", "Pollution", "City"
+    }
+
+[effect_trade_resource_penalty_pollution2]
+type    = "Output_Bonus"
+value   = -10
+reqs    =
+    { "type", "name", "range"
+      "OutputType", "Food", "Local"
+	  "Extra", "Pollution", "City"
+    }
+
 
 [effect_trade_resource_bonus_gold_1]
 type    = "Output_Bonus"
@@ -5669,6 +5807,89 @@ reqs    =
 	  "Gov", "Democracy", "Player"
     }
 	
+
+	
+[effect_trade_resource_bonus_silk_1]
+type    = "Output_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+	  "Building", "Silk Road", "Player"
+      "OutputType", "Trade", "Local"
+	  "Gov", "Tribal", "Player"
+    }
+	  
+[effect_trade_resource_bonus_silk_2]
+type    = "Output_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+	  "Building", "Silk Road", "Player"
+      "OutputType", "Trade", "Local"
+	  "Gov", "Despotism", "Player"
+    }
+	
+[effect_trade_resource_bonus_silk_3]
+type    = "Output_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+	  "Building", "Silk Road", "Player"
+      "OutputType", "Trade", "Local"
+	  "Gov", "Monarchy", "Player"
+    }
+	 
+[effect_trade_resource_bonus_silk_4]
+type    = "Output_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+	  "Building", "Silk Road", "Player"
+      "OutputType", "Trade", "Local"
+	  "Gov", "Communism", "Player"
+    }
+	  
+[effect_trade_resource_bonus_silk_5]
+type    = "Output_Bonus"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+	  "Building", "Silk Road", "Player"
+      "OutputType", "Trade", "Local"
+	  "Gov", "Fundamentalism", "Player"
+    }
+	
+[effect_trade_resource_bonus_silk_6]
+type    = "Output_Bonus"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+	  "Building", "Silk Road", "Player"
+      "OutputType", "Trade", "Local"
+	  "Gov", "Federation", "Player"
+    }
+	
+[effect_trade_resource_bonus_silk_7]
+type    = "Output_Bonus"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+	  "Building", "Silk Road", "Player"
+      "OutputType", "Trade", "Local"
+	  "Gov", "Republic", "Player"
+    }
+	
+[effect_trade_resource_bonus_silk_8]
+type    = "Output_Bonus"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+	  "Building", "Silk Road", "Player"
+      "OutputType", "Trade", "Local"
+	  "Gov", "Democracy", "Player"
+    }
+	
+
 	
 [effect_partisan_communism]
 type    = "Inspire_Partisans"
@@ -5755,10 +5976,21 @@ value =1
 
 [effect_Bombard_Limit_Percent_city]
 type  = "Bombard_Limit_Pct"
-value = 30
+value = 20
 reqs   =
     { "type", "name", "range"
     "CityTile","Center","Local"
     }
+	
+; For making the game more easy to play. Also for making the early game more accelerated
+[effect_easy_growth]
+type    = "Output_Add_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "CityTile", "Center", "Local", TRUE
+      "OutputType", "Food", "Local", TRUE
+    }
+
 
 

@@ -1366,7 +1366,7 @@ The risk of global warming is cumulative; the longer polluted tiles \
 are left uncleaned, the higher the risk becomes, and the risk can \
 linger for some time even after all pollution has been cleaned. If a \
 long time passes with an elevated risk of warming, its effects will be \
-all the more severe when it does occur.\
+all the more severe when it does occur. Pollution will also result with -20% production penalty if a city has any in the working area.\
 ")
 
 [extra_hut]
@@ -1536,7 +1536,7 @@ Any kind of land unit remaining in a fortress for a whole turn without \
 moving recovers a quarter of its hit points.\
 "), _("\
 With Astronomy, fortresses gain watchtowers from which units can see \
-further afield.\
+further afield. A fortress will also result with -20% production penalty if a city has any in the working area.\
 ")
 
 [extra_airbase]

@@ -711,7 +711,7 @@ sound_move    = "m_engineers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_engineers"
 sound_fight_alt = "f_generic"
-build_cost    = 40
+build_cost    = 50
 pop_cost      = 0
 attack        = 0
 defense       = 2
@@ -949,7 +949,7 @@ sound_move    = "m_riflemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_riflemen"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 60
 pop_cost      = 0
 attack        = 5
 defense       = 4
@@ -971,6 +971,40 @@ Riflemen are World War-era infantry, very good\
 ")
 
 
+[unit_volunteer_corps]
+name          = _("Volunteer Corps")
+class         = "Land"
+tech_req      = "Conscription"
+obsolete_by   = "Infantry Legion"
+graphic       = "u.militia"
+graphic_alt   = "u.riflemen"
+sound_move    = "m_riflemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_riflemen"
+sound_fight_alt = "f_generic"
+build_cost    = 70
+pop_cost      = 0
+attack        = 4
+defense       = 4
+hitpoints     = 20
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 2
+uk_food       = 1
+uk_gold       = 4
+flags         = "Capturable"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
+helptext      = _("\
+Volunteer Corps are World War-era mercenaries, very good\
+ at defending your cities but can't attack as well as riflemen. They cause no unhappiness if away from home but can be captured if not guarded. Since they expect to be paid for their service, the upkeep is much more expensive compared to riflemen.\
+")
+
+
+
 [unit_infantry]
 name          = _("Infantry")
 class         = "Land"
@@ -982,7 +1016,7 @@ sound_move    = "m_riflemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_riflemen"
 sound_fight_alt = "f_generic"
-build_cost    = 80
+build_cost    = 100
 pop_cost      = 0
 attack        = 5
 defense       = 6
@@ -1010,6 +1044,40 @@ Infantry are modern version of infantry, relatively good\
 ")
 
 
+[unit_infantry_legion]
+name          = _("Infantry Legion")
+class         = "Land"
+tech_req      = "Machine Tools"
+obsolete_by   = "None"
+graphic       = "u.navytroops"
+graphic_alt   = "u.riflemen"
+sound_move    = "m_riflemen"
+sound_move_alt = "m_generic"
+sound_fight   = "f_riflemen"
+sound_fight_alt = "f_generic"
+build_cost    = 110
+pop_cost      = 0
+attack        = 4
+defense       = 5
+hitpoints     = 22
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 18
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 2
+uk_food       = 1
+uk_gold       = 4
+flags         = "Capturable"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
+helptext      = _("\
+Infantry Legion are modern version of Volunteer Corps, relatively good\
+ at defending your cities but less powerful compared to Infantry.\n\n
+ Infantry Legion are modern era mercenaries, quite good\
+ at defending your cities but can't fight as well as infantry. They cause no unhappiness if away from home but can be captured if not guarded. Since they expect to be paid for their service, the upkeep is much more expensive compared to infantry.\
+")
+
 [unit_alpine_troops]
 name          = _("Alpine Troops")
 class         = "Land"
@@ -1021,7 +1089,7 @@ sound_move    = "m_alpine_troops"
 sound_move_alt = "m_generic"
 sound_fight   = "f_alpine_troops"
 sound_fight_alt = "f_generic"
-build_cost    = 80
+build_cost    = 100
 pop_cost      = 0
 attack        = 7
 defense       = 4
@@ -1055,7 +1123,7 @@ sound_move    = "m_partisan"
 sound_move_alt = "m_generic"
 sound_fight   = "f_partisan"
 sound_fight_alt = "f_generic"
-build_cost    = 60
+build_cost    = 120
 pop_cost      = 1
 attack        = 4
 defense       = 5
@@ -1142,7 +1210,7 @@ sound_move    = "m_marines"
 sound_move_alt = "m_generic"
 sound_fight   = "f_marines"
 sound_fight_alt = "f_generic"
-build_cost    = 80
+build_cost    = 100
 pop_cost      = 0
 attack        = 8
 defense       = 5
@@ -1175,7 +1243,7 @@ sound_move    = "m_paratroopers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_paratroopers"
 sound_fight_alt = "f_generic"
-build_cost    = 80
+build_cost    = 100
 pop_cost      = 0
 attack        = 6
 defense       = 4
@@ -1215,7 +1283,7 @@ sound_move    = "m_mech_inf"
 sound_move_alt = "m_generic"
 sound_fight   = "f_mech_inf"
 sound_fight_alt = "f_generic"
-build_cost    = 120
+build_cost    = 160
 pop_cost      = 0
 attack        = 6
 defense       = 6
@@ -1243,7 +1311,7 @@ of the technology tree.\
 name          = _("Horsemen")
 class         = "Land"
 tech_req      = "Horseback Riding"
-obsolete_by   = "Chariot"
+obsolete_by   = "Knights"
 graphic       = "u.horsemen"
 graphic_alt   = "-"
 sound_move    = "m_horsemen"
@@ -1449,9 +1517,9 @@ sound_move    = "m_cavalry"
 sound_move_alt = "m_generic"
 sound_fight   = "f_cavalry"
 sound_fight_alt = "f_generic"
-build_cost    = 70
+build_cost    = 90
 pop_cost      = 0
-attack        = 8
+attack        = 9
 defense       = 3
 hitpoints     = 20
 firepower     = 1
@@ -1480,7 +1548,7 @@ sound_move    = "m_armor"
 sound_move_alt = "m_generic"
 sound_fight   = "f_armor"
 sound_fight_alt = "f_generic"
-build_cost    = 140
+build_cost    = 180
 pop_cost      = 0
 attack        = 10
 defense       = 5
@@ -1529,7 +1597,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "CityBuster", "Capturable"
+flags         = "Capturable"
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
 Catapults are large rock-throwing machines of war.\
@@ -1541,7 +1609,7 @@ While powerful, Catapults (and their successors) are bulky and awkward; \
 they require roads to move in rough terrain (mountains, swamps, and \
 jungles), are difficult to defend, and are too big for early ships \
 (Triremes and Caravels). Catapults and later siege units \ 
-do not gain benefits from Barracks. \
+do gain benefits from Barracks. No additional veteran levels from small wonders adding veteran levels for land units.\
 ")
 
 [unit_cannon]
@@ -1569,14 +1637,14 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "CityBuster", "Capturable"
+flags         = "Capturable"
 roles         = "AttackStrongStartUnit", "BarbarianTech", "BarbarianBuildTech"
 helptext      = _("\
 Cannons are large firearms that can fire heavy projectiles over long \
 distances. As with the catapults they replace, they are very strong \
 attackers - and even more powerful against cities - but equally weak defenders and will need an escort to be \
-effective, and have limited mobility. Cannon and other siege units do not gain benefits from Barracks. \
-Unescorted cannons may be captured by the enemy. \
+effective, and have limited mobility. Cannon and other siege units gain benefits from Barracks. \
+Unescorted cannons may be captured by the enemy. No additional veteran levels from small wonders adding veteran levels for land units.\
 ")
 
 [unit_artillery]
@@ -1590,7 +1658,7 @@ sound_move    = "m_artillery"
 sound_move_alt = "m_generic"
 sound_fight   = "f_artillery"
 sound_fight_alt = "f_generic"
-build_cost    = 80
+build_cost    = 90
 pop_cost      = 0
 attack        = 10
 defense       = 2
@@ -1604,13 +1672,13 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "CityBuster", "Capturable"
+flags         = "Capturable"
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
 The artillery is an upgraded cannon. As with its predecessors, it is a \
 very strong attacker - and even more powerful against cities - but equally weak defender and will need an escort \
-to be effective, and has limited mobility. Artillery and other siege units do not gain benefits from Barracks. \
-Unescorted artilleries may be captured by the enemy. \
+to be effective, and has limited mobility. Artillery and other siege units do gain benefits from Barracks. \
+Unescorted artilleries may be captured by the enemy. No additional veteran levels from small wonders adding veteran levels for land units. \
 ")
 
 [unit_howitzer]
@@ -1624,7 +1692,7 @@ sound_move    = "m_howitzer"
 sound_move_alt = "m_generic"
 sound_fight   = "f_howitzer"
 sound_fight_alt = "f_generic"
-build_cost    = 90
+build_cost    = 120
 pop_cost      = 0
 attack        = 12
 defense       = 2
@@ -1638,12 +1706,12 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "CityBuster"
+flags         = "Capturable"
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
 Howitzers are upgraded artillery with improved defensive as well as \
 offensive capabilities. However, they still have the limited mobility \
-of their predecessors. Like earlier siege units, Howitzers do not gain benefits from Barracks. \
+of their predecessors. Like earlier siege units, Howitzers do gain benefits from Barracks. No additional veteran levels from small wonders adding veteran levels for land units. Notice that unescorted howitzers may be captured.\
 ")
 
 [unit_fighter]
@@ -1658,7 +1726,7 @@ sound_move    = "m_fighter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_fighter"
 sound_fight_alt = "f_generic"
-build_cost    = 60
+build_cost    = 70
 pop_cost      = 0
 attack        = 4
 defense       = 4
@@ -1694,7 +1762,7 @@ sound_move    = "m_bomber"
 sound_move_alt = "m_generic"
 sound_fight   = "f_bomber"
 sound_fight_alt = "f_generic"
-build_cost    = 90
+build_cost    = 100
 pop_cost      = 0
 attack        = 6
 defense       = 1
@@ -1733,7 +1801,7 @@ sound_move    = "m_helicopter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_helicopter"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 60
 pop_cost      = 0
 attack        = 5
 defense       = 3
@@ -1775,7 +1843,7 @@ sound_move    = "m_stealth_fighter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_stealth_fighter"
 sound_fight_alt = "f_generic"
-build_cost    = 120
+build_cost    = 140
 pop_cost      = 0
 attack        = 8
 defense       = 7
@@ -1809,7 +1877,7 @@ sound_move    = "m_stealth_bomber"
 sound_move_alt = "m_generic"
 sound_fight   = "f_stealth_bomber"
 sound_fight_alt = "f_generic"
-build_cost    = 140
+build_cost    = 180
 pop_cost      = 0
 attack        = 9
 defense       = 3
@@ -1920,13 +1988,13 @@ sound_move    = "m_caravel"
 sound_move_alt = "m_generic"
 sound_fight   = "f_caravel"
 sound_fight_alt = "f_generic"
-build_cost    = 20
+build_cost    = 15
 pop_cost      = 0
 attack        = 0
 defense       = 1
 hitpoints     = 5
 firepower     = 1
-move_rate     = 4
+move_rate     = 6
 vision_radius_sq = 18
 transport_cap = 0
 fuel          = 0
@@ -2252,7 +2320,7 @@ sound_move    = "m_cruiser"
 sound_move_alt = "m_generic"
 sound_fight   = "f_cruiser"
 sound_fight_alt = "f_generic"
-build_cost    = 75
+build_cost    = 80
 pop_cost      = 0
 attack        = 4
 defense       = 8
@@ -2283,7 +2351,7 @@ sound_move    = "m_aegis_cruiser"
 sound_move_alt = "m_generic"
 sound_fight   = "f_aegis_cruiser"
 sound_fight_alt = "f_generic"
-build_cost    = 120
+build_cost    = 140
 pop_cost      = 0
 attack        = 8
 defense       = 8
@@ -2291,12 +2359,13 @@ hitpoints     = 30
 firepower     = 1
 move_rate     = 15
 vision_radius_sq = 72
-transport_cap = 0
+transport_cap = 2
 fuel          = 0
 uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+cargo         = "Missile"
 bonuses       =
    { "flag", "type", "value"
      "AirAttacker", "DefenseMultiplier", 4
@@ -2319,7 +2388,7 @@ sound_move    = "m_battleship"
 sound_move_alt = "m_generic"
 sound_fight   = "f_battleship"
 sound_fight_alt = "f_generic"
-build_cost    = 180
+build_cost    = 200
 pop_cost      = 0
 attack        = 14
 defense       = 14
@@ -2352,7 +2421,7 @@ sound_move    = "m_submarine"
 sound_move_alt = "m_generic"
 sound_fight   = "f_submarine"
 sound_fight_alt = "f_generic"
-build_cost    = 70
+build_cost    = 90
 pop_cost      = 0
 attack        = 12
 defense       = 4
@@ -2360,8 +2429,8 @@ hitpoints     = 20
 firepower     = 1
 move_rate     = 12
 vision_radius_sq = 28
-transport_cap = 1
-fuel          = 6
+transport_cap = 2
+fuel          = 7
 uk_happy      = 0
 uk_shield     = 1
 uk_food       = 1
@@ -2374,7 +2443,7 @@ roles         = "Hunter"
 helptext      = _("\
 Traveling under the surface of the ocean, Submarines have\
  a very high strategic value, but a weak defense if caught\
- off guard.\
+ off guard. The submarine is also able to carry regular missiles (not nukes) so it can hit the enemy with a surprise attack.\
 ")
 
 
@@ -2391,7 +2460,7 @@ sound_move    = "m_submarine"
 sound_move_alt = "m_generic"
 sound_fight   = "f_submarine"
 sound_fight_alt = "f_generic"
-build_cost    = 120
+build_cost    = 160
 pop_cost      = 0
 attack        = 12
 defense       = 4
@@ -2431,7 +2500,7 @@ sound_move    = "m_carrier"
 sound_move_alt = "m_generic"
 sound_fight   = "f_carrier"
 sound_fight_alt = "f_generic"
-build_cost    = 120
+build_cost    = 180
 pop_cost      = 0
 attack        = 0
 defense       = 10
@@ -2639,7 +2708,7 @@ sound_move    = "m_nuclear"
 sound_move_alt = "m_generic"
 sound_fight   = "f_nuclear"
 sound_fight_alt = "f_generic"
-build_cost    = 200
+build_cost    = 280
 pop_cost      = 0
 attack        = 99
 defense       = 0
@@ -2701,7 +2770,7 @@ sound_move    = "m_nuclear"
 sound_move_alt = "m_generic"
 sound_fight   = "f_nuclear"
 sound_fight_alt = "f_generic"
-build_cost    = 200
+build_cost    = 220
 pop_cost      = 0
 attack        = 99
 defense       = 0
@@ -2870,7 +2939,7 @@ sound_move    = "m_spy"
 sound_move_alt = "m_generic"
 sound_fight   = "f_spy"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 80
 pop_cost      = 0
 attack        = 0
 defense       = 0
@@ -3152,7 +3221,7 @@ flags         = "HelpWonder", "NonMil", "HasNoZOC", "Capturable"
 roles         = ""
 helptext      = _("\
 A Caravan carries goods or material for trading with other nations,\
- or to help build wonders in your own cities.\
+ or to help build wonders in your own cities. The disband value is 80% meaning that you get 80% of the shields back when disbanded.\
 "), _("\
 Caravans cannot take advantage of maglevs, but may travel on\
  the railroads that accompany them.\
@@ -3197,7 +3266,7 @@ flags         = "HelpWonder", "NonMil", "HasNoZOC", "Capturable"
 roles         = ""
 helptext      = _("\
 The Freight unit replaces the Caravan, and moves at twice the speed.\
- It has the same behavior and movement restrictions.\
+ It has the same behavior and movement restrictions. The disband value is 80% meaning that you get 80% of the shields back when disbanded.\\
 ")
 
 [unit_explorer]
@@ -3341,7 +3410,7 @@ sound_move    = "m_awacs"
 sound_move_alt = "m_generic"
 sound_fight   = "f_awacs"
 sound_fight_alt = "f_generic"
-build_cost    = 140
+build_cost    = 180
 pop_cost      = 0
 attack        = 0
 defense       = 1
@@ -3471,10 +3540,10 @@ that attacks with triple firepower.\
 
 
 
-[unit_fusion_armor]
-name          = _("Fusion Armor")
+[unit_army_group]
+name          = _("Army Group")
 class         = "Big Land"
-tech_req      = "Fusion Power"
+tech_req      = "Combined Arms"
 obsolete_by   = "None"
 graphic       = "u.fusion_armor"
 graphic_alt   = "u.armor"
@@ -3482,25 +3551,29 @@ sound_move    = "m_armor"
 sound_move_alt = "m_generic"
 sound_fight   = "f_armor"
 sound_fight_alt = "f_generic"
-build_cost    = 160
-pop_cost      = 0
-attack        = 10
-defense       = 5
-hitpoints     = 30
-firepower     = 2
+build_cost    = 500
+pop_cost      = 5
+attack        = 30
+defense       = 15
+hitpoints     = 128
+firepower     = 3
 move_rate     = 9
-vision_radius_sq = 25
+vision_radius_sq = 72
 transport_cap = 0
 fuel          = 0
-uk_happy      = 1
-uk_shield     = 1
-uk_food       = 1
-uk_gold       = 1
-flags         = ""
+uk_happy      = 0
+uk_shield     = 0
+uk_food       = 0
+uk_gold       = 0
+bonuses       =
+   { "flag", "type", "value"
+     "AirAttacker", "DefenseMultiplier", 4
+   }
+flags         = "NoVeteran", "NoHome"
 roles         = "DefendOk", "Hunter"
 helptext      = _("\
-A fusion powered Armor attacking \
-with double firepower.\
+The army group has an ultimate offensive and defensive value. This unit costs population and a few of these may break almost any defense. The best way to act against an army group is another army group or using nuclear weapons. \
+This unit also has a very good defense against air units. This one can never become a veteran and building it costs population.\
 ")
 
 

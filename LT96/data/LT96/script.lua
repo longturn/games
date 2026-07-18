@@ -21,7 +21,20 @@ end
 
 signal.connect("city_destroyed", "city_destroyed_callback")
 
--- Check if there is certain terrain in ANY CAdjacent tile.
+
+
+function destroy_fort_on_last_unit_killed(unit, loser, reason)
+  if reason ~= "killed" then return end
+  local tile = unit.tile
+  if not tile:has_base("Fortress") then return end
+  if tile:num_units() > 1 then return end
+  tile:remove_extra("Fortress")
+  end
+  
+signal.connect("unit_lost", "destroy_fort_on_last_unit_killed")
+
+ 
+  -- Check if there is certain terrain in ANY CAdjacent tile.
 function adjacent_to(tile, terrain_name)
   for adj_tile in tile:circle_iterate(1) do
     if adj_tile.id ~= tile.id then

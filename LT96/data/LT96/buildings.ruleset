@@ -442,7 +442,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 45
+build_cost	= 30
 upkeep		= 1
 sabotage	= 100
 sound		= "b_courthouse"
@@ -496,7 +496,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 40
+build_cost	= 30
 upkeep		= 1
 sabotage	= 100
 sound		= "b_granary"
@@ -529,7 +529,7 @@ obsolete_by	=
 	  "type", "name", "range", "present"
       "TerrainFlag", "Sea", "City", FALSE
     }
-build_cost	= 40
+build_cost	= 30
 upkeep		= 1
 sabotage	= 100
 sound		= "b_harbour"
@@ -592,7 +592,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 60
+build_cost	= 40
 upkeep		= 1
 sabotage	= 100
 sound		= "b_library"
@@ -614,7 +614,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 50
+build_cost	= 35
 upkeep		= 0
 sabotage	= 100
 sound		= "b_marketplace"
@@ -1002,7 +1002,7 @@ teammate which attacks a city with SDI Defense, or attacks a unit (or is \
 deliberately exploded) within range, may be shot down and simply has no effect. \
 Also, adds 50% to the intrinsic defense strength of units in the city when \
 defending against conventional missiles. SDI I + capital protects against 100% \
-of the nuclear attacks while SDI I only stops 80% of the nuclear attacks. \
+of the nuclear attacks while SDI I only stops 70% of the nuclear attacks. \
 SDI I + Palace adds 100% to the defense bonus against \
 conventional missiles.\
 "), _("\
@@ -1325,7 +1325,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 30
+build_cost	= 20
 upkeep		= 1
 sabotage	= 100
 sound		= "b_temple"
@@ -1556,7 +1556,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 400
+build_cost	= 200
 upkeep		= 0
 sabotage	= 0
 sound		= "w_great_library"
@@ -1657,7 +1657,7 @@ graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
     }
-build_cost	= 400
+build_cost	= 250
 upkeep		= 0
 sabotage	= 0
 sound		= "w_isaac_newtons_college"
@@ -2240,12 +2240,40 @@ government or by the United Nations.\
 
 
 
+[building_silk_road]
+name		= _("Silk Road")
+genus		= "SmallWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Trade", "World"
+	  "Extra", "Silk", "City"
+    }
+graphic	= "b.silkroad"
+graphic_alt	= "b.university"
+obsolete_by	=
+    { "type", "name", "range"
+	  "Tech", "Navigation", "Player"
+    }
+build_cost	= 40
+upkeep		= 0
+sabotage	= 0
+sound		= "w_silkroad"
+sound_alt	= "w_generic"
+helptext	= _("\
+Increases the trade output of the nation. The effect affects all the cities controlled by the nation. The increase is 10% for the nations \
+with non trade based governments. Since the trade based goverments such as republic and democracy already \
+benefit from trade the bonus for this wonder is not as important as it is for \
+other types of governments. The bonus for trade based governments is 5%. \
+")
+
+
+
 [building_gold_road]
 name		= _("Gold Road")
 genus		= "SmallWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Trade", "World"
+      "Tech", "Banking", "World"
 	  "Extra", "Gold", "City"
     }
 graphic	= "b.goldroad"
