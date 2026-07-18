@@ -1,0 +1,7 @@
+set aifill 2
+
+aitoggle AI*1
+aitoggle AI*2
+
+playernation AI*1 "Luxembourgish" 1 "Blauwal"
+playernation AI*2 "Antarctican" 1 "Penguin"
