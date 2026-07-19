@@ -69,7 +69,7 @@ class_flags =
 ; value of 15, the server has to check close to 1000 tiles every time a unit
 ; moves). It is recommended to set this to the largest possible distance that
 ; a unit can see in the rules.
-;sentry_range = 3
+sentry_range = 15
 
 [veteran_system]
 ; What are the names of the levels?
