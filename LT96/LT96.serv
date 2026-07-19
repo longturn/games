@@ -64,6 +64,7 @@ set foggedborders enabled
 set globalwarming disabled
 set globalwarming_percent 60
 set happyborders "NATIONAL"
+set homeless_gold_upkeep disabled
 set killcitizen enabled
 set killstack enabled
 set killunhomed 0
