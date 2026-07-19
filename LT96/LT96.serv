@@ -31,7 +31,7 @@ set unitwaittime_style ACTIVITIES
 
 set aifill 0
 set alltemperate disabled
-set barbarians "NORMAL"
+set barbarians "HORDES"
 set generator "FRACTAL"
 set huts 50
 set landmass 30
