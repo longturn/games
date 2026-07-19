@@ -157,7 +157,7 @@ set multiresearch disabled
 set naturalcitynames enabled
 set netwait 4
 set notradesize 0
-set onsetbarbs 20
+set onsetbarbs 1 # Small nations are spared from barbarians anyhow.
 set phasemode "ALL"
 set pingtime 20
 set pingtimeout 60
