@@ -1,0 +1,65 @@
+# Server commands to make Longturn Traditional Freeciv rules based on Civ2Civ3 ruleset
+#
+
+rulesetdir LTT2
+
+# map
+set aifill 10            # Fill with 10 AI players. Standard LT games have no AI players, only human.
+set mapsize "PLAYER"
+set generator "FRACTAL"
+set barbarians NORMAL  # Standard LT games don't have Barbarians enabled, but good for local AI games
+set startpos "ALL"
+set huts 0
+set landmass 40
+set separatepoles enabled
+set specials 300
+set steepness 40
+set temperature 70
+set tilesperplayer 500
+set topology "WRAPX|WRAPY|ISO"
+set wetness 40
+set alltemperate disabled
+set tinyisles disabled   # Don't allow 1x1 islands
+
+# general rules
+set nationset all
+set citymindist 4
+set contactturns 1
+set dispersion 6
+set foggedborders enabled
+set rapturedelay 3
+set restrictinfra enabled
+set revolen 2
+set revolentype FIXED
+set startunits cccccwwwwwwxx
+set techlevel 0
+set unreachableprotects disabled
+set killunhomed 0
+set trading_tech disabled
+set airliftingstyle "FROM_ALLIES|TO_ALLIES|DEST_UNLIMITED"
+set razechance 10
+set happyborders "NATIONAL"
+set occupychance 0
+set globalwarming enabled
+
+# diplomacy
+set diplchance 40
+set diplgoldcost 20
+set diplbulbcost 20
+set diplomacy ALL
+
+# technology
+set sciencebox 100
+set techlost_donor 0
+set techlost_recv 0
+set techpenalty 10
+set trademindist 999     # LT games don't do trade routes
+set trading_city disabled
+set team_pooled_research disabled
+set techlevel 0
+set techlossforgiveness -1
+set techlossrestore 50
+set freecost 50
+set diplbulbcost 50
+set diplgoldcost 50
+set conquercost 50
