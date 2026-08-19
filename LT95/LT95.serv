@@ -6,15 +6,15 @@ rulesetdir LT95
 # test game / real game settings
 
 # Uncomment the following for test games
-set revealmap START                        # test game
-set timeout 120                            # test game
-set unitwaittime 10                         # test game
-set fogofwar "DISABLED"	               # test game
+#set revealmap START                        # test game
+#set timeout 120                            # test game
+#set unitwaittime 10                         # test game
+#set fogofwar "DISABLED"	               # test game
 
 # Set these for real games, add comment for test games
-#set timeout 90000                           # real game
-#set unitwaittime 36000                      # real game
-#set fogofwar "ENABLED"		                # real game
+set timeout 90000                           # real game
+set unitwaittime 36000                      # real game
+set fogofwar "ENABLED"		                # real game
 
 set unitwaittime_style ACTIVITIES   
 #set unitwaittime_extended enabled # unitwaittime also applies to newly-built and captured/bribed units
@@ -68,7 +68,7 @@ set revolentype FIXED
 set savepalace enabled
 set spaceship_travel_time 150
 set startunits cccccwwwwwwxx
-set techleak 200
+set techleak 150
 set trade_revenue_style "CLASSIC"
 set unreachableprotects disabled
 
@@ -82,11 +82,11 @@ set diplgoldcost 20
 set diplomacy HUMAN
 set freecost 0                              # for getting techs from philosphy etc
 set fulltradesize 1
-set gold 50
+set gold 60
 set incite_gold_capt_chance 0
 set incite_gold_loss_chance 0
 set persistentready disabled
-set sciencebox 100
+set sciencebox 80
 set team_pooled_research disabled
 set teamplacement "CLOSEST"
 set techlevel 0
