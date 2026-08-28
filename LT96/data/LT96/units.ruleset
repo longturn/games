@@ -3569,7 +3569,7 @@ bonuses       =
    { "flag", "type", "value"
      "AirAttacker", "DefenseMultiplier", 4
    }
-flags         = "NoVeteran", "NoHome"
+flags         = "NoVeteran", "NoHome", "Unique"
 roles         = "DefendOk", "Hunter"
 helptext      = _("\
 The army group has an ultimate offensive and defensive value. This unit costs population and a few of these may break almost any defense. The best way to act against an army group is another army group or using nuclear weapons. \
