@@ -19,3 +19,7 @@
 [submodule "LT87Hex"]
 	path = LT87Hex
 	url = https://github.com/longturn/LTT-LTX.git
+[submodule "Sim07"]
+	path = Sim07
+	url = https://github.com/longturn/Sim
+	branch = Sim07
