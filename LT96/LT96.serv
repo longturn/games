@@ -33,7 +33,7 @@ set aifill 0
 set alltemperate disabled
 set barbarians "HORDES"
 set generator "FRACTAL"
-set huts 50
+set huts 30
 set landmass 30
 set mapsize "PLAYER"
 set separatepoles enabled
