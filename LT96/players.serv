@@ -1,4 +1,4 @@
-set aifill 12
+set aifill 13
 
 aitoggle AI*1
 aitoggle AI*2
@@ -12,6 +12,7 @@ aitoggle AI*9
 aitoggle AI*10
 aitoggle AI*11
 aitoggle AI*12
+aitoggle AI*13
 
 playernation AI*1 "Luxembourgish" 1 "Blauwal"
 playernation AI*2 "French" 1 "white9blue1"
@@ -25,3 +26,4 @@ playernation AI*9 "Australian" 1 "Jfordie"
 playernation AI*10 "Gallic" 1 "sophia791"
 playernation AI*11 "Venetian" 1 "Alfred"
 playernation AI*12 "Italian Greek" 1 "Joy"
+playernation AI*13 "Korean" 1 "chill"
