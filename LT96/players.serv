@@ -1,4 +1,4 @@
-set aifill 13
+set aifill 14
 
 aitoggle AI*1
 aitoggle AI*2
@@ -13,17 +13,19 @@ aitoggle AI*10
 aitoggle AI*11
 aitoggle AI*12
 aitoggle AI*13
+aitoggle AI*14
 
 playernation AI*1 "Luxembourgish" 1 "Blauwal"
 playernation AI*2 "French" 1 "white9blue1"
 playernation AI*3 "Metis" 1 "coyote"
 playernation AI*4 "Cornish" 1 "el_perdedor"
-playernation AI*5 "Cape Verdean" 1 "R2Civer"
-playernation AI*6 "Japanese" 1 "freeve4h"
-playernation AI*7 "Sumerian" 1 "Vares"
-playernation AI*8 "Thracian" 1 "zoRRo"
-playernation AI*9 "Australian" 1 "Jfordie"
-playernation AI*10 "Gallic" 1 "sophia791"
-playernation AI*11 "Venetian" 1 "Alfred"
-playernation AI*12 "Italian Greek" 1 "Joy"
-playernation AI*13 "Korean" 1 "chill"
+playernation AI*5 "Breton" 1 "LeoAfricanus"
+playernation AI*6 "Cape Verdean" 1 "R2Civer"
+playernation AI*7 "Japanese" 1 "freeve4h"
+playernation AI*8 "Sumerian" 1 "Vares"
+playernation AI*9 "Thracian" 1 "zoRRo"
+playernation AI*10 "Australian" 1 "Jfordie"
+playernation AI*11 "Gallic" 1 "sophia791"
+playernation AI*12 "Venetian" 1 "Alfred"
+playernation AI*13 "Italian Greek" 1 "Joy"
+playernation AI*14 "Korean" 1 "chill"
